@@ -7,12 +7,16 @@
     "tipo": "instituicao",
     "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição ou estrutura de coordenação. Uma comparação com organizações reais exige examinar suas competências legais, que não se transferem automaticamente para o jogo.",
+    "noJogo": "Estrutura do universo FAAAB com competências gerais documentadas. Implantação, ocupantes e regras particulares: a confirmar.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-EGAF",
@@ -22,12 +26,16 @@
     "tipo": "instituicao",
     "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição ou estrutura de coordenação. Uma comparação com organizações reais exige examinar suas competências legais, que não se transferem automaticamente para o jogo.",
+    "noJogo": "Estrutura do universo FAAAB com competências gerais documentadas. Implantação, ocupantes e regras particulares: a confirmar.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-GOV",
@@ -37,12 +45,16 @@
     "tipo": "instituicao",
     "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição ou estrutura de coordenação. Uma comparação com organizações reais exige examinar suas competências legais, que não se transferem automaticamente para o jogo.",
+    "noJogo": "Estrutura do universo FAAAB com competências gerais documentadas. Implantação, ocupantes e regras particulares: a confirmar.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-FTB",
@@ -52,12 +64,16 @@
     "tipo": "instituicao",
     "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição ou estrutura de coordenação. Uma comparação com organizações reais exige examinar suas competências legais, que não se transferem automaticamente para o jogo.",
+    "noJogo": "Estrutura do universo FAAAB com competências gerais documentadas. Implantação, ocupantes e regras particulares: a confirmar.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-FAB",
@@ -67,12 +83,16 @@
     "tipo": "instituicao",
     "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição ou estrutura de coordenação. Uma comparação com organizações reais exige examinar suas competências legais, que não se transferem automaticamente para o jogo.",
+    "noJogo": "Estrutura do universo FAAAB com competências gerais documentadas. Implantação, ocupantes e regras particulares: a confirmar.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-FMB",
@@ -82,12 +102,16 @@
     "tipo": "instituicao",
     "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição ou estrutura de coordenação. Uma comparação com organizações reais exige examinar suas competências legais, que não se transferem automaticamente para o jogo.",
+    "noJogo": "Estrutura do universo FAAAB com competências gerais documentadas. Implantação, ocupantes e regras particulares: a confirmar.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-CFN",
@@ -102,7 +126,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-CBM",
@@ -117,7 +145,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-PM",
@@ -127,12 +159,16 @@
     "tipo": "instituicao",
     "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição ou estrutura de coordenação. Uma comparação com organizações reais exige examinar suas competências legais, que não se transferem automaticamente para o jogo.",
+    "noJogo": "Estrutura do universo FAAAB com competências gerais documentadas. Implantação, ocupantes e regras particulares: a confirmar.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-SGEx",
@@ -147,7 +183,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-SGM",
@@ -162,7 +202,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-SEFA",
@@ -177,7 +221,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-TAI-EB",
@@ -187,12 +235,16 @@
     "tipo": "administracao",
     "secao": "ÓRGÃOS ADMINISTRATIVOS E CARREIRAS DE APOIO DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Atribuições de secretarias e setores reais dependem das normas de cada órgão. A estrutura da FAAAB é uma adaptação fictícia de gestão comunitária.",
+    "noJogo": "Setor de suporte e gestão da FAAAB; não implica necessariamente grupo Roblox separado. Responsáveis, permissões e rotinas detalhadas: não definidos.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-TAI-FAB",
@@ -202,12 +254,16 @@
     "tipo": "administracao",
     "secao": "ÓRGÃOS ADMINISTRATIVOS E CARREIRAS DE APOIO DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Atribuições de secretarias e setores reais dependem das normas de cada órgão. A estrutura da FAAAB é uma adaptação fictícia de gestão comunitária.",
+    "noJogo": "Setor de suporte e gestão da FAAAB; não implica necessariamente grupo Roblox separado. Responsáveis, permissões e rotinas detalhadas: não definidos.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-TAI-MB",
@@ -217,12 +273,16 @@
     "tipo": "administracao",
     "secao": "ÓRGÃOS ADMINISTRATIVOS E CARREIRAS DE APOIO DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Atribuições de secretarias e setores reais dependem das normas de cada órgão. A estrutura da FAAAB é uma adaptação fictícia de gestão comunitária.",
+    "noJogo": "Setor de suporte e gestão da FAAAB; não implica necessariamente grupo Roblox separado. Responsáveis, permissões e rotinas detalhadas: não definidos.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-SEP",
@@ -232,12 +292,16 @@
     "tipo": "administracao",
     "secao": "ÓRGÃOS ADMINISTRATIVOS E CARREIRAS DE APOIO DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Atribuições de secretarias e setores reais dependem das normas de cada órgão. A estrutura da FAAAB é uma adaptação fictícia de gestão comunitária.",
+    "noJogo": "Setor de suporte e gestão da FAAAB; não implica necessariamente grupo Roblox separado. Responsáveis, permissões e rotinas detalhadas: não definidos.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-SMP",
@@ -247,12 +311,16 @@
     "tipo": "administracao",
     "secao": "ÓRGÃOS ADMINISTRATIVOS E CARREIRAS DE APOIO DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Atribuições de secretarias e setores reais dependem das normas de cada órgão. A estrutura da FAAAB é uma adaptação fictícia de gestão comunitária.",
+    "noJogo": "Setor de suporte e gestão da FAAAB; não implica necessariamente grupo Roblox separado. Responsáveis, permissões e rotinas detalhadas: não definidos.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-DOC",
@@ -262,12 +330,16 @@
     "tipo": "administracao",
     "secao": "ÓRGÃOS ADMINISTRATIVOS E CARREIRAS DE APOIO DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Atribuições de secretarias e setores reais dependem das normas de cada órgão. A estrutura da FAAAB é uma adaptação fictícia de gestão comunitária.",
+    "noJogo": "Setor de suporte e gestão da FAAAB; não implica necessariamente grupo Roblox separado. Responsáveis, permissões e rotinas detalhadas: não definidos.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-EVC",
@@ -277,12 +349,16 @@
     "tipo": "administracao",
     "secao": "ÓRGÃOS ADMINISTRATIVOS E CARREIRAS DE APOIO DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Atribuições de secretarias e setores reais dependem das normas de cada órgão. A estrutura da FAAAB é uma adaptação fictícia de gestão comunitária.",
+    "noJogo": "Setor de suporte e gestão da FAAAB; não implica necessariamente grupo Roblox separado. Responsáveis, permissões e rotinas detalhadas: não definidos.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "ADM-DEV",
@@ -292,12 +368,16 @@
     "tipo": "administracao",
     "secao": "ÓRGÃOS ADMINISTRATIVOS E CARREIRAS DE APOIO DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Atribuições de secretarias e setores reais dependem das normas de cada órgão. A estrutura da FAAAB é uma adaptação fictícia de gestão comunitária.",
+    "noJogo": "Setor de suporte e gestão da FAAAB; não implica necessariamente grupo Roblox separado. Responsáveis, permissões e rotinas detalhadas: não definidos.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BFE",
@@ -307,12 +387,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BPE",
@@ -322,12 +406,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BI-Caat",
@@ -337,12 +425,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BIP",
@@ -352,12 +444,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-B-Prec",
@@ -367,12 +463,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Adaptação fictícia FAAAB",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BIB",
@@ -382,12 +482,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BCC",
@@ -397,12 +501,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BAC",
@@ -412,12 +520,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-B-Log",
@@ -427,12 +539,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BIM",
@@ -442,12 +558,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-B-Sau",
@@ -462,7 +582,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-B-Op-Psi",
@@ -472,12 +596,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BI-Pan",
@@ -487,12 +615,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Adaptação fictícia FAAAB",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-17--B-Fron",
@@ -502,12 +634,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-1--RCG",
@@ -517,12 +653,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BIL",
@@ -532,12 +672,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BIS",
@@ -547,12 +691,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-BIL-Mth",
@@ -562,12 +710,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-GAC",
@@ -577,12 +729,16 @@
     "tipo": "unidade",
     "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-CIE",
@@ -597,7 +753,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-CIOU",
@@ -612,7 +772,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-CIGS",
@@ -627,7 +791,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-CIOpC",
@@ -642,7 +810,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-CIOpEsp",
@@ -657,7 +829,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-CIOpMth",
@@ -672,7 +848,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-CIOPan",
@@ -687,7 +867,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-CIBld",
@@ -702,7 +886,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-CI-Pqdt-GPB",
@@ -717,7 +905,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-ESA",
@@ -727,12 +919,16 @@
     "tipo": "escola",
     "secao": "EXÉRCITO - ESCOLAS E ACADEMIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-EsPCEx",
@@ -742,12 +938,16 @@
     "tipo": "escola",
     "secao": "EXÉRCITO - ESCOLAS E ACADEMIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-AMAN",
@@ -757,12 +957,16 @@
     "tipo": "academia",
     "secao": "EXÉRCITO - ESCOLAS E ACADEMIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição de formação de oficiais ou formação militar superior, com ingresso e currículo regulados na instituição real correspondente.",
+    "noJogo": "Academia prevista na rota formativa da respectiva força. Ingresso e fases aplicáveis dependem da CDP e do regulamento institucional.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-EsAO",
@@ -772,12 +976,16 @@
     "tipo": "escola",
     "secao": "EXÉRCITO - ESCOLAS E ACADEMIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-ECEME",
@@ -787,12 +995,16 @@
     "tipo": "escola",
     "secao": "EXÉRCITO - ESCOLAS E ACADEMIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-EsSLog",
@@ -802,12 +1014,16 @@
     "tipo": "escola",
     "secao": "EXÉRCITO - ESCOLAS E ACADEMIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-ESFCEx",
@@ -817,12 +1033,16 @@
     "tipo": "escola",
     "secao": "EXÉRCITO - ESCOLAS E ACADEMIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-Bda-Inf-Sl",
@@ -832,12 +1052,16 @@
     "tipo": "brigada",
     "secao": "EXÉRCITO - BRIGADAS INTERNAS (NÃO GRUPOS INDEPENDENTES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Brigada militar é uma grande unidade que pode reunir batalhões e elementos de apoio e comando.",
+    "noJogo": "Brigada interna da FAAAB, subordinada à força correspondente. Não representa automaticamente um grupo Roblox individual.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-Bda-Inf-Mth",
@@ -847,12 +1071,16 @@
     "tipo": "brigada",
     "secao": "EXÉRCITO - BRIGADAS INTERNAS (NÃO GRUPOS INDEPENDENTES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Brigada militar é uma grande unidade que pode reunir batalhões e elementos de apoio e comando.",
+    "noJogo": "Brigada interna da FAAAB, subordinada à força correspondente. Não representa automaticamente um grupo Roblox individual.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-Bda-Inf-Mec",
@@ -862,12 +1090,16 @@
     "tipo": "brigada",
     "secao": "EXÉRCITO - BRIGADAS INTERNAS (NÃO GRUPOS INDEPENDENTES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Brigada militar é uma grande unidade que pode reunir batalhões e elementos de apoio e comando.",
+    "noJogo": "Brigada interna da FAAAB, subordinada à força correspondente. Não representa automaticamente um grupo Roblox individual.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-Bda-Inf-Bld",
@@ -877,12 +1109,16 @@
     "tipo": "brigada",
     "secao": "EXÉRCITO - BRIGADAS INTERNAS (NÃO GRUPOS INDEPENDENTES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Brigada militar é uma grande unidade que pode reunir batalhões e elementos de apoio e comando.",
+    "noJogo": "Brigada interna da FAAAB, subordinada à força correspondente. Não representa automaticamente um grupo Roblox individual.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-Bda-C-Mec",
@@ -892,12 +1128,16 @@
     "tipo": "brigada",
     "secao": "EXÉRCITO - BRIGADAS INTERNAS (NÃO GRUPOS INDEPENDENTES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Brigada militar é uma grande unidade que pode reunir batalhões e elementos de apoio e comando.",
+    "noJogo": "Brigada interna da FAAAB, subordinada à força correspondente. Não representa automaticamente um grupo Roblox individual.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-Bda-C-Bld",
@@ -907,12 +1147,16 @@
     "tipo": "brigada",
     "secao": "EXÉRCITO - BRIGADAS INTERNAS (NÃO GRUPOS INDEPENDENTES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Brigada militar é uma grande unidade que pode reunir batalhões e elementos de apoio e comando.",
+    "noJogo": "Brigada interna da FAAAB, subordinada à força correspondente. Não representa automaticamente um grupo Roblox individual.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-DAD",
@@ -922,12 +1166,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-DRE",
@@ -937,12 +1185,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-PC",
@@ -952,12 +1204,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-PELOPES",
@@ -967,12 +1223,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-DCS",
@@ -982,12 +1242,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-Precs",
@@ -997,12 +1261,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-DCOE",
@@ -1012,12 +1280,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-PRGM",
@@ -1027,12 +1299,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-DRT",
@@ -1042,12 +1318,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-GRE",
@@ -1057,12 +1337,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-PAPH",
@@ -1072,12 +1356,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-SC",
@@ -1087,12 +1375,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Adaptação do projeto",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-DGC",
@@ -1102,12 +1394,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Adaptação do projeto",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FTB-POS",
@@ -1117,12 +1413,16 @@
     "tipo": "subdivisao",
     "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
+    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": false
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-BINFAE-Guarda",
@@ -1132,12 +1432,16 @@
     "tipo": "unidade",
     "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-BINFAE-Choque",
@@ -1147,12 +1451,16 @@
     "tipo": "unidade",
     "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-1--GDA",
@@ -1162,12 +1470,16 @@
     "tipo": "unidade",
     "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-EAV",
@@ -1177,12 +1489,16 @@
     "tipo": "unidade",
     "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-ETA",
@@ -1192,12 +1508,16 @@
     "tipo": "unidade",
     "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-ECDA",
@@ -1207,12 +1527,16 @@
     "tipo": "unidade",
     "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Adaptação fictícia FAAAB",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-EAS-PARA-SAR",
@@ -1227,7 +1551,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-PARACOM",
@@ -1242,7 +1570,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Adaptação fictícia FAAAB",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-CIAAR",
@@ -1252,12 +1584,16 @@
     "tipo": "centro",
     "secao": "FAB - CENTROS E ESCOLAS QUE JÁ APARECIAM NO PLANEJAMENTO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Centro destinado a instrução, especialização ou inteligência, conforme sua denominação. A equivalência institucional exata deve ser verificada para cada item.",
+    "noJogo": "Estrutura de instrução especializada, formação ou inteligência da FAAAB. Cursos internos, vagas e seleção devem ser definidos separadamente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-EEAR",
@@ -1267,12 +1603,16 @@
     "tipo": "escola",
     "secao": "FAB - CENTROS E ESCOLAS QUE JÁ APARECIAM NO PLANEJAMENTO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-EPCAR",
@@ -1282,12 +1622,16 @@
     "tipo": "escola",
     "secao": "FAB - CENTROS E ESCOLAS QUE JÁ APARECIAM NO PLANEJAMENTO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-AFA",
@@ -1297,12 +1641,16 @@
     "tipo": "academia",
     "secao": "FAB - CENTROS E ESCOLAS QUE JÁ APARECIAM NO PLANEJAMENTO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição de formação de oficiais ou formação militar superior, com ingresso e currículo regulados na instituição real correspondente.",
+    "noJogo": "Academia prevista na rota formativa da respectiva força. Ingresso e fases aplicáveis dependem da CDP e do regulamento institucional.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-ECEMAR",
@@ -1312,12 +1660,16 @@
     "tipo": "escola",
     "secao": "FAB - CENTROS E ESCOLAS QUE JÁ APARECIAM NO PLANEJAMENTO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-CIAER",
@@ -1332,7 +1684,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-GrupPatNav",
@@ -1342,12 +1698,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - UNIDADES NAVAIS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-BtlPolNav",
@@ -1357,12 +1717,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - UNIDADES NAVAIS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-ComForS",
@@ -1372,12 +1736,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - UNIDADES NAVAIS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-GrupCom",
@@ -1387,12 +1755,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - UNIDADES NAVAIS DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-GRUMEC",
@@ -1407,7 +1779,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-ComForSup",
@@ -1422,7 +1798,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-CIM",
@@ -1437,7 +1817,11 @@
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CFN-BtlInfFN",
@@ -1447,12 +1831,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CFN-BOE-FN",
@@ -1462,12 +1850,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CFN-COMANF",
@@ -1477,12 +1869,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CFN-BtlBldFN",
@@ -1492,12 +1888,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CFN-BtlEngFN",
@@ -1507,12 +1907,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CFN-BtlVtrAnf",
@@ -1522,12 +1926,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CFN-BtlArtFN",
@@ -1537,12 +1945,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CFN-BtlOpRib",
@@ -1552,12 +1964,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Adaptação do projeto",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CFN-CIAPOL",
@@ -1567,12 +1983,16 @@
     "tipo": "unidade",
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-CIAMPA",
@@ -1582,12 +2002,16 @@
     "tipo": "centro",
     "secao": "MARINHA - ESCOLAS E CENTROS DE FORMAÇÃO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Centro destinado a instrução, especialização ou inteligência, conforme sua denominação. A equivalência institucional exata deve ser verificada para cada item.",
+    "noJogo": "Estrutura de instrução especializada, formação ou inteligência da FAAAB. Cursos internos, vagas e seleção devem ser definidos separadamente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-CIAA",
@@ -1597,12 +2021,16 @@
     "tipo": "centro",
     "secao": "MARINHA - ESCOLAS E CENTROS DE FORMAÇÃO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Centro destinado a instrução, especialização ou inteligência, conforme sua denominação. A equivalência institucional exata deve ser verificada para cada item.",
+    "noJogo": "Estrutura de instrução especializada, formação ou inteligência da FAAAB. Cursos internos, vagas e seleção devem ser definidos separadamente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-CIAW",
@@ -1612,12 +2040,16 @@
     "tipo": "centro",
     "secao": "MARINHA - ESCOLAS E CENTROS DE FORMAÇÃO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Centro destinado a instrução, especialização ou inteligência, conforme sua denominação. A equivalência institucional exata deve ser verificada para cada item.",
+    "noJogo": "Estrutura de instrução especializada, formação ou inteligência da FAAAB. Cursos internos, vagas e seleção devem ser definidos separadamente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-EAM",
@@ -1627,12 +2059,16 @@
     "tipo": "escola",
     "secao": "MARINHA - ESCOLAS E CENTROS DE FORMAÇÃO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-CN",
@@ -1642,12 +2078,16 @@
     "tipo": "escola",
     "secao": "MARINHA - ESCOLAS E CENTROS DE FORMAÇÃO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
+    "noJogo": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FMB-EN",
@@ -1657,12 +2097,16 @@
     "tipo": "academia",
     "secao": "MARINHA - ESCOLAS E CENTROS DE FORMAÇÃO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Instituição de formação de oficiais ou formação militar superior, com ingresso e currículo regulados na instituição real correspondente.",
+    "noJogo": "Academia prevista na rota formativa da respectiva força. Ingresso e fases aplicáveis dependem da CDP e do regulamento institucional.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-GBS",
@@ -1672,12 +2116,16 @@
     "tipo": "unidade",
     "secao": "CBM - GRUPAMENTOS DE SALVAMENTO CIVIL, INCÊNDIOS E EMERGÊNCIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-GSFMA",
@@ -1687,12 +2135,16 @@
     "tipo": "unidade",
     "secao": "CBM - GRUPAMENTOS DE SALVAMENTO CIVIL, INCÊNDIOS E EMERGÊNCIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-GOPP",
@@ -1702,12 +2154,16 @@
     "tipo": "unidade",
     "secao": "CBM - GRUPAMENTOS DE SALVAMENTO CIVIL, INCÊNDIOS E EMERGÊNCIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-GOA",
@@ -1717,12 +2173,16 @@
     "tipo": "unidade",
     "secao": "CBM - GRUPAMENTOS DE SALVAMENTO CIVIL, INCÊNDIOS E EMERGÊNCIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-GOESP",
@@ -1732,12 +2192,16 @@
     "tipo": "unidade",
     "secao": "CBM - GRUPAMENTOS DE SALVAMENTO CIVIL, INCÊNDIOS E EMERGÊNCIAS",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-ABMDP-II",
@@ -1747,12 +2211,16 @@
     "tipo": "curso",
     "secao": "CBM - FORMAÇÃO E CURSOS (NÃO SÃO BATALHÕES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Curso ou programa formativo. Critérios, duração e certificação da vida real dependem da instituição e do próprio curso.",
+    "noJogo": "Curso ou formação cadastrado no projeto. Confirme elegibilidade, fases e resultados na documentação correspondente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-CFP-BM",
@@ -1762,12 +2230,16 @@
     "tipo": "curso",
     "secao": "CBM - FORMAÇÃO E CURSOS (NÃO SÃO BATALHÕES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Curso ou programa formativo. Critérios, duração e certificação da vida real dependem da instituição e do próprio curso.",
+    "noJogo": "Curso ou formação cadastrado no projeto. Confirme elegibilidade, fases e resultados na documentação correspondente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-CFS-BM",
@@ -1777,12 +2249,16 @@
     "tipo": "curso",
     "secao": "CBM - FORMAÇÃO E CURSOS (NÃO SÃO BATALHÕES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Curso ou programa formativo. Critérios, duração e certificação da vida real dependem da instituição e do próprio curso.",
+    "noJogo": "Curso ou formação cadastrado no projeto. Confirme elegibilidade, fases e resultados na documentação correspondente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-CFO-BM",
@@ -1792,12 +2268,16 @@
     "tipo": "curso",
     "secao": "CBM - FORMAÇÃO E CURSOS (NÃO SÃO BATALHÕES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Curso ou programa formativo. Critérios, duração e certificação da vida real dependem da instituição e do próprio curso.",
+    "noJogo": "Curso ou formação cadastrado no projeto. Confirme elegibilidade, fases e resultados na documentação correspondente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-CAO-BM",
@@ -1807,12 +2287,16 @@
     "tipo": "curso",
     "secao": "CBM - FORMAÇÃO E CURSOS (NÃO SÃO BATALHÕES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Curso ou programa formativo. Critérios, duração e certificação da vida real dependem da instituição e do próprio curso.",
+    "noJogo": "Curso ou formação cadastrado no projeto. Confirme elegibilidade, fases e resultados na documentação correspondente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "CBM-CSBM",
@@ -1822,12 +2306,16 @@
     "tipo": "curso",
     "secao": "CBM - FORMAÇÃO E CURSOS (NÃO SÃO BATALHÕES)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Curso ou programa formativo. Critérios, duração e certificação da vida real dependem da instituição e do próprio curso.",
+    "noJogo": "Curso ou formação cadastrado no projeto. Confirme elegibilidade, fases e resultados na documentação correspondente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "PM-BOPE",
@@ -1837,12 +2325,16 @@
     "tipo": "unidade",
     "secao": "POLÍCIA MILITAR - UNIDADES DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "PM-ROTAM",
@@ -1852,12 +2344,16 @@
     "tipo": "unidade",
     "secao": "POLÍCIA MILITAR - UNIDADES DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "PM-BPChoque",
@@ -1867,12 +2363,16 @@
     "tipo": "unidade",
     "secao": "POLÍCIA MILITAR - UNIDADES DO PROJETO",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
+    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "PM-BPP",
@@ -1882,12 +2382,16 @@
     "tipo": "unidade",
     "secao": "POLÍCIA MILITAR - UNIDADES DO PROJETO",
     "logo": null,
-    "vidaReal": null,
+    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
     "noJogo": "Unidade fictícia da FAAAB; Polícia Penal não integra a Polícia Militar no Brasil real.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Adaptação fictícia FAAAB",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
     "id": "FAB-CCFA",
@@ -1897,11 +2401,15 @@
     "tipo": "curso",
     "secao": "FAB - CURSO DOS PARACOMANDOS (SIGLA OFICIAL, NÃO UNIDADE EXTRA REAL)",
     "logo": null,
-    "vidaReal": null,
-    "noJogo": null,
+    "vidaReal": "Curso ou programa formativo. Critérios, duração e certificação da vida real dependem da instituição e do próprio curso.",
+    "noJogo": "Curso ou formação cadastrado no projeto. Confirme elegibilidade, fases e resultados na documentação correspondente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-10-24",
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   }
 ]
