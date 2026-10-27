@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "GOV-PRE",
+    "forca": "GOV",
+    "sigla": "PRE",
+    "nome": "Presidente",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-V-PRE",
+    "forca": "GOV",
+    "sigla": "V-PRE",
+    "nome": "Vice-Presidente",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-M-DEF",
+    "forca": "GOV",
+    "sigla": "M-DEF",
+    "nome": "Ministro da Defesa",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-P-STF",
+    "forca": "GOV",
+    "sigla": "P-STF",
+    "nome": "Presidente do Supremo Tribunal Federal",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-M-STF",
+    "forca": "GOV",
+    "sigla": "M-STF",
+    "nome": "Ministro do Supremo Tribunal Federal",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-GVR",
+    "forca": "GOV",
+    "sigla": "GVR",
+    "nome": "Governador",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-SGP",
+    "forca": "GOV",
+    "sigla": "SGP",
+    "nome": "Secretário-Geral da Presidência",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-V-SGP",
+    "forca": "GOV",
+    "sigla": "V-SGP",
+    "nome": "Vice-Secretário-Geral da Presidência",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-S-DEF",
+    "forca": "GOV",
+    "sigla": "S-DEF",
+    "nome": "Secretário de Defesa",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-V-S-DEF",
+    "forca": "GOV",
+    "sigla": "V-S-DEF",
+    "nome": "Vice-Secretário de Defesa",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-S-JUS",
+    "forca": "GOV",
+    "sigla": "S-JUS",
+    "nome": "Secretário de Justiça",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-V-S-JUS",
+    "forca": "GOV",
+    "sigla": "V-S-JUS",
+    "nome": "Vice-Secretário de Justiça",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-S-RI",
+    "forca": "GOV",
+    "sigla": "S-RI",
+    "nome": "Secretário de Relações Institucionais",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-V-S-RI",
+    "forca": "GOV",
+    "sigla": "V-S-RI",
+    "nome": "Vice-Secretário de Relações Institucionais",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-S-SEG",
+    "forca": "GOV",
+    "sigla": "S-SEG",
+    "nome": "Secretário de Segurança Pública",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-V-S-SEG",
+    "forca": "GOV",
+    "sigla": "V-S-SEG",
+    "nome": "Vice-Secretário de Segurança Pública",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-S-COM",
+    "forca": "GOV",
+    "sigla": "S-COM",
+    "nome": "Secretário de Comunicação Social",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "GOV-V-S-COM",
+    "forca": "GOV",
+    "sigla": "V-S-COM",
+    "nome": "Vice-Secretário de Comunicação Social",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-CMD-GERAL",
+    "forca": "PM",
+    "sigla": "CMD-GERAL",
+    "nome": "Comandante-Geral",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-SUB-CMD-GERAL",
+    "forca": "PM",
+    "sigla": "SUB-CMD-GERAL",
+    "nome": "Subcomandante-Geral",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-CEL",
+    "forca": "PM",
+    "sigla": "CEL",
+    "nome": "Coronel",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-TEN-CEL",
+    "forca": "PM",
+    "sigla": "TEN-CEL",
+    "nome": "Tenente-Coronel",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-MAJ",
+    "forca": "PM",
+    "sigla": "MAJ",
+    "nome": "Major",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-CAP",
+    "forca": "PM",
+    "sigla": "CAP",
+    "nome": "Capitão",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-1TEN",
+    "forca": "PM",
+    "sigla": "1TEN",
+    "nome": "Primeiro-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-2TEN",
+    "forca": "PM",
+    "sigla": "2TEN",
+    "nome": "Segundo-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-ASP-OF",
+    "forca": "PM",
+    "sigla": "ASP-OF",
+    "nome": "Aspirante a Oficial",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-CAD",
+    "forca": "PM",
+    "sigla": "CAD",
+    "nome": "Cadete",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-ST",
+    "forca": "PM",
+    "sigla": "ST",
+    "nome": "Subtenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-1SGT",
+    "forca": "PM",
+    "sigla": "1SGT",
+    "nome": "Primeiro-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-2SGT",
+    "forca": "PM",
+    "sigla": "2SGT",
+    "nome": "Segundo-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-3SGT",
+    "forca": "PM",
+    "sigla": "3SGT",
+    "nome": "Terceiro-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-CB",
+    "forca": "PM",
+    "sigla": "CB",
+    "nome": "Cabo",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-SD-1",
+    "forca": "PM",
+    "sigla": "SD-1",
+    "nome": "Soldado de Primeira Classe",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-SD-2",
+    "forca": "PM",
+    "sigla": "SD-2",
+    "nome": "Soldado de Segunda Classe",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-REC",
+    "forca": "FTB",
+    "sigla": "REC",
+    "nome": "Recruta",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-MBL-2-",
+    "forca": "FTB",
+    "sigla": "MBL-2°",
+    "nome": "Mobilizado de 2ª Classe",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-MBL-1-",
+    "forca": "FTB",
+    "sigla": "MBL-1°",
+    "nome": "Mobilizado de 1ª Classe",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-SLD",
+    "forca": "FTB",
+    "sigla": "SLD",
+    "nome": "Soldado",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-SLD-1-",
+    "forca": "FTB",
+    "sigla": "SLD-1°",
+    "nome": "Soldado de 1ª Classe",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-CB",
+    "forca": "FTB",
+    "sigla": "CB",
+    "nome": "Cabo",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-T-SGT",
+    "forca": "FTB",
+    "sigla": "T-SGT",
+    "nome": "Terceiro-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-S-SGT",
+    "forca": "FTB",
+    "sigla": "S-SGT",
+    "nome": "Segundo-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-P-SGT",
+    "forca": "FTB",
+    "sigla": "P-SGT",
+    "nome": "Primeiro-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-SUB-TEN",
+    "forca": "FTB",
+    "sigla": "SUB-TEN",
+    "nome": "Subtenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-CDT",
+    "forca": "FTB",
+    "sigla": "CDT",
+    "nome": "Cadete",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-AAO",
+    "forca": "FTB",
+    "sigla": "AAO",
+    "nome": "Aspirante a Oficial",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-S-TEN",
+    "forca": "FTB",
+    "sigla": "S-TEN",
+    "nome": "Segundo-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-P-TEN",
+    "forca": "FTB",
+    "sigla": "P-TEN",
+    "nome": "Primeiro-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-CPT",
+    "forca": "FTB",
+    "sigla": "CPT",
+    "nome": "Capitão",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-CPT-SNR",
+    "forca": "FTB",
+    "sigla": "CPT-SNR",
+    "nome": "Capitão-Sênior",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-MAJ",
+    "forca": "FTB",
+    "sigla": "MAJ",
+    "nome": "Major",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-TEN-CNRL",
+    "forca": "FTB",
+    "sigla": "TEN-CNRL",
+    "nome": "Tenente-Coronel",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-CRNL",
+    "forca": "FTB",
+    "sigla": "CRNL",
+    "nome": "Coronel",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-GNRL-T",
+    "forca": "FTB",
+    "sigla": "GNRL-T",
+    "nome": "General em Treinamento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-GNRL-BRG",
+    "forca": "FTB",
+    "sigla": "GNRL-BRG",
+    "nome": "General de Brigada",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-GNRL-DIV",
+    "forca": "FTB",
+    "sigla": "GNRL-DIV",
+    "nome": "General de Divisão",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-GNRL-E",
+    "forca": "FTB",
+    "sigla": "GNRL-E",
+    "nome": "General de Exército",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-SUB-CMD",
+    "forca": "FTB",
+    "sigla": "SUB-CMD",
+    "nome": "Sub-Comandante",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-CMD",
+    "forca": "FTB",
+    "sigla": "CMD",
+    "nome": "Comandante",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FTB-MAR",
+    "forca": "FTB",
+    "sigla": "MAR",
+    "nome": "Marechal",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-REC-FAB",
+    "forca": "FAB",
+    "sigla": "REC-FAB",
+    "nome": "Recruta da FAB",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-SLD-2-CL",
+    "forca": "FAB",
+    "sigla": "SLD-2°CL",
+    "nome": "Soldado de 2ª Classe",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-SLD-1-CL",
+    "forca": "FAB",
+    "sigla": "SLD-1°CL",
+    "nome": "Soldado de 1ª Classe",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-CB",
+    "forca": "FAB",
+    "sigla": "CB",
+    "nome": "Cabo",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-T-SGT",
+    "forca": "FAB",
+    "sigla": "T-SGT",
+    "nome": "Terceiro-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-S-SGT",
+    "forca": "FAB",
+    "sigla": "S-SGT",
+    "nome": "Segundo-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-P-SGT",
+    "forca": "FAB",
+    "sigla": "P-SGT",
+    "nome": "Primeiro-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-SB-OFC",
+    "forca": "FAB",
+    "sigla": "SB-OFC",
+    "nome": "Suboficial",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-CDT",
+    "forca": "FAB",
+    "sigla": "CDT",
+    "nome": "Cadete",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-ASP-OF",
+    "forca": "FAB",
+    "sigla": "ASP-OF",
+    "nome": "Aspirante a Oficial",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-S-TEN",
+    "forca": "FAB",
+    "sigla": "S-TEN",
+    "nome": "Segundo-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-P-TEN",
+    "forca": "FAB",
+    "sigla": "P-TEN",
+    "nome": "Primeiro-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-CAP",
+    "forca": "FAB",
+    "sigla": "CAP",
+    "nome": "Capitão",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-MAJ",
+    "forca": "FAB",
+    "sigla": "MAJ",
+    "nome": "Major",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-T-COL",
+    "forca": "FAB",
+    "sigla": "T-COL",
+    "nome": "Tenente-Coronel",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-COL",
+    "forca": "FAB",
+    "sigla": "COL",
+    "nome": "Coronel",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-BGR",
+    "forca": "FAB",
+    "sigla": "BGR",
+    "nome": "Brigadeiro",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-BGR-MAJ",
+    "forca": "FAB",
+    "sigla": "BGR-MAJ",
+    "nome": "Major-Brigadeiro",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-SUB-CMD-FAB",
+    "forca": "FAB",
+    "sigla": "SUB-CMD-FAB",
+    "nome": "Subcomandante da FAB",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-CMD-FAB",
+    "forca": "FAB",
+    "sigla": "CMD-FAB",
+    "nome": "Comandante da FAB",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FAB-MAR-AR",
+    "forca": "FAB",
+    "sigla": "MAR-AR",
+    "nome": "Marechal-do-Ar",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-REC-MB",
+    "forca": "FMB",
+    "sigla": "REC-MB",
+    "nome": "Recruta",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-MN",
+    "forca": "FMB",
+    "sigla": "MN",
+    "nome": "Marinheiro",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-CB",
+    "forca": "FMB",
+    "sigla": "CB",
+    "nome": "Cabo",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-T-SGT",
+    "forca": "FMB",
+    "sigla": "T-SGT",
+    "nome": "Terceiro-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-S-SGT",
+    "forca": "FMB",
+    "sigla": "S-SGT",
+    "nome": "Segundo-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-P-SGT",
+    "forca": "FMB",
+    "sigla": "P-SGT",
+    "nome": "Primeiro-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-SO",
+    "forca": "FMB",
+    "sigla": "SO",
+    "nome": "Suboficial",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-GM",
+    "forca": "FMB",
+    "sigla": "GM",
+    "nome": "Guarda-Marinha",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-S-TEN",
+    "forca": "FMB",
+    "sigla": "S-TEN",
+    "nome": "Segundo-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-P-TEN",
+    "forca": "FMB",
+    "sigla": "P-TEN",
+    "nome": "Primeiro-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-CT",
+    "forca": "FMB",
+    "sigla": "CT",
+    "nome": "Capitão-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-CC",
+    "forca": "FMB",
+    "sigla": "CC",
+    "nome": "Capitão de Corveta",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-CF",
+    "forca": "FMB",
+    "sigla": "CF",
+    "nome": "Capitão de Fragata",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-CMG",
+    "forca": "FMB",
+    "sigla": "CMG",
+    "nome": "Capitão de Mar e Guerra",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-C-ALM",
+    "forca": "FMB",
+    "sigla": "C-ALM",
+    "nome": "Contra-Almirante",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-V-ALM",
+    "forca": "FMB",
+    "sigla": "V-ALM",
+    "nome": "Vice-Almirante",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-ALM-ESQ",
+    "forca": "FMB",
+    "sigla": "ALM-ESQ",
+    "nome": "Almirante de Esquadra",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-CMD-MB",
+    "forca": "FMB",
+    "sigla": "CMD-MB",
+    "nome": "Comandante da Marinha",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "FMB-ALM",
+    "forca": "FMB",
+    "sigla": "ALM",
+    "nome": "Almirante",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-A-BMB",
+    "forca": "CBM",
+    "sigla": "A-BMB",
+    "nome": "Aluno Bombeiro Militar",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-SLD",
+    "forca": "CBM",
+    "sigla": "SLD",
+    "nome": "Soldado",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-CB",
+    "forca": "CBM",
+    "sigla": "CB",
+    "nome": "Cabo",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-T-SGT",
+    "forca": "CBM",
+    "sigla": "T-SGT",
+    "nome": "Terceiro-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-S-SGT",
+    "forca": "CBM",
+    "sigla": "S-SGT",
+    "nome": "Segundo-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-P-SGT",
+    "forca": "CBM",
+    "sigla": "P-SGT",
+    "nome": "Primeiro-Sargento",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-SB-TEN",
+    "forca": "CBM",
+    "sigla": "SB-TEN",
+    "nome": "Subtenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-AAO",
+    "forca": "CBM",
+    "sigla": "AAO",
+    "nome": "Aspirante a Oficial",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-S-TEN",
+    "forca": "CBM",
+    "sigla": "S-TEN",
+    "nome": "Segundo-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-P-TEN",
+    "forca": "CBM",
+    "sigla": "P-TEN",
+    "nome": "Primeiro-Tenente",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-CPT",
+    "forca": "CBM",
+    "sigla": "CPT",
+    "nome": "Capitão",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-MJR",
+    "forca": "CBM",
+    "sigla": "MJR",
+    "nome": "Major",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-TEN-CRNL",
+    "forca": "CBM",
+    "sigla": "TEN-CRNL",
+    "nome": "Tenente-Coronel",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-CRNL",
+    "forca": "CBM",
+    "sigla": "CRNL",
+    "nome": "Coronel",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-SUB-CMD-GERAL",
+    "forca": "CBM",
+    "sigla": "SUB-CMD-GERAL",
+    "nome": "Subcomandante-Geral",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "CBM-CMD-GERAL",
+    "forca": "CBM",
+    "sigla": "CMD-GERAL",
+    "nome": "Comandante-Geral",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Titular não definido no histórico recuperado"
+  }
+]
