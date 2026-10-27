@@ -1,0 +1,38 @@
+[
+  {
+    "data": "2026-10-27",
+    "titulo": "Reorganização da central institucional",
+    "descricao": "Projeto de portal com catálogo por força, formação, cargos e registro de mudanças. A disponibilidade do sistema depende da publicação.",
+    "tipo": "portal"
+  },
+  {
+    "data": "2026-10-24",
+    "titulo": "Sete organizações incorporadas ao catálogo",
+    "descricao": "Aprovadas: CIM, CIAER, BIL, BIS, BIL Mth, GAC e ComForSup. Outras propostas não foram aprovadas.",
+    "tipo": "decisao"
+  },
+  {
+    "data": "2026-10-18",
+    "titulo": "Revisão das escolas e dos centros de instrução",
+    "descricao": "Centros de operações urbanas, caatinga, selva, montanha, Pantanal e operações especiais foram revisados no planejamento.",
+    "tipo": "catalogo"
+  },
+  {
+    "data": "2026-10-12",
+    "titulo": "Ampliação da estrutura terrestre e naval",
+    "descricao": "Registradas decisões sobre o Batalhão de Precursores, operações no Pantanal e Viaturas Anfíbias do CFN; BEC não foi aprovado.",
+    "tipo": "decisao"
+  },
+  {
+    "data": "2026-09-28",
+    "titulo": "Revisão de unidades FAB, FMB e CBM",
+    "descricao": "Documento canônico reformulou unidades navais e aéreas, cursos de navegação/pilotagem e formação do CBM.",
+    "tipo": "documentacao"
+  },
+  {
+    "data": "2026-09-07",
+    "titulo": "Criação do repositório do portal administrativo",
+    "descricao": "O repositório GitHub que hospeda as páginas de administração foi criado nesta data. Não corresponde à fundação da FAAAB.",
+    "tipo": "site"
+  }
+]
