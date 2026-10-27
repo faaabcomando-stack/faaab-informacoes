@@ -7,7 +7,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Eleição individual no sistema político da FAAAB; regulamento detalhado pendente",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-V-PRE",
@@ -17,7 +22,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Eleição individual no sistema político da FAAAB; regulamento detalhado pendente",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-M-DEF",
@@ -27,7 +37,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-P-STF",
@@ -37,7 +52,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-M-STF",
@@ -47,7 +67,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-GVR",
@@ -57,7 +82,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-SGP",
@@ -67,7 +97,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-V-SGP",
@@ -77,7 +112,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-S-DEF",
@@ -87,7 +127,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-V-S-DEF",
@@ -97,7 +142,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-S-JUS",
@@ -107,7 +157,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-V-S-JUS",
@@ -117,7 +172,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-S-RI",
@@ -127,7 +187,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-V-S-RI",
@@ -137,7 +202,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-S-SEG",
@@ -147,7 +217,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-V-S-SEG",
@@ -157,7 +232,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-S-COM",
@@ -167,7 +247,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "GOV-V-S-COM",
@@ -177,7 +262,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Regra de escolha ainda não definida",
+    "historicoVerificado": false
   },
   {
     "id": "PM-CMD-GERAL",
@@ -187,7 +277,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-SUB-CMD-GERAL",
@@ -197,7 +292,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-CEL",
@@ -207,7 +307,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-TEN-CEL",
@@ -217,7 +322,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-MAJ",
@@ -227,7 +337,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-CAP",
@@ -237,7 +352,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-1TEN",
@@ -247,7 +367,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-2TEN",
@@ -257,7 +382,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-ASP-OF",
@@ -267,7 +397,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-CAD",
@@ -277,7 +412,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-ST",
@@ -287,7 +427,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-1SGT",
@@ -297,7 +442,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-2SGT",
@@ -307,7 +457,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-3SGT",
@@ -317,7 +472,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-CB",
@@ -327,7 +487,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-SD-1",
@@ -337,7 +502,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "PM-SD-2",
@@ -347,7 +517,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-REC",
@@ -357,7 +532,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-MBL-2-",
@@ -367,7 +547,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-MBL-1-",
@@ -377,7 +562,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-SLD",
@@ -387,7 +577,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-SLD-1-",
@@ -397,7 +592,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-CB",
@@ -407,7 +607,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-T-SGT",
@@ -417,7 +622,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-S-SGT",
@@ -427,7 +637,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-P-SGT",
@@ -437,7 +652,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-SUB-TEN",
@@ -447,7 +667,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-CDT",
@@ -457,7 +682,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-AAO",
@@ -467,7 +697,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-S-TEN",
@@ -477,7 +712,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-P-TEN",
@@ -487,7 +727,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-CPT",
@@ -497,7 +742,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-CPT-SNR",
@@ -507,7 +757,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-MAJ",
@@ -517,7 +772,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-TEN-CNRL",
@@ -527,7 +787,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-CRNL",
@@ -537,7 +802,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-GNRL-T",
@@ -547,7 +817,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-GNRL-BRG",
@@ -557,7 +832,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-GNRL-DIV",
@@ -567,7 +847,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-GNRL-E",
@@ -577,7 +862,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-SUB-CMD",
@@ -587,7 +877,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-CMD",
@@ -597,7 +892,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FTB-MAR",
@@ -607,7 +907,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-REC-FAB",
@@ -617,7 +922,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-SLD-2-CL",
@@ -627,7 +937,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-SLD-1-CL",
@@ -637,7 +952,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-CB",
@@ -647,7 +967,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-T-SGT",
@@ -657,7 +982,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-S-SGT",
@@ -667,7 +997,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-P-SGT",
@@ -677,7 +1012,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-SB-OFC",
@@ -687,7 +1027,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-CDT",
@@ -697,7 +1042,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-ASP-OF",
@@ -707,7 +1057,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-S-TEN",
@@ -717,7 +1072,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-P-TEN",
@@ -727,7 +1087,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-CAP",
@@ -737,7 +1102,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-MAJ",
@@ -747,7 +1117,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-T-COL",
@@ -757,7 +1132,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-COL",
@@ -767,7 +1147,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-BGR",
@@ -777,7 +1162,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-BGR-MAJ",
@@ -787,7 +1177,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-SUB-CMD-FAB",
@@ -797,7 +1192,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-CMD-FAB",
@@ -807,7 +1207,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FAB-MAR-AR",
@@ -817,7 +1222,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-REC-MB",
@@ -827,7 +1237,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-MN",
@@ -837,7 +1252,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-CB",
@@ -847,7 +1267,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-T-SGT",
@@ -857,7 +1282,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-S-SGT",
@@ -867,7 +1297,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-P-SGT",
@@ -877,7 +1312,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-SO",
@@ -887,7 +1327,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-GM",
@@ -897,7 +1342,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-S-TEN",
@@ -907,7 +1357,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-P-TEN",
@@ -917,7 +1372,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-CT",
@@ -927,7 +1387,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-CC",
@@ -937,7 +1402,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-CF",
@@ -947,7 +1417,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-CMG",
@@ -957,7 +1432,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-C-ALM",
@@ -967,7 +1447,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-V-ALM",
@@ -977,7 +1462,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-ALM-ESQ",
@@ -987,7 +1477,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-CMD-MB",
@@ -997,7 +1492,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "FMB-ALM",
@@ -1007,7 +1507,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-A-BMB",
@@ -1017,7 +1522,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-SLD",
@@ -1027,7 +1537,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-CB",
@@ -1037,7 +1552,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-T-SGT",
@@ -1047,7 +1567,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-S-SGT",
@@ -1057,7 +1582,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-P-SGT",
@@ -1067,7 +1597,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-SB-TEN",
@@ -1077,7 +1612,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-AAO",
@@ -1087,7 +1627,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-S-TEN",
@@ -1097,7 +1642,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-P-TEN",
@@ -1107,7 +1657,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-CPT",
@@ -1117,7 +1672,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-MJR",
@@ -1127,7 +1687,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-TEN-CRNL",
@@ -1137,7 +1702,12 @@
     "altoEscalao": false,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-CRNL",
@@ -1147,7 +1717,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-SUB-CMD-GERAL",
@@ -1157,7 +1732,12 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   },
   {
     "id": "CBM-CMD-GERAL",
@@ -1167,6 +1747,11 @@
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
+    "nota": "Titular não definido no histórico recuperado",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Nomeação ou promoção a confirmar",
+    "historicoVerificado": false
   }
 ]
