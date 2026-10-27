@@ -1,0 +1,322 @@
+[
+  {
+    "id": "CUR-10-1",
+    "forca": "FTB",
+    "titulo": "Recruta -> Soldado",
+    "detalhes": "Componentes:\n- Expedição Militar\n- Seleção de Brigada\n- TC-1\n\nEsses elementos são do EB.\nNÃO copiar para FAB/MB/CBM.\n\nFarda própria:\nnão obrigatória.",
+    "sigla": "Recruta -> Soldado",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-2",
+    "forca": "FTB",
+    "titulo": "CTA",
+    "detalhes": "Etapa:\nSoldado.\n\nFunção:\nensinar armamento e liberar acesso correspondente.\n\nNome completo:\nA CONFIRMAR.\n\nFarda própria:\nX.",
+    "sigla": "CTA",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Requisitos parcialmente definidos",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-3",
+    "forca": "FTB",
+    "titulo": "Curso de Formação de Soldado Especializado",
+    "detalhes": "Aluno:\nSoldado.\n\nResultado:\nprogressão para Soldado de 1ª Classe + especialização.\n\nFarda própria:\npreferir base EB + patch.\nNão criar família inteira automaticamente.",
+    "sigla": "Curso de Formação de Soldado Especi",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-4",
+    "forca": "FTB",
+    "titulo": "Curso de Formação de Soldado para Operações Terrestres",
+    "detalhes": "Aluno:\nSoldado de 1ª Classe.\n\nResultado:\nCabo quando requisitos/CDP estiverem completos.\n\nFarda própria:\npreferir base EB + override discreto.",
+    "sigla": "Curso de Formação de Soldado para O",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-5",
+    "forca": "FTB",
+    "titulo": "ESA",
+    "detalhes": "ALUNOS:\n- Cabo\n- 3º Sargento em continuidade da formação\n\nINSTRUTOR:\n- 2º Tenente habilitado\n\nNÃO alunos:\n- 2º Sargento em diante, salvo futura fase explícita\n- oficiais superiores\n- generais\n\nMATRIZ:\n2º Tenente Instrutor:\nIF V\nIC V\n\nCabo:\nAO V\nAT V\nAF V\n\n3º Sargento:\nAO V\nAT V\nAF V\n\nLOTES:\nESA-01\n- Cabo AO\n- Cabo AT\n- Cabo AF\nPARAR\n\nESA-02\n- 3º Sgt AO\n- 3º Sgt AT\n- 3º Sgt AF\nPARAR\n\nESA-03\n- 2º Ten IC\n- 2º Ten IF\nPARAR",
+    "sigla": "ESA",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-6",
+    "forca": "FTB",
+    "titulo": "CFSO",
+    "detalhes": "Ligada à progressão de Sargentos no EB.\n\nNão inventar expansão da sigla.\n\nFarda própria:\nA CONFIRMAR.\nPreferir reaproveitar base ESA/EB quando possível.",
+    "sigla": "CFSO",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Requisitos parcialmente definidos",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-7",
+    "forca": "FTB",
+    "titulo": "Curso de Formação de Sargentos da Brigada",
+    "detalhes": "Ligado à Brigada.\nNÃO é ESA 2.\n\nFarda:\nusar base EB + símbolo/ombro da Brigada.\nNÃO criar 7 famílias completas.",
+    "sigla": "Curso de Formação de Sargentos da B",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-8",
+    "forca": "FTB",
+    "titulo": "TB — Treinamento na Brigada",
+    "detalhes": "Progressão interna da Brigada.\n\nFarda:\nbase EB + símbolo da Brigada.\nSem família própria.",
+    "sigla": "TB",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-9",
+    "forca": "FTB",
+    "titulo": "CIG",
+    "detalhes": "Aluno:\n- Soldado\n- Soldado de 1ª Classe\n- Cabo\n\nInstrutor:\nOficiais Superiores habilitados:\n- Major\n- Tenente-Coronel\n- Coronel\n\nDurante a frequência:\nnão possui farda própria obrigatória.\n\nMATRIZ de aluno:\nAO X\nAT X\nAF X\n\nApós conclusão:\npode liberar farda operacional especial permanente.\n\nInstrutor:\nIC V se aprovado\nIF V se aprovado\n\nNão fazer tudo.\n\nCIG-01:\n- emblema master\n- patch\n- placement\nPARAR\n\nCIG-02:\n- Major Instrutor Campo\nPARAR",
+    "sigla": "CIG",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-10",
+    "forca": "FTB",
+    "titulo": "1º Cen Ins Op G",
+    "detalhes": "Entrada:\n2º Sargento -> 1º Sargento.\n\nContinuidade:\nno oficialato, a partir de 2º Tenente, por FASES.\n\nNÃO chamar de “testes”.\n\nInstrutores superiores:\npessoas habilitadas que passaram pela formação;\nnas fases elevadas, Oficiais-Generais.\n\nFardas:\nA CONFIRMAR.\n\nNão gerar agora.",
+    "sigla": "1º Cen Ins Op G",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Requisitos parcialmente definidos",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-11",
+    "forca": "FTB",
+    "titulo": "EsPCEx",
+    "detalhes": "Aluno:\nSubtenente.\n\nResultado:\nCadete.\n\nMATRIZ:\nSubtenente:\nAO V\nAT V\n\nFormatura:\nCadete AF V quando representa a nova patente.\n\nInstrutor:\nA CONFIRMAR.",
+    "sigla": "EsPCEx",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Requisitos parcialmente definidos",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-12",
+    "forca": "FTB",
+    "titulo": "AMAN",
+    "detalhes": "ALUNOS:\n- Cadete — fases 1–5\n- Aspirante — fases 6–10\n\nRESULTADO:\n2º Tenente.\n\nINSTRUTORES:\n- 1º Tenente habilitado\n- Capitão habilitado\n\n2º Tenente recém-formado:\nNÃO é instrutor padrão.\n\nMATRIZ:\nCadete:\nAO V\nAT V\nAF V\n\nAspirante:\nAO V\nAT V\nAF V\n\n1º Ten Instrutor:\nIC V\nIF V\n\nCapitão Instrutor:\nIC V\nIF V\n\nFormatura final:\n2º Tenente pode aparecer como patente recebida.",
+    "sigla": "AMAN",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-13",
+    "forca": "FTB",
+    "titulo": "Aperfeiçoamento de Oficiais",
+    "detalhes": "Etapa:\n2º Tenente -> 1º Tenente.\n\nFarda:\npreferir farda de classe + patch/elemento.\nNão criar família grande sem necessidade.",
+    "sigla": "Aperfeiçoamento de Oficiais",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-14",
+    "forca": "FTB",
+    "titulo": "Escola do Estado-Maior",
+    "detalhes": "Etapas:\n1º Tenente -> Capitão\nCapitão -> Capitão Sênior\nCapitão Sênior -> Major\n\nFarda:\nusar classe + overrides.\nNão precisa obrigatoriamente de 5 variantes próprias.",
+    "sigla": "Escola do Estado-Maior",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-15",
+    "forca": "FTB",
+    "titulo": "Teste Limpeza de Oficiais",
+    "detalhes": "NÃO é curso universal.\n\nSó para oficiais que ficaram inativos por muito tempo após Capitão e retornam.\n\nSem farda própria.",
+    "sigla": "Teste Limpeza de Oficiais",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-16",
+    "forca": "FTB",
+    "titulo": "CFOG",
+    "detalhes": "ALUNOS:\n- Coronel\n- General em Treinamento\n\nRESULTADO:\nGeneral de Brigada.\n\nINSTRUTORES:\n- General de Brigada\n- General de Divisão\n- General do Exército\nhabilitados.\n\nMATRIZ:\nCoronel:\nAO V\nAT V\nAF V\n\nGeneral em Treinamento:\nAO V\nAT V\nAF V\n\nGenerais instrutores:\nIC V\nIF V\n\nFormatura final:\nGeneral de Brigada pode aparecer como patente recebida.",
+    "sigla": "CFOG",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-10-17",
+    "forca": "FTB",
+    "titulo": "ACopMil At Es",
+    "detalhes": "Alto escalão.\n\nRota para Subcomandante.\n\nVagas raras.\nAdministração/SEP.\n\nAluno exato:\nA CONFIRMAR antes de produzir.\n\nFardas:\nA CONFIRMAR.\n\nNão gerar agora.\n\n======================================================================\n11. FAB — CURSOS",
+    "sigla": "ACopMil At Es",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Requisitos parcialmente definidos",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-1",
+    "forca": "FAB",
+    "titulo": "CIAAR / CFAer",
+    "detalhes": "CIAAR = centro.\n\nNão usar CIAAR como um único curso básico genérico.\n\nCFAer = proposta/adaptação FAAAB sob o CIAAR.\n\nALUNO:\nRecruta FAB.\n\nRESULTADO:\nescolha de linha:\n- Infantaria da Aeronáutica\n- Operações Aéreas / Aviação\n\nFARDA:\nusar farda normal da FAB.\n\nMATRIZ:\nIF X\nIC X\nAO X\nAT X\nAF X",
+    "sigla": "CIAAR",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-2",
+    "forca": "FAB",
+    "titulo": "CESD",
+    "detalhes": "ALUNO:\nSoldado de 2ª Classe.\n\nRESULTADO:\nSoldado de 1ª Classe conforme CDP/requisitos.\n\nFARDAS:\nX X X X X\n\nUsar base FAB.",
+    "sigla": "CESD",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-3",
+    "forca": "FAB",
+    "titulo": "CFC — Curso de Formação de Cabos",
+    "detalhes": "ALUNO:\nSoldado de 1ª Classe.\n\nRESULTADO:\nCabo.\n\nFARDAS:\nX X X X X\n\nUsar base FAB.",
+    "sigla": "CFC",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-4",
+    "forca": "FAB",
+    "titulo": "EEAR / CFS",
+    "detalhes": "ESTADO VISUAL ATUAL:\nALUNO:\nCabo\n\nFORMATURA:\n3º Sargento\n\nINSTRUTOR:\nCapitão habilitado\n\nMATRIZ:\nCapitão:\nIF V\nIC V\n\nCabo:\nAO V\nAT V\n\n3º Sargento:\nAF V\n\nNão gerar Generais/Coronéis como alunos.",
+    "sigla": "EEAR",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-5",
+    "forca": "FAB",
+    "titulo": "CAS",
+    "detalhes": "ALUNO:\n1º Sargento, recomendação atual.\n\nRESULTADO:\nSuboficial, conforme CDP.\n\nMATRIZ:\nIF ?\nIC ?\nAO V\nAT V\nAF V\n\nLOTE:\nCAS-01\n- 1º Sgt AO\n- 1º Sgt AT\nPARAR\n\nCAS-02\n- Suboficial AF\nPARAR",
+    "sigla": "CAS",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-6",
+    "forca": "FAB",
+    "titulo": "Curso de Formação de Alunos Superiores",
+    "detalhes": "CRIAÇÃO/ADAPTAÇÃO FAAAB.\n\nDUAS FASES.\n\nNão confundir com EPCAR.\n\nAluno provável:\nSuboficial.\nCONFIRMAR no config.\n\nMATRIZ:\nIF ?\nIC ?\nAO V\nAT V\nAF V\n\nGerar Fase I primeiro.\nPARAR.",
+    "sigla": "Curso de Formação de Alunos Superio",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-7",
+    "forca": "FAB",
+    "titulo": "EPCAR",
+    "detalhes": "Preview atual existe.\n\nNão apagar.\n\nStatus:\nCONGELADO PARA REVISÃO.\n\nA preview atual mostra:\n- Suboficial aluno\n- Cadete formatura\n- Capitão instrutor\n\nAntes de expandir:\ndefinir relação com Curso de Formação de Alunos Superiores.",
+    "sigla": "EPCAR",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-8",
+    "forca": "FAB",
+    "titulo": "AFA",
+    "detalhes": "Formação de oficiais FAB.\n\nAluno:\nCadete/Aspirante conforme progressão final.\n\nInstrutores:\nA CONFIRMAR.\n\nMATRIZ preliminar:\nIF V\nIC V\nAO V\nAT V\nAF V\n\nNão produzir até fechar progressão superior FAB.",
+    "sigla": "AFA",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Requisitos parcialmente definidos",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-9",
+    "forca": "FAB",
+    "titulo": "ECEMAR / CCEM",
+    "detalhes": "Preview atual:\nMajor aluno.\nTenente-Coronel formatura.\nCoronel instrutor.\n\nMATRIZ:\nMajor:\nAO V\nAT V\n\nTen-Cel:\nAF V\n\nCoronel:\nIC V\nIF V\n\nNão expandir para outros ranks sem aprovação.",
+    "sigla": "ECEMAR",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-10",
+    "forca": "FAB",
+    "titulo": "CPEA",
+    "detalhes": "Preview atual:\nCoronel aluno.\nBrigadeiro formatura/instrutor.\n\nIMPORTANTE:\nCPEA não promove automaticamente por si só.\n\nMATRIZ:\nCoronel:\nAO V\nAT V\n\nFormatura:\nAF V\n\nBrigadeiro instrutor:\nIC V\nIF V",
+    "sigla": "CPEA",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-11",
+    "forca": "FAB",
+    "titulo": "C-PIL",
+    "detalhes": "Curso de Pilotagem.\n\nEtapas:\n- Teórico\n- Prático\n\nEndossos:\n- Caça\n- Asas Rotativas\n- Transporte\n\nPatente mínima:\nA CONFIRMAR.\n\nNão gerar roupa ainda.\n\nPossível:\nIC V\nAO V\nAT V\nIF X\nAF X\n\nResultado:\nhabilitação de voo.\nNÃO patente.",
+    "sigla": "C-PIL",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Requisitos parcialmente definidos",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-12",
+    "forca": "FAB",
+    "titulo": "Curso de Controle Aéreo",
+    "detalhes": "Qualificação.\n\nPatente:\nA CONFIRMAR.\n\nFardas:\nX X X X X\n\nUsar base FAB + distintivo.",
+    "sigla": "Curso de Controle Aéreo",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Requisitos parcialmente definidos",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-13",
+    "forca": "FAB",
+    "titulo": "Curso de Resgate Aéreo",
+    "detalhes": "Qualificação.\n\nPatente:\nA CONFIRMAR.\n\nRelação com PARA-SAR:\nA CONFIRMAR.\n\nNão gerar família completa ainda.",
+    "sigla": "Curso de Resgate Aéreo",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Requisitos parcialmente definidos",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-14",
+    "forca": "FAB",
+    "titulo": "Curso de Operações de Solo",
+    "detalhes": "Qualificação FAB.\n\nFardas:\nX X X X X\n\nUsar base FAB.",
+    "sigla": "Curso de Operações de Solo",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-11-15",
+    "forca": "FAB",
+    "titulo": "Curso de Instrutor FAB",
+    "detalhes": "Habilita função de instrutor.\n\nNão cria família própria.\n\nDepois de habilitado:\nusa farda de instrutor do curso onde atua.\n\nFardas:\nX X X X X",
+    "sigla": "Curso de Instrutor FAB",
+    "origem": "Manual mestre de cursos FAAAB",
+    "estado": "Documentado",
+    "tipo": "curso"
+  }
+]
