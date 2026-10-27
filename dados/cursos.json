@@ -318,5 +318,235 @@
     "origem": "Manual mestre de cursos FAAAB",
     "estado": "Documentado",
     "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-01",
+    "forca": "FMB",
+    "titulo": "Ensino Naval — formação de Aprendiz-Marinheiro",
+    "sigla": "Ensino Naval",
+    "detalhes": "Elegibilidade: Aprendiz-Marinheiro.\nResultado: Grumete.\n\nCurso de Ensino Naval da Marinha (adaptação FAAAB). Aluno: Aprendiz-Marinheiro. Resulta na passagem para Grumete, conforme CDP. Fardas de aluno operacional, treinamento e formatura previstas. Requisitos e prazo exatos: não definidos.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Planejamento FAAAB",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-02",
+    "forca": "FMB",
+    "titulo": "Curso de Marinharia",
+    "sigla": "Curso de Marinharia",
+    "detalhes": "Elegibilidade: Grumete.\nResultado: Marinheiro.\n\nAluno: Grumete. Resultado: Marinheiro, após atendimento da CDP e requisitos definidos para a carreira naval. Foram previstas roupas de curso operacionais, de treino e de formatura. Prazo: não definido.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Planejamento FAAAB",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-03",
+    "forca": "FMB",
+    "titulo": "C-NAV — Curso de Navegação",
+    "sigla": "C-NAV",
+    "detalhes": "Elegibilidade: Grumete ou superior.\nResultado: Habilitação naval.\n\nCurso de qualificação de navegação da Marinha. Elegibilidade: Grumete ou superior. Habilita a condução naval; não promove patente. Não requer farda própria. Regras para tipos de embarcação ficam em habilitação complementar.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-04",
+    "forca": "FMB",
+    "titulo": "Habilitação de Embarcação",
+    "sigla": "Habilitação de Embarcação",
+    "detalhes": "Elegibilidade: Após C-NAV, quando aplicável.\nResultado: Endosso por classe.\n\nComplementa C-NAV com permissão específica por tipo e classe de embarcação, sem duplicar o curso geral de navegação. Não é patente nova. Tipos disponíveis no jogo: a confirmar.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Planejamento FAAAB",
+    "tipo": "qualificacao"
+  },
+  {
+    "id": "CUR-COMP-05",
+    "forca": "FMB",
+    "titulo": "2° Cen d forCN",
+    "sigla": "2° Cen d forCN",
+    "detalhes": "Elegibilidade: Cabo.\nResultado: Cabo Especialista [CB-ESP].\n\nGrafia preservada do manual mestre. Aluno: Cabo; resultado: qualificação [CB-ESP] Cabo Especialista, que NÃO é patente nova. Prevista formação com farda operacional, de treino e formatura, mais farda permanente de especialista. Etapas e nome completo: confirmar.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Planejamento FAAAB",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-06",
+    "forca": "FMB",
+    "titulo": "Formação para Terceiro-Sargento Naval",
+    "sigla": "Formação para Terceiro-Sargento Naval",
+    "detalhes": "Elegibilidade: Cabo.\nResultado: Terceiro-Sargento.\n\nFormação obrigatória na rota do Cabo para Terceiro-Sargento. O manual menciona possível referência C-Esp-HabSG, mas o nome final está a confirmar. Fardas operacionais, de treino e de formatura previstas.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Planejamento FAAAB",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-07",
+    "forca": "FMB",
+    "titulo": "Progressão de Sargentos Navais",
+    "sigla": "Progressão de Sargentos Navais",
+    "detalhes": "Elegibilidade: Sargentos.\nResultado: Progressão por CDP.\n\nO planejamento não cria curso diferente automaticamente para cada promoção naval. Para Primeiro-Sargento da Marinha, o mérito não é requisito automático. Progressão permanece sujeita à CDP específica e aos requisitos válidos.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Diretriz aprovada",
+    "tipo": "rota"
+  },
+  {
+    "id": "CUR-COMP-08",
+    "forca": "FMB",
+    "titulo": "Habilitação para Suboficial",
+    "sigla": "Habilitação para Suboficial",
+    "detalhes": "Elegibilidade: Primeiro-Sargento.\nResultado: Suboficial.\n\nRota de 1º Sargento para Suboficial, tendo C-Esp-HabSO como referência possível (nome ainda a confirmar). Preferência por farda-base naval e elemento formal quando necessário.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Planejamento FAAAB",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-09",
+    "forca": "FMB",
+    "titulo": "Formação de oficiais — Escola Naval",
+    "sigla": "Formação de oficiais",
+    "detalhes": "Elegibilidade: A definir.\nResultado: Oficial naval.\n\nA Escola Naval é instituição de ensino, não um batalhão. Sua rota de formação de oficiais existe no planejamento; patente de ingresso e progressão final aguardam confirmação. Uniforme de alunos/instrutores sujeito à matriz do curso.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Planejamento FAAAB",
+    "tipo": "rota"
+  },
+  {
+    "id": "CUR-COMP-10",
+    "forca": "CFN",
+    "titulo": "Formação de Fuzileiros Navais — CIAMPA",
+    "sigla": "Formação de Fuzileiros Navais",
+    "detalhes": "Elegibilidade: A definir.\nResultado: Ingresso/qualificação no CFN.\n\nO CIAMPA é centro de instrução e rota para o Corpo de Fuzileiros Navais, subordinado à Marinha. O manual não confirmou a patente exata do aluno. Logotipos e patches só quando aprovados.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Planejamento FAAAB",
+    "tipo": "rota"
+  },
+  {
+    "id": "CUR-COMP-11",
+    "forca": "FMB",
+    "titulo": "Curso de Instrutor Naval",
+    "sigla": "Curso de Instrutor Naval",
+    "detalhes": "Elegibilidade: Instrutor habilitado.\nResultado: Qualificação de instrutor.\n\nCurso de habilitação do instrutor naval. Não cria farda inteira; o aprovado usa a roupa de instrutor do curso onde atua.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Documentado",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-12",
+    "forca": "FMB",
+    "titulo": "Curso de Unidade Especial",
+    "sigla": "Curso de Unidade Especial",
+    "detalhes": "Elegibilidade: A definir.\nResultado: Qualificação de unidade especial.\n\nA documentação antiga menciona um Curso de Unidade Especial, mas o papel final ainda não foi confirmado. Não assumir automaticamente que é curso do GRUMEC.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Pendência de validação",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-13",
+    "forca": "CBM",
+    "titulo": "ABMDP II — Programa de Formação",
+    "sigla": "ABMDP II",
+    "detalhes": "Elegibilidade: Aluno Bombeiro / Soldado / Cabo.\nResultado: Formação contínua até Cabo.\n\nAcademia/programa contínuo com fases de adaptação, formação básica, desenvolvimento e fase de Cabo. Alunos: Aluno Bombeiro Militar, Soldado e Cabo. Formatura depois da etapa de Cabo. Instrutores: a confirmar.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Planejamento FAAAB",
+    "tipo": "academia"
+  },
+  {
+    "id": "CUR-COMP-14",
+    "forca": "CBM",
+    "titulo": "CFC-BM — Curso de Formação de Cabos",
+    "sigla": "CFC-BM",
+    "detalhes": "Elegibilidade: Soldado.\nResultado: Cabo.\n\nRecomendação no manual mestre: integrar CFC-BM como fase da ABMDP II, não como família extra de uniforme. Resultado Cabo conforme CDP; não divulgar separadamente como curso obrigatório até validação.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Proposta no manual mestre",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-15",
+    "forca": "CBM",
+    "titulo": "CFS/BM — Formação de Sargentos",
+    "sigla": "CFS/BM",
+    "detalhes": "Elegibilidade: Cabo.\nResultado: Terceiro-Sargento.\n\nFormação com liderança, comando de pequena guarnição, administração, instrução, disciplina, relatórios e coordenação inicial de ocorrência. Fardas de aula, treino e formatura previstas; instrutores a confirmar.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Aprovado no catálogo; detalhes em planejamento",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-16",
+    "forca": "CBM",
+    "titulo": "CAP-BM — Curso de Aperfeiçoamento de Praças",
+    "sigla": "CAP-BM",
+    "detalhes": "Elegibilidade: Terceiro-Sargento.\nResultado: Qualificação para graus superiores.\n\nPlanejado para responsabilidades de Segundo e Primeiro-Sargento. Não promove duas graduações automaticamente. Pode reutilizar farda de graduado com distintivo discreto. Requisitos definitivos: a confirmar.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Proposta no manual mestre",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-17",
+    "forca": "CBM",
+    "titulo": "CAEP-BM — Curso de Altos Estudos para Praças",
+    "sigla": "CAEP-BM",
+    "detalhes": "Elegibilidade: Primeiro-Sargento (recomendado).\nResultado: Habilitação para Subtenente.\n\nAluno recomendado Primeiro-Sargento; alternativa Segundo/Primeiro-Sargento depende da regra final. Preferir base de farda de graduado. Não incluído como curso oficial aprovado no catálogo de outubro.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Proposta no manual mestre",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-18",
+    "forca": "CBM",
+    "titulo": "CFO/BM — Formação de Oficiais",
+    "sigla": "CFO/BM",
+    "detalhes": "Elegibilidade: Fase/cadete a confirmar.\nResultado: Oficial.\n\nCurso de Formação de Oficiais Bombeiros Militares. Patente de entrada, fases, formatura e instrutores ainda a confirmar. Resultado Aspirante ou Segundo-Tenente conforme progressão final.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Aprovado no catálogo; detalhes em planejamento",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-19",
+    "forca": "CBM",
+    "titulo": "CAO/BM — Aperfeiçoamento de Oficiais",
+    "sigla": "CAO/BM",
+    "detalhes": "Elegibilidade: Capitão (recomendado).\nResultado: Habilitação para Major.\n\nCurso de Aperfeiçoamento de Oficiais. Aluno recomendado Capitão, resultado habilitação para Major, sujeito à CDP e regras da FAAAB. Uso de farda base de oficial.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "No catálogo, a validar",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-20",
+    "forca": "CBM",
+    "titulo": "CAEO-BM — Altos Estudos para Oficiais",
+    "sigla": "CAEO-BM",
+    "detalhes": "Elegibilidade: Major ou Tenente-Coronel (a confirmar).\nResultado: Habilitação para Coronel.\n\nPlanejado para habilitação de alto escalão, ingresso Major/Tenente-Coronel a confirmar. Não equivale a nomeação automática; não incluído no catálogo aprovado.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Proposta no manual mestre",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-21",
+    "forca": "CBM",
+    "titulo": "CFP/BM — Curso de Formação de Praças Bombeiros Militares",
+    "sigla": "CFP/BM",
+    "detalhes": "Elegibilidade: A confirmar.\nResultado: Praça Bombeiro Militar.\n\nCurso de formação inicial do catálogo aprovado. Requisitos, fases, fardas e critérios individuais ainda não foram definidos no material recuperado.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Aprovado no catálogo; detalhes pendentes",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-22",
+    "forca": "CBM",
+    "titulo": "CSBM — Curso Superior de Bombeiro Militar",
+    "sigla": "CSBM",
+    "detalhes": "Elegibilidade: A confirmar.\nResultado: Qualificação superior.\n\nCurso Superior de Bombeiro Militar consta do catálogo aprovado, com regra expressamente a validar na FAAAB. Não anunciar requisito obrigatório até aprovação.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "No catálogo, a validar",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-COMP-23",
+    "forca": "FAB",
+    "titulo": "CCFA — Curso de Comandos de Força Aérea",
+    "sigla": "CCFA",
+    "detalhes": "Elegibilidade: A confirmar.\nResultado: Qualificação de comandos.\n\nCurso de Comandos de Força Aérea associado aos Paracomandos. É formação/qualificação, não uma segunda unidade real distinta do PARACOM fictício do projeto. Requisitos por patente não definidos.",
+    "origem": "Documentação consolidada FAAAB (manual mestre e catálogo aprovado)",
+    "estado": "Aprovado no catálogo",
+    "tipo": "curso"
   }
 ]
