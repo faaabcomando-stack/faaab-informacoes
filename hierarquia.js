@@ -11,8 +11,8 @@ function render(){
   $("rank-stats").innerHTML='<span>'+items.length+' patentes e graduações</span><span>Do maior ao menor</span><span>Todas possuem CDP</span>';
   $("hierarchy-list").innerHTML=items.length?items.map((x,i)=>{
     const steps=Array.isArray(x.cdpEtapas)?x.cdpEtapas:[];
-    const confirmed=x.cdpStatus==="Confirmada pela FAAAB",documented=x.cdpStatus==="Registrada no manual FAAAB",proposed=x.cdpStatus?.startsWith("Proposta elaborada");
-    const state=confirmed?"CDP confirmada":proposed?"CDP proposta · aguardando validação":documented?"CDP no manual":"CDP existente · detalhes a recuperar";
+    const confirmed=x.cdpStatus==="Confirmada pela FAAAB",documented=x.cdpStatus==="Registrada no manual FAAAB",proposed=x.cdpStatus?.startsWith("Proposta elaborada")||x.cdpStatus?.startsWith("Progressão indicada");
+    const state=confirmed?"CDP confirmada":proposed?"CDP com etapas propostas para validação":documented?"CDP no manual":"CDP existente · detalhes a recuperar";
     const stepsHTML=steps.length?'<ol class="cdp-steps">'+steps.map(st=>'<li>'+H(st.nome)+'</li>').join("")+'</ol>':documented?'<p>Nenhum curso novo obrigatório foi indicado nesta etapa do manual. Ver critérios abaixo.</p>':'<p>Essa patente possui CDP na FAAAB, mas seus detalhes ainda não foram recuperados nos arquivos consultados.</p>';
     const rules=x.cdpCriterios?'<p><strong>Critérios registrados:</strong> '+H(x.cdpCriterios)+'</p>':"";
     return '<article class="hierarchy-item"><span class="position">'+String(i+1).padStart(2,"0")+'</span><div><div class="rank-name">'+H(x.nome)+'</div><div class="rank-class">'+H(x.classe||"Patente/graduação")+'</div></div><span class="rank-code">['+H(x.sigla)+']</span><details><summary>CDP — Capacitação de Patente · '+state+'</summary><div class="detail-content"><strong>Capacitações citadas na documentação:</strong>'+stepsHTML+rules+'<p><small>Fonte: '+H(x.cdpFonte||"Não informada")+'</small></p>'+(x.cdpTempoProposto?'<p><small>Prazo indicado anteriormente (proposta): '+H(x.cdpTempoProposto)+'</small></p>':"")+'</div></details></article>'
