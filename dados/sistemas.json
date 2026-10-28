@@ -386,10 +386,10 @@
     "resumo": "Hierarquia e unidades BOPE, ROTAM, BPChoque e BPP constam do catálogo, sendo BPP adaptação fictícia.",
     "real": "Polícia Penal não integra a Polícia Militar brasileira na vida real.",
     "jogo": "PM é instituição policial no jogo, distinta da SEP administrativa.",
-    "regras": "A CDP da Polícia Militar segue a definição existente no trabalho do Codex, ainda não transcrita nestes dados. Não copiar regras e cursos do CBM por aproximação.",
-    "notas": "O responsável informou que a PM já teve sua estrutura/CDP decidida no Codex. Não substituí-la por adaptação automática do CBM. Importar a versão definida no Codex quando disponível para este repositório.",
-    "atualizado": "2026-10-27",
-    "fonte": "Decisões da FAAAB e documentos de planejamento recuperados; campos pendentes não representam regras aprovadas."
+    "regras": "CDP e hierarquia da PM não devem ser substituídas por adaptação arbitrária do CBM. O arquivo de pesquisa de cursos (dados/pmdf_pesquisa_cursos_2026.json) é um levantamento PMDF sem escolhas homologadas. Cada uniforme, distintivo, qualificação e curso requer validação independente.",
+    "notas": "O trabalho do Codex contém pesquisa de cursos PMDF para a FAAAB (24/10/2026): 46 opções analisadas, 19 prioridades, nenhuma selecionada. A lista não altera automaticamente a CDP, os cursos, os uniformes ou as unidades. A estrutura da PM já decidida em outros trabalhos deve ser preservada.",
+    "atualizado": "2026-10-28",
+    "fonte": "Planejamento Codex enviado pelo responsável; referência PMDF PAE 2026, com seleção pendente."
   },
   {
     "id": "S-030",
