@@ -9,7 +9,8 @@
     "nomearSomenteOrganizacoesFicticias": true,
     "cadastroOficialAtivo": false,
     "listaPublicaAtiva": true,
-    "registroDeNomes": "Nenhum nome de organização política confirmado."
+    "registroDeNomes": "Nenhum nome de organização política confirmado.",
+    "aprovacaoPorBot": "Planejada; dependerá de backend com autenticação e acesso confiável à API do Roblox e ao histórico de atividade da FAAAB"
   },
   "eleicao": {
     "cargoPrincipal": "Presidente",
@@ -17,10 +18,17 @@
     "forma": "Eleições individuais, não uma chapa que recebe cargos por vitória conjunta",
     "cargosAutomaticamenteEleitos": [
       "GOV-PRE",
-      "GOV-V-PRE"
+      "GOV-V-PRE",
+      "GOV-DEP-FED"
     ],
-    "cargosOutrosPorEleicao": "Não aprovados; inclusive secretarias, ministérios e STF",
-    "situacao": "Calendário e inscrições não abertos"
+    "cargosOutrosPorEleicao": "STF, ministros e secretarias não entram automaticamente na eleição",
+    "situacao": "Calendário e inscrições não abertos",
+    "cargosDisputadosPorVoto": [
+      "GOV-PRE",
+      "GOV-V-PRE",
+      "GOV-DEP-FED"
+    ],
+    "regrasDeVotacao": "Presidente e Vice-Presidente individualmente; regras para vagas e votação de Deputado Federal ainda a definir"
   },
   "elegibilidade": {
     "deveSerCivil": true,
@@ -29,7 +37,13 @@
     "carenciaDias": null,
     "marcoDaCarencia": "Data de desligamento efetivo da instituição militar; comprovação por integração futura",
     "verificacaoServidor": "Pendente",
-    "observacao": "A quantidade de dias não foi aprovada. Ninguém deve ser liberado automaticamente sem prazo definido."
+    "observacao": "A quantidade de dias não foi aprovada. Ninguém deve ser liberado automaticamente sem prazo definido.",
+    "estarEmPartidoAprovado": true,
+    "estarNoGrupoOficialFAAAB": true,
+    "idadeMinimaContaRobloxDias": 90,
+    "diasMinimosJogados": 30,
+    "definicaoDiasJogados": "Dias distintos de participação registrados pelo servidor do jogo; confirmar com a FAAAB antes da ativação",
+    "situacaoDosDados": "Idade da conta e grupos vêm do Roblox; histórico de participação precisa do próprio jogo"
   },
   "filiacao": {
     "papelInicial": "Membro",
@@ -42,12 +56,48 @@
   },
   "fontes": [
     {
-      "nome": "Normas da Comunidade Roblox",
+      "nome": "Normas Roblox sobre entidades políticas",
       "url": "https://about.roblox.com/pt-br/community-standards"
     },
     {
-      "nome": "Roblox: funções e permissões de comunidades",
-      "url": "https://en.help.roblox.com/hc/pt-br/articles/203313770-Fun%C3%A7%C3%B5es-de-comunidade-e-permiss%C3%B5es"
+      "nome": "Roblox Open Cloud grupos e funções",
+      "url": "https://create.roblox.com/docs/cloud/reference/features/groups"
+    },
+    {
+      "nome": "Roblox DataStore de atividade",
+      "url": "https://create.roblox.com/docs/pt-br/cloud-services/data-stores"
     }
-  ]
+  ],
+  "ultimaRevisao": "2026-10-28",
+  "criacaoPartido": {
+    "estarNoGrupoOficialFAAAB": true,
+    "idadeMinimaContaRobloxDias": 90,
+    "diasMinimosJogados": 60,
+    "definicaoDiasJogados": "Dias distintos de participação registrados pelo servidor do jogo; confirmar com a FAAAB antes da ativação",
+    "possuirGrupoRoblox": true,
+    "idadeMinimaGrupoDias": 20,
+    "nomeObrigatorio": true,
+    "apenasFicticio": true,
+    "semReferenciasPoliticasReais": true,
+    "papeisObrigatorios": [
+      "Presidente",
+      "Vice-Presidente",
+      "Membro do Partido",
+      "Deputado Federal"
+    ],
+    "regraPapeis": "Cada cargo disputado em eleição deverá corresponder a um papel no grupo; Presidente e Vice-Presidente também são cargos políticos. Nomes equivalentes/acentos sujeitos à padronização.",
+    "checagemAutomatica": [
+      "Conta Roblox com 90 dias",
+      "Membro do grupo oficial do jogo",
+      "60 dias de participação comprovada",
+      "Grupo de partido criado há 20 dias",
+      "Nome do partido presente no grupo",
+      "Funções obrigatórias no grupo",
+      "Análise de nome e referências políticas reais"
+    ],
+    "limites": "Sem nomes, vínculos, símbolos, slogans ou entidades políticas reais. A avaliação automatizada de semelhança não garante ausência de conexões reais.",
+    "candidaturaDeCriadorNaoAutomatica": true,
+    "resultadoAutomatico": "Apenas após verificação via backend com dados confiáveis; site estático não pode aprovar nem registrar grupo.",
+    "ativo": false
+  }
 }
