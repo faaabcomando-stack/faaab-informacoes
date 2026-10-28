@@ -1,19 +1,5 @@
 "use strict";
-// A área pública de Estudos, Provas e Notícias não depende do servidor Google.
-// Firebase é carregado só quando o proprietário ativa a configuração.
-let initializeApp,getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged,setPersistence,browserLocalPersistence;
-let getFirestore,collection,doc,getDoc,getDocs,query,where,limit,setDoc,updateDoc,addDoc,serverTimestamp,Timestamp;
-async function loadFirebase(){
- const [app,auth,db]=await Promise.all([
-  import("https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js"),
-  import("https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js"),
-  import("https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js")
- ]);
- ({initializeApp}=app);
- ({getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged,setPersistence,browserLocalPersistence}=auth);
- ({getFirestore,collection,doc,getDoc,getDocs,query,where,limit,setDoc,updateDoc,addDoc,serverTimestamp,Timestamp}=db);
-}
-
+// Consulta pública sem login social ou autenticação externa.
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const formatDate=v=>{if(!v)return "Data não informada";const d=v?.toDate?v.toDate():new Date(v);return isNaN(d)?"Data não informada":d.toLocaleString("pt-BR",{dateStyle:"medium",timeStyle:"short"})};
@@ -97,9 +83,6 @@ function permissionsUI(){
  if(!owner()&&$("view-administracao").hidden===false)showTab("noticias");
  const options=[["noticias","Notícias"],["avisos","Avisos"],["marketing","Marketing"]].filter(x=>allowedChannels().includes(x[0]));
  $("post-channel").innerHTML=options.map(x=>'<option value="'+x[0]+'">'+x[1]+'</option>').join("");
- $("auth-title").textContent=s.me?"Conectado: "+(s.me.displayName||"Conta Google"):"Entrar com sua conta Google";
- $("auth-message").textContent=s.me?(owner()?"Você é o proprietário. Whitelist, cargos, canais, provas e materiais estão sob sua administração.":approved()?"Whitelist aprovada. Seus cargos são atribuídos manualmente e limitam as ações permitidas.":"Cadastro realizado. Aguardando aprovação manual na whitelist da FAAAB."):"Faça login uma vez e retorne automaticamente neste navegador. O login não libera whitelist nem cargo.";
- $("login-google").hidden=!!s.me;$("logout-google").hidden=!s.me;
 }
 function renderPosts(){
  const channels=["noticias","avisos","marketing"],labels=s.seed.categorias||{},filter=$("filter-news").value;
@@ -283,26 +266,12 @@ $("material-form").addEventListener("submit",async e=>{e.preventDefault();if(!ow
 });
 async function bootstrap(){
  try{
-  const [seedResp,roleResp,configResp,catalogResp,guidesResp]=await Promise.all([fetch("dados/portal_canais_estudos.json"),fetch("dados/admin_roles.json"),fetch("dados/firebase_config.json",{cache:"no-store"}),fetch("dados/provas_todas_unidades.json"),fetch("dados/provas_guias_materias.json")]);
-  if(!seedResp.ok||!roleResp.ok||!configResp.ok||!catalogResp.ok||!guidesResp.ok)throw Error("Não foi possível carregar os arquivos do portal");
-  s.seed=await seedResp.json();s.roleCatalog=await roleResp.json();s.allExams=await catalogResp.json();s.studyGuides=await guidesResp.json();const cfg=await configResp.json();
+  const [seedResp,roleResp,catalogResp,guidesResp]=await Promise.all([fetch("dados/portal_canais_estudos.json"),fetch("dados/admin_roles.json"),fetch("dados/provas_todas_unidades.json"),fetch("dados/provas_guias_materias.json")]);
+  if(!seedResp.ok||!roleResp.ok||!catalogResp.ok||!guidesResp.ok)throw Error("Não foi possível carregar os arquivos do portal");
+  s.seed=await seedResp.json();s.roleCatalog=await roleResp.json();s.allExams=await catalogResp.json();s.studyGuides=await guidesResp.json();
   buildStudyPaths();renderCatalog();renderReferences();
   $("exam-record").innerHTML='<option value="">Selecione o curso, centro, unidade ou brigada</option>'+s.allExams.registros.filter(x=>["curso","centro","escola","academia","unidade","brigada","subdivisao"].includes(x.tipo)).sort((a,b)=>a.forca.localeCompare(b.forca)||a.nome.localeCompare(b.nome,"pt-BR")).map(x=>'<option value="'+esc(x.id)+'">'+esc(x.forca+" · "+x.nome)+'</option>').join("");
   $("study-type").disabled=false;refreshUserRoleOptions();renderPosts();renderExams();if(validTab.has(location.hash.slice(1))&&!["publicar","administracao"].includes(location.hash.slice(1)))showTab(location.hash.slice(1));
-  if(!cfg.enabled||!cfg.app?.apiKey||!cfg.app?.projectId||!cfg.app?.appId){
-   $("auth-title").textContent="Google login: configuração pendente";
-   $("auth-message").textContent="A central pública e os estudos já estão disponíveis. Para ativar login, whitelist e publicação online, o proprietário precisa criar o Firebase e aplicar as regras de segurança.";
-   return;
-  }
-  await loadFirebase();
-  s.app=initializeApp(cfg.app);s.auth=getAuth(s.app);s.db=getFirestore(s.app);
-  await setPersistence(s.auth,browserLocalPersistence);
-  $("login-google").disabled=false;
-  $("login-google").addEventListener("click",async()=>{try{await signInWithPopup(s.auth,new GoogleAuthProvider())}catch(err){notice("Não foi possível entrar com Google: "+err.message,true)}});
-  $("logout-google").addEventListener("click",()=>signOut(s.auth).catch(e=>notice("Erro ao sair: "+e.message,true)));
-  onAuthStateChanged(s.auth,user=>authChanged(user).catch(e=>notice("Erro de sessão: "+e.message,true)));
-  await Promise.all([refreshPosts(),refreshExams()]);
-  setInterval(()=>{if(s.db){refreshExams().catch(()=>{});renderExams()}},60000);
  }catch(e){notice("Falha ao carregar a central: "+e.message,true)}
 }
 bootstrap();
