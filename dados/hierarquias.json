@@ -353,19 +353,32 @@
   {
     "forca": "FAB",
     "ordem": 4,
+    "sigla": "COMOD-AR",
+    "nome": "Comodoro do Ar",
+    "classe": "Oficiais superiores",
+    "competencias": null,
+    "requisitos": null,
+    "formacao": null,
+    "diasMinimos": null,
+    "proximaEtapa": "Brigadeiro",
+    "observacao": "Posto acrescentado à FAAAB por decisão do usuário em 27/10/2026. Requisitos de CDP e sigla institucional a confirmar; não equivalem automaticamente a postos oficiais brasileiros."
+  },
+  {
+    "forca": "FAB",
+    "ordem": 5,
     "sigla": "COL",
     "nome": "Coronel",
     "competencias": "Política e estratégia aeroespacial, alta administração e planejamento de força.",
     "requisitos": "16 dias mínimos + mérito; CPEA obrigatório antes do acesso ao oficialato-general definido na FAAAB.",
     "formacao": "CPEA",
     "diasMinimos": "16 dias - proposta de balanceamento",
-    "proximaEtapa": "Brigadeiro",
+    "proximaEtapa": "Comodoro do Ar",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores"
   },
   {
     "forca": "FAB",
-    "ordem": 5,
+    "ordem": 6,
     "sigla": "T-COL",
     "nome": "Tenente-Coronel",
     "competencias": "Coordenação de grandes operações, chefia e doutrina.",
@@ -378,7 +391,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 6,
+    "ordem": 7,
     "sigla": "MAJ",
     "nome": "Major",
     "competencias": "Estado-maior, planejamento aéreo, logística e assessoramento superior.",
@@ -391,7 +404,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 7,
+    "ordem": 8,
     "sigla": "CAP",
     "nome": "Capitão",
     "competencias": "Planejamento de esquadrão/unidade, gestão de risco e comando intermediário.",
@@ -404,7 +417,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 8,
+    "ordem": 9,
     "sigla": "P-TEN",
     "nome": "Primeiro-Tenente",
     "competencias": "Coordenação de operações e instrução de oficiais mais modernos.",
@@ -417,7 +430,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 9,
+    "ordem": 10,
     "sigla": "S-TEN",
     "nome": "Segundo-Tenente",
     "competencias": "Comando inicial, gestão de pessoal e planejamento de missão conforme especialidade.",
@@ -430,7 +443,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 10,
+    "ordem": 11,
     "sigla": "ASP-OF",
     "nome": "Aspirante a Oficial",
     "competencias": "Liderança, planejamento e aplicação de doutrina aeronáutica.",
@@ -443,7 +456,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 11,
+    "ordem": 12,
     "sigla": "CDT",
     "nome": "Cadete",
     "competencias": "Base acadêmica e militar de comando aeronáutico.",
@@ -456,7 +469,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 12,
+    "ordem": 13,
     "sigla": "SB-OFC",
     "nome": "Suboficial",
     "competencias": "Chefia técnica, assessoramento e padronização de instrução.",
@@ -469,7 +482,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 13,
+    "ordem": 14,
     "sigla": "P-SGT",
     "nome": "Primeiro-Sargento",
     "competencias": "Direção de equipes técnicas, coordenação administrativa e liderança de graduados.",
@@ -482,7 +495,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 14,
+    "ordem": 15,
     "sigla": "S-SGT",
     "nome": "Segundo-Sargento",
     "competencias": "Supervisão de equipe, segurança operacional e coordenação de turno.",
@@ -495,7 +508,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 15,
+    "ordem": 16,
     "sigla": "T-SGT",
     "nome": "Terceiro-Sargento",
     "competencias": "Especialista técnico, fiscalização de procedimento e apoio a treinamento.",
@@ -508,7 +521,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 16,
+    "ordem": 17,
     "sigla": "CB",
     "nome": "Cabo",
     "competencias": "Coordenação de pequenas equipes técnicas e padronização de procedimentos.",
@@ -521,7 +534,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 17,
+    "ordem": 18,
     "sigla": "SLD-1°CL",
     "nome": "Soldado de 1ª Classe",
     "competencias": "Autonomia técnica básica, segurança operacional e apoio a missões.",
@@ -534,7 +547,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 18,
+    "ordem": 19,
     "sigla": "SLD-2°CL",
     "nome": "Soldado de 2ª Classe",
     "competencias": "Apoio de solo, segurança de instalações e procedimentos de base.",
@@ -547,7 +560,7 @@
   },
   {
     "forca": "FAB",
-    "ordem": 19,
+    "ordem": 20,
     "sigla": "REC-FAB",
     "nome": "Recruta da FAB",
     "competencias": "Disciplina, segurança de área aeronáutica, FOD, comunicações e rotina de base.",
@@ -613,19 +626,32 @@
   {
     "forca": "FMB",
     "ordem": 5,
+    "sigla": "COMOD",
+    "nome": "Comodoro",
+    "classe": "Oficiais superiores",
+    "competencias": null,
+    "requisitos": null,
+    "formacao": null,
+    "diasMinimos": null,
+    "proximaEtapa": "Contra-Almirante",
+    "observacao": "Posto acrescentado à FAAAB por decisão do usuário em 27/10/2026. Requisitos de CDP e sigla institucional a confirmar; não equivalem automaticamente a postos oficiais brasileiros."
+  },
+  {
+    "forca": "FMB",
+    "ordem": 6,
     "sigla": "CMG",
     "nome": "Capitão de Mar e Guerra",
     "competencias": "Política e estratégia marítimas, alta administração naval e tomada de decisão.",
     "requisitos": "15 dias mínimos + mérito; C-PEM obrigatório antes do oficialato-general na adaptação FAAAB.",
     "formacao": "C-PEM / EGN",
     "diasMinimos": "15 dias - proposta de balanceamento",
-    "proximaEtapa": "Contra-Almirante",
+    "proximaEtapa": "Comodoro",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores"
   },
   {
     "forca": "FMB",
-    "ordem": 6,
+    "ordem": 7,
     "sigla": "CF",
     "nome": "Capitão de Fragata",
     "competencias": "Comando superior de organização/navio e estado-maior.",
@@ -638,7 +664,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 7,
+    "ordem": 8,
     "sigla": "CC",
     "nome": "Capitão de Corveta",
     "competencias": "Comando intermediário, doutrina e planejamento naval.",
@@ -651,7 +677,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 8,
+    "ordem": 9,
     "sigla": "CT",
     "nome": "Capitão-Tenente",
     "competencias": "Planejamento de estado-maior, operações navais e assessoria.",
@@ -664,7 +690,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 9,
+    "ordem": 10,
     "sigla": "P-TEN",
     "nome": "Primeiro-Tenente",
     "competencias": "Chefia de divisão e planejamento de unidade/navio.",
@@ -677,7 +703,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 10,
+    "ordem": 11,
     "sigla": "S-TEN",
     "nome": "Segundo-Tenente",
     "competencias": "Comando inicial, administração naval e navegação sob supervisão.",
@@ -690,7 +716,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 11,
+    "ordem": 12,
     "sigla": "GM",
     "nome": "Guarda-Marinha",
     "competencias": "Transição do ensino naval para o exercício de oficial.",
@@ -703,7 +729,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 12,
+    "ordem": 13,
     "sigla": "SO",
     "nome": "Suboficial",
     "competencias": "Mais alto nível técnico de praça, assessoramento e padronização de bordo.",
@@ -716,7 +742,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 13,
+    "ordem": 14,
     "sigla": "P-SGT",
     "nome": "Primeiro-Sargento",
     "competencias": "Chefia de divisão/seção, instrução e assessoramento de oficiais.",
@@ -729,7 +755,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 14,
+    "ordem": 15,
     "sigla": "S-SGT",
     "nome": "Segundo-Sargento",
     "competencias": "Supervisão de serviço, adestramento e controle de material.",
@@ -742,7 +768,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 15,
+    "ordem": 16,
     "sigla": "T-SGT",
     "nome": "Terceiro-Sargento",
     "competencias": "Chefia de pequenas equipes, adestramento de bordo e fiscalização de serviço.",
@@ -755,7 +781,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 16,
+    "ordem": 17,
     "sigla": "CB",
     "nome": "Cabo",
     "competencias": "Liderança de guarnição, rotina de convés, controle de pessoal e especialidade.",
@@ -768,7 +794,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 17,
+    "ordem": 18,
     "sigla": "MN",
     "nome": "Marinheiro",
     "competencias": "Nós, cabos, manobras básicas, vigia, organização de bordo e segurança.",
@@ -781,7 +807,7 @@
   },
   {
     "forca": "FMB",
-    "ordem": 18,
+    "ordem": 19,
     "sigla": "REC-MB",
     "nome": "Recruta",
     "competencias": "Adaptação à vida naval, disciplina, cerimonial, segurança e rotina de bordo.",
