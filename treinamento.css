@@ -1,0 +1,25 @@
+/* FAAAB — caderno de atividades: página editorial, sem cartões e sem filtros artificiais. */
+.training-lede{max-width:800px;font:400 19px/1.68 Georgia,"Times New Roman",serif;color:#405548}
+.training-note{background:#efecdc;border-left:3px solid #a48d5f;padding:17px 22px;font-size:13px;color:#556154;margin:28px 0;line-height:1.72}
+.training-notice{color:#59685c;font-size:13px;margin-top:14px}
+.training-list{counter-reset:activity;margin-top:16px;border-top:2px solid #94876b}
+.training-list>li{list-style:none;display:grid;grid-template-columns:60px minmax(155px,.8fr) minmax(200px,1.2fr);align-items:baseline;gap:14px;padding:18px 6px;border-bottom:1px solid #d3d6cd}
+.training-list>li:before{counter-increment:activity;content:counter(activity,decimal-leading-zero);color:#99845a;font:700 12px Georgia,serif}
+.training-list>li strong{font:400 19px/1.4 Georgia,serif;color:#284136}
+.training-list>li span{font-size:13px;color:#607063;line-height:1.6}
+.training-group{padding:30px 0 45px;border-bottom:1px solid #dadcd2}
+.training-group header{margin-bottom:24px}
+.training-group h2{margin:0 0 8px;font-size:34px}
+.training-group header p{color:#68736a;font-size:14px;margin:0;max-width:730px}
+.training-steps{border-top:2px solid #a18a60;margin:25px 0}
+.training-steps .step{display:grid;grid-template-columns:64px 220px minmax(0,1fr);gap:22px;border-bottom:1px solid #d8d9cf;padding:20px 3px;align-items:start}
+.training-steps .step b{font:700 13px Georgia,serif;color:#8e7955}
+.training-steps .step strong{font:400 22px Georgia,serif;color:#2a4535}
+.training-steps .step p{margin:0;color:#647066;font-size:14px}
+.training-subnav{display:flex;flex-wrap:wrap;gap:10px;padding:20px 0 13px}
+.training-subnav a{border-bottom:1px solid #bda981;padding:9px 2px;color:#2e4f3c;font-weight:650;font-size:12px}
+.training-source{font-size:12px;color:#657368;line-height:1.8}
+.training-source a{text-decoration:underline;text-underline-offset:3px}
+.training-related{background:#eeeee5;border-top:1px solid #d9dace;padding:45px 0}
+.training-related .index-links{margin-top:20px}
+@media(max-width:720px){.training-list>li{grid-template-columns:36px minmax(0,1fr);gap:3px 12px}.training-list>li span{grid-column:2}.training-steps .step{grid-template-columns:38px minmax(0,1fr);gap:8px 12px}.training-steps .step p{grid-column:2}.training-group h2{font-size:29px}}
