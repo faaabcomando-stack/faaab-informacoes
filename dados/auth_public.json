@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "backendUrl": null,
+  "provider": "Cloudflare Workers OAuth",
+  "status": "aguardando configuração do D1 e dos aplicativos OAuth do proprietário",
+  "updated": "2026-10-28"
+}
