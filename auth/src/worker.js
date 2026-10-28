@@ -161,6 +161,8 @@ async function roleFor(user,env){
  const rbx=user.provider==="roblox"?user.subject:user.linked_roblox_id;
  if(rbx&&env.OWNER_ROBLOX_ID&&rbx===String(env.OWNER_ROBLOX_ID))return "owner";
  if(user.provider==="google"&&env.OWNER_GOOGLE_SUB&&user.subject===String(env.OWNER_GOOGLE_SUB))return "owner";
+ const grant=await env.DB.prepare("SELECT role FROM private_grants WHERE user_key=?").bind(user.user_key).first();
+ if(grant&&["editor","revisor"].includes(grant.role))return grant.role;
  const list=await roster(env);
  const allowed=list.membros.filter(m=>m&&typeof m==="object"&&["editor","revisor"].includes(m.perfil));
  for(const member of allowed){
@@ -235,6 +237,28 @@ export default {
    if(req.method==="GET"&&path==="/")return textResponse(loginPage(ctx),200,"text/html; charset=utf-8");
    if(req.method==="GET"&&path==="/api/me")return jsonify({loggedIn:!!ctx,user:ctx?{provider:ctx.user.provider,displayName:ctx.user.display_name,robloxId:ctx.user.provider==="roblox"?ctx.user.subject:ctx.user.linked_roblox_id}:null,role:ctx?.role||null,csrf:ctx?.role?ctx.csrf:null});
    if(!ctx?.role)return req.method==="GET"?redirect("/"):jsonify({error:"Acesso negado. Login e whitelist necessários."},403);
+   if(req.method==="GET"&&path==="/api/registrations"){
+    if(ctx.role!=="owner")return jsonify({error:"Acesso só para proprietário"},403);
+    const rows=await env.DB.prepare("SELECT i.user_key,i.provider,i.display_name,i.email,i.linked_roblox_id,i.last_login_at,g.role AS grant_role FROM identities i LEFT JOIN private_grants g ON g.user_key=i.user_key ORDER BY i.last_login_at DESC LIMIT 80").all();
+    return jsonify({registrations:rows.results||[]});
+   }
+   if(req.method==="POST"&&path==="/api/grant"){
+    if(ctx.role!=="owner")return jsonify({error:"Acesso só para proprietário"},403);
+    if(!verifyInput(url.origin,req)||req.headers.get("x-faaab-csrf")!==ctx.csrf)return jsonify({error:"Origem/CSRF inválido"},403);
+    const payload=await req.json().catch(()=>null),target=String(payload?.userKey||"");
+    const role=payload?.role,action=payload?.action;
+    if(target.length>320||!target||!["grant","revoke"].includes(action))return jsonify({error:"Solicitação inválida"},400);
+    if(target===ctx.user.user_key)return jsonify({error:"Você não pode modificar seu próprio acesso"},403);
+    const found=await env.DB.prepare("SELECT user_key FROM identities WHERE user_key=?").bind(target).first();
+    if(!found)return jsonify({error:"Usuário ainda não se registrou"},404);
+    if(action==="grant"){
+     if(!["editor","revisor"].includes(role))return jsonify({error:"Perfil inválido"},400);
+     await env.DB.prepare("INSERT INTO private_grants(user_key,role,granted_at) VALUES(?,?,?) ON CONFLICT(user_key) DO UPDATE SET role=excluded.role,granted_at=excluded.granted_at").bind(target,role,now()).run();
+    }else{
+     await env.DB.prepare("DELETE FROM private_grants WHERE user_key=?").bind(target).run();
+    }
+    return jsonify({ok:true,action,userKey:target});
+   }
    if(req.method==="GET"&&path==="/painel")return fetchStatic(env,"admin-app.html","text/html; charset=utf-8");
    if(req.method==="GET"&&PUBLIC_ASSETS.has(path.slice(1)))return fetchStatic(env,path.slice(1),path.endsWith(".css")?"text/css; charset=utf-8":"application/javascript; charset=utf-8");
    const dataMatch=path.match(/^\/dados\/([a-z_]+)\.json$/),apiMatch=path.match(/^\/api\/data\/([a-z_]+)$/);
