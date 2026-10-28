@@ -705,18 +705,43 @@
     "sigla": "COMOD-AR",
     "nome": "Comodoro do Ar",
     "classe": "Oficiais superiores",
-    "competencias": null,
-    "requisitos": null,
-    "formacao": null,
-    "diasMinimos": null,
+    "competencias": "Coordenação de unidades aéreas, planejamento de operações conjuntas da FAB, comando de oficiais subordinados e avaliação de segurança e eficiência operacional.",
+    "requisitos": "Proposta de CDP: cumprir as quatro etapas da Capacitação de Patente; 17 dias mínimos na patente (proposta, não regra final), mérito e validação do Alto Comando. A aprovação das etapas não gera promoção automática.",
+    "formacao": "Concluir Estágio de Coordenação de Unidades Aéreas (formação proposta da FAAAB)",
+    "diasMinimos": "17 dias mínimos — proposta de balanceamento",
     "proximaEtapa": "Brigadeiro",
-    "observacao": "Posto acrescentado à FAAAB por decisão do usuário em 27/10/2026. Requisitos de CDP e sigla institucional a confirmar; não equivalem automaticamente a postos oficiais brasileiros.",
-    "cdpStatus": "Existente — documentação específica a recuperar",
+    "observacao": "CDP nova proposta para FAAAB; estágio e período precisam de aprovação. Não utilizar como regra obrigatória enquanto não validada.",
+    "cdpStatus": "Proposta elaborada — aguardando validação da FAAAB",
     "cdpExiste": true,
-    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
-    "cdpCriterios": null,
-    "cdpEtapas": [],
-    "cdpTempoProposto": null
+    "cdpFonte": "Proposta de Capacitação de Patente criada por solicitação do responsável da FAAAB em 27/10/2026; ainda não homologada.",
+    "cdpCriterios": "Proposta de CDP: cumprir as quatro etapas da Capacitação de Patente; 17 dias mínimos na patente (proposta, não regra final), mérito e validação do Alto Comando. A aprovação das etapas não gera promoção automática.",
+    "cdpEtapas": [
+      {
+        "nome": "Concluir Estágio de Coordenação de Unidades Aéreas (formação proposta da FAAAB)",
+        "obrigatorio": true,
+        "ordem": 1,
+        "estado": "proposta"
+      },
+      {
+        "nome": "Planejar e dirigir exercício integrado envolvendo duas especialidades da FAB",
+        "obrigatorio": true,
+        "ordem": 2,
+        "estado": "proposta"
+      },
+      {
+        "nome": "Apresentar relatório de comando, segurança operacional e avaliação dos subordinados",
+        "obrigatorio": true,
+        "ordem": 3,
+        "estado": "proposta"
+      },
+      {
+        "nome": "Obter avaliação de mérito e aprovação do Alto Comando da FAB",
+        "obrigatorio": true,
+        "ordem": 4,
+        "estado": "proposta"
+      }
+    ],
+    "cdpTempoProposto": "17 dias mínimos — proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -1193,18 +1218,43 @@
     "sigla": "COMOD",
     "nome": "Comodoro",
     "classe": "Oficiais superiores",
-    "competencias": null,
-    "requisitos": null,
-    "formacao": null,
-    "diasMinimos": null,
+    "competencias": "Direção de agrupamentos navais, coordenação de operações de superfície e apoio naval, administração de tripulações e avaliação de prontidão.",
+    "requisitos": "Proposta de CDP: cumprir as quatro etapas da Capacitação de Patente; 17 dias mínimos na patente (proposta, não regra final), mérito e validação do Alto Comando Naval. A aprovação das etapas não gera promoção automática.",
+    "formacao": "Concluir Estágio de Direção de Agrupamentos Navais (formação proposta da FAAAB)",
+    "diasMinimos": "17 dias mínimos — proposta de balanceamento",
     "proximaEtapa": "Contra-Almirante",
-    "observacao": "Posto acrescentado à FAAAB por decisão do usuário em 27/10/2026. Requisitos de CDP e sigla institucional a confirmar; não equivalem automaticamente a postos oficiais brasileiros.",
-    "cdpStatus": "Existente — documentação específica a recuperar",
+    "observacao": "CDP nova proposta para FAAAB; estágio e período precisam de aprovação. Não utilizar como regra obrigatória enquanto não validada.",
+    "cdpStatus": "Proposta elaborada — aguardando validação da FAAAB",
     "cdpExiste": true,
-    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
-    "cdpCriterios": null,
-    "cdpEtapas": [],
-    "cdpTempoProposto": null
+    "cdpFonte": "Proposta de Capacitação de Patente criada por solicitação do responsável da FAAAB em 27/10/2026; ainda não homologada.",
+    "cdpCriterios": "Proposta de CDP: cumprir as quatro etapas da Capacitação de Patente; 17 dias mínimos na patente (proposta, não regra final), mérito e validação do Alto Comando Naval. A aprovação das etapas não gera promoção automática.",
+    "cdpEtapas": [
+      {
+        "nome": "Concluir Estágio de Direção de Agrupamentos Navais (formação proposta da FAAAB)",
+        "obrigatorio": true,
+        "ordem": 1,
+        "estado": "proposta"
+      },
+      {
+        "nome": "Planejar e comandar exercício naval integrado de superfície, segurança e comunicação",
+        "obrigatorio": true,
+        "ordem": 2,
+        "estado": "proposta"
+      },
+      {
+        "nome": "Apresentar relatório de prontidão, gestão de pessoal e disciplina das tripulações",
+        "obrigatorio": true,
+        "ordem": 3,
+        "estado": "proposta"
+      },
+      {
+        "nome": "Obter avaliação de mérito e aprovação do Alto Comando da Marinha",
+        "obrigatorio": true,
+        "ordem": 4,
+        "estado": "proposta"
+      }
+    ],
+    "cdpTempoProposto": "17 dias mínimos — proposta de balanceamento"
   },
   {
     "forca": "FMB",
