@@ -4,7 +4,7 @@
 const SITE_DEFAULT="https://faaabcomando-stack.github.io/faaab-informacoes";
 const API="https://api.github.com/repos/";
 const ALLOWED=new Set(["admin_roles","noticias","autoridades","admin_whitelist","catalogo","hierarquias","cursos","sistemas","historico","geral","pm_progressao"]);
-const PUBLIC_ASSETS=new Set(["admin-panel.css","admin-panel.js"]);
+const PUBLIC_ASSETS=new Set(["admin-panel.css","admin-roles.css","admin-panel.js"]);
 const COOKIE="__Host-faaab_session";
 const ONE_DAY=86400;
 const now=()=>Math.floor(Date.now()/1000);
@@ -296,6 +296,7 @@ export default {
    if(req.method==="GET"&&path==="/link/roblox")return oauthStart(req,env,"roblox",true);
    if(req.method==="GET"&&path==="/callback/roblox")return oauthCallback(req,env,"roblox");
    if(req.method==="GET"&&path==="/callback/google")return oauthCallback(req,env,"google");
+   if(req.method==="GET"&&path==="/auth/auto-google"){const active=await userContext(req,env);if(active?.approved)return redirect("/membros");if(active?.user)return redirect("/");return redirect("/auth/google");}
    if(req.method==="POST"&&path==="/logout"){
     const s=await getSession(req,env);if(s)await env.DB.prepare("DELETE FROM sessions WHERE token_hash=?").bind(await hash(s.raw)).run();
     return redirect("/",{"set-cookie":clearCookie()});
@@ -354,7 +355,7 @@ export default {
       const govt=await githubData("autoridades",env);
       if(!JSON.parse(govt.content).some(x=>x.forca==="GOV"&&x.id===scope.cargoId))return jsonify({error:"Escolha um cargo do Governo existente"},400);
      }else if(role==="alto_escalao"){
-      if(!["militar","civil"].includes(scope.categoria)||!["FTB","FAB","FMB","CBM","PM","GOV"].includes(scope.forca))return jsonify({error:"Selecione força e categoria válidas"},400);
+      if(!["militar","civil"].includes(scope.categoria)||!["FTB","FAB","FMB","CBM","PM","GOV"].includes(scope.forca)||(scope.categoria==="civil"&&scope.forca!=="GOV")||(scope.categoria==="militar"&&scope.forca==="GOV"))return jsonify({error:"Selecione força e categoria válidas"},400);
      }else if(Object.keys(scope).length)return jsonify({error:"Este cargo não exige seleções adicionais"},400);
      await env.DB.prepare("INSERT INTO staff_assignments(user_key,role_key,scope_json,assigned_by,assigned_at) VALUES(?,?,?,?,?) ON CONFLICT(user_key,role_key) DO UPDATE SET scope_json=excluded.scope_json,assigned_by=excluded.assigned_by,assigned_at=excluded.assigned_at").bind(target,role,JSON.stringify(scope),ctx.user.user_key,now()).run();
     }else{
