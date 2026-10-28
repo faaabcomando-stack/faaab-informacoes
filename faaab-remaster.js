@@ -10,7 +10,7 @@ const V3={
  set(id,html){const x=document.getElementById(id);if(x)x.innerHTML=html},
  forceList(rows,key){if(!key)return rows;if(key==="FMB")return rows.filter(x=>x.forca==="FMB"||x.forca==="CFN");return rows.filter(x=>x.forca===key)},
  sectorRows(rows,sector){if(sector==="central")return rows.filter(x=>["FTB","FAB","FMB","CFN"].includes(x.forca)||["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN"].includes(x.id));if(sector==="civil")return rows.filter(x=>["PM","CBM"].includes(x.forca)||["ADM-PM","ADM-CBM"].includes(x.id));if(sector==="governo")return rows.filter(x=>x.forca==="ADM"&&!["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN","ADM-PM","ADM-CBM"].includes(x.id));return rows},
- typeRows(rows,type){if(!type)return rows;if(type==="divisao")return rows.filter(x=>/divis[aã]o/i.test(x.nome)&&x.tipo!=="curso");if(type==="unidade")return rows.filter(x=>x.tipo==="unidade");return rows.filter(x=>x.tipo===type)},
+ typeRows(rows,type){if(!type)return rows;if(type==="divisao")return rows.filter(x=>x.tipo==="divisao");if(type==="unidade")return rows.filter(x=>x.tipo==="unidade");return rows.filter(x=>x.tipo===type)},
  url(e){return "ficha.html?id="+encodeURIComponent(e.id)},
  row(e){return '<article class="v3-record-item"><div class="v3-record-code">'+V3.esc(e.sigla||e.forca)+'</div><div><h3><a href="'+V3.url(e)+'">'+V3.esc(e.nome)+'</a></h3><p>'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' · '+V3.esc(V3.types[e.tipo]||e.tipo||"Organização")+' · '+V3.esc(e.estadoImplementacao||"Situação a confirmar")+'</p></div><a href="'+V3.url(e)+'">Abrir organização →</a></article>'},
  rows(rows){return rows.length?'<div class="v3-record-list">'+rows.map(V3.row).join("")+'</div>':'<p class="v3-empty">Nenhuma organização desse tipo está registrada no catálogo atual. Não foram criadas entradas fictícias.</p>'},
@@ -23,16 +23,55 @@ const V3={
   if(desc){desc.textContent="";desc.append(document.createTextNode(p.sector==="civil"?"SETOR CIVIL":"FAAAB CENTRAL"),document.createElement("br"),document.createTextNode("Organizações e formação"))}
   if(["FTB","FAB","FMB","CFN","CBM","PM"].includes(key)){
    const nav=document.querySelector(".v3-nav");
-   const content=document.querySelector(".v3-nav .v3-wrap");
-   if(nav&&content){nav.classList.add("v3-nav-force");nav.setAttribute("aria-label","Categorias da instituição");content.innerHTML=V3.forceLinks(key,active)}
+   const holder=document.querySelector(".v3-nav .v3-wrap");
+   if(nav&&holder){
+    nav.classList.add("v3-nav-force");
+    nav.setAttribute("aria-label","Categorias existentes na instituição");
+    holder.innerHTML=V3.navMarkup([{title:"Início",url:p.url,group:"home"},V3.backLink(key)],active);
+    V3.refreshForceNav(key,active,holder).catch(e=>console.error("Categorias FAAAB indisponíveis",e));
+   }
   }
  },
- forceLinks(key,active=""){
-  const sections=[["unidade","Batalhões e unidades"],["brigada","Brigadas"],["divisao","Divisões"],["centro","Centros"],["escola","Escolas"],["academia","Academias"],["subdivisao","Subdivisões"],["curso","Cursos"],["administracao","Administração"],["instituicao","Instituições"]];
+ backLink(key){
   const parent=V3.forces[key]?.sector==="civil"?"civil.html":key==="CFN"?"marinha.html":"central-faaab.html";
-  const parentText=V3.forces[key]?.sector==="civil"?"← Civil":key==="CFN"?"← Marinha":"← FAAAB CENTRAL";
-  const items=[{title:"Início",url:V3.forces[key].url,group:"home"},...sections.map(([type,title])=>({title,url:type==="curso"?"formacao.html?forca="+key:"organizacoes.html?forca="+key+"&tipo="+type,group:type})),{title:"Patentes e CDP",url:"carreira.html?forca="+(key==="CFN"?"FMB":key),group:"career"},{title:"Comando",url:"comando.html",group:"command"},{title:parentText,url:parent,group:"back"}];
+  const title=V3.forces[key]?.sector==="civil"?"← Civil":key==="CFN"?"← Marinha":"← FAAAB CENTRAL";
+  return {title,url:parent,group:"back"};
+ },
+ navMarkup(items,active){
   return items.map(item=>'<a href="'+V3.esc(item.url)+'"'+(item.group===active?' aria-current="page"':'')+'>'+V3.esc(item.title)+'</a>').join("");
+ },
+ async forceMenuItems(key){
+  const [catalogue,courses,career,positions]=await Promise.all([V3.get("catalogo"),V3.get("cursos"),V3.get("hierarquias"),V3.get("cargos")]);
+  const entries=V3.forceList(catalogue,key);
+  const names={FTB:"Batalhões e unidades",FAB:"Unidades aéreas",FMB:"Unidades navais e Fuzileiros",CFN:"Batalhões e unidades",PM:"Unidades da Polícia Militar",CBM:"Unidades dos Bombeiros"};
+  const allTypes=[["unidade",names[key]||"Unidades"],["brigada","Brigadas"],["divisao","Divisões"],["centro","Centros de instrução"],["escola","Escolas"],["academia","Academias"],["subdivisao","Subdivisões"],["administracao","Administração"],["instituicao","Instituições"]];
+  const items=[{title:"Início",url:V3.forces[key].url,group:"home"}];
+  for(const [type,title] of allTypes){
+   if(entries.some(e=>e.tipo===type)){
+    items.push({title,url:"organizacoes.html?forca="+encodeURIComponent(key)+"&tipo="+encodeURIComponent(type),group:type});
+   }
+  }
+  const courseRows=V3.forceList(courses,key);
+  if(courseRows.length||entries.some(e=>e.tipo==="curso"))items.push({title:"Cursos",url:"formacao.html?forca="+encodeURIComponent(key),group:"curso"});
+  if(career.some(e=>e.forca===key))items.push({title:"Patentes e CDP",url:"carreira.html?forca="+encodeURIComponent(key),group:"career"});
+  if(positions.some(e=>e.forca===key))items.push({title:"Comando",url:"comando.html",group:"command"});
+  items.push(V3.backLink(key));
+  return items;
+ },
+ async refreshForceNav(key,active,holder){
+  const items=await V3.forceMenuItems(key);
+  const nav=document.querySelector(".v3-nav");
+  if(nav&&holder&&document.body){
+   if(document.querySelector(".v3-brand")?.getAttribute("href")===V3.forces[key].url)holder.innerHTML=V3.navMarkup(items,active);
+  }
+  const related=document.getElementById("v3-force-related");
+  if(related&&document.body.dataset.force===key){
+    const links=items.filter(x=>["curso","career","command"].includes(x.group));
+    related.innerHTML=links.length?links.map(x=>'<a href="'+V3.esc(x.url)+'"><strong>'+V3.esc(x.title)+'</strong><small>Informações registradas da instituição</small></a>').join(""):'<p>Não há outras categorias registradas nesta instituição.</p>';
+    const parent=related.closest(".v3-section");
+    if(parent&&!links.length)parent.hidden=true;
+  }
+  return items;
  },
  async home(){
   const [c,h]=await Promise.all([V3.get("catalogo"),V3.get("historico")]);const groups={central:V3.sectorRows(c,"central"),governo:V3.sectorRows(c,"governo"),civil:V3.sectorRows(c,"civil")};
@@ -71,8 +110,6 @@ const V3={
   if(force&&V3.forces[force]){
    V3.context(force,type);
    const p=V3.forces[force],name=p.full||p.name;
-   const context=document.getElementById("v3-context-menu");
-   if(context)context.remove();
    const crumb=document.querySelector(".v3-breadcrumb");
    if(crumb)crumb.innerHTML='<a href="index.html">Início</a><span>/</span><a href="'+(p.sector==="civil"?"civil.html":"central-faaab.html")+'">'+(p.sector==="civil"?"Civil":"FAAAB CENTRAL")+'</a><span>/</span><a href="'+p.url+'">'+V3.esc(name)+'</a><span>/</span>'+V3.esc(V3.types[type]||"Organizações");
    const k=document.querySelector(".v3-intro .v3-label");
