@@ -386,8 +386,8 @@
     "resumo": "Hierarquia e unidades BOPE, ROTAM, BPChoque e BPP constam do catálogo, sendo BPP adaptação fictícia.",
     "real": "Polícia Penal não integra a Polícia Militar brasileira na vida real.",
     "jogo": "PM é instituição policial no jogo, distinta da SEP administrativa.",
-    "regras": "CDP próprio da PM e procedimentos de segurança ainda não definidos no manual recuperado.",
-    "notas": "BPP deve exibir aviso de adaptação fictícia.",
+    "regras": "A CDP da Polícia Militar segue a definição existente no trabalho do Codex, ainda não transcrita nestes dados. Não copiar regras e cursos do CBM por aproximação.",
+    "notas": "O responsável informou que a PM já teve sua estrutura/CDP decidida no Codex. Não substituí-la por adaptação automática do CBM. Importar a versão definida no Codex quando disponível para este repositório.",
     "atualizado": "2026-10-27",
     "fonte": "Decisões da FAAAB e documentos de planejamento recuperados; campos pendentes não representam regras aprovadas."
   },
