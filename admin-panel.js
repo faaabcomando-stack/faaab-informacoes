@@ -71,7 +71,7 @@ async function switchView(view){
  if(view==="inicio")renderOverview();
  if(view==="noticias")renderNews();
  if(view==="comando")renderOffices();
- if(view==="whitelist")renderWhitelist();
+ if(view==="whitelist"){renderWhitelist();if(isOwner())await renderRegistrations()}
  if(view==="avancado")refreshAdvanced();
  hideNotice();
  if(history.replaceState)history.replaceState(null,"","#"+view);
@@ -193,6 +193,31 @@ function whitelistDelete(ev){
  if(!confirm("Revogar o acesso de @"+member.robloxUsername+" após publicação?"))return;
  try{whitelistRemove(member.robloxUsername);notice("Acesso revogado no rascunho. Publique a alteração.");}catch(e){notice(e.message,true)}
 }
+async function renderRegistrations(){
+ const box=$("registration-list");if(!box||!isOwner())return;
+ try{
+  const res=await fetch("/api/registrations",{credentials:"same-origin",cache:"no-store"});
+  const data=await res.json();if(!res.ok)throw Error(data.error||"HTTP "+res.status);
+  const rows=Array.isArray(data.registrations)?data.registrations:[];
+  box.innerHTML=rows.length?rows.map(u=>{
+   const provider=u.provider==="google"?"Google":"Roblox",given=u.grant_role;
+   const labels='<div class="item-label">'+escapeText(provider)+' · '+(given?"Aprovado como "+escapeText(given):"Aguardando aprovação")+'</div>';
+   return '<div class="item">'+labels+'<strong>'+escapeText(u.display_name||"Usuário registrado")+'</strong><p>'+escapeText(u.email||u.linked_roblox_id||"Conta de "+provider)+' · Registro verificado pelo provedor.</p><div class="item-actions">'+(given?'<button class="remove" type="button" data-reg-action="revoke" data-reg-key="'+escapeText(u.user_key)+'">Revogar acesso privado</button>':'<button type="button" data-reg-action="grant" data-reg-role="editor" data-reg-key="'+escapeText(u.user_key)+'">Aprovar como editor</button><button type="button" data-reg-action="grant" data-reg-role="revisor" data-reg-key="'+escapeText(u.user_key)+'">Aprovar como revisor</button>')+'</div></div>';
+  }).join(""):'<div class="empty">Ainda não houve registros pelo Roblox ou Google.</div>';
+ }catch(e){box.textContent="Não foi possível consultar as solicitações: "+e.message}
+}
+async function grantRegistration(ev){
+ const b=ev.target.closest("[data-reg-action]");if(!b||!isOwner())return;
+ const action=b.dataset.regAction,userKey=b.dataset.regKey,role=b.dataset.regRole||null;
+ if(!["grant","revoke"].includes(action)||!userKey)return;
+ if(!confirm((action==="grant"?"Aprovar":"Revogar")+" acesso de "+userKey+"?"))return;
+ try{
+  const r=await fetch("/api/grant",{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json","x-faaab-csrf":states.auth.csrf},body:JSON.stringify({action,userKey,role})});
+  const out=await r.json();if(!r.ok)throw Error(out.error||"Falha");
+  notice(action==="grant"?"Usuário aprovado no servidor. O acesso já foi liberado.":"Acesso revogado no servidor.");
+  await renderRegistrations();
+ }catch(e){notice("Não foi possível atualizar o acesso: "+e.message,true)}
+}
 function commandOutput(line,error=false){
  const el=$("command-output");el.textContent=line;el.style.borderLeftColor=error?"#bd6a60":"#8cab8c"
 }
@@ -293,6 +318,7 @@ $("office-former").addEventListener("click",officeFormer);
 $("office-vacate").addEventListener("click",officeVacate);
 $("whitelist-form").addEventListener("submit",whitelistSubmit);
 $("whitelist-list").addEventListener("click",whitelistDelete);
+$("registration-list").addEventListener("click",grantRegistration);
 $("command-form").addEventListener("submit",executeCommand);
 document.querySelectorAll("[data-example]").forEach(b=>b.addEventListener("click",()=>{$("command-input").value=b.dataset.example;$("command-input").focus()}));
 $("advanced-file").addEventListener("change",advancedLoad);
