@@ -130,7 +130,7 @@ function openFromProgram(subject,topic){
  const target=map.find(([k])=>key.includes(k))?.[1]||"Todas";
  state.subject=target;state.search="";$("lesson-search").value="";
  const eligible=state.lessons.filter(x=>target==="Todas"||x.materia===target);
- const keywords=norm(topic).split(/\s+/).filter(w=>w.length>3);
+ const keywords=norm(topic).split(/\s+/).filter(w=>w.length>=2&&!["de","da","do","dos","das","em","no","na","os","as","um","uma","e"].includes(w));
  const scores=eligible.map(l=>({lesson:l,score:keywords.reduce((n,w)=>n+(norm(l.titulo).includes(w)?5:norm(l.teoria).includes(w)?1:0),0)})).sort((a,b)=>b.score-a.score);
  const candidate=scores[0]?.score? scores[0].lesson:eligible[0];
  if(candidate){selectLesson(candidate.id);$("academia").scrollIntoView({behavior:"smooth",block:"start"})}
