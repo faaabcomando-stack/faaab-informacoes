@@ -64,8 +64,8 @@ $("catalog-more").addEventListener("click",()=>{s.catalogLimit+=20;renderCatalog
 $("catalog-records").addEventListener("click",ev=>{
  const btn=ev.target.closest("[data-catalog-study]");if(!btn||!s.allExams)return;
  const x=s.allExams.registros.find(r=>r.id===btn.dataset.catalogStudy);if(!x)return;
- showTab("estudos");$("study-type").value=x.tipo;pathChange("type");
- $("study-exam").value=x.id;pathChange("exam");
+ showTab("estudos");$("academy-by-exam").open=true;$("study-type").value=x.tipo;pathChange("type");
+ $("study-exam").value=x.id;pathChange("exam");$("academy-by-exam").scrollIntoView({behavior:"smooth",block:"start"});
 });
 function notice(msg,error=false){const el=$("site-notice");el.hidden=false;el.textContent=msg;el.classList.toggle("error",error)}
 function showTab(name){if(!validTab.has(name))return;location.hash=name;document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="view-"+name);document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("active",x.dataset.tab===name));if(name==="estudos")showTopic();}
@@ -159,8 +159,10 @@ function showTopic(){
  if(safeSource(t.edital))parts.push('<a target="_blank" rel="noopener noreferrer" href="'+esc(t.edital)+'">Edital / fonte oficial</a>');
  if(safeSource(t.provasAnteriores))parts.push('<a target="_blank" rel="noopener noreferrer" href="'+esc(t.provasAnteriores)+'">Provas completas anteriores e gabaritos</a>');
  parts.push('</div><div class="notice neutral">As disciplinas e assuntos são uma orientação de estudo. Consulte o conteúdo programático e as provas oficiais completas da edição. A FAAAB não aprova patentes automaticamente.</div>');
+ parts.push('<div class="lesson-navigation"><button type="button" class="btn primary" id="study-internal-lesson">Aprender este assunto aqui na FAAAB</button></div>');
  parts.push('<div id="extra-study" class="study-topics"><p class="helper">Consultando material complementar autorizado…</p></div>');
  $("study-content").innerHTML=parts.join("");
+ $("study-internal-lesson")?.addEventListener("click",()=>{window.FAAABLessons?.openFromProgram(m.nome,topic.nome);$("academy-by-exam").open=false;});
  if(s.db)loadExtraStudy(t,m,topic);else $("extra-study").textContent="Materiais complementares aparecerão após ativar a plataforma.";
 }
 const materialId=(t,m,topic)=>t.id+"__"+m.id+"__"+topic.id;
