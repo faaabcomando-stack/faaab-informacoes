@@ -36,3 +36,12 @@ CREATE TABLE IF NOT EXISTS nickname_pins (
  roblox_id TEXT NOT NULL,
  first_seen_at INTEGER NOT NULL
 );
+
+-- Aprovações privadas para contas Google e Roblox que tenham se registrado.
+-- Nenhum e-mail precisa ser publicado na whitelist do GitHub.
+CREATE TABLE IF NOT EXISTS private_grants (
+ user_key TEXT PRIMARY KEY,
+ role TEXT NOT NULL CHECK(role IN ('editor','revisor')),
+ granted_at INTEGER NOT NULL,
+ FOREIGN KEY(user_key) REFERENCES identities(user_key)
+);
