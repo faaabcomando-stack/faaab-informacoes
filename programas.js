@@ -24,7 +24,7 @@ function drawList(){
  $("program-more").hidden=all.length<=state.limit;
 }
 function subjectsInfo(p){
- return p.materias.map((m,i)=>'<div class="program-subject"><div class="program-subject-number">'+String(i+1).padStart(2,"0")+'</div><div><strong>'+esc(m.nome)+'</strong><small>'+m.aulas.length+' aulas disponíveis para esta seleção</small></div><button type="button" data-program-subject="'+esc(m.nome)+'">Estudar</button></div>').join("");
+ return p.materias.map((m,i)=>'<div class="program-subject"><div class="program-subject-number">'+String(i+1).padStart(2,"0")+'</div><div><strong>'+esc(m.nome)+'</strong><small>'+m.aulas.length+' aulas disponíveis para esta seleção</small></div><button type="button" data-program-lesson="'+esc(m.aulas[0]||"")+'">Estudar</button></div>').join("");
 }
 function drawDetail(x){
  const node=$("program-detail"),p=programFor(x);
@@ -46,14 +46,10 @@ function selectProgram(id,opts={}){
  }
  if(opts.scroll&&window.matchMedia("(max-width:850px)").matches)$("program-detail").scrollIntoView({behavior:"smooth",block:"start"});
 }
-function moveToAcademy(subject){
+function moveToAcademy(lessonId){
  if(!state.active)return;
  const x=state.list.find(z=>z.id===state.active),p=programFor(x);if(!p)return;
- if(subject){
-  const buttons=$("lesson-subjects").querySelectorAll("[data-subject]");
-  const choice=[...buttons].find(b=>b.dataset.subject===subject);
-  choice?.click();
- }
+ if(lessonId)window.FAAABLessons?.selectLesson(lessonId);
  $("academia").scrollIntoView({behavior:"smooth",block:"start"});
 }
 async function initialize(){
@@ -78,7 +74,7 @@ async function initialize(){
 $("program-more").addEventListener("click",()=>{state.limit+=22;drawList()});
 $("program-list").addEventListener("click",e=>{const b=e.target.closest("[data-program]");if(b)selectProgram(b.dataset.program,{scroll:true})});
 $("program-detail").addEventListener("click",e=>{
- const subject=e.target.closest("[data-program-subject]");if(subject){moveToAcademy(subject.dataset.programSubject);return}
+ const subject=e.target.closest("[data-program-lesson]");if(subject){moveToAcademy(subject.dataset.programLesson);return}
  if(e.target.closest("#program-start"))moveToAcademy(null);
 });
 document.addEventListener("faaab:lessons-ready",()=>{
