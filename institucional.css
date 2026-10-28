@@ -178,3 +178,8 @@ footer a,.footer a{color:#e5eeee!important}
  .specific-quiz-progress{flex-direction:column;align-items:flex-start}
  .specific-quiz-actions>.btn{flex:1;min-height:47px}
 }
+
+/* Acesso imediato ao estudo sem trocar de página */
+.hero-studies-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:20px}
+.hero-studies-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 17px}
+@media(max-width:620px){.hero-studies-actions{display:grid;grid-template-columns:minmax(0,1fr);width:100%}.hero-studies-actions a{width:100%}}
