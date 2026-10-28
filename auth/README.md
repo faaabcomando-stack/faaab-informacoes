@@ -4,14 +4,39 @@ Esta pasta contém uma implementação de **autenticação OAuth 2.0 com PKCE**,
 
 **Status atual:** o código está versionado no GitHub; o backend **não está implantado**, porque é necessário que o proprietário cadastre os aplicativos OAuth, crie o D1 e guarde as credenciais na Cloudflare. Nenhum token ou senha deve ser colocado no GitHub nem enviado ao ChatGPT.
 
+## Modelo de acesso atualizado — whitelist antes dos cargos
+
+A FAAAB usa **duas etapas separadas**, ambas decididas manualmente pelo proprietário.
+
+1. **Whitelist de entrada:** o visitante faz login por Google ou Roblox, o proprietário aprova a identidade registrada. A aprovação é gravada em `access_approvals` (Google ou Roblox) ou na lista de nick/ID Roblox `dados/admin_whitelist.json`. A pessoa passa a poder entrar na **área de membros**, mas **ainda não tem cargo administrativo**.
+2. **Atribuição manual de cargos:** o proprietário entra em **/cargos**, escolhe o usuário previamente aprovado, escolhe um cargo e o escopo necessário. O servidor armazena essa escolha em `staff_assignments` (D1), verifica a whitelist antes de aceitar e consulta a permissão a cada ação.
+
+### Painéis protegidos
+
+- `/membros`: conta, whitelist e cargos atribuídos; acessível a qualquer membro aprovado.
+- `/anunciadores`: leitura dos comunicados para membros; publicação apenas para Jornalista, Administrativo aprovado, Administrativo aprovado semi-total, Administrativo marketing total, Subcriador, Criador e proprietário.
+- `/painel`: ferramentas administrativas para cargos com permissões; acessos sem cargo não podem entrar no editor.
+- `/cargos`: painel restrito **ao proprietário**, com solicitação de whitelist e atribuição/remoção de cargos. O proprietário escolhe manualmente entre os 11 cargos da FAAAB.
+
+Os cargos definidos constam do catálogo `dados/admin_roles.json`: Administrativo leve, Administrativo aprovado, Administrativo aprovado semi-total, Jornalista, Instrutor, Governo, Alto escalão, Subcriador, Criador, Administrativo marketing total e Desenvolvedor leve. O catálogo é público, mas as atribuições individuais ficam em D1.
+
+Instrutor requer a escolha de **Curso**, **Batalhão/Unidade** ou **Outro** e um alvo já registrado. Governo exige um **cargo administrativo específico** da FAAAB. Alto escalão exige **força** e **categoria militar ou civil**. As restrições são revalidadas no backend, não apenas escondidas no formulário.
+
+### Retorno automático ao Google
+
+Depois do **primeiro clique voluntário** em `Entrar com Google`, o usuário pode manter a opção “Lembrar meu login Google” ativa. Em visitas seguintes à página de login, o navegador tenta reusar a sessão ou iniciar o fluxo Google. O Google decide se precisa pedir seleção de conta ou consentimento; não existe garantia de login silencioso. A whitelist e os cargos **nunca** são ignorados.
+
+O retorno automático depende de ativar o backend OAuth e os aplicativos Google/Roblox, como descrito abaixo. Enquanto `dados/auth_public.json` estiver com `enabled: false`, **nenhum login está em operação**.
+
+
 ## Resultado após ativar
 
 1. O visitante abre `admin.html` no GitHub Pages.
 2. Escolhe **Entrar com Roblox** ou **Entrar com Google**. O login verdadeiro acontece no site oficial do provedor.
 3. O Worker verifica a identidade (Google `sub` e `email_verified`, ou Roblox `userinfo.sub` / ID permanente).
 4. Se não estiver aprovado, recebe status **aguardando whitelist**.
-5. O proprietário adiciona o **nickname verdadeiro do Roblox** em `dados/admin_whitelist.json`. O backend confere e fixa o ID Roblox ao autenticar; o nome sozinho nunca é tratado como prova de identidade. Quem entra com Google pode **vincular seu Roblox** e aproveitar a aprovação por nick, **ou ser aprovado diretamente pelo proprietário** na área de solicitações, sem precisar de Roblox. As aprovações Google diretas ficam no banco privado D1, sem expor e-mails no JSON do GitHub.
-6. Somente quem tem perfil **editor** ou **owner** recebe o painel de edição. O perfil **revisor** pode consultar, mas não publicar. A whitelist só pode ser modificada por **owner**.
+5. O proprietário adiciona o nickname Roblox à whitelist, ou aprova uma conta registrada pelo Google. O backend verifica a identidade por ID estável; o nick sozinho não é prova. Quem entra com Google pode **vincular seu Roblox** e aproveitar a aprovação por nick, **ou ser aprovado diretamente pelo proprietário** na área de solicitações, sem precisar de Roblox. As aprovações Google diretas ficam no banco privado D1, sem expor e-mails no JSON do GitHub.
+6. A aprovação de whitelist libera a área de membros, sem cargo. Somente depois o proprietário atribui manualmente os cargos em /cargos, com permissões individuais.
 7. Edições vão ao GitHub pelo Worker, que guarda o token como segredo, valida cookies, CSRF, sessão, permissão e a versão do arquivo para impedir substituição acidental de outro editor.
 
 **Importante:** os dados públicos do portal (notícias, catálogo, CDP etc.) continuam visíveis; o que é restrito são a interface administrativa funcional e as operações de gravação. O código HTML/JS pode ser público sem representar um sistema de autorização; a segurança está exclusivamente no servidor.
@@ -116,7 +141,6 @@ Com sua autorização, o assistente pode editar `dados/admin_whitelist.json` no 
 {
   "robloxUsername": "NickExato",
   "robloxId": null,
-  "perfil": "editor",
   "observacao": "Aprovado pelo proprietário"
 }
 ```
