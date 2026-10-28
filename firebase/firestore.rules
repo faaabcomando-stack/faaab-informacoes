@@ -42,7 +42,7 @@ service cloud.firestore {
   match /exams/{examId} {
    allow read: if resource.data.published == true || isOwner();
    allow create: if isOwner()
-     && request.resource.data.keys().hasOnly(['type','title','description','status','published','allowedRoles','startAt','untilAt','createdAt','authorUid'])
+     && request.resource.data.keys().hasOnly(['type','title','description','catalogRecordId','status','published','allowedRoles','startAt','untilAt','createdAt','authorUid'])
      && request.resource.data.published == true
      && request.resource.data.status == 'agendada'
      && request.resource.data.startAt is timestamp
@@ -53,6 +53,8 @@ service cloud.firestore {
      && request.resource.data.title.size() > 2 && request.resource.data.title.size() <= 160
      && request.resource.data.description is string
      && request.resource.data.description.size() > 10 && request.resource.data.description.size() <= 2000
+     && request.resource.data.catalogRecordId is string
+     && request.resource.data.catalogRecordId.size() > 3 && request.resource.data.catalogRecordId.size() < 120
      && request.resource.data.allowedRoles is list
      && request.resource.data.allowedRoles.size() <= 30
      && request.resource.data.authorUid == request.auth.uid;
