@@ -80,22 +80,6 @@
     "unico": true
   },
   {
-    "id": "GOV-GVR",
-    "forca": "GOV",
-    "instituicao": "Governo da FAAAB",
-    "grupo": "Governo estadual",
-    "sigla": "GVR",
-    "nome": "Governador",
-    "titular": null,
-    "anteriores": [],
-    "duracaoMandato": null,
-    "inicioMandato": null,
-    "fimMandato": null,
-    "tipoIngresso": "Regra de escolha ainda não definida",
-    "nota": "Titular não definido no histórico recuperado",
-    "unico": true
-  },
-  {
     "id": "GOV-SGP",
     "forca": "GOV",
     "instituicao": "Governo da FAAAB",
