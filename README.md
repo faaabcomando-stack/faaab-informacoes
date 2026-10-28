@@ -2,8 +2,8 @@
 
 ## Comando e hierarquia são categorias diferentes
 
-- **[Comando e autoridades](comando.html)** — 27 cargos de direção: Presidência, vice, STF, Ministro da Defesa, Governador, secretarias, Comandante e Subcomandante das forças aprovados. Somente estes cargos podem ter um titular, foto pública Roblox e histórico de ocupantes.
-- **[Hierarquia sem fotos](hierarquia.html)** — 90 postos, graduações e etapas de carreira por força, apresentados do maior para o menor. **Recruta, Soldado e Cabo não aparecem como cargos de comando nem recebem "titular".**
+- **[Comando e autoridades](comando.html)** — 26 cargos de direção: Presidência, Vice-Presidência, STF, Ministro da Defesa, secretarias, Comandante e Subcomandante das forças aprovados. Somente estes cargos podem ter um titular, foto pública Roblox e histórico de ocupantes.
+- **[Hierarquia sem fotos](hierarquia.html)** — 92 postos, graduações e etapas de carreira por força, apresentados do maior para o menor. **Recruta, Soldado e Cabo não aparecem como cargos de comando nem recebem "titular".**
 - `dados/autoridades.json` — dados editáveis de titulares, ex-titulares e mandatos dos cargos de direção.
 - `dados/hierarquias.json` — lista ordenada de carreiras, sem dados de jogadores.
 - `dados/cargos.json` — arquivo legado do planejamento; a interface pública de Comando não o utiliza.
@@ -16,7 +16,7 @@ Portal **institucional fictício** do projeto FAAAB no Roblox, hospedado no repo
 - `sistemas.html`: manual com 40 tópicos de política, mandatos, órgãos administrativos, carreira, FAC, economia, operações e tecnologia, diferenciando realidade e universo FAAAB.
 - `admin.html`: **editor local**, com formulários para notícias e ocupantes de cargos. Não autentica usuários nem escreve diretamente no GitHub.
 - `dados/catalogo.json`: 127 registros do catálogo aprovado em 24/10/2026.
-- `dados/patentes.json`: 82 fichas individuais de CDP de EB/FTB, FAB, FMB e CBM extraídas do manual de setembro de 2026.
+- `dados/patentes.json`: 84 registros de patentes, incluindo dois postos acrescentados sem CDP confirmada de EB/FTB, FAB, FMB e CBM extraídas do manual de setembro de 2026.
 - `dados/cursos.json`: 55 registros — cursos, qualificações, rotas formativas e propostas sinalizadas.
 - `dados/autoridades.json`: 27 cargos de direção com campos de titular e histórico; patentes são registradas separadamente em `dados/hierarquias.json`.
 - `dados/sistemas.json`: 40 registros de documentação por assunto.
@@ -61,3 +61,13 @@ Titulares: use `username` e `robloxId`; o navegador tentará recuperar miniatura
 Catálogo canônico aprovado em outubro de 2026 e manual remasterizado de Capacitação de Patente de setembro de 2026. Outros dados de facções, funcionamento eleitoral, duração dos mandatos, economia e implementação permanecem pendentes de documentação e decisão do projeto.
 
 FAAAB é um **projeto independente de roleplay no Roblox**, sem relação oficial com instituições militares ou governamentais reais.
+
+## Revisão da CDP e das patentes (27/10/2026)
+
+- **CDP significa Capacitação de Patente**: conjunto de etapas exigidas para o jogador naquela patente, não apenas uma descrição genérica de competências.
+- **Recruta / FTB**: CDP confirmada com **TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado**. Essas quatro etapas são obrigatórias.
+- As demais CDPs ainda exigem confirmação. O material antigo aparece apenas como referência em revisão; não considerar suas descrições regras novas aprovadas.
+- **FAB**: Comodoro do Ar incluído entre Brigadeiro e Coronel na hierarquia. Comandante da FAB está na página de Comando, não na lista de patentes comuns.
+- **Marinha**: Comodoro incluído entre Contra-Almirante e Capitão de Mar e Guerra na hierarquia.
+- **Governo**: Governador foi excluído por decisão expressa do projeto.
+
