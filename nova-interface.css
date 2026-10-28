@@ -72,3 +72,14 @@ h1,h2{letter-spacing:-.03em}.btn,.filterbar button{border-radius:4px}
 .footer{background:var(--deep)!important}
 @media(max-width:940px){.directory-layout{grid-template-columns:1fr}.directory-sidebar{position:static}.directory-sidebar .buttons{display:flex;flex-wrap:wrap;gap:5px}.directory-sidebar button{width:auto;gap:18px}.general-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:690px){.wrap{width:calc(100% - 28px)}.institution-head{padding:38px 0}.institution-head .wrap{align-items:start}.institution-mark{display:none}.command-grid,.general-grid{grid-template-columns:1fr}.command-card{grid-template-columns:67px 1fr;gap:14px;padding:19px;min-height:auto}.command-card .portrait{height:78px;width:67px}.directory-sidebar{padding:13px}.directory-layout{gap:20px}.editorial-lead{padding:22px}.hierarchy-item{grid-template-columns:38px 1fr auto;gap:10px;padding:15px 12px}.hierarchy-item .rank-name{font-size:18px}.hierarchy-item .position{font-size:21px}}
+
+/* CDP: etapas da Capacitação de Patente, distintas de texto de competências */
+.cdp-heading{border-top:1px solid #dce5da;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin:15px 0 12px;padding-top:13px;color:#234a35;font-size:13px}
+.cdp-heading span{font-size:11px;padding:4px 9px;border-radius:12px;font-weight:800}
+.cdp-ok{background:#e1eee3;color:#285b38}.cdp-review{background:#f2ecde;color:#81683d}
+.cdp-steps{padding-left:24px;margin:11px 0 16px}.cdp-steps li{padding:7px 2px;border-bottom:1px solid #edf1ea;font-size:14px;font-weight:650;color:#284b35}
+.cdp-steps li:last-child{border-bottom:0}
+.cdp-pending{background:#f9f6ee;border-left:3px solid #b9a06b;padding:13px 15px;color:#6b5e41;font-size:13px}
+.cdp-pending p{margin:6px 0 0;color:#71694b;font-size:12px}
+.cdp-old{font-size:12px;margin-top:13px;color:#637467}.cdp-old summary{font-size:12px;color:#506955;cursor:pointer;font-weight:700}
+.cdp-old p{padding:6px 0;font-size:12px}
