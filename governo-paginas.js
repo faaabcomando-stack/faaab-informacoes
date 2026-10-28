@@ -1,6 +1,7 @@
 "use strict";
 /* Governo FAAAB: cada cargo e cada documento é consultado em uma página própria. */
 const GOVERNMENT_ROLE_SCOPES={
+    "GOV-DEP-FED":["Representação legislativa nacional","Deputado Federal eleito na estrutura nacional da FAAAB, para propostas e deliberações de regras fictícias relacionadas à defesa, segurança e organização do jogo. Número de vagas, mandato e poderes detalhados a definir.","Não confere controle de grupos militares, sanções automáticas nem acesso administrativo ao portal."],
     "GOV-PRE":["Presidência e representação institucional","O Governo prevê direção política e representação no roleplay. Alcance de decisões, atos e competências exclusivas ainda precisa ser aprovado.","Nenhuma permissão para administrar o site, alterar patentes ou controlar os grupos militares decorre automaticamente da Presidência."],
     "GOV-V-PRE":["Vice-Presidência e coordenação política","O cargo integra a direção do Governo. Condições de substituição, sucessão e delegações estão pendentes.","Não há concessão automática dos poderes do Presidente nem acesso privilegiado ao painel administrativo."],
     "GOV-M-DEF":["Área ministerial da Defesa","Cargo ministerial registrado para assuntos de Defesa no Governo. Relação funcional com as forças ainda precisa de normas próprias.","O título não autoriza automaticamente controlar Exército, Marinha, Aeronáutica ou modificar patentes e grupos."],
@@ -21,7 +22,8 @@ const GOVERNMENT_ROLE_SCOPES={
    };
 const GOVERNMENT_GROUPS=[
  {name:"Presidência e ministério",ids:["GOV-PRE","GOV-V-PRE","GOV-M-DEF"]},
- {name:"Supremo Tribunal Federal",ids:["GOV-P-STF","GOV-M-STF"]},
+ {name:"Representação legislativa",ids:["GOV-DEP-FED"]},
+  {name:"Supremo Tribunal Federal",ids:["GOV-P-STF","GOV-M-STF"]},
  {name:"Secretarias e vice-secretarias",ids:["GOV-SGP","GOV-V-SGP","GOV-S-DEF","GOV-V-S-DEF","GOV-S-JUS","GOV-V-S-JUS","GOV-S-RI","GOV-V-S-RI","GOV-S-SEG","GOV-V-S-SEG","GOV-S-COM","GOV-V-S-COM"]}
 ];
 const GovPage={
@@ -51,7 +53,7 @@ const GovPage={
   if(headline)headline.textContent=role.nome;
   const desc=document.querySelector(".v3-government-hero p");
   if(desc)desc.textContent="Informações individuais sobre o cargo "+role.nome+" na estrutura política da FAAAB.";
-  const elected=["GOV-PRE","GOV-V-PRE"].includes(role.id);
+  const elected=["GOV-PRE","GOV-V-PRE","GOV-DEP-FED"].includes(role.id);
   const additional=elected?'<div class="v3-gov-detail-line"><h3>Elegibilidade para a eleição</h3><p>A FAAAB exige que o candidato seja civil. Integrantes militares não podem concorrer enquanto permanecerem na força; quem acabou de se desligar deve cumprir uma carência de alguns dias. A quantidade ainda não foi aprovada, portanto não há liberação automática.</p><p><a href="governo-candidaturas.html">Entenda as candidaturas →</a></p></div>':'<div class="v3-gov-detail-line"><h3>Forma de escolha</h3><p>Não há aprovação para eleger este cargo automaticamente. A forma de ingresso registrada continua pendente de regulamentação.</p></div>';
   target.innerHTML='<div class="v3-gov-role-single"><span class="v3-label">Cargo do Governo / '+GovPage.esc(role.sigla||"")+'</span><h2>'+GovPage.esc(role.nome)+'</h2><div class="v3-gov-detail-line"><h3>Área de atuação</h3><p><strong>'+GovPage.esc(area)+'</strong></p><p>'+GovPage.esc(roleText)+'</p></div><div class="v3-gov-detail-line"><h3>Como ingressar</h3><p>'+GovPage.esc(role.tipoIngresso||"Forma de ingresso ainda não definida")+'</p></div><div class="v3-gov-detail-line"><h3>Permissões e limites</h3><p>'+GovPage.esc(powers)+'</p><p>Permissões operacionais no Roblox precisam de regulamentação própria e verificação no servidor. Cargo político não concede administração automática.</p></div><div class="v3-gov-detail-line"><h3>Ocupação do cargo</h3><p>'+(role.titular?"Existe um titular registrado. Consulte o cadastro oficial para verificar dados atualizados.":"Titular não definido na documentação recuperada.")+'</p><p>Tempo de mandato, substituição e atribuições específicas dependem das decisões do projeto.</p></div>'+additional+'</div>';
  },
