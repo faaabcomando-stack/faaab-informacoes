@@ -364,15 +364,15 @@
           "id": "epcar-q01",
           "materia": "Matemática",
           "assunto": "geometria",
-          "enunciado": "Um retângulo tem lados 9 cm e 5 cm. Qual é a diferença entre sua área e seu perímetro, em valores numéricos?",
+          "enunciado": "Um retângulo tem 9 cm de comprimento e 5 cm de largura. Qual é o perímetro?",
           "alternativas": [
-            "12",
-            "14",
-            "17",
-            "20"
+            "14 cm",
+            "28 cm",
+            "35 cm",
+            "45 cm"
           ],
-          "correta": 2,
-          "explicacao": "Área = 45 cm²; perímetro = 2(9+5)=28 cm. Diferença numérica: 45−28=17.",
+          "correta": 1,
+          "explicacao": "Some os quatro lados: 9+5+9+5=28 cm. Perímetro mede comprimento, não área.",
           "dificuldade": "intermediario",
           "origem": "autoral",
           "oficial": false
