@@ -157,24 +157,48 @@ async function pinnedRobloxId(name,env){
  const pinned=await env.DB.prepare("SELECT roblox_id FROM nickname_pins WHERE username_key=?").bind(key).first();
  return pinned?String(pinned.roblox_id):null;
 }
-async function roleFor(user,env){
+const STAFF_ROLES=new Set(["administrativo_leve","administrativo_aprovado","administrativo_aprovado_semitotal","jornalista","instrutor","governo","alto_escalao","sub_criador","criador","administrativo_marketing_total","desenvolvedor_leve"]);
+function ownerUser(user,env){
+ const id=user.provider==="roblox"?user.subject:user.linked_roblox_id;
+ return !!((id&&env.OWNER_ROBLOX_ID&&id===String(env.OWNER_ROBLOX_ID))||(user.provider==="google"&&env.OWNER_GOOGLE_SUB&&user.subject===String(env.OWNER_GOOGLE_SUB)));
+}
+async function isApprovedUser(user,env){
+ if(ownerUser(user,env))return true;
+ const explicit=await env.DB.prepare("SELECT user_key FROM access_approvals WHERE user_key=?").bind(user.user_key).first();
+ if(explicit)return true;
  const rbx=user.provider==="roblox"?user.subject:user.linked_roblox_id;
- if(rbx&&env.OWNER_ROBLOX_ID&&rbx===String(env.OWNER_ROBLOX_ID))return "owner";
- if(user.provider==="google"&&env.OWNER_GOOGLE_SUB&&user.subject===String(env.OWNER_GOOGLE_SUB))return "owner";
- const grant=await env.DB.prepare("SELECT role FROM private_grants WHERE user_key=?").bind(user.user_key).first();
- if(grant&&["editor","revisor"].includes(grant.role))return grant.role;
  const list=await roster(env);
- const allowed=list.membros.filter(m=>m&&typeof m==="object"&&["editor","revisor"].includes(m.perfil));
- for(const member of allowed){
-  if(rbx&&member.robloxId&&String(member.robloxId)===rbx)return member.perfil;
-  if(user.provider==="google"&&member.googleSub&&String(member.googleSub)===user.subject)return member.perfil;
+ for(const member of list.membros||[]){
+  if(rbx&&member.robloxId&&String(member.robloxId)===rbx)return true;
+  if(user.provider==="google"&&member.googleSub&&member.googleSub===user.subject)return true;
   if(rbx&&member.robloxUsername&&!member.robloxId){
-   try{const id=await pinnedRobloxId(member.robloxUsername,env);if(id===rbx)return member.perfil;}catch(e){console.warn("Não foi possível validar nick Roblox",e.message)}
+   try{const id=await pinnedRobloxId(member.robloxUsername,env);if(id===rbx)return true}catch(e){console.warn("Whitelist Roblox indisponível:",e.message)}
   }
  }
- return null;
+ return false;
 }
-async function userContext(req,env){const session=await getSession(req,env);if(!session)return null;return {...session,role:await roleFor(session.user,env)}}
+async function staffFor(user,env){
+ const rows=await env.DB.prepare("SELECT role_key,scope_json FROM staff_assignments WHERE user_key=?").bind(user.user_key).all();
+ return (rows.results||[]).filter(x=>STAFF_ROLES.has(x.role_key)).map(x=>({role:x.role_key,scope:JSON.parse(x.scope_json||"{}")}));
+}
+function capabilities(ctx){
+ const roles=ctx?.roles||[],keys=roles.map(x=>x.role);
+ const has=name=>keys.includes(name)||ctx?.role==="owner";
+ const broad=has("criador")||has("sub_criador");
+ return {manageWhitelist:ctx?.role==="owner",manageRoles:ctx?.role==="owner",
+ publishNews:broad||["jornalista","administrativo_aprovado","administrativo_aprovado_semitotal","administrativo_marketing_total"].some(has),
+ publishAuthorities:broad||has("administrativo_aprovado_semitotal")||has("governo")||has("alto_escalao"),
+ publishCourses:broad||has("instrutor"),publishAllContent:broad,canAnnounce:broad||["jornalista","administrativo_aprovado","administrativo_aprovado_semitotal","administrativo_marketing_total"].some(has)};
+}
+async function userContext(req,env){
+ const session=await getSession(req,env);if(!session)return null;
+ const owner=ownerUser(session.user,env);
+ const approved=owner||await isApprovedUser(session.user,env);
+ if(!approved)return {...session,role:null,roles:[],approved:false,permissions:{}};
+ const roles=owner?[]:await staffFor(session.user,env);
+ const role=owner?"owner":roles[0]?.role||"membro";
+ const ctx={...session,role,roles,approved:true};ctx.permissions=capabilities(ctx);return ctx;
+}
 function loginPage(ctx){
  const u=ctx?.user,allowed=!!ctx?.role;
  const header='<meta name="viewport" content="width=device-width,initial-scale=1"><meta charset="utf-8"><title>FAAAB · Acesso à administração</title>';
