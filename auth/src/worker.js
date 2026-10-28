@@ -246,7 +246,16 @@ function authorizeScopedWrite(ctx,name,oldData,newData){
  if(name==="cursos"){
   return changesLimitedTo(oldData,newData,(old,updated)=>roles.some(a=>a.role==="instrutor"&&a.scope.tipo==="curso"&&a.scope.targetId===old.id));
  }
- return name==="noticias"&&ctx.permissions.publishNews;
+ if(name==="noticias"&&ctx.permissions.publishNews){
+  const broad=roles.some(x=>["administrativo_aprovado","administrativo_aprovado_semitotal"].includes(x.role));
+  if(broad)return true;
+  // Jornalista e marketing publicam novos anúncios, mas não podem apagar/alterar os anteriores.
+  if(!Array.isArray(oldData)||!Array.isArray(newData)||newData.length!==oldData.length+1)return false;
+  for(let i=0;i<oldData.length;i++)if(JSON.stringify(oldData[i])!==JSON.stringify(newData[i]))return false;
+  const item=newData[newData.length-1];
+  return !!(item&&typeof item.titulo==="string"&&item.titulo.trim()&&item.titulo.length<=150&&typeof item.resumo==="string"&&item.resumo.trim()&&item.resumo.length<=2500&&/^\d{4}-\d{2}-\d{2}$/.test(String(item.data||"")));
+ }
+ return false;
 }
 async function apiWrite(req,env,ctx,name){
  if(!mayWrite(ctx,name))return jsonify({error:"Este cargo não permite alterar esse conteúdo."},403);
