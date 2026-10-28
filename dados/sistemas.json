@@ -46,12 +46,12 @@
     "area": "Política",
     "nome": "Eleições individuais",
     "forca": "GOV",
-    "estado": "Eleição individual prevista; elegibilidade civil definida; regulamento pendente",
-    "resumo": "O projeto prevê eleições individuais, com possibilidade de eleger pessoas de grupos políticos distintos.",
+    "estado": "Requisitos de candidatura definidos; ativação do sistema pendente",
+    "resumo": "FAAAB prevê Presidente e Vice-Presidente por eleições individuais e Deputado Federal por eleição. Não inclui governador nem vereador.",
     "real": "No mundo real, regras eleitorais dependem do cargo e da legislação aplicável.",
     "jogo": "Eleições dos cargos políticos do jogo. A eleição não pressupõe a vitória conjunta de uma chapa partidária para todos os postos.",
-    "regras": "Para concorrer à eleição, o participante deve ser civil. Integrantes das Forças Armadas não podem concorrer enquanto militares; após o desligamento efetivo, há carência de alguns dias, mas o número exato ainda não foi aprovado. Candidaturas e votos só poderão ser habilitados após definição do prazo, edital e verificação segura. Presidência e Vice-Presidência têm eleições individuais; secretarias, ministérios e STF não entram automaticamente na votação.",
-    "notas": "Não inventar tempo de carência, requisitos extras, governadores ou vereadores. O modelo eleitoral não exige chapa de um mesmo partido.",
+    "regras": "Elegibilidade: ser civil, membro de partido fictício aprovado e do grupo oficial FAAAB, conta Roblox com 90 dias e 30 dias de participação no jogo. Ex-militares precisam aguardar carência após desligamento, ainda sem número definido. Dias de jogo considerados provisoriamente como dias distintos registrados pelo servidor. Vagas de deputados, inscrições, votação, mandatos e recursos pendentes.",
+    "notas": "Não abrir votação nem aprovar candidatura com dados declarados pelo cliente. STF, ministérios e secretarias não são automaticamente eletivos.",
     "atualizado": "2026-10-27",
     "fonte": "Decisões da FAAAB e documentos de planejamento recuperados; campos pendentes não representam regras aprovadas."
   },
@@ -60,12 +60,12 @@
     "area": "Política",
     "nome": "Partidos e alianças",
     "forca": "GOV",
-    "estado": "Afiliação e cargo de membro definidos em parte; organizações fictícias e implementação pendentes",
-    "resumo": "A FAAAB prevê listar organizações políticas exclusivamente fictícias caso sejam compatíveis com as regras do Roblox. Nenhuma organização ou sigla foi cadastrada oficialmente.",
+    "estado": "Requisitos para criar organização fictícia definidos; bot não implantado",
+    "resumo": "A FAAAB prevê registro de organizações políticas totalmente fictícias sem referências a partidos, símbolos, candidatos ou campanhas reais.",
     "real": "No Brasil real, partidos seguem legislação eleitoral e registro próprio.",
-    "jogo": "O jogador ingressa como Membro e permanece nesse papel até o presidente responsável aprovar uma função específica; filiação não gera candidatura nem poder administrativo automaticamente.",
-    "regras": "Não usar partidos, candidatos, slogans ou símbolos políticos reais. A elegibilidade eleitoral exige condição civil e carência após desligamento militar; dias não fixados. Atribuições de cargos exigem autorização expressa e integração futura.",
-    "notas": "A proibição do Roblox inclui conteúdo de partidos políticos reais; não existe autorização geral garantida para partidos fictícios. A lista permanece vazia até cadastro validado.",
+    "jogo": "Criador precisa estar no grupo oficial FAAAB, ter conta Roblox de 90 dias e 60 dias jogados. O grupo do partido deve existir há pelo menos 20 dias e conter cargos Presidente, Vice-Presidente, Membro do Partido e todos os cargos eletivos registrados, incluindo Deputado Federal.",
+    "regras": "Nome obrigatório, fictício e sem qualquer ligação política real. Bot consultará grupo, data de criação, nome e cargos. A aprovação depende também de verificação do histórico de jogo e de integridade do conteúdo. Nome desconhecido ou suspeito não deve receber aprovação automática.",
+    "notas": "Cadastro ainda desativado; requer autenticação, integração Open Cloud, dados de servidor e armazenamento seguro. Filiação inicia no papel Membro do Partido, e cargos posteriores dependem do presidente da organização.",
     "atualizado": "2026-10-27",
     "fonte": "Decisões da FAAAB e documentos de planejamento recuperados; campos pendentes não representam regras aprovadas."
   },
@@ -544,5 +544,17 @@
     "notas": ".com.br é um domínio pago; subdomínios gratuitos não são um domínio comprado.",
     "atualizado": "2026-10-27",
     "fonte": "Decisões da FAAAB e documentos de planejamento recuperados; campos pendentes não representam regras aprovadas."
+  },
+  {
+    "id": "S-041",
+    "forca": "GOV",
+    "area": "Política",
+    "nome": "Candidaturas e criação automática de partidos fictícios",
+    "estado": "Critérios definidos; automação preparada mas não conectada",
+    "resumo": "Requisitos de eleição e criação de partido na FAAAB com análise automática por bot após implantação do backend.",
+    "real": "Não representa registro de partidos ou eleição de autoridades brasileiras reais.",
+    "jogo": "Candidato: grupo oficial, partido aprovado, civil, conta Roblox ≥90 dias e 30 dias jogados. Criador: grupo oficial, conta ≥90 dias, 60 dias jogados, grupo partidário ≥20 dias, cargos exigidos e nome fictício.",
+    "regras": "Ex-militar com carência a definir. Sem nome ou vínculo com política real. Papéis exigidos Presidente, Vice-Presidente, Membro do Partido e os cargos das eleições, incluindo Deputado Federal. Falhas de verificação bloqueiam aprovação; backend ainda não instalado.",
+    "notas": "Contagem por dias distintos em que houve participação no jogo é proposta operacional provisória. Nenhum dado antigo de jogo pode ser inferido sem histórico persistido."
   }
 ]
