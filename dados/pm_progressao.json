@@ -1,0 +1,165 @@
+{
+  "versao": 1,
+  "data": "2026-10-28",
+  "forca": "PM",
+  "origem": "Passagens de carreira determinadas pelo responsável da FAAAB em conversa; opções de cursos referenciadas na pesquisa Codex PMDF de 24/10/2026",
+  "aprovacao": {
+    "transicoes": "Confirmadas pelo usuário",
+    "cursos": "NÃO selecionados ou homologados por nome",
+    "etapas": "Propostas para ajuste",
+    "prazos": "Não definidos",
+    "promocaoAutomatica": false
+  },
+  "regras": [
+    {
+      "id": "PM-APRENDIZ-SD2",
+      "de": {
+        "sigla": "APR",
+        "nome": "Aprendiz"
+      },
+      "para": {
+        "sigla": "SD-2",
+        "nome": "Soldado de Segunda Classe"
+      },
+      "modalidade": "progressao-de-patente",
+      "passagemAprovada": true,
+      "cursoReferencia": {
+        "sigla": "CFP",
+        "nome": "Formação de Praças",
+        "indicePesquisaCodex": 7,
+        "selecionadoPeloUsuario": false,
+        "aplicacaoNoJogo": "a validar"
+      },
+      "etapasPropostas": [
+        "Concluir a formação inicial de praças (CFP é referência de pesquisa; curso do jogo a homologar)",
+        "Cumprir a avaliação de instrução e disciplina do período de aprendiz",
+        "Ter a progressão validada pela administração da PM"
+      ],
+      "observacoes": "A transição Aprendiz → Soldado de 2ª Classe foi definida pelo responsável. Duração, avaliação exata e seleção de curso permanecem pendentes."
+    },
+    {
+      "id": "PM-CB-3SGT",
+      "de": {
+        "sigla": "CB",
+        "nome": "Cabo"
+      },
+      "para": {
+        "sigla": "3SGT",
+        "nome": "Terceiro-Sargento"
+      },
+      "modalidade": "progressao-de-patente",
+      "passagemAprovada": true,
+      "cursoReferencia": {
+        "sigla": "CAP",
+        "nome": "Aperfeiçoamento de Praças",
+        "indicePesquisaCodex": 6,
+        "selecionadoPeloUsuario": false,
+        "aplicacaoNoJogo": "a avaliar; CAP não é automaticamente curso de formação de sargentos"
+      },
+      "etapasPropostas": [
+        "Concluir a formação e avaliação para ingresso no quadro de sargentos (nome definitivo a validar)",
+        "Demonstrar liderança de pequena equipe e capacidade de instrução",
+        "Obter a aprovação de progressão pela autoridade responsável da PM"
+      ],
+      "observacoes": "Sargento foi interpretado como Terceiro-Sargento por ser a primeira graduação existente. CAP consta da pesquisa do Codex, mas seu emprego nesta promoção não foi homologado."
+    },
+    {
+      "id": "PM-ASP-2TEN",
+      "de": {
+        "sigla": "ASP-OF",
+        "nome": "Aspirante a Oficial"
+      },
+      "para": {
+        "sigla": "2TEN",
+        "nome": "Segundo-Tenente"
+      },
+      "modalidade": "progressao-de-patente",
+      "passagemAprovada": true,
+      "cursoReferencia": {
+        "sigla": "CFO",
+        "nome": "Formação de Oficiais",
+        "indicePesquisaCodex": 4,
+        "selecionadoPeloUsuario": false,
+        "aplicacaoNoJogo": "vínculo com a formação/estágio a validar"
+      },
+      "etapasPropostas": [
+        "Concluir o estágio/avaliação de Aspirante a Oficial (proposta FAAAB)",
+        "Demonstrar competências de comando inicial, disciplina e elaboração de relatórios",
+        "Receber validação de ingresso no oficialato como Segundo-Tenente"
+      ],
+      "observacoes": "CFO consta da pesquisa PMDF; sua posição no ciclo de formação e a exigência ao Aspirante precisam de confirmação."
+    },
+    {
+      "id": "PM-CAP-MAJ",
+      "de": {
+        "sigla": "CAP",
+        "nome": "Capitão"
+      },
+      "para": {
+        "sigla": "MAJ",
+        "nome": "Major"
+      },
+      "modalidade": "progressao-de-patente",
+      "passagemAprovada": true,
+      "cursoReferencia": {
+        "sigla": "CAO",
+        "nome": "Aperfeiçoamento de Oficiais",
+        "indicePesquisaCodex": 2,
+        "selecionadoPeloUsuario": false,
+        "aplicacaoNoJogo": "a homologar como requisito da FAAAB"
+      },
+      "etapasPropostas": [
+        "Concluir o aperfeiçoamento de oficiais (CAO como referência, sujeito a aprovação)",
+        "Demonstrar planejamento, administração e coordenação de unidades policiais",
+        "Passar por avaliação de mérito e aptidão para funções de Major"
+      ],
+      "observacoes": "Passagem definida pelo responsável. O CAO é uma opção do planejamento Codex e não foi selecionado formalmente."
+    },
+    {
+      "id": "PM-TENCEL-CEL",
+      "de": {
+        "sigla": "TEN-CEL",
+        "nome": "Tenente-Coronel"
+      },
+      "para": {
+        "sigla": "CEL",
+        "nome": "Coronel"
+      },
+      "modalidade": "progressao-de-patente",
+      "passagemAprovada": true,
+      "cursoReferencia": {
+        "sigla": "CAE",
+        "nome": "Altos Estudos",
+        "indicePesquisaCodex": 1,
+        "selecionadoPeloUsuario": false,
+        "aplicacaoNoJogo": "a homologar como requisito da FAAAB"
+      },
+      "etapasPropostas": [
+        "Concluir estudos de gestão estratégica de segurança pública (CAE como referência, sujeito a aprovação)",
+        "Apresentar planejamento de comando superior e avaliação de gestão de pessoal",
+        "Obter avaliação de mérito e validação para o posto de Coronel"
+      ],
+      "observacoes": "Não transferir regras de carreira e prazos da PMDF real automaticamente para o roleplay."
+    },
+    {
+      "id": "PM-CEL-SUBCMD",
+      "de": {
+        "sigla": "CEL",
+        "nome": "Coronel"
+      },
+      "para": {
+        "sigla": "SUB-CMD-GERAL",
+        "nome": "Subcomandante-Geral"
+      },
+      "modalidade": "nomeacao-para-cargo-de-comando",
+      "passagemAprovada": true,
+      "cursoReferencia": null,
+      "etapasPropostas": [
+        "Ser Coronel da Polícia Militar e cumprir avaliação de comando superior",
+        "Apresentar histórico de atuação, disciplina e capacidade administrativa",
+        "Receber nomeação ou aprovação da autoridade competente no sistema da FAAAB"
+      ],
+      "observacoes": "Subcomandante-Geral é cargo de comando, não nova patente. Não é uma promoção automática de Coronel, nem possui curso novo aprovado por este registro."
+    }
+  ]
+}
