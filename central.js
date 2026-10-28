@@ -80,8 +80,9 @@ $("catalog-records").addEventListener("click",ev=>{
  $("program-detail").scrollIntoView({behavior:"smooth",block:"start"});
 });
 function notice(msg,error=false){const el=$("site-notice");el.hidden=false;el.textContent=msg;el.classList.toggle("error",error)}
-function showTab(name){if(!validTab.has(name))return;location.hash=name;document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="view-"+name);document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("active",x.dataset.tab===name));if(name==="estudos")showTopic();}
+function showTab(name){if(!validTab.has(name))return;if(name==="administracao"&&!owner())return;if(name==="publicar"&&!allowedChannels().length)return;location.hash=name;document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="view-"+name);document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("active",x.dataset.tab===name));if(name==="estudos")showTopic();}
 document.getElementById("tabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(b&&!b.hidden)showTab(b.dataset.tab)});
+window.addEventListener("hashchange",()=>{const tab=location.hash.slice(1);if(["noticias","avisos","marketing","provas","estudos"].includes(tab))showTab(tab)});
 function roleNames(){return s.profile?.roles||[]}
 function owner(){return s.profile?.approved===true&&s.profile?.owner===true}
 function approved(){return s.profile?.approved===true}
