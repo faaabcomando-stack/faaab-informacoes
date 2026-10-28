@@ -7,10 +7,34 @@ Acesse [Central FAAAB](../central.html). A página foi criada para:
 - **Avisos** institucionais.
 - **Marketing** com publicação por cargos autorizados.
 - **Provas abertas**: editais feitos pelo proprietário com data, requisitos, encerramento e cargos elegíveis.
-- **Estudos**: tipo de prova → prova → matéria → assunto. Primeira referência: provas anteriores oficiais do CFN/Marinha, com exercícios de prática originais (não são questões oficiais). 
+- **Estudos**: tipo de prova → prova → matéria → assunto. Referências de concursos reais de várias forças, com disciplinas e assuntos onde documentados. Os cadernos e provas oficiais são consultados na fonte. 
 - **Google Authentication** com sessão persistente no navegador, whitelist de entrada e cargos separados manualmente.
 
 O antigo login Cloudflare em `auth/` NÃO está implantado e não é necessário para a nova opção Firebase. O link `admin.html` agora direciona para `central.html`.
+
+## Catálogo integral e provas por organização
+
+A área **Provas** não se limita a CFN, EsPCEx ou provas anteriores genéricas: o arquivo [`dados/provas_todas_unidades.json`](../dados/provas_todas_unidades.json) contém **182 fichas** oriundas dos dados existentes: **55 formações/cursos + 127 unidades, centros, batalhões, brigadas, escolas, academias, instituições e subdivisões**. Os filtros são por nome, força, tipo e situação da prova.
+
+- **Prova escrita pública relacionada:** existe acervo da instituição ou concurso verificado.
+- **Seleção ou avaliação interna:** há referência formativa/operacional, mas o centro ou batalhão não possui necessariamente um caderno público.
+- **Sem prova pública comprovada:** o registro existe na FAAAB, mas não se inventa edital ou prova.
+- **Organização sem prova própria:** categoria administrativa ou instituição, não seleção independente.
+
+As referências reais verificados incluem **EsPCEx/Vunesp; ESA/Exército; AFA, EPCAR, EEAR e CIAAR/FAB; CIGS e centros de instrução do Exército; Escola Naval, Colégio Naval, Aprendizes-Marinheiros, CIAMPA/CFN, CIAA e cursos operacionais do CFN**. A ficha de especialidade de **Sargento Músico CFN não é exibida como trilha principal**, porque ela não corresponde à formação geral de sargentos.
+
+A área **Estudos** usa o arquivo [`dados/provas_guias_materias.json`](../dados/provas_guias_materias.json) para disciplinas e assuntos de provas com programas reconhecíveis. São **22 disciplinas agrupadas e 53 assuntos de revisão inicial**. Onde não há programa documentado, a página indica a lacuna — não há questões fáceis inventadas como se fossem provas reais. Links remetem ao material público e aos cadernos/gabaritos oficiais da instituição quando disponíveis.
+
+**Relação com patentes:** cada ficha mostra o resultado quando ele existe explicitamente no manual FAAAB. Exemplo: `CUR-10-11` (EsPCEx) registra aluno **Subtenente → Cadete**, e não aprovação que faz um novo aluno virar Subtenente. Mesmo a conclusão dos requisitos documentados não provoca promoção automática.
+
+### Abertura/fechamento automático de editais FAAAB
+
+Após configurar o Firebase, o proprietário pode agendar uma prova vinculada a **um curso, escola, centro, batalhão ou brigada existente no catálogo**. Ele informa título, edital e requisitos, cargos elegíveis e **início e fim da inscrição**.
+
+O sistema calcula as situações **programada, aberta e encerrada** pelas datas, sem precisar atualizar manualmente o status. O Firestore valida o prazo em `request.time` antes de gravar qualquer inscrição — um usuário não pode reabrir o edital mudando a hora do navegador. O painel reconsulta os editais periodicamente durante a navegação.
+
+Isso **não verifica automaticamente calendários ou editais externos**, **não abre provas novas sem decisão do proprietário** e **não concede patente por aprovação**. É automação de janelas de inscrição autorizadas, não substituição das CDPs.
+
 
 ## Configure uma vez, pelo console Firebase
 
