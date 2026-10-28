@@ -11,7 +11,18 @@
     "proximaEtapa": "Final / especial",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Posto excepcional condicionado ao cenário de guerra e regras específicas.",
+    "cdpEtapas": [
+      {
+        "nome": "Qualificação do 1º Cen Ins Op G pode ser pré-condição conforme cânone",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial."
   },
   {
     "forca": "FTB",
@@ -25,7 +36,18 @@
     "proximaEtapa": "Sub-Comandante",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "28 dias mínimos + mérito; quando houver vaga, pode concorrer à ACopMil At Es.",
+    "cdpEtapas": [
+      {
+        "nome": "ACopMil At Es quando houver vaga",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "28 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -39,7 +61,12 @@
     "proximaEtapa": "General de Exército",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "24 dias mínimos + mérito.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "24 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -53,7 +80,12 @@
     "proximaEtapa": "General de Divisão",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "22 dias mínimos + mérito.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "22 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -67,7 +99,18 @@
     "proximaEtapa": "General de Brigada",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Progredir e concluir CFOG; requisito qualitativo, sem barra genérica.",
+    "cdpEtapas": [
+      {
+        "nome": "CFOG - conclusão",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial."
   },
   {
     "forca": "FTB",
@@ -81,7 +124,18 @@
     "proximaEtapa": "General em Treinamento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "20 dias mínimos + mérito; entrar no CFOG.",
+    "cdpEtapas": [
+      {
+        "nome": "CFOG",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "20 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -95,7 +149,12 @@
     "proximaEtapa": "Coronel",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "16 dias mínimos + mérito. Sem curso obrigatório novo.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "16 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -109,7 +168,12 @@
     "proximaEtapa": "Tenente-Coronel",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "14 dias mínimos + mérito. Sem curso obrigatório novo.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "14 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -123,7 +187,18 @@
     "proximaEtapa": "Major",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "12 dias mínimos + mérito; concluir Escola do Estado-Maior.",
+    "cdpEtapas": [
+      {
+        "nome": "Escola do Estado-Maior - conclusão",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "12 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -137,7 +212,18 @@
     "proximaEtapa": "Capitão-Sênior",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "10 dias mínimos + mérito; avançar nas fases do Estado-Maior. Teste Limpeza somente se retornar após inatividade prolongada.",
+    "cdpEtapas": [
+      {
+        "nome": "Escola do Estado-Maior",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "10 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -151,7 +237,18 @@
     "proximaEtapa": "Capitão",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "8 dias mínimos + mérito; entrar na Escola do Estado-Maior.",
+    "cdpEtapas": [
+      {
+        "nome": "Escola do Estado-Maior - ingresso",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "8 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -165,7 +262,18 @@
     "proximaEtapa": "Primeiro-Tenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "7 dias mínimos + mérito + Aperfeiçoamento de Oficiais.",
+    "cdpEtapas": [
+      {
+        "nome": "Aperfeiçoamento de Oficiais",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "7 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -179,7 +287,18 @@
     "proximaEtapa": "Segundo-Tenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Concluir cinco fases restantes da AMAN.",
+    "cdpEtapas": [
+      {
+        "nome": "AMAN - fases 6 a 10",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "5 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -193,7 +312,18 @@
     "proximaEtapa": "Aspirante a Oficial",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Cumprir cinco primeiras fases da AMAN.",
+    "cdpEtapas": [
+      {
+        "nome": "AMAN - fases 1 a 5",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial."
   },
   {
     "forca": "FTB",
@@ -207,7 +337,18 @@
     "proximaEtapa": "Cadete",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "7 dias mínimos; entrar e concluir EsPCEx.",
+    "cdpEtapas": [
+      {
+        "nome": "EsPCEx",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "7 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -221,7 +362,18 @@
     "proximaEtapa": "Subtenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "6 dias mínimos + TC-7.",
+    "cdpEtapas": [
+      {
+        "nome": "TC-7",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "6 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -235,7 +387,28 @@
     "proximaEtapa": "Primeiro-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "5 dias mínimos; cumprir TB interno da Brigada, entrar no 1º Cen Ins Op G e concluir TC-6.",
+    "cdpEtapas": [
+      {
+        "nome": "TB",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "1º Cen Ins Op G",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "TC-6",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "5 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -249,7 +422,33 @@
     "proximaEtapa": "Segundo-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "4 dias mínimos; pode alistar civis; concluir ESA, CFSO, formação de sargentos da Brigada e TC-5.",
+    "cdpEtapas": [
+      {
+        "nome": "ESA",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "CFSO",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "Curso de Formação de Sargentos da Brigada",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "TC-5",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "4 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -263,7 +462,28 @@
     "proximaEtapa": "Terceiro-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "3 dias mínimos; entrar na ESA, concluir primeira formação, Expedição Militar Operacional da CFSO e TC-4.",
+    "cdpEtapas": [
+      {
+        "nome": "ESA",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "CFSO",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "TC-4",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "3 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -277,7 +497,23 @@
     "proximaEtapa": "Cabo",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "2 dias mínimos; cumprir formação terrestre e TC-3. CIG é opcional.",
+    "cdpEtapas": [
+      {
+        "nome": "Curso de Formação de Soldado para Operações Terrestres",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "TC-3",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "2 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -291,7 +527,28 @@
     "proximaEtapa": "Soldado de 1ª Classe",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "1 dia mínimo; CTA obrigatório; cumprir formação de Soldado Especializado, escolha de especialização e TC-2.",
+    "cdpEtapas": [
+      {
+        "nome": "CTA",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "Curso de Formação de Soldado Especializado",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "TC-2",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "1 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -305,7 +562,18 @@
     "proximaEtapa": "Soldado",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "1 dia mínimo + treinamento de praça aplicável.",
+    "cdpEtapas": [
+      {
+        "nome": "Treinamento de Praça",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "1 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -319,7 +587,18 @@
     "proximaEtapa": "Mobilizado de 1ª Classe",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Rota própria de mobilização; cumprir instrução de mobilizado e 1 dia mínimo.",
+    "cdpEtapas": [
+      {
+        "nome": "Formação de Mobilizado",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "1 dias - proposta de balanceamento"
   },
   {
     "forca": "FTB",
@@ -333,7 +612,7 @@
     "proximaEtapa": "Soldado",
     "observacao": "CDP do Recruta confirmada pelo usuário em 27/10/2026.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "Confirmada pelo usuário em 27/10/2026",
+    "cdpStatus": "Confirmada pela FAAAB",
     "cdpEtapas": [
       {
         "nome": "TC-1",
@@ -351,7 +630,11 @@
         "nome": "Formação de Soldado",
         "obrigatorio": true
       }
-    ]
+    ],
+    "cdpExiste": true,
+    "cdpFonte": "Confirmação direta no projeto em 27/10/2026",
+    "cdpCriterios": "Concluir TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado.",
+    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial."
   },
   {
     "forca": "FAB",
@@ -365,7 +648,12 @@
     "proximaEtapa": "Final / especial",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Posto excepcional de topo; somente sob condição extraordinária definida no jogo.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial."
   },
   {
     "forca": "FAB",
@@ -379,7 +667,18 @@
     "proximaEtapa": "Subcomandante da FAB",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "24 dias mínimos + mérito; elegível ao Estágio Superior de Direção Aeroespacial quando houver vaga.",
+    "cdpEtapas": [
+      {
+        "nome": "ESDA - Criação FAAAB",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "24 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -393,7 +692,12 @@
     "proximaEtapa": "Tenente-Brigadeiro do Ar",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "18 dias mínimos + mérito; comando de organização e avaliação superior.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "18 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -407,7 +711,12 @@
     "diasMinimos": null,
     "proximaEtapa": "Brigadeiro",
     "observacao": "Posto acrescentado à FAAAB por decisão do usuário em 27/10/2026. Requisitos de CDP e sigla institucional a confirmar; não equivalem automaticamente a postos oficiais brasileiros.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "FAB",
@@ -421,7 +730,18 @@
     "proximaEtapa": "Comodoro do Ar",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "16 dias mínimos + mérito; CPEA obrigatório antes do acesso ao oficialato-general definido na FAAAB.",
+    "cdpEtapas": [
+      {
+        "nome": "CPEA",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "16 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -435,7 +755,18 @@
     "proximaEtapa": "Coronel",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "14 dias mínimos + mérito; avançar/concluir formação de estado-maior.",
+    "cdpEtapas": [
+      {
+        "nome": "ECEMAR / CCEM - conclusão",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "14 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -449,7 +780,18 @@
     "proximaEtapa": "Tenente-Coronel",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "12 dias mínimos + mérito; ingresso em ECEMAR/CCEM conforme trilha.",
+    "cdpEtapas": [
+      {
+        "nome": "ECEMAR / CCEM",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "12 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -463,7 +805,12 @@
     "proximaEtapa": "Major",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "10 dias mínimos + mérito; assumir função de chefia e planejamento.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "10 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -477,7 +824,18 @@
     "proximaEtapa": "Capitão",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "8 dias mínimos + mérito; realizar aperfeiçoamento quando exigido pela especialidade.",
+    "cdpEtapas": [
+      {
+        "nome": "Aperfeiçoamento de Oficiais / adaptação FAAAB",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "8 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -491,7 +849,12 @@
     "proximaEtapa": "Primeiro-Tenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "6 dias mínimos + mérito; desempenho em seção/esquadrão e segurança operacional.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "6 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -505,7 +868,18 @@
     "proximaEtapa": "Segundo-Tenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Concluir CFAS Fase II e ciclo correspondente da AFA.",
+    "cdpEtapas": [
+      {
+        "nome": "CFAS Fase II + AFA",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "4 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -519,7 +893,18 @@
     "proximaEtapa": "Aspirante a Oficial",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Cumprir o Curso de Formação de Alunos Superiores - Fase I.",
+    "cdpEtapas": [
+      {
+        "nome": "CFAS - Fase I (Criação FAAAB)",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial."
   },
   {
     "forca": "FAB",
@@ -533,7 +918,12 @@
     "proximaEtapa": "Cadete / rota de oficialato conforme sistema FAAAB",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "10 dias mínimos; desempenho em chefia de seção e formação de subordinados.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "10 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -547,7 +937,18 @@
     "proximaEtapa": "Suboficial",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "9 dias mínimos; concluir CAS para alcançar Suboficial.",
+    "cdpEtapas": [
+      {
+        "nome": "CAS",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "9 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -561,7 +962,12 @@
     "proximaEtapa": "Primeiro-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "7 dias mínimos; registro de supervisões e instruções aeronáuticas quando autorizado.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "7 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -575,7 +981,12 @@
     "proximaEtapa": "Segundo-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "5 dias mínimos; desempenho técnico e instrução supervisionada.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "5 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -589,7 +1000,18 @@
     "proximaEtapa": "Terceiro-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "4 dias mínimos; ingresso no ciclo de formação de sargento.",
+    "cdpEtapas": [
+      {
+        "nome": "EEAR / CFS",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "4 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -603,7 +1025,18 @@
     "proximaEtapa": "Cabo",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "3 dias mínimos; concluir habilitação de cabo quando prevista.",
+    "cdpEtapas": [
+      {
+        "nome": "CFC",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "3 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -617,7 +1050,18 @@
     "proximaEtapa": "Soldado de 1ª Classe",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "2 dias mínimos; instrução básica da especialidade e rotina de apoio.",
+    "cdpEtapas": [
+      {
+        "nome": "CESD quando aplicável à rota de praça",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "2 dias - proposta de balanceamento"
   },
   {
     "forca": "FAB",
@@ -631,7 +1075,18 @@
     "proximaEtapa": "Soldado de 2ª Classe",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "1 dia mínimo; concluir adaptação aeronáutica inicial. Não existe “Seleção Aérea” copiada do EB.",
+    "cdpEtapas": [
+      {
+        "nome": "Formação Inicial Aeronáutica (FAAAB)",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "1 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -645,7 +1100,18 @@
     "proximaEtapa": "Final",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Posto superior especial da FAAAB: só após exercício como Comandante da Marinha, histórico exemplar, tempo mínimo e aprovação do Conselho Naval Superior.",
+    "cdpEtapas": [
+      {
+        "nome": "Conselho Naval Superior - não é curso",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial."
   },
   {
     "forca": "FMB",
@@ -659,7 +1125,23 @@
     "proximaEtapa": "Comandante da Marinha",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "26 dias mínimos + mérito; passar Conselho do Almirantado e cumprir qualificação de alta direção.",
+    "cdpEtapas": [
+      {
+        "nome": "Conselho do Almirantado",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "CDEPN opcional/alto nível FAAAB",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "26 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -673,7 +1155,18 @@
     "proximaEtapa": "Almirante de Esquadra",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "22 dias mínimos + mérito; concluir Estágio Superior de Direção do Almirantado (criação FAAAB).",
+    "cdpEtapas": [
+      {
+        "nome": "ESDA-MB - Criação FAAAB",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "22 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -687,7 +1180,12 @@
     "proximaEtapa": "Vice-Almirante",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "18 dias mínimos + mérito; desempenho em comando superior.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "18 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -701,7 +1199,12 @@
     "diasMinimos": null,
     "proximaEtapa": "Contra-Almirante",
     "observacao": "Posto acrescentado à FAAAB por decisão do usuário em 27/10/2026. Requisitos de CDP e sigla institucional a confirmar; não equivalem automaticamente a postos oficiais brasileiros.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "FMB",
@@ -715,7 +1218,18 @@
     "proximaEtapa": "Comodoro",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "15 dias mínimos + mérito; C-PEM obrigatório antes do oficialato-general na adaptação FAAAB.",
+    "cdpEtapas": [
+      {
+        "nome": "C-PEM / EGN",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "15 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -729,7 +1243,18 @@
     "proximaEtapa": "Capitão de Mar e Guerra",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "12 dias mínimos + mérito; preparar ingresso em altos estudos.",
+    "cdpEtapas": [
+      {
+        "nome": "C-EMOS quando definido",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "12 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -743,7 +1268,12 @@
     "proximaEtapa": "Capitão de Fragata",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "10 dias mínimos + mérito; comandar/chefiar e registrar desempenho.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "10 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -757,7 +1287,18 @@
     "proximaEtapa": "Capitão de Corveta",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "8 dias mínimos + mérito; C-EMOI pode integrar a capacitação de estado-maior.",
+    "cdpEtapas": [
+      {
+        "nome": "C-EMOI (referência real)",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "8 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -771,7 +1312,18 @@
     "proximaEtapa": "Capitão-Tenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "6 dias mínimos + mérito; preparação para estado-maior intermediário.",
+    "cdpEtapas": [
+      {
+        "nome": "EGN / C-EMOI quando aplicável",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "6 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -785,7 +1337,12 @@
     "proximaEtapa": "Primeiro-Tenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "4 dias mínimos + mérito; desempenho de divisão e serviço naval.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "4 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -799,7 +1356,18 @@
     "proximaEtapa": "Segundo-Tenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Concluir ciclo correspondente da Escola Naval / viagem de instrução no modelo FAAAB.",
+    "cdpEtapas": [
+      {
+        "nome": "Escola Naval",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial."
   },
   {
     "forca": "FMB",
@@ -813,7 +1381,12 @@
     "proximaEtapa": "Guarda-Marinha / rota de oficialato conforme FAAAB",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "9 dias mínimos; experiência de chefia e registro de adestramentos.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "9 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -827,7 +1400,18 @@
     "proximaEtapa": "Suboficial",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "7 dias mínimos; NÃO exige mérito como regra dessa etapa; concluir C-Esp-HabSO quando aplicado à passagem para Suboficial.",
+    "cdpEtapas": [
+      {
+        "nome": "C-Esp-HabSO",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "7 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -841,7 +1425,18 @@
     "proximaEtapa": "Primeiro-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "5 dias mínimos; concluir aperfeiçoamento aplicável à especialidade.",
+    "cdpEtapas": [
+      {
+        "nome": "Aperfeiçoamento de Praças",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "5 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -855,7 +1450,18 @@
     "proximaEtapa": "Segundo-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "4 dias mínimos; desempenho de liderança e qualificação técnica.",
+    "cdpEtapas": [
+      {
+        "nome": "C-Ap / aperfeiçoamento quando aplicável",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "4 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -869,7 +1475,23 @@
     "proximaEtapa": "Terceiro-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "3 dias mínimos; C-Esp-HabSG obrigatório para a rota de 3º Sargento. 2° Cen d forCN é especial/opcional e não muda a patente formal.",
+    "cdpEtapas": [
+      {
+        "nome": "C-Esp-HabSG",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "2° Cen d forCN opcional",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "3 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -883,7 +1505,18 @@
     "proximaEtapa": "Cabo",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "2 dias mínimos; demonstrar marinharia e rotina de serviço; especialização naval pode ser exigida pela função.",
+    "cdpEtapas": [
+      {
+        "nome": "Curso de Marinharia / Navegação conforme função",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "2 dias - proposta de balanceamento"
   },
   {
     "forca": "FMB",
@@ -897,7 +1530,23 @@
     "proximaEtapa": "Marinheiro",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "1 dia mínimo; concluir o ciclo inicial do Curso de Ensino Naval da Marinha (adaptação FAAAB).",
+    "cdpEtapas": [
+      {
+        "nome": "Curso de Ensino Naval da Marinha",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      },
+      {
+        "nome": "fases inspiradas no C-FMN",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "1 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -911,7 +1560,12 @@
     "proximaEtapa": "Subcomandante-Geral",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "18 dias mínimos + mérito; elegibilidade ao Alto Comando.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "18 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -925,7 +1579,18 @@
     "proximaEtapa": "Coronel",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "15 dias mínimos + mérito; Curso Superior de Bombeiro Militar quando definido.",
+    "cdpEtapas": [
+      {
+        "nome": "CSBM / Altos Estudos BM",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "15 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -939,7 +1604,12 @@
     "proximaEtapa": "Tenente-Coronel",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais superiores",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "12 dias mínimos + mérito; atuação em estado-maior e grandes ocorrências.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "12 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -953,7 +1623,18 @@
     "proximaEtapa": "Major",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "9 dias mínimos + mérito; CAO quando previsto.",
+    "cdpEtapas": [
+      {
+        "nome": "CAO/BM",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "9 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -967,7 +1648,12 @@
     "proximaEtapa": "Capitão",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "7 dias mínimos + mérito; registro de comando de ocorrências e instrução.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "7 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -981,7 +1667,12 @@
     "proximaEtapa": "Primeiro-Tenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "5 dias mínimos + mérito; desempenho em comando de socorro e administração.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "5 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -995,7 +1686,18 @@
     "proximaEtapa": "Segundo-Tenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "Concluir estágio prático do CFO no modelo FAAAB.",
+    "cdpEtapas": [
+      {
+        "nome": "CFO/BM",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial."
   },
   {
     "forca": "CBM",
@@ -1009,7 +1711,12 @@
     "proximaEtapa": "Aspirante a Oficial / rota de oficialato",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais e formação",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "10 dias mínimos; chefia de praça e assessoramento operacional.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "10 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -1023,7 +1730,18 @@
     "proximaEtapa": "Subtenente",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "8 dias mínimos; CAS quando previsto para progressão de praça.",
+    "cdpEtapas": [
+      {
+        "nome": "CAS/BM",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "8 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -1037,7 +1755,12 @@
     "proximaEtapa": "Primeiro-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "6 dias mínimos; supervisões de prontidão e instruções registradas.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "6 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -1051,7 +1774,18 @@
     "proximaEtapa": "Segundo-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Graduados",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "5 dias mínimos; CFS obrigatório no ciclo de sargento.",
+    "cdpEtapas": [
+      {
+        "nome": "CFS/BM",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "5 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -1065,7 +1799,18 @@
     "proximaEtapa": "Terceiro-Sargento",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "4 dias mínimos; CEFC/CHC somente quando a rota exigir; liderança de pequena equipe.",
+    "cdpEtapas": [
+      {
+        "nome": "CEFC / CHC - referência estadual adaptada",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "4 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -1079,7 +1824,12 @@
     "proximaEtapa": "Cabo",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "3 dias mínimos; participação em instruções de prontidão e ocorrências/simulados registrados.",
+    "cdpEtapas": [],
+    "cdpTempoProposto": "3 dias - proposta de balanceamento"
   },
   {
     "forca": "CBM",
@@ -1093,7 +1843,18 @@
     "proximaEtapa": "Soldado",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Praças e ingresso",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Registrada no manual FAAAB",
+    "cdpExiste": true,
+    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
+    "cdpCriterios": "2 dias mínimos dentro do ciclo formativo; cumprir formação inicial.",
+    "cdpEtapas": [
+      {
+        "nome": "CFP/CFSD - adaptação FAAAB",
+        "obrigatorio": null,
+        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
+      }
+    ],
+    "cdpTempoProposto": "2 dias - proposta de balanceamento"
   },
   {
     "forca": "PM",
@@ -1107,7 +1868,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1121,7 +1887,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1135,7 +1906,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1149,7 +1925,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1163,7 +1944,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1177,7 +1963,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1191,7 +1982,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1205,7 +2001,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1219,7 +2020,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1233,7 +2039,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1247,7 +2058,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1261,7 +2077,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1275,7 +2096,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1289,7 +2115,12 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   },
   {
     "forca": "PM",
@@ -1303,6 +2134,11 @@
     "diasMinimos": null,
     "proximaEtapa": null,
     "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "A confirmar: critérios do manual anterior não equivalem à CDP atual"
+    "cdpStatus": "Existente — documentação específica a recuperar",
+    "cdpExiste": true,
+    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
+    "cdpCriterios": null,
+    "cdpEtapas": [],
+    "cdpTempoProposto": null
   }
 ]
