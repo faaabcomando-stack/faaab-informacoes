@@ -41,7 +41,22 @@ service cloud.firestore {
   }
   match /exams/{examId} {
    allow read: if resource.data.published == true || isOwner();
-   allow create, update, delete: if isOwner();
+   allow create: if isOwner()
+     && request.resource.data.keys().hasOnly(['type','title','description','status','published','allowedRoles','startAt','untilAt','createdAt','authorUid'])
+     && request.resource.data.published == true
+     && request.resource.data.status == 'agendada'
+     && request.resource.data.startAt is timestamp
+     && request.resource.data.untilAt is timestamp
+     && request.resource.data.startAt < request.resource.data.untilAt
+     && request.resource.data.untilAt > request.time
+     && request.resource.data.title is string
+     && request.resource.data.title.size() > 2 && request.resource.data.title.size() <= 160
+     && request.resource.data.description is string
+     && request.resource.data.description.size() > 10 && request.resource.data.description.size() <= 2000
+     && request.resource.data.allowedRoles is list
+     && request.resource.data.allowedRoles.size() <= 30
+     && request.resource.data.authorUid == request.auth.uid;
+   allow update, delete: if isOwner();
   }
   match /materials/{materialId} {
    allow get: if isOwner() || (
@@ -62,9 +77,12 @@ service cloud.firestore {
      && request.resource.data.uid == request.auth.uid
      && entryId == request.auth.uid + '__' + request.resource.data.examId
      && request.resource.data.status == 'inscrita'
+     && request.resource.data.submittedAt == request.time
      && exists(/databases/$(database)/documents/exams/$(request.resource.data.examId))
      && get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.published == true
-     && get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.status == 'aberta'
+     && get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.status == 'agendada'
+     && request.time >= get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.startAt
+     && request.time < get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.untilAt
      && (
        get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.allowedRoles.size() == 0
        || hasAnyRole(get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.allowedRoles)
