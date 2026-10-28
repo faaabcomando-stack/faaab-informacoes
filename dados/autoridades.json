@@ -411,8 +411,10 @@
     "duracaoMandato": null,
     "inicioMandato": null,
     "fimMandato": null,
-    "tipoIngresso": "Nomeação ou promoção a confirmar",
-    "nota": "Titular não definido no histórico recuperado",
-    "unico": true
+    "tipoIngresso": "Nomeação ao comando; exige patente Coronel e avaliação de aptidão administrativa, conforme regulamento que será definido.",
+    "nota": "Passagem de Coronel para Subcomandante-Geral definida pelo responsável; cargo de comando, não nova patente. Sem promoção automática e sem titular identificado.",
+    "unico": true,
+    "requisitoPatente": "Coronel da PM",
+    "formaDeAcesso": "Nomeação para função de Subcomandante-Geral"
   }
 ]
