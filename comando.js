@@ -1,13 +1,13 @@
 "use strict";
 const esc=s=>String(s??"").replace(/[&<>"']/g,x=>x==="&"?"&amp;":x==="<"?"&lt;":x===">"?"&gt;":x.charCodeAt(0)===34?"&quot;":"&#39;");
 const defs=[
-{f:"GOV",label:"Governo",nome:"Governo da FAAAB",info:"Presidência, Vice-Presidência, ministros, Justiça, Governador e secretarias. Titulares e mandatos quando documentados."},
+{f:"GOV",label:"Governo",nome:"Governo da FAAAB",info:"Presidência, Vice-Presidência, ministros, Justiça e secretarias. Titulares e mandatos quando documentados."},
 {f:"FTB",label:"Exército",nome:"Comando do Exército",info:"Comandante, Subcomandante e referência separada às patentes do alto escalão."},
 {f:"FAB",label:"Aeronáutica",nome:"Comando da Força Aérea",info:"Comandante e Subcomandante da FAB, com oficialato superior indicado separadamente."},
 {f:"FMB",label:"Marinha",nome:"Comando da Marinha",info:"Comandante da Marinha e escalões navais. Subcomandante ainda não definido no cadastro aprovado."},
 {f:"CBM",label:"Bombeiros",nome:"Comando do Corpo de Bombeiros",info:"Comandante-Geral e Subcomandante-Geral. Demais patentes são carreira, não cargos com um titular exclusivo."},
 {f:"PM",label:"Polícia Militar",nome:"Comando da Polícia Militar",info:"Comandante-Geral e Subcomandante-Geral. A graduação de Coronel aparece somente na hierarquia."}];
-const groups={GOV:[["Presidência",["PRE","V-PRE"]],["Justiça",["P-STF","M-STF"]],["Defesa",["M-DEF"]],["Governo estadual",["GVR"]],["Secretaria-Geral e secretarias",["SGP","V-SGP","S-DEF","V-S-DEF","S-JUS","V-S-JUS","S-RI","V-S-RI","S-SEG","V-S-SEG","S-COM","V-S-COM"]]]};
+const groups={GOV:[["Presidência",["PRE","V-PRE"]],["Justiça",["P-STF","M-STF"]],["Defesa",["M-DEF"]],["Secretaria-Geral e secretarias",["SGP","V-SGP","S-DEF","V-S-DEF","S-JUS","V-S-JUS","S-RI","V-S-RI","S-SEG","V-S-SEG","S-COM","V-S-COM"]]]};
 const hi={FTB:["GNRL-E","GNRL-DIV","GNRL-BRG","MAR"],FAB:["BGR-MAJ","BGR","MAR-AR"],FMB:["ALM","ALM-ESQ","V-ALM","C-ALM"],CBM:["CRNL"],PM:["CEL"]};
 const $=id=>document.getElementById(id);let auth=[],ranks=[],active="GOV";
 function userLink(p){const id=String(p?.robloxId||"");return /^\d{1,18}$/.test(id)?'<a class="profile-link" href="https://www.roblox.com/users/'+id+'/profile" target="_blank" rel="noopener noreferrer">Ver perfil no Roblox</a>':""}
