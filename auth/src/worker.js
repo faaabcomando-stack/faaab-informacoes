@@ -215,26 +215,69 @@ async function githubData(name,env){
  const file=await githubFetch("dados/"+name+".json",env);
  return {content:decodeGithub(file),sha:file.sha};
 }
+function mayWrite(ctx,name){
+ if(!ctx?.approved)return false;
+ const p=ctx.permissions||{};
+ if(name==="admin_whitelist")return !!p.manageWhitelist;
+ if(p.publishAllContent)return true;
+ if(name==="noticias")return !!p.publishNews;
+ if(name==="autoridades")return !!p.publishAuthorities;
+ if(name==="cursos")return !!p.publishCourses;
+ return false;
+}
+function changesLimitedTo(original,updated,check){
+ if(!Array.isArray(original)||!Array.isArray(updated)||original.length!==updated.length)return false;
+ const before=new Map(original.map(x=>[x.id,x])),after=new Map(updated.map(x=>[x.id,x]));
+ if(before.size!==original.length||after.size!==updated.length||before.size!==after.size)return false;
+ for(const [id,old] of before){const newer=after.get(id);if(!newer)return false;if(JSON.stringify(old)!==JSON.stringify(newer)&&!check(old,newer))return false}
+ return true;
+}
+function authorizeScopedWrite(ctx,name,oldData,newData){
+ if(ctx.role==="owner"||ctx.permissions.publishAllContent)return true;
+ const roles=ctx.roles||[];
+ if(name==="autoridades"){
+  if(roles.some(x=>x.role==="administrativo_aprovado_semitotal"))return true;
+  return changesLimitedTo(oldData,newData,(old,updated)=>{
+   if(old.id!==updated.id||old.forca!==updated.forca)return false;
+   return roles.some(a=>(a.role==="governo"&&old.forca==="GOV"&&a.scope.cargoId===old.id)||
+    (a.role==="alto_escalao"&&a.scope.forca===old.forca));
+  });
+ }
+ if(name==="cursos"){
+  return changesLimitedTo(oldData,newData,(old,updated)=>roles.some(a=>a.role==="instrutor"&&a.scope.tipo==="curso"&&a.scope.targetId===old.id));
+ }
+ return name==="noticias"&&ctx.permissions.publishNews;
+}
 async function apiWrite(req,env,ctx,name){
- if(!ctx?.role||ctx.role==="revisor")return jsonify({error:"Sem permissão de escrita"},403);
- if(name==="admin_whitelist"&&ctx.role!=="owner")return jsonify({error:"Whitelist só pode ser alterada pelo proprietário"},403);
+ if(!mayWrite(ctx,name))return jsonify({error:"Este cargo não permite alterar esse conteúdo."},403);
+ if(name==="admin_whitelist"&&ctx.role!=="owner")return jsonify({error:"Whitelist exclusiva do proprietário"},403);
  const origin=new URL(req.url).origin;
- if(!verifyInput(origin,req)||req.headers.get("x-faaab-csrf")!==ctx.csrf)return jsonify({error:"Requisição bloqueada: origem ou CSRF inválido"},403);
+ if(!verifyInput(origin,req)||req.headers.get("x-faaab-csrf")!==ctx.csrf)return jsonify({error:"Requisição bloqueada por origem ou CSRF"},403);
  const body=await req.json().catch(()=>null);
- if(!body||typeof body!=="object"||typeof body.content!=="string"||body.content.length>1000000||typeof body.sha!=="string")return jsonify({error:"Payload inválido"},400);
+ if(!body||typeof body.content!=="string"||body.content.length>1000000||typeof body.sha!=="string")return jsonify({error:"Dados inválidos"},400);
  let parsed;
  try{parsed=JSON.parse(body.content)}catch{return jsonify({error:"JSON inválido"},400)}
- if(Array.isArray(parsed)===false&&["noticias","autoridades","catalogo","hierarquias","cursos","sistemas","historico"].includes(name))return jsonify({error:"Esperada lista JSON"},400);
+ if(["noticias","autoridades","catalogo","hierarquias","cursos","sistemas","historico"].includes(name)&&!Array.isArray(parsed))return jsonify({error:"Esperada lista JSON"},400);
  if(name==="admin_whitelist"){
-  if(!Array.isArray(parsed.membros)||parsed.proprietarioGitHub!=="faaabcomando-stack")return jsonify({error:"Formato da whitelist incorreto"},400);
-  for(const m of parsed.membros){if(!["editor","revisor"].includes(m.perfil)||!/^\d{1,20}$/.test(String(m.robloxId||""))&&!/^[0-9A-Za-z_-]{1,255}$/.test(String(m.googleSub||""))&&!/^[a-zA-Z0-9_]{3,20}$/.test(String(m.robloxUsername||"")))return jsonify({error:"Whitelist exige nickname Roblox, ID Roblox ou Google sub verificado"},400)}
+  if(!Array.isArray(parsed.membros)||parsed.proprietarioGitHub!=="faaabcomando-stack")return jsonify({error:"Whitelist inválida"},400);
+  const seen=new Set();
+  for(const m of parsed.membros){
+   const nick=String(m.robloxUsername||"").toLowerCase(),id=String(m.robloxId||"");
+   if(!((/^[a-z0-9_]{3,20}$/.test(nick))||(/^\d{1,20}$/.test(id))||(/^\d{1,50}$/.test(String(m.googleSub||"")))))return jsonify({error:"Informe nickname, ID Roblox ou Google sub válido"},400);
+   if(nick){if(seen.has(nick))return jsonify({error:"Nickname duplicado"},400);seen.add(nick)}
+  }
  }
  try{
- const current=await githubData(name,env);
- if(body.sha.replace(/^"|"$/g,"")!==current.sha)return jsonify({error:"Conflito: arquivo mudou desde que foi aberto. Recarregue para não sobrescrever outro administrador."},409);
- const result=await githubFetch("dados/"+name+".json",env,"PUT",{message:"[FAAAB painel] Atualizar "+name+".json por "+ctx.user.provider+":"+ctx.user.subject,content:encodeGithub(JSON.stringify(parsed,null,2)+"\n"),sha:current.sha});
- return jsonify({ok:true,sha:result.content?.sha,commit:result.commit?.html_url});
- }catch(e){return jsonify({error:"Falha ao publicar: "+e.message},502)}
+  const current=await githubData(name,env);
+  if(body.sha!==current.sha)return jsonify({error:"Arquivo alterado por outro administrador; recarregue antes de publicar"},409);
+  const oldData=JSON.parse(current.content);
+  if(!authorizeScopedWrite(ctx,name,oldData,parsed))return jsonify({error:"A alteração excede o escopo do cargo atribuído"},403);
+  const result=await githubFetch("dados/"+name+".json",env,"PUT",{
+   message:"[FAAAB painel] Atualizar "+name+".json por "+ctx.user.provider+":"+ctx.user.subject,
+   content:encodeGithub(JSON.stringify(parsed,null,2)+"\n"),sha:current.sha
+  });
+  return jsonify({ok:true,sha:result.content?.sha,commit:result.commit?.html_url});
+ }catch(e){return jsonify({error:"Falha de publicação: "+e.message},502)}
 }
 async function fetchStatic(env,path,contentType){
  const target=site(env)+"/"+path;
