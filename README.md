@@ -97,7 +97,7 @@ Arquivos:
 
 ## Comando e hierarquia são categorias diferentes
 
-- **[Comando e autoridades](comando.html)** — 26 cargos de direção: Presidência, Vice-Presidência, STF, Ministro da Defesa, secretarias, Comandante e Subcomandante das forças aprovados. Somente estes cargos podem ter um titular, foto pública Roblox e histórico de ocupantes.
+- **[Comando e autoridades](comando.html)** — 26 cargos de direção individual: Presidência, Vice-Presidência, STF, Ministro da Defesa, secretarias, Comandante e Subcomandante das forças aprovados. Deputado Federal está no catálogo eleitoral e aparece em seção própria, pois o número de vagas não foi fixado.
 - **[Hierarquia sem fotos](hierarquia.html)** — 93 postos, graduações e etapas de carreira por força, apresentados do maior para o menor. **Recruta, Soldado e Cabo não aparecem como cargos de comando nem recebem "titular".**
 - `dados/autoridades.json` — dados editáveis de titulares, ex-titulares e mandatos dos cargos de direção.
 - `dados/hierarquias.json` — lista ordenada de carreiras, sem dados de jogadores.
@@ -114,7 +114,7 @@ Portal **institucional fictício** do projeto FAAAB no Roblox, hospedado no repo
 - `dados/patentes.json`: 84 registros do manual, incluindo 77 postos de carreira e 7 funções de comando legadas. As funções não são apresentadas como patentes no portal.
 - `dados/hierarquias.json`: 93 patentes e graduações da FAAAB; todas reconhecidas como possuidoras de CDP.
 - `dados/cursos.json`: 55 registros — cursos, qualificações, rotas formativas e propostas sinalizadas.
-- `dados/autoridades.json`: 27 cargos de direção com campos de titular e histórico; patentes são registradas separadamente em `dados/hierarquias.json`.
+- `dados/autoridades.json`: 26 cargos de direção com titular individual com campos de titular e histórico; patentes são registradas separadamente em `dados/hierarquias.json`.
 - `dados/sistemas.json`: 40 registros de documentação por assunto.
 - `dados/noticias.json`: comunicados confirmados; inicia vazio.
 - `dados/historico.json`: histórico de decisões e atualizações.
