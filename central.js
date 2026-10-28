@@ -6,7 +6,7 @@ import {getFirestore,collection,doc,getDoc,getDocs,query,where,limit,setDoc,upda
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const formatDate=v=>{if(!v)return "Data não informada";const d=v?.toDate?v.toDate():new Date(v);return isNaN(d)?"Data não informada":d.toLocaleString("pt-BR",{dateStyle:"medium",timeStyle:"short"})};
-const s={app:null,auth:null,db:null,me:null,profile:null,seed:null,roleCatalog:null,posts:[],exams:[],selectedTopic:null,selectedPath:null,scopeSources:null,allExams:null,paths:[],catalogLimit:20};
+const s={app:null,auth:null,db:null,me:null,profile:null,seed:null,roleCatalog:null,posts:[],exams:[],selectedTopic:null,selectedPath:null,scopeSources:null,allExams:null,paths:[],catalogLimit:20,studyGuides:null};
 const catalogue=()=>s.paths.length?s.paths:s.seed?.trilhas||[];
 const validTab=new Set(["noticias","avisos","marketing","provas","estudos","publicar","administracao"]);
 function safeSource(url){
@@ -53,7 +53,7 @@ function buildStudyPaths(){
   id:x.id,tipo:x.tipo,titulo:x.nome,situacao:resultLabel[x.situacaoProva]||"Situação não documentada",
   edital:safeSource(x.referenciaUrl),provasAnteriores:safeSource(x.referenciaUrl),
   orientacao:"Essa ficha existe no catálogo da FAAAB, mas não é uma prova aberta nem concede patente.",
-  detalhes:x, materias:[]
+  detalhes:x, materias:s.studyGuides?.provas?.[x.referenciaId]?.materias||[]
  }));
  s.paths=[...records,...existing];
  const types=[...new Set(s.paths.map(x=>x.tipo))].map(id=>({id,nome:({referencia:"Referências com estudo documentado",curso:"Cursos e formações",centro:"Centros",unidade:"Batalhões e unidades",brigada:"Brigadas",escola:"Escolas",academia:"Academias",subdivisao:"Subdivisões",administracao:"Administração",instituicao:"Instituições"})[id]||id}));
@@ -140,17 +140,28 @@ $("study-subject").addEventListener("change",()=>pathChange("subject"));
 $("study-topic").addEventListener("change",showTopic);
 function safeOfficial(url){try{const x=new URL(url);return x.protocol==="https:"&&(x.hostname==="www.marinha.mil.br"||x.hostname==="www.inscricao.marinha.mil.br")?url:null}catch{return null}}
 function showTopic(){
- const {t,m,topic}=currentPath();s.selectedTopic=topic;s.selectedPath=t&&m&&topic?{t,m,topic}:null;
- if(!s.selectedPath){$("study-content").innerHTML='<div class="study-start"><div class="study-icon">◎</div><h3>Escolha uma prova, matéria e assunto</h3><p>Material disponível somente nas trilhas selecionadas e documentadas.</p></div>';return}
+ const {t,m,topic}=currentPath();
+ s.selectedTopic=topic;s.selectedPath=t&&m&&topic?{t,m,topic}:null;
+ if(!s.selectedPath){
+  if(t){
+   const source=safeSource(t.edital||t.provasAnteriores),extra=t.detalhes;
+   const info=extra?.observacao||t.orientacao||t.situacao||"";
+   const effect=extra?.efeitoDocumentado||"";
+   const help=t.materias?.length?"Selecione a matéria e o assunto. O conteúdo deve ser comparado com o programa oficial do edital.":"Não existe programa de matérias confirmado para esta ficha. Não foi inventada prova pública nem prova da FAAAB.";
+   $("study-content").innerHTML='<div class="eyebrow">'+esc(t.tipo||"Seleção")+'</div><h3>'+esc(t.titulo)+'</h3><p class="study-body">'+esc(info)+'</p>'+
+     (effect?'<p><b>Rota prevista no manual:</b> '+esc(effect)+' — sujeita à CDP.</p>':"")+
+     '<p class="helper">'+esc(help)+'</p>'+
+     (source?'<div class="study-links"><a href="'+esc(source)+'" target="_blank" rel="noopener noreferrer">Fonte e provas reais relacionadas</a></div>':"");
+  }else $("study-content").innerHTML='<div class="study-start"><div class="study-icon">◎</div><h3>Escolha uma prova</h3><p>O catálogo contempla todas as instituições e formações documentadas na FAAAB.</p></div>';
+  return;
+ }
  const parts=['<div class="eyebrow">'+esc(t.titulo)+'</div><h3>'+esc(m.nome)+' · '+esc(topic.nome)+'</h3><p class="helper">'+esc(t.situacao)+'</p><p class="study-body">'+esc(topic.resumo)+'</p><div class="study-links">'];
- if(safeOfficial(t.edital))parts.push('<a target="_blank" rel="noopener noreferrer" href="'+esc(t.edital)+'">Edital / referência oficial</a>');
- if(safeOfficial(t.provasAnteriores))parts.push('<a target="_blank" rel="noopener noreferrer" href="'+esc(t.provasAnteriores)+'">Provas anteriores e gabaritos</a>');
- parts.push('</div>');
- if(topic.exercicio){const ex=topic.exercicio;parts.push('<div class="practice"><h4>Exercício autoral de preparação</h4><p>'+esc(ex.enunciado)+'</p><fieldset style="border:0;padding:0">'+ex.alternativas.map((x,i)=>'<label><input type="radio" name="practice-answer" value="'+i+'"> '+esc(String.fromCharCode(65+i)+") "+x)+'</label>').join("")+'</fieldset><button id="check-answer" type="button" class="btn primary">Conferir resposta</button><div id="practice-result" class="answer" aria-live="polite"></div></div>')}
- parts.push('<div id="extra-study" class="study-topics"><p class="helper">Verificando se há material complementar autorizado…</p></div>');
+ if(safeSource(t.edital))parts.push('<a target="_blank" rel="noopener noreferrer" href="'+esc(t.edital)+'">Edital / fonte oficial</a>');
+ if(safeSource(t.provasAnteriores))parts.push('<a target="_blank" rel="noopener noreferrer" href="'+esc(t.provasAnteriores)+'">Provas completas anteriores e gabaritos</a>');
+ parts.push('</div><div class="notice neutral">As disciplinas e assuntos são uma orientação de estudo. Consulte o conteúdo programático e as provas oficiais completas da edição. A FAAAB não aprova patentes automaticamente.</div>');
+ parts.push('<div id="extra-study" class="study-topics"><p class="helper">Consultando material complementar autorizado…</p></div>');
  $("study-content").innerHTML=parts.join("");
- $("check-answer")?.addEventListener("click",()=>{const c=document.querySelector('input[name="practice-answer"]:checked');if(!c){$("practice-result").textContent="Escolha uma alternativa.";return}const ex=topic.exercicio;$("practice-result").textContent=(Number(c.value)===ex.resposta?"Correto. ":"Ainda não. ")+ex.explicacao});
- if(s.db)loadExtraStudy(t,m,topic);else $("extra-study").textContent="Materiais complementares serão disponibilizados após ativar a plataforma.";
+ if(s.db)loadExtraStudy(t,m,topic);else $("extra-study").textContent="Materiais complementares aparecerão após ativar a plataforma.";
 }
 const materialId=(t,m,topic)=>t.id+"__"+m.id+"__"+topic.id;
 async function loadExtraStudy(t,m,topic){
@@ -250,9 +261,9 @@ $("material-form").addEventListener("submit",async e=>{e.preventDefault();if(!ow
 });
 async function bootstrap(){
  try{
-  const [seedResp,roleResp,configResp,catalogResp]=await Promise.all([fetch("dados/portal_canais_estudos.json"),fetch("dados/admin_roles.json"),fetch("dados/firebase_config.json",{cache:"no-store"}),fetch("dados/provas_todas_unidades.json")]);
-  if(!seedResp.ok||!roleResp.ok||!configResp.ok||!catalogResp.ok)throw Error("Não foi possível carregar os arquivos do portal");
-  s.seed=await seedResp.json();s.roleCatalog=await roleResp.json();s.allExams=await catalogResp.json();const cfg=await configResp.json();
+  const [seedResp,roleResp,configResp,catalogResp,guidesResp]=await Promise.all([fetch("dados/portal_canais_estudos.json"),fetch("dados/admin_roles.json"),fetch("dados/firebase_config.json",{cache:"no-store"}),fetch("dados/provas_todas_unidades.json"),fetch("dados/provas_guias_materias.json")]);
+  if(!seedResp.ok||!roleResp.ok||!configResp.ok||!catalogResp.ok||!guidesResp.ok)throw Error("Não foi possível carregar os arquivos do portal");
+  s.seed=await seedResp.json();s.roleCatalog=await roleResp.json();s.allExams=await catalogResp.json();s.studyGuides=await guidesResp.json();const cfg=await configResp.json();
   buildStudyPaths();renderCatalog();renderReferences();
   $("study-type").disabled=false;refreshUserRoleOptions();renderPosts();renderExams();if(validTab.has(location.hash.slice(1))&&!["publicar","administracao"].includes(location.hash.slice(1)))showTab(location.hash.slice(1));
   if(!cfg.enabled||!cfg.app?.apiKey||!cfg.app?.projectId||!cfg.app?.appId){
