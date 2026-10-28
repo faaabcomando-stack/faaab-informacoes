@@ -3,7 +3,7 @@
 // OAuth Google/Roblox, whitelist verificável por identidade, sessão HttpOnly e proteção CSRF.
 const SITE_DEFAULT="https://faaabcomando-stack.github.io/faaab-informacoes";
 const API="https://api.github.com/repos/";
-const ALLOWED=new Set(["noticias","autoridades","admin_whitelist","catalogo","hierarquias","cursos","sistemas","historico","geral","pm_progressao"]);
+const ALLOWED=new Set(["admin_roles","noticias","autoridades","admin_whitelist","catalogo","hierarquias","cursos","sistemas","historico","geral","pm_progressao"]);
 const PUBLIC_ASSETS=new Set(["admin-panel.css","admin-panel.js"]);
 const COOKIE="__Host-faaab_session";
 const ONE_DAY=86400;
@@ -203,7 +203,7 @@ function loginPage(ctx){
  const u=ctx?.user,allowed=!!ctx?.role;
  const header='<meta name="viewport" content="width=device-width,initial-scale=1"><meta charset="utf-8"><title>FAAAB · Acesso à administração</title>';
  const intro=u?'<p>Conectado como <strong>'+safe(u.display_name||"Usuário")+'</strong> pelo '+safe(u.provider)+'.</p>':'<p>Entre com sua conta Roblox ou Google. O acesso ao painel é liberado somente para contas aprovadas na whitelist da FAAAB.</p>';
- const buttons=allowed?'<a class="primary" href="/painel">Abrir painel administrativo</a>':'<a class="primary" href="/auth/roblox">Continuar com Roblox</a><a href="/auth/google">Continuar com Google</a>';
+ const buttons=allowed?'<a class="primary" href="/membros">Abrir área de membros</a>':'<a class="primary" href="/auth/roblox">Continuar com Roblox</a><a href="/auth/google">Continuar com Google</a>';
  const pending=u&&!allowed?'<aside>Identidade verificada. Seu acesso está <strong>aguardando aprovação</strong> da FAAAB. Informe ao responsável o seu nick verdadeiro do Roblox. O nome por si só não libera acesso.</aside>':"";
  const link=u&&u.provider==="google"&&!u.linked_roblox_id?'<a href="/link/roblox">Vincular minha conta Roblox a este Google</a>':"";
  const linked=u?.linked_roblox_id?'<small>Roblox vinculado: ID '+safe(u.linked_roblox_id)+'</small>':"";
@@ -301,7 +301,7 @@ export default {
     return redirect("/",{"set-cookie":clearCookie()});
    }
    const ctx=await userContext(req,env);
-   if(req.method==="GET"&&path==="/"){if(ctx?.approved)return redirect("/painel");return textResponse(loginPage(ctx),200,"text/html; charset=utf-8");}
+   if(req.method==="GET"&&path==="/"){if(ctx?.approved)return redirect("/membros");return textResponse(loginPage(ctx),200,"text/html; charset=utf-8");}
    if(req.method==="GET"&&path==="/api/me")return jsonify({loggedIn:!!ctx,user:ctx?{provider:ctx.user.provider,displayName:ctx.user.display_name,robloxId:ctx.user.provider==="roblox"?ctx.user.subject:ctx.user.linked_roblox_id}:null,whitelisted:!!ctx?.approved,role:ctx?.role||null,roles:ctx?.roles||[],permissions:ctx?.permissions||{},csrf:ctx?.approved?ctx.csrf:null});
    if(!ctx?.role)return req.method==="GET"?redirect("/"):jsonify({error:"Acesso negado. Login e whitelist necessários."},403);
    if(req.method==="GET"&&path==="/api/registrations"){
@@ -362,7 +362,11 @@ export default {
     }
     return jsonify({ok:true,action,userKey:target,role});
    }
-   if(req.method==="GET"&&path==="/painel")return fetchStatic(env,"admin-app.html","text/html; charset=utf-8");
+   if(req.method==="GET"&&path==="/painel"){if(ctx.role==="membro")return redirect("/membros");return fetchStatic(env,"admin-app.html","text/html; charset=utf-8");}
+   if(req.method==="GET"&&path==="/membros")return fetchStatic(env,"membros.html","text/html; charset=utf-8");
+   if(req.method==="GET"&&path==="/membros.js")return fetchStatic(env,"membros.js","application/javascript; charset=utf-8");
+   if(req.method==="GET"&&path==="/cargos"){if(ctx.role!=="owner")return jsonify({error:"Cargos são atribuídos somente pelo proprietário"},403);return fetchStatic(env,"cargos.html","text/html; charset=utf-8")}
+   if(req.method==="GET"&&path==="/cargos.js"){if(ctx.role!=="owner")return jsonify({error:"Acesso restrito"},403);return fetchStatic(env,"cargos.js","application/javascript; charset=utf-8")}
    if(req.method==="GET"&&path==="/anunciadores")return fetchStatic(env,"anunciadores.html","text/html; charset=utf-8");
    if(req.method==="GET"&&path==="/anunciadores.js")return fetchStatic(env,"anunciadores.js","application/javascript; charset=utf-8");
    if(req.method==="GET"&&PUBLIC_ASSETS.has(path.slice(1)))return fetchStatic(env,path.slice(1),path.endsWith(".css")?"text/css; charset=utf-8":"application/javascript; charset=utf-8");
