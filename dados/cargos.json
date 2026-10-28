@@ -30,6 +30,21 @@
     "historicoVerificado": false
   },
   {
+    "id": "GOV-DEP-FED",
+    "forca": "GOV",
+    "sigla": "DEP-FED",
+    "nome": "Deputado Federal",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Cargo eleitoral nacional do universo FAAAB; quantidade de vagas, votação, mandato e atribuições detalhadas ainda não definidos.",
+    "duracaoMandato": null,
+    "inicioMandato": null,
+    "fimMandato": null,
+    "tipoIngresso": "Eleição; requisitos: civil, filiado a organização política fictícia aprovada, membro do grupo oficial FAAAB, conta Roblox com 90 dias e 30 dias jogados registrados; ex-militar após carência a definir.",
+    "historicoVerificado": false
+  },
+  {
     "id": "GOV-M-DEF",
     "forca": "GOV",
     "sigla": "M-DEF",
