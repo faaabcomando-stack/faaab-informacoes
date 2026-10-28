@@ -233,7 +233,7 @@
     "real": "Capacitação profissional e formação militar real variam por instituição.",
     "jogo": "A CDP é individual por patente e por força. O Recruta do Exército, por exemplo, tem TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado. Há requisitos próprios documentados no manual também para Soldado, Cabo, Sargentos, Oficiais e outros postos.",
     "regras": "Cada patente tem CDP. Ausência da transcrição no portal não equivale a inexistência. Exibir capacitações e critérios recuperados do manual; quando o texto completo não estiver acessível, sinalizar 'documentação a recuperar', nunca 'não possui CDP'. Duração mínima e mérito devem ser diferenciados de curso/treinamento.",
-    "notas": "As fichas públicas têm 92 patentes/graduações. Nesta base, 75 têm requisitos registrados, incluindo o Recruta confirmado diretamente pelo responsável da FAAAB; 17 dependem de recuperação dos detalhes específicos. Etapas do manual antigo estão identificadas como documentação sujeita a alterações.",
+    "notas": "A FAAAB possui CDP em todas as patentes e graduações. Nesta base, há 93 fichas de carreira: 75 com critérios recuperados do manual; seis transições da PM com etapas propostas e as demais com detalhes a recuperar. Não confundir CDP com nomeação para comando.",
     "atualizado": "2026-10-27",
     "fonte": "Decisões da FAAAB e documentos de planejamento recuperados; campos pendentes não representam regras aprovadas."
   },
@@ -385,9 +385,9 @@
     "estado": "Estrutura parcial",
     "resumo": "Hierarquia e unidades BOPE, ROTAM, BPChoque e BPP constam do catálogo, sendo BPP adaptação fictícia.",
     "real": "Polícia Penal não integra a Polícia Militar brasileira na vida real.",
-    "jogo": "PM é instituição policial no jogo, distinta da SEP administrativa.",
-    "regras": "CDP e hierarquia da PM não devem ser substituídas por adaptação arbitrária do CBM. O arquivo de pesquisa de cursos (dados/pmdf_pesquisa_cursos_2026.json) é um levantamento PMDF sem escolhas homologadas. Cada uniforme, distintivo, qualificação e curso requer validação independente.",
-    "notas": "O trabalho do Codex contém pesquisa de cursos PMDF para a FAAAB (24/10/2026): 46 opções analisadas, 19 prioridades, nenhuma selecionada. A lista não altera automaticamente a CDP, os cursos, os uniformes ou as unidades. A estrutura da PM já decidida em outros trabalhos deve ser preservada.",
+    "jogo": "PM no roleplay FAAAB, distinta da SEP administrativa. A carreira da PM inclui Aprendiz, Soldado de Segunda Classe, Cabo, Terceiro-Sargento, Aspirante a Oficial, Segundo-Tenente, Capitão, Major, Tenente-Coronel e Coronel. Subcomandante-Geral é cargo de direção.",
+    "regras": "A FAAAB definiu seis passagens: Aprendiz → Soldado de Segunda Classe; Cabo → Terceiro-Sargento; Aspirante a Oficial → Segundo-Tenente; Capitão → Major; Tenente-Coronel → Coronel; Coronel → Subcomandante-Geral (nomeação para cargo, não nova patente). A CDP existe para todas as patentes. As etapas desses percursos são propostas para validação e os cursos da pesquisa do Codex não foram selecionados formalmente por nome.",
+    "notas": "Fonte das passagens: decisão direta do responsável em 28/10/2026. Consulte dados/pm_progressao.json e a página policia-pesquisa.html. A pesquisa Codex tem 46 opções, 19 prioridades e nenhuma seleção homologada. Não copiar regras do CBM.",
     "atualizado": "2026-10-28",
     "fonte": "Planejamento Codex enviado pelo responsável; referência PMDF PAE 2026, com seleção pendente."
   },
