@@ -9,7 +9,7 @@ const V3={
  async get(file){if(V3.cached.has(file))return V3.cached.get(file);const response=await fetch("dados/"+file+".json",{cache:"no-store"});if(!response.ok)throw Error("Dados indisponíveis: "+file);const x=await response.json();V3.cached.set(file,x);return x},
  set(id,html){const x=document.getElementById(id);if(x)x.innerHTML=html},
  forceList(rows,key){if(!key)return rows;if(key==="FMB")return rows.filter(x=>x.forca==="FMB"||x.forca==="CFN");return rows.filter(x=>x.forca===key)},
- sectorRows(rows,sector){if(sector==="central")return rows.filter(x=>["FTB","FAB","FMB","CFN"].includes(x.forca));if(sector==="civil")return rows.filter(x=>["PM","CBM"].includes(x.forca));if(sector==="governo")return rows.filter(x=>x.forca==="ADM"&&!["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN","ADM-PM","ADM-CBM","ADM-FAAAB"].includes(x.id));return rows},
+ sectorRows(rows,sector){if(sector==="central")return rows.filter(x=>["FTB","FAB","FMB","CFN"].includes(x.forca)||["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN"].includes(x.id));if(sector==="civil")return rows.filter(x=>["PM","CBM"].includes(x.forca)||["ADM-PM","ADM-CBM"].includes(x.id));if(sector==="governo")return rows.filter(x=>x.forca==="ADM"&&!["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN","ADM-PM","ADM-CBM"].includes(x.id));return rows},
  typeRows(rows,type){if(!type)return rows;if(type==="divisao")return rows.filter(x=>/divis[aã]o/i.test(x.nome)&&x.tipo!=="curso");if(type==="unidade")return rows.filter(x=>x.tipo==="unidade");return rows.filter(x=>x.tipo===type)},
  url(e){return "ficha.html?id="+encodeURIComponent(e.id)},
  row(e){return '<article class="v3-record-item"><div class="v3-record-code">'+V3.esc(e.sigla||e.forca)+'</div><div><h3><a href="'+V3.url(e)+'">'+V3.esc(e.nome)+'</a></h3><p>'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' · '+V3.esc(V3.types[e.tipo]||e.tipo||"Organização")+' · '+V3.esc(e.estadoImplementacao||"Situação a confirmar")+'</p></div><a href="'+V3.url(e)+'">Abrir organização →</a></article>'},
@@ -91,7 +91,7 @@ const V3={
   }else if(sec==="agenda"){
    content='<div class="v3-private"><strong>Programação a definir</strong><p>Não há treinamentos, aulas ou estágios confirmados para publicação nesta organização. A agenda poderá ser preenchida por responsáveis autorizados quando o sistema estiver disponível.</p></div>';
   }
-  V3.set("v3-profile",'<span class="v3-label">Página interna da organização</span><h2 style="margin:9px 0 23px">'+sections[sec]+'</h2>'+content+'<div class="v3-pager"><a class="v3-button" href="'+(V3.forces[e.forca]?.url||"instituicoes.html")+'">Voltar à instituição</a></div>');
+  V3.set("v3-profile",'<span class="v3-label">Seção da organização</span><h2 style="margin:9px 0 23px">'+sections[sec]+'</h2>'+content+'<div class="v3-pager"><a class="v3-button" href="'+(V3.forces[e.forca]?.url||"instituicoes.html")+'">Voltar à instituição</a></div>');
  },
  async courses(){
   const rows=await V3.get("cursos"),input=document.getElementById("v3-search");
