@@ -5,12 +5,32 @@
     "sigla": "REC",
     "cargo": "Recruta",
     "diasMinimos": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial.",
-    "requisitos": "Concluir Expedição Militar, Seleção de Brigada e TC-1.",
+    "requisitos": "Concluir TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado. Os quatro itens compõem a CDP do Recruta.",
     "competencias": "Adaptação à disciplina, cadeia de comando e rotina do Exército.",
-    "formacao": "Expedição Militar; Seleção de Brigada; TC-1",
+    "formacao": "TC-1; Expedição Militar; Seleção de Brigada; Formação de Soldado",
     "proximaEtapa": "Soldado",
-    "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "fonte": "Decisão expressa do projeto FAAAB em 27/10/2026",
+    "observacao": "CDP de Recruta confirmada expressamente pelo usuário em 27/10/2026. Outras condições não devem ser acrescentadas sem confirmação.",
+    "cdpStatus": "Confirmada pelo usuário em 27/10/2026",
+    "cdpEtapas": [
+      {
+        "nome": "TC-1",
+        "obrigatorio": true
+      },
+      {
+        "nome": "Expedição Militar",
+        "obrigatorio": true
+      },
+      {
+        "nome": "Seleção de Brigada",
+        "obrigatorio": true
+      },
+      {
+        "nome": "Formação de Soldado",
+        "obrigatorio": true
+      }
+    ],
+    "cdpResumo": "Concluir TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado."
   },
   {
     "id": "FTB-MBL-2-",
@@ -23,7 +43,8 @@
     "formacao": "Formação de Mobilizado",
     "proximaEtapa": "Mobilizado de 1ª Classe",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-MBL-1-",
@@ -36,7 +57,8 @@
     "formacao": "Treinamento de Praça",
     "proximaEtapa": "Soldado",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-SLD",
@@ -49,7 +71,8 @@
     "formacao": "CTA; Curso de Formação de Soldado Especializado; TC-2",
     "proximaEtapa": "Soldado de 1ª Classe",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-SLD-1-",
@@ -62,7 +85,8 @@
     "formacao": "Curso de Formação de Soldado para Operações Terrestres; TC-3",
     "proximaEtapa": "Cabo",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-CB",
@@ -75,7 +99,8 @@
     "formacao": "ESA; CFSO; TC-4",
     "proximaEtapa": "Terceiro-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-T-SGT",
@@ -88,7 +113,8 @@
     "formacao": "ESA; CFSO; Curso de Formação de Sargentos da Brigada; TC-5",
     "proximaEtapa": "Segundo-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-S-SGT",
@@ -101,7 +127,8 @@
     "formacao": "TB; 1º Cen Ins Op G; TC-6",
     "proximaEtapa": "Primeiro-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-P-SGT",
@@ -114,7 +141,8 @@
     "formacao": "TC-7",
     "proximaEtapa": "Subtenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-SUB-TEN",
@@ -127,7 +155,8 @@
     "formacao": "EsPCEx",
     "proximaEtapa": "Cadete",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-CDT",
@@ -140,7 +169,8 @@
     "formacao": "AMAN - fases 1 a 5",
     "proximaEtapa": "Aspirante a Oficial",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-AAO",
@@ -153,7 +183,8 @@
     "formacao": "AMAN - fases 6 a 10",
     "proximaEtapa": "Segundo-Tenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-S-TEN",
@@ -166,7 +197,8 @@
     "formacao": "Aperfeiçoamento de Oficiais",
     "proximaEtapa": "Primeiro-Tenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-P-TEN",
@@ -179,7 +211,8 @@
     "formacao": "Escola do Estado-Maior - ingresso",
     "proximaEtapa": "Capitão",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-CPT",
@@ -192,7 +225,8 @@
     "formacao": "Escola do Estado-Maior",
     "proximaEtapa": "Capitão-Sênior",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-CPT-SNR",
@@ -205,7 +239,8 @@
     "formacao": "Escola do Estado-Maior - conclusão",
     "proximaEtapa": "Major",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-MAJ",
@@ -218,7 +253,8 @@
     "formacao": "Sem curso obrigatório",
     "proximaEtapa": "Tenente-Coronel",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-TEN-CNRL",
@@ -231,7 +267,8 @@
     "formacao": "Sem curso obrigatório",
     "proximaEtapa": "Coronel",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-CRNL",
@@ -244,7 +281,8 @@
     "formacao": "CFOG",
     "proximaEtapa": "General em Treinamento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-GNRL-T",
@@ -257,7 +295,8 @@
     "formacao": "CFOG - conclusão",
     "proximaEtapa": "General de Brigada",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-GNRL-BRG",
@@ -270,7 +309,8 @@
     "formacao": "Sem curso obrigatório",
     "proximaEtapa": "General de Divisão",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-GNRL-DIV",
@@ -283,7 +323,8 @@
     "formacao": "Sem curso obrigatório",
     "proximaEtapa": "General de Exército",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-GNRL-E",
@@ -296,7 +337,8 @@
     "formacao": "ACopMil At Es quando houver vaga",
     "proximaEtapa": "Sub-Comandante",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-SUB-CMD",
@@ -309,7 +351,8 @@
     "formacao": "Sem curso genérico adicional",
     "proximaEtapa": "Comandante",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-CMD",
@@ -322,7 +365,8 @@
     "formacao": "Sem curso obrigatório",
     "proximaEtapa": "Marechal / condição especial",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FTB-MAR",
@@ -335,7 +379,8 @@
     "formacao": "Qualificação do 1º Cen Ins Op G pode ser pré-condição conforme cânone",
     "proximaEtapa": "Final / especial",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-REC-FAB",
@@ -348,7 +393,8 @@
     "formacao": "Formação Inicial Aeronáutica (FAAAB)",
     "proximaEtapa": "Soldado de 2ª Classe",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-SLD-2-CL",
@@ -361,7 +407,8 @@
     "formacao": "CESD quando aplicável à rota de praça",
     "proximaEtapa": "Soldado de 1ª Classe",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-SLD-1-CL",
@@ -374,7 +421,8 @@
     "formacao": "CFC",
     "proximaEtapa": "Cabo",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-CB",
@@ -387,7 +435,8 @@
     "formacao": "EEAR / CFS",
     "proximaEtapa": "Terceiro-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-T-SGT",
@@ -400,7 +449,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Segundo-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-S-SGT",
@@ -413,7 +463,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Primeiro-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-P-SGT",
@@ -426,7 +477,8 @@
     "formacao": "CAS",
     "proximaEtapa": "Suboficial",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-SB-OFC",
@@ -439,7 +491,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Cadete / rota de oficialato conforme sistema FAAAB",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-CDT",
@@ -452,7 +505,8 @@
     "formacao": "CFAS - Fase I (Criação FAAAB)",
     "proximaEtapa": "Aspirante a Oficial",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-ASP-OF",
@@ -465,7 +519,8 @@
     "formacao": "CFAS Fase II + AFA",
     "proximaEtapa": "Segundo-Tenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-S-TEN",
@@ -478,7 +533,8 @@
     "formacao": "Sem curso obrigatório",
     "proximaEtapa": "Primeiro-Tenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-P-TEN",
@@ -491,7 +547,8 @@
     "formacao": "Aperfeiçoamento de Oficiais / adaptação FAAAB",
     "proximaEtapa": "Capitão",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-CAP",
@@ -504,7 +561,8 @@
     "formacao": "Sem curso obrigatório",
     "proximaEtapa": "Major",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-MAJ",
@@ -517,7 +575,8 @@
     "formacao": "ECEMAR / CCEM",
     "proximaEtapa": "Tenente-Coronel",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-T-COL",
@@ -530,7 +589,8 @@
     "formacao": "ECEMAR / CCEM - conclusão",
     "proximaEtapa": "Coronel",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-COL",
@@ -541,9 +601,25 @@
     "requisitos": "16 dias mínimos + mérito; CPEA obrigatório antes do acesso ao oficialato-general definido na FAAAB.",
     "competencias": "Política e estratégia aeroespacial, alta administração e planejamento de força.",
     "formacao": "CPEA",
-    "proximaEtapa": "Brigadeiro",
+    "proximaEtapa": "Comodoro do Ar",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
+  },
+  {
+    "id": "FAB-COMOD-AR",
+    "forca": "FAB",
+    "sigla": "COMOD-AR",
+    "cargo": "Comodoro do Ar",
+    "diasMinimos": "Não definido",
+    "requisitos": "Ainda não definidos pela FAAAB.",
+    "competencias": "Não definida.",
+    "formacao": "Não definida.",
+    "proximaEtapa": "Brigadeiro",
+    "fonte": "Decisão do projeto em 27/10/2026",
+    "observacao": "Posto inserido na hierarquia FAAAB. Critérios de CDP específicos não informados.",
+    "cdpStatus": "Não definida",
+    "cdpEtapas": null
   },
   {
     "id": "FAB-BGR",
@@ -556,7 +632,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Tenente-Brigadeiro do Ar",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-BGR-MAJ",
@@ -569,7 +646,8 @@
     "formacao": "ESDA - Criação FAAAB",
     "proximaEtapa": "Subcomandante da FAB",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-SUB-CMD-FAB",
@@ -582,7 +660,8 @@
     "formacao": "Conselho Superior Aeronáutico - mecanismo FAAAB",
     "proximaEtapa": "Comandante da FAB",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-CMD-FAB",
@@ -595,7 +674,8 @@
     "formacao": "Sem curso adicional obrigatório",
     "proximaEtapa": "Marechal-do-Ar / condição excepcional",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FAB-MAR-AR",
@@ -608,7 +688,8 @@
     "formacao": "Sem curso obrigatório",
     "proximaEtapa": "Final / especial",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-REC-MB",
@@ -621,7 +702,8 @@
     "formacao": "Curso de Ensino Naval da Marinha; fases inspiradas no C-FMN",
     "proximaEtapa": "Marinheiro",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-MN",
@@ -634,7 +716,8 @@
     "formacao": "Curso de Marinharia / Navegação conforme função",
     "proximaEtapa": "Cabo",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-CB",
@@ -647,7 +730,8 @@
     "formacao": "C-Esp-HabSG; 2° Cen d forCN opcional",
     "proximaEtapa": "Terceiro-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-T-SGT",
@@ -660,7 +744,8 @@
     "formacao": "C-Ap / aperfeiçoamento quando aplicável",
     "proximaEtapa": "Segundo-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-S-SGT",
@@ -673,7 +758,8 @@
     "formacao": "Aperfeiçoamento de Praças",
     "proximaEtapa": "Primeiro-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-P-SGT",
@@ -686,7 +772,8 @@
     "formacao": "C-Esp-HabSO",
     "proximaEtapa": "Suboficial",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-SO",
@@ -699,7 +786,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Guarda-Marinha / rota de oficialato conforme FAAAB",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-GM",
@@ -712,7 +800,8 @@
     "formacao": "Escola Naval",
     "proximaEtapa": "Segundo-Tenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-S-TEN",
@@ -725,7 +814,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Primeiro-Tenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-P-TEN",
@@ -738,7 +828,8 @@
     "formacao": "EGN / C-EMOI quando aplicável",
     "proximaEtapa": "Capitão-Tenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-CT",
@@ -751,7 +842,8 @@
     "formacao": "C-EMOI (referência real)",
     "proximaEtapa": "Capitão de Corveta",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-CC",
@@ -764,7 +856,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Capitão de Fragata",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-CF",
@@ -777,7 +870,8 @@
     "formacao": "C-EMOS quando definido",
     "proximaEtapa": "Capitão de Mar e Guerra",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-CMG",
@@ -788,9 +882,25 @@
     "requisitos": "15 dias mínimos + mérito; C-PEM obrigatório antes do oficialato-general na adaptação FAAAB.",
     "competencias": "Política e estratégia marítimas, alta administração naval e tomada de decisão.",
     "formacao": "C-PEM / EGN",
-    "proximaEtapa": "Contra-Almirante",
+    "proximaEtapa": "Comodoro",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
+  },
+  {
+    "id": "FMB-COMOD",
+    "forca": "FMB",
+    "sigla": "COMOD",
+    "cargo": "Comodoro",
+    "diasMinimos": "Não definido",
+    "requisitos": "Ainda não definidos pela FAAAB.",
+    "competencias": "Não definida.",
+    "formacao": "Não definida.",
+    "proximaEtapa": "Contra-Almirante",
+    "fonte": "Decisão do projeto em 27/10/2026",
+    "observacao": "Posto inserido na hierarquia FAAAB. Critérios de CDP específicos não informados.",
+    "cdpStatus": "Não definida",
+    "cdpEtapas": null
   },
   {
     "id": "FMB-C-ALM",
@@ -803,7 +913,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Vice-Almirante",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-V-ALM",
@@ -816,7 +927,8 @@
     "formacao": "ESDA-MB - Criação FAAAB",
     "proximaEtapa": "Almirante de Esquadra",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-ALM-ESQ",
@@ -829,7 +941,8 @@
     "formacao": "Conselho do Almirantado; CDEPN opcional/alto nível FAAAB",
     "proximaEtapa": "Comandante da Marinha",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-CMD-MB",
@@ -842,7 +955,8 @@
     "formacao": "Sem curso de patente obrigatório",
     "proximaEtapa": "Almirante",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "FMB-ALM",
@@ -855,7 +969,8 @@
     "formacao": "Conselho Naval Superior - não é curso",
     "proximaEtapa": "Final",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-A-BMB",
@@ -868,7 +983,8 @@
     "formacao": "CFP/CFSD - adaptação FAAAB",
     "proximaEtapa": "Soldado",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-SLD",
@@ -881,7 +997,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Cabo",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-CB",
@@ -894,7 +1011,8 @@
     "formacao": "CEFC / CHC - referência estadual adaptada",
     "proximaEtapa": "Terceiro-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-T-SGT",
@@ -907,7 +1025,8 @@
     "formacao": "CFS/BM",
     "proximaEtapa": "Segundo-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-S-SGT",
@@ -920,7 +1039,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Primeiro-Sargento",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-P-SGT",
@@ -933,7 +1053,8 @@
     "formacao": "CAS/BM",
     "proximaEtapa": "Subtenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-SB-TEN",
@@ -946,7 +1067,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Aspirante a Oficial / rota de oficialato",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-AAO",
@@ -959,7 +1081,8 @@
     "formacao": "CFO/BM",
     "proximaEtapa": "Segundo-Tenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-S-TEN",
@@ -972,7 +1095,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Primeiro-Tenente",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-P-TEN",
@@ -985,7 +1109,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Capitão",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-CPT",
@@ -998,7 +1123,8 @@
     "formacao": "CAO/BM",
     "proximaEtapa": "Major",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-MJR",
@@ -1011,7 +1137,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Tenente-Coronel",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-TEN-CRNL",
@@ -1024,7 +1151,8 @@
     "formacao": "CSBM / Altos Estudos BM",
     "proximaEtapa": "Coronel",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-CRNL",
@@ -1037,7 +1165,8 @@
     "formacao": "Sem curso obrigatório novo",
     "proximaEtapa": "Subcomandante-Geral",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-SUB-CMD-GERAL",
@@ -1050,7 +1179,8 @@
     "formacao": "Conselho Superior BM - proposta FAAAB",
     "proximaEtapa": "Comandante-Geral",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   },
   {
     "id": "CBM-CMD-GERAL",
@@ -1063,6 +1193,7 @@
     "formacao": "Sem curso adicional obrigatório",
     "proximaEtapa": "Final",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
+    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual"
   }
 ]
