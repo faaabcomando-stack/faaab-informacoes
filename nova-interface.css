@@ -83,3 +83,9 @@ h1,h2{letter-spacing:-.03em}.btn,.filterbar button{border-radius:4px}
 .cdp-pending p{margin:6px 0 0;color:#71694b;font-size:12px}
 .cdp-old{font-size:12px;margin-top:13px;color:#637467}.cdp-old summary{font-size:12px;color:#506955;cursor:pointer;font-weight:700}
 .cdp-old p{padding:6px 0;font-size:12px}
+
+/* Apresentação do texto real da CDP em vez de deixar critérios escondidos */
+.cdp-criteria{padding:14px 16px;margin:13px 0;background:#f3f6f0;border-left:3px solid #8ca88c;color:#2e5037;font-size:13px}
+.cdp-criteria strong{font-size:12px}.cdp-criteria p{margin:6px 0 0;color:#465e4c;line-height:1.65}
+.cdp-notice{font-size:13px;color:#61705e;background:#f7f8f4;padding:13px 15px;border-left:3px solid #d0bc8b}
+.rank-card .cdp-heading{margin-top:18px}
