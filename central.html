@@ -56,4 +56,33 @@
 <article class="surface"><h3>Material de estudo complementar</h3><p class="helper">Escolha uma trilha, matéria e assunto no canal Estudos. Depois defina o conteúdo e se ele é público, para membros ou restrito a cargos.</p><form id="material-form"><label for="material-title">Título do material</label><input id="material-title" maxlength="160" required><label for="material-body">Conteúdo complementar</label><textarea id="material-body" rows="5" maxlength="5000" required></textarea><div class="form-two"><div><label for="material-access">Quem pode estudar?</label><select id="material-access"><option value="public">Todos</option><option value="membros">Membros na whitelist</option><option value="cargos">Cargos específicos</option></select></div><div><label for="material-role">Cargo autorizado (para material restrito)</label><select id="material-role"><option value="">Selecione um cargo</option></select></div></div><button class="btn primary" type="submit">Publicar material na trilha selecionada</button></form></article>
 </section>
 </main><footer><div class="wrap"><strong>FAAAB · Central de Comunicação e Estudos</strong><span>Estudos baseados em fontes verificadas. As regras de CDP e as inscrições da FAAAB exigem aprovação própria.</span><a href="./">Portal principal</a></div></footer>
+
+<script>
+/* Navegação da Central independente dos arquivos de notícias, provas ou estudos. */
+(function(){
+ const publico=new Set(["noticias","avisos","marketing","provas","estudos"]);
+ const abas=new Set([...publico,"publicar","administracao"]);
+ function selecionar(nome,atualizarEndereco){
+   if(!abas.has(nome)) nome="noticias";
+   if((nome==="publicar"||nome==="administracao")&&document.querySelector('[data-tab="'+nome+'"]')?.hidden) nome="noticias";
+   document.querySelectorAll("section.view[id^='view-']").forEach(p=>{p.hidden=p.id!=="view-"+nome});
+   document.querySelectorAll("#tabs [data-tab]").forEach(b=>{
+     const ativa=b.dataset.tab===nome;b.classList.toggle("active",ativa);
+     b.setAttribute("aria-selected",String(ativa));
+   });
+   if(atualizarEndereco&&location.hash!=="#"+nome)history.replaceState(null,"","#"+nome);
+   document.body.dataset.aba=nome;
+   return nome;
+ }
+ window.FAAABSelecionarAba=selecionar;
+ selecionar(decodeURIComponent(location.hash.slice(1)).toLowerCase(),false);
+ document.querySelector("#tabs")?.addEventListener("click",e=>{
+   const b=e.target.closest("[data-tab]");if(b&&!b.hidden)selecionar(b.dataset.tab,true);
+ });
+ document.querySelectorAll('a[href="#estudos"],a[href="#provas"],a[href="#avisos"],a[href="#noticias"]').forEach(a=>a.addEventListener("click",()=>{
+   selecionar(a.getAttribute("href").slice(1),true);
+ }));
+ window.addEventListener("hashchange",()=>selecionar(location.hash.slice(1),false));
+})();
+</script>
 <script src="aulas.js" defer></script><script src="programas.js" defer></script><script src="simulados.js" defer></script><script type="module" src="central.js"></script></body></html>
