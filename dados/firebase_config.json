@@ -1,0 +1,5 @@
+{
+  "enabled": false,
+  "app": null,
+  "setup": "Criar projeto Firebase, ativar Google Authentication, Firestore e aplicar firebase/firestore.rules. Depois preencher app com objeto público de configuração Firebase e mudar enabled para true. Não colocar segredos."
+}
