@@ -1,7 +1,7 @@
 "use strict";
 /* FAAAB Remaster — só informações públicas. Acesso privado exige backend autenticado. */
 const V3={
- forces:{FTB:{name:"Exército",url:"exercito.html",sector:"central"},FAB:{name:"Força Aérea",url:"aeronautica.html",sector:"central"},FMB:{name:"Marinha",url:"marinha.html",sector:"central"},CFN:{name:"Fuzileiros Navais",url:"fuzileiros.html",sector:"central"},PM:{name:"Polícia Militar",url:"policia-militar.html",sector:"civil"},CBM:{name:"Corpo de Bombeiros",url:"bombeiros.html",sector:"civil"},ADM:{name:"Administração",url:"governo.html",sector:"governo"},GOV:{name:"Governo",url:"governo.html",sector:"governo"}},
+ forces:{FTB:{name:"Exército",full:"Exército Brasileiro",url:"exercito.html",sector:"central"},FAB:{name:"Força Aérea",full:"Força Aérea Brasileira",url:"aeronautica.html",sector:"central"},FMB:{name:"Marinha",full:"Marinha Brasileira",url:"marinha.html",sector:"central"},CFN:{name:"Fuzileiros Navais",full:"Corpo de Fuzileiros Navais",url:"fuzileiros.html",sector:"central"},PM:{name:"Polícia Militar",full:"Polícia Militar",url:"policia-militar.html",sector:"civil"},CBM:{name:"Corpo de Bombeiros",full:"Corpo de Bombeiros Militar",url:"bombeiros.html",sector:"civil"},ADM:{name:"Administração",url:"governo.html",sector:"governo"},GOV:{name:"Governo",url:"governo.html",sector:"governo"}},
  types:{instituicao:"Instituição",unidade:"Batalhões e unidades",brigada:"Brigadas",centro:"Centros de instrução",escola:"Escolas",academia:"Academias",subdivisao:"Subdivisões",curso:"Cursos",administracao:"Setores administrativos",divisao:"Divisões"},
  cached:new Map(),
  esc:v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),
@@ -15,6 +15,20 @@ const V3={
  row(e){return '<article class="v3-record-item"><div class="v3-record-code">'+V3.esc(e.sigla||e.forca)+'</div><div><h3><a href="'+V3.url(e)+'">'+V3.esc(e.nome)+'</a></h3><p>'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' · '+V3.esc(V3.types[e.tipo]||e.tipo||"Organização")+' · '+V3.esc(e.estadoImplementacao||"Situação a confirmar")+'</p></div><a href="'+V3.url(e)+'">Abrir organização →</a></article>'},
  rows(rows){return rows.length?'<div class="v3-record-list">'+rows.map(V3.row).join("")+'</div>':'<p class="v3-empty">Nenhuma organização desse tipo está registrada no catálogo atual. Não foram criadas entradas fictícias.</p>'},
  note(txt){return '<div class="v3-note">'+V3.esc(txt)+'</div>'},
+ context(key){
+  const p=V3.forces[key];if(!p)return;
+  const brand=document.querySelector(".v3-brand");
+  if(brand){brand.textContent=p.full||p.name;brand.href=p.url;brand.classList.add("v3-force-brand")}
+  const desc=document.querySelector(".v3-brand-desc");
+  if(desc){desc.textContent="";desc.append(document.createTextNode(p.sector==="civil"?"SETOR CIVIL":"FAAAB CENTRAL"),document.createElement("br"),document.createTextNode("Organizações e formação"))}
+ },
+ categoryNav(key,active){
+  const categories=[["unidade","Batalhões e unidades"],["brigada","Brigadas"],["divisao","Divisões"],["centro","Centros"],["escola","Escolas"],["academia","Academias"],["subdivisao","Subdivisões"],["curso","Cursos"],["administracao","Administração"],["instituicao","Instituições"]];
+  return '<div class="v3-label">Categorias da instituição</div><nav class="v3-force-category-links" aria-label="Páginas da instituição">'+categories.map(([t,label])=>{
+    const url=t==="curso"?"formacao.html?forca="+key:"organizacoes.html?forca="+key+"&tipo="+t;
+    return '<a href="'+url.replace(/&/g,"&amp;")+'"'+(t===active?' aria-current="page"':'')+'>'+label+'</a>';
+  }).join("")+'<a href="carreira.html?forca='+(key==="CFN"?"FMB":key)+'">Patentes e CDP</a><a href="comando.html">Comando</a></nav>';
+ },
  async home(){
   const [c,h]=await Promise.all([V3.get("catalogo"),V3.get("historico")]);const groups={central:V3.sectorRows(c,"central"),governo:V3.sectorRows(c,"governo"),civil:V3.sectorRows(c,"civil")};
   ["central","governo","civil"].forEach(k=>{const t=document.getElementById("v3-count-"+k);if(t)t.textContent=groups[k].length+" registros no catálogo";});
@@ -36,7 +50,7 @@ const V3={
  },
  async force(){
   const key=document.body.dataset.force;
-  const all=await V3.get("catalogo"),rows=V3.forceList(all,key);
+  V3.context(key);const all=await V3.get("catalogo"),rows=V3.forceList(all,key);
   const types=["unidade","brigada","divisao","centro","escola","academia","subdivisao","curso"];
   const sections=types.map(type=>{let a=V3.typeRows(rows,type);if(!a.length)return "";
   const q="organizacoes.html?forca="+encodeURIComponent(key)+"&tipo="+encodeURIComponent(type);
@@ -49,6 +63,19 @@ const V3={
   const force=params.get("forca")||body.dataset.force||"";
   const sector=params.get("setor")||body.dataset.sector||"";
   const type=params.get("tipo")||body.dataset.type||"";
+  if(force&&V3.forces[force]){
+   V3.context(force);
+   const p=V3.forces[force],name=p.full||p.name;
+   const context=document.getElementById("v3-context-menu");
+   if(context){context.classList.add("v3-force-index");context.innerHTML='<div class="v3-wrap">'+V3.categoryNav(force,type)+'</div>'}
+   const crumb=document.querySelector(".v3-breadcrumb");
+   if(crumb)crumb.innerHTML='<a href="index.html">Início</a><span>/</span><a href="'+(p.sector==="civil"?"civil.html":"central-faaab.html")+'">'+(p.sector==="civil"?"Civil":"FAAAB CENTRAL")+'</a><span>/</span><a href="'+p.url+'">'+V3.esc(name)+'</a><span>/</span>'+V3.esc(V3.types[type]||"Organizações");
+   const k=document.querySelector(".v3-intro .v3-label");
+   if(k)k.textContent="Organizações / "+name;
+   const intro=document.querySelector(".v3-intro p");
+   if(intro)intro.textContent="Página de "+(V3.types[type]||"organizações").toLowerCase()+" de "+name+". Selecione uma organização para abrir sua ficha individual.";
+   document.title=(V3.types[type]||"Organizações")+" | "+name+" | FAAAB";
+  }
   let rows=V3.typeRows(V3.forceList(V3.sectorRows(all,sector),force),type);
   const title=type?(V3.types[type]||"Organizações"):body.dataset.collectionName||"Organizações";
   const detail=document.getElementById("v3-dynamic-title");if(detail&&type)detail.textContent=title+(force?" — "+(V3.forces[force]?.name||force):"");
@@ -65,6 +92,7 @@ const V3={
   const e=cat.find(x=>x.id===id);
   if(!e){V3.set("v3-profile",' <h1>Organização não encontrada</h1><p>Confira o endereço ou volte à <a href="instituicoes.html">página de instituições</a>.</p>');return}
   const sec=Object.prototype.hasOwnProperty.call(sections,s)?s:"sobre";
+  V3.context(e.forca);
   document.title=e.nome+" · "+sections[sec]+" | FAAAB";
   V3.set("v3-crumb-force",'<a href="'+(V3.forces[e.forca]?.url||"instituicoes.html")+'">'+V3.esc(V3.forces[e.forca]?.name||"FAAAB")+'</a>');
   V3.set("v3-crumb-name",V3.esc(e.nome));
@@ -96,6 +124,7 @@ const V3={
  async courses(){
   const rows=await V3.get("cursos"),input=document.getElementById("v3-search");
   const order=["FTB","FAB","FMB","CFN","CBM"];const params=new URLSearchParams(location.search);const selected=params.get("forca")||"";
+  if(selected&&V3.forces[selected])V3.context(selected);
   V3.set("v3-course-forces",order.map(k=>'<a class="v3-button'+(k===selected?' primary':'')+'" href="formacao.html?forca='+k+'">'+V3.forces[k].name+'</a>').join("")+'<a class="v3-button'+(!selected?' primary':'')+'" href="formacao.html">Todos</a>');
   function paint(){let list=selected?rows.filter(x=>x.forca===selected):rows;const q=V3.clean(input?.value||"");if(q)list=list.filter(x=>V3.clean([x.titulo,x.sigla,x.detalhes].join(" ")).includes(q));V3.set("v3-course-count",list.length+" cursos e formações documentados");V3.set("v3-course-list",list.map(x=>'<details class="rank"><summary><span>'+V3.esc(x.titulo)+'</span><small>'+V3.esc(x.forca)+'</small></summary><div class="rank-detail"><p><b>Situação:</b> '+V3.esc(x.estado||"A confirmar")+'</p><p style="white-space:pre-wrap">'+V3.esc(x.detalhes||"Detalhes a confirmar")+'</p></div></details>').join("")||'<p>Não há cursos registrados nesta seleção.</p>')}
   input?.addEventListener("input",paint);paint();
@@ -103,6 +132,7 @@ const V3={
  async career(){
   const [rows,patentes]=await Promise.all([V3.get("hierarquias"),V3.get("patentes")]);
   const allowed=["FTB","FAB","FMB","CBM","PM"];let key=new URLSearchParams(location.search).get("forca");if(!allowed.includes(key))key="FTB";
+  V3.context(key);
   V3.set("v3-career-forces",allowed.map(k=>'<a class="v3-button'+(k===key?' primary':'')+'" href="carreira.html?forca='+k+'">'+V3.forces[k].name+'</a>').join(""));
   const list=rows.filter(x=>x.forca===key).sort((a,b)=>a.ordem-b.ordem);
   V3.set("v3-career-count",list.length+" patentes e graduações · "+V3.forces[key].name);
