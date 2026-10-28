@@ -241,14 +241,21 @@ $("post-form").addEventListener("submit",async e=>{e.preventDefault();const chan
  if(!title||!body||!confirm("Publicar comunicado neste canal?"))return;
  try{await addDoc(collection(s.db,"posts"),{channel,category,title,body,published:true,authorUid:s.me.uid,createdAt:serverTimestamp()});$("post-form").reset();notice("Comunicado publicado no canal "+channel+".");await refreshPosts()}catch(err){notice("Publicação não autorizada ou indisponível: "+err.message,true)}
 });
+$("exam-record").addEventListener("change",()=>{
+ const item=s.allExams?.registros.find(x=>x.id===$("exam-record").value);
+ if(!item)return;
+ if(!$("exam-title").value.trim())$("exam-title").value="Avaliação FAAAB — "+item.nome;
+ if(["centro","brigada","unidade","escola","academia","curso"].includes(item.tipo))$("exam-type").value=item.tipo==="unidade"?"batalhao":item.tipo==="academia"?"escola":item.tipo;
+});
 $("exam-form").addEventListener("submit",async e=>{e.preventDefault();if(!owner())return;
- const title=$("exam-title").value.trim(),description=$("exam-description").value.trim();
+ const title=$("exam-title").value.trim(),description=$("exam-description").value.trim(),catalogRecordId=$("exam-record").value;
+ if(!s.allExams?.registros.some(x=>x.id===catalogRecordId)){notice("Selecione uma formação ou unidade existente no catálogo FAAAB.",true);return}
  const startAt=new Date($("exam-start").value),untilAt=new Date($("exam-until").value);
  if(!title||!description||description.length<=10||isNaN(startAt)||isNaN(untilAt)||untilAt<=startAt||untilAt<=new Date()){notice("Preencha edital e datas válidas: o fim deve ser posterior ao início, e o fim deve estar no futuro.",true);return}
  if(!confirm("Confirmar a PUBLICAÇÃO de um edital FAAAB? O sistema abrirá e encerrará inscrições automaticamente nas datas escolhidas. Nenhuma promoção é automática."))return;
  const allowedRoles=Array.from($("exam-roles").selectedOptions).map(x=>x.value);
  try{
-  await addDoc(collection(s.db,"exams"),{type:$("exam-type").value,title,description,status:"agendada",published:true,allowedRoles,startAt:Timestamp.fromDate(startAt),untilAt:Timestamp.fromDate(untilAt),createdAt:serverTimestamp(),authorUid:s.me.uid});
+  await addDoc(collection(s.db,"exams"),{type:$("exam-type").value,title,description,catalogRecordId,status:"agendada",published:true,allowedRoles,startAt:Timestamp.fromDate(startAt),untilAt:Timestamp.fromDate(untilAt),createdAt:serverTimestamp(),authorUid:s.me.uid});
   $("exam-form").reset();notice("Edital agendado. O prazo de inscrição ficará aberto somente dentro da janela definida, validada pelo Firestore.");await refreshExams();
  }catch(err){notice("Falha ao agendar edital: "+err.message,true)}
 });
@@ -265,6 +272,7 @@ async function bootstrap(){
   if(!seedResp.ok||!roleResp.ok||!configResp.ok||!catalogResp.ok||!guidesResp.ok)throw Error("Não foi possível carregar os arquivos do portal");
   s.seed=await seedResp.json();s.roleCatalog=await roleResp.json();s.allExams=await catalogResp.json();s.studyGuides=await guidesResp.json();const cfg=await configResp.json();
   buildStudyPaths();renderCatalog();renderReferences();
+  $("exam-record").innerHTML='<option value="">Selecione o curso, centro, unidade ou brigada</option>'+s.allExams.registros.filter(x=>["curso","centro","escola","academia","unidade","brigada","subdivisao"].includes(x.tipo)).sort((a,b)=>a.forca.localeCompare(b.forca)||a.nome.localeCompare(b.nome,"pt-BR")).map(x=>'<option value="'+esc(x.id)+'">'+esc(x.forca+" · "+x.nome)+'</option>').join("");
   $("study-type").disabled=false;refreshUserRoleOptions();renderPosts();renderExams();if(validTab.has(location.hash.slice(1))&&!["publicar","administracao"].includes(location.hash.slice(1)))showTab(location.hash.slice(1));
   if(!cfg.enabled||!cfg.app?.apiKey||!cfg.app?.projectId||!cfg.app?.appId){
    $("auth-title").textContent="Google login: configuração pendente";
@@ -278,6 +286,7 @@ async function bootstrap(){
   $("logout-google").addEventListener("click",()=>signOut(s.auth).catch(e=>notice("Erro ao sair: "+e.message,true)));
   onAuthStateChanged(s.auth,user=>authChanged(user).catch(e=>notice("Erro de sessão: "+e.message,true)));
   await Promise.all([refreshPosts(),refreshExams()]);
+  setInterval(()=>{if(s.db){refreshExams().catch(()=>{});renderExams()}},60000);
  }catch(e){notice("Falha ao carregar a central: "+e.message,true)}
 }
 bootstrap();
