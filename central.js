@@ -100,15 +100,25 @@ function renderPosts(){
 $("filter-news").addEventListener("change",renderPosts);
 async function refreshPosts(){if(!s.db)return;try{const q=query(collection(s.db,"posts"),where("published","==",true),limit(100));const snap=await getDocs(q);s.posts=snap.docs.map(d=>({id:d.id,...d.data()}));renderPosts()}catch(e){notice("Não foi possível carregar os comunicados online: "+e.message,true)}}
 async function refreshExams(){if(!s.db)return;try{const q=query(collection(s.db,"exams"),where("published","==",true),limit(100));const snap=await getDocs(q);s.exams=snap.docs.map(d=>({id:d.id,...d.data()}));renderExams()}catch(e){notice("Não foi possível consultar editais: "+e.message,true)}}
-function renderExams(){
- const now=Date.now();const exams=s.exams.filter(x=>x.status==="aberta"&&x.untilAt?.toDate?.().getTime()>now);
- $("exam-list").innerHTML=exams.length?exams.map(x=>{
- const eligible=!x.allowedRoles?.length||owner()||x.allowedRoles.some(r=>roleNames().includes(r));
- const canApply=approved()&&eligible;
- return '<article class="exam-card"><div class="post-meta"><span>Prova '+esc(x.type||"FAAAB")+'</span><span>Inscrições até '+esc(formatDate(x.untilAt))+'</span></div><h3>'+esc(x.title)+'</h3><p>'+esc(x.description)+'</p><p><strong>Cargos elegíveis:</strong> '+esc(x.allowedRoles?.length?x.allowedRoles.map(roleLabel).join(", "):"Todos os membros aprovados")+'</p>'+(canApply?'<button class="btn primary" type="button" data-exam-apply="'+esc(x.id)+'">Inscrever-me</button>':'<p class="helper">'+(approved()?"Inscrição restrita aos cargos elegíveis.":"Faça login e receba a whitelist para se inscrever.")+'</p>')+'</article>'
- }).join(""):'<div class="empty">Nenhuma prova FAAAB está com inscrições abertas. Provas antigas da Marinha aparecem apenas como referências de estudo.</div>';
+function examState(ex){
+ const start=ex.startAt?.toDate?.().getTime(),end=ex.untilAt?.toDate?.().getTime(),n=Date.now();
+ if(!ex.published||!end)return "indisponivel";
+ if(end<=n)return "encerrada";
+ if(start&&start>n)return "programada";
+ return ex.status==="agendada"||ex.status==="aberta"?"aberta":"indisponivel";
 }
-$("exam-list").addEventListener("click",async e=>{const btn=e.target.closest("[data-exam-apply]");if(!btn||!s.me||!approved())return;const exam=s.exams.find(x=>x.id===btn.dataset.examApply);if(!exam||!confirm("Confirmar inscrição em "+exam.title+"?"))return;
+function renderExams(){
+ const order={aberta:0,programada:1,encerrada:2,indisponivel:3};
+ const all=s.exams.map(x=>({...x,computedState:examState(x)})).sort((a,b)=>(order[a.computedState]??4)-(order[b.computedState]??4)||((a.startAt?.seconds||0)-(b.startAt?.seconds||0)));
+ const counts={aberta:all.filter(x=>x.computedState==="aberta").length,programada:all.filter(x=>x.computedState==="programada").length,encerrada:all.filter(x=>x.computedState==="encerrada").length};
+ $("exam-list").innerHTML=all.length?'<p class="helper">'+counts.aberta+' abertas · '+counts.programada+' agendadas · '+counts.encerrada+' encerradas (atualização calculada automaticamente por data)</p>'+all.map(x=>{
+  const eligible=!x.allowedRoles?.length||owner()||x.allowedRoles.some(r=>roleNames().includes(r));
+  const state=x.computedState,canApply=state==="aberta"&&approved()&&eligible;
+  const desc={aberta:"Inscrições abertas",programada:"Abertura programada",encerrada:"Inscrições encerradas",indisponivel:"Indisponível"}[state];
+  return '<article class="exam-card"><span class="exam-status '+(state==="programada"?"scheduled":state==="encerrada"?"closed":"")+'">'+desc+'</span><div class="post-meta"><span>'+esc(x.type||"FAAAB")+'</span><span>Início: '+esc(formatDate(x.startAt))+' · Fim: '+esc(formatDate(x.untilAt))+'</span></div><h3>'+esc(x.title)+'</h3><p>'+esc(x.description)+'</p><p><strong>Cargos elegíveis:</strong> '+esc(x.allowedRoles?.length?x.allowedRoles.map(roleLabel).join(", "):"Todos os membros da whitelist")+'</p>'+(canApply?'<button class="btn primary" type="button" data-exam-apply="'+esc(x.id)+'">Inscrever-me</button>':'<p class="helper">'+(state==="programada"?"As inscrições serão liberadas automaticamente na data inicial.":state==="encerrada"?"O prazo encerrou automaticamente.":approved()?"Inscrição indisponível para este cargo ou período.":"É necessária whitelist e período aberto para inscrição.")+'</p>')+'</article>';
+ }).join(""):'<div class="empty">Ainda não há editais da FAAAB publicados. Consulte abaixo a lista completa de cursos, centros, batalhões, brigadas e provas reais de referência.</div>';
+}
+$("exam-list").addEventListener("click",async e=>{const btn=e.target.closest("[data-exam-apply]");if(!btn||!s.me||!approved())return;const exam=s.exams.find(x=>x.id===btn.dataset.examApply);if(!exam||examState(exam)!=="aberta"||!confirm("Confirmar inscrição em "+exam.title+"?"))return;
  try{btn.disabled=true;await setDoc(doc(s.db,"applications",s.me.uid+"__"+exam.id),{uid:s.me.uid,examId:exam.id,status:"inscrita",submittedAt:serverTimestamp()});notice("Inscrição enviada. O status não representa aprovação ou promoção automática.")}catch(err){notice("Inscrição não concluída: "+err.message,true)}finally{btn.disabled=false}});
 function roleLabel(id){return s.roleCatalog?.roles?.find(x=>x.id===id)?.nome||id.replaceAll("_"," ")}
 function fillSelect(id,items,label="Selecione"){const el=$(id),value=el.value;el.innerHTML='<option value="">'+label+'</option>'+items.map(x=>'<option value="'+esc(x.id)+'">'+esc(x.nome||x.titulo||x.id)+'</option>').join("");if(items.some(x=>x.id===value))el.value=value;el.disabled=!items.length;return el}
@@ -221,11 +231,15 @@ $("post-form").addEventListener("submit",async e=>{e.preventDefault();const chan
  try{await addDoc(collection(s.db,"posts"),{channel,category,title,body,published:true,authorUid:s.me.uid,createdAt:serverTimestamp()});$("post-form").reset();notice("Comunicado publicado no canal "+channel+".");await refreshPosts()}catch(err){notice("Publicação não autorizada ou indisponível: "+err.message,true)}
 });
 $("exam-form").addEventListener("submit",async e=>{e.preventDefault();if(!owner())return;
- const title=$("exam-title").value.trim(),description=$("exam-description").value.trim(),date=new Date($("exam-until").value);
- if(!title||!description||isNaN(date)||date.getTime()<=Date.now()){notice("Preencha edital, requisitos e uma data futura para o fim das inscrições.",true);return}
- if(!confirm("Confirma a abertura REAL desta prova no site FAAAB? Não é apenas modelo de estudo."))return;
+ const title=$("exam-title").value.trim(),description=$("exam-description").value.trim();
+ const startAt=new Date($("exam-start").value),untilAt=new Date($("exam-until").value);
+ if(!title||!description||description.length<=10||isNaN(startAt)||isNaN(untilAt)||untilAt<=startAt||untilAt<=new Date()){notice("Preencha edital e datas válidas: o fim deve ser posterior ao início, e o fim deve estar no futuro.",true);return}
+ if(!confirm("Confirmar a PUBLICAÇÃO de um edital FAAAB? O sistema abrirá e encerrará inscrições automaticamente nas datas escolhidas. Nenhuma promoção é automática."))return;
  const allowedRoles=Array.from($("exam-roles").selectedOptions).map(x=>x.value);
- try{await addDoc(collection(s.db,"exams"),{type:$("exam-type").value,title,description,status:"aberta",published:true,allowedRoles,untilAt:Timestamp.fromDate(date),createdAt:serverTimestamp(),authorUid:s.me.uid});$("exam-form").reset();notice("Edital aberto oficialmente no canal de provas.");await refreshExams()}catch(err){notice("Falha ao abrir edital: "+err.message,true)}
+ try{
+  await addDoc(collection(s.db,"exams"),{type:$("exam-type").value,title,description,status:"agendada",published:true,allowedRoles,startAt:Timestamp.fromDate(startAt),untilAt:Timestamp.fromDate(untilAt),createdAt:serverTimestamp(),authorUid:s.me.uid});
+  $("exam-form").reset();notice("Edital agendado. O prazo de inscrição ficará aberto somente dentro da janela definida, validada pelo Firestore.");await refreshExams();
+ }catch(err){notice("Falha ao agendar edital: "+err.message,true)}
 });
 $("material-form").addEventListener("submit",async e=>{e.preventDefault();if(!owner())return;
  const {t,m,topic}=currentPath();if(!t||!m||!topic){notice("Selecione primeiro tipo, prova, matéria e assunto no canal Estudos.",true);return}
