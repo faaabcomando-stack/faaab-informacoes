@@ -1,5 +1,18 @@
 # FAAAB — Central de Informações
 
+## Central de Comunicação, Provas e Estudos — nova opção Firebase
+
+**[Abrir a Central FAAAB](central.html)** · **[Configurar Google em passos simples](firebase/README.md)**
+
+Esta é a alternativa ao backend Cloudflare não ativado: login com Google via Firebase Authentication, sessão persistente e whitelist no Firestore com regras restritivas. Não é necessário criar servidor Cloudflare. O projeto Firebase e as regras precisam ser configurados pelo proprietário; até lá `dados/firebase_config.json` permanece desativado e nenhum login real estará habilitado.
+
+Canais publicados na interface: **Notícias** (menor relevância, informativa, importante, urgente), **Avisos**, **Marketing**, **Provas abertas** e **Estudos**. Os estudos permitem selecionar **tipo de prova → prova → matéria → assunto**, com referências oficiais do CFN/Marinha e exercícios de treino autorais. Provas específicas e inscrições dependem de edital aberto de forma explícita, com cargos elegíveis e fim de inscrição.
+
+A sequência de acesso é **login Google → whitelist → atribuição manual de cargo**. Nenhuma conta recebe privilégios no login. A aprovação e os cargos ficam em documentos protegidos do Firestore. A publicação de anúncios e o acesso a materiais restritos obedecem às regras de autorização do banco. O usuário proprietário é criado uma única vez pelo console Firebase após o primeiro login.
+
+Arquivos: `central.html`, `central.css`, `central.js`, `dados/portal_canais_estudos.json`, `dados/firebase_config.json`, `firebase/firestore.rules`, `firebase/README.md`. O antigo login `auth/` do Cloudflare é legado e não foi ativado; a nova central é o fluxo recomendado.
+
+
 ## Acesso, membros e cargos administrativos
 
 O sistema de permissões segue duas etapas: **primeiro whitelist de acesso; depois atribuição manual de cargo**, nunca automática pelo login.
