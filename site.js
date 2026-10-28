@@ -8,16 +8,18 @@ function directory(){const f=$("filter-force").value,t=$("filter-kind").value,q=
 function openDetail(id){const e=(DATA.catalogo||[]).find(x=>x.id===id);if(!e)return;$("detail-title").textContent="["+e.sigla+"] "+e.nome;const v=(title,body)=>'<h3>'+title+'</h3><p>'+H(body||"Não definido")+'</p>';$("detail-body").innerHTML='<div class="dialog-logo">'+icon(e)+'</div><p><span class="pill">'+H(forces[e.forca]||e.forca)+'</span><span class="pill">'+H(types[e.tipo]||e.tipo)+'</span></p>'+v("Referência na vida real",e.vidaReal)+v("Como funciona na FAAAB",e.noJogo)+v("Requisitos de ingresso",e.requisitos)+v("Grupo Roblox próprio",e.grupoSeparado===false?"Não. Estrutura interna.":"Não definido")+v("Sobre o nome e a adaptação",e.referencia);$("detail").showModal()}
 function courses(){const q=$("course-search").value,f=document.querySelector("[data-course-force][aria-selected=true]")?.dataset.courseForce||"";let a=(DATA.cursos||[]).filter(x=>(!f||x.forca===f||(f==="FMB"&&x.forca==="CFN"))&&contains(x,q));$("courses-count").textContent=a.length+" formações documentadas";$("courses-list").innerHTML=a.length?a.map(x=>'<article class="course-card"><span class="tag">'+H(forces[x.forca]||x.forca)+' · '+H(x.estado||"Planejamento")+'</span><h3>'+H(x.titulo)+'</h3><pre>'+H(x.detalhes||"Requisitos não definidos")+'</pre></article>').join(""):'<div class="empty">Nenhum curso localizado.</div>'}
 function ranks(){
-const f=$("rank-force").value,q=$("rank-search").value;
-const rows=(DATA.hierarquias||[]).filter(x=>x.forca===f&&contains(x,q)).sort((a,b)=>a.ordem-b.ordem);
-$("ranks-count").textContent=rows.length+" patentes e graduações · CDP = Capacitação de Patente";
-$("ranks-list").innerHTML=rows.map(x=>{
- const steps=Array.isArray(x.cdpEtapas)?x.cdpEtapas:[];
- const confirmed=steps.length>0&&x.cdpStatus?.startsWith("Confirmada");
- const list=confirmed?'<ol class="cdp-steps">'+steps.map(st=>'<li>'+H(st.nome)+'</li>').join("")+'</ol>':'<div class="cdp-pending"><strong>CDP ainda não confirmada</strong><p>As etapas obrigatórias desta patente precisam ser aprovadas pela FAAAB. Não foram inventadas nem copiadas de outra força.</p></div>';
- const old=(!confirmed&&(x.requisitos||x.formacao))?'<details class="cdp-old"><summary>Consultar requisitos do manual anterior (em revisão)</summary><p><strong>Requisitos antigos:</strong> '+H(x.requisitos||"Não definido")+'</p><p><strong>Formação registrada anteriormente:</strong> '+H(x.formacao||"Não definida")+'</p><p><strong>Dias propostos:</strong> '+H(x.diasMinimos||"Não definidos")+'</p></details>':'';
- return '<article class="rank-card"><span class="tag">['+H(x.sigla)+'] · '+H(x.classe||"Carreira")+'</span><h3>'+H(x.nome)+'</h3><div class="cdp-heading"><strong>CDP — Capacitação de Patente</strong><span class="'+(confirmed?"cdp-ok":"cdp-review")+'">'+(confirmed?"Confirmada":"Em revisão")+'</span></div>'+list+old+'</article>'
-}).join("");
+  const f=$("rank-force").value,q=$("rank-search").value;
+  const rows=(DATA.hierarquias||[]).filter(x=>x.forca===f&&contains(x,q)).sort((a,b)=>a.ordem-b.ordem);
+  $("ranks-count").textContent=rows.length+" patentes e graduações — todas possuem CDP";
+  $("ranks-list").innerHTML=rows.map(x=>{
+    const steps=Array.isArray(x.cdpEtapas)?x.cdpEtapas:[];
+    const confirmed=x.cdpStatus==="Confirmada pela FAAAB";
+    const recorded=x.cdpStatus==="Registrada no manual FAAAB";
+    const label=confirmed?"Confirmada":recorded?"Documentada no manual":"Detalhes a recuperar";
+    const list=steps.length?'<ol class="cdp-steps">'+steps.map(st=>'<li>'+H(st.nome)+(st.obrigatorio===false?' <small>(opcional)</small>':"")+'</li>').join("")+'</ol>':recorded?'<p class="cdp-notice">Esta CDP não indica curso novo obrigatório nesta etapa do manual; consulte os critérios específicos.</p>':'<p class="cdp-notice">A CDP existe na FAAAB. Seus requisitos detalhados ainda não foram recuperados nesta documentação.</p>';
+    const details=x.cdpCriterios?'<div class="cdp-criteria"><strong>Critérios específicos registrados:</strong><p>'+H(x.cdpCriterios)+'</p></div>':"";
+    return '<article class="rank-card"><span class="tag">['+H(x.sigla)+'] · '+H(x.classe||"Patente")+'</span><h3>'+H(x.nome)+'</h3><div class="cdp-heading"><strong>CDP — Capacitação de Patente</strong><span class="'+(confirmed?"cdp-ok":"cdp-review")+'">'+label+'</span></div>'+list+details+'<details class="cdp-old"><summary>Fonte e regras de progressão</summary><p>'+H(x.cdpFonte||"Não informada")+'</p><p><strong>Tempo mínimo:</strong> '+H(x.cdpTempoProposto||"Não registrado")+'</p><small>Os prazos do manual antigo são propostas de balanceamento, não valores definitivos.</small></details></article>'
+  }).join("");
 }
 function history(){const a=DATA.historico||[];$("history-list").innerHTML=a.map(x=>'<article><time>'+H(x.data)+'</time><h3>'+H(x.titulo)+'</h3><p>'+H(x.descricao)+'</p></article>').join("")}
 function news(){fetch("dados/noticias.json",{cache:"no-store"}).then(x=>x.ok?x.json():[]).then(x=>{if(!Array.isArray(x)||!x.length)return;$("news-list").innerHTML=x.slice().sort((a,b)=>String(b.data).localeCompare(String(a.data))).map(n=>'<article><time>'+H(n.data||"Sem data")+'</time><h3>'+H(n.titulo||"Sem título")+'</h3><p>'+H(n.resumo||"")+'</p></article>').join("")}).catch(()=>{})}
