@@ -51,7 +51,7 @@ function evaluateCandidacy(applicant,now=Date.now(),config={}){
  }
  return result(fail,wait);
 }
-function evaluatePartyCreation(applicant,partyGroup,now=Date.now()){
+function evaluatePartyCreation(applicant,partyGroup,now=Date.now(),config={}){
  const {fail,wait}=baseApplicant(applicant,now,DAYS_CREATION);
  if(!partyGroup||partyGroup.dataVerified!==true){
   wait.push("Grupo político não verificado pela API Roblox");
@@ -63,7 +63,8 @@ function evaluatePartyCreation(applicant,partyGroup,now=Date.now()){
  if(!Array.isArray(partyGroup.roles)){wait.push("Cargos do grupo não recuperados via Roblox");}
  else {
   const roles=new Set(partyGroup.roles.map(r=>normalize(typeof r==="string"?r:r?.name)));
-  for(const role of REQUIRED_ROLES)if(!roles.has(normalize(role)))fail.push("Falta o cargo: "+role);
+  const required=[...new Set([...REQUIRED_ROLES,...(Array.isArray(config.electedOfficeRoleNames)?config.electedOfficeRoleNames:[])])];
+  for(const role of required)if(!roles.has(normalize(role)))fail.push("Falta o cargo: "+role);
  }
  // Verificar ausência de relação com conteúdo político REAL requer análise
  // de nome, descrição, símbolos, nomes históricos e qualquer referência externa.
