@@ -130,7 +130,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "logoReferencia": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Logo_do_Corpo_de_Fuzileiros_Navais.png/500px-Logo_do_Corpo_de_Fuzileiros_Navais.png",
+    "fonteReferencia": "https://commons.wikimedia.org/wiki/File:Logo_do_Corpo_de_Fuzileiros_Navais.png",
+    "creditoReferencia": "Marca do CFN reproduzida no Wikimedia Commons (redesenho de Richard Nunes; CC BY-SA 4.0)"
   },
   {
     "id": "ADM-CBM",
@@ -795,7 +798,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "logoReferencia": "https://www.militarbrasil.com.br/loja/18136-large_default/breve-metal-cigs.jpg",
+    "fonteReferencia": "https://www.militarbrasil.com.br/loja/brasoes-distintivos-divisas-metal/6734-breve-metal-cigs.html",
+    "creditoReferencia": "Fotografia de distintivo CIGS em catálogo comercial; exemplo visual, não arquivo institucional"
   },
   {
     "id": "FTB-CIOpC",
@@ -966,7 +972,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "logoReferencia": "https://www.aman.eb.mil.br/images/headers/SIMBOLO%20DA%20AMAN%20ALTA%20FUNDO%20TRANSP.png",
+    "fonteReferencia": "https://www.aman.eb.mil.br/",
+    "creditoReferencia": "Símbolo da AMAN disponibilizado no site do Exército Brasileiro"
   },
   {
     "id": "FTB-EsAO",
