@@ -208,7 +208,7 @@ function loginPage(ctx){
  const link=u&&u.provider==="google"&&!u.linked_roblox_id?'<a href="/link/roblox">Vincular minha conta Roblox a este Google</a>':"";
  const linked=u?.linked_roblox_id?'<small>Roblox vinculado: ID '+safe(u.linked_roblox_id)+'</small>':"";
  const logout=u?'<form action="/logout" method="post"><button type="submit">Sair</button></form>':"";
- return '<!doctype html><html lang="pt-BR"><head>'+header+'<style>body{font:15px/1.6 system-ui;background:#f4f6f2;color:#203f2d;margin:0}main{max-width:530px;background:#fff;border:1px solid #dbe5da;border-top:5px solid #ad9765;border-radius:7px;margin:11vh auto 40px;padding:32px;box-shadow:0 8px 30px #10251811}small{color:#69806c;display:block}h1{font:normal 33px Georgia,serif;margin:10px 0}a,button{display:block;text-align:center;border:1px solid #cadacb;background:#f7faf7;border-radius:5px;padding:12px 16px;margin:12px 0;color:#234d34;font-weight:750;text-decoration:none;cursor:pointer;font-size:14px}a.primary{background:#274e37;border-color:#274e37;color:white}aside{padding:15px 18px;background:#fff8e9;color:#705e37;border-left:4px solid #bba06c;margin:15px 0}form button{width:100%}p{color:#627567}footer{color:#829082;font-size:12px;text-align:center}</style></head><body><main><small>FAAAB · ADMINISTRAÇÃO</small><h1>Controle de acesso</h1>'+intro+pending+buttons+link+linked+logout+'<small>Seu login não concede permissões sozinho. A aprovação exige identidade verificada e whitelist no servidor.</small></main><footer>Projeto fictício da FAAAB no Roblox · Login oficial do provedor, sem compartilhar senhas</footer></body></html>';
+ return '<!doctype html><html lang="pt-BR"><head>'+header+'<style>body{font:15px/1.6 system-ui;background:#f4f6f2;color:#203f2d;margin:0}main{max-width:530px;background:#fff;border:1px solid #dbe5da;border-top:5px solid #ad9765;border-radius:7px;margin:11vh auto 40px;padding:32px;box-shadow:0 8px 30px #10251811}small{color:#69806c;display:block}h1{font:normal 33px Georgia,serif;margin:10px 0}a,button{display:block;text-align:center;border:1px solid #cadacb;background:#f7faf7;border-radius:5px;padding:12px 16px;margin:12px 0;color:#234d34;font-weight:750;text-decoration:none;cursor:pointer;font-size:14px}a.primary{background:#274e37;border-color:#274e37;color:white}aside{padding:15px 18px;background:#fff8e9;color:#705e37;border-left:4px solid #bba06c;margin:15px 0}form button{width:100%}p{color:#627567}footer{color:#829082;font-size:12px;text-align:center}</style></head><body><main><small>FAAAB · ADMINISTRAÇÃO</small><h1>Controle de acesso</h1>'+intro+pending+buttons+link+linked+logout+'<small>O Google pode reutilizar uma sessão já aberta, conforme suas próprias regras. Login e whitelist não atribuem cargo administrativo; o proprietário faz isso manualmente depois.</small></main><footer>Projeto fictício da FAAAB no Roblox · Login oficial do provedor, sem compartilhar senhas</footer></body></html>';
 }
 function safe(v){return String(v??"").replace(/[&<>"']/g,c=>c==="&"?"&amp;":c==="<"?"&lt;":c===">"?"&gt;":c==='"'?"&quot;":"&#39;")}
 async function githubData(name,env){
@@ -301,7 +301,7 @@ export default {
     return redirect("/",{"set-cookie":clearCookie()});
    }
    const ctx=await userContext(req,env);
-   if(req.method==="GET"&&path==="/")return textResponse(loginPage(ctx),200,"text/html; charset=utf-8");
+   if(req.method==="GET"&&path==="/"){if(ctx?.approved)return redirect("/painel");return textResponse(loginPage(ctx),200,"text/html; charset=utf-8");}
    if(req.method==="GET"&&path==="/api/me")return jsonify({loggedIn:!!ctx,user:ctx?{provider:ctx.user.provider,displayName:ctx.user.display_name,robloxId:ctx.user.provider==="roblox"?ctx.user.subject:ctx.user.linked_roblox_id}:null,whitelisted:!!ctx?.approved,role:ctx?.role||null,roles:ctx?.roles||[],permissions:ctx?.permissions||{},csrf:ctx?.approved?ctx.csrf:null});
    if(!ctx?.role)return req.method==="GET"?redirect("/"):jsonify({error:"Acesso negado. Login e whitelist necessários."},403);
    if(req.method==="GET"&&path==="/api/registrations"){
@@ -363,6 +363,8 @@ export default {
     return jsonify({ok:true,action,userKey:target,role});
    }
    if(req.method==="GET"&&path==="/painel")return fetchStatic(env,"admin-app.html","text/html; charset=utf-8");
+   if(req.method==="GET"&&path==="/anunciadores")return fetchStatic(env,"anunciadores.html","text/html; charset=utf-8");
+   if(req.method==="GET"&&path==="/anunciadores.js")return fetchStatic(env,"anunciadores.js","application/javascript; charset=utf-8");
    if(req.method==="GET"&&PUBLIC_ASSETS.has(path.slice(1)))return fetchStatic(env,path.slice(1),path.endsWith(".css")?"text/css; charset=utf-8":"application/javascript; charset=utf-8");
    const dataMatch=path.match(/^\/dados\/([a-z_]+)\.json$/),apiMatch=path.match(/^\/api\/data\/([a-z_]+)$/);
    if(req.method==="GET"&&dataMatch&&ALLOWED.has(dataMatch[1])){
