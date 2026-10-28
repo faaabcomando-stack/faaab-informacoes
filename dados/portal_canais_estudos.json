@@ -1,0 +1,213 @@
+{
+  "versao": 1,
+  "atualizado": "2026-10-28",
+  "politica": {
+    "inscricoesAbertas": "Nenhuma prova FAAAB é considerada aberta só por estar no catálogo.",
+    "avaliacao": "As referências da Marinha são reais; simulados FAAAB são autorais e precisam de validação antes de valer como CDP.",
+    "permissoes": "Somente material de estudo publicamente documentado aparece neste catálogo; outros materiais e exames exigem cargo autorizado no Firebase."
+  },
+  "canais": [
+    {
+      "id": "noticias",
+      "titulo": "Canal de notícias",
+      "descricao": "Blocos por relevância: menor relevância, informativas, importantes e urgentes.",
+      "categorias": [
+        "menor_relevancia",
+        "informativa",
+        "importante",
+        "urgente"
+      ]
+    },
+    {
+      "id": "avisos",
+      "titulo": "Canal de avisos",
+      "descricao": "Avisos e orientações sobre funcionamento da FAAAB.",
+      "categorias": [
+        "institucional",
+        "informativa",
+        "importante",
+        "urgente"
+      ]
+    },
+    {
+      "id": "marketing",
+      "titulo": "Canal de marketing",
+      "descricao": "Campanhas, recrutamento institucional e peças de divulgação.",
+      "categorias": [
+        "campanha",
+        "institucional",
+        "informativa"
+      ]
+    },
+    {
+      "id": "provas",
+      "titulo": "Canal de provas",
+      "descricao": "Somente editais e inscrições efetivamente abertos pelo responsável.",
+      "categorias": []
+    },
+    {
+      "id": "estudos",
+      "titulo": "Canal de estudos",
+      "descricao": "Tipo de prova → prova → matéria → assunto, com trilhas selecionadas.",
+      "categorias": []
+    }
+  ],
+  "categorias": {
+    "menor_relevancia": "Menor relevância",
+    "informativa": "Informativa",
+    "importante": "Importante",
+    "urgente": "Urgente",
+    "institucional": "Institucional",
+    "campanha": "Campanha"
+  },
+  "tiposProva": [
+    {
+      "id": "patente",
+      "nome": "Provas de patentes",
+      "habilitado": false,
+      "observacao": "Aguardando definição e homologação das provas específicas de cada CDP FAAAB."
+    },
+    {
+      "id": "curso",
+      "nome": "Provas de cursos",
+      "habilitado": false,
+      "observacao": "Nenhum curso ganha prova automaticamente; depende de seleção e validação."
+    },
+    {
+      "id": "cfn",
+      "nome": "CFN — Corpo de Fuzileiros Navais",
+      "habilitado": true,
+      "observacao": "Estudos baseados em provas e editais reais divulgados pela Marinha; não são inscrições da FAAAB."
+    },
+    {
+      "id": "especifica",
+      "nome": "Provas específicas",
+      "habilitado": false,
+      "observacao": "Apenas provas criadas e liberadas para os cargos autorizados pelo proprietário."
+    }
+  ],
+  "trilhas": [
+    {
+      "id": "cfn-soldado-ref",
+      "tipo": "cfn",
+      "titulo": "Soldado Fuzileiro Naval — referência real",
+      "forca": "FMB/CFN",
+      "situacao": "Estudo de referência; não é seleção aberta da FAAAB",
+      "acesso": "publico",
+      "edital": "https://www.inscricao.marinha.mil.br/marinhafn/Edital%20-%20SITE.pdf?id_file=2916",
+      "provasAnteriores": "https://www.marinha.mil.br/cpesfn/provas-anteriores",
+      "formatoReferencia": "Edital C-FSD-FN/2027: 50 questões objetivas, cinco alternativas, 25 Língua Portuguesa e 25 Matemática; duração prevista de três horas. Referência real, não regra automática FAAAB.",
+      "materias": [
+        {
+          "id": "portugues",
+          "nome": "Língua Portuguesa",
+          "assuntos": [
+            {
+              "id": "interpretacao",
+              "nome": "Interpretação de textos",
+              "resumo": "Identificar tema, informações explícitas, inferências e relações entre ideias. Leia primeiro a pergunta e retorne ao trecho para confirmar a evidência.",
+              "exercicio": {
+                "enunciado": "Trecho autoral: 'Embora a instrução estivesse prevista para a manhã, a chuva obrigou a equipe a transferi-la para o período da tarde.' O que explica a mudança de horário?",
+                "alternativas": [
+                  "A ausência de instrutores.",
+                  "A chuva.",
+                  "O encerramento antecipado.",
+                  "Uma ordem para cancelar a instrução.",
+                  "Um erro no calendário."
+                ],
+                "resposta": 1,
+                "explicacao": "A oração indica explicitamente que a chuva motivou a transferência. Questão de treino autoral, não extraída de concurso."
+              }
+            },
+            {
+              "id": "coesao",
+              "nome": "Coesão e conectivos",
+              "resumo": "Reconheça relações de causa, consequência, oposição, condição e conclusão. Conectivos como 'embora' indicam concessão; 'portanto', conclusão.",
+              "exercicio": {
+                "enunciado": "Na frase 'A equipe revisou o plano; portanto, reduziu os riscos', a palavra 'portanto' expressa:",
+                "alternativas": [
+                  "Dúvida.",
+                  "Contraste.",
+                  "Conclusão.",
+                  "Tempo.",
+                  "Comparação."
+                ],
+                "resposta": 2,
+                "explicacao": "'Portanto' introduz uma conclusão a partir da informação anterior. Questão autoral."
+              }
+            }
+          ]
+        },
+        {
+          "id": "matematica",
+          "nome": "Matemática",
+          "assuntos": [
+            {
+              "id": "funcoes",
+              "nome": "Função afim e função quadrática",
+              "resumo": "Na função afim f(x)=ax+b, determine a taxa de variação e o termo independente. Na função quadrática ax²+bx+c, calcule raízes e vértice com atenção ao domínio.",
+              "exercicio": {
+                "enunciado": "Uma função é dada por f(x)=3x−7. Para qual valor de x obtemos f(x)=8?",
+                "alternativas": [
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ],
+                "resposta": 2,
+                "explicacao": "3x−7=8, logo 3x=15 e x=5. Treino autoral alinhado ao tema presente em provas anteriores, sem reproduzir prova."
+              }
+            },
+            {
+              "id": "progressao",
+              "nome": "Progressão aritmética",
+              "resumo": "Uma progressão aritmética possui diferença constante r entre termos consecutivos. Fórmula: aₙ=a₁+(n−1)r.",
+              "exercicio": {
+                "enunciado": "Uma PA tem primeiro termo 7 e razão 4. Qual é o oitavo termo?",
+                "alternativas": [
+                  "31",
+                  "35",
+                  "36",
+                  "39",
+                  "42"
+                ],
+                "resposta": 1,
+                "explicacao": "a₈=7+(8−1)×4=35. Questão autoral."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cfn-musico-ref",
+      "tipo": "cfn",
+      "titulo": "Sargento Músico Fuzileiro Naval — provas anteriores",
+      "forca": "FMB/CFN",
+      "situacao": "Referência documental; conteúdos específicos dependem do edital escolhido",
+      "acesso": "publico",
+      "edital": "https://www.marinha.mil.br/cpesfn/concursoscfn",
+      "provasAnteriores": "https://www.marinha.mil.br/cpesfn/provas-anteriores-c-fsg-mu-cfn",
+      "formatoReferencia": "A Marinha mantém provas anteriores de Sargento Músico. Matérias e conteúdos exatos devem ser selecionados com base no edital aplicável.",
+      "materias": [
+        {
+          "id": "fonte",
+          "nome": "Orientações oficiais",
+          "assuntos": [
+            {
+              "id": "documentos",
+              "nome": "Provas e editais da Marinha",
+              "resumo": "Consulte o edital do concurso e os cadernos/gabaritos do ano selecionado antes de montar uma preparação especializada. A FAAAB não homologou uma prova interna equivalente.",
+              "exercicio": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mensagens": {
+    "semAbertas": "Nenhuma prova FAAAB foi aberta nesta base. Quando o responsável aprovar e publicar o edital com data, requisitos e cargos elegíveis, aparecerá aqui.",
+    "semInscricao": "Não é possível se inscrever em provas ainda não abertas ou sem autorização da whitelist."
+  }
+}
