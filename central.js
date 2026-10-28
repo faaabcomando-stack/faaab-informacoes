@@ -8,8 +8,9 @@ const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 const formatDate=v=>{if(!v)return "Data não informada";const d=v?.toDate?v.toDate():new Date(v);return isNaN(d)?"Data não informada":d.toLocaleString("pt-BR",{dateStyle:"medium",timeStyle:"short"})};
 const s={app:null,auth:null,db:null,me:null,profile:null,seed:null,roleCatalog:null,posts:[],exams:[],selectedTopic:null,selectedPath:null};
 const catalogue=()=>s.seed?.trilhas||[];
+const validTab=new Set(["noticias","avisos","marketing","provas","estudos","publicar","administracao"]);
 function notice(msg,error=false){const el=$("site-notice");el.hidden=false;el.textContent=msg;el.classList.toggle("error",error)}
-function showTab(name){document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="view-"+name);document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("active",x.dataset.tab===name));if(name==="estudos")showTopic();}
+function showTab(name){if(!validTab.has(name))return;location.hash=name;document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="view-"+name);document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("active",x.dataset.tab===name));if(name==="estudos")showTopic();}
 document.getElementById("tabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(b&&!b.hidden)showTab(b.dataset.tab)});
 function roleNames(){return s.profile?.roles||[]}
 function owner(){return s.profile?.approved===true&&s.profile?.owner===true}
@@ -160,7 +161,7 @@ async function bootstrap(){
   if(!seedResp.ok||!roleResp.ok||!configResp.ok)throw Error("Não foi possível carregar os arquivos do portal");
   s.seed=await seedResp.json();s.roleCatalog=await roleResp.json();const cfg=await configResp.json();
   fillSelect("study-type",s.seed.tiposProva.filter(x=>x.habilitado).map(x=>({id:x.id,nome:x.nome})),"Selecione o tipo de prova");
-  $("study-type").disabled=false;refreshUserRoleOptions();renderPosts();renderExams();
+  $("study-type").disabled=false;refreshUserRoleOptions();renderPosts();renderExams();if(validTab.has(location.hash.slice(1))&&!["publicar","administracao"].includes(location.hash.slice(1)))showTab(location.hash.slice(1));
   if(!cfg.enabled||!cfg.app?.apiKey||!cfg.app?.projectId||!cfg.app?.appId){
    $("auth-title").textContent="Google login: configuração pendente";
    $("auth-message").textContent="A central pública e os estudos já estão disponíveis. Para ativar login, whitelist e publicação online, o proprietário precisa criar o Firebase e aplicar as regras de segurança.";
