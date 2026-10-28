@@ -1,0 +1,32 @@
+/* Central FAAAB: tipografia editorial e navegação direta. */
+.faaab-editorial{--ink:#203329;--sub:#647065;--line:#d4d8cc;--bg:#f7f6f0;--accent:#aa915f;--green:#294539;background:#f7f6f0!important;color:#253b2f;font-family:"Segoe UI",Arial,sans-serif}
+.faaab-editorial .strip{background:#192e25!important;border-bottom:1px solid #536052!important}
+.faaab-editorial .mast{background:#fffdf8!important;border-bottom:1px solid #d3d9cd!important}
+.faaab-editorial .mast strong{font:700 34px Georgia,serif;color:#273f32}
+.faaab-editorial .mast span{color:#697b6e}
+.faaab-editorial .seal{background:transparent!important;color:#294539!important;border:1px solid #b7ab8f!important;box-shadow:none!important;font:700 17px Georgia,serif!important}
+.faaab-editorial .topnav{background:#294539!important;position:sticky;top:0;z-index:12;border-bottom:3px solid #a78f61!important}
+.faaab-editorial #tabs button{background:none!important;color:#e6e9e0!important;border-bottom:3px solid transparent;padding:17px 21px;font-size:12px;letter-spacing:.04em}
+.faaab-editorial #tabs button.active{border-color:#e6c992!important;background:#1b3328!important;color:white!important}
+.faaab-editorial .hero{border:0;border-bottom:1px solid #d2d6ca;padding:45px 0;background:none;display:block}
+.faaab-editorial .hero:before{display:none}.faaab-editorial .hero h1{font:400 clamp(38px,5vw,54px)/1.12 Georgia,serif;letter-spacing:-.04em;color:#203d30!important}
+.faaab-editorial .hero p{font-size:15px;color:#667267;max-width:710px}
+.faaab-editorial .hero-studies-actions a{border-radius:0!important}
+.faaab-editorial .section-head{border-bottom:2px solid #9a916f;padding-bottom:17px;margin:28px 0}
+.faaab-editorial .section-head h2{font:400 clamp(28px,3vw,40px) Georgia,serif;color:#263b2c!important;letter-spacing:-.025em}
+.faaab-editorial .section-head p{font-size:13px;color:#67746b}
+.faaab-editorial .post-list,.faaab-editorial .exam-list{display:block}
+.faaab-editorial .post-card,.faaab-editorial .exam-card{border:0!important;border-radius:0!important;border-bottom:1px solid #d2d7cd!important;border-top:0!important;background:transparent!important;padding:27px 0!important;box-shadow:none!important}
+.faaab-editorial .post-card:first-child,.faaab-editorial .exam-card:first-child{border-top:1px solid #d2d7cd!important}
+.faaab-editorial .post-card h3,.faaab-editorial .exam-card h3{font:400 26px Georgia,serif;color:#263e30}
+.faaab-editorial .catalog-grid,.faaab-editorial .reference-grid{grid-template-columns:1fr!important;gap:0!important}
+.faaab-editorial .catalog-card,.faaab-editorial .reference-card{border:0!important;border-top:1px solid #d2d8cb!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:21px 0!important}
+.faaab-editorial .catalog-card h3{font:400 23px Georgia,serif}
+.faaab-editorial .catalog-card .meta span{border:0;background:transparent;text-transform:uppercase;letter-spacing:.06em;color:#7d765d}
+.faaab-editorial .catalog-card .links button,.faaab-editorial .catalog-card .links a{border-radius:0}
+.faaab-editorial .learning-form,.faaab-editorial .learning-content,.faaab-editorial .surface,.faaab-editorial .program-panel{border:1px solid #d5d6ca;border-radius:0!important;background:#fffefa!important;box-shadow:none!important}
+.faaab-editorial .learning-form{border-top:3px solid #a58a5e}
+.faaab-editorial .btn,.faaab-editorial .btn.primary{border-radius:0!important;box-shadow:none!important}
+.faaab-editorial select,.faaab-editorial input,.faaab-editorial textarea{border-radius:0}
+.faaab-editorial .view{min-height:350px}
+@media(max-width:700px){.faaab-editorial #tabs button{padding:13px 16px}.faaab-editorial .hero{padding:31px 0}.faaab-editorial .section-head h2{font-size:29px}}
