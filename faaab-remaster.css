@@ -205,3 +205,23 @@ body.faaab-v3 .v3-footer{display:block}
  .v3-government-doc-title h3{min-width:70%;font-size:22px}
  .v3-government-doc-title .v3-state{margin:4px 0}
 }
+
+/* Governo FAAAB: índice de páginas independentes, não abas de uma única tela. */
+.v3-gov-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px;border-top:2px solid #9c926e}
+.v3-gov-link{position:relative;min-height:126px;border-bottom:1px solid #ced5ca;padding:24px 37px 24px 0;display:block}
+.v3-gov-link .v3-label{display:block;font-size:10px;margin-bottom:9px}
+.v3-gov-link strong{display:block;font:400 26px/1.22 Georgia,serif;color:#234331}
+.v3-gov-link small{display:block;font:400 13px/1.55 "Segoe UI",Arial,sans-serif;color:#65756a;margin-top:8px;max-width:460px}
+.v3-gov-link .v3-gov-arrow{position:absolute;top:39%;right:9px;color:#9a7f4b;font:400 29px Georgia,serif}
+.v3-gov-link:hover strong{text-decoration:underline}
+.v3-gov-prose{margin:0 0 38px;padding-bottom:30px;border-bottom:1px solid #d0d7cd}
+.v3-gov-prose h2{font-size:31px;margin-bottom:13px}
+.v3-gov-prose p{font-size:15px;line-height:1.76}
+.v3-gov-roles-section{padding:22px 0 15px;border-bottom:1px solid #d3dacf}
+.v3-gov-roles-section h3{font-size:29px;margin-bottom:23px}
+.v3-gov-role-single>h2{font-size:clamp(29px,4vw,43px);margin:14px 0 26px}
+.v3-gov-detail-line{border-top:1px solid #cbd5cc;padding:23px 0 28px}
+.v3-gov-detail-line h3{font-size:24px}
+.v3-gov-detail-line p{max-width:830px;line-height:1.75;font-size:14px}
+.v3-gov-detail-line strong{color:#294b37}
+@media(max-width:680px){.v3-gov-directory{grid-template-columns:1fr}.v3-gov-link{min-height:105px;padding:19px 28px 20px 0}.v3-gov-link strong{font-size:23px}}
