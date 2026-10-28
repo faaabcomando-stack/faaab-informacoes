@@ -1,8 +1,9 @@
 {
-  "versao": 1,
-  "modo": "cadastro-editorial-publico-nao-autenticacao",
+  "versao": 2,
+  "modo": "acesso-protegido-por-servidor-oauth",
   "projeto": "FAAAB",
   "proprietarioGitHub": "faaabcomando-stack",
-  "observacao": "Esta lista serve somente para organizar colaboradores do portal. NÃO concede acesso ao repositório, ao site ou ao jogo Roblox. Permissões de escrita são controladas pelo GitHub, e comandos no Roblox precisam de backend seguro.",
-  "membros": []
+  "observacao": "Whitelist verificada pelo servidor OAuth Roblox/Google. Por nick Roblox, o backend resolve e fixa o UserId; acesso concedido somente após autenticação do dono da conta. Google precisa vincular Roblox, ou Google sub explicitamente autorizado. Esta lista não guarda senhas nem tokens.",
+  "membros": [],
+  "instrucoes": "Membros: {robloxUsername, robloxId:null, perfil:'editor'|'revisor', observacao:'...'}; não listar emails aqui."
 }
