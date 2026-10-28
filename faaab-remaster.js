@@ -84,8 +84,43 @@ const V3={
   V3.set("v3-sector-count",rows.length+" registros vinculados a "+name);
   if(sector==="governo"){
    const [cargos,sistemas]=await Promise.all([V3.get("cargos"),V3.get("sistemas")]);
-   V3.set("v3-government-offices",'<div class="v3-record-list">'+cargos.filter(x=>x.forca==="GOV").map(x=>'<div class="v3-record-item"><span class="v3-record-code">'+V3.esc(x.sigla)+'</span><div><h3>'+V3.esc(x.nome)+'</h3><p>'+(x.titular?"Titular cadastrado":"Titular não definido")+' · '+V3.esc(x.tipoIngresso||"Regra de nomeação a confirmar")+'</p></div><a href="comando.html">Comando →</a></div>').join("")+'</div>');
-   V3.set("v3-government-docs",'<div class="v3-record-list">'+sistemas.filter(x=>x.forca==="GOV").slice(0,5).map(x=>'<div class="v3-record-item"><span class="v3-record-code">DOC</span><div><h3>'+V3.esc(x.nome)+'</h3><p>'+V3.esc(x.resumo)+'</p></div><a href="sistemas.html">Manual →</a></div>').join("")+'</div>');
+   const govRoles=cargos.filter(x=>x.forca==="GOV");
+   V3.set("v3-sector-count",govRoles.length+" cargos registrados");
+   const scopes={
+    "GOV-PRE":["Presidência e representação institucional","O Governo prevê direção política e representação no roleplay. Alcance de decisões, atos e competências exclusivas ainda precisa ser aprovado.","Nenhuma permissão para administrar o site, alterar patentes ou controlar os grupos militares decorre automaticamente da Presidência."],
+    "GOV-V-PRE":["Vice-Presidência e coordenação política","O cargo integra a direção do Governo. Condições de substituição, sucessão e delegações estão pendentes.","Não há concessão automática dos poderes do Presidente nem acesso privilegiado ao painel administrativo."],
+    "GOV-M-DEF":["Área ministerial da Defesa","Cargo ministerial registrado para assuntos de Defesa no Governo. Relação funcional com as forças ainda precisa de normas próprias.","O título não autoriza automaticamente controlar Exército, Marinha, Aeronáutica ou modificar patentes e grupos."],
+    "GOV-P-STF":["Presidência do tribunal fictício","Cargo de direção do STF do universo FAAAB; organização do tribunal e procedimento judicial ainda não definidos.","Sem autorização registrada para abrir processos, determinar punições, banir jogadores ou acessar dados privados."],
+    "GOV-M-STF":["Composição do STF fictício","Integra a estrutura judiciária planejada. Julgamentos, regras de voto e processos dependem de regulamentação.","Não há permissão aprovada para julgar, punir, remover cargos ou modificar contas do Roblox."],
+    "GOV-SGP":["Secretaria-Geral da Presidência","Área de coordenação e expediente da Presidência. Competências específicas ainda não constam do regulamento.","Publicar atos, editar cargos, acessar registros ou representar o Presidente depende de autorização específica."],
+    "GOV-V-SGP":["Vice-Secretaria-Geral da Presidência","Função adjunta à Secretaria-Geral. Atribuições e hipóteses de substituição ainda não definidas.","Não herda automaticamente poderes da Secretaria-Geral ou acesso ao painel do proprietário."],
+    "GOV-S-DEF":["Secretaria de Defesa","Setor temático de Defesa no Governo. A relação com a pasta ministerial e as forças ainda não foi regulamentada.","Sem acesso automático a bases, equipamentos, comandos militares, patentes ou grupos Roblox."],
+    "GOV-V-S-DEF":["Vice-Secretaria de Defesa","Apoio à área de Defesa. Responsabilidades concretas ainda exigem regulamentação.","A vice-função não concede comando militar ou recursos administrativos automaticamente."],
+    "GOV-S-JUS":["Secretaria de Justiça","Área administrativa de Justiça prevista no Governo. Não se confunde com a magistratura do STF.","Não integra o STF por esse cargo; atos judiciais, punições e acesso a processos não estão autorizados."],
+    "GOV-V-S-JUS":["Vice-Secretaria de Justiça","Função adjunta à Secretaria de Justiça. Substituições e acesso documental ainda pendentes.","Nenhuma competência judicial nem administração do STF é automática."],
+    "GOV-S-RI":["Secretaria de Relações Institucionais","Área de relacionamento institucional do Governo, com procedimentos específicos ainda não definidos.","Negociações em nome de outras forças, alterações de cargos e acesso a grupos dependem de aprovação."],
+    "GOV-V-S-RI":["Vice-Secretaria de Relações Institucionais","Função adjunta às relações institucionais. Delegações ainda não definidas.","Não pode ser presumida representação automática de instituições ou acesso administrativo."],
+    "GOV-S-SEG":["Secretaria de Segurança Pública","Área temática de segurança pública do Governo. Não se confunde com postos e comandos da Polícia Militar.","Não concede automaticamente comando da PM, armamentos virtuais, equipamentos nem poder de punição."],
+    "GOV-V-S-SEG":["Vice-Secretaria de Segurança Pública","Apoio à área de Segurança Pública. Atividades e substituições aguardam definição.","A função não herda acesso automático a sistemas policiais, grupos e registros."],
+    "GOV-S-COM":["Secretaria de Comunicação Social","Área de comunicação do Governo. Regras para notícias, comunicados e publicação oficial ainda precisam de autorização.","Publicar ou editar notícias no portal exige permissão editorial separada, não apenas o cargo Roblox."],
+    "GOV-V-S-COM":["Vice-Secretaria de Comunicação Social","Função adjunta à Comunicação Social. Atividades próprias ainda pendentes.","Nenhum acesso de publicação ou administração é herdado automaticamente da Secretaria."]
+   };
+   const groups=[
+    {name:"Presidência e direção política",intro:"Direção política do Governo, com eleições individuais previstas para Presidente e Vice-Presidente.",ids:["GOV-PRE","GOV-V-PRE","GOV-M-DEF"]},
+    {name:"Supremo Tribunal Federal",intro:"Cargos previstos na estrutura judiciária fictícia. Processos e competências jurídicas ainda não possuem regulamentação aprovada.",ids:["GOV-P-STF","GOV-M-STF"]},
+    {name:"Secretarias e vice-secretarias",intro:"Áreas do Governo com cargos próprios. Cada setor aguarda a definição formal de suas competências, ingressos e autorizações.",ids:["GOV-SGP","GOV-V-SGP","GOV-S-DEF","GOV-V-S-DEF","GOV-S-JUS","GOV-V-S-JUS","GOV-S-RI","GOV-V-S-RI","GOV-S-SEG","GOV-V-S-SEG","GOV-S-COM","GOV-V-S-COM"]}
+   ];
+   V3.set("v3-government-offices",groups.map(group=>'<section class="v3-government-role-group"><h3>'+V3.esc(group.name)+'</h3><p>'+V3.esc(group.intro)+'</p><div class="v3-government-roles">'+group.ids.map(id=>{
+     const role=govRoles.find(x=>x.id===id);if(!role)return "";
+     const info=scopes[id]||["Área institucional","Atribuições detalhadas ainda não aprovadas.","Nenhuma permissão automática registrada."];
+     return '<article class="v3-government-role" id="cargo-'+V3.esc(id)+'">'+
+       '<div class="v3-government-role-top"><span class="v3-label">'+V3.esc(role.sigla||"GOV")+'</span><h4>'+V3.esc(role.nome)+'</h4></div>'+
+       '<div class="v3-government-role-body"><div><span class="v3-gov-field">Área de atuação</span><strong>'+V3.esc(info[0])+'</strong><p>'+V3.esc(info[1])+'</p></div>'+
+       '<div><span class="v3-gov-field">Como ingressar</span><p>'+V3.esc(role.tipoIngresso||"Forma de ingresso ainda não definida")+'</p><span class="v3-gov-field">Permissões do cargo</span><p>'+V3.esc(info[2])+'</p></div></div>'+
+       '<p class="v3-government-role-status"><b>Situação:</b> '+(role.titular?"Titular cadastrado":"Titular não definido")+' · Acessos internos e poderes específicos aguardam regras e autorização do servidor.</p></article>';
+    }).join("")+'</div></section>').join(""));
+   const entries=sistemas.filter(x=>x.forca==="GOV").sort((a,b)=>String(a.id).localeCompare(String(b.id)));
+   V3.set("v3-government-docs",entries.map(x=>'<article class="v3-government-doc"><div class="v3-government-doc-title"><span class="v3-label">'+V3.esc(x.id)+'</span><h3>'+V3.esc(x.nome)+'</h3><span class="v3-state">'+V3.esc(x.estado||"A confirmar")+'</span></div><p>'+V3.esc(x.resumo||"")+'</p>'+(x.jogo?'<p><strong>No jogo:</strong> '+V3.esc(x.jogo)+'</p>':"")+(x.regras?'<p><strong>Regra documentada ou pendência:</strong> '+V3.esc(x.regras)+'</p>':"")+'</article>').join(""));
   }else{
    const keys=sector==="central"?["FTB","FMB","FAB"]:["PM","CBM"];
    const blocks=keys.map(k=>{const r=V3.forceList(rows,k);return '<div class="v3-category-block"><h3><a href="'+V3.forces[k].url+'">'+V3.forces[k].name+'</a></h3><p>'+r.length+' registros de organizações, centros e unidades.</p>'+V3.rows(r.slice(0,3))+'<div class="v3-pager"><a class="v3-button" href="'+V3.forces[k].url+'">Explorar a instituição</a></div></div>';}).join("");
