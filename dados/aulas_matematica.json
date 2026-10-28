@@ -1,0 +1,886 @@
+{
+  "versao": 1,
+  "materia": "Matemática",
+  "pedagogia": "Aulas explicativas com exemplos resolvidos, passos e exercícios. Geradores de aritmética criam variações ilimitadas.",
+  "aulas": [
+    {
+      "id": "mat-01",
+      "materia": "Matemática",
+      "unidade": "Números e operações",
+      "titulo": "Números naturais e valor posicional",
+      "teoria": "Os números naturais 0, 1, 2, 3... contam quantidades. Cada algarismo ocupa uma casa: unidades, dezenas, centenas e milhares. Em 347, o 3 significa trezentos, não apenas três.",
+      "passos": [
+        "Leia o número por casas",
+        "Separe centenas, dezenas e unidades",
+        "Some o valor de cada casa"
+      ],
+      "exemplo": "Decomponha 4.205.",
+      "resolucao": "4 milhares + 2 centenas + 0 dezenas + 5 unidades = 4.000 + 200 + 5.",
+      "questoes": [
+        {
+          "pergunta": "Em 582, quanto vale o algarismo 8?",
+          "alternativas": [
+            "8",
+            "80",
+            "800",
+            "5"
+          ],
+          "correta": 1,
+          "feedback": "O 8 está na casa das dezenas: representa 80."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-02",
+      "materia": "Matemática",
+      "unidade": "Números e operações",
+      "titulo": "Adição: juntar quantidades",
+      "teoria": "Somar significa juntar ou acrescentar quantidades. O sinal + representa essa reunião. Se você possui duas peças e recebe mais duas, passa a ter quatro. A ordem das parcelas não altera a soma: 2 + 3 = 3 + 2.",
+      "passos": [
+        "Identifique as parcelas",
+        "Junte as quantidades ou conte para frente",
+        "Confira se o total é maior ou igual às parcelas não negativas"
+      ],
+      "exemplo": "Resolva 2 + 2.",
+      "resolucao": "Comece com 2. Conte mais 2: 3, 4. Portanto, 2 + 2 = 4.",
+      "questoes": [
+        {
+          "pergunta": "Quanto é 7 + 5?",
+          "alternativas": [
+            "11",
+            "13",
+            "12",
+            "14"
+          ],
+          "correta": 2,
+          "feedback": "Conte cinco números após 7: 8, 9, 10, 11, 12. Resultado: 12."
+        }
+      ],
+      "gerador": "soma",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-03",
+      "materia": "Matemática",
+      "unidade": "Números e operações",
+      "titulo": "Subtração: retirar e comparar",
+      "teoria": "Subtrair é retirar uma parte ou descobrir a diferença entre duas quantidades. O símbolo − indica quanto sai. Se você tinha 9 objetos e usou 4, restam 5. Subtração não é comutativa: 9 − 4 é diferente de 4 − 9.",
+      "passos": [
+        "Comece pelo total inicial",
+        "Retire a quantidade indicada",
+        "Confira somando resultado e parcela retirada"
+      ],
+      "exemplo": "Resolva 9 − 4.",
+      "resolucao": "Retire quatro de nove: 9 → 8 → 7 → 6 → 5. Verificação: 5 + 4 = 9.",
+      "questoes": [
+        {
+          "pergunta": "Quanto é 15 − 6?",
+          "alternativas": [
+            "9",
+            "8",
+            "10",
+            "7"
+          ],
+          "correta": 0,
+          "feedback": "15 − 6 = 9, pois 9 + 6 = 15."
+        }
+      ],
+      "gerador": "subtracao",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-04",
+      "materia": "Matemática",
+      "unidade": "Números e operações",
+      "titulo": "Multiplicação: grupos iguais",
+      "teoria": "Multiplicar é somar grupos de mesmo tamanho. O sinal × significa quantas vezes uma quantidade se repete. Três caixas com quatro objetos cada representam 4 + 4 + 4 = 12. Também podemos escrever 3 × 4 = 12.",
+      "passos": [
+        "Identifique quantos grupos existem",
+        "Veja quantos itens estão em cada grupo",
+        "Some repetidamente ou use a tabuada"
+      ],
+      "exemplo": "Calcule 4 × 3.",
+      "resolucao": "São quatro grupos de três: 3 + 3 + 3 + 3 = 12.",
+      "questoes": [
+        {
+          "pergunta": "Quanto é 6 × 7?",
+          "alternativas": [
+            "36",
+            "48",
+            "42",
+            "49"
+          ],
+          "correta": 2,
+          "feedback": "6 grupos de 7 somam 42."
+        }
+      ],
+      "gerador": "multiplicacao",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-05",
+      "materia": "Matemática",
+      "unidade": "Números e operações",
+      "titulo": "Divisão: repartir igualmente",
+      "teoria": "Dividir significa repartir em partes iguais ou descobrir quantos grupos cabem em um total. Em 12 ÷ 3, repartimos doze em três grupos de quatro. Multiplicar o quociente pelo divisor ajuda a verificar o resultado.",
+      "passos": [
+        "Identifique o total e o número de grupos",
+        "Reparta sem favorecer nenhum grupo",
+        "Verifique: quociente × divisor = total (quando não há resto)"
+      ],
+      "exemplo": "Resolva 20 ÷ 5.",
+      "resolucao": "Separe vinte em cinco grupos iguais: cada grupo tem 4. Assim, 20 ÷ 5 = 4.",
+      "questoes": [
+        {
+          "pergunta": "Quanto é 36 ÷ 6?",
+          "alternativas": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "correta": 1,
+          "feedback": "6 × 6 = 36; então 36 ÷ 6 = 6."
+        }
+      ],
+      "gerador": "divisao",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-06",
+      "materia": "Matemática",
+      "unidade": "Números e operações",
+      "titulo": "Operações combinadas",
+      "teoria": "Quando há várias operações, existe uma ordem de resolução: primeiro parênteses, depois potências e raízes, depois multiplicação e divisão, e por último adição e subtração. Operações de mesma prioridade são feitas da esquerda para a direita.",
+      "passos": [
+        "Resolva os parênteses",
+        "Calcule potências e raízes",
+        "Faça multiplicações e divisões",
+        "Finalize somas e subtrações"
+      ],
+      "exemplo": "Calcule 2 + 3 × 4.",
+      "resolucao": "Faça 3 × 4 = 12 antes da soma. Depois 2 + 12 = 14.",
+      "questoes": [
+        {
+          "pergunta": "Qual o resultado de (2 + 3) × 4?",
+          "alternativas": [
+            "14",
+            "18",
+            "20",
+            "24"
+          ],
+          "correta": 2,
+          "feedback": "O parêntese dá 5. Multiplique por 4: 20."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-07",
+      "materia": "Matemática",
+      "unidade": "Números e operações",
+      "titulo": "Múltiplos e divisores",
+      "teoria": "Um número é múltiplo de outro quando aparece em sua tabuada. Divisor é o número que divide outro sem deixar resto. O 24 é múltiplo de 6 e 6 é divisor de 24. Isso ajuda com frações e problemas de agrupamento.",
+      "passos": [
+        "Multiplique para encontrar múltiplos",
+        "Divida para testar divisores",
+        "Observe se a divisão deixa resto"
+      ],
+      "exemplo": "Verifique se 5 divide 35.",
+      "resolucao": "35 ÷ 5 = 7, com resto zero. Logo 5 é divisor de 35.",
+      "questoes": [
+        {
+          "pergunta": "Qual número é divisor de 28?",
+          "alternativas": [
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "correta": 2,
+          "feedback": "28 ÷ 7 = 4, sem resto."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-08",
+      "materia": "Matemática",
+      "unidade": "Números e operações",
+      "titulo": "Frações: parte de um inteiro",
+      "teoria": "Uma fração representa partes iguais de um todo. O numerador mostra quantas partes pegamos; o denominador mostra em quantas partes iguais o todo foi dividido. Em 3/4, tomamos três das quatro partes iguais.",
+      "passos": [
+        "Confira se o todo foi dividido igualmente",
+        "Leia o denominador como total de partes",
+        "Leia o numerador como partes escolhidas"
+      ],
+      "exemplo": "O que significa 2/5 de uma pizza?",
+      "resolucao": "A pizza é dividida em 5 partes iguais e 2 são consideradas. Isso não significa dividir em duas partes.",
+      "questoes": [
+        {
+          "pergunta": "Qual fração representa 1 de 4 partes iguais?",
+          "alternativas": [
+            "4/1",
+            "1/4",
+            "1/3",
+            "2/4"
+          ],
+          "correta": 1,
+          "feedback": "Uma parte tomada entre quatro partes totais é 1/4."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-09",
+      "materia": "Matemática",
+      "unidade": "Números e operações",
+      "titulo": "Operações com frações",
+      "teoria": "Para somar frações de mesmo denominador, some numeradores e conserve o denominador. Quando os denominadores diferem, encontre um denominador comum. Para multiplicar, multiplique os numeradores e os denominadores.",
+      "passos": [
+        "Verifique os denominadores",
+        "Se forem iguais, some só os numeradores",
+        "Se forem diferentes, reescreva usando denominador comum",
+        "Simplifique no final"
+      ],
+      "exemplo": "Calcule 1/4 + 2/4.",
+      "resolucao": "A soma é 3/4: (1 + 2)/4. Não se somam os denominadores.",
+      "questoes": [
+        {
+          "pergunta": "Quanto é 1/2 + 1/4?",
+          "alternativas": [
+            "2/6",
+            "3/4",
+            "1/6",
+            "1/8"
+          ],
+          "correta": 1,
+          "feedback": "1/2 equivale a 2/4. Então 2/4 + 1/4 = 3/4."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-10",
+      "materia": "Matemática",
+      "unidade": "Números e operações",
+      "titulo": "Números decimais e dinheiro",
+      "teoria": "Números decimais expressam partes menores que uma unidade. Na escrita brasileira, a vírgula separa parte inteira e decimal. Em R$ 2,50, temos dois reais e cinquenta centavos. Na soma, alinhe as vírgulas.",
+      "passos": [
+        "Leia o valor posicional após a vírgula",
+        "Alinhe as vírgulas antes de somar",
+        "Complete com zeros se necessário"
+      ],
+      "exemplo": "Some R$ 2,50 + R$ 1,25.",
+      "resolucao": "2,50 + 1,25 = 3,75; resultado de R$ 3,75.",
+      "questoes": [
+        {
+          "pergunta": "Quanto é 0,5 + 0,25?",
+          "alternativas": [
+            "0,30",
+            "0,7",
+            "0,75",
+            "0,255"
+          ],
+          "correta": 2,
+          "feedback": "0,50 + 0,25 = 0,75."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-11",
+      "materia": "Matemática",
+      "unidade": "Razões e porcentagens",
+      "titulo": "Porcentagem sem decorar",
+      "teoria": "Porcentagem é uma razão por cem. 10% significa dez de cada cem, isto é, 10/100 = 0,10. Para encontrar um percentual, transforme-o em decimal e multiplique pelo total.",
+      "passos": [
+        "Converta a porcentagem em número decimal",
+        "Multiplique pelo total",
+        "Confira se a ordem de grandeza faz sentido"
+      ],
+      "exemplo": "Encontre 20% de 150.",
+      "resolucao": "20% = 0,20. Então 0,20 × 150 = 30.",
+      "questoes": [
+        {
+          "pergunta": "Qual é 25% de 80?",
+          "alternativas": [
+            "15",
+            "20",
+            "25",
+            "40"
+          ],
+          "correta": 1,
+          "feedback": "25% = 1/4. Um quarto de 80 é 20."
+        }
+      ],
+      "gerador": "porcentagem",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-12",
+      "materia": "Matemática",
+      "unidade": "Razões e porcentagens",
+      "titulo": "Razão e proporção",
+      "teoria": "Uma razão compara duas quantidades usando divisão, como 2 para 3. Uma proporção afirma que duas razões são equivalentes: 2/3 = 4/6. Você pode verificar multiplicando em cruz.",
+      "passos": [
+        "Escreva as quantidades na ordem correta",
+        "Simplifique se possível",
+        "Compare produtos cruzados"
+      ],
+      "exemplo": "Teste 2/3 = 6/9.",
+      "resolucao": "2 × 9 = 18 e 3 × 6 = 18. As razões são proporcionais.",
+      "questoes": [
+        {
+          "pergunta": "Qual razão equivale a 3/5?",
+          "alternativas": [
+            "6/10",
+            "9/10",
+            "5/3",
+            "3/10"
+          ],
+          "correta": 0,
+          "feedback": "Multiplicar numerador e denominador por 2 preserva a razão: 6/10."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-13",
+      "materia": "Matemática",
+      "unidade": "Razões e porcentagens",
+      "titulo": "Regra de três simples",
+      "teoria": "A regra de três resolve proporções entre grandezas. Na relação direta, aumentar uma aumenta a outra na mesma proporção. Se três cadernos custam R$ 24, seis custam o dobro. Em relações inversas, é preciso raciocinar ao contrário.",
+      "passos": [
+        "Identifique duas grandezas",
+        "Determine se crescem juntas ou em sentidos opostos",
+        "Monte a proporção",
+        "Resolva e confira a unidade"
+      ],
+      "exemplo": "Três cadernos custam R$ 24. Quanto custam seis?",
+      "resolucao": "6 é o dobro de 3; o custo dobra: R$ 48.",
+      "questoes": [
+        {
+          "pergunta": "Se 4 livros custam R$ 60, quanto custam 2?",
+          "alternativas": [
+            "R$ 15",
+            "R$ 20",
+            "R$ 30",
+            "R$ 40"
+          ],
+          "correta": 2,
+          "feedback": "Dois livros são metade de quatro; metade de R$ 60 é R$ 30."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-14",
+      "materia": "Matemática",
+      "unidade": "Razões e porcentagens",
+      "titulo": "Juros simples",
+      "teoria": "Juros simples incidem apenas sobre o capital inicial. A fórmula é J = C × i × t, em que C é o capital, i é a taxa em forma decimal e t é o número de períodos. O montante final é M = C + J.",
+      "passos": [
+        "Transforme a taxa percentual em decimal",
+        "Multiplique capital, taxa e tempo",
+        "Some juros e capital para achar o montante"
+      ],
+      "exemplo": "R$ 200 a 2% ao mês por três meses.",
+      "resolucao": "J = 200 × 0,02 × 3 = R$ 12. Montante: R$ 212.",
+      "questoes": [
+        {
+          "pergunta": "Qual o juro simples de R$ 100 a 5% por 2 meses?",
+          "alternativas": [
+            "R$ 5",
+            "R$ 10",
+            "R$ 15",
+            "R$ 20"
+          ],
+          "correta": 1,
+          "feedback": "100 × 0,05 × 2 = R$ 10."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-15",
+      "materia": "Matemática",
+      "unidade": "Álgebra",
+      "titulo": "Potências e expoentes",
+      "teoria": "Potência é uma multiplicação repetida do mesmo fator. Em 2³, a base é 2 e o expoente é 3; portanto 2 × 2 × 2 = 8. Potência não é multiplicar a base pelo expoente.",
+      "passos": [
+        "Identifique base e expoente",
+        "Repita a multiplicação pela quantidade de vezes indicada",
+        "Aplique parênteses com cuidado"
+      ],
+      "exemplo": "Calcule 3².",
+      "resolucao": "3² = 3 × 3 = 9, e não 3 × 2.",
+      "questoes": [
+        {
+          "pergunta": "Quanto é 2⁴?",
+          "alternativas": [
+            "8",
+            "12",
+            "16",
+            "24"
+          ],
+          "correta": 2,
+          "feedback": "2 × 2 × 2 × 2 = 16."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-16",
+      "materia": "Matemática",
+      "unidade": "Álgebra",
+      "titulo": "Raiz quadrada",
+      "teoria": "A raiz quadrada de um número é o valor que, multiplicado por ele mesmo, produz o número inicial. A raiz de 49 é 7, pois 7² = 49. Para números que não são quadrados perfeitos, a raiz pode ser aproximada.",
+      "passos": [
+        "Procure um quadrado perfeito",
+        "Pergunte qual número multiplicado por si mesmo dá o total",
+        "Verifique elevando o resultado ao quadrado"
+      ],
+      "exemplo": "Calcule √81.",
+      "resolucao": "9 × 9 = 81. Logo, √81 = 9 (raiz principal).",
+      "questoes": [
+        {
+          "pergunta": "Qual é √64?",
+          "alternativas": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "correta": 2,
+          "feedback": "8² = 64."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-17",
+      "materia": "Matemática",
+      "unidade": "Álgebra",
+      "titulo": "Equação do 1º grau",
+      "teoria": "Uma equação é uma igualdade com um valor desconhecido. Para resolver, use a mesma operação nos dois lados da igualdade. Em 2x + 3 = 11, subtraímos 3 e depois dividimos por 2. Assim encontramos x.",
+      "passos": [
+        "Isole os termos com a incógnita",
+        "Faça a mesma operação em ambos os lados",
+        "Divida pelo coeficiente",
+        "Substitua a resposta para conferir"
+      ],
+      "exemplo": "Resolva 2x + 3 = 11.",
+      "resolucao": "2x = 8; x = 4. Conferência: 2 × 4 + 3 = 11.",
+      "questoes": [
+        {
+          "pergunta": "Se 3x − 2 = 10, qual é x?",
+          "alternativas": [
+            "2",
+            "3",
+            "4",
+            "6"
+          ],
+          "correta": 2,
+          "feedback": "3x = 12; x = 4."
+        }
+      ],
+      "gerador": "equacao",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-18",
+      "materia": "Matemática",
+      "unidade": "Álgebra",
+      "titulo": "Sistemas de duas equações",
+      "teoria": "Um sistema exige encontrar valores que satisfaçam duas equações ao mesmo tempo. Você pode usar substituição ou adição. Se x + y = 10 e x − y = 2, somar as equações elimina y.",
+      "passos": [
+        "Escolha uma incógnita para eliminar",
+        "Some ou subtraia as equações",
+        "Encontre a primeira incógnita",
+        "Substitua numa equação original"
+      ],
+      "exemplo": "Resolva x+y=10 e x−y=2.",
+      "resolucao": "Somando: 2x = 12, então x = 6. Em x+y=10, y = 4.",
+      "questoes": [
+        {
+          "pergunta": "Se x+y=8 e x−y=4, qual é x?",
+          "alternativas": [
+            "2",
+            "4",
+            "6",
+            "8"
+          ],
+          "correta": 2,
+          "feedback": "Somando as equações, 2x = 12; logo x = 6."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-19",
+      "materia": "Matemática",
+      "unidade": "Álgebra",
+      "titulo": "Equação do 2º grau",
+      "teoria": "Uma equação do segundo grau tem termo x², como ax² + bx + c = 0 com a diferente de zero. Você pode fatorar ou aplicar a fórmula de Bhaskara. O discriminante Δ = b² − 4ac indica o tipo de raízes reais.",
+      "passos": [
+        "Identifique a, b e c",
+        "Calcule Δ = b² − 4ac",
+        "Encontre x = (−b ± √Δ)/(2a)",
+        "Confira substituindo"
+      ],
+      "exemplo": "Resolva x² − 5x + 6 = 0.",
+      "resolucao": "Fatore: (x−2)(x−3)=0. Portanto x=2 ou x=3.",
+      "questoes": [
+        {
+          "pergunta": "As raízes de x² − 9 = 0 são:",
+          "alternativas": [
+            "0 e 9",
+            "−3 e 3",
+            "−9 e 9",
+            "só 3"
+          ],
+          "correta": 1,
+          "feedback": "x²=9; portanto x=3 ou x=−3."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-20",
+      "materia": "Matemática",
+      "unidade": "Álgebra",
+      "titulo": "Função afim e gráficos",
+      "teoria": "Uma função afim tem forma f(x)=ax+b. O valor a é a taxa de variação; b é o valor em x=0. Quando a é positivo, a reta sobe da esquerda para a direita; quando negativo, desce.",
+      "passos": [
+        "Identifique coeficientes a e b",
+        "Escolha valores para x",
+        "Calcule os pares ordenados",
+        "Trace uma reta passando pelos pontos"
+      ],
+      "exemplo": "Para f(x)=2x+1, calcule f(3).",
+      "resolucao": "Substitua x por 3: 2×3+1 = 7.",
+      "questoes": [
+        {
+          "pergunta": "Se f(x)=3x−2, então f(4) é:",
+          "alternativas": [
+            "8",
+            "10",
+            "12",
+            "14"
+          ],
+          "correta": 1,
+          "feedback": "3×4−2 = 10."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-21",
+      "materia": "Matemática",
+      "unidade": "Álgebra",
+      "titulo": "Progressão aritmética",
+      "teoria": "Uma progressão aritmética (PA) é uma sequência com diferença constante entre termos consecutivos. A razão r é essa diferença. O termo geral é aₙ=a₁+(n−1)r.",
+      "passos": [
+        "Identifique o primeiro termo a₁",
+        "Calcule a razão entre dois termos consecutivos",
+        "Use aₙ=a₁+(n−1)r"
+      ],
+      "exemplo": "Na sequência 3, 7, 11, 15, qual é o 6º termo?",
+      "resolucao": "A razão é 4. O 6º = 3 + 5×4 = 23.",
+      "questoes": [
+        {
+          "pergunta": "Qual o 5º termo da PA 2, 5, 8, ...?",
+          "alternativas": [
+            "11",
+            "12",
+            "14",
+            "17"
+          ],
+          "correta": 2,
+          "feedback": "2 + 4×3 = 14."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-22",
+      "materia": "Matemática",
+      "unidade": "Álgebra",
+      "titulo": "Conjuntos e operações",
+      "teoria": "Conjuntos são coleções de elementos. A união A∪B reúne tudo o que está em A ou B sem repetição; a interseção A∩B contém somente os elementos comuns. Essa distinção é frequente em problemas de contagem.",
+      "passos": [
+        "Escreva os elementos de cada conjunto",
+        "Na união reúna sem repetir",
+        "Na interseção destaque só os comuns"
+      ],
+      "exemplo": "A={1,2,3}, B={3,4}.",
+      "resolucao": "A∪B={1,2,3,4}; A∩B={3}.",
+      "questoes": [
+        {
+          "pergunta": "A interseção de {2,4,6} e {1,2,3} é:",
+          "alternativas": [
+            "{1,2}",
+            "{2}",
+            "{4}",
+            "conjunto vazio"
+          ],
+          "correta": 1,
+          "feedback": "O único elemento presente nos dois conjuntos é 2."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-23",
+      "materia": "Matemática",
+      "unidade": "Geometria",
+      "titulo": "Perímetro e unidades",
+      "teoria": "Perímetro é a medida total do contorno de uma figura. Para achá-lo, some o comprimento de todos os lados. A unidade é de comprimento: m, cm, km. Não confunda com área, que mede a superfície.",
+      "passos": [
+        "Identifique os lados externos",
+        "Some os comprimentos",
+        "Escreva a unidade linear"
+      ],
+      "exemplo": "Um retângulo mede 6 m por 4 m. Qual o perímetro?",
+      "resolucao": "P=6+4+6+4=20 m.",
+      "questoes": [
+        {
+          "pergunta": "Qual o perímetro de um quadrado de lado 5 cm?",
+          "alternativas": [
+            "10 cm",
+            "15 cm",
+            "20 cm",
+            "25 cm"
+          ],
+          "correta": 2,
+          "feedback": "São quatro lados iguais: 4×5=20 cm."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-24",
+      "materia": "Matemática",
+      "unidade": "Geometria",
+      "titulo": "Área de figuras planas",
+      "teoria": "Área mede a superfície ocupada. Para um retângulo, multiplique base × altura; para um triângulo, use base × altura ÷ 2. A unidade é quadrada: m², cm². Desenhar ajuda a identificar as medidas.",
+      "passos": [
+        "Identifique qual figura é",
+        "Escolha a fórmula correta",
+        "Substitua as medidas",
+        "Inclua unidade quadrada"
+      ],
+      "exemplo": "Área de um retângulo de 8 m × 3 m.",
+      "resolucao": "A=8×3=24 m².",
+      "questoes": [
+        {
+          "pergunta": "Qual a área de triângulo com base 10 e altura 4?",
+          "alternativas": [
+            "14",
+            "20",
+            "40",
+            "80"
+          ],
+          "correta": 1,
+          "feedback": "(10×4)/2 = 20 unidades quadradas."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-25",
+      "materia": "Matemática",
+      "unidade": "Geometria",
+      "titulo": "Volume de sólidos",
+      "teoria": "Volume mede quanto espaço um sólido ocupa, em unidades cúbicas. Um bloco retangular de arestas a, b e c tem volume V=a×b×c. Para converter litros em cm³, lembre: 1 litro = 1.000 cm³.",
+      "passos": [
+        "Identifique as três dimensões",
+        "Multiplique comprimento, largura e altura",
+        "Inclua unidade cúbica"
+      ],
+      "exemplo": "Caixa de 2 cm × 3 cm × 4 cm.",
+      "resolucao": "V=2×3×4=24 cm³.",
+      "questoes": [
+        {
+          "pergunta": "Volume de cubo com aresta 3 cm é:",
+          "alternativas": [
+            "9 cm³",
+            "18 cm³",
+            "27 cm³",
+            "81 cm³"
+          ],
+          "correta": 2,
+          "feedback": "3×3×3 = 27 cm³."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-26",
+      "materia": "Matemática",
+      "unidade": "Geometria",
+      "titulo": "Ângulos e triângulos",
+      "teoria": "Ângulo é uma abertura medida em graus. Um ângulo reto tem 90°, agudo é menor que 90° e obtuso fica entre 90° e 180°. Em todo triângulo plano, os ângulos internos somam 180°.",
+      "passos": [
+        "Classifique a medida do ângulo",
+        "Em triângulos, some os ângulos conhecidos",
+        "Subtraia essa soma de 180°"
+      ],
+      "exemplo": "Um triângulo tem ângulos 50° e 60°. Qual o terceiro?",
+      "resolucao": "180−50−60 = 70°.",
+      "questoes": [
+        {
+          "pergunta": "Se dois ângulos de um triângulo são 45° e 65°, o terceiro é:",
+          "alternativas": [
+            "60°",
+            "70°",
+            "80°",
+            "90°"
+          ],
+          "correta": 1,
+          "feedback": "180−(45+65)=70°."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-27",
+      "materia": "Matemática",
+      "unidade": "Geometria",
+      "titulo": "Teorema de Pitágoras",
+      "teoria": "Em um triângulo retângulo, a hipotenusa é o lado oposto ao ângulo de 90° e é o maior lado. Pitágoras afirma a²+b²=c², onde c é a hipotenusa. O teorema não vale para qualquer triângulo.",
+      "passos": [
+        "Confirme que há ângulo reto",
+        "Identifique a hipotenusa",
+        "Eleve os catetos ao quadrado",
+        "Some e tire a raiz"
+      ],
+      "exemplo": "Catetos de 3 m e 4 m. Encontre a hipotenusa.",
+      "resolucao": "3²+4²=9+16=25. √25=5 m.",
+      "questoes": [
+        {
+          "pergunta": "Catetos 5 e 12. A hipotenusa é:",
+          "alternativas": [
+            "11",
+            "12",
+            "13",
+            "17"
+          ],
+          "correta": 2,
+          "feedback": "5²+12²=25+144=169; √169=13."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-28",
+      "materia": "Matemática",
+      "unidade": "Geometria",
+      "titulo": "Trigonometria básica",
+      "teoria": "No triângulo retângulo, seno = cateto oposto/hipotenusa, cosseno = cateto adjacente/hipotenusa e tangente = oposto/adjacente. O cateto oposto depende do ângulo escolhido.",
+      "passos": [
+        "Escolha o ângulo de referência",
+        "Localize oposto, adjacente e hipotenusa",
+        "Use a relação pedida"
+      ],
+      "exemplo": "Em triângulo 3-4-5, ângulo oposto ao lado 3.",
+      "resolucao": "sen(θ)=3/5. A hipotenusa é o lado 5.",
+      "questoes": [
+        {
+          "pergunta": "Se oposto=4 e hipotenusa=5, o seno vale:",
+          "alternativas": [
+            "4/5",
+            "5/4",
+            "1/5",
+            "4"
+          ],
+          "correta": 0,
+          "feedback": "Seno é oposto dividido pela hipotenusa: 4/5."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-29",
+      "materia": "Matemática",
+      "unidade": "Dados e raciocínio",
+      "titulo": "Probabilidade",
+      "teoria": "Probabilidade mede a chance de um evento. Em situações com resultados igualmente prováveis: P = casos favoráveis / casos possíveis. A resposta pode ser fração, decimal ou porcentagem. Não conte eventos repetidos sem motivo.",
+      "passos": [
+        "Liste resultados possíveis",
+        "Conte os favoráveis",
+        "Divida favoráveis por possíveis"
+      ],
+      "exemplo": "Um dado comum tem seis faces. Probabilidade de sair 2?",
+      "resolucao": "Uma face favorável entre seis: 1/6.",
+      "questoes": [
+        {
+          "pergunta": "Ao lançar uma moeda justa, qual a chance de cara?",
+          "alternativas": [
+            "1/4",
+            "1/2",
+            "1/3",
+            "1"
+          ],
+          "correta": 1,
+          "feedback": "Há dois resultados igualmente prováveis; um deles é cara."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "mat-30",
+      "materia": "Matemática",
+      "unidade": "Dados e raciocínio",
+      "titulo": "Média, mediana e moda",
+      "teoria": "A média aritmética é a soma dos valores dividida pela quantidade de valores. Mediana é o valor central após ordenar os dados; moda é o valor mais frequente. Essas medidas respondem a perguntas diferentes.",
+      "passos": [
+        "Ordene os números para achar a mediana",
+        "Some e divida pela quantidade para a média",
+        "Conte repetições para a moda"
+      ],
+      "exemplo": "Notas 4, 6 e 8.",
+      "resolucao": "Média=(4+6+8)/3=6; mediana=6; não há moda.",
+      "questoes": [
+        {
+          "pergunta": "Qual a média de 5, 7 e 9?",
+          "alternativas": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "correta": 1,
+          "feedback": "(5+7+9)/3 = 21/3 = 7."
+        }
+      ],
+      "gerador": "",
+      "nivel": "fundamentos"
+    }
+  ]
+}
