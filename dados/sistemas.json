@@ -112,20 +112,6 @@
     "fonte": "Decisões da FAAAB e documentos de planejamento recuperados; campos pendentes não representam regras aprovadas."
   },
   {
-    "id": "S-009",
-    "area": "Política",
-    "nome": "Governo estadual",
-    "forca": "GOV",
-    "estado": "Cargo registrado; sistema pendente",
-    "resumo": "O catálogo de cargos do Governo inclui Governador [GVR].",
-    "real": "Governadores reais administram estados nos termos do ordenamento jurídico.",
-    "jogo": "Estrutura fictícia de governo estadual em possível divisão de áreas do mapa.",
-    "regras": "Competência territorial, mandato, processos eleitorais e subordinações: não definidos.",
-    "notas": "Não há lista confirmada de estados/regiões jogáveis.",
-    "atualizado": "2026-10-27",
-    "fonte": "Decisões da FAAAB e documentos de planejamento recuperados; campos pendentes não representam regras aprovadas."
-  },
-  {
     "id": "S-010",
     "area": "Administração",
     "nome": "EGAF e administração central",
