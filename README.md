@@ -1,5 +1,18 @@
 # FAAAB — Central de Informações
 
+## Catálogo integral de provas e inscrições automatizadas
+
+**[Ver todas as 182 fichas pesquisáveis da FAAAB](central.html#provas)** · **[Estudar por força e formação](central.html#estudos)**.
+
+Foram recuperados e indexados **todos os 55 registros de cursos/formações** mais **127 unidades, centros, batalhões, brigadas, escolas e instituições** já registrados nos arquivos da FAAAB. **182 fichas não significam 182 provas públicas existentes**: o sistema mostra quando uma instituição tem acervo real, avaliação interna ou falta documentação, sem criar prova falsa.
+
+Referências oficiais verificadas incluem EsPCEx (Vunesp), ESA/Exército, AFA, EPCAR, EEAR, CIAAR, CIGS, centros de instrução, Escola Naval, Colégio Naval, Aprendizes-Marinheiros, CIAMPA, CIAA e curso de Comandos Anfíbios do CFN. A especialização Sargento Músico não é apresentada como caminho geral de sargento. As **22 matérias e 53 tópicos iniciais** são orientações de estudo, não simulados completos homologados.
+
+O proprietário poderá publicar editais vinculados a um dos cursos/unidades do catálogo com **datas de início/fim**, cargos autorizados e requisitos. O painel informa *agendada*, *aberta* ou *encerrada*, e o Firestore valida as inscrições no período correto **usando o horário do servidor**. Nenhuma prova nasce aberta automaticamente, nenhuma prova real externa concede graduação no jogo e nenhuma CDP é substituída.
+
+Arquivos de referência: `dados/provas_todas_unidades.json`, `dados/provas_guias_materias.json`, `firebase/firestore.rules`. A [configuração Firebase](firebase/README.md) continua necessária para habilitar inscrição, aprovação de whitelist e publicação online.
+
+
 ## Central de Comunicação, Provas e Estudos — nova opção Firebase
 
 **[Abrir a Central FAAAB](central.html)** · **[Configurar Google em passos simples](firebase/README.md)**
