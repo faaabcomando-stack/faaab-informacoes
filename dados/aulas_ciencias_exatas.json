@@ -1,0 +1,1073 @@
+{
+  "versao": 1,
+  "descricao": "Aulas autorais fundamentadas de Ciências, Física, Química, Inglês e Raciocínio Lógico",
+  "aulas": [
+    {
+      "id": "cie-01",
+      "materia": "Ciências",
+      "unidade": "Biologia",
+      "titulo": "Célula e seres vivos",
+      "teoria": "A célula é a unidade estrutural e funcional dos seres vivos. Há organismos unicelulares e multicelulares. Células possuem membrana que controla trocas. Em eucariontes existe núcleo delimitado por membrana.",
+      "passos": [
+        "Observe o nível de organização",
+        "Identifique membrana e material genético",
+        "Diferencie tipos celulares"
+      ],
+      "exemplo": "Uma bactéria é um organismo unicelular.",
+      "resolucao": "Ela apresenta organização celular procariótica, sem núcleo delimitado por membrana.",
+      "questoes": [
+        {
+          "pergunta": "Qual estrutura regula a entrada e saída de substâncias na célula?",
+          "alternativas": [
+            "Membrana plasmática",
+            "Osso",
+            "Pulmão",
+            "Raiz"
+          ],
+          "correta": 0,
+          "feedback": "A membrana plasmática participa do controle das trocas."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-02",
+      "materia": "Ciências",
+      "unidade": "Biologia",
+      "titulo": "Tecidos, órgãos e sistemas",
+      "teoria": "Em seres multicelulares, células semelhantes podem formar tecidos. Tecidos constituem órgãos e os órgãos trabalham em sistemas. O coração integra o sistema cardiovascular, mas não realiza sozinho todas as funções do corpo.",
+      "passos": [
+        "Comece pelas células",
+        "Forme tecidos",
+        "Associe órgãos e sistemas"
+      ],
+      "exemplo": "Células musculares compõem tecido muscular.",
+      "resolucao": "O tecido participa da composição de órgãos, como o coração.",
+      "questoes": [
+        {
+          "pergunta": "Qual sequência está correta?",
+          "alternativas": [
+            "Órgão-célula-tecido",
+            "Célula-tecido-órgão",
+            "Sistema-célula-átomo",
+            "Tecido-órgão-célula"
+          ],
+          "correta": 1,
+          "feedback": "Células formam tecidos, que participam da composição de órgãos."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-03",
+      "materia": "Ciências",
+      "unidade": "Biologia",
+      "titulo": "Sistema digestório",
+      "teoria": "Digestão transforma alimentos em substâncias absorvíveis. Começa na boca com mastigação e ação da saliva, prossegue no estômago e intestino. A maior parte da absorção de nutrientes ocorre no intestino delgado.",
+      "passos": [
+        "Acompanhe trajeto do alimento",
+        "Reconheça órgãos",
+        "Associe digestão e absorção"
+      ],
+      "exemplo": "Alimento passa da boca ao esôfago, estômago e intestinos.",
+      "resolucao": "O intestino delgado absorve grande parte dos nutrientes.",
+      "questoes": [
+        {
+          "pergunta": "Onde ocorre grande parte da absorção de nutrientes?",
+          "alternativas": [
+            "Intestino delgado",
+            "Traqueia",
+            "Pulmões",
+            "Bexiga"
+          ],
+          "correta": 0,
+          "feedback": "O intestino delgado contém estruturas adaptadas à absorção."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-04",
+      "materia": "Ciências",
+      "unidade": "Biologia",
+      "titulo": "Respiração e circulação",
+      "teoria": "O sistema respiratório realiza trocas de oxigênio e dióxido de carbono. O sistema cardiovascular transporta gases e nutrientes pelo sangue. Nos alvéolos, ocorre troca gasosa com os capilares sanguíneos.",
+      "passos": [
+        "Localize os pulmões",
+        "Reconheça os alvéolos",
+        "Entenda transporte pelo sangue"
+      ],
+      "exemplo": "Durante a inspiração, o ar chega aos pulmões.",
+      "resolucao": "O oxigênio passa do ar alveolar para o sangue por difusão.",
+      "questoes": [
+        {
+          "pergunta": "Qual é o principal local de troca gasosa no pulmão?",
+          "alternativas": [
+            "Esôfago",
+            "Alvéolos",
+            "Estômago",
+            "Rins"
+          ],
+          "correta": 1,
+          "feedback": "Os alvéolos oferecem ampla superfície para troca de gases."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-05",
+      "materia": "Ciências",
+      "unidade": "Biologia",
+      "titulo": "Genética e hereditariedade",
+      "teoria": "DNA carrega informações hereditárias organizadas em genes. Cromossomos contêm DNA associado a proteínas. Características podem envolver diferentes genes e fatores ambientais, por isso nem todas seguem padrões simples.",
+      "passos": [
+        "Defina DNA e gene",
+        "Localize cromossomos",
+        "Analise interação genética e ambiente"
+      ],
+      "exemplo": "Genes influenciam a produção de proteínas.",
+      "resolucao": "Proteínas participam de inúmeras características biológicas.",
+      "questoes": [
+        {
+          "pergunta": "Qual molécula armazena informações hereditárias?",
+          "alternativas": [
+            "Água",
+            "DNA",
+            "Oxigênio",
+            "Glicose"
+          ],
+          "correta": 1,
+          "feedback": "DNA é a molécula que contém a informação genética."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-06",
+      "materia": "Ciências",
+      "unidade": "Biologia",
+      "titulo": "Fotossíntese",
+      "teoria": "Organismos fotossintetizantes utilizam energia luminosa para produzir moléculas orgânicas a partir de água e dióxido de carbono. Nas plantas, ocorre principalmente nos cloroplastos. Oxigênio é liberado em processos da fotossíntese.",
+      "passos": [
+        "Identifique luz, água e CO₂",
+        "Localize cloroplastos",
+        "Relacione produção de alimento"
+      ],
+      "exemplo": "Uma planta iluminada realiza fotossíntese quando possui condições adequadas.",
+      "resolucao": "Energia luminosa é convertida em energia química armazenada em moléculas.",
+      "questoes": [
+        {
+          "pergunta": "Qual fonte de energia inicia a fotossíntese?",
+          "alternativas": [
+            "Luz",
+            "Som",
+            "Vento artificial",
+            "Gravidade"
+          ],
+          "correta": 0,
+          "feedback": "A fotossíntese capta energia luminosa."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-07",
+      "materia": "Ciências",
+      "unidade": "Ecologia",
+      "titulo": "Cadeias alimentares",
+      "teoria": "Em ecossistemas, produtores sintetizam matéria orgânica, consumidores obtêm energia ao alimentar-se e decompositores reciclam matéria. Setas da cadeia alimentar indicam fluxo de energia do alimento para quem o consome.",
+      "passos": [
+        "Identifique produtores",
+        "Localize consumidores",
+        "Observe direção das setas"
+      ],
+      "exemplo": "Capim → gafanhoto → sapo.",
+      "resolucao": "Capim é produtor, gafanhoto é consumidor primário e sapo consumidor secundário nessa cadeia.",
+      "questoes": [
+        {
+          "pergunta": "Na cadeia capim → coelho → raposa, quem é produtor?",
+          "alternativas": [
+            "Raposa",
+            "Coelho",
+            "Capim",
+            "Nenhum"
+          ],
+          "correta": 2,
+          "feedback": "O capim produz sua própria matéria orgânica por fotossíntese."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-08",
+      "materia": "Ciências",
+      "unidade": "Ecologia",
+      "titulo": "Ciclos da água e carbono",
+      "teoria": "A água circula entre atmosfera, solo e organismos por evaporação, condensação e precipitação. O carbono circula entre seres vivos, atmosfera e oceanos por fotossíntese, respiração e outras transformações.",
+      "passos": [
+        "Identifique reservatórios",
+        "Localize processos",
+        "Monte uma sequência causal"
+      ],
+      "exemplo": "Água evapora e depois condensa formando nuvens.",
+      "resolucao": "A precipitação pode devolver parte da água à superfície.",
+      "questoes": [
+        {
+          "pergunta": "Passagem de vapor para gotículas líquidas chama-se:",
+          "alternativas": [
+            "Evaporação",
+            "Condensação",
+            "Fusão",
+            "Sublimação"
+          ],
+          "correta": 1,
+          "feedback": "Condensação é a transformação de gás em líquido."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-09",
+      "materia": "Ciências",
+      "unidade": "Ecologia",
+      "titulo": "Sustentabilidade e resíduos",
+      "teoria": "A redução de desperdício começa antes da reciclagem: diminuir consumo desnecessário, reutilizar quando seguro e separar materiais recicláveis. A destinação inadequada pode contaminar solo e água.",
+      "passos": [
+        "Identifique origem do resíduo",
+        "Priorize reduzir",
+        "Veja reutilização e reciclagem"
+      ],
+      "exemplo": "Usar uma garrafa reutilizável evita embalagens descartáveis.",
+      "resolucao": "A prevenção reduz a geração de resíduos na origem.",
+      "questoes": [
+        {
+          "pergunta": "Qual atitude costuma reduzir produção de resíduos?",
+          "alternativas": [
+            "Comprar descartáveis em excesso",
+            "Reutilizar recipientes adequados",
+            "Descartar lixo em rios",
+            "Queimar plástico"
+          ],
+          "correta": 1,
+          "feedback": "Reutilização diminui a necessidade de novos descartáveis."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-10",
+      "materia": "Ciências",
+      "unidade": "Saúde",
+      "titulo": "Microrganismos e prevenção",
+      "teoria": "Microrganismos incluem bactérias, vírus, fungos e protozoários. Nem todos causam doenças; muitos participam de processos ecológicos importantes. A prevenção de doenças depende do agente e da via de transmissão.",
+      "passos": [
+        "Identifique agente infeccioso",
+        "Descubra a transmissão",
+        "Escolha prevenção fundamentada"
+      ],
+      "exemplo": "Lavar as mãos pode interromper transmissão de agentes por contato.",
+      "resolucao": "A higiene reduz risco de contaminação em várias situações.",
+      "questoes": [
+        {
+          "pergunta": "Qual medida ajuda a prevenir transmissão por mãos contaminadas?",
+          "alternativas": [
+            "Lavar as mãos",
+            "Compartilhar água suja",
+            "Não limpar superfícies",
+            "Ignorar higiene"
+          ],
+          "correta": 0,
+          "feedback": "A higiene adequada remove ou reduz agentes infecciosos."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-11",
+      "materia": "Ciências",
+      "unidade": "Terra e Universo",
+      "titulo": "Sistema Solar",
+      "teoria": "O Sistema Solar possui o Sol, planetas, planetas anões, luas e pequenos corpos. A Terra gira em torno do próprio eixo e também realiza translação ao redor do Sol. Dia e noite decorrem principalmente da rotação terrestre.",
+      "passos": [
+        "Diferencie rotação e translação",
+        "Associe dia/noite à rotação",
+        "Observe tempo de revolução"
+      ],
+      "exemplo": "A Terra completa uma rotação em aproximadamente 24 horas.",
+      "resolucao": "Partes diferentes da superfície recebem luz solar em momentos diferentes.",
+      "questoes": [
+        {
+          "pergunta": "Qual movimento explica a alternância de dia e noite?",
+          "alternativas": [
+            "Translação da Lua",
+            "Rotação da Terra",
+            "Erosão",
+            "Marés"
+          ],
+          "correta": 1,
+          "feedback": "A rotação alterna a face iluminada da Terra."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "cie-12",
+      "materia": "Ciências",
+      "unidade": "Método científico",
+      "titulo": "Hipótese, experimento e evidência",
+      "teoria": "Uma hipótese é explicação provisória testável. Em um experimento, controlam-se variáveis para investigar uma relação. Resultados devem ser registrados e analisados, inclusive quando não confirmam a hipótese inicial.",
+      "passos": [
+        "Formule pergunta",
+        "Proponha hipótese testável",
+        "Controle variáveis",
+        "Registre resultados"
+      ],
+      "exemplo": "Comparar crescimento de plantas com iluminação diferente.",
+      "resolucao": "Mantenha água e solo semelhantes para investigar efeito da luz.",
+      "questoes": [
+        {
+          "pergunta": "Qual procedimento ajuda a testar efeito da luz?",
+          "alternativas": [
+            "Mudar luz e água ao mesmo tempo",
+            "Controlar outras condições",
+            "Não registrar dados",
+            "Escolher resultado antes"
+          ],
+          "correta": 1,
+          "feedback": "Controlar variáveis permite atribuir diferenças ao fator investigado com maior confiança."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "fis-01",
+      "materia": "Física",
+      "unidade": "Movimento",
+      "titulo": "Velocidade média",
+      "teoria": "Velocidade média relaciona deslocamento e intervalo de tempo, enquanto rapidez média usa distância percorrida. Em trajetos sem mudança de sentido, calcular distância dividida pelo tempo pode atender ao enunciado. Confira as unidades.",
+      "passos": [
+        "Identifique distância ou deslocamento",
+        "Encontre intervalo de tempo",
+        "Divida a grandeza pelo tempo"
+      ],
+      "exemplo": "Um ciclista percorre 120 km em 3 horas, sem paradas.",
+      "resolucao": "Rapidez média = 120/3 = 40 km/h.",
+      "questoes": [
+        {
+          "pergunta": "Se um carro percorre 90 km em 2 horas, sua rapidez média é:",
+          "alternativas": [
+            "30 km/h",
+            "45 km/h",
+            "60 km/h",
+            "180 km/h"
+          ],
+          "correta": 1,
+          "feedback": "90 dividido por 2 é 45 km/h."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "fis-02",
+      "materia": "Física",
+      "unidade": "Movimento",
+      "titulo": "Aceleração",
+      "teoria": "Aceleração média indica quanto a velocidade muda por intervalo de tempo: a = Δv/Δt. Pode ser positiva ou negativa dependendo do sentido escolhido. Se não há mudança de velocidade, a aceleração média é zero.",
+      "passos": [
+        "Encontre velocidade inicial e final",
+        "Calcule a diferença",
+        "Divida pelo tempo"
+      ],
+      "exemplo": "Um objeto vai de 0 a 20 m/s em 5 s.",
+      "resolucao": "a=(20−0)/5=4 m/s².",
+      "questoes": [
+        {
+          "pergunta": "De 0 a 12 m/s em 3 s: aceleração média?",
+          "alternativas": [
+            "2 m/s²",
+            "3 m/s²",
+            "4 m/s²",
+            "6 m/s²"
+          ],
+          "correta": 2,
+          "feedback": "12 dividido por 3 é 4 m/s²."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "fis-03",
+      "materia": "Física",
+      "unidade": "Forças",
+      "titulo": "Leis de Newton",
+      "teoria": "A primeira lei trata da inércia, a segunda relaciona força resultante e aceleração por F=ma e a terceira descreve pares de ação e reação em corpos distintos. Forças devem ser analisadas vetorialmente.",
+      "passos": [
+        "Identifique o corpo",
+        "Some forças resultantes",
+        "Use F=ma se necessário"
+      ],
+      "exemplo": "Corpo de massa 3 kg acelera a 2 m/s².",
+      "resolucao": "A força resultante é 3×2=6 N.",
+      "questoes": [
+        {
+          "pergunta": "Massa 5 kg e aceleração 2 m/s²: força resultante?",
+          "alternativas": [
+            "7 N",
+            "10 N",
+            "12 N",
+            "25 N"
+          ],
+          "correta": 1,
+          "feedback": "F=m×a=5×2=10 newtons."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "fis-04",
+      "materia": "Física",
+      "unidade": "Energia",
+      "titulo": "Trabalho e energia",
+      "teoria": "Energia pode ser transformada de uma forma em outra. Energia cinética depende da massa e velocidade: Ec=mv²/2. Trabalho de uma força constante paralela ao deslocamento é W=Fd.",
+      "passos": [
+        "Identifique forma de energia",
+        "Escolha fórmula",
+        "Use SI e confira unidade"
+      ],
+      "exemplo": "Força paralela de 10 N desloca um objeto por 3 m.",
+      "resolucao": "W=10×3=30 J.",
+      "questoes": [
+        {
+          "pergunta": "Uma força de 4 N atua paralelamente por 5 m. Trabalho?",
+          "alternativas": [
+            "9 J",
+            "15 J",
+            "20 J",
+            "25 J"
+          ],
+          "correta": 2,
+          "feedback": "W=4×5=20 joules."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "fis-05",
+      "materia": "Física",
+      "unidade": "Calor",
+      "titulo": "Temperatura e calor",
+      "teoria": "Temperatura expressa um estado térmico relacionado à agitação microscópica. Calor é energia transferida entre corpos por diferença de temperatura. São conceitos diferentes. Calor pode fluir por condução, convecção e radiação.",
+      "passos": [
+        "Distinga estado térmico de transferência",
+        "Identifique o sentido do fluxo",
+        "Reconheça o mecanismo"
+      ],
+      "exemplo": "Uma colher metálica aquece ao ficar numa bebida quente.",
+      "resolucao": "A transferência de energia ocorre principalmente por condução ao longo do metal.",
+      "questoes": [
+        {
+          "pergunta": "Transferência de calor através de um metal é:",
+          "alternativas": [
+            "Condução",
+            "Evaporação",
+            "Fotossíntese",
+            "Difração"
+          ],
+          "correta": 0,
+          "feedback": "Metais conduzem energia térmica."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "fis-06",
+      "materia": "Física",
+      "unidade": "Eletricidade",
+      "titulo": "Tensão, corrente e resistência",
+      "teoria": "Tensão elétrica representa diferença de potencial; corrente é fluxo de carga por tempo; resistência relaciona tensão e corrente. Na lei de Ohm para condutores ôhmicos: U=RI.",
+      "passos": [
+        "Identifique U, R e I",
+        "Escolha fórmula U=RI",
+        "Substitua os valores e unidades"
+      ],
+      "exemplo": "Resistor de 4 Ω recebe 12 V.",
+      "resolucao": "I=U/R=12/4=3 A.",
+      "questoes": [
+        {
+          "pergunta": "Com U=10 V e R=5 Ω, a corrente é:",
+          "alternativas": [
+            "1 A",
+            "2 A",
+            "5 A",
+            "50 A"
+          ],
+          "correta": 1,
+          "feedback": "Pela lei de Ohm, I=10/5=2 A."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "fis-07",
+      "materia": "Física",
+      "unidade": "Ondas",
+      "titulo": "Som e luz",
+      "teoria": "Som é onda mecânica e necessita meio material. Luz é radiação eletromagnética e pode propagar-se no vácuo. Frequência e comprimento de onda caracterizam fenômenos ondulatórios.",
+      "passos": [
+        "Classifique onda",
+        "Veja se precisa de meio",
+        "Relacione a propagação"
+      ],
+      "exemplo": "Na Lua, a luz do Sol chega, mas sons comuns não se propagam pelo vácuo.",
+      "resolucao": "A luz não precisa de ar; o som precisa de meio material.",
+      "questoes": [
+        {
+          "pergunta": "Qual pode se propagar no vácuo?",
+          "alternativas": [
+            "Som de voz",
+            "Luz",
+            "Onda em corda",
+            "Onda na água"
+          ],
+          "correta": 1,
+          "feedback": "Ondas eletromagnéticas podem viajar no vácuo."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "qui-01",
+      "materia": "Química",
+      "unidade": "Matéria",
+      "titulo": "Átomos e elementos",
+      "teoria": "Átomos constituem a matéria e contêm prótons, nêutrons e elétrons. O número de prótons define o elemento químico (número atômico). Átomos podem ganhar ou perder elétrons, formando íons.",
+      "passos": [
+        "Identifique prótons",
+        "Localize número atômico",
+        "Diferencie elemento e átomo"
+      ],
+      "exemplo": "O carbono tem número atômico 6.",
+      "resolucao": "Isso significa que possui seis prótons no núcleo.",
+      "questoes": [
+        {
+          "pergunta": "O número atômico corresponde ao número de:",
+          "alternativas": [
+            "Elétrons obrigatoriamente em qualquer íon",
+            "Prótons",
+            "Nêutrons",
+            "Moléculas"
+          ],
+          "correta": 1,
+          "feedback": "Os prótons determinam o número atômico."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "qui-02",
+      "materia": "Química",
+      "unidade": "Matéria",
+      "titulo": "Tabela periódica",
+      "teoria": "A tabela periódica organiza elementos pelo número atômico crescente. Elementos do mesmo grupo compartilham padrões de propriedades. Períodos são linhas horizontais, grupos são colunas.",
+      "passos": [
+        "Localize linha e coluna",
+        "Identifique grupo",
+        "Compare tendências"
+      ],
+      "exemplo": "Sódio e potássio estão no grupo 1.",
+      "resolucao": "Os dois integram os metais alcalinos e apresentam propriedades relacionadas.",
+      "questoes": [
+        {
+          "pergunta": "Os grupos da tabela periódica são:",
+          "alternativas": [
+            "Linhas horizontais",
+            "Colunas verticais",
+            "Fórmulas químicas",
+            "Níveis de energia isolados"
+          ],
+          "correta": 1,
+          "feedback": "Grupos são colunas."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "qui-03",
+      "materia": "Química",
+      "unidade": "Matéria",
+      "titulo": "Substâncias e misturas",
+      "teoria": "Substância pura tem composição definida. Mistura reúne componentes e pode ser homogênea (uma fase observável) ou heterogênea (mais de uma fase). Processos físicos podem separar componentes conforme suas propriedades.",
+      "passos": [
+        "Identifique componentes",
+        "Observe fases",
+        "Escolha método de separação"
+      ],
+      "exemplo": "Água com sal dissolvido forma mistura homogênea nas condições usuais.",
+      "resolucao": "Uma fase é observada, mesmo havendo duas substâncias.",
+      "questoes": [
+        {
+          "pergunta": "Água e óleo em repouso formam mistura:",
+          "alternativas": [
+            "Homogênea",
+            "Heterogênea",
+            "Elemento químico",
+            "Substância pura"
+          ],
+          "correta": 1,
+          "feedback": "São fases líquidas distintas."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "qui-04",
+      "materia": "Química",
+      "unidade": "Reações",
+      "titulo": "Transformações químicas",
+      "teoria": "Numa reação química, reagentes transformam-se em produtos por reorganização de átomos. A massa total se conserva em sistema fechado. Equações químicas balanceadas mostram proporções entre partículas.",
+      "passos": [
+        "Identifique reagentes",
+        "Encontre produtos",
+        "Conte átomos de cada elemento"
+      ],
+      "exemplo": "2 H₂ + O₂ → 2 H₂O.",
+      "resolucao": "Quatro H e dois O aparecem em ambos os lados da equação balanceada.",
+      "questoes": [
+        {
+          "pergunta": "Em reação química comum, os átomos dos elementos:",
+          "alternativas": [
+            "Desaparecem",
+            "Reorganizam-se",
+            "Transformam-se sempre em energia pura",
+            "Aumentam de número sem origem"
+          ],
+          "correta": 1,
+          "feedback": "Reações rearranjam átomos respeitando conservação de massa."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "qui-05",
+      "materia": "Química",
+      "unidade": "Reações",
+      "titulo": "Ácidos, bases e pH",
+      "teoria": "O pH indica acidez ou basicidade em soluções aquosas. Abaixo de 7 é ácido, em torno de 7 é neutro e acima de 7 é básico a 25 °C para soluções ideais comuns. A escala é logarítmica.",
+      "passos": [
+        "Observe o valor do pH",
+        "Compare com 7",
+        "Classifique com cautela"
+      ],
+      "exemplo": "Solução aquosa com pH 3.",
+      "resolucao": "É ácida, pois o valor é inferior a 7.",
+      "questoes": [
+        {
+          "pergunta": "Uma solução de pH 10 é, em geral:",
+          "alternativas": [
+            "Ácida",
+            "Neutra",
+            "Básica",
+            "Inclassificável"
+          ],
+          "correta": 2,
+          "feedback": "pH acima de 7 em condições usuais indica basicidade."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "qui-06",
+      "materia": "Química",
+      "unidade": "Cálculos",
+      "titulo": "Mol e quantidade de matéria",
+      "teoria": "Mol é unidade de quantidade de matéria, relacionada a 6,022×10²³ entidades. Massa molar informa quantos gramas correspondem a um mol. A relação n=m/M permite cálculos simples.",
+      "passos": [
+        "Identifique massa m",
+        "Massa molar M",
+        "Divida n=m/M"
+      ],
+      "exemplo": "18 g de água, com M=18 g/mol.",
+      "resolucao": "n=18/18=1 mol.",
+      "questoes": [
+        {
+          "pergunta": "Para 20 g de substância com M=10 g/mol, n vale:",
+          "alternativas": [
+            "1 mol",
+            "2 mol",
+            "10 mol",
+            "200 mol"
+          ],
+          "correta": 1,
+          "feedback": "20/10 = 2 mols."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "qui-07",
+      "materia": "Química",
+      "unidade": "Cálculos",
+      "titulo": "Estequiometria básica",
+      "teoria": "Estequiometria usa proporções de uma equação química balanceada. Antes de calcular, ajuste coeficientes e confira se as unidades referem-se a mol ou massa. Coeficientes representam razões entre quantidades de partículas.",
+      "passos": [
+        "Balanceie a reação",
+        "Leia proporção de coeficientes",
+        "Converta para mol quando necessário"
+      ],
+      "exemplo": "2H₂ + O₂ → 2H₂O.",
+      "resolucao": "Para cada 1 mol de O₂ consumido, formam-se 2 mols de H₂O na reação ideal.",
+      "questoes": [
+        {
+          "pergunta": "Na equação, 2 mols de O₂ podem formar quantos de H₂O, com H₂ suficiente?",
+          "alternativas": [
+            "1 mol",
+            "2 mols",
+            "4 mols",
+            "8 mols"
+          ],
+          "correta": 2,
+          "feedback": "A proporção 1:2 dá 4 mols de água para 2 de oxigênio."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "ing-01",
+      "materia": "Inglês",
+      "unidade": "Vocabulário",
+      "titulo": "Cumprimentos e apresentações",
+      "teoria": "Hello significa olá, good morning significa bom dia e my name is significa meu nome é. Em apresentações simples, o verbo to be liga pessoa a nome, estado ou profissão.",
+      "passos": [
+        "Leia frase",
+        "Localize sujeito",
+        "Identifique verbo e complemento"
+      ],
+      "exemplo": "My name is Ana. I am a student.",
+      "resolucao": "Meu nome é Ana. Sou estudante.",
+      "questoes": [
+        {
+          "pergunta": "Como se diz bom dia?",
+          "alternativas": [
+            "Good night",
+            "Good morning",
+            "Goodbye",
+            "See you"
+          ],
+          "correta": 1,
+          "feedback": "Good morning é bom dia."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "ing-02",
+      "materia": "Inglês",
+      "unidade": "Gramática",
+      "titulo": "Verbo to be",
+      "teoria": "No presente, to be aparece como am, is e are. I am, he/she/it is e you/we/they are. Na negativa acrescenta-se not. Em perguntas o verbo costuma aparecer antes do sujeito.",
+      "passos": [
+        "Identifique sujeito",
+        "Escolha am/is/are",
+        "Monte frase afirmativa ou pergunta"
+      ],
+      "exemplo": "She is ready. They are ready.",
+      "resolucao": "She exige is. They exige are.",
+      "questoes": [
+        {
+          "pergunta": "Complete: We ___ students.",
+          "alternativas": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correta": 2,
+          "feedback": "We utiliza are."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "ing-03",
+      "materia": "Inglês",
+      "unidade": "Gramática",
+      "titulo": "Present simple",
+      "teoria": "Present simple expressa hábitos e fatos gerais. Na terceira pessoa do singular, verbos comuns recebem -s ou -es em frases afirmativas. Perguntas e negativas usam do/does conforme sujeito.",
+      "passos": [
+        "Identifique hábito",
+        "Localize pessoa verbal",
+        "Use flexão correta"
+      ],
+      "exemplo": "She studies every day.",
+      "resolucao": "Studies é a forma de study para she no presente simples.",
+      "questoes": [
+        {
+          "pergunta": "Complete: He ___ English.",
+          "alternativas": [
+            "study",
+            "studies",
+            "studying",
+            "studied"
+          ],
+          "correta": 1,
+          "feedback": "He exige a forma studies."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "ing-04",
+      "materia": "Inglês",
+      "unidade": "Leitura",
+      "titulo": "Estratégias de leitura",
+      "teoria": "Não é necessário traduzir cada palavra para entender um texto. Use cognatos, contexto, conectivos e perguntas para localizar informação específica. Cuidado com falsos cognatos, como actually = na verdade.",
+      "passos": [
+        "Leia título",
+        "Busque palavras familiares",
+        "Encontre dados importantes",
+        "Confira pelo contexto"
+      ],
+      "exemplo": "The library opens at eight o'clock.",
+      "resolucao": "A biblioteca abre às oito horas.",
+      "questoes": [
+        {
+          "pergunta": "Na frase The exam starts at nine, a prova começa às:",
+          "alternativas": [
+            "Sete",
+            "Oito",
+            "Nove",
+            "Dez"
+          ],
+          "correta": 2,
+          "feedback": "Nine significa nove."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "ing-05",
+      "materia": "Inglês",
+      "unidade": "Vocabulário",
+      "titulo": "Números, horas e datas",
+      "teoria": "One, two, three e ten significam 1, 2, 3 e 10. Para horas, at seven significa às sete. Datas podem usar formatos diferentes no inglês americano e britânico, por isso observe contexto.",
+      "passos": [
+        "Identifique numeral",
+        "Leia unidade de tempo",
+        "Interprete a frase"
+      ],
+      "exemplo": "The class begins at ten.",
+      "resolucao": "A aula começa às dez.",
+      "questoes": [
+        {
+          "pergunta": "Quanto vale fifteen?",
+          "alternativas": [
+            "5",
+            "10",
+            "15",
+            "50"
+          ],
+          "correta": 2,
+          "feedback": "Fifteen é quinze."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "ing-06",
+      "materia": "Inglês",
+      "unidade": "Gramática",
+      "titulo": "Passado simples",
+      "teoria": "Simple past descreve situações concluídas no passado. Verbos regulares costumam usar -ed, e verbos irregulares têm formas próprias como go/went. Em frases negativas pode aparecer did not + verbo base.",
+      "passos": [
+        "Identifique marcador de passado",
+        "Verifique verbo regular ou irregular",
+        "Forme a frase"
+      ],
+      "exemplo": "I visited my friend yesterday.",
+      "resolucao": "Visited é passado regular de visit. Yesterday significa ontem.",
+      "questoes": [
+        {
+          "pergunta": "Qual é o passado de go?",
+          "alternativas": [
+            "goed",
+            "went",
+            "going",
+            "goes"
+          ],
+          "correta": 1,
+          "feedback": "Go é irregular: went."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "ing-07",
+      "materia": "Inglês",
+      "unidade": "Vocabulário",
+      "titulo": "Conectivos em inglês",
+      "teoria": "And adiciona ideias, but introduz contraste, because indica motivo e therefore indica conclusão. Reconhecer conectivos ajuda a interpretar o argumento mesmo com vocabulário parcial.",
+      "passos": [
+        "Leia as orações",
+        "Identifique causa ou oposição",
+        "Traduza o conectivo em contexto"
+      ],
+      "exemplo": "I studied, but I was tired.",
+      "resolucao": "Estudei, mas estava cansado. But indica contraste.",
+      "questoes": [
+        {
+          "pergunta": "Qual palavra significa porque?",
+          "alternativas": [
+            "and",
+            "but",
+            "because",
+            "or"
+          ],
+          "correta": 2,
+          "feedback": "Because introduz uma causa."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "log-01",
+      "materia": "Raciocínio lógico",
+      "unidade": "Lógica",
+      "titulo": "Proposições e valores lógicos",
+      "teoria": "Proposição é uma frase que pode ser julgada verdadeira ou falsa, como 2+2=4. Perguntas e ordens, por si, não possuem valor lógico de verdade. A lógica estuda conexões entre afirmações.",
+      "passos": [
+        "Leia a frase",
+        "Verifique se admite verdadeiro ou falso",
+        "Classifique"
+      ],
+      "exemplo": "2 é um número par.",
+      "resolucao": "É uma proposição verdadeira.",
+      "questoes": [
+        {
+          "pergunta": "Qual é proposição?",
+          "alternativas": [
+            "Feche a porta!",
+            "Que horas são?",
+            "3 é maior que 1",
+            "Estude agora!"
+          ],
+          "correta": 2,
+          "feedback": "Pode ser classificada como verdadeira ou falsa."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "log-02",
+      "materia": "Raciocínio lógico",
+      "unidade": "Lógica",
+      "titulo": "Conectivos E e OU",
+      "teoria": "Na lógica clássica, P E Q é verdadeiro somente se ambas forem verdadeiras. P OU Q (inclusivo) é verdadeiro quando ao menos uma for verdadeira. É importante distinguir o OU inclusivo do uso cotidiano por vezes exclusivo.",
+      "passos": [
+        "Escreva as proposições",
+        "Analise cada valor",
+        "Use regra do conectivo"
+      ],
+      "exemplo": "P é verdadeiro e Q é falso.",
+      "resolucao": "P E Q é falso; P OU Q é verdadeiro.",
+      "questoes": [
+        {
+          "pergunta": "Se P é falso e Q é verdadeiro, P E Q é:",
+          "alternativas": [
+            "Verdadeiro",
+            "Falso",
+            "Indeterminado",
+            "Sempre ambos"
+          ],
+          "correta": 1,
+          "feedback": "A conjunção exige ambas verdadeiras."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "log-03",
+      "materia": "Raciocínio lógico",
+      "unidade": "Sequências",
+      "titulo": "Sequências e padrões",
+      "teoria": "Em sequências, observe diferença, multiplicação ou alternância. Um padrão deve explicar todos os termos dados; não basta funcionar para o último par. Algumas sequências permitem mais de uma regra, por isso observe as opções.",
+      "passos": [
+        "Compare termos consecutivos",
+        "Procure soma ou multiplicação",
+        "Teste a regra"
+      ],
+      "exemplo": "2, 4, 8, 16, ...",
+      "resolucao": "Cada termo é o dobro do anterior. Próximo: 32.",
+      "questoes": [
+        {
+          "pergunta": "Próximo termo: 3, 6, 9, 12, ...",
+          "alternativas": [
+            "13",
+            "14",
+            "15",
+            "18"
+          ],
+          "correta": 2,
+          "feedback": "A sequência soma 3 a cada etapa."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "log-04",
+      "materia": "Raciocínio lógico",
+      "unidade": "Conjuntos",
+      "titulo": "União e interseção",
+      "teoria": "A∪B reúne elementos que pertencem a pelo menos um dos conjuntos. A∩B contém elementos comuns aos dois. Na contagem, não conte duas vezes os elementos repetidos.",
+      "passos": [
+        "Liste A e B",
+        "Encontre repetidos",
+        "Monte união sem duplicar",
+        "Separe interseção"
+      ],
+      "exemplo": "A={1,2,3}, B={3,4}.",
+      "resolucao": "A∪B={1,2,3,4} e A∩B={3}.",
+      "questoes": [
+        {
+          "pergunta": "Interseção de {1,4,5} e {2,4,6}:",
+          "alternativas": [
+            "{1}",
+            "{4}",
+            "{5,6}",
+            "{}"
+          ],
+          "correta": 1,
+          "feedback": "Apenas 4 aparece nos dois."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "log-05",
+      "materia": "Raciocínio lógico",
+      "unidade": "Problemas",
+      "titulo": "Princípio de contagem",
+      "teoria": "Se uma escolha tem 3 possibilidades e outra independente tem 4, existem 3×4 combinações. O princípio multiplicativo evita contar caso a caso, mas exige verificar se as etapas são independentes.",
+      "passos": [
+        "Identifique etapas",
+        "Conte opções de cada uma",
+        "Multiplique"
+      ],
+      "exemplo": "Há 2 camisetas e 3 calças.",
+      "resolucao": "Existem 2×3=6 combinações.",
+      "questoes": [
+        {
+          "pergunta": "Com 4 entradas e 2 pratos, quantas combinações possíveis?",
+          "alternativas": [
+            "6",
+            "8",
+            "10",
+            "16"
+          ],
+          "correta": 1,
+          "feedback": "4×2=8 escolhas de um item de cada tipo."
+        }
+      ],
+      "nivel": "fundamentos"
+    }
+  ]
+}
