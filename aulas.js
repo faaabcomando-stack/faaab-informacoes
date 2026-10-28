@@ -5,29 +5,46 @@ const $=id=>document.getElementById(id);
 const escapeHTML=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const norm=v=>String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
 const STORE="faaab-academia-v1";
-const state={lessons:[],subject:"Todas",search:"",selected:null,limit:25,level:"iniciante",progress:{done:{},attempts:0,correct:0},question:null,answered:false,mode:"lesson",session:null,ready:false};
+const state={lessons:[],subject:"Todas",search:"",selected:null,limit:25,level:"iniciante",progress:{done:{},attempts:0,correct:0},question:null,answered:false,mode:"lesson",session:null,ready:false,programId:null,programName:null,allowedIds:null};
 const ri=(min,max)=>min+Math.floor(Math.random()*(max-min+1));
 const shuffled=a=>{const b=a.slice();for(let i=b.length-1;i>0;i--){const j=ri(0,i);[b[i],b[j]]=[b[j],b[i]]}return b};
 function loadProgress(){try{const p=JSON.parse(localStorage.getItem(STORE)||"null");if(p&&typeof p==="object"&&p.done&&typeof p.done==="object"){state.progress={done:p.done,attempts:Number(p.attempts)||0,correct:Number(p.correct)||0}}}catch{}}
 function saveProgress(){try{localStorage.setItem(STORE,JSON.stringify(state.progress))}catch{}}
 function record(lesson,correct){state.progress.attempts++;if(correct){state.progress.correct++;state.progress.done[lesson.id]=Date.now()}saveProgress();summary();}
+function visibleLessons(){return state.allowedIds?state.lessons.filter(x=>state.allowedIds.has(x.id)):state.lessons}
+function setProgram(program){
+ if(!state.ready)return false;
+ const ids=new Set(program.lessonIds||[]);
+ const valid=state.lessons.filter(x=>ids.has(x.id));
+ if(!valid.length){state.allowedIds=new Set();state.programId=program.id;state.programName=program.heading;state.selected=null;return false}
+ state.allowedIds=new Set(valid.map(x=>x.id));state.programId=program.id;state.programName=program.heading;
+ state.subject="Todas";state.search="";state.limit=25;state.session=null;state.mode="lesson";
+ $("lesson-search").value="";
+ const lastKey="faaab-academia-last-"+program.id;
+ let last=null;try{last=localStorage.getItem(lastKey)}catch{}
+ state.selected=valid.find(x=>x.id===last)||valid[0];
+ $("academy-program-title").textContent=program.heading;
+ $("academy-program-description").textContent=program.description||"Aulas e exercícios selecionados para esta prova. Os resultados ficam no dispositivo.";
+ $("academia").hidden=false;renderList();renderReader();
+ return true
+}
 function summary(){
- const total=state.lessons.length,done=state.lessons.filter(x=>state.progress.done[x.id]).length;
+ const included=visibleLessons();const total=included.length,done=included.filter(x=>state.progress.done[x.id]).length;
  $("academy-total").textContent=total+" aulas";
  $("academy-progress").textContent=done+" concluídas · "+(state.progress.attempts?Math.round(100*state.progress.correct/state.progress.attempts):0)+"% acertos";
  const p=$("academy-progress");
  if(p)p.setAttribute("aria-label",done+" de "+total+" aulas concluídas");
 }
 function subjects(){
- const list=["Todas",...new Set(state.lessons.map(x=>x.materia))];
+ const list=["Todas",...new Set(visibleLessons().map(x=>x.materia))];
  $("lesson-subjects").innerHTML=list.map(name=>{
-  const size=name==="Todas"?state.lessons.length:state.lessons.filter(x=>x.materia===name).length;
+  const included=visibleLessons();const size=name==="Todas"?included.length:included.filter(x=>x.materia===name).length;
   return '<button type="button" data-subject="'+escapeHTML(name)+'" aria-pressed="'+(name===state.subject)+'">'+escapeHTML(name)+' <small>'+size+'</small></button>';
  }).join("");
 }
 function filtered(){
  const q=norm(state.search);
- return state.lessons.filter(x=>(state.subject==="Todas"||x.materia===state.subject)&&(!q||norm([x.titulo,x.materia,x.unidade,x.teoria].join(" ")).includes(q)));
+ return visibleLessons().filter(x=>(state.subject==="Todas"||x.materia===state.subject)&&(!q||norm([x.titulo,x.materia,x.unidade,x.teoria].join(" ")).includes(q)));
 }
 function renderList(){
  subjects();
@@ -42,16 +59,16 @@ function renderList(){
  summary();
 }
 function selectLesson(id,{scroll=false}={}){
- const lesson=state.lessons.find(x=>x.id===id);if(!lesson)return;
+ const lesson=visibleLessons().find(x=>x.id===id);if(!lesson)return;
  state.selected=lesson;state.mode="lesson";state.session=null;state.question=null;state.answered=false;
- try{localStorage.setItem("faaab-academia-last",lesson.id)}catch{}
+ try{localStorage.setItem("faaab-academia-last",lesson.id);if(state.programId)localStorage.setItem("faaab-academia-last-"+state.programId,lesson.id)}catch{}
  if(state.subject!=="Todas"&&state.subject!==lesson.materia){state.subject=lesson.materia;state.search="";$("lesson-search").value=""}
  renderList();renderReader();
  if(scroll&&window.matchMedia("(max-width:760px)").matches){$("academy-reader").scrollIntoView({behavior:"smooth",block:"start"})}
 }
 function nextLesson(){
  if(!state.selected)return;
- const same=state.lessons.filter(x=>x.materia===state.selected.materia);
+ const same=visibleLessons().filter(x=>x.materia===state.selected.materia);
  const i=same.findIndex(x=>x.id===state.selected.id);
  const next=same[(i+1)%same.length];
  selectLesson(next.id,{scroll:false});
@@ -83,7 +100,7 @@ function quizMarkup(q,{session=false}={}){
  return '<div class="lesson-quiz" id="lesson-quiz"><div class="lesson-quiz-header"><strong>'+(session?"Questão "+(state.session.index+1)+" de "+state.session.questions.length:"Agora é sua vez")+'</strong><span class="tag">Escolha uma resposta</span></div><h4>'+escapeHTML(q.pergunta)+'</h4><div class="lesson-options">'+answers+'</div><div id="lesson-feedback" class="lesson-feedback" role="status" aria-live="polite" hidden></div></div>';
 }
 function practiceExam(subject){
- const set=shuffled(state.lessons.filter(x=>x.materia===subject&&x.questoes?.length)).slice(0,Math.min(10,state.lessons.filter(x=>x.materia===subject).length));
+ const set=shuffled(visibleLessons().filter(x=>x.materia===subject&&x.questoes?.length)).slice(0,Math.min(10,visibleLessons().filter(x=>x.materia===subject).length));
  if(!set.length)return;
  state.mode="session";state.session={subject,questions:set.map(l=>({lesson:l,question:l.gerador?buildDynamic(l.gerador,state.level):l.questoes[0]})),index:0,score:0,answered:false};
  state.answered=false;state.question=state.session.questions[0].question;
@@ -102,8 +119,8 @@ function renderSession(){
 }
 function renderReader(){
  const lesson=state.selected;if(!lesson){$("academy-reader").innerHTML='<div class="study-start"><h3>Comece por uma matéria</h3><p>Selecione uma das aulas à esquerda.</p></div>';return}
- const total=state.lessons.filter(x=>x.materia===lesson.materia).length;
- const done=state.lessons.filter(x=>x.materia===lesson.materia&&state.progress.done[x.id]).length;
+ const total=visibleLessons().filter(x=>x.materia===lesson.materia).length;
+ const done=visibleLessons().filter(x=>x.materia===lesson.materia&&state.progress.done[x.id]).length;
  const generated=!!lesson.gerador;
  state.question=makeQuestion(lesson);state.answered=false;
  const theory=escapeHTML(lesson.teoria).replace(/\n/g,"</p><p class=\"lesson-text\">");
@@ -129,7 +146,7 @@ function openFromProgram(subject,topic){
  const map=[["mat","Matemática"],["port","Português"],["lingua","Português"],["geo","Geografia"],["hist","História"],["fis","Física"],["quim","Química"],["cien","Ciências"],["ingles","Inglês"],["racio","Raciocínio lógico"]];
  const target=map.find(([k])=>key.includes(k))?.[1]||"Todas";
  state.subject=target;state.search="";$("lesson-search").value="";
- const eligible=state.lessons.filter(x=>target==="Todas"||x.materia===target);
+ const eligible=visibleLessons().filter(x=>target==="Todas"||x.materia===target);
  const keywords=norm(topic).split(/\s+/).filter(w=>w.length>=2&&!["de","da","do","dos","das","em","no","na","os","as","um","uma","e"].includes(w));
  const scores=eligible.map(l=>({lesson:l,score:keywords.reduce((n,w)=>n+(norm(l.titulo).includes(w)?5:norm(l.teoria).includes(w)?1:0),0)})).sort((a,b)=>b.score-a.score);
  const candidate=scores[0]?.score? scores[0].lesson:eligible[0];
@@ -172,14 +189,14 @@ async function boot(){
   for(const lesson of lessons){if(!lesson.id||ids.has(lesson.id)||!lesson.materia||!lesson.titulo||!lesson.teoria||!lesson.resolucao||!lesson.questoes?.[0])throw Error("Aula incompleta: "+lesson.id);ids.add(lesson.id)}
   state.lessons=lessons;state.ready=true;summary();
   const last=(()=>{try{return localStorage.getItem("faaab-academia-last")}catch{return null}})();
-  if(last&&lessons.some(x=>x.id===last)){state.selected=lessons.find(x=>x.id===last);state.subject=state.selected.materia}
-  else{state.subject="Matemática";state.selected=lessons.find(x=>x.titulo.toLowerCase().startsWith("adição"))||lessons[0]}
-  renderList();renderReader();
+  state.selected=null;state.subject="Todas";
+  $("academy-reader").innerHTML='<div class="study-start"><h3>Escolha uma prova primeiro</h3><p>O estudo será montado conforme o programa dessa seleção.</p></div>';
+  document.dispatchEvent(new CustomEvent("faaab:lessons-ready",{detail:{total:lessons.length}}));
  }catch(err){
   $("academy-lessons").innerHTML='<div class="academy-empty"><b>Não foi possível carregar as aulas.</b>'+escapeHTML(err.message)+'. Atualize a página e tente novamente.</div>';
   $("academy-total").textContent="Indisponível";
  }
 }
-window.FAAABLessons={openFromProgram,selectLesson:(id)=>{if(state.ready)selectLesson(id,{scroll:true})},getCount:()=>state.lessons.length};
+window.FAAABLessons={openFromProgram,setProgram,isReady:()=>state.ready,selectLesson:(id)=>{if(state.ready)selectLesson(id,{scroll:true})},getCount:()=>visibleLessons().length};
 document.addEventListener("DOMContentLoaded",boot);
 })();
