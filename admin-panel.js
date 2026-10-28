@@ -21,13 +21,23 @@ function notice(message,error=false){
  const el=$("notification");el.hidden=false;el.textContent=message;el.classList.toggle("error",!!error);
 }
 function hideNotice(){$("notification").hidden=true}
+function canPublishFile(name){
+ const p=states.auth?.permissions||{};
+ if(name==="admin_whitelist")return !!p.manageWhitelist;
+ if(p.publishAllContent)return true;
+ if(name==="noticias")return !!p.publishNews;
+ if(name==="autoridades")return !!p.publishAuthorities;
+ if(name==="cursos")return !!p.publishCourses;
+ return false;
+}
+function canPublishPending(){return states.dirty.size>0&&[...states.dirty].every(canPublishFile)}
 function syncPending(){
  const count=states.dirty.size;
  $("changes-count").textContent=count?count+" arquivo"+(count===1?" alterado":"s alterados"):"Nenhuma alteração";
  $("metric-dirty").textContent=count;
  $("publish-title").textContent=count?count+" arquivo"+(count===1?" pronto":"s prontos")+" para publicação":"Sem alterações pendentes";
  $("publish-desc").textContent=count?"Publique com seu login autorizado ou baixe um ZIP.":"Não há alterações pendentes.";
- ["download-package","download-bottom"].forEach(id=>$(id).disabled=!count); ["publish-server","publish-bottom"].forEach(id=>$(id).disabled=!count||!["owner","editor"].includes(states.auth?.role));
+ ["download-package","download-bottom"].forEach(id=>$(id).disabled=!count); ["publish-server","publish-bottom"].forEach(id=>$(id).disabled=!count||!canPublishPending());
 }
 async function load(name){
  if(Object.prototype.hasOwnProperty.call(states.data,name))return states.data[name];
@@ -161,17 +171,17 @@ function whitelistData(){return states.data.admin_whitelist}
 function isOwner(){return states.auth?.role==="owner"}
 function renderWhitelist(){
  const body=whitelistData();if(!body||!Array.isArray(body.membros))return;
- $("whitelist-list").innerHTML='<div class="item"><span class="item-label">Proprietário</span><strong>FAAAB</strong><p>Acesso verificado pelo servidor OAuth.</p></div>'+(body.membros.length?body.membros.map((x,i)=>'<div class="item"><span class="item-label">Acesso '+escapeText(x.perfil==="editor"?"Editor":"Revisor")+'</span><strong>@'+escapeText(x.robloxUsername||x.robloxId||"Google autorizado")+'</strong><p>'+escapeText(x.robloxId?"ID Roblox: "+x.robloxId+" · ":"")+(x.robloxId?"Conta identificada. ":"Identificação validada pelo servidor ao entrar. ")+escapeText(x.observacao||"")+'</p><div class="item-actions">'+(isOwner()?'<button class="remove" type="button" data-whitelist-delete="'+i+'">Revogar acesso</button>':"")+'</div></div>').join(""):'<div class="empty">Nenhum usuário além do proprietário.</div>');
+ $("whitelist-list").innerHTML='<div class="item"><strong>Whitelist = acesso ao painel</strong><p>A aprovação não concede cargo; atribuições são feitas depois, manualmente.</p><a href="/cargos">Abrir atribuição de cargos</a></div>'+(body.membros.length?body.membros.map((x,i)=>'<div class="item"><span class="item-label">Acesso autorizado</span><strong>@'+escapeText(x.robloxUsername||x.robloxId||"Google autorizado")+'</strong><p>'+escapeText(x.observacao||"Sem cargo automático")+'</p><div class="item-actions">'+(isOwner()?'<button class="remove" data-whitelist-delete="'+i+'">Revogar acesso</button>':"")+'</div></div>').join(""):'<div class="empty">Nenhum membro aprovado por nick.</div>');
  $("whitelist-form").querySelectorAll("input,select,textarea,button").forEach(el=>el.disabled=!isOwner());
 }
 function whitelistAdd(user,role,note,id=""){
  if(!isOwner())throw Error("Somente o proprietário pode adicionar membros.");
  const nick=robloxName(user);if(!nick)throw Error("Digite o nickname verdadeiro do Roblox.");
- if(!["editor","revisor"].includes(role))throw Error("Função deve ser editor ou revisor.");
+
  const robloxId=String(id||"").trim();if(robloxId&&!/^\d{1,20}$/.test(robloxId))throw Error("ID do Roblox inválido.");
  const obj=copy(whitelistData());if(!Array.isArray(obj.membros))throw Error("Whitelist inválida.");
  if(obj.membros.some(x=>x.robloxUsername?.toLowerCase()===nick.toLowerCase()||(robloxId&&String(x.robloxId||"")===robloxId)))throw Error("Esse usuário já está autorizado.");
- obj.membros.push({robloxUsername:nick,robloxId:robloxId||null,perfil:role,observacao:note||"",autorizacao:"oauth-roblox-verificado"});
+ obj.membros.push({robloxUsername:nick,robloxId:robloxId||null,observacao:note||"",autorizacao:"oauth-roblox-verificado-sem-cargo"});
  setData("admin_whitelist",obj);return nick
 }
 function whitelistRemove(user){
@@ -184,7 +194,7 @@ function whitelistRemove(user){
 }
 function whitelistSubmit(ev){
  ev.preventDefault();
- try{const nick=whitelistAdd($("whitelist-user").value,$("whitelist-role").value,$("whitelist-note").value.trim(),$("whitelist-id").value);
+ try{const nick=whitelistAdd($("whitelist-user").value,null,$("whitelist-note").value.trim(),$("whitelist-id").value);
  $("whitelist-form").reset();notice("@"+nick+" incluído no rascunho da whitelist. Publique para conceder acesso.");}catch(e){notice(e.message,true)}
 }
 function whitelistDelete(ev){
@@ -200,21 +210,20 @@ async function renderRegistrations(){
   const data=await res.json();if(!res.ok)throw Error(data.error||"HTTP "+res.status);
   const rows=Array.isArray(data.registrations)?data.registrations:[];
   box.innerHTML=rows.length?rows.map(u=>{
-   const provider=u.provider==="google"?"Google":"Roblox",given=u.grant_role;
-   const labels='<div class="item-label">'+escapeText(provider)+' · '+(given?"Aprovado como "+escapeText(given):"Aguardando aprovação")+'</div>';
-   return '<div class="item">'+labels+'<strong>'+escapeText(u.display_name||"Usuário registrado")+'</strong><p>'+escapeText(u.email||u.linked_roblox_id||"Conta de "+provider)+' · Registro verificado pelo provedor.</p><div class="item-actions">'+(given?'<button class="remove" type="button" data-reg-action="revoke" data-reg-key="'+escapeText(u.user_key)+'">Revogar acesso privado</button>':'<button type="button" data-reg-action="grant" data-reg-role="editor" data-reg-key="'+escapeText(u.user_key)+'">Aprovar como editor</button><button type="button" data-reg-action="grant" data-reg-role="revisor" data-reg-key="'+escapeText(u.user_key)+'">Aprovar como revisor</button>')+'</div></div>';
-  }).join(""):'<div class="empty">Ainda não houve registros pelo Roblox ou Google.</div>';
- }catch(e){box.textContent="Não foi possível consultar as solicitações: "+e.message}
+   const provider=u.provider==="google"?"Google":"Roblox",approved=u.approved;
+   return '<div class="item"><span class="item-label">'+escapeText(provider)+' · '+(approved?"Whitelist aprovada":"Whitelist pendente")+'</span><strong>'+escapeText(u.display_name||"Usuário")+'</strong><p>Conta verificada pelo provedor. Sem atribuição automática de cargo.</p><div class="item-actions">'+(approved?'<button class="remove" type="button" data-reg-action="revoke" data-reg-key="'+escapeText(u.user_key)+'">Revogar whitelist</button>':'<button type="button" data-reg-action="grant" data-reg-key="'+escapeText(u.user_key)+'">Aprovar whitelist</button>')+'</div></div>';
+  }).join(""):'<div class="empty">Nenhuma conta cadastrada ainda.</div>';
+ }catch(e){box.textContent="Falha ao consultar: "+e.message}
 }
 async function grantRegistration(ev){
  const b=ev.target.closest("[data-reg-action]");if(!b||!isOwner())return;
- const action=b.dataset.regAction,userKey=b.dataset.regKey,role=b.dataset.regRole||null;
+ const action=b.dataset.regAction,userKey=b.dataset.regKey;
  if(!["grant","revoke"].includes(action)||!userKey)return;
  if(!confirm((action==="grant"?"Aprovar":"Revogar")+" acesso de "+userKey+"?"))return;
  try{
-  const r=await fetch("/api/grant",{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json","x-faaab-csrf":states.auth.csrf},body:JSON.stringify({action,userKey,role})});
+  const r=await fetch("/api/grant",{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json","x-faaab-csrf":states.auth.csrf},body:JSON.stringify({action,userKey})});
   const out=await r.json();if(!r.ok)throw Error(out.error||"Falha");
-  notice(action==="grant"?"Usuário aprovado no servidor. O acesso já foi liberado.":"Acesso revogado no servidor.");
+  notice(action==="grant"?"Whitelist liberada. Agora atribua o cargo manualmente na página Cargos.":"Whitelist revogada; cargos dessa conta também foram retirados.");
   await renderRegistrations();
  }catch(e){notice("Não foi possível atualizar o acesso: "+e.message,true)}
 }
@@ -225,9 +234,9 @@ async function executeCommand(ev){
  ev.preventDefault();
  const raw=$("command-input").value.trim(),tokens=raw.split(/\s+/),action=(tokens[0]||"").toLowerCase();
  try{
- if(action==="/ajuda"){commandOutput("COMANDOS DO PAINEL\n/ajuda\n/status\n/wl listar\n/wl adicionar <NickRoblox> <editor|revisor>\n/wl remover <NickRoblox>\n/noticia Título | Texto do comunicado\n/titular <ID_DO_CARGO> <USUARIO_ROBLOX> [ID_ROBLOX]\n\nComandos preparam edições. A publicação autenticada modifica o conteúdo no GitHub, nunca o jogo Roblox.");return}
+ if(action==="/ajuda"){commandOutput("COMANDOS DO PAINEL\n/ajuda\n/status\n/wl listar\n/wl adicionar <NickRoblox>\n/wl remover <NickRoblox>\n/noticia Título | Texto do comunicado\n/titular <ID_DO_CARGO> <USUARIO_ROBLOX> [ID_ROBLOX]\n\nComandos preparam edições. A publicação autenticada modifica o conteúdo no GitHub, nunca o jogo Roblox.");return}
  if(action==="/status"){commandOutput("Arquivos alterados: "+(states.dirty.size?[...states.dirty].join(", "):"nenhum")+".\nPublicação: clique em Publicar com login.");return}
- if(action==="/wl"){await load("admin_whitelist");const sub=tokens[1]?.toLowerCase();if(sub==="listar"){const members=whitelistData().membros;commandOutput(members.length?members.map(x=>"@"+(x.robloxUsername||x.robloxId)+" ("+x.perfil+")").join("\n"):"Whitelist vazia, somente proprietário");return}if(sub==="adicionar"||sub==="add"){const id=whitelistAdd(tokens[2],(tokens[3]||"").toLowerCase(),"Adicionado por comando editorial.");commandOutput("@"+id+" adicionado ao rascunho. Publique para autorizar o acesso.");return}if(sub==="remover"||sub==="remove"){whitelistRemove(tokens[2]);commandOutput("Cadastro de @"+tokens[2]+" retirado do rascunho. Publique para revogar.");return}throw Error("Use /wl listar, /wl adicionar usuario editor, ou /wl remover usuario")}
+ if(action==="/wl"){await load("admin_whitelist");const sub=tokens[1]?.toLowerCase();if(sub==="listar"){const members=whitelistData().membros;commandOutput(members.length?members.map(x=>"@"+(x.robloxUsername||x.robloxId)+" ("+x.perfil+")").join("\n"):"Whitelist vazia, somente proprietário");return}if(sub==="adicionar"||sub==="add"){const id=whitelistAdd(tokens[2],null,"Autorizado para acessar, sem cargo automático.");commandOutput("@"+id+" adicionado ao rascunho. Publique para autorizar o acesso.");return}if(sub==="remover"||sub==="remove"){whitelistRemove(tokens[2]);commandOutput("Cadastro de @"+tokens[2]+" retirado do rascunho. Publique para revogar.");return}throw Error("Use /wl listar, /wl adicionar usuario editor, ou /wl remover usuario")}
  if(action==="/noticia"){await load("noticias");const rest=raw.slice(tokens[0].length).trim(),split=rest.indexOf("|");if(split<1)throw Error("Use /noticia Título | Texto do comunicado");const titulo=rest.slice(0,split).trim(),resumo=rest.slice(split+1).trim();if(!titulo||!resumo||titulo.length>150||resumo.length>2500)throw Error("Título ou conteúdo inválido.");const all=copy(states.data.noticias);all.push({data:nowDate(),titulo,resumo});setData("noticias",all);commandOutput("Notícia adicionada ao rascunho: "+titulo);return}
  if(action==="/titular"){await load("autoridades");const id=tokens[1],username=tokens[2],robloxId=tokens[3]||null;if(!id||!username)throw Error("Use /titular GOV-PRE NomeDoJogador 123456789");if(robloxId&&!/^\d{1,18}$/.test(robloxId))throw Error("ID Roblox inválido.");const all=copy(offices()),entry=all.find(x=>x.id.toLowerCase()===id.toLowerCase());if(!entry)throw Error("Cargo não encontrado. Consulte os IDs na lista de autoridades do JSON.");entry.titular={username,robloxId,avatarUrl:null};setData("autoridades",all);commandOutput("Titular de "+entry.nome+" registrado no rascunho: "+username+".");return}
  throw Error("Comando não reconhecido. Digite /ajuda.");
@@ -239,7 +248,7 @@ function validateAdvanced(name,data){
   if(!isOwner())throw Error("Somente o proprietário pode editar a whitelist.");
   if(!data||!Array.isArray(data.membros)||data.proprietarioGitHub!==OWNER)throw Error("Whitelist inválida.");
   const seen=new Set();
-  for(const m of data.membros){const user=robloxName(m.robloxUsername);if(!user||seen.has(user.toLowerCase())||!["editor","revisor"].includes(m.perfil)||m.robloxId&&!/^\d{1,20}$/.test(String(m.robloxId)))throw Error("Registro inválido: "+String(m.robloxUsername));seen.add(user.toLowerCase())}
+  for(const m of data.membros){const user=robloxName(m.robloxUsername);if(!user||seen.has(user.toLowerCase())||m.robloxId&&!/^\d{1,20}$/.test(String(m.robloxId)))throw Error("Registro inválido: "+String(m.robloxUsername));seen.add(user.toLowerCase())}
  }
  if(name==="pm_progressao"&&(!Array.isArray(data.regras)||!data.aprovacao))throw Error("Progressão PM deve incluir regras e aprovação.");
  if(name==="geral"&&(typeof data!=="object"||data===null))throw Error("Conteúdo de geral.json inválido.");
@@ -277,7 +286,7 @@ function zipFiles(files){
  return new Blob([...pieces,...central,end],{type:"application/zip"})
 }
 async function publishServer(){
- if(!["owner","editor"].includes(states.auth?.role)){notice("Sua conta não tem permissão de publicação.",true);return}
+ if(!canPublishPending()){notice("Seus cargos não permitem publicar todos os arquivos alterados.",true);return}
  if(!states.auth.csrf){notice("Sessão inválida. Faça login novamente.",true);return}
  const names=[...states.dirty];if(!names.length)return;
  if(names.includes("admin_whitelist")&&!isOwner()){notice("A whitelist só pode ser alterada pelo proprietário.",true);return}
