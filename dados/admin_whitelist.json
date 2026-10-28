@@ -1,0 +1,8 @@
+{
+  "versao": 1,
+  "modo": "cadastro-editorial-publico-nao-autenticacao",
+  "projeto": "FAAAB",
+  "proprietarioGitHub": "faaabcomando-stack",
+  "observacao": "Esta lista serve somente para organizar colaboradores do portal. NÃO concede acesso ao repositório, ao site ou ao jogo Roblox. Permissões de escrita são controladas pelo GitHub, e comandos no Roblox precisam de backend seguro.",
+  "membros": []
+}
