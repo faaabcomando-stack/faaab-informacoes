@@ -1,0 +1,8 @@
+# FAAAB auth deployment (nunca publicar segredos)
+auth/wrangler.toml
+auth/.dev.vars
+auth/.env
+auth/node_modules/
+auth/.wrangler/
+**/*.pem
+**/*-credentials.json
