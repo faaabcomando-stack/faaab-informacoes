@@ -6,9 +6,67 @@ import {getFirestore,collection,doc,getDoc,getDocs,query,where,limit,setDoc,upda
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const formatDate=v=>{if(!v)return "Data não informada";const d=v?.toDate?v.toDate():new Date(v);return isNaN(d)?"Data não informada":d.toLocaleString("pt-BR",{dateStyle:"medium",timeStyle:"short"})};
-const s={app:null,auth:null,db:null,me:null,profile:null,seed:null,roleCatalog:null,posts:[],exams:[],selectedTopic:null,selectedPath:null,scopeSources:null};
-const catalogue=()=>s.seed?.trilhas||[];
+const s={app:null,auth:null,db:null,me:null,profile:null,seed:null,roleCatalog:null,posts:[],exams:[],selectedTopic:null,selectedPath:null,scopeSources:null,allExams:null,paths:[],catalogLimit:20};
+const catalogue=()=>s.paths.length?s.paths:s.seed?.trilhas||[];
 const validTab=new Set(["noticias","avisos","marketing","provas","estudos","publicar","administracao"]);
+function safeSource(url){
+ try{const u=new URL(url);return u.protocol==="https:"&&[
+ "www.vunesp.com.br","www.marinha.mil.br","www.fab.mil.br",
+ "www2.fab.mil.br","ingresso.eear.fab.mil.br","portaldeeducacao.eb.mil.br",
+ "cigs.eb.mil.br","www.cipqdt.eb.mil.br"
+ ].includes(u.hostname)?u.href:null}catch{return null}
+}
+const resultLabel={
+ prova_escrita_publica:"Prova pública relacionada",
+ avaliacao_interna:"Avaliação ou seleção interna",
+ sem_prova_publica_comprovada:"Sem prova pública comprovada",
+ organizacao_sem_prova_propria:"Organização, sem prova própria"
+};
+function catalogRows(){
+ if(!s.allExams)return [];
+ const q=$("catalog-search").value.trim().toLocaleLowerCase("pt-BR"),force=$("catalog-force").value,type=$("catalog-type").value,status=$("catalog-status").value;
+ return s.allExams.registros.filter(x=>(!force||x.forca===force)&&(!type||x.tipo===type)&&(!status||x.situacaoProva===status)&&(!q||[x.nome,x.forca,x.sigla,x.tipo,x.origemId,x.observacao,x.efeitoDocumentado].join(" ").toLocaleLowerCase("pt-BR").includes(q)));
+}
+function renderCatalog(){
+ if(!s.allExams)return;
+ const list=catalogRows(),count=list.length,visible=list.slice(0,s.catalogLimit);
+ $("catalog-count").textContent=count+" registro(s) encontrado(s) · "+s.allExams.registros.length+" fichas FAAAB indexadas";
+ $("catalog-records").innerHTML=visible.length?visible.map(x=>{
+  const url=safeSource(x.referenciaUrl),status=x.situacaoProva;
+  return '<article class="catalog-card"><div class="meta"><span>'+esc(x.forca)+'</span><span>'+esc(x.tipo)+'</span><span>'+esc(x.origem==="curso"?"Registro de formação":"Unidade ou instituição")+'</span></div>'+
+   '<h3>'+esc(x.nome)+'</h3><p class="status '+(status==="prova_escrita_publica"?"publica":status==="avaliacao_interna"?"interna":"")+'">'+esc(resultLabel[status]||"Situação não definida")+'</p>'+
+   (x.efeitoDocumentado?'<p><b>Resultado/ingresso no manual:</b> '+esc(x.efeitoDocumentado)+'</p>':"")+
+   '<p><b>Estado na FAAAB:</b> '+esc(x.estadoFAAAB||"Não confirmado")+'</p><p>'+esc((x.observacao||x.formaAcesso||"") .slice(0,320))+'</p>'+
+   '<div class="links"><button type="button" data-catalog-study="'+esc(x.id)+'">Ficha e estudo</button>'+(url?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">Fonte real relacionada</a>':"")+'</div></article>';
+ }).join(""):'<div class="empty">Nenhum registro corresponde aos filtros.</div>';
+ $("catalog-more").hidden=count<=s.catalogLimit;
+ $("catalog-summary").textContent="Todos os "+s.allExams.registros.length+" registros da FAAAB: cursos, centros, batalhões, brigadas, escolas e demais instituições, inclusive sem prova escrita pública.";
+}
+function renderReferences(){
+ if(!s.allExams)return;
+ const refs=s.allExams.referenciasReais.filter(x=>x.id!=="cfn-music");
+ $("reference-list").innerHTML=refs.map(x=>'<article class="reference-card"><span class="eyebrow">'+esc(x.forca)+' · '+esc(resultLabel[x.kind]||"Formação")+'</span><strong>'+esc(x.title)+'</strong><p>'+esc(x.notes)+'</p>'+(safeSource(x.url)?'<a href="'+esc(safeSource(x.url))+'" rel="noopener noreferrer" target="_blank">Consultar acervo/edital oficial ou organizador</a>':"")+'</article>').join("");
+}
+function buildStudyPaths(){
+ const existing=(s.seed?.trilhas||[]).filter(x=>x.id!=="cfn-musico-ref").map(x=>({...x,tipo:"referencia"}));
+ const records=(s.allExams?.registros||[]).map(x=>({
+  id:x.id,tipo:x.tipo,titulo:x.nome,situacao:resultLabel[x.situacaoProva]||"Situação não documentada",
+  edital:safeSource(x.referenciaUrl),provasAnteriores:safeSource(x.referenciaUrl),
+  orientacao:"Essa ficha existe no catálogo da FAAAB, mas não é uma prova aberta nem concede patente.",
+  detalhes:x, materias:[]
+ }));
+ s.paths=[...records,...existing];
+ const types=[...new Set(s.paths.map(x=>x.tipo))].map(id=>({id,nome:({referencia:"Referências com estudo documentado",curso:"Cursos e formações",centro:"Centros",unidade:"Batalhões e unidades",brigada:"Brigadas",escola:"Escolas",academia:"Academias",subdivisao:"Subdivisões",administracao:"Administração",instituicao:"Instituições"})[id]||id}));
+ fillSelect("study-type",types,"Escolha o tipo");
+}
+["catalog-search","catalog-force","catalog-type","catalog-status"].forEach(id=>$(id).addEventListener(id==="catalog-search"?"input":"change",()=>{s.catalogLimit=20;renderCatalog()}));
+$("catalog-more").addEventListener("click",()=>{s.catalogLimit+=20;renderCatalog()});
+$("catalog-records").addEventListener("click",ev=>{
+ const btn=ev.target.closest("[data-catalog-study]");if(!btn||!s.allExams)return;
+ const x=s.allExams.registros.find(r=>r.id===btn.dataset.catalogStudy);if(!x)return;
+ showTab("estudos");$("study-type").value=x.tipo;pathChange("type");
+ $("study-exam").value=x.id;pathChange("exam");
+});
 function notice(msg,error=false){const el=$("site-notice");el.hidden=false;el.textContent=msg;el.classList.toggle("error",error)}
 function showTab(name){if(!validTab.has(name))return;location.hash=name;document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="view-"+name);document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("active",x.dataset.tab===name));if(name==="estudos")showTopic();}
 document.getElementById("tabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(b&&!b.hidden)showTab(b.dataset.tab)});
@@ -178,10 +236,10 @@ $("material-form").addEventListener("submit",async e=>{e.preventDefault();if(!ow
 });
 async function bootstrap(){
  try{
-  const [seedResp,roleResp,configResp]=await Promise.all([fetch("dados/portal_canais_estudos.json"),fetch("dados/admin_roles.json"),fetch("dados/firebase_config.json",{cache:"no-store"})]);
-  if(!seedResp.ok||!roleResp.ok||!configResp.ok)throw Error("Não foi possível carregar os arquivos do portal");
-  s.seed=await seedResp.json();s.roleCatalog=await roleResp.json();const cfg=await configResp.json();
-  fillSelect("study-type",s.seed.tiposProva.filter(x=>x.habilitado).map(x=>({id:x.id,nome:x.nome})),"Selecione o tipo de prova");
+  const [seedResp,roleResp,configResp,catalogResp]=await Promise.all([fetch("dados/portal_canais_estudos.json"),fetch("dados/admin_roles.json"),fetch("dados/firebase_config.json",{cache:"no-store"}),fetch("dados/provas_todas_unidades.json")]);
+  if(!seedResp.ok||!roleResp.ok||!configResp.ok||!catalogResp.ok)throw Error("Não foi possível carregar os arquivos do portal");
+  s.seed=await seedResp.json();s.roleCatalog=await roleResp.json();s.allExams=await catalogResp.json();const cfg=await configResp.json();
+  buildStudyPaths();renderCatalog();renderReferences();
   $("study-type").disabled=false;refreshUserRoleOptions();renderPosts();renderExams();if(validTab.has(location.hash.slice(1))&&!["publicar","administracao"].includes(location.hash.slice(1)))showTab(location.hash.slice(1));
   if(!cfg.enabled||!cfg.app?.apiKey||!cfg.app?.projectId||!cfg.app?.appId){
    $("auth-title").textContent="Google login: configuração pendente";
