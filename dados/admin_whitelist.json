@@ -1,9 +1,9 @@
 {
-  "versao": 2,
-  "modo": "acesso-protegido-por-servidor-oauth",
+  "versao": 3,
+  "modo": "etapa-1-whitelist-antes-de-cargos",
   "projeto": "FAAAB",
   "proprietarioGitHub": "faaabcomando-stack",
-  "observacao": "Whitelist verificada pelo servidor OAuth Roblox/Google. Por nick Roblox, o backend resolve e fixa o UserId; acesso concedido somente após autenticação do dono da conta. Google precisa vincular Roblox, ou Google sub explicitamente autorizado. Esta lista não guarda senhas nem tokens.",
+  "observacao": "Whitelist libera somente a área de membros após login oficial Roblox/Google. Cargos administrativos são atribuídos manualmente pelo proprietário numa segunda etapa, no banco privado D1; nunca por perfil neste JSON.",
   "membros": [],
-  "instrucoes": "Membros: {robloxUsername, robloxId:null, perfil:'editor'|'revisor', observacao:'...'}; não listar emails aqui."
+  "instrucoes": "Membros: {robloxUsername:'NickExato', robloxId:null, observacao:'Whitelist aprovada'}; nenhuma permissão de cargo é criada automaticamente."
 }
