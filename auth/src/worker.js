@@ -1,6 +1,6 @@
 // FAAAB • Backend real de login e autorização (Cloudflare Worker + D1).
 // Não use este script diretamente como arquivo público executável no GitHub Pages.
-// OAuth Google/Roblox, whitelist verificável por identidade, sessão HttpOnly e proteção CSRF.
+// OAuth somente Roblox, whitelist verificável por identidade, sessão HttpOnly e proteção CSRF.
 const SITE_DEFAULT="https://faaabcomando-stack.github.io/faaab-informacoes";
 const API="https://api.github.com/repos/";
 const ALLOWED=new Set(["admin_roles","noticias","autoridades","admin_whitelist","catalogo","hierarquias","cursos","sistemas","historico","geral","pm_progressao"]);
@@ -31,6 +31,7 @@ function requireConfig(env,provider){
  if(!env.DB||!env[name+"_CLIENT_ID"]||!env[name+"_CLIENT_SECRET"])throw new Error("OAuth "+name+" ainda não configurado no servidor.");
 }
 async function oauthStart(req,env,provider,link=false){
+ if(provider!=="roblox"||link)return textResponse("Provedor desativado",404);
  requireConfig(env,provider);
  if(!["google","roblox"].includes(provider))return textResponse("Provedor inválido",404);
  const url=new URL(req.url),origin=url.origin;
@@ -85,6 +86,7 @@ async function getSession(req,env){
  return {user:row,csrf:row.csrf,expires_at:row.expires_at,raw:cookie};
 }
 async function oauthCallback(req,env,provider){
+ if(provider!=="roblox")return textResponse("Provedor desativado",404);
  requireConfig(env,provider);
  const url=new URL(req.url),state=url.searchParams.get("state"),code=url.searchParams.get("code");
  if(!state||!code||state.length>160)return textResponse("Login cancelado ou incompleto.",400);
@@ -202,13 +204,13 @@ async function userContext(req,env){
 function loginPage(ctx){
  const u=ctx?.user,allowed=!!ctx?.role;
  const header='<meta name="viewport" content="width=device-width,initial-scale=1"><meta charset="utf-8"><title>FAAAB · Acesso à administração</title>';
- const intro=u?'<p>Conectado como <strong>'+safe(u.display_name||"Usuário")+'</strong> pelo '+safe(u.provider)+'.</p>':'<p>Entre com sua conta Roblox ou Google. O acesso ao painel é liberado somente para contas aprovadas na whitelist da FAAAB.</p>';
- const buttons=allowed?'<a class="primary" href="/membros">Abrir área de membros</a>':'<a class="primary" href="/auth/roblox">Continuar com Roblox</a><a href="/auth/google">Continuar com Google</a>';
+ const intro=u?'<p>Conectado como <strong>'+safe(u.display_name||"Usuário")+'</strong> pelo Roblox.</p>':'<p>Entre com sua conta Roblox. O acesso ao painel depende da whitelist da FAAAB.</p>';
+ const buttons=allowed?'<a class="primary" href="/membros">Abrir área de membros</a>':'<a class="primary" href="/auth/roblox">Continuar com Roblox</a>';
  const pending=u&&!allowed?'<aside>Identidade verificada. Seu acesso está <strong>aguardando aprovação</strong> da FAAAB. Informe ao responsável o seu nick verdadeiro do Roblox. O nome por si só não libera acesso.</aside>':"";
- const link=u&&u.provider==="google"&&!u.linked_roblox_id?'<a href="/link/roblox">Vincular minha conta Roblox a este Google</a>':"";
+ const link="";
  const linked=u?.linked_roblox_id?'<small>Roblox vinculado: ID '+safe(u.linked_roblox_id)+'</small>':"";
  const logout=u?'<form action="/logout" method="post"><button type="submit">Sair</button></form>':"";
- return '<!doctype html><html lang="pt-BR"><head>'+header+'<style>body{font:15px/1.6 system-ui;background:#f4f6f2;color:#203f2d;margin:0}main{max-width:530px;background:#fff;border:1px solid #dbe5da;border-top:5px solid #ad9765;border-radius:7px;margin:11vh auto 40px;padding:32px;box-shadow:0 8px 30px #10251811}small{color:#69806c;display:block}h1{font:normal 33px Georgia,serif;margin:10px 0}a,button{display:block;text-align:center;border:1px solid #cadacb;background:#f7faf7;border-radius:5px;padding:12px 16px;margin:12px 0;color:#234d34;font-weight:750;text-decoration:none;cursor:pointer;font-size:14px}a.primary{background:#274e37;border-color:#274e37;color:white}aside{padding:15px 18px;background:#fff8e9;color:#705e37;border-left:4px solid #bba06c;margin:15px 0}form button{width:100%}p{color:#627567}footer{color:#829082;font-size:12px;text-align:center}</style></head><body><main><small>FAAAB · ADMINISTRAÇÃO</small><h1>Controle de acesso</h1>'+intro+pending+buttons+link+linked+logout+'<small>O Google pode reutilizar uma sessão já aberta, conforme suas próprias regras. Login e whitelist não atribuem cargo administrativo; o proprietário faz isso manualmente depois.</small></main><footer>Projeto fictício da FAAAB no Roblox · Login oficial do provedor, sem compartilhar senhas</footer></body></html>';
+ return '<!doctype html><html lang="pt-BR"><head>'+header+'<style>body{font:15px/1.6 system-ui;background:#f4f6f2;color:#203f2d;margin:0}main{max-width:530px;background:#fff;border:1px solid #dbe5da;border-top:5px solid #ad9765;border-radius:7px;margin:11vh auto 40px;padding:32px;box-shadow:0 8px 30px #10251811}small{color:#69806c;display:block}h1{font:normal 33px Georgia,serif;margin:10px 0}a,button{display:block;text-align:center;border:1px solid #cadacb;background:#f7faf7;border-radius:5px;padding:12px 16px;margin:12px 0;color:#234d34;font-weight:750;text-decoration:none;cursor:pointer;font-size:14px}a.primary{background:#274e37;border-color:#274e37;color:white}aside{padding:15px 18px;background:#fff8e9;color:#705e37;border-left:4px solid #bba06c;margin:15px 0}form button{width:100%}p{color:#627567}footer{color:#829082;font-size:12px;text-align:center}</style></head><body><main><small>FAAAB · ADMINISTRAÇÃO</small><h1>Controle de acesso</h1>'+intro+pending+buttons+link+linked+logout+'<small>O login Roblox e a whitelist não atribuem cargo administrativo; isso é definido separadamente pela administração.</small></main><footer>Projeto fictício da FAAAB no Roblox · Login oficial do provedor, sem compartilhar senhas</footer></body></html>';
 }
 function safe(v){return String(v??"").replace(/[&<>"']/g,c=>c==="&"?"&amp;":c==="<"?"&lt;":c===">"?"&gt;":c==='"'?"&quot;":"&#39;")}
 async function githubData(name,env){
@@ -301,11 +303,7 @@ export default {
    if(req.method==="GET"&&path==="/health")return jsonify({status:"ok",service:"faaab-auth",configured:!!env.DB});
    if(!env.DB)return textResponse("Backend FAAAB sem banco configurado. Veja auth/README.md.",503);
    if(req.method==="GET"&&path==="/auth/roblox")return oauthStart(req,env,"roblox");
-   if(req.method==="GET"&&path==="/auth/google")return oauthStart(req,env,"google");
-   if(req.method==="GET"&&path==="/link/roblox")return oauthStart(req,env,"roblox",true);
    if(req.method==="GET"&&path==="/callback/roblox")return oauthCallback(req,env,"roblox");
-   if(req.method==="GET"&&path==="/callback/google")return oauthCallback(req,env,"google");
-   if(req.method==="GET"&&path==="/auth/auto-google"){const active=await userContext(req,env);if(active?.approved)return redirect("/membros");if(active?.user)return redirect("/");return redirect("/auth/google");}
    if(req.method==="POST"&&path==="/logout"){
     const s=await getSession(req,env);if(s)await env.DB.prepare("DELETE FROM sessions WHERE token_hash=?").bind(await hash(s.raw)).run();
     return redirect("/",{"set-cookie":clearCookie()});
