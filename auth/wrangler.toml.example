@@ -1,0 +1,19 @@
+name = "faaab-auth"
+main = "src/worker.js"
+compatibility_date = "2026-10-15"
+workers_dev = true
+
+# Copie para auth/wrangler.toml e preencha database_id APÓS criar D1.
+# Os IDs de clientes OAuth e o GitHub token devem ser criados nas respectivas plataformas.
+# Nunca registre client_secret, token GitHub ou IDs privados em dados/ do site público.
+[vars]
+PUBLIC_SITE = "https://faaabcomando-stack.github.io/faaab-informacoes"
+GITHUB_OWNER = "faaabcomando-stack"
+GITHUB_REPO = "faaab-informacoes"
+# Configure GOOGLE_CLIENT_ID, ROBLOX_CLIENT_ID, OWNER_ROBLOX_ID por Wrangler secrets ou variables conforme a política.
+# Use OWNERS apenas por ID verificado, nunca por nickname.
+
+[[d1_databases]]
+binding = "DB"
+database_name = "faaab-auth"
+database_id = "SUBSTITUIR_POR_ID_REAL_DO_D1"
