@@ -57,6 +57,11 @@ $("role-form").addEventListener("submit",async e=>{
 $("staff-registrations").addEventListener("click",handleActions);
 $("staff-assignments").addEventListener("click",handleActions);
 $("staff-reload").addEventListener("click",()=>refresh().catch(e=>say(e.message,true)));
+$("alto-categoria").addEventListener("change",()=>{
+ const cat=$("alto-categoria").value;
+ $("alto-forca").innerHTML=(cat==="civil"?[{id:"GOV",nome:"Governo (força civil)"}]:[{id:"FTB",nome:"Exército"},{id:"FAB",nome:"Força Aérea"},{id:"FMB",nome:"Marinha"},{id:"PM",nome:"Polícia Militar"},{id:"CBM",nome:"Corpo de Bombeiros Militar"}]).map(x=>'<option value="'+x.id+'">'+x.nome+'</option>').join("");
+});
+$("alto-categoria").dispatchEvent(new Event("change"));
 $("role-key").addEventListener("change",scopeRender);
 $("instrutor-tipo").addEventListener("change",targetRender);
 (async()=>{try{const r=await fetch("/api/me",{credentials:"same-origin",cache:"no-store"});me=await r.json();if(me.role!=="owner"){location.replace("/membros");return}
