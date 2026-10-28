@@ -134,3 +134,14 @@ body.faaab-v3 .v3-footer{display:block}
 .v3-force-index .v3-force-context{font:400 26px Georgia,serif;margin-bottom:12px;color:#224330}
 @media(max-width:900px){.v3-force-category-links{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 18px}}
 @media(max-width:640px){.faaab-v3 .v3-mast .v3-wrap{grid-template-columns:minmax(0,1fr)}.faaab-v3 .v3-force-brand{font-size:27px}.faaab-v3 .v3-brand-desc{border-left:0;padding-left:0}.v3-force-category-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 13px}.v3-force-category-links a{font-size:12px;padding:11px 2px}.v3-force-index{padding:20px 0}}
+
+/* A barra verde vira o menu da instituição. No celular, categorias rolam lateralmente. */
+.v3-nav-force .v3-wrap{scroll-snap-type:x proximity;scroll-padding-inline:12px}
+.v3-nav-force a{scroll-snap-align:start}
+.v3-nav-force a[aria-current="page"]{background:#122f21;border-bottom:2px solid #d5bd84}
+.v3-nav-force .v3-wrap::-webkit-scrollbar{height:4px}
+.v3-nav-force .v3-wrap::-webkit-scrollbar-thumb{background:#b89d68}
+@media(max-width:760px){
+ .v3-nav-force::after{content:"DESLIZE PARA VER MAIS CATEGORIAS  →";display:block;font:700 10px/1.4 Arial,sans-serif;letter-spacing:.08em;color:#f0e6c7;background:#193727;padding:6px 16px;text-align:right}
+ .v3-nav-force a{padding:13px 15px}
+}
