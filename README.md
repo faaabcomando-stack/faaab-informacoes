@@ -1,5 +1,23 @@
 # FAAAB — Central de Informações
 
+## Escola FAAAB: aulas interativas e site mobile
+
+**[Começar a estudar dentro do site](central.html#estudos)** — a escola não depende do login Google, da whitelist ou da ativação do Firebase.
+
+O site apresenta **104 aulas autorais** distribuídas por Matemática (30), Português (15), Geografia (12), História (9), Ciências (12), Física (7), Química (7), Inglês (7) e Raciocínio Lógico (5). A estrutura de cada aula contém:
+- teoria explicada em linguagem direta, passo a passo, exemplo e resolução;
+- exercício com quatro alternativas, feedback imediato e explicação da resposta;
+- revisão de até dez questões diferentes da mesma matéria (amostra de aulas);
+- geração repetível de contas em níveis iniciante, intermediário e avançado para soma, subtração, multiplicação, divisão, porcentagem e equações;
+- histórico de aulas concluídas e desempenho salvo **localmente neste dispositivo** (não sincronizado entre celulares).
+
+A experiência de estudo é primária na Central. Os links a acervos externos de provas são referências opcionais, **não substituem as aulas**. Os programas e CDPs da FAAAB não são modificados por estudar ou responder questões.
+
+**Responsividade:** `mobile.css` é compartilhado por todas as páginas HTML atuais (portal, cursos, comando, hierarquia, sistemas, PM, Central e painéis); `aulas.css` oferece layout específico da Academia com seletores por toque, leitura em uma coluna e alternativas grandes. Verifique em dispositivos reais após novas alterações.
+
+Dados de estudo: `dados/aulas_matematica.json`, `dados/aulas_linguagens_humanas.json`, `dados/aulas_ciencias_exatas.json`. Motor do estudo: `aulas.js`. A implantação Firebase continua opcional para as aulas públicas, mas necessária para whitelist, cargos e publicação de editais.
+
+
 ## Catálogo integral de provas e inscrições automatizadas
 
 **[Ver todas as 182 fichas pesquisáveis da FAAAB](central.html#provas)** · **[Estudar por força e formação](central.html#estudos)**.
