@@ -1,0 +1,29 @@
+/* Remaster das páginas de documentação e ferramentas antigas, sem alterar seus scripts. */
+body.faaab-legacy{background:#f8f8f4;color:#213b2b;font-family:"Segoe UI",Arial,sans-serif}
+.faaab-legacy .v3-utility,.faaab-legacy .v3-mast,.faaab-legacy .v3-nav{position:relative;z-index:3}
+.faaab-legacy .v3-mast .v3-wrap{padding:24px 0}
+.faaab-legacy .institution-head{background:#e8ebe2!important;border-bottom:1px solid #ccd3c7;padding:32px 0!important}
+.faaab-legacy .institution-head h1{font:400 clamp(35px,4vw,57px)/1.13 Georgia,serif;letter-spacing:-.04em;color:#21402c!important}
+.faaab-legacy .institution-mark{display:none!important}
+.faaab-legacy .section{background:#f8f8f4}
+.faaab-legacy .panel,.faaab-legacy .manual-entry,.faaab-legacy .manual-sidebar,.faaab-legacy .directory-sidebar,.faaab-legacy .surface,.faaab-legacy .reference-card,.faaab-legacy .catalog-card,.faaab-legacy .post-card,.faaab-legacy .exam-card{border-radius:0!important;box-shadow:none!important;border:1px solid #d1d8cd!important;background:#fffefb!important}
+.faaab-legacy .manual-entry{padding:25px!important;border-left:3px solid #a68d5f!important}
+.faaab-legacy .manual-entry dl div{background:#f8f9f5!important;border:0;border-top:1px solid #d3d9ce!important;border-radius:0}
+.faaab-legacy .manual-sidebar a{border-radius:0}
+.faaab-legacy .navigation-actions>a{border-radius:0!important}
+.faaab-legacy h1,.faaab-legacy h2,.faaab-legacy h3{letter-spacing:-.017em}
+.faaab-legacy .navigation-actions{margin-top:5px}
+.faaab-legacy .footer{background:#193627!important}
+.faaab-legacy .hero{border:0;border-bottom:1px solid #d2d8cd!important;background:#eff0e8!important;padding:30px 0!important;box-shadow:none!important}
+.faaab-legacy .hero h1{font:400 43px Georgia,serif;color:#264734!important;letter-spacing:-.03em}
+.faaab-legacy .hero p{font-size:14px;max-width:700px}
+.faaab-legacy .topnav{background:#e8ece3!important;border-bottom:1px solid #ccd5c9!important;position:sticky;top:0;z-index:5}
+.faaab-legacy #tabs button{color:#31503b!important;background:none!important;border-radius:0!important;border-bottom:3px solid transparent!important;font-weight:750}
+.faaab-legacy #tabs button.active{color:#163d29!important;background:#fffef9!important;border-bottom-color:#ab8e56!important}
+.faaab-legacy .section-head{border-bottom:2px solid #9a916f;padding-bottom:17px}
+.faaab-legacy .section-head h2{font:400 35px Georgia,serif;letter-spacing:-.025em}
+.faaab-legacy .post-card,.faaab-legacy .exam-card{border-width:0 0 1px!important;background:transparent!important;padding:22px 0!important}
+.faaab-legacy .study-start{padding:45px 12px}
+.faaab-legacy .learning-form,.faaab-legacy .learning-content{border-radius:0!important;background:#fffefa!important}
+.faaab-legacy .btn{border-radius:0!important}
+@media(max-width:660px){.faaab-legacy .v3-mast .v3-wrap{padding:15px 0}.faaab-legacy .institution-head h1{font-size:35px}.faaab-legacy .section-head h2{font-size:27px}.faaab-legacy .hero h1{font-size:37px}}
