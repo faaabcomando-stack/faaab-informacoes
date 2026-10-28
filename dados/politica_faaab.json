@@ -1,0 +1,53 @@
+{
+  "titulo": "Sistema político fictício da FAAAB",
+  "criadoEm": "2026-10-28",
+  "uso": "Planejamento documental de roleplay, sujeito às Normas da Comunidade Roblox e à implementação de autenticação e permissões.",
+  "territorio": "Governo nacional fictício da FAAAB. Não incluir cargos municipais ou estaduais não cadastrados.",
+  "organizacoesPoliticas": {
+    "status": "Em planejamento; conteúdo fictício sujeito às regras Roblox",
+    "permitirOrganizacoesReais": false,
+    "nomearSomenteOrganizacoesFicticias": true,
+    "cadastroOficialAtivo": false,
+    "listaPublicaAtiva": true,
+    "registroDeNomes": "Nenhum nome de organização política confirmado."
+  },
+  "eleicao": {
+    "cargoPrincipal": "Presidente",
+    "vicePresidente": "Previsto no catálogo atual com eleição individual; regras detalhadas pendentes",
+    "forma": "Eleições individuais, não uma chapa que recebe cargos por vitória conjunta",
+    "cargosAutomaticamenteEleitos": [
+      "GOV-PRE",
+      "GOV-V-PRE"
+    ],
+    "cargosOutrosPorEleicao": "Não aprovados; inclusive secretarias, ministérios e STF",
+    "situacao": "Calendário e inscrições não abertos"
+  },
+  "elegibilidade": {
+    "deveSerCivil": true,
+    "proibidoConcorrerEnquantoMilitar": true,
+    "exMilitarPodeConcorrerAposCarencia": true,
+    "carenciaDias": null,
+    "marcoDaCarencia": "Data de desligamento efetivo da instituição militar; comprovação por integração futura",
+    "verificacaoServidor": "Pendente",
+    "observacao": "A quantidade de dias não foi aprovada. Ninguém deve ser liberado automaticamente sem prazo definido."
+  },
+  "filiacao": {
+    "papelInicial": "Membro",
+    "cargoAposIngresso": "Nenhum cargo além de membro é concedido automaticamente",
+    "designacao": "Somente após decisão expressa do presidente responsável pela organização",
+    "quemPodeDesignar": "Presidente responsável; identidade/escopo de autoridade exigem confirmação administrativa e autorização no backend",
+    "filiacaoConfereCandidaturaAutomatica": false,
+    "filiacaoConferePoderAdministrativo": false,
+    "registroDeFiliacoes": "Depende de login Roblox e armazenamento seguro, ainda não implementados"
+  },
+  "fontes": [
+    {
+      "nome": "Normas da Comunidade Roblox",
+      "url": "https://about.roblox.com/pt-br/community-standards"
+    },
+    {
+      "nome": "Roblox: funções e permissões de comunidades",
+      "url": "https://en.help.roblox.com/hc/pt-br/articles/203313770-Fun%C3%A7%C3%B5es-de-comunidade-e-permiss%C3%B5es"
+    }
+  ]
+}
