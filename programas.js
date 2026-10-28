@@ -34,7 +34,7 @@ function drawDetail(x){
   return;
  }
  const number=p.materias.reduce((n,m)=>n+m.aulas.length,0);
- node.innerHTML='<div class="program-caption">'+esc(x.forca+" / "+x.nome)+'</div><h3>'+esc(p.heading)+'</h3><span class="program-note available">Preparação disponível · '+p.materias.length+' matérias · '+number+' aulas</span><p>'+esc(p.descricao)+'</p><div class="program-rule">O programa é específico desta seleção. As aulas são autorais e de revisão; <strong>não equivalem à íntegra do edital</strong> e não concedem patente FAAAB.</div><div class="program-subject-list"><h4>Matérias desta prova</h4>'+subjectsInfo(p)+'</div><button type="button" class="btn primary program-start" id="program-start">Começar a estudar esta prova</button>';
+ node.innerHTML='<div class="program-caption">'+esc(x.forca+" / "+x.nome)+'</div><h3>'+esc(p.heading)+'</h3><span class="program-note available">Preparação disponível · '+p.materias.length+' matérias · '+number+' aulas</span><p>'+esc(p.descricao)+'</p><div class="program-rule">O programa é específico desta seleção. As aulas são autorais e de revisão; <strong>não equivalem à íntegra do edital</strong> e não concedem patente FAAAB.</div><div class="program-subject-list"><h4>Matérias desta prova</h4>'+subjectsInfo(p)+'</div><div class="program-actions"><button type="button" class="btn primary program-start" id="program-start">Estudar as matérias</button><button type="button" class="btn outline" id="program-simulado">Treinar questões desta prova</button></div>';
 }
 function selectProgram(id,opts={}){
  const x=state.list.find(x=>x.id===id);if(!x)return;
@@ -76,6 +76,7 @@ $("program-list").addEventListener("click",e=>{const b=e.target.closest("[data-p
 $("program-detail").addEventListener("click",e=>{
  const subject=e.target.closest("[data-program-lesson]");if(subject){moveToAcademy(subject.dataset.programLesson);return}
  if(e.target.closest("#program-start"))moveToAcademy(null);
+ if(e.target.closest("#program-simulado")){const x=state.list.find(x=>x.id===state.active),p=programFor(x);if(p)window.FAAABSimulados?.start(p.id,p.heading)}
 });
 document.addEventListener("faaab:lessons-ready",()=>{
  if(!state.ready)return;
