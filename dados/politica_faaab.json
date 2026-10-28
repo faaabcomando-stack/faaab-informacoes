@@ -99,5 +99,7 @@
     "candidaturaDeCriadorNaoAutomatica": true,
     "resultadoAutomatico": "Apenas após verificação via backend com dados confiáveis; site estático não pode aprovar nem registrar grupo.",
     "ativo": false
-  }
+  },
+  "regraDePrecedencia": "Eleição atual de 28/10/2026 prevalece sobre o sistema de agosto. Quórum de 2.000, taxa de 200 Robux, exames anticorrupção e candidatura sem partidos não são requisitos atuais sem decisão posterior de reintrodução.",
+  "statusDeImplementacao": "Informações publicadas; autenticação e verificação automática Roblox ainda não operacionais; sem eleições ou cadastros abertos."
 }
