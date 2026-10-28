@@ -251,6 +251,27 @@ function zipFiles(files){
  put32(view,0,0x06054b50);put16(view,8,files.length);put16(view,10,files.length);put32(view,12,centralSize);put32(view,16,offset);
  return new Blob([...pieces,...central,end],{type:"application/zip"})
 }
+async function publishServer(){
+ if(!["owner","editor"].includes(states.auth?.role)){notice("Sua conta não tem permissão de publicação.",true);return}
+ if(!states.auth.csrf){notice("Sessão inválida. Faça login novamente.",true);return}
+ const names=[...states.dirty];if(!names.length)return;
+ if(names.includes("admin_whitelist")&&!isOwner()){notice("A whitelist só pode ser alterada pelo proprietário.",true);return}
+ if(!confirm("Publicar "+names.length+" arquivo(s) no GitHub usando sua sessão autenticada?"))return;
+ let done=0;
+ for(const name of names){
+  const sha=states.sha[name];
+  if(!sha){notice("Não existe versão verificada do arquivo "+name+". Recarregue o painel.",true);return}
+  try{
+   const resp=await fetch("/api/data/"+name,{method:"PUT",headers:{"content-type":"application/json","x-faaab-csrf":states.auth.csrf},credentials:"same-origin",body:JSON.stringify({content:JSON.stringify(states.data[name]),sha})});
+   const out=await resp.json();
+   if(!resp.ok)throw Error(out.error||"HTTP "+resp.status);
+   states.sha[name]=out.sha;
+   states.baseline[name]=JSON.stringify(states.data[name]);states.dirty.delete(name);done++;
+   syncPending();
+  }catch(e){notice("Publicação interrompida após "+done+" arquivo(s). Falha em "+name+": "+e.message+". Recarregue se houve conflito.",true);return}
+ }
+ notice(done+" arquivo(s) publicado(s) de forma autenticada no GitHub. O Pages atualizará após o deploy.");
+}
 function downloadPackage(){
  const names=[...states.dirty];if(!names.length)return;
  const payload=names.map(name=>[name+".json",JSON.stringify(states.data[name],null,2)+"\n"]);
@@ -277,9 +298,25 @@ document.querySelectorAll("[data-example]").forEach(b=>b.addEventListener("click
 $("advanced-file").addEventListener("change",advancedLoad);
 $("advanced-apply").addEventListener("click",advancedApply);
 $("advanced-reload").addEventListener("click",refreshAdvanced);
+$("publish-server").addEventListener("click",publishServer);
+$("publish-bottom").addEventListener("click",publishServer);
 $("download-package").addEventListener("click",downloadPackage);
 $("download-bottom").addEventListener("click",downloadPackage);
 newsFormClear();syncPending();
 const init=(location.hash||"").slice(1);
-switchView(titles[init]?init:"inicio");
+(async()=>{
+ try{
+ const response=await fetch("/api/me",{credentials:"same-origin",cache:"no-store"});
+ if(!response.ok)throw Error("Acesso não verificado");
+ const auth=await response.json();
+ if(!auth.loggedIn||!auth.role){location.href="/";return}
+ states.auth=auth;
+ if(auth.role!=="owner"){
+  const navButton=document.querySelector('[data-view="whitelist"]');
+  if(navButton)navButton.hidden=true;
+ }
+ syncPending();
+ await switchView(titles[init]?init:"inicio");
+ }catch(e){location.href="/"}
+})();
 })();
