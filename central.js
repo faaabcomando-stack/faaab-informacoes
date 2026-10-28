@@ -1,7 +1,18 @@
 "use strict";
-import {initializeApp} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged,setPersistence,browserLocalPersistence} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
-import {getFirestore,collection,doc,getDoc,getDocs,query,where,limit,setDoc,updateDoc,addDoc,serverTimestamp,Timestamp} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+// A área pública de Estudos, Provas e Notícias não depende do servidor Google.
+// Firebase é carregado só quando o proprietário ativa a configuração.
+let initializeApp,getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged,setPersistence,browserLocalPersistence;
+let getFirestore,collection,doc,getDoc,getDocs,query,where,limit,setDoc,updateDoc,addDoc,serverTimestamp,Timestamp;
+async function loadFirebase(){
+ const [app,auth,db]=await Promise.all([
+  import("https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js"),
+  import("https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js"),
+  import("https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js")
+ ]);
+ ({initializeApp}=app);
+ ({getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged,setPersistence,browserLocalPersistence}=auth);
+ ({getFirestore,collection,doc,getDoc,getDocs,query,where,limit,setDoc,updateDoc,addDoc,serverTimestamp,Timestamp}=db);
+}
 
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -282,6 +293,7 @@ async function bootstrap(){
    $("auth-message").textContent="A central pública e os estudos já estão disponíveis. Para ativar login, whitelist e publicação online, o proprietário precisa criar o Firebase e aplicar as regras de segurança.";
    return;
   }
+  await loadFirebase();
   s.app=initializeApp(cfg.app);s.auth=getAuth(s.app);s.db=getFirestore(s.app);
   await setPersistence(s.auth,browserLocalPersistence);
   $("login-google").disabled=false;
