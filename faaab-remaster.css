@@ -225,3 +225,28 @@ body.faaab-v3 .v3-footer{display:block}
 .v3-gov-detail-line p{max-width:830px;line-height:1.75;font-size:14px}
 .v3-gov-detail-line strong{color:#294b37}
 @media(max-width:680px){.v3-gov-directory{grid-template-columns:1fr}.v3-gov-link{min-height:105px;padding:19px 28px 20px 0}.v3-gov-link strong{font-size:23px}}
+
+/* Governo FAAAB: diretório editorial compacto, mobile e assuntos em páginas próprias */
+.v3-gov-page-head{border-bottom:2px solid #b3a27b;padding:4px 0 28px;margin-bottom:24px;max-width:940px}
+.v3-gov-page-head h2{font:400 clamp(30px,4.7vw,49px)/1.14 Georgia,serif;margin:12px 0 13px;color:#1c3b2b}
+.v3-gov-page-head p{font-size:16px;line-height:1.75;max-width:830px;color:#506758}
+.v3-gov-group-head{margin-top:54px;border-bottom:2px solid #b3a27b;padding-bottom:15px}
+.v3-gov-group-head h2{font:400 clamp(28px,4vw,38px)/1.15 Georgia,serif;margin:9px 0}
+.v3-gov-group-head p{font-size:14px;color:#607166;max-width:750px}
+.v3-gov-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 35px;margin-bottom:28px}
+.v3-gov-feature{display:flex;flex-direction:column;gap:7px;border-bottom:1px solid #cfd8cd;padding:25px 30px 25px 0;text-decoration:none}
+.v3-gov-feature:hover strong{text-decoration:underline}
+.v3-gov-feature .v3-gov-kicker{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#856d45}
+.v3-gov-feature strong{font:400 25px/1.2 Georgia,serif;color:#1c3d2b}
+.v3-gov-feature span:not(.v3-gov-kicker){font-size:13px;line-height:1.65;color:#657569}
+.v3-gov-feature em{font-size:12px;font-weight:700;font-style:normal;color:#43674d;margin-top:5px}
+.v3-government-lines strong{color:#214832}
+@media(max-width:680px){
+ .v3-gov-feature-grid{grid-template-columns:1fr;gap:0}
+ .v3-gov-feature{padding:19px 8px 19px 0}
+ .v3-gov-feature strong{font-size:22px}
+ .v3-gov-page-head h2{font-size:34px}
+ .v3-government-lines>div{grid-template-columns:36px minmax(0,1fr)}
+ .v3-government-lines h3{font-size:21px}
+ .v3-government-lines small{grid-column:2}
+}
