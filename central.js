@@ -64,8 +64,9 @@ $("catalog-more").addEventListener("click",()=>{s.catalogLimit+=20;renderCatalog
 $("catalog-records").addEventListener("click",ev=>{
  const btn=ev.target.closest("[data-catalog-study]");if(!btn||!s.allExams)return;
  const x=s.allExams.registros.find(r=>r.id===btn.dataset.catalogStudy);if(!x)return;
- showTab("estudos");$("academy-by-exam").open=true;$("study-type").value=x.tipo;pathChange("type");
- $("study-exam").value=x.id;pathChange("exam");$("academy-by-exam").scrollIntoView({behavior:"smooth",block:"start"});
+ showTab("estudos");
+ window.FAAABExamPrograms?.selectProgram(x.id,{scroll:true});
+ $("program-detail").scrollIntoView({behavior:"smooth",block:"start"});
 });
 function notice(msg,error=false){const el=$("site-notice");el.hidden=false;el.textContent=msg;el.classList.toggle("error",error)}
 function showTab(name){if(!validTab.has(name))return;location.hash=name;document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="view-"+name);document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("active",x.dataset.tab===name));if(name==="estudos")showTopic();}
