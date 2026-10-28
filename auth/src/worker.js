@@ -302,29 +302,65 @@ export default {
    }
    const ctx=await userContext(req,env);
    if(req.method==="GET"&&path==="/")return textResponse(loginPage(ctx),200,"text/html; charset=utf-8");
-   if(req.method==="GET"&&path==="/api/me")return jsonify({loggedIn:!!ctx,user:ctx?{provider:ctx.user.provider,displayName:ctx.user.display_name,robloxId:ctx.user.provider==="roblox"?ctx.user.subject:ctx.user.linked_roblox_id}:null,role:ctx?.role||null,csrf:ctx?.role?ctx.csrf:null});
+   if(req.method==="GET"&&path==="/api/me")return jsonify({loggedIn:!!ctx,user:ctx?{provider:ctx.user.provider,displayName:ctx.user.display_name,robloxId:ctx.user.provider==="roblox"?ctx.user.subject:ctx.user.linked_roblox_id}:null,whitelisted:!!ctx?.approved,role:ctx?.role||null,roles:ctx?.roles||[],permissions:ctx?.permissions||{},csrf:ctx?.approved?ctx.csrf:null});
    if(!ctx?.role)return req.method==="GET"?redirect("/"):jsonify({error:"Acesso negado. Login e whitelist necessários."},403);
    if(req.method==="GET"&&path==="/api/registrations"){
-    if(ctx.role!=="owner")return jsonify({error:"Acesso só para proprietário"},403);
-    const rows=await env.DB.prepare("SELECT i.user_key,i.provider,i.display_name,i.email,i.linked_roblox_id,i.last_login_at,g.role AS grant_role FROM identities i LEFT JOIN private_grants g ON g.user_key=i.user_key ORDER BY i.last_login_at DESC LIMIT 80").all();
-    return jsonify({registrations:rows.results||[]});
+    if(ctx.role!=="owner")return jsonify({error:"Reservado ao proprietário"},403);
+    const rows=await env.DB.prepare("SELECT i.user_key,i.provider,i.display_name,i.email,i.linked_roblox_id,i.last_login_at,a.approved_at FROM identities i LEFT JOIN access_approvals a ON a.user_key=i.user_key ORDER BY i.last_login_at DESC LIMIT 100").all();
+    return jsonify({registrations:(rows.results||[]).map(x=>({...x,approved:!!x.approved_at}))});
    }
    if(req.method==="POST"&&path==="/api/grant"){
-    if(ctx.role!=="owner")return jsonify({error:"Acesso só para proprietário"},403);
-    if(!verifyInput(url.origin,req)||req.headers.get("x-faaab-csrf")!==ctx.csrf)return jsonify({error:"Origem/CSRF inválido"},403);
-    const payload=await req.json().catch(()=>null),target=String(payload?.userKey||"");
-    const role=payload?.role,action=payload?.action;
-    if(target.length>320||!target||!["grant","revoke"].includes(action))return jsonify({error:"Solicitação inválida"},400);
-    if(target===ctx.user.user_key)return jsonify({error:"Você não pode modificar seu próprio acesso"},403);
+    if(ctx.role!=="owner")return jsonify({error:"Somente o proprietário aprova whitelist"},403);
+    if(!verifyInput(url.origin,req)||req.headers.get("x-faaab-csrf")!==ctx.csrf)return jsonify({error:"CSRF/origem inválido"},403);
+    const payload=await req.json().catch(()=>null);
+    const target=String(payload?.userKey||""),action=payload?.action;
+    if(!target||target.length>320||!["grant","revoke"].includes(action)||target===ctx.user.user_key)return jsonify({error:"Solicitação inválida"},400);
     const found=await env.DB.prepare("SELECT user_key FROM identities WHERE user_key=?").bind(target).first();
-    if(!found)return jsonify({error:"Usuário ainda não se registrou"},404);
+    if(!found)return jsonify({error:"Conta não registrada"},404);
     if(action==="grant"){
-     if(!["editor","revisor"].includes(role))return jsonify({error:"Perfil inválido"},400);
-     await env.DB.prepare("INSERT INTO private_grants(user_key,role,granted_at) VALUES(?,?,?) ON CONFLICT(user_key) DO UPDATE SET role=excluded.role,granted_at=excluded.granted_at").bind(target,role,now()).run();
+     await env.DB.prepare("INSERT INTO access_approvals(user_key,approved_at,approved_by) VALUES(?,?,?) ON CONFLICT(user_key) DO UPDATE SET approved_at=excluded.approved_at,approved_by=excluded.approved_by").bind(target,now(),ctx.user.user_key).run();
     }else{
-     await env.DB.prepare("DELETE FROM private_grants WHERE user_key=?").bind(target).run();
+     await env.DB.prepare("DELETE FROM access_approvals WHERE user_key=?").bind(target).run();
+     await env.DB.prepare("DELETE FROM staff_assignments WHERE user_key=?").bind(target).run();
     }
-    return jsonify({ok:true,action,userKey:target});
+    return jsonify({ok:true,action,userKey:target,notice:"A whitelist apenas libera acesso. Os cargos são atribuídos em etapa manual separada."});
+   }
+   if(req.method==="GET"&&path==="/api/staff"){
+    if(ctx.role!=="owner")return jsonify({error:"Somente proprietário"},403);
+    const rows=await env.DB.prepare("SELECT i.user_key,i.provider,i.display_name,i.email,i.linked_roblox_id,a.approved_at,s.role_key,s.scope_json FROM identities i LEFT JOIN access_approvals a ON a.user_key=i.user_key LEFT JOIN staff_assignments s ON s.user_key=i.user_key ORDER BY i.display_name ASC LIMIT 250").all();
+    const people=new Map();
+    for(const row of rows.results||[]){
+     if(!people.has(row.user_key))people.set(row.user_key,{userKey:row.user_key,provider:row.provider,displayName:row.display_name,email:row.email,robloxId:row.linked_roblox_id,approved:!!row.approved_at,assignments:[]});
+     if(row.role_key)people.get(row.user_key).assignments.push({role:row.role_key,scope:JSON.parse(row.scope_json||"{}")});
+    }
+    return jsonify({members:[...people.values()]});
+   }
+   if(req.method==="POST"&&path==="/api/staff"){
+    if(ctx.role!=="owner")return jsonify({error:"Somente o proprietário atribui cargos"},403);
+    if(!verifyInput(url.origin,req)||req.headers.get("x-faaab-csrf")!==ctx.csrf)return jsonify({error:"CSRF/origem inválido"},403);
+    const payload=await req.json().catch(()=>null);
+    const target=String(payload?.userKey||""),role=String(payload?.roleKey||"");
+    const action=payload?.action,scope=payload?.scope||{};
+    if(!target||target.length>320||target===ctx.user.user_key||!STAFF_ROLES.has(role)||!["assign","remove"].includes(action))return jsonify({error:"Solicitação inválida"},400);
+    const found=await env.DB.prepare("SELECT * FROM identities WHERE user_key=?").bind(target).first();
+    if(!found)return jsonify({error:"Conta não cadastrada no site"},404);
+    const allowed=await isApprovedUser(found,env);
+    if(!allowed)return jsonify({error:"Primeiro aprove o usuário na whitelist, depois atribua um cargo"},403);
+    if(action==="assign"){
+     const validType=["curso","batalhao","outro"];
+     if(role==="instrutor"){
+      if(!validType.includes(scope.tipo)||!/^[-a-zA-Z0-9_]{1,80}$/.test(String(scope.targetId||"")))return jsonify({error:"Selecione curso/batalhão e um registro válido"},400);
+     }else if(role==="governo"){
+      const govt=await githubData("autoridades",env);
+      if(!JSON.parse(govt.content).some(x=>x.forca==="GOV"&&x.id===scope.cargoId))return jsonify({error:"Escolha um cargo do Governo existente"},400);
+     }else if(role==="alto_escalao"){
+      if(!["militar","civil"].includes(scope.categoria)||!["FTB","FAB","FMB","CBM","PM","GOV"].includes(scope.forca))return jsonify({error:"Selecione força e categoria válidas"},400);
+     }else if(Object.keys(scope).length)return jsonify({error:"Este cargo não exige seleções adicionais"},400);
+     await env.DB.prepare("INSERT INTO staff_assignments(user_key,role_key,scope_json,assigned_by,assigned_at) VALUES(?,?,?,?,?) ON CONFLICT(user_key,role_key) DO UPDATE SET scope_json=excluded.scope_json,assigned_by=excluded.assigned_by,assigned_at=excluded.assigned_at").bind(target,role,JSON.stringify(scope),ctx.user.user_key,now()).run();
+    }else{
+     await env.DB.prepare("DELETE FROM staff_assignments WHERE user_key=? AND role_key=?").bind(target,role).run();
+    }
+    return jsonify({ok:true,action,userKey:target,role});
    }
    if(req.method==="GET"&&path==="/painel")return fetchStatic(env,"admin-app.html","text/html; charset=utf-8");
    if(req.method==="GET"&&PUBLIC_ASSETS.has(path.slice(1)))return fetchStatic(env,path.slice(1),path.endsWith(".css")?"text/css; charset=utf-8":"application/javascript; charset=utf-8");
