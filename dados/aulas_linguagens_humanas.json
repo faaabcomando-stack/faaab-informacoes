@@ -1,0 +1,1016 @@
+{
+  "versao": 1,
+  "descricao": "Aulas autorais com explicação, exemplo resolvido, passos e prática; não substituem edital oficial",
+  "aulas": [
+    {
+      "id": "por-01",
+      "materia": "Português",
+      "unidade": "Leitura",
+      "titulo": "Interpretação de texto",
+      "teoria": "Interpretar um texto é compreender o que está explícito e inferir ideias a partir de pistas. Não é escolher a opinião mais agradável. O enunciado pode pedir informação literal, sentido de palavra ou conclusão lógica.",
+      "passos": [
+        "Leia o texto inteiro",
+        "Identifique quem faz o quê",
+        "Localize a evidência",
+        "Releia a pergunta"
+      ],
+      "exemplo": "A chuva começou, então Ana recolheu a roupa do varal.",
+      "resolucao": "O texto não afirma a intenção de Ana, mas a sequência sugere que ela queria impedir que a roupa molhasse.",
+      "questoes": [
+        {
+          "pergunta": "Por que Ana provavelmente recolheu a roupa?",
+          "alternativas": [
+            "Queria impedir que molhasse",
+            "Perdeu o varal",
+            "Ia vender a roupa",
+            "Não havia chuva"
+          ],
+          "correta": 0,
+          "feedback": "A chuva justifica a retirada. Essa conclusão é apoiada pelo contexto."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-02",
+      "materia": "Português",
+      "unidade": "Leitura",
+      "titulo": "Ideia principal e detalhes",
+      "teoria": "A ideia principal reúne o assunto central. As informações secundárias explicam ou exemplificam. Resuma um parágrafo em uma frase sem copiar todos os exemplos.",
+      "passos": [
+        "Ache o tema repetido",
+        "Separe exemplos",
+        "Formule a mensagem central"
+      ],
+      "exemplo": "Ler amplia o vocabulário, ajuda na escrita e melhora a compreensão.",
+      "resolucao": "A ideia central é que a leitura traz benefícios. Vocabulário e escrita são exemplos que sustentam isso.",
+      "questoes": [
+        {
+          "pergunta": "Qual é o tema central da frase?",
+          "alternativas": [
+            "Os tipos de livros",
+            "Benefícios da leitura",
+            "A origem das palavras",
+            "O alfabeto"
+          ],
+          "correta": 1,
+          "feedback": "Todos os exemplos são benefícios do hábito de ler."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-03",
+      "materia": "Português",
+      "unidade": "Leitura",
+      "titulo": "Fato e opinião",
+      "teoria": "Fatos podem ser confrontados com evidências. Opiniões exprimem julgamento, gosto ou preferência. Em jornalismo e provas é importante distinguir o que aconteceu do que alguém pensa sobre isso.",
+      "passos": [
+        "Leia o enunciado",
+        "Identifique dados verificáveis",
+        "Procure juízos de valor"
+      ],
+      "exemplo": "O evento começou às 9h. O evento foi maravilhoso.",
+      "resolucao": "O horário é dado verificável. Maravilhoso expressa avaliação pessoal.",
+      "questoes": [
+        {
+          "pergunta": "Qual frase é uma opinião?",
+          "alternativas": [
+            "A escola abriu às 8h",
+            "A turma tem 20 alunos",
+            "A aula foi a melhor de todas",
+            "Hoje é terça-feira"
+          ],
+          "correta": 2,
+          "feedback": "Melhor de todas é uma avaliação subjetiva."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-04",
+      "materia": "Português",
+      "unidade": "Gramática",
+      "titulo": "Substantivos e adjetivos",
+      "teoria": "Substantivo nomeia pessoas, lugares, sentimentos e coisas. Adjetivo caracteriza o substantivo. Em a menina curiosa, menina é substantivo e curiosa é adjetivo.",
+      "passos": [
+        "Localize os nomes",
+        "Identifique características",
+        "Confira a concordância"
+      ],
+      "exemplo": "O aluno dedicado estudou a lição.",
+      "resolucao": "Aluno e lição são substantivos. Dedicado é adjetivo que caracteriza aluno.",
+      "questoes": [
+        {
+          "pergunta": "Na expressão casa antiga, qual é o adjetivo?",
+          "alternativas": [
+            "Casa",
+            "Antiga",
+            "Expressão",
+            "Nenhum"
+          ],
+          "correta": 1,
+          "feedback": "Antiga é uma característica atribuída à casa."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-05",
+      "materia": "Português",
+      "unidade": "Gramática",
+      "titulo": "Pronomes e referência",
+      "teoria": "Pronomes retomam ou acompanham nomes. Eles ajudam a evitar repetições, mas podem criar ambiguidade. Para saber a que alguém se refere, procure o substantivo compatível no contexto.",
+      "passos": [
+        "Identifique o pronome",
+        "Busque o referente",
+        "Confira número e gênero"
+      ],
+      "exemplo": "Carla pegou o caderno. Ela o guardou.",
+      "resolucao": "Ela refere-se a Carla. O refere-se ao caderno.",
+      "questoes": [
+        {
+          "pergunta": "Em os alunos chegaram e eles sentaram, eles retoma:",
+          "alternativas": [
+            "Os alunos",
+            "As cadeiras",
+            "O horário",
+            "O corredor"
+          ],
+          "correta": 0,
+          "feedback": "Eles substitui os alunos."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-06",
+      "materia": "Português",
+      "unidade": "Gramática",
+      "titulo": "Verbos e tempos verbais",
+      "teoria": "Verbos indicam ações, estados ou fenômenos. Presente, pretérito e futuro situam o acontecimento no tempo. Compare estudo, estudei e estudarei.",
+      "passos": [
+        "Ache a forma verbal",
+        "Identifique quando ocorre",
+        "Observe a pessoa"
+      ],
+      "exemplo": "Ontem eles correram. Amanhã correrão.",
+      "resolucao": "Correram está no passado. Correrão está no futuro.",
+      "questoes": [
+        {
+          "pergunta": "Qual verbo está no futuro?",
+          "alternativas": [
+            "Cheguei",
+            "Chegava",
+            "Chegarei",
+            "Chego"
+          ],
+          "correta": 2,
+          "feedback": "Chegarei indica ação posterior ao momento da fala."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-07",
+      "materia": "Português",
+      "unidade": "Gramática",
+      "titulo": "Sujeito e predicado",
+      "teoria": "A oração contém um verbo ou locução verbal. O sujeito é o termo sobre o qual se declara algo. O predicado traz o que se informa sobre o sujeito. Nem toda oração tem sujeito expresso.",
+      "passos": [
+        "Encontre o verbo",
+        "Pergunte de quem se fala",
+        "Separe o restante"
+      ],
+      "exemplo": "Os estudantes resolveram o exercício.",
+      "resolucao": "Os estudantes é o sujeito. Resolveram o exercício é o predicado.",
+      "questoes": [
+        {
+          "pergunta": "Qual é o sujeito de as crianças brincavam?",
+          "alternativas": [
+            "As crianças",
+            "Brincavam",
+            "No parque",
+            "Brincadeira"
+          ],
+          "correta": 0,
+          "feedback": "É o termo de quem se declara a ação."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-08",
+      "materia": "Português",
+      "unidade": "Gramática",
+      "titulo": "Concordância verbal",
+      "teoria": "O verbo geralmente concorda em número e pessoa com o núcleo do sujeito. O aluno estuda, mas os alunos estudam. Não confunda palavras próximas ao verbo com o sujeito principal.",
+      "passos": [
+        "Identifique o núcleo do sujeito",
+        "Determine singular ou plural",
+        "Flexione o verbo"
+      ],
+      "exemplo": "Os candidatos chegaram cedo.",
+      "resolucao": "Candidatos é plural, por isso o verbo também aparece no plural.",
+      "questoes": [
+        {
+          "pergunta": "Qual frase está correta?",
+          "alternativas": [
+            "As equipes chegou",
+            "As equipes chegaram",
+            "Nós estuda",
+            "Os aluno chegou"
+          ],
+          "correta": 1,
+          "feedback": "Equipes é plural e pede chegaram."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-09",
+      "materia": "Português",
+      "unidade": "Gramática",
+      "titulo": "Pontuação e vírgula",
+      "teoria": "A pontuação organiza ideias. A vírgula pode separar elementos de uma enumeração, expressões deslocadas e vocativos. Não se deve colocar vírgula isolando normalmente o sujeito de seu verbo.",
+      "passos": [
+        "Identifique os termos da frase",
+        "Veja se há chamamento ou enumeração",
+        "Use vírgula apenas onde é necessária"
+      ],
+      "exemplo": "Maria traga seu caderno.",
+      "resolucao": "Se Maria é a pessoa chamada, a forma adequada é Maria, traga seu caderno.",
+      "questoes": [
+        {
+          "pergunta": "Qual frase usa vírgula para isolar um vocativo?",
+          "alternativas": [
+            "O aluno, chegou",
+            "Ana, feche a porta",
+            "A escola, abriu",
+            "O livro, caiu"
+          ],
+          "correta": 1,
+          "feedback": "Ana é a pessoa a quem se dirige o pedido."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-10",
+      "materia": "Português",
+      "unidade": "Gramática",
+      "titulo": "Acentuação e sílaba tônica",
+      "teoria": "Oxítonas têm a última sílaba tônica; paroxítonas, a penúltima; proparoxítonas, a antepenúltima. A identificação da sílaba tônica orienta as regras de acentuação gráfica.",
+      "passos": [
+        "Divida em sílabas",
+        "Pronuncie e identifique a sílaba forte",
+        "Classifique"
+      ],
+      "exemplo": "Médico: MÉ-di-co.",
+      "resolucao": "A força está na antepenúltima sílaba. Portanto é uma proparoxítona, sempre acentuada.",
+      "questoes": [
+        {
+          "pergunta": "Qual palavra é proparoxítona?",
+          "alternativas": [
+            "Café",
+            "Sofá",
+            "Música",
+            "Papel"
+          ],
+          "correta": 2,
+          "feedback": "MÚ-si-ca possui antepenúltima sílaba tônica."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-11",
+      "materia": "Português",
+      "unidade": "Gramática",
+      "titulo": "Por que, porque, por quê e porquê",
+      "teoria": "Por que é comum em perguntas e equivale em certos contextos a por qual motivo. Porque apresenta causa ou explicação. Por quê aparece antes de pausa ou pontuação final. Porquê é um substantivo, geralmente acompanhado de artigo.",
+      "passos": [
+        "Identifique pergunta ou explicação",
+        "Observe posição da expressão",
+        "Teste o sentido"
+      ],
+      "exemplo": "Você faltou por quê? Não fui porque estava doente.",
+      "resolucao": "No final da pergunta usa-se por quê. Na resposta explicativa, porque.",
+      "questoes": [
+        {
+          "pergunta": "Complete: Não saí ___ estava chovendo.",
+          "alternativas": [
+            "por que",
+            "porque",
+            "por quê",
+            "porquê"
+          ],
+          "correta": 1,
+          "feedback": "A expressão introduz a causa."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-12",
+      "materia": "Português",
+      "unidade": "Gramática",
+      "titulo": "Conectivos e coesão",
+      "teoria": "Conectivos relacionam ideias: porque indica causa, portanto conclusão, porém oposição, além disso adição. Reconhecer a relação evita interpretações erradas.",
+      "passos": [
+        "Leia as duas ideias",
+        "Descubra sua relação",
+        "Escolha o conectivo adequado"
+      ],
+      "exemplo": "Estudou bastante; portanto, compreendeu a matéria.",
+      "resolucao": "Portanto liga o estudo à conclusão apresentada.",
+      "questoes": [
+        {
+          "pergunta": "Qual conectivo indica oposição?",
+          "alternativas": [
+            "Portanto",
+            "Porém",
+            "Porque",
+            "Além disso"
+          ],
+          "correta": 1,
+          "feedback": "Porém apresenta contraste."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-13",
+      "materia": "Português",
+      "unidade": "Escrita",
+      "titulo": "Parágrafo e argumento",
+      "teoria": "Um parágrafo apresenta ideia principal e desenvolvimento. Um argumento é uma razão que sustenta uma posição. Um exemplo sem explicação pode ser insuficiente: explique por que ele comprova sua tese.",
+      "passos": [
+        "Escreva ideia central",
+        "Apresente uma razão",
+        "Explique com exemplo",
+        "Revise a clareza"
+      ],
+      "exemplo": "Tese: o estudo amplia oportunidades.",
+      "resolucao": "Argumento: fortalece habilidades necessárias para resolver tarefas e buscar formação.",
+      "questoes": [
+        {
+          "pergunta": "Para que serve um argumento numa redação?",
+          "alternativas": [
+            "Encher linhas",
+            "Sustentar a tese",
+            "Copiar texto",
+            "Trocar de assunto"
+          ],
+          "correta": 1,
+          "feedback": "Argumentos justificam uma ideia defendida."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-14",
+      "materia": "Português",
+      "unidade": "Escrita",
+      "titulo": "Redação dissertativa",
+      "teoria": "Um texto dissertativo-argumentativo defende uma tese com justificativas. A introdução apresenta o problema; o desenvolvimento organiza argumentos; a conclusão retoma o raciocínio. A estrutura deve responder ao tema proposto.",
+      "passos": [
+        "Leia o tema",
+        "Planeje uma tese",
+        "Liste argumentos e exemplos",
+        "Escreva e revise"
+      ],
+      "exemplo": "Tema: como reduzir o desperdício de água.",
+      "resolucao": "Uma tese possível é valorizar educação ambiental e manutenção das redes, acompanhada de razões verificáveis.",
+      "questoes": [
+        {
+          "pergunta": "Qual atitude fortalece uma redação?",
+          "alternativas": [
+            "Ignorar o tema",
+            "Repetir frases sem sentido",
+            "Usar argumentos relacionados ao tema",
+            "Copiar outro texto"
+          ],
+          "correta": 2,
+          "feedback": "É preciso coerência entre tese, justificativas e conclusão."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "por-15",
+      "materia": "Português",
+      "unidade": "Gramática",
+      "titulo": "Sinônimos, antônimos e sentido",
+      "teoria": "Sinônimos têm significados parecidos em certo contexto; antônimos expressam oposição. O contexto pode alterar o sentido de uma palavra. Uma substituição deve preservar a ideia da frase.",
+      "passos": [
+        "Leia a frase completa",
+        "Identifique o sentido usado",
+        "Compare alternativas"
+      ],
+      "exemplo": "A explicação foi clara.",
+      "resolucao": "Clara pode ser substituída por compreensível nesse contexto.",
+      "questoes": [
+        {
+          "pergunta": "Qual é o antônimo de amplo?",
+          "alternativas": [
+            "Extenso",
+            "Vasto",
+            "Estreito",
+            "Grande"
+          ],
+          "correta": 2,
+          "feedback": "Estreito se opõe a amplo."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-01",
+      "materia": "Geografia",
+      "unidade": "Cartografia",
+      "titulo": "Pontos cardeais",
+      "teoria": "Norte, sul, leste e oeste são direções básicas. Num mapa convencional o norte costuma apontar para cima, mas é necessário conferir a rosa dos ventos. Direções ajudam a localizar posições relativas.",
+      "passos": [
+        "Confira o norte no mapa",
+        "Identifique direção oposta",
+        "Localize leste e oeste"
+      ],
+      "exemplo": "Com o norte apontando para cima, o leste fica à direita.",
+      "resolucao": "As direções formam pares opostos: norte-sul, leste-oeste.",
+      "questoes": [
+        {
+          "pergunta": "Com norte em cima, onde fica o sul?",
+          "alternativas": [
+            "À direita",
+            "Embaixo",
+            "À esquerda",
+            "Em cima"
+          ],
+          "correta": 1,
+          "feedback": "Sul é oposto ao norte."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-02",
+      "materia": "Geografia",
+      "unidade": "Cartografia",
+      "titulo": "Escala de mapas",
+      "teoria": "A escala indica quanto uma distância do mapa representa no terreno. Em 1:100.000, um centímetro representa cem mil centímetros reais, equivalentes a um quilômetro.",
+      "passos": [
+        "Leia o denominador da escala",
+        "Multiplique a distância no mapa",
+        "Converta as unidades"
+      ],
+      "exemplo": "Dois centímetros na escala 1:100.000.",
+      "resolucao": "2 × 100.000 cm = 200.000 cm = 2 km.",
+      "questoes": [
+        {
+          "pergunta": "Na escala 1:50.000, dois centímetros são:",
+          "alternativas": [
+            "100 m",
+            "500 m",
+            "1 km",
+            "10 km"
+          ],
+          "correta": 2,
+          "feedback": "100.000 centímetros equivalem a um quilômetro."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-03",
+      "materia": "Geografia",
+      "unidade": "Cartografia",
+      "titulo": "Latitude e longitude",
+      "teoria": "Latitude é medida ao norte ou sul do Equador. Longitude é medida a leste ou oeste do meridiano de Greenwich. Juntas, as coordenadas localizam pontos da Terra.",
+      "passos": [
+        "Leia a indicação N/S",
+        "Leia L/O",
+        "Encontre os hemisférios"
+      ],
+      "exemplo": "A localização 20°S, 40°O está ao sul do Equador e a oeste de Greenwich.",
+      "resolucao": "Os sinais de direção indicam hemisfério, não altura.",
+      "questoes": [
+        {
+          "pergunta": "Qual indicação é longitude?",
+          "alternativas": [
+            "10°N",
+            "30°O",
+            "20°S",
+            "0°N"
+          ],
+          "correta": 1,
+          "feedback": "Oeste é uma direção de longitude."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-04",
+      "materia": "Geografia",
+      "unidade": "Natureza",
+      "titulo": "Tempo e clima",
+      "teoria": "Tempo é a condição da atmosfera num momento: chuva, calor ou vento. Clima é o padrão observado por longos períodos. Um dia frio não prova uma mudança no clima de toda a região.",
+      "passos": [
+        "Procure o período de observação",
+        "Diferencie evento isolado de padrão"
+      ],
+      "exemplo": "Hoje está chovendo, mas os verões são geralmente quentes.",
+      "resolucao": "Hoje é tempo atmosférico. Verões geralmente quentes é característica do clima.",
+      "questoes": [
+        {
+          "pergunta": "Qual frase descreve clima?",
+          "alternativas": [
+            "Agora venta",
+            "Choveu ontem",
+            "Os verões costumam ser úmidos",
+            "A manhã está fria"
+          ],
+          "correta": 2,
+          "feedback": "Clima fala de padrões de muitos anos."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-05",
+      "materia": "Geografia",
+      "unidade": "Natureza",
+      "titulo": "Relevo e erosão",
+      "teoria": "Relevo reúne formas do terreno, como planaltos, planícies e depressões. A erosão transporta e desgasta materiais; a sedimentação deposita partículas. Os dois processos alteram paisagens.",
+      "passos": [
+        "Identifique a forma de relevo",
+        "Observe desgaste e deposição",
+        "Relacione agentes naturais"
+      ],
+      "exemplo": "A chuva transporta partículas de solo encosta abaixo.",
+      "resolucao": "Esse é um exemplo de ação erosiva, intensificada quando falta cobertura vegetal.",
+      "questoes": [
+        {
+          "pergunta": "Qual processo desgasta rochas e solos?",
+          "alternativas": [
+            "Erosão",
+            "Fotossíntese",
+            "Convecção elétrica",
+            "Polinização"
+          ],
+          "correta": 0,
+          "feedback": "Erosão promove desgaste e transporte."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-06",
+      "materia": "Geografia",
+      "unidade": "Natureza",
+      "titulo": "Bacias hidrográficas",
+      "teoria": "Uma bacia hidrográfica é a área drenada por um rio principal e seus afluentes. A nascente é o início do rio, e a foz é onde ele deságua. A vegetação ciliar reduz erosão e assoreamento.",
+      "passos": [
+        "Localize nascente",
+        "Identifique afluentes",
+        "Encontre foz"
+      ],
+      "exemplo": "Um rio deságua no oceano.",
+      "resolucao": "O local de desembocadura no oceano é a foz.",
+      "questoes": [
+        {
+          "pergunta": "O ponto onde um rio deságua chama-se:",
+          "alternativas": [
+            "Nascente",
+            "Foz",
+            "Cume",
+            "Divisor"
+          ],
+          "correta": 1,
+          "feedback": "A foz é o local de desembocadura."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-07",
+      "materia": "Geografia",
+      "unidade": "Natureza",
+      "titulo": "Biomas brasileiros",
+      "teoria": "Amazônia, Cerrado, Caatinga, Mata Atlântica, Pampa e Pantanal são os seis biomas continentais reconhecidos pelo IBGE. Cada um abriga diferentes ecossistemas e formas de vegetação.",
+      "passos": [
+        "Localize a área no mapa",
+        "Observe clima e vegetação",
+        "Compare impactos humanos"
+      ],
+      "exemplo": "A Caatinga é associada ao semiárido do Nordeste.",
+      "resolucao": "Isso não significa que toda a região Nordeste seja uma paisagem única.",
+      "questoes": [
+        {
+          "pergunta": "Qual bioma se associa ao semiárido brasileiro?",
+          "alternativas": [
+            "Pantanal",
+            "Caatinga",
+            "Pampa",
+            "Amazônia"
+          ],
+          "correta": 1,
+          "feedback": "A Caatinga possui características adaptadas a áreas semiáridas."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-08",
+      "materia": "Geografia",
+      "unidade": "Sociedade",
+      "titulo": "Urbanização",
+      "teoria": "Urbanização é o aumento da proporção de habitantes em cidades. O crescimento urbano envolve migrações, atividades econômicas e demanda por moradia, transporte e saneamento.",
+      "passos": [
+        "Identifique mudanças populacionais",
+        "Relacione emprego e deslocamento",
+        "Analise infraestrutura"
+      ],
+      "exemplo": "Uma cidade cresce, mas a rede de esgoto não acompanha.",
+      "resolucao": "Há déficit de infraestrutura urbana.",
+      "questoes": [
+        {
+          "pergunta": "Qual medida melhora saneamento?",
+          "alternativas": [
+            "Tratamento de esgoto",
+            "Desmatamento",
+            "Corte de água",
+            "Poluição de rios"
+          ],
+          "correta": 0,
+          "feedback": "Coleta e tratamento reduzem riscos à saúde."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-09",
+      "materia": "Geografia",
+      "unidade": "Sociedade",
+      "titulo": "Globalização",
+      "teoria": "Globalização integra mercados, comunicação, tecnologias e redes de produção. Pode facilitar trocas e circulação de informação, mas também gerar desigualdades e dependências.",
+      "passos": [
+        "Identifique fluxos internacionais",
+        "Observe produção e circulação",
+        "Compare efeitos positivos e negativos"
+      ],
+      "exemplo": "Um produto é projetado num país e montado em outro.",
+      "resolucao": "Isso demonstra uma cadeia produtiva conectada internacionalmente.",
+      "questoes": [
+        {
+          "pergunta": "Qual exemplo indica globalização?",
+          "alternativas": [
+            "Comércio e comunicação internacionais",
+            "Isolamento total",
+            "Ausência de transporte",
+            "Fim da internet"
+          ],
+          "correta": 0,
+          "feedback": "As conexões ultrapassam fronteiras nacionais."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-10",
+      "materia": "Geografia",
+      "unidade": "Brasil",
+      "titulo": "Regiões e estados",
+      "teoria": "O Brasil é dividido pelo IBGE em Norte, Nordeste, Centro-Oeste, Sudeste e Sul. Conhecer os estados e suas localizações ajuda a interpretar mapas, economia e população.",
+      "passos": [
+        "Memorize as cinco regiões",
+        "Associe estados",
+        "Localize no mapa"
+      ],
+      "exemplo": "Rio de Janeiro, São Paulo, Minas Gerais e Espírito Santo compõem o Sudeste.",
+      "resolucao": "A divisão permite comparar dados regionais.",
+      "questoes": [
+        {
+          "pergunta": "Qual estado integra o Centro-Oeste?",
+          "alternativas": [
+            "Bahia",
+            "Goiás",
+            "Ceará",
+            "Pará"
+          ],
+          "correta": 1,
+          "feedback": "Goiás integra o Centro-Oeste."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-11",
+      "materia": "Geografia",
+      "unidade": "Brasil",
+      "titulo": "População e migrações",
+      "teoria": "Migração é o deslocamento de pessoas entre áreas. Pode ser interna, internacional, temporária ou definitiva. Motivações incluem trabalho, família, estudo e crises; impactos dependem do contexto.",
+      "passos": [
+        "Defina origem e destino",
+        "Identifique motivos",
+        "Observe efeitos demográficos"
+      ],
+      "exemplo": "Uma pessoa muda do interior para a capital em busca de emprego.",
+      "resolucao": "É uma migração interna com motivação econômica.",
+      "questoes": [
+        {
+          "pergunta": "Deslocamento entre estados do mesmo país é migração:",
+          "alternativas": [
+            "Interna",
+            "Interplanetária",
+            "Sempre internacional",
+            "Nenhuma"
+          ],
+          "correta": 0,
+          "feedback": "A pessoa não cruzou fronteira nacional."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "geo-12",
+      "materia": "Geografia",
+      "unidade": "Ambiente",
+      "titulo": "Mudanças climáticas",
+      "teoria": "O efeito estufa natural ajuda a manter a temperatura terrestre. O aumento antrópico de gases de efeito estufa intensifica o aquecimento global. Eventos extremos e mudanças em padrões de chuva são riscos importantes.",
+      "passos": [
+        "Diferencie efeito estufa natural e intensificação",
+        "Identifique emissões",
+        "Analise mitigação e adaptação"
+      ],
+      "exemplo": "Reduzir emissões de gases pode ajudar a conter aquecimento.",
+      "resolucao": "Medidas de mitigação reduzem causas; adaptação reduz impactos.",
+      "questoes": [
+        {
+          "pergunta": "Qual gás é importante no aquecimento antrópico?",
+          "alternativas": [
+            "CO₂",
+            "Oxigênio sem interação climática",
+            "Hélio",
+            "Argônio"
+          ],
+          "correta": 0,
+          "feedback": "O dióxido de carbono contribui para o efeito estufa."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "his-01",
+      "materia": "História",
+      "unidade": "Método",
+      "titulo": "Fontes históricas",
+      "teoria": "Cartas, fotografias, documentos, monumentos e depoimentos podem ser fontes históricas. Uma fonte deve ser examinada segundo autoria, data, intenção e contexto, não tratada como descrição neutra.",
+      "passos": [
+        "Identifique autor e data",
+        "Entenda finalidade",
+        "Compare versões"
+      ],
+      "exemplo": "Um jornal de 1930 comenta uma manifestação.",
+      "resolucao": "A notícia informa sobre o evento e a perspectiva editorial do período.",
+      "questoes": [
+        {
+          "pergunta": "Qual é fonte histórica?",
+          "alternativas": [
+            "Uma carta antiga",
+            "Somente livros atuais",
+            "Apenas mapas novos",
+            "Nenhum objeto"
+          ],
+          "correta": 0,
+          "feedback": "Cartas são vestígios de sociedades passadas."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "his-02",
+      "materia": "História",
+      "unidade": "Brasil",
+      "titulo": "Povos indígenas e colonização",
+      "teoria": "Antes da colonização europeia, o território do atual Brasil já abrigava numerosos povos com histórias e culturas diversas. A colonização portuguesa transformou terras, relações sociais e populações, envolvendo resistências indígenas.",
+      "passos": [
+        "Reconheça diversidade indígena",
+        "Identifique interesses coloniais",
+        "Analise conflitos e resistências"
+      ],
+      "exemplo": "Povos indígenas já habitavam o território antes de 1500.",
+      "resolucao": "A chegada portuguesa não marcou o início da história desses povos.",
+      "questoes": [
+        {
+          "pergunta": "Qual afirmação está correta?",
+          "alternativas": [
+            "Não havia povos antes de 1500",
+            "Havia grande diversidade indígena",
+            "Todos falavam a mesma língua",
+            "Não houve resistência"
+          ],
+          "correta": 1,
+          "feedback": "Diferentes povos tinham línguas e organizações próprias."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "his-03",
+      "materia": "História",
+      "unidade": "Brasil",
+      "titulo": "Economia colonial e escravidão",
+      "teoria": "A economia colonial combinou atividades como açúcar, mineração e comércio, em contextos de trabalho escravizado e outras formas de trabalho. Pessoas africanas escravizadas e seus descendentes resistiram de várias maneiras.",
+      "passos": [
+        "Identifique o setor econômico",
+        "Observe relações de trabalho",
+        "Analise resistência e poder"
+      ],
+      "exemplo": "Engenhos açucareiros produziram para exportação com exploração de trabalho escravizado.",
+      "resolucao": "Esse sistema vinculava colônia e mercados atlânticos.",
+      "questoes": [
+        {
+          "pergunta": "Qual atividade marcou a economia colonial?",
+          "alternativas": [
+            "Indústria automobilística",
+            "Produção açucareira",
+            "Internet comercial",
+            "Aviação civil"
+          ],
+          "correta": 1,
+          "feedback": "O açúcar foi atividade importante em diferentes fases da Colônia."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "his-04",
+      "materia": "História",
+      "unidade": "Brasil",
+      "titulo": "Independência em 1822",
+      "teoria": "A independência brasileira resultou de processos políticos e disputas com Portugal. A ruptura de 1822 não aboliu a escravidão nem garantiu participação política igualitária.",
+      "passos": [
+        "Organize 1808 e 1822",
+        "Relacione causas políticas",
+        "Distinga mudança e continuidade"
+      ],
+      "exemplo": "1822 representa ruptura política com Portugal.",
+      "resolucao": "A estrutura social e o sistema escravista não desapareceram com a independência.",
+      "questoes": [
+        {
+          "pergunta": "Em que ano ocorreu a independência política?",
+          "alternativas": [
+            "1500",
+            "1808",
+            "1822",
+            "1889"
+          ],
+          "correta": 2,
+          "feedback": "O marco tradicional é 7 de setembro de 1822."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "his-05",
+      "materia": "História",
+      "unidade": "Brasil",
+      "titulo": "Abolição e República",
+      "teoria": "A Lei Áurea aboliu juridicamente a escravidão em 1888. A Proclamação da República ocorreu em 1889. São processos diferentes, com continuidades e desigualdades posteriores.",
+      "passos": [
+        "Compare os eventos",
+        "Memorize as datas",
+        "Analise consequências"
+      ],
+      "exemplo": "1888 veio antes de 1889.",
+      "resolucao": "A abolição precedeu a mudança do regime monárquico para o republicano.",
+      "questoes": [
+        {
+          "pergunta": "Qual ocorreu primeiro?",
+          "alternativas": [
+            "República",
+            "Lei Áurea",
+            "Constituição de 1988",
+            "Era Vargas"
+          ],
+          "correta": 1,
+          "feedback": "A Lei Áurea é de 1888."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "his-06",
+      "materia": "História",
+      "unidade": "Brasil",
+      "titulo": "Era Vargas",
+      "teoria": "Getúlio Vargas governou o Brasil em períodos iniciados em 1930 e 1951, incluindo o Estado Novo de 1937 a 1945. O período marcou legislação trabalhista, industrialização e também autoritarismo em parte de sua trajetória.",
+      "passos": [
+        "Localize 1930 e 1937",
+        "Distinga direitos sociais e regime político",
+        "Examine contradições"
+      ],
+      "exemplo": "O Estado Novo foi instaurado em 1937.",
+      "resolucao": "Foi uma fase ditatorial do governo Vargas.",
+      "questoes": [
+        {
+          "pergunta": "O Estado Novo começou em:",
+          "alternativas": [
+            "1822",
+            "1889",
+            "1937",
+            "1988"
+          ],
+          "correta": 2,
+          "feedback": "O Estado Novo começou em 1937."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "his-07",
+      "materia": "História",
+      "unidade": "Brasil",
+      "titulo": "Ditadura militar e redemocratização",
+      "teoria": "O regime militar brasileiro durou de 1964 a 1985, com restrições de direitos, censura e repressão. A redemocratização envolveu mobilização social, eleições e a Constituição de 1988.",
+      "passos": [
+        "Reconheça o período",
+        "Analise perda e recuperação de direitos",
+        "Identifique marcos"
+      ],
+      "exemplo": "A Constituição Federal foi promulgada em 1988.",
+      "resolucao": "Ela é um marco da reorganização democrática do país.",
+      "questoes": [
+        {
+          "pergunta": "A Constituição brasileira em vigor foi promulgada em:",
+          "alternativas": [
+            "1930",
+            "1964",
+            "1988",
+            "2000"
+          ],
+          "correta": 2,
+          "feedback": "A Constituição de 1988 é conhecida como Constituição Cidadã."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "his-08",
+      "materia": "História",
+      "unidade": "Mundo",
+      "titulo": "Revolução Industrial",
+      "teoria": "A Revolução Industrial transformou a produção com máquinas, fábricas e novas fontes de energia, iniciando-se na Grã-Bretanha no século XVIII. Também alterou trabalho, cidades e relações econômicas.",
+      "passos": [
+        "Localize tempo e espaço",
+        "Identifique tecnologia",
+        "Analise condições de trabalho"
+      ],
+      "exemplo": "Fábricas substituíram parte da produção artesanal.",
+      "resolucao": "A mecanização aumentou produtividade e mudou a organização do trabalho.",
+      "questoes": [
+        {
+          "pergunta": "Onde se iniciou a Primeira Revolução Industrial?",
+          "alternativas": [
+            "Grã-Bretanha",
+            "Brasil",
+            "Antártida",
+            "Japão"
+          ],
+          "correta": 0,
+          "feedback": "Ela se iniciou na Grã-Bretanha."
+        }
+      ],
+      "nivel": "fundamentos"
+    },
+    {
+      "id": "his-09",
+      "materia": "História",
+      "unidade": "Mundo",
+      "titulo": "Guerras Mundiais",
+      "teoria": "A Primeira Guerra Mundial ocorreu de 1914 a 1918 e a Segunda de 1939 a 1945. Ambas envolveram múltiplos países e provocaram enormes perdas humanas. É importante distinguir causas e consequências de cada uma.",
+      "passos": [
+        "Memorize períodos",
+        "Identifique alianças e acontecimentos",
+        "Compare consequências"
+      ],
+      "exemplo": "1939 marcou o início da Segunda Guerra Mundial na Europa.",
+      "resolucao": "A invasão alemã da Polônia é um marco inicial.",
+      "questoes": [
+        {
+          "pergunta": "Quando terminou a Segunda Guerra Mundial?",
+          "alternativas": [
+            "1918",
+            "1930",
+            "1945",
+            "1989"
+          ],
+          "correta": 2,
+          "feedback": "O conflito terminou em 1945."
+        }
+      ],
+      "nivel": "fundamentos"
+    }
+  ]
+}
