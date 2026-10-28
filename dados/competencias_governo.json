@@ -2,37 +2,71 @@
   "titulo": "Competências institucionais do Governo FAAAB",
   "revisao": "2026-10-28",
   "fonte": "Correção explícita do responsável pela FAAAB nesta conversa",
-  "principio": "O Governo da FAAAB possui autoridade institucional para alterar estruturas do Exército dentro do projeto; não se limita a representação política e cerimonial.",
+  "principio": "O Governo FAAAB participa das leis do jogo, de decisões sobre estruturas militares, autorizações de emprego do Exército em conflitos e da gestão política das consequências econômicas. As eleições seguem regras atualizadas.",
   "confirmadas": [
     {
-      "id": "estruturas_exercito",
-      "area": "Exército Brasileiro",
-      "acao": "Alterar a organização e componentes internos do Exército no universo FAAAB",
-      "status": "confirmado"
+      "id": "leis",
+      "area": "Legislação fictícia",
+      "acao": "O Governo da FAAAB pode criar leis internas ao jogo",
+      "status": "Confirmado em conversa anterior",
+      "detalhamento": "Rito de autoria, votação, sanção, publicação e revisão ainda não está documentado."
     },
     {
-      "id": "patentes",
-      "area": "Exército Brasileiro",
-      "acao": "Criar novas patentes e decidir mudanças na estrutura de patentes do Exército",
-      "status": "confirmado"
+      "id": "estrutura",
+      "area": "Estrutura do Exército",
+      "acao": "O Governo pode modificar a organização do Exército",
+      "status": "Confirmado pelo responsável"
     },
     {
       "id": "batalhoes",
-      "area": "Exército Brasileiro",
-      "acao": "Criar novos batalhões e decidir mudanças em sua estrutura",
-      "status": "confirmado"
+      "area": "Estrutura do Exército",
+      "acao": "O Presidente pode propor/adicionar batalhões ao Exército com permissão do Ministro da Defesa",
+      "status": "Confirmado em regra mais recente de 14/10/2026",
+      "detalhamento": "Outras instâncias de autorização não foram detalhadas."
+    },
+    {
+      "id": "patentes",
+      "area": "Estrutura do Exército",
+      "acao": "O Governo pode criar novas patentes e modificar sua estrutura, mediante as permissões necessárias",
+      "status": "Confirmado",
+      "detalhamento": "A lista exata de autorizadores não foi recuperada; não presumir poder irrestrito de um só cargo."
+    },
+    {
+      "id": "operacoes",
+      "area": "Operações militares do roleplay",
+      "acao": "O Exército só é ativado contra facções após certas condições do cenário e autorização presidencial",
+      "status": "Confirmado em 14/10/2026",
+      "detalhamento": "As condições incluem o domínio de pontos específicos pela facção; critérios e pontos exatos não estão registrados aqui."
+    },
+    {
+      "id": "economia",
+      "area": "Recursos e consequências",
+      "acao": "As perdas do Exército em conflitos têm consequência econômica sobre suas compras e recursos; veículos exigem compra e habilitação",
+      "status": "Confirmado em 14/10/2026",
+      "detalhamento": "O Governo e o jogo podem organizar empregos e fontes de receita, sem deduzir um sistema completo de orçamento nacional."
+    },
+    {
+      "id": "politica",
+      "area": "Eleições e representação",
+      "acao": "As eleições são individuais, com possibilidade de eleger pessoas de partidos diferentes para cada cargo",
+      "status": "Atualizado em 28/10/2026",
+      "detalhamento": "Presidente, Vice-Presidente e Deputado Federal; requisitos novos prevalecem sobre regras eleitorais de agosto."
     }
   ],
-  "abrangencia": "As competências explicitamente recuperadas nesta revisão dizem respeito ao Exército. Outras forças, setores, categorias de decisão e limites ainda precisam ser recuperados da documentação ou confirmados pelo responsável; não deduzir proibições.",
-  "procedimento": "Quem propõe, quem vota, quem autoriza, condições de veto, revisão e implementação das decisões ainda não foram recuperados. Não inventar processo.",
-  "execucaoTecnica": "A decisão institucional de alterar patentes, unidades ou regras não é a mesma coisa que ter acesso irrestrito aos controles Roblox/GitHub. Sistemas de edição e hierarquia precisam aplicar a decisão e seus registros com autorização e auditoria.",
-  "cargos": "Não presumir que cada ministro, secretário, parlamentar ou integrante do STF tenha individualmente todos os poderes do Governo. A competência por cargo depende de definição.",
+  "abrangencia": "Poderes preservados do Governo aplicam-se à organização do Exército e aos sistemas institucionais citados; não inventar alcance automático sobre todas as outras forças. Não confundir exercício do poder político com acesso técnico aos controles de jogo.",
+  "procedimento": "Confirmado: para criar/adicionar batalhões o Presidente precisa da permissão do Ministro da Defesa; criação de patentes requer permissões. Não foram recuperados outros autorizadores nem procedimento geral de votação e aprovação de leis.",
+  "execucaoTecnica": "As decisões institucionais do Governo têm efeito no universo FAAAB; mudanças de código, mapa, grupos e patentes exigem integração e registro técnico. Falta de acesso de edição não anula o papel do Governo.",
+  "cargos": "Não atribuir automaticamente ao deputado, secretário, ministro, STF ou Vice-Presidente todos os poderes do Governo. O Presidente autoriza o emprego do Exército nas situações definidas, mas isso não equivale a microcomandar tropas em campo.",
   "inconsistenciasCorrigidas": "Eliminar frases de que Governo ou Presidência não podem alterar patentes ou modificar estruturas militares. Substituir por distinção entre poder de decisão do Governo e permissões técnicas de execução.",
   "pendente": [
-    "Outras funções do Governo já discutidas mas não registradas em fonte acessível",
-    "Alcance sobre Marinha, Aeronáutica, PM, Bombeiros e EGAF",
-    "Rito específico de decisão, homologação e implementação",
-    "Competência de cada cargo e tipos de mudança autorizados"
+    "Quais pontos e condições exatas autorizam o emprego do Exército em conflitos",
+    "Quem além do Ministro da Defesa precisa autorizar novas patentes ou batalhões",
+    "Fluxo de autoria, aprovação, sanção e implementação das leis",
+    "Abrangência das decisões sobre Marinha, FAB, PM, CBM e demais instituições",
+    "Distribuição de competências individuais entre secretarias, deputados e STF",
+    "Regras monetárias exatas, salários e duração dos cargos"
   ],
-  "notaEditorial": "Uma informação ausente não deve ser apresentada como proibida. Diferenciar confirmado, pendente e não implementado."
+  "notaEditorial": "Separar funções confirmadas, propostas de economia e detalhes pendentes. Evitar repetir o mesmo regulamento eleitoral em páginas militares.",
+  "atualizadoEm": "2026-10-28",
+  "regraDePrecedencia": "Decisões posteriores substituem as anteriores em caso de conflito. Eleições atuais não requerem quórum de 2.000, taxas de 200 Robux ou exames antigos sem reconfirmação. Não reativar antigas regras por ausência de informação."
 }
