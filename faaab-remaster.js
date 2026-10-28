@@ -78,7 +78,7 @@ const V3={
   }
   let rows=V3.typeRows(V3.forceList(V3.sectorRows(all,sector),force),type);
   const title=type?(V3.types[type]||"Organizações"):body.dataset.collectionName||"Organizações";
-  const detail=document.getElementById("v3-dynamic-title");if(detail&&type)detail.textContent=title+(force?" — "+(V3.forces[force]?.name||force):"");
+  const detail=document.getElementById("v3-dynamic-title");if(detail&&type)detail.textContent=title+(force?" — "+(V3.forces[force]?.full||V3.forces[force]?.name||force):"");
   const descriptor=document.getElementById("v3-dynamic-description");if(descriptor)descriptor.textContent=(force?"Instituição: "+(V3.forces[force]?.name||force)+". ":"")+rows.length+" registros disponíveis. Todos levam a uma ficha individual.";
   const input=document.getElementById("v3-search");
   function paint(){const q=V3.clean(input?.value.trim()||"");const r=q?rows.filter(e=>V3.clean([e.nome,e.sigla,e.forca,e.secao].join(" ")).includes(q)):rows;V3.set("v3-list-count",r.length+" organizações encontradas");V3.set("v3-directory",V3.rows(r))}
