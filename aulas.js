@@ -10,7 +10,8 @@ const ri=(min,max)=>min+Math.floor(Math.random()*(max-min+1));
 const shuffled=a=>{const b=a.slice();for(let i=b.length-1;i>0;i--){const j=ri(0,i);[b[i],b[j]]=[b[j],b[i]]}return b};
 function loadProgress(){try{const p=JSON.parse(localStorage.getItem(STORE)||"null");if(p&&typeof p==="object"&&p.done&&typeof p.done==="object"){state.progress={done:p.done,attempts:Number(p.attempts)||0,correct:Number(p.correct)||0}}}catch{}}
 function saveProgress(){try{localStorage.setItem(STORE,JSON.stringify(state.progress))}catch{}}
-function record(lesson,correct){state.progress.attempts++;if(correct){state.progress.correct++;state.progress.done[lesson.id]=Date.now()}saveProgress();summary();}
+function doneKey(id){return (state.programId||"geral")+"::"+id}
+function record(lesson,correct){state.progress.attempts++;if(correct){state.progress.correct++;state.progress.done[doneKey(lesson.id)]=Date.now()}saveProgress();summary();}
 function visibleLessons(){return state.allowedIds?state.lessons.filter(x=>state.allowedIds.has(x.id)):state.lessons}
 function setProgram(program){
  if(!state.ready)return false;
@@ -29,7 +30,7 @@ function setProgram(program){
  return true
 }
 function summary(){
- const included=visibleLessons();const total=included.length,done=included.filter(x=>state.progress.done[x.id]).length;
+ const included=visibleLessons();const total=included.length,done=included.filter(x=>state.progress.done[doneKey(x.id)]).length;
  $("academy-total").textContent=total+" aulas";
  $("academy-progress").textContent=done+" concluídas · "+(state.progress.attempts?Math.round(100*state.progress.correct/state.progress.attempts):0)+"% acertos";
  const p=$("academy-progress");
@@ -52,7 +53,7 @@ function renderList(){
  $("academy-list-title").textContent=state.subject==="Todas"?"Todas as aulas":state.subject;
  $("academy-count").textContent=all.length+" disponível(is)";
  $("academy-lessons").innerHTML=visible.length?visible.map((x,i)=>{
- const done=!!state.progress.done[x.id];
+ const done=!!state.progress.done[doneKey(x.id)];
  return '<button type="button" data-lesson="'+escapeHTML(x.id)+'" aria-current="'+(x.id===state.selected?.id)+'"><span class="academy-lesson-number">'+String(i+1).padStart(2,"0")+'</span><span class="academy-lesson-text"><b>'+escapeHTML(x.titulo)+'</b><small>'+escapeHTML(x.materia+" · "+x.unidade)+'</small></span>'+(done?'<span class="academy-check" title="Concluída">✓</span>':"")+'</button>';
  }).join(""):'<div class="academy-empty">Nenhuma aula com esses filtros. Experimente buscar outro termo.</div>';
  $("academy-more").hidden=all.length<=state.limit;
@@ -120,14 +121,14 @@ function renderSession(){
 function renderReader(){
  const lesson=state.selected;if(!lesson){$("academy-reader").innerHTML='<div class="study-start"><h3>Comece por uma matéria</h3><p>Selecione uma das aulas à esquerda.</p></div>';return}
  const total=visibleLessons().filter(x=>x.materia===lesson.materia).length;
- const done=visibleLessons().filter(x=>x.materia===lesson.materia&&state.progress.done[x.id]).length;
+ const done=visibleLessons().filter(x=>x.materia===lesson.materia&&state.progress.done[doneKey(x.id)]).length;
  const generated=!!lesson.gerador;
  state.question=makeQuestion(lesson);state.answered=false;
  const theory=escapeHTML(lesson.teoria).replace(/\n/g,"</p><p class=\"lesson-text\">");
  const steps=(lesson.passos||[]).map(x=>'<li>'+escapeHTML(x)+'</li>').join("");
  const d="<div class='lesson-progressline'><span style='width:"+Math.round(100*done/total)+"%'></span></div>";
  const level=generated?'<label class="lesson-level">Dificuldade <select id="lesson-difficulty"><option value="iniciante" '+(state.level==="iniciante"?"selected":"")+'>Iniciante</option><option value="intermediario" '+(state.level==="intermediario"?"selected":"")+'>Intermediário</option><option value="avancado" '+(state.level==="avancado"?"selected":"")+'>Avançado</option></select></label>':"";
- $("academy-reader").innerHTML='<div class="lesson-eyebrow"><span>'+escapeHTML(lesson.materia+" / "+lesson.unidade)+'</span><span>'+(state.progress.done[lesson.id]?"✓ Aula concluída":"Aula prática")+'</span></div><h3>'+escapeHTML(lesson.titulo)+'</h3>'+d+'<div class="lesson-stats">'+done+' de '+total+' aulas concluídas nesta matéria</div><h4>Entenda a matéria</h4><p class="lesson-text">'+theory+'</p><h4>Aprenda passo a passo</h4><ol class="lesson-steps">'+steps+'</ol><div class="lesson-example"><strong>Exemplo resolvido</strong><p>'+escapeHTML(lesson.exemplo)+'</p><div class="lesson-solution">'+escapeHTML(lesson.resolucao)+'</div></div><div class="lesson-navigation">'+level+'<button type="button" class="btn outline" data-session-start="'+escapeHTML(lesson.materia)+'">Revisão com questões da matéria</button></div>'+quizMarkup(state.question)+'<div class="lesson-navigation">'+(generated?'<button class="btn primary" data-new-exercise type="button">Novo exercício</button>':'<button class="btn outline" data-retry-exercise type="button">Tentar de novo</button>')+'<button class="btn primary" data-next-lesson type="button">Próxima aula</button></div><p class="lesson-notice">Aulas autorais de estudo. Conteúdo e exercícios não são o edital de concurso nem aprovação automática da FAAAB. Os resultados ficam apenas neste navegador.</p>';
+ $("academy-reader").innerHTML='<div class="lesson-eyebrow"><span>'+escapeHTML(lesson.materia+" / "+lesson.unidade)+'</span><span>'+(state.progress.done[doneKey(lesson.id)]?"✓ Aula concluída":"Aula prática")+'</span></div><h3>'+escapeHTML(lesson.titulo)+'</h3>'+d+'<div class="lesson-stats">'+done+' de '+total+' aulas concluídas nesta matéria</div><h4>Entenda a matéria</h4><p class="lesson-text">'+theory+'</p><h4>Aprenda passo a passo</h4><ol class="lesson-steps">'+steps+'</ol><div class="lesson-example"><strong>Exemplo resolvido</strong><p>'+escapeHTML(lesson.exemplo)+'</p><div class="lesson-solution">'+escapeHTML(lesson.resolucao)+'</div></div><div class="lesson-navigation">'+level+'<button type="button" class="btn outline" data-session-start="'+escapeHTML(lesson.materia)+'">Revisão com questões da matéria</button></div>'+quizMarkup(state.question)+'<div class="lesson-navigation">'+(generated?'<button class="btn primary" data-new-exercise type="button">Novo exercício</button>':'<button class="btn outline" data-retry-exercise type="button">Tentar de novo</button>')+'<button class="btn primary" data-next-lesson type="button">Próxima aula</button></div><p class="lesson-notice">Aulas autorais de estudo. Conteúdo e exercícios não são o edital de concurso nem aprovação automática da FAAAB. Os resultados ficam apenas neste navegador.</p>';
 }
 function respond(index){
  if(state.answered||!state.question)return;
