@@ -45,3 +45,22 @@ CREATE TABLE IF NOT EXISTS private_grants (
  granted_at INTEGER NOT NULL,
  FOREIGN KEY(user_key) REFERENCES identities(user_key)
 );
+
+-- Aprovação é uma etapa separada da nomeação de cargos administrativos.
+CREATE TABLE IF NOT EXISTS access_approvals (
+ user_key TEXT PRIMARY KEY,
+ approved_at INTEGER NOT NULL,
+ approved_by TEXT NOT NULL,
+ FOREIGN KEY(user_key) REFERENCES identities(user_key)
+);
+-- Só o proprietário atribui papéis, com escopo quando necessário.
+CREATE TABLE IF NOT EXISTS staff_assignments (
+ user_key TEXT NOT NULL,
+ role_key TEXT NOT NULL,
+ scope_json TEXT NOT NULL DEFAULT '{}',
+ assigned_by TEXT NOT NULL,
+ assigned_at INTEGER NOT NULL,
+ PRIMARY KEY(user_key, role_key),
+ FOREIGN KEY(user_key) REFERENCES identities(user_key)
+);
+CREATE INDEX IF NOT EXISTS idx_staff_assignments_user ON staff_assignments(user_key);
