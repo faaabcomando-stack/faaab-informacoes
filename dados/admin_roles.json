@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "projeto": "FAAAB",
+  "regra": "Primeiro whitelist, depois atribuição manual de cargos; nenhum cargo é atribuído automaticamente pelo login",
+  "roles": [
+    {
+      "id": "administrativo_leve",
+      "nome": "Administrativo leve",
+      "grupo": "apoio",
+      "descricao": "Visualiza informações, sem publicação automática",
+      "exigeEscopo": false
+    },
+    {
+      "id": "administrativo_aprovado",
+      "nome": "Administrativo aprovado",
+      "grupo": "admin",
+      "descricao": "Pode publicar comunicados",
+      "exigeEscopo": false
+    },
+    {
+      "id": "administrativo_aprovado_semitotal",
+      "nome": "Administrativo aprovado semi-total",
+      "grupo": "admin",
+      "descricao": "Pode publicar comunicados e editar titulares do comando",
+      "exigeEscopo": false
+    },
+    {
+      "id": "jornalista",
+      "nome": "Jornalista",
+      "grupo": "comunicacao",
+      "descricao": "Pode publicar notícias no painel de anunciadores",
+      "exigeEscopo": false
+    },
+    {
+      "id": "instrutor",
+      "nome": "Instrutor",
+      "grupo": "ensino",
+      "descricao": "Selecionar curso, batalhão ou outra área; direitos limitados à seleção",
+      "exigeEscopo": true
+    },
+    {
+      "id": "governo",
+      "nome": "Governo",
+      "grupo": "governo",
+      "descricao": "Selecionar cargo específico de Governo",
+      "exigeEscopo": true
+    },
+    {
+      "id": "alto_escalao",
+      "nome": "Alto escalão",
+      "grupo": "comando",
+      "descricao": "Selecionar força e se militar ou civil",
+      "exigeEscopo": true
+    },
+    {
+      "id": "sub_criador",
+      "nome": "Subcriador",
+      "grupo": "criacao",
+      "descricao": "Edição ampla de conteúdo; sem administrar a whitelist",
+      "exigeEscopo": false
+    },
+    {
+      "id": "criador",
+      "nome": "Criador",
+      "grupo": "criacao",
+      "descricao": "Edição de conteúdo; whitelist e cargos continuam exclusivos do proprietário",
+      "exigeEscopo": false
+    },
+    {
+      "id": "administrativo_marketing_total",
+      "nome": "Administrativo marketing total",
+      "grupo": "comunicacao",
+      "descricao": "Pode publicar comunicados e campanhas",
+      "exigeEscopo": false
+    },
+    {
+      "id": "desenvolvedor_leve",
+      "nome": "Desenvolvedor leve",
+      "grupo": "desenvolvimento",
+      "descricao": "Pode consultar informações técnicas sem alterar permissões",
+      "exigeEscopo": false
+    }
+  ],
+  "scopes": {
+    "instrutor": {
+      "tipos": [
+        "curso",
+        "batalhao",
+        "outro"
+      ],
+      "targetId": "ID cadastrado após escolha manual"
+    },
+    "governo": {
+      "cargoId": "Identificador de autoridade aprovado"
+    },
+    "alto_escalao": {
+      "categoria": [
+        "militar",
+        "civil"
+      ],
+      "forca": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM",
+        "GOV"
+      ]
+    }
+  },
+  "configuravel": true
+}
