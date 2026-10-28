@@ -44,6 +44,7 @@ function renderList(){
 function selectLesson(id,{scroll=false}={}){
  const lesson=state.lessons.find(x=>x.id===id);if(!lesson)return;
  state.selected=lesson;state.mode="lesson";state.session=null;state.question=null;state.answered=false;
+ try{localStorage.setItem("faaab-academia-last",lesson.id)}catch{}
  if(state.subject!=="Todas"&&state.subject!==lesson.materia){state.subject=lesson.materia;state.search="";$("lesson-search").value=""}
  renderList();renderReader();
  if(scroll&&window.matchMedia("(max-width:760px)").matches){$("academy-reader").scrollIntoView({behavior:"smooth",block:"start"})}
@@ -137,7 +138,7 @@ function openFromProgram(subject,topic){
 function events(){
  $("lesson-search").addEventListener("input",e=>{state.search=e.target.value;state.limit=25;renderList()});
  $("lesson-reset-search").addEventListener("click",()=>{state.search="";$("lesson-search").value="";state.limit=25;renderList();$("lesson-search").focus()});
- $("lesson-subjects").addEventListener("click",e=>{const btn=e.target.closest("[data-subject]");if(!btn)return;state.subject=btn.dataset.subject;state.search="";$("lesson-search").value="";state.limit=25;renderList();const lesson=filtered()[0];if(lesson)selectLesson(lesson.id);else renderReader()});
+ $("lesson-subjects").addEventListener("click",e=>{const btn=e.target.closest("[data-subject]");if(!btn)return;state.subject=btn.dataset.subject;state.search="";$("lesson-search").value="";state.limit=25;renderList();const lesson=filtered()[0];if(lesson)selectLesson(lesson.id);else{state.selected=null;renderReader()}});
  $("academy-lessons").addEventListener("click",e=>{const btn=e.target.closest("[data-lesson]");if(btn)selectLesson(btn.dataset.lesson,{scroll:true})});
  $("academy-more").addEventListener("click",()=>{state.limit+=25;renderList()});
  $("academy-reader").addEventListener("click",e=>{
