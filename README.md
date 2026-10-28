@@ -1,16 +1,24 @@
 # FAAAB — Central de Informações
 
+## Comando e hierarquia são categorias diferentes
+
+- **[Comando e autoridades](comando.html)** — 27 cargos de direção: Presidência, vice, STF, Ministro da Defesa, Governador, secretarias, Comandante e Subcomandante das forças aprovados. Somente estes cargos podem ter um titular, foto pública Roblox e histórico de ocupantes.
+- **[Hierarquia sem fotos](hierarquia.html)** — 90 postos, graduações e etapas de carreira por força, apresentados do maior para o menor. **Recruta, Soldado e Cabo não aparecem como cargos de comando nem recebem "titular".**
+- `dados/autoridades.json` — dados editáveis de titulares, ex-titulares e mandatos dos cargos de direção.
+- `dados/hierarquias.json` — lista ordenada de carreiras, sem dados de jogadores.
+- `dados/cargos.json` — arquivo legado do planejamento; a interface pública de Comando não o utiliza.
+
 Portal **institucional fictício** do projeto FAAAB no Roblox, hospedado no repositório público `faaabcomando-stack/faaab-informacoes`.
 
 ## Conteúdo disponível no código
 
-- `index.html`: portal com instituições, notícias, categorias corretas (escola, academia, curso, centro, brigada, subdivisão etc.), fichas de CDP, hierarquia de cargos e histórico.
+- `index.html`: portal com instituições, notícias, catálogo, cursos e CDP, além de acessos separados ao Comando e à Hierarquia.
 - `sistemas.html`: manual com 40 tópicos de política, mandatos, órgãos administrativos, carreira, FAC, economia, operações e tecnologia, diferenciando realidade e universo FAAAB.
 - `admin.html`: **editor local**, com formulários para notícias e ocupantes de cargos. Não autentica usuários nem escreve diretamente no GitHub.
 - `dados/catalogo.json`: 127 registros do catálogo aprovado em 24/10/2026.
 - `dados/patentes.json`: 82 fichas individuais de CDP de EB/FTB, FAB, FMB e CBM extraídas do manual de setembro de 2026.
 - `dados/cursos.json`: 55 registros — cursos, qualificações, rotas formativas e propostas sinalizadas.
-- `dados/cargos.json`: 117 cargos e funções com titulares não definidos, data de início/fim e duração pendentes.
+- `dados/autoridades.json`: 27 cargos de direção com campos de titular e histórico; patentes são registradas separadamente em `dados/hierarquias.json`.
 - `dados/sistemas.json`: 40 registros de documentação por assunto.
 - `dados/noticias.json`: comunicados confirmados; inicia vazio.
 - `dados/historico.json`: histórico de decisões e atualizações.
