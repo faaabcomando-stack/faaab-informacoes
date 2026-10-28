@@ -1,0 +1,1020 @@
+{
+  "versao": 1,
+  "observacao": "Questões autorais de treinamento contextualizadas por seleção. Não são transcrições de provas reais nem avaliação oficial da FAAAB.",
+  "provas": {
+    "espcex": {
+      "id": "espcex",
+      "questoes": [
+        {
+          "id": "espcex-q01",
+          "materia": "Matemática",
+          "assunto": "funções",
+          "enunciado": "Uma função quadrática tem expressão f(x)=x²−6x+5. Qual é o valor mínimo de f?",
+          "alternativas": [
+            "−4",
+            "−1",
+            "0",
+            "5"
+          ],
+          "correta": 0,
+          "explicacao": "O vértice tem x=−b/(2a)=6/2=3; f(3)=9−18+5=−4.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "espcex-q02",
+          "materia": "Física",
+          "assunto": "cinemática",
+          "enunciado": "Um móvel parte do repouso, com aceleração constante de 3 m/s², por 4 segundos. Qual é o deslocamento?",
+          "alternativas": [
+            "12 m",
+            "18 m",
+            "24 m",
+            "48 m"
+          ],
+          "correta": 2,
+          "explicacao": "Δs=v₀t+(a t²)/2=0+3×16/2=24 m.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "espcex-q03",
+          "materia": "Química",
+          "assunto": "estequiometria",
+          "enunciado": "Na reação balanceada 2H₂ + O₂ → 2H₂O, quantos mols de água podem ser formados com 3 mols de oxigênio e excesso de hidrogênio?",
+          "alternativas": [
+            "2 mols",
+            "3 mols",
+            "6 mols",
+            "9 mols"
+          ],
+          "correta": 2,
+          "explicacao": "A proporção entre O₂ e H₂O é 1:2. Assim, 3 mols de O₂ geram até 6 mols de água.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "espcex-q04",
+          "materia": "Geografia",
+          "assunto": "cartografia",
+          "enunciado": "Um mapa tem escala de 1:250.000. Duas cidades distam 4 cm no mapa. Qual é a distância real?",
+          "alternativas": [
+            "1 km",
+            "4 km",
+            "10 km",
+            "100 km"
+          ],
+          "correta": 2,
+          "explicacao": "4×250.000 cm = 1.000.000 cm = 10 km.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "espcex-q05",
+          "materia": "História",
+          "assunto": "história do Brasil",
+          "enunciado": "Assinale o acontecimento que ocorreu após a Independência de 1822, mas antes da República de 1889.",
+          "alternativas": [
+            "Promulgação da Constituição de 1988",
+            "Lei Áurea",
+            "Início do Estado Novo",
+            "Proclamação da República Francesa"
+          ],
+          "correta": 1,
+          "explicacao": "A Lei Áurea foi assinada em 1888, entre 1822 e 1889.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "espcex-q06",
+          "materia": "Português",
+          "assunto": "coesão",
+          "enunciado": "Na frase 'Embora o caminho fosse longo, a equipe continuou', o conectivo destacado introduz ideia de:",
+          "alternativas": [
+            "conclusão",
+            "causa direta",
+            "concessão",
+            "finalidade"
+          ],
+          "correta": 2,
+          "explicacao": "'Embora' apresenta uma circunstância que poderia dificultar a ação, mas não a impediu.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "espcex-q07",
+          "materia": "Inglês",
+          "assunto": "leitura e estrutura",
+          "enunciado": "Choose the option that best completes: 'If she studies regularly, she ___ better results.'",
+          "alternativas": [
+            "will achieve",
+            "achieving",
+            "achieved yesterday",
+            "achieve have"
+          ],
+          "correta": 0,
+          "explicacao": "Em condição real de futuro, a oração principal pode usar 'will + verbo base'.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "espcex-q08",
+          "materia": "Redação",
+          "assunto": "tese",
+          "enunciado": "Qual proposta constitui uma tese argumentativa para um texto sobre uso responsável da água?",
+          "alternativas": [
+            "Água.",
+            "A água é importante porque sustenta a saúde e a economia, exigindo gestão responsável.",
+            "Existem rios.",
+            "Que horas são?"
+          ],
+          "correta": 1,
+          "explicacao": "Uma tese é afirmação defendível e delimitada, passível de sustentação por argumentos.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        }
+      ]
+    },
+    "esa": {
+      "id": "esa",
+      "questoes": [
+        {
+          "id": "esa-q01",
+          "materia": "Matemática",
+          "assunto": "porcentagem",
+          "enunciado": "Uma turma tem 80 alunos. Se 35% participam de uma atividade, quantos são participantes?",
+          "alternativas": [
+            "24",
+            "26",
+            "28",
+            "32"
+          ],
+          "correta": 2,
+          "explicacao": "0,35×80=28 participantes.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "esa-q02",
+          "materia": "Matemática",
+          "assunto": "progressão aritmética",
+          "enunciado": "A sequência 4, 9, 14, 19, ... é uma PA. Qual é seu décimo termo?",
+          "alternativas": [
+            "44",
+            "49",
+            "54",
+            "59"
+          ],
+          "correta": 1,
+          "explicacao": "a₁=4 e r=5. a₁₀=4+9×5=49.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "esa-q03",
+          "materia": "Português",
+          "assunto": "concordância",
+          "enunciado": "Qual frase apresenta concordância verbal correta?",
+          "alternativas": [
+            "Fazem cinco anos que ocorreu.",
+            "Houveram muitos avisos.",
+            "Os relatórios foram entregues.",
+            "A equipe chegaram."
+          ],
+          "correta": 2,
+          "explicacao": "O sujeito plural 'os relatórios' concorda com 'foram'. Em usos impessoais, 'faz' e 'houve' permanecem no singular.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "esa-q04",
+          "materia": "História",
+          "assunto": "Brasil Império",
+          "enunciado": "Qual marco jurídico aboliu a escravidão no Brasil, em 1888?",
+          "alternativas": [
+            "Lei de Terras",
+            "Lei Áurea",
+            "Constituição de 1937",
+            "Ato Institucional nº 5"
+          ],
+          "correta": 1,
+          "explicacao": "A Lei Áurea aboliu juridicamente a escravidão em 1888.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "esa-q05",
+          "materia": "Geografia",
+          "assunto": "coordenadas",
+          "enunciado": "Na cartografia, um ponto localizado a 15°S e 45°O está:",
+          "alternativas": [
+            "ao norte do Equador e a leste de Greenwich",
+            "ao sul do Equador e a oeste de Greenwich",
+            "no Polo Norte",
+            "ao sul e a leste"
+          ],
+          "correta": 1,
+          "explicacao": "S indica latitude sul; O indica longitude oeste.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "esa-q06",
+          "materia": "Inglês",
+          "assunto": "compreensão",
+          "enunciado": "Choose the best meaning of 'The students arrived early because the exam started at eight.'",
+          "alternativas": [
+            "A prova foi cancelada.",
+            "Os alunos chegaram cedo porque a prova começou às oito.",
+            "Eles chegaram atrasados.",
+            "Não havia prova."
+          ],
+          "correta": 1,
+          "explicacao": "'Arrived early' significa chegaram cedo; 'because' introduz a causa.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        }
+      ]
+    },
+    "afa": {
+      "id": "afa",
+      "questoes": [
+        {
+          "id": "afa-q01",
+          "materia": "Matemática",
+          "assunto": "função quadrática",
+          "enunciado": "Se f(x)=2x²−8x+3, em qual valor de x a parábola atinge seu vértice?",
+          "alternativas": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correta": 1,
+          "explicacao": "xv=−b/(2a)=8/4=2.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "afa-q02",
+          "materia": "Física",
+          "assunto": "dinâmica",
+          "enunciado": "Um corpo de massa 2 kg está submetido a força resultante constante de 14 N. Qual a aceleração?",
+          "alternativas": [
+            "3 m/s²",
+            "7 m/s²",
+            "12 m/s²",
+            "28 m/s²"
+          ],
+          "correta": 1,
+          "explicacao": "Pela segunda lei de Newton, a=F/m=14/2=7 m/s².",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "afa-q03",
+          "materia": "Inglês",
+          "assunto": "passado simples",
+          "enunciado": "Complete: 'The pilots ___ their checklist before the flight yesterday.'",
+          "alternativas": [
+            "check",
+            "checked",
+            "checks",
+            "checking"
+          ],
+          "correta": 1,
+          "explicacao": "'Yesterday' indica passado concluído; o verbo regular 'check' passa a 'checked'.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "afa-q04",
+          "materia": "Português",
+          "assunto": "conectivos",
+          "enunciado": "Em 'A preparação era exigente; contudo, a turma prosseguiu', 'contudo' indica:",
+          "alternativas": [
+            "oposição",
+            "tempo",
+            "adição",
+            "explicação causal"
+          ],
+          "correta": 0,
+          "explicacao": "'Contudo' marca contraste entre dificuldade e continuidade.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "afa-q05",
+          "materia": "Física",
+          "assunto": "eletricidade",
+          "enunciado": "Um resistor de 6 Ω é percorrido por corrente de 2 A. Qual é a tensão?",
+          "alternativas": [
+            "3 V",
+            "8 V",
+            "12 V",
+            "36 V"
+          ],
+          "correta": 2,
+          "explicacao": "U=R×I=6×2=12 V.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "afa-q06",
+          "materia": "Redação",
+          "assunto": "redação",
+          "enunciado": "Em um texto dissertativo, uma conclusão adequada deve:",
+          "alternativas": [
+            "introduzir assunto totalmente diferente",
+            "retomar a tese e sintetizar o raciocínio",
+            "apresentar apenas exemplos desconexos",
+            "substituir os argumentos por perguntas"
+          ],
+          "correta": 1,
+          "explicacao": "A conclusão retoma coerentemente a tese e a linha argumentativa.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        }
+      ]
+    },
+    "epcar": {
+      "id": "epcar",
+      "questoes": [
+        {
+          "id": "epcar-q01",
+          "materia": "Matemática",
+          "assunto": "geometria",
+          "enunciado": "Um retângulo tem lados 9 cm e 5 cm. Qual é a diferença entre sua área e seu perímetro, em valores numéricos?",
+          "alternativas": [
+            "12",
+            "14",
+            "17",
+            "20"
+          ],
+          "correta": 2,
+          "explicacao": "Área = 45 cm²; perímetro = 2(9+5)=28 cm. Diferença numérica: 45−28=17.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "epcar-q02",
+          "materia": "Matemática",
+          "assunto": "porcentagem",
+          "enunciado": "Um valor aumentou 20% e passou a 180. Qual era o valor original?",
+          "alternativas": [
+            "140",
+            "150",
+            "160",
+            "165"
+          ],
+          "correta": 1,
+          "explicacao": "Se x×1,2=180, então x=180/1,2=150.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "epcar-q03",
+          "materia": "Português",
+          "assunto": "coesão",
+          "enunciado": "No trecho 'Pedro preferiu revisar o conteúdo; por isso, adiou o passeio', a expressão 'por isso' estabelece relação de:",
+          "alternativas": [
+            "contraste",
+            "consequência",
+            "comparação",
+            "dúvida"
+          ],
+          "correta": 1,
+          "explicacao": "O adiamento é apresentado como consequência da decisão de revisar.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "epcar-q04",
+          "materia": "Inglês",
+          "assunto": "interpretação",
+          "enunciado": "Read: 'The library opens at seven and closes at six.' When does it open?",
+          "alternativas": [
+            "At six",
+            "At seven",
+            "At eight",
+            "At noon"
+          ],
+          "correta": 1,
+          "explicacao": "'Opens at seven' indica abertura às sete.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "epcar-q05",
+          "materia": "Português",
+          "assunto": "análise sintática",
+          "enunciado": "Em 'Os estudantes atentos resolveram o exercício', qual é o núcleo do sujeito?",
+          "alternativas": [
+            "atentos",
+            "resolveram",
+            "estudantes",
+            "exercício"
+          ],
+          "correta": 2,
+          "explicacao": "O núcleo do sujeito 'os estudantes atentos' é 'estudantes'.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "epcar-q06",
+          "materia": "Redação",
+          "assunto": "argumentação",
+          "enunciado": "Qual organização mais ajuda a defender uma tese em um texto argumentativo?",
+          "alternativas": [
+            "Repetir o título três vezes",
+            "Apresentar argumento, justificativa e exemplo",
+            "Acumular palavras sem relação",
+            "Escrever frases aleatórias"
+          ],
+          "correta": 1,
+          "explicacao": "Argumentos precisam de razões e desenvolvimento relacionado ao tema.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        }
+      ]
+    },
+    "eear": {
+      "id": "eear",
+      "questoes": [
+        {
+          "id": "eear-q01",
+          "materia": "Física",
+          "assunto": "lei de Ohm",
+          "enunciado": "Um resistor de 8 Ω recebe tensão de 24 V. Qual é a corrente elétrica?",
+          "alternativas": [
+            "2 A",
+            "3 A",
+            "4 A",
+            "6 A"
+          ],
+          "correta": 1,
+          "explicacao": "I=U/R=24/8=3 A.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "eear-q02",
+          "materia": "Física",
+          "assunto": "trabalho",
+          "enunciado": "Uma força de 12 N age no sentido de um deslocamento de 5 m. Qual é o trabalho realizado?",
+          "alternativas": [
+            "17 J",
+            "30 J",
+            "60 J",
+            "120 J"
+          ],
+          "correta": 2,
+          "explicacao": "W=F×d=12×5=60 J.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "eear-q03",
+          "materia": "Matemática",
+          "assunto": "equações",
+          "enunciado": "Se 3x+7=28, qual o valor de x?",
+          "alternativas": [
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "correta": 2,
+          "explicacao": "3x=21; portanto x=7.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "eear-q04",
+          "materia": "Matemática",
+          "assunto": "progressões",
+          "enunciado": "Numa PA com primeiro termo 6 e razão 4, qual é o 12º termo?",
+          "alternativas": [
+            "44",
+            "46",
+            "48",
+            "50"
+          ],
+          "correta": 3,
+          "explicacao": "a₁₂=6+11×4=50.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "eear-q05",
+          "materia": "Português",
+          "assunto": "acentuação",
+          "enunciado": "Qual palavra deve receber acento por ser proparoxítona?",
+          "alternativas": [
+            "papel",
+            "medico (profissional de saúde)",
+            "cafe",
+            "amor"
+          ],
+          "correta": 1,
+          "explicacao": "A palavra 'médico' tem sílaba tônica antepenúltima: MÉ-di-co.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "eear-q06",
+          "materia": "Inglês",
+          "assunto": "present simple",
+          "enunciado": "Complete correctly: 'The technician ___ the equipment every day.'",
+          "alternativas": [
+            "check",
+            "checks",
+            "checking",
+            "checked yesterday"
+          ],
+          "correta": 1,
+          "explicacao": "Na terceira pessoa do singular do presente simples, usa-se 'checks'.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        }
+      ]
+    },
+    "escola-naval": {
+      "id": "escola-naval",
+      "questoes": [
+        {
+          "id": "escola-naval-q01",
+          "materia": "Matemática",
+          "assunto": "Pitágoras",
+          "enunciado": "Um triângulo retângulo tem catetos 6 e 8. Qual é a hipotenusa?",
+          "alternativas": [
+            "9",
+            "10",
+            "12",
+            "14"
+          ],
+          "correta": 1,
+          "explicacao": "√(6²+8²)=√100=10.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "escola-naval-q02",
+          "materia": "Física",
+          "assunto": "cinemática",
+          "enunciado": "Um objeto passa de 5 m/s a 25 m/s em 4 s. Qual é sua aceleração média?",
+          "alternativas": [
+            "4 m/s²",
+            "5 m/s²",
+            "6 m/s²",
+            "8 m/s²"
+          ],
+          "correta": 1,
+          "explicacao": "(25−5)/4=5 m/s².",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "escola-naval-q03",
+          "materia": "Matemática",
+          "assunto": "funções",
+          "enunciado": "Uma função f(x)=−x²+4x+1 tem valor máximo igual a:",
+          "alternativas": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "correta": 2,
+          "explicacao": "Vértice x=2; f(2)=−4+8+1=5.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "escola-naval-q04",
+          "materia": "Inglês",
+          "assunto": "gramática",
+          "enunciado": "Choose the correct form: 'They ___ the instructions before starting.'",
+          "alternativas": [
+            "reads",
+            "read",
+            "reading",
+            "has reads"
+          ],
+          "correta": 1,
+          "explicacao": "Com 'they' no presente simples, o verbo base é 'read'.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "escola-naval-q05",
+          "materia": "Português",
+          "assunto": "pontuação",
+          "enunciado": "Em 'Maria, examine os dados', a vírgula separa:",
+          "alternativas": [
+            "sujeito e verbo",
+            "vocativo",
+            "predicado e objeto",
+            "uma oração subordinada"
+          ],
+          "correta": 1,
+          "explicacao": "Maria é a pessoa chamada no enunciado; trata-se de vocativo.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "escola-naval-q06",
+          "materia": "Redação",
+          "assunto": "planejamento",
+          "enunciado": "Qual ação evita fuga ao tema em uma redação?",
+          "alternativas": [
+            "Usar exemplos sem ligação",
+            "Planejar tese e argumentos ligados ao comando da proposta",
+            "Copiar um texto pronto",
+            "Mudar de assunto na conclusão"
+          ],
+          "correta": 1,
+          "explicacao": "Ler o tema e manter argumento e conclusão coerentes reduz fuga temática.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        }
+      ]
+    },
+    "colegio-naval": {
+      "id": "colegio-naval",
+      "questoes": [
+        {
+          "id": "colegio-naval-q01",
+          "materia": "Matemática",
+          "assunto": "geometria",
+          "enunciado": "A área de um triângulo de base 12 cm e altura 7 cm é:",
+          "alternativas": [
+            "19 cm²",
+            "42 cm²",
+            "72 cm²",
+            "84 cm²"
+          ],
+          "correta": 1,
+          "explicacao": "A=(12×7)/2=42 cm².",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "colegio-naval-q02",
+          "materia": "Inglês",
+          "assunto": "gramática",
+          "enunciado": "Complete: 'She ___ to school every day.'",
+          "alternativas": [
+            "go",
+            "goes",
+            "going",
+            "gone"
+          ],
+          "correta": 1,
+          "explicacao": "Na terceira pessoa do singular do presente simples, 'go' torna-se 'goes'.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "colegio-naval-q03",
+          "materia": "Português",
+          "assunto": "coesão",
+          "enunciado": "Qual conectivo completa 'A prova era exigente, ___ o candidato permaneceu calmo'?",
+          "alternativas": [
+            "portanto",
+            "porque",
+            "mas",
+            "logo"
+          ],
+          "correta": 2,
+          "explicacao": "'Mas' expressa contraste.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "colegio-naval-q04",
+          "materia": "Estudos Sociais",
+          "assunto": "geografia",
+          "enunciado": "Qual bioma brasileiro está ligado, em grande parte, às condições do semiárido?",
+          "alternativas": [
+            "Pampa",
+            "Pantanal",
+            "Caatinga",
+            "Amazônia"
+          ],
+          "correta": 2,
+          "explicacao": "A Caatinga tem vegetação adaptada ao semiárido.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "colegio-naval-q05",
+          "materia": "Estudos Sociais",
+          "assunto": "história",
+          "enunciado": "A Lei Áurea, marco da abolição jurídica da escravidão no Brasil, foi assinada em:",
+          "alternativas": [
+            "1822",
+            "1888",
+            "1889",
+            "1930"
+          ],
+          "correta": 1,
+          "explicacao": "A Lei Áurea é de 1888.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "colegio-naval-q06",
+          "materia": "Ciências",
+          "assunto": "ecologia",
+          "enunciado": "Na cadeia capim → gafanhoto → sapo, o capim é:",
+          "alternativas": [
+            "produtor",
+            "decompositor",
+            "consumidor secundário",
+            "consumidor terciário"
+          ],
+          "correta": 0,
+          "explicacao": "O capim é produtor, pois realiza fotossíntese.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "colegio-naval-q07",
+          "materia": "Redação",
+          "assunto": "argumentação",
+          "enunciado": "Qual característica é indispensável em um parágrafo argumentativo?",
+          "alternativas": [
+            "Apenas palavras difíceis",
+            "Ideia ligada à tese e sustentada por justificativa",
+            "Muitos tópicos diferentes",
+            "Ausência de conexão"
+          ],
+          "correta": 1,
+          "explicacao": "Desenvolva uma ideia com justificativas pertinentes.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        }
+      ]
+    },
+    "apr-mar": {
+      "id": "apr-mar",
+      "questoes": [
+        {
+          "id": "apr-mar-q01",
+          "materia": "Português",
+          "assunto": "pronomes",
+          "enunciado": "Em 'A equipe encontrou os materiais e os organizou', o pronome 'os' retoma:",
+          "alternativas": [
+            "a equipe",
+            "os materiais",
+            "o local",
+            "o horário"
+          ],
+          "correta": 1,
+          "explicacao": "O pronome oblíquo 'os' substitui 'materiais'.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "apr-mar-q02",
+          "materia": "Matemática",
+          "assunto": "proporções",
+          "enunciado": "Uma embarcação percorre 48 km em 2 horas, mantendo rapidez média constante. Qual é a rapidez média?",
+          "alternativas": [
+            "12 km/h",
+            "18 km/h",
+            "24 km/h",
+            "96 km/h"
+          ],
+          "correta": 2,
+          "explicacao": "48/2=24 km/h.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "apr-mar-q03",
+          "materia": "Física",
+          "assunto": "dinâmica",
+          "enunciado": "Uma força resultante de 18 N acelera um corpo de massa 6 kg. Qual a aceleração?",
+          "alternativas": [
+            "2 m/s²",
+            "3 m/s²",
+            "6 m/s²",
+            "12 m/s²"
+          ],
+          "correta": 1,
+          "explicacao": "a=18/6=3 m/s².",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "apr-mar-q04",
+          "materia": "Química",
+          "assunto": "misturas",
+          "enunciado": "Em uma mistura de água e óleo em repouso, são observadas duas fases. Trata-se de:",
+          "alternativas": [
+            "elemento",
+            "mistura homogênea",
+            "mistura heterogênea",
+            "substância pura"
+          ],
+          "correta": 2,
+          "explicacao": "A separação em fases observáveis caracteriza mistura heterogênea.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "apr-mar-q05",
+          "materia": "Inglês",
+          "assunto": "leitura",
+          "enunciado": "Read: 'The sailor is checking the map.' What is the sailor doing?",
+          "alternativas": [
+            "Cleaning the deck",
+            "Checking the map",
+            "Sleeping",
+            "Cooking"
+          ],
+          "correta": 1,
+          "explicacao": "'Checking the map' significa conferindo o mapa.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "apr-mar-q06",
+          "materia": "Matemática",
+          "assunto": "porcentagem",
+          "enunciado": "Uma caixa tem 40 itens. Se 15% são retirados, quantos restam?",
+          "alternativas": [
+            "6",
+            "30",
+            "34",
+            "36"
+          ],
+          "correta": 2,
+          "explicacao": "15% de 40 = 6 retirados. Restam 40−6=34.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        }
+      ]
+    },
+    "ciam-pa": {
+      "id": "ciam-pa",
+      "questoes": [
+        {
+          "id": "ciam-pa-q01",
+          "materia": "Matemática",
+          "assunto": "sequências",
+          "enunciado": "Uma PA tem primeiro termo 8 e razão 5. Qual é o 7º termo?",
+          "alternativas": [
+            "33",
+            "35",
+            "38",
+            "43"
+          ],
+          "correta": 2,
+          "explicacao": "a₇=8+6×5=38.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "ciam-pa-q02",
+          "materia": "Matemática",
+          "assunto": "geometria",
+          "enunciado": "Um retângulo de 12 m de comprimento e 5 m de largura possui área de:",
+          "alternativas": [
+            "17 m²",
+            "34 m²",
+            "60 m²",
+            "120 m²"
+          ],
+          "correta": 2,
+          "explicacao": "Área=12×5=60 m².",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "ciam-pa-q03",
+          "materia": "Matemática",
+          "assunto": "juros",
+          "enunciado": "O juro simples de R$ 500 a 2% ao mês durante 3 meses é:",
+          "alternativas": [
+            "R$ 10",
+            "R$ 20",
+            "R$ 30",
+            "R$ 60"
+          ],
+          "correta": 2,
+          "explicacao": "J=500×0,02×3=R$ 30.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "ciam-pa-q04",
+          "materia": "Português",
+          "assunto": "coesão",
+          "enunciado": "Em 'A equipe estudou, portanto compreendeu o conteúdo', 'portanto' indica:",
+          "alternativas": [
+            "oposição",
+            "conclusão",
+            "condição",
+            "alternância"
+          ],
+          "correta": 1,
+          "explicacao": "O conectivo apresenta conclusão.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "ciam-pa-q05",
+          "materia": "Português",
+          "assunto": "concordância",
+          "enunciado": "Assinale a forma adequada de concordância:",
+          "alternativas": [
+            "Os candidato chegaram.",
+            "As instruções foram claras.",
+            "A equipe seguiram.",
+            "Nós estuda."
+          ],
+          "correta": 1,
+          "explicacao": "O sujeito plural 'as instruções' concorda com 'foram'.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        },
+        {
+          "id": "ciam-pa-q06",
+          "materia": "Matemática",
+          "assunto": "frações",
+          "enunciado": "Quanto é 3/4 de 120?",
+          "alternativas": [
+            "30",
+            "60",
+            "90",
+            "100"
+          ],
+          "correta": 2,
+          "explicacao": "120÷4=30 e 30×3=90.",
+          "dificuldade": "intermediario",
+          "origem": "autoral",
+          "oficial": false
+        }
+      ]
+    }
+  }
+}
