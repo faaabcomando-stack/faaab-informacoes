@@ -15,8 +15,8 @@ function ranks(){
     const steps=Array.isArray(x.cdpEtapas)?x.cdpEtapas:[];
     const confirmed=x.cdpStatus==="Confirmada pela FAAAB";
     const recorded=x.cdpStatus==="Registrada no manual FAAAB";
-    const proposed=x.cdpStatus?.startsWith("Proposta elaborada");
-    const label=confirmed?"Confirmada":proposed?"Proposta para validação":recorded?"Documentada no manual":"Detalhes a recuperar";
+    const proposed=x.cdpStatus?.startsWith("Proposta elaborada")||x.cdpStatus?.startsWith("Progressão indicada");
+    const label=confirmed?"Confirmada":proposed?"Etapas propostas":recorded?"Documentada no manual":"Detalhes a recuperar";
     const list=steps.length?'<ol class="cdp-steps">'+steps.map(st=>'<li>'+H(st.nome)+(st.obrigatorio===false?' <small>(opcional)</small>':"")+'</li>').join("")+'</ol>':recorded?'<p class="cdp-notice">Esta CDP não indica curso novo obrigatório nesta etapa do manual; consulte os critérios específicos.</p>':'<p class="cdp-notice">A CDP existe na FAAAB. Seus requisitos detalhados ainda não foram recuperados nesta documentação.</p>';
     const details=x.cdpCriterios?'<div class="cdp-criteria"><strong>Critérios específicos registrados:</strong><p>'+H(x.cdpCriterios)+'</p></div>':"";
     return '<article class="rank-card"><span class="tag">['+H(x.sigla)+'] · '+H(x.classe||"Patente")+'</span><h3>'+H(x.nome)+'</h3><div class="cdp-heading"><strong>CDP — Capacitação de Patente</strong><span class="'+(confirmed?"cdp-ok":"cdp-review")+'">'+label+'</span></div>'+list+details+'<details class="cdp-old"><summary>Fonte e regras de progressão</summary><p>'+H(x.cdpFonte||"Não informada")+'</p><p><strong>Tempo mínimo:</strong> '+H(x.cdpTempoProposto||"Não registrado")+'</p><small>Os prazos do manual antigo são propostas de balanceamento, não valores definitivos.</small></details></article>'
