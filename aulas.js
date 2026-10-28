@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id);
 const escapeHTML=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const norm=v=>String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
 const STORE="faaab-academia-v1";
-const state={lessons:[],subject:"Todas",search:"",selected:null,limit:25,level:"iniciante",progress:{done:{},attempts:0,correct:0},question:null,answered:false,mode:"lesson",session:null,ready:false,programId:null,programName:null,allowedIds:null};
+const state={lessons:[],subject:"Todas",search:"",selected:null,limit:25,level:"iniciante",progress:{done:{},attempts:0,correct:0},question:null,answered:false,mode:"lesson",session:null,ready:false,programId:null,programName:null,allowedIds:null,groups:[]};
 const ri=(min,max)=>min+Math.floor(Math.random()*(max-min+1));
 const shuffled=a=>{const b=a.slice();for(let i=b.length-1;i>0;i--){const j=ri(0,i);[b[i],b[j]]=[b[j],b[i]]}return b};
 function loadProgress(){try{const p=JSON.parse(localStorage.getItem(STORE)||"null");if(p&&typeof p==="object"&&p.done&&typeof p.done==="object"){state.progress={done:p.done,attempts:Number(p.attempts)||0,correct:Number(p.correct)||0}}}catch{}}
@@ -13,12 +13,24 @@ function saveProgress(){try{localStorage.setItem(STORE,JSON.stringify(state.prog
 function doneKey(id){return (state.programId||"geral")+"::"+id}
 function record(lesson,correct){state.progress.attempts++;if(correct){state.progress.correct++;state.progress.done[doneKey(lesson.id)]=Date.now()}saveProgress();summary();}
 function visibleLessons(){return state.allowedIds?state.lessons.filter(x=>state.allowedIds.has(x.id)):state.lessons}
+function subjectLessons(name){
+ if(!name||name==="Todas")return visibleLessons();
+ const group=state.groups.find(g=>g.nome===name);if(group)return visibleLessons().filter(x=>group.ids.has(x.id));
+ return visibleLessons().filter(x=>x.materia===name)
+}
+function focusGroup(name){
+ if(!state.ready)return false;
+ const lessons=subjectLessons(name);if(!lessons.length)return false;
+ state.subject=name;state.search="";$("lesson-search").value="";selectLesson(lessons[0].id,{scroll:true});return true
+}
 function setProgram(program){
  if(!state.ready)return false;
  const ids=new Set(program.lessonIds||[]);
  const valid=state.lessons.filter(x=>ids.has(x.id));
  if(!valid.length){state.allowedIds=new Set();state.programId=program.id;state.programName=program.heading;state.selected=null;return false}
  state.allowedIds=new Set(valid.map(x=>x.id));state.programId=program.id;state.programName=program.heading;
+ state.groups=(program.materias||[]).map(m=>({nome:m.nome,ids:new Set(m.aulas||[])})).filter(g=>g.ids.size);
+ if(!state.groups.length)state.groups=[...new Set(valid.map(x=>x.materia))].map(nome=>({nome,ids:new Set(valid.filter(x=>x.materia===nome).map(x=>x.id))}));
  state.subject="Todas";state.search="";state.limit=25;state.session=null;state.mode="lesson";
  $("lesson-search").value="";
  const lastKey="faaab-academia-last-"+program.id;
@@ -37,15 +49,15 @@ function summary(){
  if(p)p.setAttribute("aria-label",done+" de "+total+" aulas concluídas");
 }
 function subjects(){
- const list=["Todas",...new Set(visibleLessons().map(x=>x.materia))];
+ const list=["Todas",...state.groups.map(g=>g.nome)];
  $("lesson-subjects").innerHTML=list.map(name=>{
-  const included=visibleLessons();const size=name==="Todas"?included.length:included.filter(x=>x.materia===name).length;
+  const size=subjectLessons(name).length;
   return '<button type="button" data-subject="'+escapeHTML(name)+'" aria-pressed="'+(name===state.subject)+'">'+escapeHTML(name)+' <small>'+size+'</small></button>';
  }).join("");
 }
 function filtered(){
  const q=norm(state.search);
- return visibleLessons().filter(x=>(state.subject==="Todas"||x.materia===state.subject)&&(!q||norm([x.titulo,x.materia,x.unidade,x.teoria].join(" ")).includes(q)));
+ return subjectLessons(state.subject).filter(x=>!q||norm([x.titulo,x.materia,x.unidade,x.teoria].join(" ")).includes(q));
 }
 function renderList(){
  subjects();
@@ -63,13 +75,14 @@ function selectLesson(id,{scroll=false}={}){
  const lesson=visibleLessons().find(x=>x.id===id);if(!lesson)return;
  state.selected=lesson;state.mode="lesson";state.session=null;state.question=null;state.answered=false;
  try{localStorage.setItem("faaab-academia-last",lesson.id);if(state.programId)localStorage.setItem("faaab-academia-last-"+state.programId,lesson.id)}catch{}
- if(state.subject!=="Todas"&&state.subject!==lesson.materia){state.subject=lesson.materia;state.search="";$("lesson-search").value=""}
+ if(state.subject!=="Todas"&&!subjectLessons(state.subject).some(x=>x.id===lesson.id)){state.subject=state.groups.find(g=>g.ids.has(lesson.id))?.nome||lesson.materia;state.search="";$("lesson-search").value=""}
  renderList();renderReader();
  if(scroll&&window.matchMedia("(max-width:760px)").matches){$("academy-reader").scrollIntoView({behavior:"smooth",block:"start"})}
 }
 function nextLesson(){
  if(!state.selected)return;
- const same=visibleLessons().filter(x=>x.materia===state.selected.materia);
+ const label=state.subject==="Todas"?(state.groups.find(g=>g.ids.has(state.selected.id))?.nome||state.selected.materia):state.subject;
+ const same=subjectLessons(label);
  const i=same.findIndex(x=>x.id===state.selected.id);
  const next=same[(i+1)%same.length];
  selectLesson(next.id,{scroll:false});
@@ -101,7 +114,7 @@ function quizMarkup(q,{session=false}={}){
  return '<div class="lesson-quiz" id="lesson-quiz"><div class="lesson-quiz-header"><strong>'+(session?"Questão "+(state.session.index+1)+" de "+state.session.questions.length:"Agora é sua vez")+'</strong><span class="tag">Escolha uma resposta</span></div><h4>'+escapeHTML(q.pergunta)+'</h4><div class="lesson-options">'+answers+'</div><div id="lesson-feedback" class="lesson-feedback" role="status" aria-live="polite" hidden></div></div>';
 }
 function practiceExam(subject){
- const set=shuffled(visibleLessons().filter(x=>x.materia===subject&&x.questoes?.length)).slice(0,Math.min(10,visibleLessons().filter(x=>x.materia===subject).length));
+ const included=subjectLessons(subject);const set=shuffled(included.filter(x=>x.questoes?.length)).slice(0,Math.min(10,included.length));
  if(!set.length)return;
  state.mode="session";state.session={subject,questions:set.map(l=>({lesson:l,question:l.gerador?buildDynamic(l.gerador,state.level):l.questoes[0]})),index:0,score:0,answered:false};
  state.answered=false;state.question=state.session.questions[0].question;
@@ -120,8 +133,9 @@ function renderSession(){
 }
 function renderReader(){
  const lesson=state.selected;if(!lesson){$("academy-reader").innerHTML='<div class="study-start"><h3>Comece por uma matéria</h3><p>Selecione uma das aulas à esquerda.</p></div>';return}
- const total=visibleLessons().filter(x=>x.materia===lesson.materia).length;
- const done=visibleLessons().filter(x=>x.materia===lesson.materia&&state.progress.done[doneKey(x.id)]).length;
+ const label=state.subject==="Todas"?(state.groups.find(g=>g.ids.has(lesson.id))?.nome||lesson.materia):state.subject;
+ const included=subjectLessons(label);const total=included.length;
+ const done=included.filter(x=>state.progress.done[doneKey(x.id)]).length;
  const generated=!!lesson.gerador;
  state.question=makeQuestion(lesson);state.answered=false;
  const theory=escapeHTML(lesson.teoria).replace(/\n/g,"</p><p class=\"lesson-text\">");
@@ -198,6 +212,6 @@ async function boot(){
   $("academy-total").textContent="Indisponível";
  }
 }
-window.FAAABLessons={openFromProgram,setProgram,isReady:()=>state.ready,selectLesson:(id)=>{if(state.ready)selectLesson(id,{scroll:true})},getCount:()=>visibleLessons().length};
+window.FAAABLessons={openFromProgram,setProgram,focusGroup,isReady:()=>state.ready,selectLesson:(id)=>{if(state.ready)selectLesson(id,{scroll:true})},getCount:()=>visibleLessons().length};
 document.addEventListener("DOMContentLoaded",boot);
 })();
