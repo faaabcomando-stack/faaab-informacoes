@@ -16,7 +16,8 @@ Portal **institucional fictício** do projeto FAAAB no Roblox, hospedado no repo
 - `sistemas.html`: manual com 40 tópicos de política, mandatos, órgãos administrativos, carreira, FAC, economia, operações e tecnologia, diferenciando realidade e universo FAAAB.
 - `admin.html`: **editor local**, com formulários para notícias e ocupantes de cargos. Não autentica usuários nem escreve diretamente no GitHub.
 - `dados/catalogo.json`: 127 registros do catálogo aprovado em 24/10/2026.
-- `dados/patentes.json`: 84 registros de patentes, incluindo dois postos acrescentados sem CDP confirmada de EB/FTB, FAB, FMB e CBM extraídas do manual de setembro de 2026.
+- `dados/patentes.json`: 84 registros do manual, incluindo 77 postos de carreira e 7 funções de comando legadas. As funções não são apresentadas como patentes no portal.
+- `dados/hierarquias.json`: 92 patentes e graduações da FAAAB; todas reconhecidas como possuidoras de CDP.
 - `dados/cursos.json`: 55 registros — cursos, qualificações, rotas formativas e propostas sinalizadas.
 - `dados/autoridades.json`: 27 cargos de direção com campos de titular e histórico; patentes são registradas separadamente em `dados/hierarquias.json`.
 - `dados/sistemas.json`: 40 registros de documentação por assunto.
@@ -66,7 +67,8 @@ FAAAB é um **projeto independente de roleplay no Roblox**, sem relação oficia
 
 - **CDP significa Capacitação de Patente**: conjunto de etapas exigidas para o jogador naquela patente, não apenas uma descrição genérica de competências.
 - **Recruta / FTB**: CDP confirmada com **TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado**. Essas quatro etapas são obrigatórias.
-- As demais CDPs ainda exigem confirmação. O material antigo aparece apenas como referência em revisão; não considerar suas descrições regras novas aprovadas.
+- **Todas as patentes possuem CDP.** Há 74 fichas com critérios documentados no manual de setembro e a do Recruta confirmada diretamente (total de 75). Para os 17 outros registros, os detalhes específicos ainda não foram recuperados. Isso não significa ausência da CDP.
+- Os critérios do manual são exibidos como dados documentados sujeitos a atualizações, e os dias mínimos permanecem propostas até confirmação.
 - **FAB**: Comodoro do Ar incluído entre Brigadeiro e Coronel na hierarquia. Comandante da FAB está na página de Comando, não na lista de patentes comuns.
 - **Marinha**: Comodoro incluído entre Contra-Almirante e Capitão de Mar e Guerra na hierarquia.
 - **Governo**: Governador foi excluído por decisão expressa do projeto.
