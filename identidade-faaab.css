@@ -117,3 +117,7 @@
 @media(prefers-reduced-motion:reduce){
  .faaab-editorial *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
+/* Marcas horizontais ou verticais: não reduzir logotipos a um quadrado de insígnia. */
+.faaab-editorial .insignia.has-reference{width:115px;height:82px;padding:5px;background:#fff;border:1px solid #d3caba;flex:none}
+.faaab-editorial .insignia.has-reference img{width:100%;height:100%;max-width:none;max-height:none;object-fit:contain}
+@media(max-width:540px){.faaab-editorial .insignia.has-reference{width:92px;height:72px}}
