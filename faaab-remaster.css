@@ -145,3 +145,63 @@ body.faaab-v3 .v3-footer{display:block}
  .v3-nav-force::after{content:"DESLIZE PARA VER MAIS CATEGORIAS  →";display:block;font:700 10px/1.4 Arial,sans-serif;letter-spacing:.08em;color:#f0e6c7;background:#193727;padding:6px 16px;text-align:right}
  .v3-nav-force a{padding:13px 15px}
 }
+
+/* Governo da FAAAB — leitura institucional, registro de poderes e processos. */
+.v3-government-hero .v3-label{display:block}
+.v3-government-hero h1{max-width:860px;font-size:clamp(40px,5vw,64px)}
+.faaab-v3 section[id]{scroll-margin-top:18px}
+.v3-government-structure{margin-top:46px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:38px;border-top:2px solid #ac966a;padding-top:23px}
+.v3-government-structure>div{border-right:1px solid #d0d8cd;padding-right:23px}
+.v3-government-structure>div:last-child{border-right:0}
+.v3-government-structure h3{font-size:26px;margin:7px 0 12px}
+.v3-government-structure p{font-size:13px;line-height:1.7}
+.v3-government-lines{margin-top:24px;border-top:2px solid #a59a76}
+.v3-government-lines>div{display:grid;grid-template-columns:51px minmax(0,1fr) minmax(150px,240px);gap:18px;padding:23px 5px;border-bottom:1px solid #cfd6c9;align-items:start}
+.v3-government-lines>div>span{font:700 12px Georgia,serif;color:#8c754d}
+.v3-government-lines h3{font-size:24px}
+.v3-government-lines p{font-size:14px;max-width:640px;margin:9px 0 0}
+.v3-government-lines small{font-size:12px;line-height:1.5;color:#7d6d4c}
+.v3-government-steps{border-top:2px solid #a7946d;margin-top:26px}
+.v3-government-steps>div{display:grid;grid-template-columns:47px minmax(0,1fr);gap:13px;border-bottom:1px solid #d2d8ce;padding:21px 0}
+.v3-government-steps>div>span{color:#8e7a55;font:700 14px Georgia,serif}
+.v3-government-steps h3{font-size:22px}
+.v3-government-steps p{font-size:13px;margin:8px 0 0;line-height:1.75}
+.v3-government-role-group{border-bottom:1px solid #ccd5c9;margin:40px 0 0;padding-bottom:14px}
+.v3-government-role-group>h3{font-size:30px}
+.v3-government-role-group>p{font-size:13px;max-width:830px;margin:9px 0 24px}
+.v3-government-roles{border-top:2px solid #aa9872}
+.v3-government-role{padding:26px 4px 23px;border-bottom:1px solid #d0d8cd;scroll-margin-top:24px}
+.v3-government-role-top{display:flex;gap:20px;align-items:baseline;margin-bottom:19px}
+.v3-government-role-top .v3-label{min-width:72px;flex:none;color:#8b754f}
+.v3-government-role-top h4{font:400 clamp(21px,2.3vw,27px)/1.28 Georgia,serif;color:#1b402b;margin:0;letter-spacing:-.012em}
+.v3-government-role-body{padding-left:92px;display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.v3-government-role-body strong{display:block;font-size:13px;color:#264933;margin-top:5px}
+.v3-government-role-body p{font-size:13px;line-height:1.72;margin:7px 0 13px;color:#526658}
+.v3-government-role-body>div:last-child{border-left:1px solid #d2d7cd;padding-left:25px}
+.v3-gov-field{font-size:10px;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:#84714f}
+.v3-government-role-status{font-size:11px!important;color:#707e70!important;padding:14px 0 0 92px;border-top:1px dashed #d9ddd3;margin-top:12px!important}
+.v3-government-docs{border-top:2px solid #9f966d;margin-top:25px}
+.v3-government-doc{padding:25px 4px;border-bottom:1px solid #cfd7ce}
+.v3-government-doc-title{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+.v3-government-doc-title h3{font-size:25px;flex:1}
+.v3-government-doc-title .v3-state{white-space:normal}
+.v3-government-doc p{font-size:13px;max-width:850px;margin-top:9px}
+.v3-government-bottom{display:flex;flex-wrap:wrap;gap:18px 30px;border-top:1px solid #c5d0c4;padding-top:24px;margin-top:24px}
+.v3-government-bottom a{font-weight:750;font-size:13px;border-bottom:1px solid #b79b65}
+@media(max-width:900px){
+ .v3-government-structure{gap:19px}
+ .v3-government-role-body{gap:25px}
+}
+@media(max-width:650px){
+ .v3-government-structure{grid-template-columns:1fr;gap:18px;padding-top:18px}
+ .v3-government-structure>div{border-right:0;border-bottom:1px solid #d2d8ce;padding:0 0 15px}
+ .v3-government-lines>div{grid-template-columns:35px minmax(0,1fr);gap:8px 12px}
+ .v3-government-lines small{grid-column:2}
+ .v3-government-role-top{gap:10px}
+ .v3-government-role-top .v3-label{min-width:46px}
+ .v3-government-role-body{padding-left:0;grid-template-columns:1fr;gap:4px}
+ .v3-government-role-body>div:last-child{border-left:0;border-top:1px solid #d3d9cf;padding:14px 0 0}
+ .v3-government-role-status{padding-left:0}
+ .v3-government-doc-title h3{min-width:70%;font-size:22px}
+ .v3-government-doc-title .v3-state{margin:4px 0}
+}
