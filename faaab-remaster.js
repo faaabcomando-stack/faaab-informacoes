@@ -108,6 +108,8 @@ const V3={
   const sector=params.get("setor")||body.dataset.sector||"";
   const type=params.get("tipo")||body.dataset.type||"";
   if(force&&V3.forces[force]){
+   const genericFooter=document.querySelector(".v3-section.tint");
+   if(genericFooter)genericFooter.hidden=true;
    V3.context(force,type);
    const p=V3.forces[force],name=p.full||p.name;
    const crumb=document.querySelector(".v3-breadcrumb");
@@ -166,7 +168,11 @@ const V3={
  async courses(){
   const rows=await V3.get("cursos"),input=document.getElementById("v3-search");
   const order=["FTB","FAB","FMB","CFN","CBM"];const params=new URLSearchParams(location.search);const selected=params.get("forca")||"";
-  if(selected&&V3.forces[selected])V3.context(selected,"curso");
+  if(selected&&V3.forces[selected]){
+   const genericFooter=document.querySelector(".v3-section.tint");
+   if(genericFooter)genericFooter.hidden=true;
+   V3.context(selected,"curso");
+  }
   V3.set("v3-course-forces",order.map(k=>'<a class="v3-button'+(k===selected?' primary':'')+'" href="formacao.html?forca='+k+'">'+V3.forces[k].name+'</a>').join("")+'<a class="v3-button'+(!selected?' primary':'')+'" href="formacao.html">Todos</a>');
   function paint(){let list=selected?rows.filter(x=>x.forca===selected):rows;const q=V3.clean(input?.value||"");if(q)list=list.filter(x=>V3.clean([x.titulo,x.sigla,x.detalhes].join(" ")).includes(q));V3.set("v3-course-count",list.length+" cursos e formações documentados");V3.set("v3-course-list",list.map(x=>'<details class="rank"><summary><span>'+V3.esc(x.titulo)+'</span><small>'+V3.esc(x.forca)+'</small></summary><div class="rank-detail"><p><b>Situação:</b> '+V3.esc(x.estado||"A confirmar")+'</p><p style="white-space:pre-wrap">'+V3.esc(x.detalhes||"Detalhes a confirmar")+'</p></div></details>').join("")||'<p>Não há cursos registrados nesta seleção.</p>')}
   input?.addEventListener("input",paint);paint();
