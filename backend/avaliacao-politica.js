@@ -9,7 +9,7 @@
 const DAY=86400000;
 const REQUIRED_ROLES=["Presidente","Vice-Presidente","Membro do Partido","Deputado Federal"];
 const AGE_ACCOUNT=90, AGE_PARTY_GROUP=20, DAYS_CANDIDACY=30, DAYS_CREATION=60;
-function normalize(s){return String(s||"").normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("pt-BR").replace(/\s+/g," ").trim();}
+function normalize(s){return String(s||"").normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("pt-BR").replace(/[-_]+/g," ").replace(/\s+/g," ").trim();}
 function numberOfDays(timestamp,now){
  if(!timestamp||!Number.isFinite(Date.parse(timestamp)))return null;
  const delta=now-Date.parse(timestamp);
