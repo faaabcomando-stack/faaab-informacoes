@@ -75,21 +75,6 @@
     "historicoVerificado": false
   },
   {
-    "id": "GOV-GVR",
-    "forca": "GOV",
-    "sigla": "GVR",
-    "nome": "Governador",
-    "altoEscalao": false,
-    "titular": null,
-    "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado",
-    "duracaoMandato": null,
-    "inicioMandato": null,
-    "fimMandato": null,
-    "tipoIngresso": "Regra de escolha ainda não definida",
-    "historicoVerificado": false
-  },
-  {
     "id": "GOV-SGP",
     "forca": "GOV",
     "sigla": "SGP",
