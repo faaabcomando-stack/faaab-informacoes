@@ -1,5 +1,23 @@
 # FAAAB — Central de Informações
 
+## Novo login de administradores — Roblox ou Google
+
+**Preparado no código, mas ainda não ativado em produção.** A página `admin.html` mostra uma entrada para Roblox/Google, mas mantém os botões ocultos até o proprietário ativar um backend OAuth real.
+
+O backend está em [`auth/`](auth/README.md) e foi estruturado para Cloudflare Workers + D1. O login via Roblox usa o ID permanente verificado por OAuth; login Google pode vincular a conta Roblox para receber a mesma autorização. **A whitelist determina o acesso ao painel:** usuários não aprovados continuam com sessão pendente e não recebem permissão de edição. É possível eu gerenciar nomes aprovados no GitHub conectado quando você me passar os nicks, mas o OAuth precisa primeiro ser configurado nas contas do projeto.
+
+Arquivos:
+- `auth/src/worker.js` — login OAuth Roblox/Google, sessões, verificação da whitelist e publicação autenticada do conteúdo.
+- `auth/schema.sql` — tabelas privadas D1 de sessões, perfis e vínculo Roblox.
+- `auth/wrangler.toml.example` — configuração de exemplo sem segredos.
+- `admin.html` — página pública de entrada; não expõe o painel enquanto o backend não estiver ativo.
+- `admin-app.html` — interface de administração entregue pelo backend **apenas a usuários autorizados**.
+- `dados/admin_whitelist.json` — lista pública de Roblox UserIds e/ou nicknames aprovados; e-mails e tokens não devem ser escritos ali.
+- `dados/auth_public.json` — ativação e URL pública do servidor, atualmente desativado.
+
+**Faltam ações explícitas do proprietário:** criar aplicativo OAuth Roblox, configurar OAuth Google, criar Worker/D1 Cloudflare, adicionar segredos do servidor e configurar URL do Worker no `auth_public.json`. Não confunda código pronto com login já operacional.
+
+
 ## Comando e hierarquia são categorias diferentes
 
 - **[Comando e autoridades](comando.html)** — 26 cargos de direção: Presidência, Vice-Presidência, STF, Ministro da Defesa, secretarias, Comandante e Subcomandante das forças aprovados. Somente estes cargos podem ter um titular, foto pública Roblox e histórico de ocupantes.
