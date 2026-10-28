@@ -24,7 +24,7 @@ function drawList(){
  $("program-more").hidden=all.length<=state.limit;
 }
 function subjectsInfo(p){
- return p.materias.map((m,i)=>'<div class="program-subject"><div class="program-subject-number">'+String(i+1).padStart(2,"0")+'</div><div><strong>'+esc(m.nome)+'</strong><small>'+m.aulas.length+' aulas disponíveis para esta seleção</small></div><button type="button" data-program-lesson="'+esc(m.aulas[0]||"")+'">Estudar</button></div>').join("");
+ return p.materias.map((m,i)=>'<div class="program-subject"><div class="program-subject-number">'+String(i+1).padStart(2,"0")+'</div><div><strong>'+esc(m.nome)+'</strong><small>'+m.aulas.length+' aulas disponíveis para esta seleção</small></div><button type="button" data-program-subject="'+esc(m.nome)+'">Estudar</button></div>').join("");
 }
 function drawDetail(x){
  const node=$("program-detail"),p=programFor(x);
@@ -42,14 +42,14 @@ function selectProgram(id,opts={}){
  try{localStorage.setItem(KEY,id)}catch{}
  const p=programFor(x);
  if(p&&window.FAAABLessons?.isReady()){
-  window.FAAABLessons.setProgram({id:"exam-"+x.id,heading:p.heading,lessonIds:[...new Set(p.materias.flatMap(m=>m.aulas))],description:"Aulas de "+p.heading+" · Estudo sem login · A aprovação em prova e a CDP são processos separados."});
+  window.FAAABLessons.setProgram({id:"exam-"+x.id,heading:p.heading,materias:p.materias,lessonIds:[...new Set(p.materias.flatMap(m=>m.aulas))],description:"Aulas de "+p.heading+" · Estudo sem login · A aprovação em prova e a CDP são processos separados."});
  }
  if(opts.scroll&&window.matchMedia("(max-width:850px)").matches)$("program-detail").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function moveToAcademy(lessonId){
  if(!state.active)return;
  const x=state.list.find(z=>z.id===state.active),p=programFor(x);if(!p)return;
- if(lessonId)window.FAAABLessons?.selectLesson(lessonId);
+ if(lessonId)window.FAAABLessons?.focusGroup(lessonId);
  $("academia").scrollIntoView({behavior:"smooth",block:"start"});
 }
 async function initialize(){
@@ -74,7 +74,7 @@ async function initialize(){
 $("program-more").addEventListener("click",()=>{state.limit+=22;drawList()});
 $("program-list").addEventListener("click",e=>{const b=e.target.closest("[data-program]");if(b)selectProgram(b.dataset.program,{scroll:true})});
 $("program-detail").addEventListener("click",e=>{
- const subject=e.target.closest("[data-program-lesson]");if(subject){moveToAcademy(subject.dataset.programLesson);return}
+ const subject=e.target.closest("[data-program-subject]");if(subject){moveToAcademy(subject.dataset.programSubject);return}
  if(e.target.closest("#program-start"))moveToAcademy(null);
  if(e.target.closest("#program-simulado")){const x=state.list.find(x=>x.id===state.active),p=programFor(x);if(p)window.FAAABSimulados?.start(p.id,p.heading)}
 });
