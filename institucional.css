@@ -121,3 +121,25 @@ footer a,.footer a{color:#e5eeee!important}
  .program-detail{scroll-margin-top:65px}
  .academy{scroll-margin-top:65px}
 }
+
+/* Legibilidade e acabamento tipográfico */
+.mast .seal{font:800 12px/1 system-ui,sans-serif!important;letter-spacing:.03em;width:64px!important;height:50px!important;flex:none}
+.hero{grid-template-columns:minmax(0,1fr);padding:21px 0 14px}
+.hero p{max-width:750px}
+.program-panel,.academy{scroll-margin-top:64px}
+.program-option-main b{font-size:13px}
+.program-option-state{white-space:nowrap}
+@media(max-width:720px){
+ .mast .seal{width:50px!important;height:42px!important;font-size:10px!important}
+ #tabs button{font-size:13px}
+ .program-option-main b{font-size:14px}
+ .program-option-main small,.program-option-state{font-size:12px}
+ .program-detail>p,.program-not-ready>p{font-size:14px}
+ .program-subject strong{font-size:14px}
+ .program-subject small{font-size:12px}
+ .program-detail .program-rule{font-size:13px}
+ .program-filters label{font-size:13px}
+ .program-filters input,.program-filters select{font-size:16px}
+ .academy-lesson-text b{font-size:14px}
+ .lesson-text{font-size:15px}
+}
