@@ -3,7 +3,7 @@
 ## Comando e hierarquia são categorias diferentes
 
 - **[Comando e autoridades](comando.html)** — 26 cargos de direção: Presidência, Vice-Presidência, STF, Ministro da Defesa, secretarias, Comandante e Subcomandante das forças aprovados. Somente estes cargos podem ter um titular, foto pública Roblox e histórico de ocupantes.
-- **[Hierarquia sem fotos](hierarquia.html)** — 92 postos, graduações e etapas de carreira por força, apresentados do maior para o menor. **Recruta, Soldado e Cabo não aparecem como cargos de comando nem recebem "titular".**
+- **[Hierarquia sem fotos](hierarquia.html)** — 93 postos, graduações e etapas de carreira por força, apresentados do maior para o menor. **Recruta, Soldado e Cabo não aparecem como cargos de comando nem recebem "titular".**
 - `dados/autoridades.json` — dados editáveis de titulares, ex-titulares e mandatos dos cargos de direção.
 - `dados/hierarquias.json` — lista ordenada de carreiras, sem dados de jogadores.
 - `dados/cargos.json` — arquivo legado do planejamento; a interface pública de Comando não o utiliza.
@@ -17,7 +17,7 @@ Portal **institucional fictício** do projeto FAAAB no Roblox, hospedado no repo
 - `admin.html`: **editor local**, com formulários para notícias e ocupantes de cargos. Não autentica usuários nem escreve diretamente no GitHub.
 - `dados/catalogo.json`: 127 registros do catálogo aprovado em 24/10/2026.
 - `dados/patentes.json`: 84 registros do manual, incluindo 77 postos de carreira e 7 funções de comando legadas. As funções não são apresentadas como patentes no portal.
-- `dados/hierarquias.json`: 92 patentes e graduações da FAAAB; todas reconhecidas como possuidoras de CDP.
+- `dados/hierarquias.json`: 93 patentes e graduações da FAAAB; todas reconhecidas como possuidoras de CDP.
 - `dados/cursos.json`: 55 registros — cursos, qualificações, rotas formativas e propostas sinalizadas.
 - `dados/autoridades.json`: 27 cargos de direção com campos de titular e histórico; patentes são registradas separadamente em `dados/hierarquias.json`.
 - `dados/sistemas.json`: 40 registros de documentação por assunto.
@@ -67,9 +67,24 @@ FAAAB é um **projeto independente de roleplay no Roblox**, sem relação oficia
 
 - **CDP significa Capacitação de Patente**: conjunto de etapas exigidas para o jogador naquela patente, não apenas uma descrição genérica de competências.
 - **Recruta / FTB**: CDP confirmada com **TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado**. Essas quatro etapas são obrigatórias.
-- **Todas as patentes possuem CDP.** Há 74 fichas com critérios documentados no manual de setembro e a do Recruta confirmada diretamente (total de 75). Para os 17 outros registros, os detalhes específicos ainda não foram recuperados. Isso não significa ausência da CDP.
+- **Todas as patentes possuem CDP.** Há 74 fichas com critérios documentados no manual de setembro e a do Recruta confirmada diretamente (total de 75). Para os demais registros, os detalhes específicos ainda não foram recuperados; a PM possui seis passagens com etapas propostas. Isso não significa ausência da CDP.
 - Os critérios do manual são exibidos como dados documentados sujeitos a atualizações, e os dias mínimos permanecem propostas até confirmação.
 - **FAB**: Comodoro do Ar incluído entre Brigadeiro e Coronel na hierarquia. Comandante da FAB está na página de Comando, não na lista de patentes comuns.
 - **Marinha**: Comodoro incluído entre Contra-Almirante e Capitão de Mar e Guerra na hierarquia.
 - **Governo**: Governador foi excluído por decisão expressa do projeto.
 
+
+## Passagens de carreira da Polícia Militar — 28/10/2026
+
+O responsável da FAAAB definiu seis passagens de carreira:
+
+1. Aprendiz → Soldado de Segunda Classe (Aprendiz acrescentado à hierarquia PM).
+2. Cabo → Terceiro-Sargento (primeiro grau de Sargento).
+3. Aspirante a Oficial → Segundo-Tenente.
+4. Capitão → Major.
+5. Tenente-Coronel → Coronel.
+6. Coronel → Subcomandante-Geral (**nomeação para cargo de comando**, não patente nova).
+
+Passagens confirmadas pelo responsável; **etapas de capacitação propostas e ainda não homologadas**. Foram associadas como **referências ainda não escolhidas** algumas opções do estudo Codex PMDF (CFP, CAP, CFO, CAO e CAE). O CAP não equivale automaticamente a formação de sargentos; a aplicação no jogo precisa ser aprovada. Para Subcomandante-Geral, não foi criado curso novo.
+
+Ver `dados/pm_progressao.json` e `policia-pesquisa.html#progressao-pm`. O arquivo de pesquisa original `dados/pmdf_pesquisa_cursos_2026.json` mantém **46 cursos pesquisados, 19 opções prioritárias e zero cursos homologados/selecionados**.
