@@ -14,7 +14,7 @@ Portal **institucional fictício** do projeto FAAAB no Roblox, hospedado no repo
 
 - `index.html`: portal com instituições, notícias, catálogo, cursos e CDP, além de acessos separados ao Comando e à Hierarquia.
 - `sistemas.html`: manual com 40 tópicos de política, mandatos, órgãos administrativos, carreira, FAC, economia, operações e tecnologia, diferenciando realidade e universo FAAAB.
-- `admin.html`: **editor local**, com formulários para notícias e ocupantes de cargos. Não autentica usuários nem escreve diretamente no GitHub.
+- `admin.html`: painel editorial renovado com menu visual, notícias, titulares do comando, whitelist de colaboradores, comandos rápidos, editor avançado e exportação em ZIP. Não autentica nem escreve diretamente no GitHub.
 - `dados/catalogo.json`: 127 registros do catálogo aprovado em 24/10/2026.
 - `dados/patentes.json`: 84 registros do manual, incluindo 77 postos de carreira e 7 funções de comando legadas. As funções não são apresentadas como patentes no portal.
 - `dados/hierarquias.json`: 93 patentes e graduações da FAAAB; todas reconhecidas como possuidoras de CDP.
@@ -88,3 +88,27 @@ O responsável da FAAAB definiu seis passagens de carreira:
 Passagens confirmadas pelo responsável; **etapas de capacitação propostas e ainda não homologadas**. Foram associadas como **referências ainda não escolhidas** algumas opções do estudo Codex PMDF (CFP, CAP, CFO, CAO e CAE). O CAP não equivale automaticamente a formação de sargentos; a aplicação no jogo precisa ser aprovada. Para Subcomandante-Geral, não foi criado curso novo.
 
 Ver `dados/pm_progressao.json` e `policia-pesquisa.html#progressao-pm`. O arquivo de pesquisa original `dados/pmdf_pesquisa_cursos_2026.json` mantém **46 cursos pesquisados, 19 opções prioritárias e zero cursos homologados/selecionados**.
+
+## Novo painel administrativo da FAAAB
+
+Acesse **[Painel administrativo](admin.html)**. Agora o trabalho é organizado em **Visão geral**, **Notícias**, **Titulares do comando**, **Whitelist editorial**, **Comandos rápidos** e **Editor avançado**.
+
+### Salvar e publicar
+
+1. Edite as notícias, os titulares ou a lista de colaboradores com os formulários.
+2. Clique em **Baixar alterações**. O navegador cria um ZIP contendo somente os arquivos JSON alterados.
+3. Extraia o ZIP e envie os arquivos JSON para a pasta [`dados/`](https://github.com/faaabcomando-stack/faaab-informacoes/tree/main/dados) usando **Add file > Upload files** na conta GitHub com permissão. Confirme o commit e consulte o GitHub Pages. O site estático não realiza a publicação automaticamente.
+
+Enquanto o pacote não for publicado, nada muda no site público. Os dados do formulário só ficam em memória no navegador; ao fechar/recarregar a página, alterações não exportadas serão perdidas.
+
+### Comandos editoriais locais
+
+- `/ajuda`: mostrar comandos.
+- `/status`: listar arquivos alterados.
+- `/wl listar`, `/wl adicionar usuario editor`, `/wl remover usuario`: organizar o cadastro editorial.
+- `/noticia Título | Resumo`: preparar uma notícia.
+- `/titular GOV-PRE usuario 123456789`: preparar atualização de um titular com ID público Roblox.
+
+**Atenção: whitelist não é autorização de acesso.** `dados/admin_whitelist.json` é somente um catálogo de identidades GitHub públicas, por padrão vazio; qualquer visitante pode abrir o formulário, mas não consegue publicar mudanças sem permissão no repositório. A segurança real dos arquivos permanece nos **colaboradores e permissões do GitHub**: https://github.com/faaabcomando-stack/faaab-informacoes/settings/access. Os comandos daqui **não são comandos do jogo Roblox** e não podem expulsar, promover, banir, dar patente ou conceder acesso a jogo. Para isso, seriam necessários scripts no servidor Roblox, autenticação e um backend seguro. Nunca guardar senha, token ou chave num JSON público ou no JavaScript.
+
+O assistente conectado à conta GitHub do projeto pode receber pedidos explícitos para atualizar os arquivos e a whitelist editorial a partir da conversa, mas não monitora nem autentica usuários continuamente.
