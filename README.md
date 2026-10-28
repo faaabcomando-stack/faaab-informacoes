@@ -69,7 +69,7 @@ Alternativa estática: em Settings > Pages, usar **Deploy from a branch**, branc
 
 ## Atualizações editoriais
 
-Abra `admin.html` no site (depois de ativado), escolha um arquivo, edite os dados, valide JSON e baixe. Depois substitua o arquivo correspondente em `dados/` pelo editor de arquivos do GitHub autenticado. Nunca inclua credenciais, senhas, chaves GitHub ou tokens Roblox no repositório público.
+Depois de implantar o OAuth, entre pelo botão Roblox ou Google no `admin.html`. A versão autorizada do painel é entregue pelo Worker em `/painel` e pode publicar via API autenticada. O ZIP continua disponível como alternativa de exportação. Nunca inclua credenciais, senhas, chaves GitHub ou tokens Roblox no repositório público.
 
 O painel administrativo é **local e limitado**: autenticação, permissões de setores, auditoria e publicação sem GitHub exigem um backend seguro que ainda não existe.
 
@@ -107,26 +107,9 @@ Passagens confirmadas pelo responsável; **etapas de capacitação propostas e a
 
 Ver `dados/pm_progressao.json` e `policia-pesquisa.html#progressao-pm`. O arquivo de pesquisa original `dados/pmdf_pesquisa_cursos_2026.json` mantém **46 cursos pesquisados, 19 opções prioritárias e zero cursos homologados/selecionados**.
 
-## Novo painel administrativo da FAAAB
+## Painel administrativo restrito
 
-Acesse **[Painel administrativo](admin.html)**. Agora o trabalho é organizado em **Visão geral**, **Notícias**, **Titulares do comando**, **Whitelist editorial**, **Comandos rápidos** e **Editor avançado**.
+A interface administrativa funcional agora está em `admin-app.html`, mas o **servidor OAuth só a entrega a usuários autorizados** em `/painel`. A página `admin.html` é a porta de entrada de login. Por enquanto, a autenticação ainda precisa ser ativada pelo proprietário seguindo [auth/README.md](auth/README.md).
 
-### Salvar e publicar
+Depois de autenticado e autorizado, o usuário com perfil **editor** pode editar/publicar conteúdo no GitHub através do backend; somente **owner** pode modificar a whitelist. O perfil **revisor** não publica. O servidor não concede privilégios dentro do Roblox.
 
-1. Edite as notícias, os titulares ou a lista de colaboradores com os formulários.
-2. Clique em **Baixar alterações**. O navegador cria um ZIP contendo somente os arquivos JSON alterados.
-3. Extraia o ZIP e envie os arquivos JSON para a pasta [`dados/`](https://github.com/faaabcomando-stack/faaab-informacoes/tree/main/dados) usando **Add file > Upload files** na conta GitHub com permissão. Confirme o commit e consulte o GitHub Pages. O site estático não realiza a publicação automaticamente.
-
-Enquanto o pacote não for publicado, nada muda no site público. Os dados do formulário só ficam em memória no navegador; ao fechar/recarregar a página, alterações não exportadas serão perdidas.
-
-### Comandos editoriais locais
-
-- `/ajuda`: mostrar comandos.
-- `/status`: listar arquivos alterados.
-- `/wl listar`, `/wl adicionar usuario editor`, `/wl remover usuario`: organizar o cadastro editorial.
-- `/noticia Título | Resumo`: preparar uma notícia.
-- `/titular GOV-PRE usuario 123456789`: preparar atualização de um titular com ID público Roblox.
-
-**Atenção: whitelist não é autorização de acesso.** `dados/admin_whitelist.json` é somente um catálogo de identidades GitHub públicas, por padrão vazio; qualquer visitante pode abrir o formulário, mas não consegue publicar mudanças sem permissão no repositório. A segurança real dos arquivos permanece nos **colaboradores e permissões do GitHub**: https://github.com/faaabcomando-stack/faaab-informacoes/settings/access. Os comandos daqui **não são comandos do jogo Roblox** e não podem expulsar, promover, banir, dar patente ou conceder acesso a jogo. Para isso, seriam necessários scripts no servidor Roblox, autenticação e um backend seguro. Nunca guardar senha, token ou chave num JSON público ou no JavaScript.
-
-O assistente conectado à conta GitHub do projeto pode receber pedidos explícitos para atualizar os arquivos e a whitelist editorial a partir da conversa, mas não monitora nem autentica usuários continuamente.
