@@ -1,5 +1,19 @@
 # FAAAB — Central de Informações
 
+## Preparação específica por prova · interface 2026
+
+A [Central FAAAB — Estudos](central.html#estudos) foi redesenhada. **A primeira escolha é sempre a prova**, não uma matéria genérica. Cada seleção reconhecida abre exclusivamente sua própria lista de disciplinas, aulas explicativas, exemplos resolvidos, questões corrigidas e revisões. O progresso é salvo no dispositivo separadamente para cada prova.
+
+- **Programas preparatórios específicos disponíveis:** EsPCEx, ESA, AFA/CFOAV-INT-INF, EPCAR/CPCAR, EEAR/CFS, Escola Naval/CPAEN, Colégio Naval/CPACN, Aprendizes-Marinheiros/CPAEAM e Soldado Fuzileiro Naval/C-FSD-FN.
+- O catálogo mantém **182 fichas individuais**, com ligação às referências reais quando existente. **165 fichas ainda não têm programa de matérias interno confirmado**: nelas o site informa a pendência e não reutiliza uma prova aleatória. Várias fichas ligadas à mesma instituição podem usar a mesma *referência externa*, mas isso não define a avaliação interna FAAAB.
+- **104 aulas originais** em Matemática, Português, Geografia, História, Ciências, Física, Química, Inglês e Lógica. São aulas de preparação, não reprodução de provas oficiais nem garantia de equivalência de dificuldade. Alguns programas exigem conteúdos além dessas aulas; para uma preparação integral, os tópicos faltantes deverão ser produzidos e validados.
+- Disciplinas exigidas como Redação, Estudos Sociais ou Ciências estão agrupadas conforme o concurso de referência, com acesso direto às respectivas aulas. A redação completa não recebe correção automática do sistema.
+- O acesso **não depende do Google** para estudar; whitelist e autenticação são necessárias apenas para funções restritas e editais internos quando ativados.
+- **Mobile:** novo `mobile.css` e `institucional.css` incluídos em todas as 11 páginas HTML do projeto. A central ganhou `programas.js` e o catálogo de relações específicas `dados/programas_por_prova.json`.
+
+O conteúdo programático verdadeiro de cada curso FAAAB precisa de homologação pela coordenação. Não confundir referência de concurso militar real com patentes, CDPs ou avaliações do Roblox.
+
+
 ## Escola FAAAB: aulas interativas e site mobile
 
 **[Começar a estudar dentro do site](central.html#estudos)** — a escola não depende do login Google, da whitelist ou da ativação do Firebase.
