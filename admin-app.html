@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex,nofollow"><title>Central de Administração | FAAAB</title>
 <meta name="description" content="Painel editorial de rascunhos da FAAAB para notícias, comando, whitelist e ferramentas. Acesso de escrita controlado pelo GitHub.">
 <link rel="stylesheet" href="admin-panel.css">
-<link rel="stylesheet" href="mobile.css"><link rel="stylesheet" href="institucional.css"></head>
+<link rel="stylesheet" href="mobile.css"><link rel="stylesheet" href="institucional.css"><link rel="stylesheet" href="faaab-admin-remaster.css"></head>
 <body>
 <div class="identity"><div class="shell"><span>FAAAB <span class="identity-sep">/</span> CENTRAL DE ADMINISTRAÇÃO</span><a href="./">Voltar ao portal <span aria-hidden="true">↗</span></a></div></div>
 <header class="top"><div class="shell top-inner"><div class="brandmark" aria-hidden="true">F</div><div class="brand"><strong>Administração FAAAB</strong><span>Área restrita de administração</span></div><div class="top-meta"><span class="tag-neutral">Acesso verificado</span><span class="smalltext">Login Roblox · via servidor seguro</span></div></div></header>
@@ -19,10 +19,10 @@
 <button type="button" data-view="whitelist"><span aria-hidden="true">♧</span> Whitelist de acesso</button>
 <button type="button" data-view="comandos"><span aria-hidden="true">⌘</span> Comandos rápidos</button>
 <button type="button" data-view="avancado"><span aria-hidden="true">⚙</span> Editor avançado</button>
-</nav><div class="sidebar-footer"><b>Áreas adicionais</b><p><a href="/membros">Área de membros</a></p><p><a href="/anunciadores">Painel de anunciadores</a></p><p><a href="/cargos">Atribuição manual de cargos (proprietário)</a></p></div>
+</nav><div class="sidebar-footer"><b>Áreas adicionais</b><p><a href="membros.html">Área de membros</a></p><p><a href="/anunciadores">Painel de anunciadores</a></p><p><a href="/cargos">Atribuição manual de cargos (proprietário)</a></p></div>
 <div class="sidebar-footer"><b>Publicação segura</b><p>Prepare as alterações e publique pelo servidor, ou baixe um ZIP de segurança.</p><a href="https://github.com/faaabcomando-stack/faaab-informacoes/tree/main/dados" target="_blank" rel="noopener noreferrer">Pasta de dados no GitHub ↗</a></div>
 </aside>
-<main class="main">
+<div class="shell"><a class="faaab-backlink" href="index.html">← Voltar ao portal FAAAB</a><p class="faaab-backend-notice">A autenticação Roblox e o sistema de permissões ainda dependem da configuração do backend. A navegação pública não concede acesso administrativo.</p></div><main class="main">
 <div class="main-top"><div><div class="eyebrow" id="view-eyebrow">Painel editorial</div><h1 id="view-title">Visão geral</h1><p class="subtitle" id="view-desc">Tudo organizado para administrar a central da FAAAB.</p></div><div class="toolbar"><span class="changes-count" id="changes-count">Nenhuma alteração</span><button class="btn primary" id="publish-server" type="button" disabled>Publicar alterações</button><button class="btn secondary" id="download-package" type="button" disabled>Baixar ZIP</button></div></div>
 <div id="notification" class="notification" role="status" aria-live="polite" hidden></div>
 <section class="view" id="view-inicio">
