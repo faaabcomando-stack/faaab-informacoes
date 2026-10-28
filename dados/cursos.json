@@ -3,10 +3,10 @@
     "id": "CUR-10-1",
     "forca": "FTB",
     "titulo": "Recruta -> Soldado",
-    "detalhes": "Componentes:\n- Expedição Militar\n- Seleção de Brigada\n- TC-1\n\nEsses elementos são do EB.\nNÃO copiar para FAB/MB/CBM.\n\nFarda própria:\nnão obrigatória.",
+    "detalhes": "CDP do Recruta — quatro requisitos obrigatórios, confirmados pela FAAAB:\n1. TC-1\n2. Expedição Militar\n3. Seleção de Brigada\n4. Formação de Soldado\n\nA CDP é a Capacitação de Patente, composta pelas etapas concretas de formação e avaliação da patente. Não se trata apenas de descrição de competência. Esses requisitos são do Exército e não devem ser replicados para FAB, Marinha, Bombeiros ou PM.\n\nFarda específica: não definida.",
     "sigla": "Recruta -> Soldado",
     "origem": "Manual mestre de cursos FAAAB",
-    "estado": "Documentado",
+    "estado": "Confirmado pela FAAAB em 27/10/2026",
     "tipo": "curso"
   },
   {
