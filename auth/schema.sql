@@ -28,3 +28,11 @@ CREATE TABLE IF NOT EXISTS sessions (
 );
 CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_key);
 CREATE INDEX IF NOT EXISTS idx_identities_link ON identities(linked_roblox_id);
+
+-- Reserva o ID Roblox ligado ao nick aprovado na primeira validação.
+-- Evita que uma troca posterior de nickname transfira autorização a outra conta.
+CREATE TABLE IF NOT EXISTS nickname_pins (
+ username_key TEXT PRIMARY KEY,
+ roblox_id TEXT NOT NULL,
+ first_seen_at INTEGER NOT NULL
+);
