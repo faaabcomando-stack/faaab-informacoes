@@ -33,10 +33,10 @@
     "nome": "Presidência e Vice-Presidência",
     "forca": "GOV",
     "estado": "Planejamento definido em parte",
-    "resumo": "Cargos [PRE] Presidente e [V-PRE] Vice-Presidente compõem o topo do Governo da FAAAB.",
+    "resumo": "Presidência e Vice-Presidência integram o Governo. O Governo da FAAAB tem competência institucional para alterar estruturas do Exército, criar patentes e novos batalhões.",
     "real": "No Brasil real, os cargos são instituições constitucionais e suas competências vêm da Constituição e das leis.",
-    "jogo": "Administração política fictícia, representação institucional e coordenação do Governo dentro do roleplay.",
-    "regras": "Titulares atuais, ex-titulares, competências detalhadas, sucessão e prazos: não definidos.",
+    "jogo": "O Governo pode decidir mudanças na organização do Exército do projeto, incluindo novas patentes e batalhões. A distribuição de poderes entre cargos e o rito para aprovar/implantar cada decisão estão pendentes.",
+    "regras": "Não declarar que o Governo está proibido de alterar patentes ou batalhões. Ainda faltam: competências individuais dos cargos, rito decisório, execução autorizada e outras funções do Governo mencionadas pelo responsável mas não recuperadas.",
     "notas": "Não confundir com comando militar de FTB/FAB/FMB.",
     "atualizado": "2026-10-27",
     "fonte": "Decisões da FAAAB e documentos de planejamento recuperados; campos pendentes não representam regras aprovadas."
@@ -556,5 +556,17 @@
     "jogo": "Candidato: grupo oficial, partido aprovado, civil, conta Roblox ≥90 dias e 30 dias jogados. Criador: grupo oficial, conta ≥90 dias, 60 dias jogados, grupo partidário ≥20 dias, cargos exigidos e nome fictício.",
     "regras": "Ex-militar com carência a definir. Sem nome ou vínculo com política real. Papéis exigidos Presidente, Vice-Presidente, Membro do Partido e os cargos das eleições, incluindo Deputado Federal. Falhas de verificação bloqueiam aprovação; backend ainda não instalado.",
     "notas": "Contagem por dias distintos em que houve participação no jogo é proposta operacional provisória. Nenhum dado antigo de jogo pode ser inferido sem histórico persistido."
+  },
+  {
+    "id": "S-042",
+    "forca": "GOV",
+    "area": "Competências institucionais",
+    "nome": "Governo e alterações na estrutura do Exército",
+    "estado": "Competências confirmadas pelo responsável; processo e demais atribuições pendentes",
+    "resumo": "O Governo pode alterar a organização do Exército na FAAAB, criar novas patentes e criar novos batalhões. Não é apenas representação política.",
+    "real": "As competências constitucionais do Governo brasileiro real não são regras automáticas da FAAAB; trata-se de roleplay fictício.",
+    "jogo": "Mudanças governamentais podem resultar em atualização da hierarquia, unidades, registros institucionais e implementação no mapa da FAAAB, conforme decisões do Governo.",
+    "regras": "Está confirmado o poder institucional de decidir mudanças. Quem propõe, vota, homologa e executa essas mudanças, e qual o alcance sobre outras forças, ainda precisam de registro. A execução técnica por ferramentas Roblox/GitHub exige autorização própria, mas essa exigência não retira a competência decisória do Governo.",
+    "notas": "Corrige proibições introduzidas indevidamente em versões anteriores do site. Outras competências já discutidas não foram recuperadas: não criar nem proibir sem nova fonte aprovada. Consulte dados/competencias_governo.json."
   }
 ]
