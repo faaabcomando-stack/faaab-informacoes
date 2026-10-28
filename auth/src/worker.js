@@ -138,6 +138,25 @@ async function roster(env){
   return list;
  }catch(e){console.warn("Whitelist indisponível; acesso negado:",e.message);return {membros:[]}}
 }
+async function resolveRobloxUsername(username){
+ if(!/^[a-zA-Z0-9_]{3,20}$/.test(String(username||"")))return null;
+ const r=await fetch("https://users.roblox.com/v1/usernames/users",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({usernames:[username],excludeBannedUsers:false}),redirect:"error"});
+ if(!r.ok)return null;
+ const body=await r.json();
+ const match=(body.data||[]).find(x=>String(x.requestedUsername||"").toLowerCase()===username.toLowerCase());
+ return match?String(match.id):null;
+}
+async function pinnedRobloxId(name,env){
+ const key=String(name||"").toLowerCase();
+ const existing=await env.DB.prepare("SELECT roblox_id FROM nickname_pins WHERE username_key=?").bind(key).first();
+ if(existing)return String(existing.roblox_id);
+ const id=await resolveRobloxUsername(name);
+ if(!id)return null;
+ // Ao aprovar pelo nick, a primeira identificação fica presa ao UserId Roblox.
+ await env.DB.prepare("INSERT OR IGNORE INTO nickname_pins(username_key,roblox_id,first_seen_at) VALUES(?,?,?)").bind(key,id,now()).run();
+ const pinned=await env.DB.prepare("SELECT roblox_id FROM nickname_pins WHERE username_key=?").bind(key).first();
+ return pinned?String(pinned.roblox_id):null;
+}
 async function roleFor(user,env){
  const rbx=user.provider==="roblox"?user.subject:user.linked_roblox_id;
  if(rbx&&env.OWNER_ROBLOX_ID&&rbx===String(env.OWNER_ROBLOX_ID))return "owner";
@@ -147,7 +166,9 @@ async function roleFor(user,env){
  for(const member of allowed){
   if(rbx&&member.robloxId&&String(member.robloxId)===rbx)return member.perfil;
   if(user.provider==="google"&&member.googleSub&&String(member.googleSub)===user.subject)return member.perfil;
-  // Pendente de confirmação de ID Roblox: nunca permitir acesso só pelo texto de nick.
+  if(rbx&&member.robloxUsername&&!member.robloxId){
+   try{const id=await pinnedRobloxId(member.robloxUsername,env);if(id===rbx)return member.perfil;}catch(e){console.warn("Não foi possível validar nick Roblox",e.message)}
+  }
  }
  return null;
 }
@@ -180,7 +201,7 @@ async function apiWrite(req,env,ctx,name){
  if(Array.isArray(parsed)===false&&["noticias","autoridades","catalogo","hierarquias","cursos","sistemas","historico"].includes(name))return jsonify({error:"Esperada lista JSON"},400);
  if(name==="admin_whitelist"){
   if(!Array.isArray(parsed.membros)||parsed.proprietarioGitHub!=="faaabcomando-stack")return jsonify({error:"Formato da whitelist incorreto"},400);
-  for(const m of parsed.membros){if(!["editor","revisor"].includes(m.perfil)||!/^\d{1,20}$/.test(String(m.robloxId||""))&&!/^[0-9A-Za-z_-]{1,255}$/.test(String(m.googleSub||"")))return jsonify({error:"Whitelist requer ID Roblox verificado ou Google sub"},400)}
+  for(const m of parsed.membros){if(!["editor","revisor"].includes(m.perfil)||!/^\d{1,20}$/.test(String(m.robloxId||""))&&!/^[0-9A-Za-z_-]{1,255}$/.test(String(m.googleSub||""))&&!/^[a-zA-Z0-9_]{3,20}$/.test(String(m.robloxUsername||"")))return jsonify({error:"Whitelist exige nickname Roblox, ID Roblox ou Google sub verificado"},400)}
  }
  try{
  const current=await githubData(name,env);
