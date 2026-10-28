@@ -230,6 +230,51 @@
       "kind": "prova_escrita_publica",
       "url": "https://www.marinha.mil.br/cpesfn/provas-anteriores-c-fsg-mu-cfn",
       "notes": "Especialidade músico com seleção própria; não substitui cursos de formação geral de sargentos. Não aparece nas principais trilhas da FAAAB."
+    },
+    {
+      "id": "ciaa",
+      "title": "CIAA — Habilitação de Sargentos e Suboficiais, especializações de praças",
+      "forca": "FMB",
+      "aliases": [
+        "CIAA"
+      ],
+      "relation": [
+        "FMB-CIAA",
+        "CUR-COMP-06",
+        "CUR-COMP-07",
+        "CUR-COMP-08"
+      ],
+      "kind": "avaliacao_interna",
+      "url": "https://www.marinha.mil.br/ensino/",
+      "notes": "Centro de Instrução Almirante Alexandrino tem cursos de habilitação e aperfeiçoamento para sargentos, suboficiais e praças. Não há um único concurso público de entrada do centro."
+    },
+    {
+      "id": "cfn-comanf",
+      "title": "Batalhão de Operações Especiais de FN — Curso Comandos Anfíbios",
+      "forca": "CFN",
+      "aliases": [
+        "ComAnf"
+      ],
+      "relation": [
+        "CFN-BOE-FN"
+      ],
+      "kind": "avaliacao_interna",
+      "url": "https://www.marinha.mil.br/ciasc/content/padronizacao-de-instrutores-para-o-curso-especial-de-comandos-anfibios-c-esp-comanf2026",
+      "notes": "Curso real de Comandos Anfíbios conduzido pela estrutura de instrução do CFN. Seleção e avaliação especializadas; não há prova escrita pública universal do batalhão."
+    },
+    {
+      "id": "ciaw",
+      "title": "CIAW — formação, adaptação e aperfeiçoamento de oficiais navais",
+      "forca": "FMB",
+      "aliases": [
+        "CIAW"
+      ],
+      "relation": [
+        "FMB-CIAW"
+      ],
+      "kind": "avaliacao_interna",
+      "url": "https://www.marinha.mil.br/ensino/",
+      "notes": "Cursos de formação e adaptação naval. Condições de admissão dependem da carreira e do processo seletivo específico."
     }
   ],
   "registros": [
@@ -871,9 +916,9 @@
       "nome": "Formação para Terceiro-Sargento Naval",
       "sigla": "Formação para Terceiro-Sargento Naval",
       "estadoFAAAB": "Planejamento FAAAB",
-      "situacaoProva": "sem_prova_publica_comprovada",
-      "referenciaId": null,
-      "referenciaUrl": null,
+      "situacaoProva": "avaliacao_interna",
+      "referenciaId": "ciaa",
+      "referenciaUrl": "https://www.marinha.mil.br/ensino/",
       "observacao": "Elegibilidade: Cabo.\nResultado: Terceiro-Sargento.\n\nFormação obrigatória na rota do Cabo para Terceiro-Sargento. O manual menciona possível referência C-Esp-HabSG, mas o nome final está a confirmar. Fardas operacionais, de treino e de formatura previstas.",
       "efeitoDocumentado": "Elegibilidade: Cabo. · Resultado: Terceiro-Sargento.",
       "formaAcesso": "Prova, seleção ou avaliação interna a definir pela FAAAB; não abre automaticamente",
@@ -888,9 +933,9 @@
       "nome": "Progressão de Sargentos Navais",
       "sigla": "Progressão de Sargentos Navais",
       "estadoFAAAB": "Diretriz aprovada",
-      "situacaoProva": "sem_prova_publica_comprovada",
-      "referenciaId": null,
-      "referenciaUrl": null,
+      "situacaoProva": "avaliacao_interna",
+      "referenciaId": "ciaa",
+      "referenciaUrl": "https://www.marinha.mil.br/ensino/",
       "observacao": "Elegibilidade: Sargentos.\nResultado: Progressão por CDP.\n\nO planejamento não cria curso diferente automaticamente para cada promoção naval. Para Primeiro-Sargento da Marinha, o mérito não é requisito automático. Progressão permanece sujeita à CDP específica e aos requisitos válidos.",
       "efeitoDocumentado": "Elegibilidade: Sargentos. · Resultado: Progressão por CDP.",
       "formaAcesso": "Prova, seleção ou avaliação interna a definir pela FAAAB; não abre automaticamente",
@@ -905,9 +950,9 @@
       "nome": "Habilitação para Suboficial",
       "sigla": "Habilitação para Suboficial",
       "estadoFAAAB": "Planejamento FAAAB",
-      "situacaoProva": "sem_prova_publica_comprovada",
-      "referenciaId": null,
-      "referenciaUrl": null,
+      "situacaoProva": "avaliacao_interna",
+      "referenciaId": "ciaa",
+      "referenciaUrl": "https://www.marinha.mil.br/ensino/",
       "observacao": "Elegibilidade: Primeiro-Sargento.\nResultado: Suboficial.\n\nRota de 1º Sargento para Suboficial, tendo C-Esp-HabSO como referência possível (nome ainda a confirmar). Preferência por farda-base naval e elemento formal quando necessário.",
       "efeitoDocumentado": "Elegibilidade: Primeiro-Sargento. · Resultado: Suboficial.",
       "formaAcesso": "Prova, seleção ou avaliação interna a definir pela FAAAB; não abre automaticamente",
@@ -2826,9 +2871,9 @@
       "nome": "Batalhão de Operações Especiais de Fuzileiros Navais - Tonelero (nome adaptado à FAAAB)",
       "sigla": "BOE FN",
       "estadoFAAAB": "Não confirmado",
-      "situacaoProva": "sem_prova_publica_comprovada",
-      "referenciaId": null,
-      "referenciaUrl": null,
+      "situacaoProva": "avaliacao_interna",
+      "referenciaId": "cfn-comanf",
+      "referenciaUrl": "https://www.marinha.mil.br/ciasc/content/padronizacao-de-instrutores-para-o-curso-especial-de-comandos-anfibios-c-esp-comanf2026",
       "observacao": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
       "efeitoDocumentado": null,
       "formaAcesso": "Seleção ou curso específico a definir; pertencer a uma unidade não implica prova escrita individual",
@@ -2979,9 +3024,9 @@
       "nome": "Centro de Instrução Almirante Alexandrino",
       "sigla": "CIAA",
       "estadoFAAAB": "Não confirmado",
-      "situacaoProva": "sem_prova_publica_comprovada",
-      "referenciaId": null,
-      "referenciaUrl": null,
+      "situacaoProva": "avaliacao_interna",
+      "referenciaId": "ciaa",
+      "referenciaUrl": "https://www.marinha.mil.br/ensino/",
       "observacao": "Estrutura de instrução especializada, formação ou inteligência da FAAAB. Cursos internos, vagas e seleção devem ser definidos separadamente.",
       "efeitoDocumentado": null,
       "formaAcesso": "Seleção ou curso específico a definir; pertencer a uma unidade não implica prova escrita individual",
@@ -2996,9 +3041,9 @@
       "nome": "Centro de Instrução Almirante Wandenkolk",
       "sigla": "CIAW",
       "estadoFAAAB": "Não confirmado",
-      "situacaoProva": "sem_prova_publica_comprovada",
-      "referenciaId": null,
-      "referenciaUrl": null,
+      "situacaoProva": "avaliacao_interna",
+      "referenciaId": "ciaw",
+      "referenciaUrl": "https://www.marinha.mil.br/ensino/",
       "observacao": "Estrutura de instrução especializada, formação ou inteligência da FAAAB. Cursos internos, vagas e seleção devem ser definidos separadamente.",
       "efeitoDocumentado": null,
       "formaAcesso": "Seleção ou curso específico a definir; pertencer a uma unidade não implica prova escrita individual",
