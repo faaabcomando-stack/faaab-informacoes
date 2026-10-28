@@ -6,12 +6,12 @@ const $=id=>document.getElementById(id);
 const escapeText=v=>String(v??"").replace(/[&<>"']/g,c=>c==="&"?"&amp;":c==="<"?"&lt;":c===">"?"&gt;":c==='"'?"&quot;":"&#39;");
 const copy=v=>JSON.parse(JSON.stringify(v));
 const nowDate=()=>{const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-")};
-const states={data:Object.create(null),baseline:Object.create(null),pending:Object.create(null),dirty:new Set(),current:"inicio",editingNews:null};
+const states={data:Object.create(null),baseline:Object.create(null),sha:Object.create(null),pending:Object.create(null),dirty:new Set(),current:"inicio",editingNews:null,auth:null};
 const titles={
  inicio:["Painel editorial","Visão geral","Tudo organizado para administrar a central da FAAAB."],
  noticias:["Comunicação institucional","Notícias e avisos","Cadastre, corrija ou exclua comunicados com formulário simples."],
  comando:["Direção e autoridades","Titulares do comando","Atualize o ocupante de cargos de Governo e comando, sem confundir com patentes."],
- whitelist:["Equipe editorial","Whitelist de colaboradores","Registre nomes de contas GitHub para organização, sem conceder acesso automático."],
+ whitelist:["Acessos aprovados","Whitelist de acesso","Aprove contas Roblox para entrar no painel após autenticação verificada."],
  comandos:["Atalhos","Comandos rápidos","Execute comandos que modificam somente os rascunhos do painel."],
  avancado:["Configurações","Editor avançado","Edite arquivos JSON quando não houver formulário, mantendo validação de estrutura."]
 };
@@ -25,9 +25,9 @@ function syncPending(){
  const count=states.dirty.size;
  $("changes-count").textContent=count?count+" arquivo"+(count===1?" alterado":"s alterados"):"Nenhuma alteração";
  $("metric-dirty").textContent=count;
- $("publish-title").textContent=count?count+" arquivo"+(count===1?" pronto":"s prontos")+" para exportação":"Sem alterações pendentes";
- $("publish-desc").textContent=count?"Baixe o ZIP, extraia os JSON e envie-os na pasta dados/ do GitHub.":"As alterações são locais; o site não publica nada por conta própria.";
- ["download-package","download-bottom"].forEach(id=>$(id).disabled=!count);
+ $("publish-title").textContent=count?count+" arquivo"+(count===1?" pronto":"s prontos")+" para publicação":"Sem alterações pendentes";
+ $("publish-desc").textContent=count?"Publique com seu login autorizado ou baixe um ZIP.":"Não há alterações pendentes.";
+ ["download-package","download-bottom"].forEach(id=>$(id).disabled=!count); ["publish-server","publish-bottom"].forEach(id=>$(id).disabled=!count||!["owner","editor"].includes(states.auth?.role));
 }
 async function load(name){
  if(Object.prototype.hasOwnProperty.call(states.data,name))return states.data[name];
@@ -37,6 +37,7 @@ async function load(name){
   const result=await fetch("dados/"+name+".json",{cache:"no-store"});
   if(!result.ok){if(name==="noticias"&&result.status===404)return [];throw Error("Falha ao carregar "+name+".json (HTTP "+result.status+")")}
   const parsed=await result.json();
+  states.sha[name]=(result.headers.get("etag")||"").replace(/^"|"$/g,"");
   states.data[name]=copy(parsed);
   states.baseline[name]=JSON.stringify(parsed);
   return states.data[name];
