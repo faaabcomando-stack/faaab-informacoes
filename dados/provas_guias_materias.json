@@ -1,0 +1,486 @@
+{
+  "versao": 1,
+  "principio": "Tópicos de preparação são sugestões de revisão organizadas por disciplina; não substituem conteúdo programático do edital nem são provas FAAAB homologadas.",
+  "provas": {
+    "espcex": {
+      "edital": "https://www.vunesp.com.br/EPCE2601",
+      "materias": [
+        {
+          "id": "mat-0",
+          "nome": "Português",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Interpretação de textos",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Gramática e estrutura da frase",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-2",
+              "nome": "Redação dissertativo-argumentativa",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-1",
+          "nome": "Matemática",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Funções e equações",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Geometria e trigonometria",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-2",
+              "nome": "Sequências e progressões",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-2",
+          "nome": "Física",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Mecânica e movimento",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Energia e trabalho",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-2",
+              "nome": "Eletricidade",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-3",
+          "nome": "Química",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Estequiometria e reações",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Estrutura atômica",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-2",
+              "nome": "Soluções e concentrações",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-4",
+          "nome": "Geografia",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Cartografia e espaço geográfico",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Geografia do Brasil",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-2",
+              "nome": "Organização territorial e econômica",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-5",
+          "nome": "História",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "História do Brasil",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Processos históricos gerais",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-6",
+          "nome": "Inglês",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Compreensão de textos em inglês",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Vocabulário em contexto",
+              "resumo": "Tópico de revisão sugerido para a seleção ESPCEX. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        }
+      ],
+      "info": "EsPCEx — as disciplinas integram a seleção de admissão; tópicos abaixo são plano sugerido de revisão, confirme sempre o programa do edital."
+    },
+    "afa": {
+      "edital": "https://www2.fab.mil.br/afa/index.php/cursos-formacao",
+      "materias": [
+        {
+          "id": "mat-0",
+          "nome": "Português",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Interpretação textual",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Sintaxe e concordância",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-1",
+          "nome": "Inglês",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Leitura e interpretação",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Estruturas gramaticais",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-2",
+          "nome": "Matemática",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Funções e gráficos",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Geometria e trigonometria",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-2",
+              "nome": "Equações e sistemas",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-3",
+          "nome": "Física",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Cinemática e dinâmica",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Trabalho e energia",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-2",
+              "nome": "Eletricidade e ondas",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-4",
+          "nome": "Redação",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Estrutura dissertativa",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Argumentação e coesão",
+              "resumo": "Tópico de revisão sugerido para a seleção AFA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        }
+      ],
+      "info": "AFA/CFOAV-INT-INF — matérias indicadas no site oficial da AFA. Estude no padrão da edição do concurso."
+    },
+    "epcar": {
+      "edital": "https://www.fab.mil.br/ingresso/cpcar/cpcar2026.html",
+      "materias": [
+        {
+          "id": "mat-0",
+          "nome": "Português",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Interpretação",
+              "resumo": "Tópico de revisão sugerido para a seleção EPCAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Ortografia e gramática",
+              "resumo": "Tópico de revisão sugerido para a seleção EPCAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-2",
+              "nome": "Coesão textual",
+              "resumo": "Tópico de revisão sugerido para a seleção EPCAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-1",
+          "nome": "Matemática",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Conjuntos e operações",
+              "resumo": "Tópico de revisão sugerido para a seleção EPCAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Álgebra",
+              "resumo": "Tópico de revisão sugerido para a seleção EPCAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-2",
+              "nome": "Geometria",
+              "resumo": "Tópico de revisão sugerido para a seleção EPCAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-2",
+          "nome": "Inglês",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Leitura",
+              "resumo": "Tópico de revisão sugerido para a seleção EPCAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Gramática em contexto",
+              "resumo": "Tópico de revisão sugerido para a seleção EPCAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-3",
+          "nome": "Redação",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Desenvolvimento de tema",
+              "resumo": "Tópico de revisão sugerido para a seleção EPCAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Coesão e revisão",
+              "resumo": "Tópico de revisão sugerido para a seleção EPCAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        }
+      ],
+      "info": "EPCAR/CPCAR — matérias relacionadas à edição 2026 da seleção real; esta ficha não autoriza progressão da FAAAB."
+    },
+    "eear": {
+      "edital": "https://ingresso.eear.fab.mil.br/SOO/home/provas_anteriores.php",
+      "materias": [
+        {
+          "id": "mat-0",
+          "nome": "Português",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Leitura e interpretação",
+              "resumo": "Tópico de revisão sugerido para a seleção EEAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Morfossintaxe",
+              "resumo": "Tópico de revisão sugerido para a seleção EEAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-1",
+          "nome": "Matemática",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Álgebra",
+              "resumo": "Tópico de revisão sugerido para a seleção EEAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Geometria",
+              "resumo": "Tópico de revisão sugerido para a seleção EEAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-2",
+          "nome": "Inglês",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Compreensão textual",
+              "resumo": "Tópico de revisão sugerido para a seleção EEAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Vocabulário",
+              "resumo": "Tópico de revisão sugerido para a seleção EEAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-3",
+          "nome": "Física",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Mecânica",
+              "resumo": "Tópico de revisão sugerido para a seleção EEAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Termologia",
+              "resumo": "Tópico de revisão sugerido para a seleção EEAR. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        }
+      ],
+      "info": "EEAR/CFS — sugestão de disciplinas para revisão. A escolha exata e especialidades dependem do edital e da prova selecionada."
+    },
+    "ciam-pa": {
+      "edital": "https://www.marinha.mil.br/cpesfn/provas-anteriores-c-fsd-fn",
+      "materias": [
+        {
+          "id": "mat-0",
+          "nome": "Português",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Interpretação",
+              "resumo": "Tópico de revisão sugerido para a seleção CIAM-PA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Gramática",
+              "resumo": "Tópico de revisão sugerido para a seleção CIAM-PA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        },
+        {
+          "id": "mat-1",
+          "nome": "Matemática",
+          "assuntos": [
+            {
+              "id": "top-0",
+              "nome": "Aritmética",
+              "resumo": "Tópico de revisão sugerido para a seleção CIAM-PA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            },
+            {
+              "id": "top-1",
+              "nome": "Álgebra e resolução de problemas",
+              "resumo": "Tópico de revisão sugerido para a seleção CIAM-PA. Revise o conteúdo programático publicado pela banca, estude a teoria e resolva as questões completas das provas oficiais anteriores. Não confunda esta orientação com uma etapa de CDP ou com uma prova interna homologada.",
+              "exercicio": null
+            }
+          ]
+        }
+      ],
+      "info": "CFN/Soldado FN — estude resolvendo provas anteriores completas por edição com o gabarito da Marinha."
+    }
+  }
+}
