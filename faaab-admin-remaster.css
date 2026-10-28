@@ -1,0 +1,16 @@
+/* Continuidade da identidade FAAAB nas ferramentas de gestão. */
+body{background:#f8f8f4!important;color:#233c2e;font-family:"Segoe UI",Arial,sans-serif}
+.identity{background:#183629!important;color:#e5eee4!important}
+.identity .shell{max-width:1180px}
+.identity a{color:#edf0e7!important}
+.top{background:#fffefa!important;border-bottom:1px solid #d1d9cc!important}
+.top .brand strong{color:#1d3f2c!important;font-family:Georgia,serif!important;font-weight:400!important;letter-spacing:-.018em}
+.top .brandmark{background:#244733!important;border:1px solid #b29a6b!important;color:#fff4db!important;border-radius:0!important;box-shadow:none!important}
+.panel-h1{font-family:Georgia,serif!important;font-weight:400!important;letter-spacing:-.03em!important;color:#1e3d2b!important}
+.surface,.panel,.role-row{border-radius:0!important;box-shadow:none!important}
+.surface{border:1px solid #d2d9cd!important;background:#fffefa!important}
+.btn,.role-row button,input,select,textarea{border-radius:0!important}
+.panel-footer,.footer{background:#193627!important}
+.faaab-backlink{display:inline-block;margin:11px 0;padding:8px 13px;border:1px solid #b9c3b3;font-size:12px;font-weight:700}
+.faaab-backlink:hover{text-decoration:underline}
+.faaab-backend-notice{background:#eeeadd;border-left:3px solid #ae935d;padding:12px 17px;margin:12px 0 24px;font-size:13px;color:#5e5b4d}
