@@ -1,0 +1,38 @@
+{
+  "titulo": "Competências institucionais do Governo FAAAB",
+  "revisao": "2026-10-28",
+  "fonte": "Correção explícita do responsável pela FAAAB nesta conversa",
+  "principio": "O Governo da FAAAB possui autoridade institucional para alterar estruturas do Exército dentro do projeto; não se limita a representação política e cerimonial.",
+  "confirmadas": [
+    {
+      "id": "estruturas_exercito",
+      "area": "Exército Brasileiro",
+      "acao": "Alterar a organização e componentes internos do Exército no universo FAAAB",
+      "status": "confirmado"
+    },
+    {
+      "id": "patentes",
+      "area": "Exército Brasileiro",
+      "acao": "Criar novas patentes e decidir mudanças na estrutura de patentes do Exército",
+      "status": "confirmado"
+    },
+    {
+      "id": "batalhoes",
+      "area": "Exército Brasileiro",
+      "acao": "Criar novos batalhões e decidir mudanças em sua estrutura",
+      "status": "confirmado"
+    }
+  ],
+  "abrangencia": "As competências explicitamente recuperadas nesta revisão dizem respeito ao Exército. Outras forças, setores, categorias de decisão e limites ainda precisam ser recuperados da documentação ou confirmados pelo responsável; não deduzir proibições.",
+  "procedimento": "Quem propõe, quem vota, quem autoriza, condições de veto, revisão e implementação das decisões ainda não foram recuperados. Não inventar processo.",
+  "execucaoTecnica": "A decisão institucional de alterar patentes, unidades ou regras não é a mesma coisa que ter acesso irrestrito aos controles Roblox/GitHub. Sistemas de edição e hierarquia precisam aplicar a decisão e seus registros com autorização e auditoria.",
+  "cargos": "Não presumir que cada ministro, secretário, parlamentar ou integrante do STF tenha individualmente todos os poderes do Governo. A competência por cargo depende de definição.",
+  "inconsistenciasCorrigidas": "Eliminar frases de que Governo ou Presidência não podem alterar patentes ou modificar estruturas militares. Substituir por distinção entre poder de decisão do Governo e permissões técnicas de execução.",
+  "pendente": [
+    "Outras funções do Governo já discutidas mas não registradas em fonte acessível",
+    "Alcance sobre Marinha, Aeronáutica, PM, Bombeiros e EGAF",
+    "Rito específico de decisão, homologação e implementação",
+    "Competência de cada cargo e tipos de mudança autorizados"
+  ],
+  "notaEditorial": "Uma informação ausente não deve ser apresentada como proibida. Diferenciar confirmado, pendente e não implementado."
+}
