@@ -1912,18 +1912,39 @@
     "sigla": "CEL",
     "nome": "Coronel",
     "classe": "Oficiais superiores",
-    "competencias": null,
-    "requisitos": null,
-    "formacao": null,
+    "competencias": "Em elaboração para a CDP desta patente da PM.",
+    "requisitos": "Passagem: Coronel → Subcomandante-Geral. É nomeação para cargo de comando e não mudança de patente.",
+    "formacao": "Nomeação para cargo; não exige curso criado automaticamente",
     "diasMinimos": null,
-    "proximaEtapa": null,
-    "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "Existente — documentação específica a recuperar",
+    "proximaEtapa": "Subcomandante-Geral (cargo de comando)",
+    "observacao": "Subcomandante-Geral é cargo de comando, não nova patente. Não é uma promoção automática de Coronel, nem possui curso novo aprovado por este registro.",
+    "cdpStatus": "Progressão indicada pela FAAAB; etapas propostas",
     "cdpExiste": true,
-    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
-    "cdpCriterios": null,
-    "cdpEtapas": [],
-    "cdpTempoProposto": null
+    "cdpFonte": "Passagem definida pelo responsável da FAAAB em 28/10/2026; capacitações propostas, curso do Codex não selecionado",
+    "cdpCriterios": "Passagem: Coronel → Subcomandante-Geral. É nomeação para cargo de comando e não mudança de patente.",
+    "cdpEtapas": [
+      {
+        "nome": "Ser Coronel da Polícia Militar e cumprir avaliação de comando superior",
+        "ordem": 1,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Apresentar histórico de atuação, disciplina e capacidade administrativa",
+        "ordem": 2,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Receber nomeação ou aprovação da autoridade competente no sistema da FAAAB",
+        "ordem": 3,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      }
+    ],
+    "cdpTempoProposto": null,
+    "progressaoId": "PM-CEL-SUBCMD",
+    "tipoPassagem": "nomeacao-para-cargo-de-comando"
   },
   {
     "forca": "PM",
@@ -1931,18 +1952,39 @@
     "sigla": "TEN-CEL",
     "nome": "Tenente-Coronel",
     "classe": "Oficiais superiores",
-    "competencias": null,
-    "requisitos": null,
-    "formacao": null,
+    "competencias": "Em elaboração para a CDP desta patente da PM.",
+    "requisitos": "Passagem: Tenente-Coronel → Coronel. Condições específicas da CDP apresentadas como propostas a validar.",
+    "formacao": "Altos Estudos — referência Codex, não selecionada",
     "diasMinimos": null,
-    "proximaEtapa": null,
-    "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "Existente — documentação específica a recuperar",
+    "proximaEtapa": "Coronel",
+    "observacao": "Não transferir regras de carreira e prazos da PMDF real automaticamente para o roleplay.",
+    "cdpStatus": "Progressão indicada pela FAAAB; etapas propostas",
     "cdpExiste": true,
-    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
-    "cdpCriterios": null,
-    "cdpEtapas": [],
-    "cdpTempoProposto": null
+    "cdpFonte": "Passagem definida pelo responsável da FAAAB em 28/10/2026; capacitações propostas, curso do Codex não selecionado",
+    "cdpCriterios": "Passagem: Tenente-Coronel → Coronel. Condições específicas da CDP apresentadas como propostas a validar.",
+    "cdpEtapas": [
+      {
+        "nome": "Concluir estudos de gestão estratégica de segurança pública (CAE como referência, sujeito a aprovação)",
+        "ordem": 1,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Apresentar planejamento de comando superior e avaliação de gestão de pessoal",
+        "ordem": 2,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Obter avaliação de mérito e validação para o posto de Coronel",
+        "ordem": 3,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      }
+    ],
+    "cdpTempoProposto": null,
+    "progressaoId": "PM-TENCEL-CEL",
+    "tipoPassagem": "progressao-de-patente"
   },
   {
     "forca": "PM",
@@ -1969,18 +2011,39 @@
     "sigla": "CAP",
     "nome": "Capitão",
     "classe": "Oficiais",
-    "competencias": null,
-    "requisitos": null,
-    "formacao": null,
+    "competencias": "Em elaboração para a CDP desta patente da PM.",
+    "requisitos": "Passagem: Capitão → Major. Condições específicas da CDP apresentadas como propostas a validar.",
+    "formacao": "Aperfeiçoamento de Oficiais — referência Codex, não selecionada",
     "diasMinimos": null,
-    "proximaEtapa": null,
-    "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "Existente — documentação específica a recuperar",
+    "proximaEtapa": "Major",
+    "observacao": "Passagem definida pelo responsável. O CAO é uma opção do planejamento Codex e não foi selecionado formalmente.",
+    "cdpStatus": "Progressão indicada pela FAAAB; etapas propostas",
     "cdpExiste": true,
-    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
-    "cdpCriterios": null,
-    "cdpEtapas": [],
-    "cdpTempoProposto": null
+    "cdpFonte": "Passagem definida pelo responsável da FAAAB em 28/10/2026; capacitações propostas, curso do Codex não selecionado",
+    "cdpCriterios": "Passagem: Capitão → Major. Condições específicas da CDP apresentadas como propostas a validar.",
+    "cdpEtapas": [
+      {
+        "nome": "Concluir o aperfeiçoamento de oficiais (CAO como referência, sujeito a aprovação)",
+        "ordem": 1,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Demonstrar planejamento, administração e coordenação de unidades policiais",
+        "ordem": 2,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Passar por avaliação de mérito e aptidão para funções de Major",
+        "ordem": 3,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      }
+    ],
+    "cdpTempoProposto": null,
+    "progressaoId": "PM-CAP-MAJ",
+    "tipoPassagem": "progressao-de-patente"
   },
   {
     "forca": "PM",
@@ -2026,18 +2089,39 @@
     "sigla": "ASP-OF",
     "nome": "Aspirante a Oficial",
     "classe": "Praças especiais",
-    "competencias": null,
-    "requisitos": null,
-    "formacao": null,
+    "competencias": "Em elaboração para a CDP desta patente da PM.",
+    "requisitos": "Passagem: Aspirante a Oficial → Segundo-Tenente. Condições específicas da CDP apresentadas como propostas a validar.",
+    "formacao": "Formação de Oficiais — referência Codex, não selecionada",
     "diasMinimos": null,
-    "proximaEtapa": null,
-    "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "Existente — documentação específica a recuperar",
+    "proximaEtapa": "Segundo-Tenente",
+    "observacao": "CFO consta da pesquisa PMDF; sua posição no ciclo de formação e a exigência ao Aspirante precisam de confirmação.",
+    "cdpStatus": "Progressão indicada pela FAAAB; etapas propostas",
     "cdpExiste": true,
-    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
-    "cdpCriterios": null,
-    "cdpEtapas": [],
-    "cdpTempoProposto": null
+    "cdpFonte": "Passagem definida pelo responsável da FAAAB em 28/10/2026; capacitações propostas, curso do Codex não selecionado",
+    "cdpCriterios": "Passagem: Aspirante a Oficial → Segundo-Tenente. Condições específicas da CDP apresentadas como propostas a validar.",
+    "cdpEtapas": [
+      {
+        "nome": "Concluir o estágio/avaliação de Aspirante a Oficial (proposta FAAAB)",
+        "ordem": 1,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Demonstrar competências de comando inicial, disciplina e elaboração de relatórios",
+        "ordem": 2,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Receber validação de ingresso no oficialato como Segundo-Tenente",
+        "ordem": 3,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      }
+    ],
+    "cdpTempoProposto": null,
+    "progressaoId": "PM-ASP-2TEN",
+    "tipoPassagem": "progressao-de-patente"
   },
   {
     "forca": "PM",
@@ -2140,18 +2224,39 @@
     "sigla": "CB",
     "nome": "Cabo",
     "classe": "Praças",
-    "competencias": null,
-    "requisitos": null,
-    "formacao": null,
+    "competencias": "Em elaboração para a CDP desta patente da PM.",
+    "requisitos": "Passagem: Cabo → Terceiro-Sargento. Condições específicas da CDP apresentadas como propostas a validar.",
+    "formacao": "Aperfeiçoamento de Praças — referência Codex, não selecionada",
     "diasMinimos": null,
-    "proximaEtapa": null,
-    "observacao": "CDP da PM não definida no material aprovado.",
-    "cdpStatus": "Existente — documentação específica a recuperar",
+    "proximaEtapa": "Terceiro-Sargento",
+    "observacao": "Sargento foi interpretado como Terceiro-Sargento por ser a primeira graduação existente. CAP consta da pesquisa do Codex, mas seu emprego nesta promoção não foi homologado.",
+    "cdpStatus": "Progressão indicada pela FAAAB; etapas propostas",
     "cdpExiste": true,
-    "cdpFonte": "Existência afirmada pelo responsável da FAAAB; requisitos detalhados não presentes nos arquivos acessíveis",
-    "cdpCriterios": null,
-    "cdpEtapas": [],
-    "cdpTempoProposto": null
+    "cdpFonte": "Passagem definida pelo responsável da FAAAB em 28/10/2026; capacitações propostas, curso do Codex não selecionado",
+    "cdpCriterios": "Passagem: Cabo → Terceiro-Sargento. Condições específicas da CDP apresentadas como propostas a validar.",
+    "cdpEtapas": [
+      {
+        "nome": "Concluir a formação e avaliação para ingresso no quadro de sargentos (nome definitivo a validar)",
+        "ordem": 1,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Demonstrar liderança de pequena equipe e capacidade de instrução",
+        "ordem": 2,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Obter a aprovação de progressão pela autoridade responsável da PM",
+        "ordem": 3,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      }
+    ],
+    "cdpTempoProposto": null,
+    "progressaoId": "PM-CB-3SGT",
+    "tipoPassagem": "progressao-de-patente"
   },
   {
     "forca": "PM",
@@ -2190,5 +2295,45 @@
     "cdpCriterios": null,
     "cdpEtapas": [],
     "cdpTempoProposto": null
+  },
+  {
+    "forca": "PM",
+    "ordem": 16,
+    "sigla": "APR",
+    "nome": "Aprendiz",
+    "classe": "Formação e ingresso",
+    "competencias": "Em elaboração para a CDP desta patente da PM.",
+    "requisitos": "Passagem: Aprendiz → Soldado de Segunda Classe. Condições específicas da CDP apresentadas como propostas a validar.",
+    "formacao": "Formação de Praças — referência Codex, não selecionada",
+    "diasMinimos": null,
+    "proximaEtapa": "Soldado de Segunda Classe",
+    "observacao": "A transição Aprendiz → Soldado de 2ª Classe foi definida pelo responsável. Duração, avaliação exata e seleção de curso permanecem pendentes.",
+    "cdpExiste": true,
+    "cdpStatus": "Progressão indicada pela FAAAB; etapas propostas",
+    "cdpFonte": "Passagem definida pelo responsável da FAAAB em 28/10/2026; capacitações propostas, curso do Codex não selecionado",
+    "cdpCriterios": "Passagem: Aprendiz → Soldado de Segunda Classe. Condições específicas da CDP apresentadas como propostas a validar.",
+    "cdpEtapas": [
+      {
+        "nome": "Concluir a formação inicial de praças (CFP é referência de pesquisa; curso do jogo a homologar)",
+        "ordem": 1,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Cumprir a avaliação de instrução e disciplina do período de aprendiz",
+        "ordem": 2,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      },
+      {
+        "nome": "Ter a progressão validada pela administração da PM",
+        "ordem": 3,
+        "obrigatorio": null,
+        "estado": "proposta-nao-homologada"
+      }
+    ],
+    "cdpTempoProposto": null,
+    "progressaoId": "PM-APRENDIZ-SD2",
+    "tipoPassagem": "progressao-de-patente"
   }
 ]
