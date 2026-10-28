@@ -61,11 +61,17 @@
             "por-10",
             "por-11",
             "por-12",
-            "por-15",
+            "por-15"
+          ],
+          "observacao": ""
+        },
+        {
+          "nome": "Redação",
+          "aulas": [
             "por-13",
             "por-14"
           ],
-          "observacao": ""
+          "observacao": "Produção textual com prática de organização, argumento e revisão; a correção de redações completas ainda exige avaliação humana."
         },
         {
           "nome": "Física",
@@ -314,11 +320,17 @@
             "por-10",
             "por-11",
             "por-12",
-            "por-15",
+            "por-15"
+          ],
+          "observacao": ""
+        },
+        {
+          "nome": "Redação",
+          "aulas": [
             "por-13",
             "por-14"
           ],
-          "observacao": ""
+          "observacao": "Produção textual com prática de organização, argumento e revisão; a correção de redações completas ainda exige avaliação humana."
         },
         {
           "nome": "Inglês",
@@ -395,11 +407,17 @@
             "por-10",
             "por-11",
             "por-12",
-            "por-15",
+            "por-15"
+          ],
+          "observacao": ""
+        },
+        {
+          "nome": "Redação",
+          "aulas": [
             "por-13",
             "por-14"
           ],
-          "observacao": ""
+          "observacao": "Produção textual com prática de organização, argumento e revisão; a correção de redações completas ainda exige avaliação humana."
         },
         {
           "nome": "Inglês",
@@ -582,11 +600,17 @@
             "por-10",
             "por-11",
             "por-12",
-            "por-15",
+            "por-15"
+          ],
+          "observacao": ""
+        },
+        {
+          "nome": "Redação",
+          "aulas": [
             "por-13",
             "por-14"
           ],
-          "observacao": ""
+          "observacao": "Produção textual com prática de organização, argumento e revisão; a correção de redações completas ainda exige avaliação humana."
         }
       ]
     },
@@ -729,14 +753,20 @@
             "por-10",
             "por-11",
             "por-12",
-            "por-15",
-            "por-13",
-            "por-14"
+            "por-15"
           ],
           "observacao": ""
         },
         {
-          "nome": "História",
+          "nome": "Redação",
+          "aulas": [
+            "por-13",
+            "por-14"
+          ],
+          "observacao": "Produção textual com prática de organização, argumento e revisão; a correção de redações completas ainda exige avaliação humana."
+        },
+        {
+          "nome": "Estudos Sociais",
           "aulas": [
             "his-01",
             "his-02",
@@ -744,13 +774,7 @@
             "his-04",
             "his-05",
             "his-06",
-            "his-07"
-          ],
-          "observacao": ""
-        },
-        {
-          "nome": "Geografia",
-          "aulas": [
+            "his-07",
             "geo-01",
             "geo-02",
             "geo-03",
@@ -762,7 +786,7 @@
             "geo-10",
             "geo-11"
           ],
-          "observacao": ""
+          "observacao": "Disciplina oficial com temas de História e Geografia, separados dentro das aulas."
         },
         {
           "nome": "Ciências",
@@ -778,9 +802,23 @@
             "cie-09",
             "cie-10",
             "cie-11",
-            "cie-12"
+            "cie-12",
+            "fis-01",
+            "fis-02",
+            "fis-03",
+            "fis-04",
+            "fis-05",
+            "fis-06",
+            "fis-07",
+            "qui-01",
+            "qui-02",
+            "qui-03",
+            "qui-04",
+            "qui-05",
+            "qui-06",
+            "qui-07"
           ],
-          "observacao": ""
+          "observacao": "Conceitos de Ciências Naturais, Física e Química — conferir ênfase pelo edital vigente."
         }
       ]
     },
@@ -849,7 +887,7 @@
           "observacao": ""
         },
         {
-          "nome": "Física",
+          "nome": "Ciências (Física e Química)",
           "aulas": [
             "fis-01",
             "fis-02",
@@ -857,13 +895,7 @@
             "fis-04",
             "fis-05",
             "fis-06",
-            "fis-07"
-          ],
-          "observacao": ""
-        },
-        {
-          "nome": "Química",
-          "aulas": [
+            "fis-07",
             "qui-01",
             "qui-02",
             "qui-03",
@@ -872,7 +904,7 @@
             "qui-06",
             "qui-07"
           ],
-          "observacao": ""
+          "observacao": "Disciplina de Ciências do exame CPAEAM, com Física e Química. No edital são 15 questões."
         },
         {
           "nome": "Inglês",
