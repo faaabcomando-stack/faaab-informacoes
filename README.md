@@ -1,5 +1,23 @@
 # FAAAB — Central de Informações
 
+## Acesso, membros e cargos administrativos
+
+O sistema de permissões segue duas etapas: **primeiro whitelist de acesso; depois atribuição manual de cargo**, nunca automática pelo login.
+
+- `admin.html`: página pública de entrada OAuth Google/Roblox, com opção de lembrar o Google no dispositivo para facilitar futuros retornos. O Google pode pedir seleção de conta ou consentimento.
+- `/membros` no Worker: área de membros com cargos e permissões; não libera edição sem cargo.
+- `/anunciadores` no Worker: painel de anúncios. Jornalista, marketing e cargos administrativos autorizados podem publicar comunicados.
+- `/cargos` no Worker: painel exclusivo do proprietário, com inscrições Google/Roblox, aprovação de whitelist e 11 cargos selecionáveis.
+- `dados/admin_roles.json`: catálogo de cargos, sem identificação de usuários nem senhas.
+- `auth/schema.sql`: D1 privado com `access_approvals` (aprovação de entrada) e `staff_assignments` (cargos manuais e respectivos escopos).
+- `auth/src/worker.js`: verifica autenticação, whitelist, funções, escopo e autorização no servidor, inclusive para publicação.
+- `dados/admin_whitelist.json`: aprovados por nick/ID Roblox **sem cargo automático**.
+
+**Cargos planejados:** Administrativo leve, Administrativo aprovado, Administrativo aprovado semi-total, Jornalista, Instrutor, Governo, Alto escalão, Subcriador, Criador, Administrativo marketing total e Desenvolvedor leve. Instrutor exige curso/batalhão/alvo; Governo, cargo específico; Alto escalão, tipo e força.
+
+**Estado:** código implementado e enviado ao repositório, mas **OAuth ainda não implantado**. `dados/auth_public.json` está `enabled: false`; os usuários não conseguem entrar com Google ou Roblox até o proprietário configurar aplicativos OAuth, Worker e banco Cloudflare. O cadastro e a atribuição reais dependem desse backend. Veja [o guia](auth/README.md).
+
+
 ## Novo login de administradores — Roblox ou Google
 
 **Preparado no código, mas ainda não ativado em produção.** A página `admin.html` mostra uma entrada para Roblox/Google, mas mantém os botões ocultos até o proprietário ativar um backend OAuth real.
