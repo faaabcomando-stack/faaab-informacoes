@@ -1,0 +1,76 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  function signedIn() { return request.auth != null; }
+  function userPath() { return /databases/$(database)/documents/users/$(request.auth.uid); }
+  function hasUser() { return signedIn() && exists(userPath()); }
+  function approved() { return hasUser() && get(userPath()).data.approved == true; }
+  function isOwner() { return approved() && get(userPath()).data.owner == true; }
+  function hasAnyRole(allowed) {
+   return approved() && get(userPath()).data.roles.hasAny(allowed);
+  }
+  function canPost(channel) {
+   return isOwner()
+    || (channel == 'noticias' && hasAnyRole(['jornalista','administrativo_aprovado','administrativo_aprovado_semitotal','administrativo_marketing_total','sub_criador','criador']))
+    || (channel == 'avisos' && hasAnyRole(['administrativo_aprovado','administrativo_aprovado_semitotal','sub_criador','criador']))
+    || (channel == 'marketing' && hasAnyRole(['administrativo_marketing_total','sub_criador','criador']));
+  }
+  match /users/{uid} {
+   allow get: if signedIn() && (request.auth.uid == uid || isOwner());
+   allow list: if isOwner();
+   allow create: if signedIn() && request.auth.uid == uid
+     && request.resource.data.keys().hasOnly(['displayName','approved','owner','roles','createdAt'])
+     && request.resource.data.displayName is string
+     && request.resource.data.displayName.size() <= 120
+     && request.resource.data.approved == false
+     && request.resource.data.owner == false
+     && request.resource.data.roles == [];
+   allow update, delete: if isOwner() && request.auth.uid != uid;
+  }
+  match /posts/{postId} {
+   allow read: if resource.data.published == true || isOwner();
+   allow create: if canPost(request.resource.data.channel)
+     && request.resource.data.keys().hasOnly(['channel','category','title','body','published','authorUid','createdAt'])
+     && request.resource.data.authorUid == request.auth.uid
+     && request.resource.data.published == true
+     && request.resource.data.channel in ['noticias','avisos','marketing']
+     && request.resource.data.title is string && request.resource.data.title.size() > 0 && request.resource.data.title.size() <= 160
+     && request.resource.data.body is string && request.resource.data.body.size() > 0 && request.resource.data.body.size() <= 4000
+     && request.resource.data.category in ['menor_relevancia','informativa','importante','urgente','institucional','campanha'];
+   allow update, delete: if isOwner();
+  }
+  match /exams/{examId} {
+   allow read: if resource.data.published == true || isOwner();
+   allow create, update, delete: if isOwner();
+  }
+  match /materials/{materialId} {
+   allow get: if isOwner() || (
+     resource.data.published == true && (
+       resource.data.access == 'public'
+       || (approved() && resource.data.access == 'membros')
+       || (approved() && resource.data.access == 'cargos'
+           && hasAnyRole(resource.data.requiredRoles))
+     ));
+   allow list: if isOwner();
+   allow create, update, delete: if isOwner();
+  }
+  match /applications/{entryId} {
+   allow get: if isOwner() || (signedIn() && resource.data.uid == request.auth.uid);
+   allow list: if isOwner();
+   allow create: if approved()
+     && request.resource.data.keys().hasOnly(['uid','examId','status','submittedAt'])
+     && request.resource.data.uid == request.auth.uid
+     && entryId == request.auth.uid + '__' + request.resource.data.examId
+     && request.resource.data.status == 'inscrita'
+     && exists(/databases/$(database)/documents/exams/$(request.resource.data.examId))
+     && get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.published == true
+     && get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.status == 'aberta'
+     && (
+       get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.allowedRoles.size() == 0
+       || hasAnyRole(get(/databases/$(database)/documents/exams/$(request.resource.data.examId)).data.allowedRoles)
+     );
+   allow update, delete: if isOwner();
+  }
+  match /{other=**} { allow read, write: if false; }
+ }
+}
