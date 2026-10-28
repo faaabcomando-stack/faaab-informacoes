@@ -3,7 +3,7 @@
   "atualizado": "2026-10-28",
   "politica": {
     "inscricoesAbertas": "Nenhuma prova FAAAB é considerada aberta só por estar no catálogo.",
-    "avaliacao": "As referências da Marinha são reais; simulados FAAAB são autorais e precisam de validação antes de valer como CDP.",
+    "avaliacao": "Catálogo completo em provas_todas_unidades.json; trilhas por matéria em provas_guias_materias.json; nenhuma aprovação automática de CDP/patente, nem prova FAAAB sem edital.",
     "permissoes": "Somente material de estudo publicamente documentado aparece neste catálogo; outros materiais e exames exigem cargo autorizado no Firebase."
   },
   "canais": [
@@ -105,36 +105,12 @@
             {
               "id": "interpretacao",
               "nome": "Interpretação de textos",
-              "resumo": "Identificar tema, informações explícitas, inferências e relações entre ideias. Leia primeiro a pergunta e retorne ao trecho para confirmar a evidência.",
-              "exercicio": {
-                "enunciado": "Trecho autoral: 'Embora a instrução estivesse prevista para a manhã, a chuva obrigou a equipe a transferi-la para o período da tarde.' O que explica a mudança de horário?",
-                "alternativas": [
-                  "A ausência de instrutores.",
-                  "A chuva.",
-                  "O encerramento antecipado.",
-                  "Uma ordem para cancelar a instrução.",
-                  "Um erro no calendário."
-                ],
-                "resposta": 1,
-                "explicacao": "A oração indica explicitamente que a chuva motivou a transferência. Questão de treino autoral, não extraída de concurso."
-              }
+              "resumo": "Identificar tema, informações explícitas, inferências e relações entre ideias. Leia primeiro a pergunta e retorne ao trecho para confirmar a evidência."
             },
             {
               "id": "coesao",
               "nome": "Coesão e conectivos",
-              "resumo": "Reconheça relações de causa, consequência, oposição, condição e conclusão. Conectivos como 'embora' indicam concessão; 'portanto', conclusão.",
-              "exercicio": {
-                "enunciado": "Na frase 'A equipe revisou o plano; portanto, reduziu os riscos', a palavra 'portanto' expressa:",
-                "alternativas": [
-                  "Dúvida.",
-                  "Contraste.",
-                  "Conclusão.",
-                  "Tempo.",
-                  "Comparação."
-                ],
-                "resposta": 2,
-                "explicacao": "'Portanto' introduz uma conclusão a partir da informação anterior. Questão autoral."
-              }
+              "resumo": "Reconheça relações de causa, consequência, oposição, condição e conclusão. Conectivos como 'embora' indicam concessão; 'portanto', conclusão."
             }
           ]
         },
@@ -145,61 +121,12 @@
             {
               "id": "funcoes",
               "nome": "Função afim e função quadrática",
-              "resumo": "Na função afim f(x)=ax+b, determine a taxa de variação e o termo independente. Na função quadrática ax²+bx+c, calcule raízes e vértice com atenção ao domínio.",
-              "exercicio": {
-                "enunciado": "Uma função é dada por f(x)=3x−7. Para qual valor de x obtemos f(x)=8?",
-                "alternativas": [
-                  "3",
-                  "4",
-                  "5",
-                  "6",
-                  "7"
-                ],
-                "resposta": 2,
-                "explicacao": "3x−7=8, logo 3x=15 e x=5. Treino autoral alinhado ao tema presente em provas anteriores, sem reproduzir prova."
-              }
+              "resumo": "Na função afim f(x)=ax+b, determine a taxa de variação e o termo independente. Na função quadrática ax²+bx+c, calcule raízes e vértice com atenção ao domínio."
             },
             {
               "id": "progressao",
               "nome": "Progressão aritmética",
-              "resumo": "Uma progressão aritmética possui diferença constante r entre termos consecutivos. Fórmula: aₙ=a₁+(n−1)r.",
-              "exercicio": {
-                "enunciado": "Uma PA tem primeiro termo 7 e razão 4. Qual é o oitavo termo?",
-                "alternativas": [
-                  "31",
-                  "35",
-                  "36",
-                  "39",
-                  "42"
-                ],
-                "resposta": 1,
-                "explicacao": "a₈=7+(8−1)×4=35. Questão autoral."
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "cfn-musico-ref",
-      "tipo": "cfn",
-      "titulo": "Sargento Músico Fuzileiro Naval — provas anteriores",
-      "forca": "FMB/CFN",
-      "situacao": "Referência documental; conteúdos específicos dependem do edital escolhido",
-      "acesso": "publico",
-      "edital": "https://www.marinha.mil.br/cpesfn/concursoscfn",
-      "provasAnteriores": "https://www.marinha.mil.br/cpesfn/provas-anteriores-c-fsg-mu-cfn",
-      "formatoReferencia": "A Marinha mantém provas anteriores de Sargento Músico. Matérias e conteúdos exatos devem ser selecionados com base no edital aplicável.",
-      "materias": [
-        {
-          "id": "fonte",
-          "nome": "Orientações oficiais",
-          "assuntos": [
-            {
-              "id": "documentos",
-              "nome": "Provas e editais da Marinha",
-              "resumo": "Consulte o edital do concurso e os cadernos/gabaritos do ano selecionado antes de montar uma preparação especializada. A FAAAB não homologou uma prova interna equivalente.",
-              "exercicio": null
+              "resumo": "Uma progressão aritmética possui diferença constante r entre termos consecutivos. Fórmula: aₙ=a₁+(n−1)r."
             }
           ]
         }
@@ -207,7 +134,7 @@
     }
   ],
   "mensagens": {
-    "semAbertas": "Nenhuma prova FAAAB foi aberta nesta base. Quando o responsável aprovar e publicar o edital com data, requisitos e cargos elegíveis, aparecerá aqui.",
+    "semAbertas": "Não existe inscrição FAAAB ativa por padrão. Somente editais autorizados com data inicial e final definidas pelo proprietário podem abrir inscrição automaticamente dentro desse período.",
     "semInscricao": "Não é possível se inscrever em provas ainda não abertas ou sem autorização da whitelist."
   }
 }
