@@ -156,38 +156,42 @@ function officeVacate(){
  const all=copy(offices()),o=all.find(x=>x.id===current.id);o.titular=null;o.inicioMandato=null;o.fimMandato=null;
  setData("autoridades",all);notice("Cargo marcado como vago no rascunho.");
 }
-function githubName(value){const s=String(value||"").trim().replace(/^@/,"");return /^(?!-)[a-z\d](?:[a-z\d-]{0,37}[a-z\d])?$/i.test(s)?s.toLowerCase():null}
+function robloxName(value){const nick=String(value||"").trim().replace(/^@/,"");return /^[A-Za-z0-9_]{3,20}$/.test(nick)?nick:null}
 function whitelistData(){return states.data.admin_whitelist}
+function isOwner(){return states.auth?.role==="owner"}
 function renderWhitelist(){
  const body=whitelistData();if(!body||!Array.isArray(body.membros))return;
- $("whitelist-list").innerHTML='<div class="item"><span class="item-label">Proprietário · acesso real pelo GitHub</span><strong>@'+escapeText(body.proprietarioGitHub||OWNER)+'</strong><p>Gerencia permissões na plataforma GitHub; não depende deste cadastro.</p></div>'+(body.membros.length?body.membros.map((x,i)=>'<div class="item"><span class="item-label">Cadastro de '+escapeText(x.perfil==="editor"?"Editor":"Revisor")+'</span><strong>@'+escapeText(x.github)+'</strong><p>'+escapeText(x.observacao||"Sem observação")+'</p><div class="item-actions"><button class="remove" type="button" data-whitelist-delete="'+i+'">Retirar da lista</button></div></div>').join(""):'<div class="empty">Nenhum colaborador cadastrado além do proprietário.</div>');
+ $("whitelist-list").innerHTML='<div class="item"><span class="item-label">Proprietário</span><strong>FAAAB</strong><p>Acesso verificado pelo servidor OAuth.</p></div>'+(body.membros.length?body.membros.map((x,i)=>'<div class="item"><span class="item-label">Acesso '+escapeText(x.perfil==="editor"?"Editor":"Revisor")+'</span><strong>@'+escapeText(x.robloxUsername||x.robloxId||"Google autorizado")+'</strong><p>'+escapeText(x.robloxId?"ID Roblox: "+x.robloxId+" · ":"")+(x.robloxId?"Conta identificada. ":"Identificação validada pelo servidor ao entrar. ")+escapeText(x.observacao||"")+'</p><div class="item-actions">'+(isOwner()?'<button class="remove" type="button" data-whitelist-delete="'+i+'">Revogar acesso</button>':"")+'</div></div>').join(""):'<div class="empty">Nenhum usuário além do proprietário.</div>');
+ $("whitelist-form").querySelectorAll("input,select,textarea,button").forEach(el=>el.disabled=!isOwner());
 }
-function whitelistAdd(user,role,note){
- const handle=githubName(user);if(!handle)throw Error("Nome GitHub inválido (apenas letras, números e hífen, até 39 caracteres)");
- if(handle===OWNER)throw Error("O proprietário já controla o repositório pelo GitHub.");
- if(!["editor","revisor"].includes(role))throw Error("Função permitida: editor ou revisor.");
- const obj=copy(whitelistData());
- if(!Array.isArray(obj.membros))throw Error("Whitelist malformada");
- if(obj.membros.some(x=>x.github?.toLowerCase()===handle))throw Error("Esse GitHub já está cadastrado.");
- obj.membros.push({github:handle,perfil:role,observacao:note||"",autorizacao:"cadastro-editorial-sem-acesso-automatico"});
- setData("admin_whitelist",obj);return handle
+function whitelistAdd(user,role,note,id=""){
+ if(!isOwner())throw Error("Somente o proprietário pode adicionar membros.");
+ const nick=robloxName(user);if(!nick)throw Error("Digite o nickname verdadeiro do Roblox.");
+ if(!["editor","revisor"].includes(role))throw Error("Função deve ser editor ou revisor.");
+ const robloxId=String(id||"").trim();if(robloxId&&!/^\d{1,20}$/.test(robloxId))throw Error("ID do Roblox inválido.");
+ const obj=copy(whitelistData());if(!Array.isArray(obj.membros))throw Error("Whitelist inválida.");
+ if(obj.membros.some(x=>x.robloxUsername?.toLowerCase()===nick.toLowerCase()||(robloxId&&String(x.robloxId||"")===robloxId)))throw Error("Esse usuário já está autorizado.");
+ obj.membros.push({robloxUsername:nick,robloxId:robloxId||null,perfil:role,observacao:note||"",autorizacao:"oauth-roblox-verificado"});
+ setData("admin_whitelist",obj);return nick
 }
 function whitelistRemove(user){
- const handle=githubName(user);if(!handle||handle===OWNER)throw Error("Não é possível remover essa conta da whitelist editorial.");
- const obj=copy(whitelistData()),old=obj.membros.length;
- obj.membros=obj.membros.filter(x=>x.github?.toLowerCase()!==handle);
- if(obj.membros.length===old)throw Error("Usuário não encontrado na lista.");
+ if(!isOwner())throw Error("Somente o proprietário pode revogar acessos.");
+ const nick=robloxName(user);if(!nick)throw Error("Nickname Roblox inválido.");
+ const obj=copy(whitelistData()),len=obj.membros.length;
+ obj.membros=obj.membros.filter(x=>x.robloxUsername?.toLowerCase()!==nick.toLowerCase());
+ if(obj.membros.length===len)throw Error("Usuário não encontrado.");
  setData("admin_whitelist",obj);
 }
 function whitelistSubmit(ev){
  ev.preventDefault();
- try{const id=whitelistAdd($("whitelist-user").value,$("whitelist-role").value,$("whitelist-note").value.trim());$("whitelist-form").reset();notice("@"+id+" adicionado à lista editorial. O acesso real continua dependendo do GitHub.")}catch(e){notice(e.message,true)}
+ try{const nick=whitelistAdd($("whitelist-user").value,$("whitelist-role").value,$("whitelist-note").value.trim(),$("whitelist-id").value);
+ $("whitelist-form").reset();notice("@"+nick+" incluído no rascunho da whitelist. Publique para conceder acesso.");}catch(e){notice(e.message,true)}
 }
 function whitelistDelete(ev){
  const b=ev.target.closest("[data-whitelist-delete]");if(!b)return;
- const user=whitelistData().membros[Number(b.dataset.whitelistDelete)];if(!user)return;
- if(!confirm("Remover @"+user.github+" do cadastro editorial? Isso NÃO altera colaboradores do GitHub."))return;
- try{whitelistRemove(user.github);notice("@"+user.github+" removido do cadastro editorial.")}catch(e){notice(e.message,true)}
+ const member=whitelistData().membros[Number(b.dataset.whitelistDelete)];if(!member)return;
+ if(!confirm("Revogar o acesso de @"+member.robloxUsername+" após publicação?"))return;
+ try{whitelistRemove(member.robloxUsername);notice("Acesso revogado no rascunho. Publique a alteração.");}catch(e){notice(e.message,true)}
 }
 function commandOutput(line,error=false){
  const el=$("command-output");el.textContent=line;el.style.borderLeftColor=error?"#bd6a60":"#8cab8c"
