@@ -10,7 +10,7 @@ Esta pasta contém uma implementação de **autenticação OAuth 2.0 com PKCE**,
 2. Escolhe **Entrar com Roblox** ou **Entrar com Google**. O login verdadeiro acontece no site oficial do provedor.
 3. O Worker verifica a identidade (Google `sub` e `email_verified`, ou Roblox `userinfo.sub` / ID permanente).
 4. Se não estiver aprovado, recebe status **aguardando whitelist**.
-5. O proprietário adiciona o **nickname verdadeiro do Roblox** em `dados/admin_whitelist.json`. O backend confere e fixa o ID Roblox ao autenticar; o nome sozinho nunca é tratado como prova de identidade. Quando o usuário entra com Google, pode **vincular sua conta Roblox** com outro login OAuth; assim recebe a mesma aprovação pelo ID Roblox. Há também a opção técnica de whitelist direta por Google `sub`, mas nunca exponha o e-mail de ninguém no repositório.
+5. O proprietário adiciona o **nickname verdadeiro do Roblox** em `dados/admin_whitelist.json`. O backend confere e fixa o ID Roblox ao autenticar; o nome sozinho nunca é tratado como prova de identidade. Quem entra com Google pode **vincular seu Roblox** e aproveitar a aprovação por nick, **ou ser aprovado diretamente pelo proprietário** na área de solicitações, sem precisar de Roblox. As aprovações Google diretas ficam no banco privado D1, sem expor e-mails no JSON do GitHub.
 6. Somente quem tem perfil **editor** ou **owner** recebe o painel de edição. O perfil **revisor** pode consultar, mas não publicar. A whitelist só pode ser modificada por **owner**.
 7. Edições vão ao GitHub pelo Worker, que guarda o token como segredo, valida cookies, CSRF, sessão, permissão e a versão do arquivo para impedir substituição acidental de outro editor.
 
@@ -40,7 +40,7 @@ Crie as tabelas privadas:
 npx wrangler d1 execute faaab-auth --remote --file=./schema.sql
 ```
 
-O D1 armazena sessões, contas que fizeram login, vínculos com Roblox e nicknames fixados a UserIds; **não é banco público do GitHub Pages**. Não execute um `d1 execute` remoto sem antes revisar o arquivo SQL.
+O D1 armazena sessões, contas que fizeram login, aprovações privadas de Google/Roblox, vínculos com Roblox e nicknames fixados a UserIds; **não é banco público do GitHub Pages**. Não execute um `d1 execute` remoto sem antes revisar o arquivo SQL.
 
 ### 2. Criar o aplicativo de login Roblox
 
@@ -102,7 +102,7 @@ Depois, edite **somente** `dados/auth_public.json` no GitHub:
 }
 ```
 
-Essa configuração é pública e contém **somente a URL do servidor**, não credenciais. Só habilite após testes reais de login, whitelist e publicação. O `admin.html` público libera os botões Roblox/Google quando `enabled=true`.
+Essa configuração é pública e contém **somente a URL do servidor**, não credenciais. Só habilite após testes reais de login, whitelist e publicação. O `admin.html` público libera os botões Roblox/Google quando `enabled=true`. **Antes de ativar**, teste conta sem aprovação (deve ser bloqueada), conta `owner` e conta `editor`, bem como revogação e conflito de versão.
 
 ### 6. Dar whitelist usando nick
 
@@ -131,6 +131,7 @@ Revogar: remova o membro da whitelist. A autorização é reavaliada pelo Worker
 - **editor:** entra e publica notícias, titulares e outros dados autorizados, mas o servidor bloqueia modificações à whitelist.
 - **revisor:** entra para consulta, sem publicação.
 - **sem whitelist:** pode registrar/login, mas recebe “aguardando aprovação”, sem o painel de edição.
+- **Google sem Roblox:** o proprietário pode abrir **Whitelist → Solicitações pendentes** no painel restrito e aprovar ou revogar a conta Google. A identidade e o e-mail verificado permanecem no D1 privado.
 
 Um administrador do painel **não** ganha acesso automático ao GitHub nem comandos no jogo Roblox; essas permissões são independentes. O botão de publicação usa um token protegido no backend para o escopo exato do repositório.
 
