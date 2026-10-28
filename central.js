@@ -6,7 +6,7 @@ import {getFirestore,collection,doc,getDoc,getDocs,query,where,limit,setDoc,upda
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const formatDate=v=>{if(!v)return "Data não informada";const d=v?.toDate?v.toDate():new Date(v);return isNaN(d)?"Data não informada":d.toLocaleString("pt-BR",{dateStyle:"medium",timeStyle:"short"})};
-const s={app:null,auth:null,db:null,me:null,profile:null,seed:null,roleCatalog:null,posts:[],exams:[],selectedTopic:null,selectedPath:null};
+const s={app:null,auth:null,db:null,me:null,profile:null,seed:null,roleCatalog:null,posts:[],exams:[],selectedTopic:null,selectedPath:null,scopeSources:null};
 const catalogue=()=>s.seed?.trilhas||[];
 const validTab=new Set(["noticias","avisos","marketing","provas","estudos","publicar","administracao"]);
 function notice(msg,error=false){const el=$("site-notice");el.hidden=false;el.textContent=msg;el.classList.toggle("error",error)}
@@ -105,7 +105,7 @@ async function authChanged(user){
  s.me=user;s.profile=null;
  if(user){try{s.profile=await ensureProfile(user)}catch(e){notice("Erro ao verificar a whitelist: "+e.message,true)}}
  permissionsUI();renderExams();
- if(owner())await refreshUsers();else $("admin-users").innerHTML='<div class="empty">Acesso restrito ao proprietário.</div>';
+ if(owner()){await loadScopeSources();await refreshUsers();}else $("admin-users").innerHTML='<div class="empty">Acesso restrito ao proprietário.</div>';
 }
 function refreshUserRoleOptions(){
  const roles=s.roleCatalog?.roles||[];
@@ -123,11 +123,32 @@ async function refreshUsers(){
 }
 $("admin-users").addEventListener("click",async e=>{const btn=e.target.closest("[data-toggle-uid]");if(!btn||!owner())return;const user=s.userList?.find(x=>x.uid===btn.dataset.toggleUid);if(!user||user.owner)return;if(!confirm((user.approved?"Revogar":"Aprovar")+" whitelist de "+(user.displayName||user.uid)+"?"))return;
  try{await updateDoc(doc(s.db,"users",user.uid),{approved:!user.approved,...(user.approved?{roles:[],scopeByRole:{}}:{})});notice("Whitelist atualizada. Cargos seguem uma etapa separada.");await refreshUsers()}catch(err){notice("Erro na whitelist: "+err.message,true)}});
-$("assign-role").addEventListener("change",()=>{const role=$("assign-role").value;$("assign-scope").hidden=!["instrutor","governo","alto_escalao"].includes(role);$("assign-detail").placeholder=role==="instrutor"?"ID do curso ou batalhão autorizado":role==="governo"?"ID do cargo, ex.: GOV-PRE":"Ex.: militar:FTB ou civil:GOV"});
+async function loadScopeSources(){
+ if(s.scopeSources)return;
+ try{const names=["cursos","catalogo","autoridades"];const all=await Promise.all(names.map(async x=>{const r=await fetch("dados/"+x+".json");if(!r.ok)throw Error("Arquivo de "+x+" indisponível");return r.json()}));s.scopeSources={cursos:all[0],catalogo:all[1],autoridades:all[2]}}catch(e){notice("Não foi possível carregar todos os alvos de cargos: "+e.message,true);s.scopeSources={cursos:[],catalogo:[],autoridades:[]}}
+}
+function targetOptions(){
+ const role=$("assign-role").value,kind=$("assign-kind").value;
+ let entries=[];
+ if(role==="instrutor"&&kind==="curso")entries=(s.scopeSources?.cursos||[]).map(x=>({id:x.id,nome:(x.forca||"")+": "+(x.titulo||x.id)}));
+ if(role==="instrutor"&&kind==="batalhao")entries=(s.scopeSources?.catalogo||[]).filter(x=>/batalh|brigad|unidade/i.test([x.tipo||"",x.nome||""].join(" "))).map(x=>({id:x.id,nome:(x.forca||"")+": "+x.nome}));
+ if(role==="governo")entries=(s.scopeSources?.autoridades||[]).filter(x=>x.forca==="GOV").map(x=>({id:x.id,nome:x.nome}));
+ if(role==="alto_escalao")entries=kind==="civil"?[{id:"GOV",nome:"Governo (civil)"}]:[{id:"FTB",nome:"Exército"},{id:"FAB",nome:"Força Aérea"},{id:"FMB",nome:"Marinha"},{id:"PM",nome:"Polícia Militar"},{id:"CBM",nome:"Bombeiros"}];
+ fillSelect("assign-target",entries,"Selecione o destino");
+}
+function scopeKindOptions(){
+ const role=$("assign-role").value;const required=["instrutor","governo","alto_escalao"].includes(role);
+ $("assign-scope").hidden=!required;
+ const kinds=role==="instrutor"?[{id:"curso",nome:"Curso"},{id:"batalhao",nome:"Batalhão / unidade"}]:role==="governo"?[{id:"cargo",nome:"Cargo governamental"}]:role==="alto_escalao"?[{id:"militar",nome:"Força militar"},{id:"civil",nome:"Força civil"}]:[];
+ fillSelect("assign-kind",kinds,"Selecione a categoria");
+ if(kinds.length){$("assign-kind").value=kinds[0].id;targetOptions()}else fillSelect("assign-target",[],"Selecione um destino");
+}
+$("assign-role").addEventListener("change",scopeKindOptions);
+$("assign-kind").addEventListener("change",targetOptions);
 $("assign-form").addEventListener("submit",async e=>{e.preventDefault();if(!owner())return;
- const uid=$("assign-user").value,role=$("assign-role").value,scope=$("assign-detail").value.trim(),u=s.userList?.find(x=>x.uid===uid);
+ const uid=$("assign-user").value,role=$("assign-role").value,scope=(["instrutor","governo","alto_escalao"].includes(role)?$("assign-kind").value+":"+$("assign-target").value:""),u=s.userList?.find(x=>x.uid===uid);
  if(!u?.approved||!role){notice("Primeiro aprove a whitelist e escolha o cargo.",true);return}
- if(["instrutor","governo","alto_escalao"].includes(role)&&!scope){notice("Este cargo exige uma seleção específica.",true);return}
+ if(["instrutor","governo","alto_escalao"].includes(role)&&(!$("assign-target").value||!$("assign-kind").value)){notice("Este cargo exige uma seleção específica.",true);return}
  if(role==="alto_escalao"&&!/^(militar:(FTB|FAB|FMB|CBM|PM)|civil:GOV)$/.test(scope)){notice("Use militar:FTB/FAB/FMB/CBM/PM ou civil:GOV.",true);return}
  if(!confirm("Atribuir "+roleLabel(role)+" a "+u.displayName+"?"))return;
  try{
