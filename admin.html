@@ -19,8 +19,8 @@ try{
  roblox.href=url+"/auth/roblox";google.href=url+"/auth/google";
  const prefer=localStorage.getItem("faaab-google-auto")==="1";
  document.getElementById("remember-google-row").hidden=false;
- document.getElementById("remember-google").checked=prefer;
- google.addEventListener("click",()=>{try{if(document.getElementById("remember-google").checked)localStorage.setItem("faaab-google-auto","1");else localStorage.removeItem("faaab-google-auto")}catch(e){}});
+ document.getElementById("remember-google").checked=localStorage.getItem("faaab-google-auto")!=="0";
+ google.addEventListener("click",()=>{try{if(document.getElementById("remember-google").checked)localStorage.setItem("faaab-google-auto","1");else localStorage.setItem("faaab-google-auto","0")}catch(e){}});
  if(prefer){state.textContent="Retomando seu login Google...";location.replace(url+"/auth/auto-google");return;}
  roblox.removeAttribute("aria-disabled");google.removeAttribute("aria-disabled");
  roblox.textContent="Entrar com Roblox";google.textContent="Entrar com Google";
