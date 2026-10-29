@@ -64,7 +64,9 @@ async function initialize(){
  state.list=catalog.slice().sort((a,b)=>Number(!!programFor(b))-Number(!!programFor(a))||a.forca.localeCompare(b.forca)||a.nome.localeCompare(b.nome,"pt-BR"));
  state.ready=true;drawList();
  let last=null;try{last=localStorage.getItem(KEY)}catch{}
- if(last&&state.list.some(x=>x.id===last))selectProgram(last);
+ const requested=new URLSearchParams(location.search).get("prova");
+ if(requested&&state.list.some(x=>x.id===requested))selectProgram(requested);
+ else if(last&&state.list.some(x=>x.id===last))selectProgram(last);
  else $("program-detail").innerHTML='<div class="program-placeholder"><strong>Escolha a prova que deseja preparar.</strong><p>Aqui aparecem matérias, aulas e exercícios apenas da prova selecionada. Se a FAAAB ainda não tiver definido o programa, isso ficará indicado.</p></div>';
  }catch(e){
  $("program-list").innerHTML='<div class="program-placeholder"><strong>Programas indisponíveis</strong><p>'+esc(e.message)+'</p></div>';

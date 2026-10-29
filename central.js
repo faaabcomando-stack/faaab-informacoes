@@ -5,7 +5,7 @@ const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 const formatDate=v=>{if(!v)return "Data não informada";const d=v?.toDate?v.toDate():new Date(v);return isNaN(d)?"Data não informada":d.toLocaleString("pt-BR",{dateStyle:"medium",timeStyle:"short"})};
 const s={app:null,auth:null,db:null,me:null,profile:null,seed:null,roleCatalog:null,posts:[],exams:[],selectedTopic:null,selectedPath:null,scopeSources:null,allExams:null,paths:[],catalogLimit:20,studyGuides:null};
 const catalogue=()=>s.paths.length?s.paths:s.seed?.trilhas||[];
-const validTab=new Set(["noticias","avisos","marketing","provas","estudos","publicar","administracao"]);
+const validTab=new Set(["noticias","avisos","marketing","provas","publicar","administracao"]);
 function safeSource(url){
  try{const u=new URL(url);return u.protocol==="https:"&&[
  "www.vunesp.com.br","www.marinha.mil.br","www.fab.mil.br",
@@ -61,14 +61,12 @@ $("catalog-more").addEventListener("click",()=>{s.catalogLimit+=20;renderCatalog
 $("catalog-records").addEventListener("click",ev=>{
  const btn=ev.target.closest("[data-catalog-study]");if(!btn||!s.allExams)return;
  const x=s.allExams.registros.find(r=>r.id===btn.dataset.catalogStudy);if(!x)return;
- showTab("estudos");
- window.FAAABExamPrograms?.selectProgram(x.id,{scroll:true});
- $("program-detail").scrollIntoView({behavior:"smooth",block:"start"});
+ location.href="estudos.html?prova="+encodeURIComponent(x.id);
 });
 function notice(msg,error=false){const el=$("site-notice");el.hidden=false;el.textContent=msg;el.classList.toggle("error",error)}
-function showTab(name){if(!validTab.has(name))return;if(name==="administracao"&&!owner())return;if(name==="publicar"&&!allowedChannels().length)return;window.FAAABSelecionarAba?.(name,true);if(name==="estudos")showTopic();}
+function showTab(name){if(!validTab.has(name))return;if(name==="administracao"&&!owner())return;if(name==="publicar"&&!allowedChannels().length)return;window.FAAABSelecionarAba?.(name,true);}
 document.getElementById("tabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(b&&!b.hidden)showTab(b.dataset.tab)});
-window.addEventListener("hashchange",()=>{const tab=location.hash.slice(1);if(["noticias","avisos","marketing","provas","estudos"].includes(tab))showTab(tab)});
+window.addEventListener("hashchange",()=>{const tab=location.hash.slice(1);if(["noticias","avisos","marketing","provas"].includes(tab))showTab(tab)});
 function roleNames(){return s.profile?.roles||[]}
 function owner(){return s.profile?.approved===true&&s.profile?.owner===true}
 function approved(){return s.profile?.approved===true}
@@ -130,10 +128,10 @@ function pathChange(level){
  }
  showTopic();
 }
-$("study-type").addEventListener("change",()=>pathChange("type"));
-$("study-exam").addEventListener("change",()=>pathChange("exam"));
-$("study-subject").addEventListener("change",()=>pathChange("subject"));
-$("study-topic").addEventListener("change",showTopic);
+$("study-type")?.addEventListener("change",()=>pathChange("type"));
+$("study-exam")?.addEventListener("change",()=>pathChange("exam"));
+$("study-subject")?.addEventListener("change",()=>pathChange("subject"));
+$("study-topic")?.addEventListener("change",showTopic);
 function safeOfficial(url){try{const x=new URL(url);return x.protocol==="https:"&&(x.hostname==="www.marinha.mil.br"||x.hostname==="www.inscricao.marinha.mil.br")?url:null}catch{return null}}
 function showTopic(){
  const {t,m,topic}=currentPath();
@@ -187,7 +185,7 @@ async function authChanged(user){
 function refreshUserRoleOptions(){
  const roles=s.roleCatalog?.roles||[];
  for(const id of ["assign-role","material-role","exam-roles"]){
-  const sel=$(id);sel.innerHTML=(id==="assign-role"?'<option value="">Escolha um cargo</option>':id==="material-role"?'<option value="">Selecione um cargo</option>':"")+roles.map(r=>'<option value="'+esc(r.id)+'">'+esc(r.nome)+'</option>').join("");
+  const sel=$(id);if(!sel)continue;sel.innerHTML=(id==="assign-role"?'<option value="">Escolha um cargo</option>':id==="material-role"?'<option value="">Selecione um cargo</option>':"")+roles.map(r=>'<option value="'+esc(r.id)+'">'+esc(r.nome)+'</option>').join("");
  }
 }
 async function refreshUsers(){
@@ -257,7 +255,7 @@ $("exam-form").addEventListener("submit",async e=>{e.preventDefault();if(!owner(
   $("exam-form").reset();notice("Edital agendado. O prazo de inscrição ficará aberto somente dentro da janela definida, validada pelo Firestore.");await refreshExams();
  }catch(err){notice("Falha ao agendar edital: "+err.message,true)}
 });
-$("material-form").addEventListener("submit",async e=>{e.preventDefault();if(!owner())return;
+$("material-form")?.addEventListener("submit",async e=>{e.preventDefault();if(!owner())return;
  const {t,m,topic}=currentPath();if(!t||!m||!topic){notice("Selecione primeiro tipo, prova, matéria e assunto no canal Estudos.",true);return}
  const access=$("material-access").value,role=$("material-role").value;
  if(access==="cargos"&&!role){notice("Selecione o cargo autorizado para o material.",true);return}
@@ -269,9 +267,9 @@ async function bootstrap(){
   const [seedResp,roleResp,catalogResp,guidesResp]=await Promise.all([fetch("dados/portal_canais_estudos.json"),fetch("dados/admin_roles.json"),fetch("dados/provas_todas_unidades.json"),fetch("dados/provas_guias_materias.json")]);
   if(!seedResp.ok||!roleResp.ok||!catalogResp.ok||!guidesResp.ok)throw Error("Não foi possível carregar os arquivos do portal");
   s.seed=await seedResp.json();s.roleCatalog=await roleResp.json();s.allExams=await catalogResp.json();s.studyGuides=await guidesResp.json();
-  buildStudyPaths();renderCatalog();renderReferences();
+  renderCatalog();renderReferences();
   $("exam-record").innerHTML='<option value="">Selecione o curso, centro, unidade ou brigada</option>'+s.allExams.registros.filter(x=>["curso","centro","escola","academia","unidade","brigada","subdivisao"].includes(x.tipo)).sort((a,b)=>a.forca.localeCompare(b.forca)||a.nome.localeCompare(b.nome,"pt-BR")).map(x=>'<option value="'+esc(x.id)+'">'+esc(x.forca+" · "+x.nome)+'</option>').join("");
-  $("study-type").disabled=false;refreshUserRoleOptions();renderPosts();renderExams();if(validTab.has(location.hash.slice(1))&&!["publicar","administracao"].includes(location.hash.slice(1)))showTab(location.hash.slice(1));
+  refreshUserRoleOptions();renderPosts();renderExams();if(validTab.has(location.hash.slice(1))&&!["publicar","administracao"].includes(location.hash.slice(1)))showTab(location.hash.slice(1));
  }catch(e){notice("Falha ao carregar a central: "+e.message,true)}
 }
 bootstrap();
