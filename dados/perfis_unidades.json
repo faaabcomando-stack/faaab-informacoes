@@ -1514,6 +1514,300 @@
         "Registro legado preservado sem reativação automática."
       ],
       "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "ADM-FAAAB": {
+      "papel": "Instituição central do universo fictício FAAAB, que reúne as forças militares, a administração e os setores civis organizados em áreas distintas.",
+      "atividades": [
+        "Coordenação da identidade institucional e das divisões gerais do projeto.",
+        "Organização do catálogo de forças, unidades, escolas, cursos, patentes e sistemas.",
+        "Integração dos regulamentos, serviços e experiências Roblox planejadas."
+      ],
+      "sistemas": [
+        "É a instituição guarda-chuva; não é um batalhão, patente ou carreira própria.",
+        "As Forças Armadas, o Governo e a área Civil têm funções distintas."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-EGAF": {
+      "papel": "Equipe Geral da Administração da FAAAB, responsável pela administração do próprio projeto e não pela cadeia operacional das tropas.",
+      "atividades": [
+        "Coordenação administrativa da equipe que desenvolve e mantém o universo FAAAB.",
+        "Organização de registros, recursos e tarefas da administração do projeto.",
+        "Apoio à comunicação entre os setores e a equipe de desenvolvimento."
+      ],
+      "sistemas": [
+        "As permissões técnicas no Roblox, no site e no Discord não são automaticamente concedidas a todos os integrantes.",
+        "EGAF não se confunde com o Governo eleito."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-GOV": {
+      "papel": "Governo político do roleplay FAAAB, com atuação institucional sobre leis, estrutura militar, eleições e decisões definidas.",
+      "atividades": [
+        "Criação de leis fictícias e participação em decisões que afetam o jogo.",
+        "Alterações na organização militar por meio dos processos de autorização estabelecidos.",
+        "Autorização presidencial para mobilização do Exército em conflitos específicos.",
+        "Eleições individuais para Presidente, Vice-Presidente e Deputado Federal."
+      ],
+      "sistemas": [
+        "A criação de batalhões proposta pelo Presidente exige permissão do Ministro da Defesa.",
+        "O modelo eleitoral recente prevalece sobre critérios antigos.",
+        "O organograma detalhado está na área própria de Governo."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Governo e Administração Geral são instituições diferentes; cargos políticos não são patentes militares."
+      ],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-FTB": {
+      "papel": "Exército Brasileiro do universo FAAAB: força responsável pelas unidades terrestres, brigadas, centros, escolas e sua carreira de patentes.",
+      "atividades": [
+        "Administração da hierarquia e da progressão militar do Exército.",
+        "Organização de brigadas, batalhões, unidades especializadas e centros de formação.",
+        "Atividades terrestres e participação em conflitos conforme as autorizações políticas e militares do roleplay."
+      ],
+      "sistemas": [
+        "A CDP do Recruta envolve TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado.",
+        "A participação em guerras exige chegar a Soldado."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-FAB": {
+      "papel": "Força Aérea Brasileira fictícia da FAAAB, com unidades aéreas, formações de voo, segurança, resgate militar e sua carreira própria.",
+      "atividades": [
+        "Atividades aéreas do roleplay, com qualificação por função e aeronave.",
+        "Formação de integrantes em escolas e centros da FAB.",
+        "Organização de unidades de operações de solo, transporte, defesa e resgate militar."
+      ],
+      "sistemas": [
+        "Pilotos e operadores precisam de qualificações aplicáveis às aeronaves e equipamentos.",
+        "PARA-SAR possui foco de resgate militar, distinto do resgate civil dos Bombeiros."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-FMB": {
+      "papel": "Marinha Brasileira do universo FAAAB, responsável pelas unidades navais, operações de superfície e cursos da carreira naval.",
+      "atividades": [
+        "Organização das embarcações e unidades marítimas do roleplay.",
+        "Treinamento e qualificação da carreira de marinheiros e oficiais.",
+        "Integração do Corpo de Fuzileiros Navais na instituição naval."
+      ],
+      "sistemas": [
+        "O CFN é subordinado à Marinha e não uma força política independente.",
+        "A utilização das embarcações depende de recursos e habilitações."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-CFN": {
+      "papel": "Corpo de Fuzileiros Navais da FAAAB, integrado à Marinha e com unidades próprias de infantaria, viaturas e missões costeiras.",
+      "atividades": [
+        "Atividades de infantaria naval, missões anfíbias e de rios previstas para o roleplay.",
+        "Formação de fuzileiros e especializações conforme as unidades.",
+        "Participação em operações navais e terrestres sob a estrutura da Marinha."
+      ],
+      "sistemas": [
+        "CFN permanece subordinado à FMB.",
+        "Viaturas e embarcações demandam qualificação e disponibilidade."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-CBM": {
+      "papel": "Corpo de Bombeiros Militar do jogo FAAAB, voltado a emergências civis, busca e salvamento, combate a incêndios e proteção.",
+      "atividades": [
+        "Atendimento de emergências e resgate civil no cenário.",
+        "Operações de salvamento aéreo, florestal e especializado conforme as unidades.",
+        "Formação própria de praças e oficiais Bombeiros."
+      ],
+      "sistemas": [
+        "As ocorrências civis são distintas da busca e salvamento exclusivamente militar do PARA-SAR.",
+        "O corpo possui cursos específicos como ABMDP II, CFP/BM e CFS/BM."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-PM": {
+      "papel": "Polícia Militar fictícia da FAAAB, com unidades de policiamento ostensivo e funções próprias no roleplay.",
+      "atividades": [
+        "Patrulhamento e atendimento de ocorrências policiais do mapa.",
+        "Organização das unidades BOPE, ROTAM, BPChoque e BPP da ficção FAAAB.",
+        "Formação e progressão por sua carreira policial, separada do Exército."
+      ],
+      "sistemas": [
+        "As operações policiais seguem as regras do jogo e a hierarquia própria da PM.",
+        "A instituição real Polícia Penal não integra a Polícia Militar brasileira."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-SGEx": {
+      "papel": "Secretaria-Geral do Exército: setor de administração documental e apoio ao funcionamento do FTB.",
+      "atividades": [
+        "Organização de registros institucionais relacionados ao Exército.",
+        "Apoio a documentos, comunicações e atividades de gestão militar.",
+        "Articulação administrativa com a estrutura da força."
+      ],
+      "sistemas": [
+        "SGEx pertence ao âmbito do Exército, não administra automaticamente as outras forças."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-SGM": {
+      "papel": "Secretaria-Geral da Marinha na organização administrativa da FAAAB.",
+      "atividades": [
+        "Gestão e organização de documentos ligados às atividades navais.",
+        "Apoio a comunicações institucionais e registros da Marinha.",
+        "Coordenação administrativa de demandas da instituição naval."
+      ],
+      "sistemas": [
+        "SGM não substitui o comando operacional da Marinha nem as divisões do CFN."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-SEFA": {
+      "papel": "Secretaria de Economia, Finanças e Administração da Aeronáutica fictícia.",
+      "atividades": [
+        "Apoio à administração e aos recursos da FAB.",
+        "Organização documental de assuntos financeiros relacionados às unidades aéreas.",
+        "Acompanhamento administrativo de atividades institucionais."
+      ],
+      "sistemas": [
+        "Movimentações de dinheiro e compras não estão automaticamente liberadas a qualquer cargo do setor."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-TAI-EB": {
+      "papel": "Taifa do Exército, setor de apoio e serviços dentro da organização do FTB.",
+      "atividades": [
+        "Apoio a serviços e atividades internas do Exército.",
+        "Participação em rotinas de suporte e organização da força.",
+        "Coordenação de necessidades cotidianas de assistência logística."
+      ],
+      "sistemas": [
+        "Taifa não é um batalhão de combate nem uma segunda cadeia de patentes."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-TAI-FAB": {
+      "papel": "Taifa da Aeronáutica, setor de suporte e serviços da FAB fictícia.",
+      "atividades": [
+        "Apoio aos serviços internos da Força Aérea.",
+        "Organização de atividades de assistência e suporte cotidiano.",
+        "Atendimento a tarefas auxiliares previstas no roleplay."
+      ],
+      "sistemas": [
+        "Taifa não é uma unidade de pilotagem e não concede habilitação aérea."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-TAI-MB": {
+      "papel": "Taifa da Marinha, estrutura de apoio e serviços da força naval.",
+      "atividades": [
+        "Atividades de assistência e suporte à rotina da instituição naval.",
+        "Apoio a necessidades materiais e serviços da Marinha.",
+        "Organização interna de tarefas auxiliares."
+      ],
+      "sistemas": [
+        "Taifa não substitui a carreira de marinheiro nem as tripulações de embarcações."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-SEP": {
+      "papel": "Setor Segurança e Patentes da administração FAAAB.",
+      "atividades": [
+        "Acompanhamento administrativo de regras de acesso e atribuições de patentes.",
+        "Organização de registros e solicitações de correção de situação funcional.",
+        "Apoio à coerência dos sistemas de segurança e progressão institucional."
+      ],
+      "sistemas": [
+        "O setor não recebe permissão automática para promover qualquer jogador; promoções respeitam a CDP e as autorizações vigentes."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-SMP": {
+      "papel": "Setor Marketing e Propaganda da FAAAB, ligado à apresentação pública do projeto.",
+      "atividades": [
+        "Organização de divulgação e peças informativas do universo FAAAB.",
+        "Apoio à comunicação institucional e a eventos anunciados.",
+        "Revisão de materiais visuais e informativos da comunidade."
+      ],
+      "sistemas": [
+        "Marketing não governa as forças nem tem autoridade para modificar patentes."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-DOC": {
+      "papel": "Setor Documentação, responsável pela organização dos registros e textos do projeto.",
+      "atividades": [
+        "Organização de documentos e manuais da FAAAB.",
+        "Registro de versões, mudanças de regras e referências do catálogo.",
+        "Apoio à padronização da informação pública."
+      ],
+      "sistemas": [
+        "Uma edição documental não equivale, sozinha, à aprovação política ou militar de uma regra."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-EVC": {
+      "papel": "Eventos e Cerimonial: setor de organização de atividades oficiais e eventos fictícios.",
+      "atividades": [
+        "Planejamento de eventos, cerimônias e atividades da comunidade.",
+        "Organização de comunicados e programação de eventos.",
+        "Coordenação de aspectos cerimoniais dentro do jogo."
+      ],
+      "sistemas": [
+        "Eventos não substituem os treinamentos ou avaliações de patente."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "ADM-DEV": {
+      "papel": "Desenvolvimento e Infraestrutura: setor de implementação técnica do universo FAAAB.",
+      "atividades": [
+        "Desenvolvimento de mapas, sistemas, interfaces e recursos do projeto.",
+        "Manutenção da infraestrutura técnica do jogo e dos serviços associados.",
+        "Apoio à implementação de decisões institucionais aprovadas."
+      ],
+      "sistemas": [
+        "Autoridade para aprovar uma mudança e acesso técnico para implementá-la são coisas diferentes.",
+        "O acesso a repositórios, Roblox Studio e administração de grupos exige permissão própria."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
     }
   }
 }
