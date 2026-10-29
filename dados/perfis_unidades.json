@@ -573,12 +573,15 @@
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
     "CBM-GOPP": {
-      "papel": "Unidade operacional dos Bombeiros registrada no catálogo.",
+      "papel": "Grupamento de Operações com Produtos Perigosos do Corpo de Bombeiros Militar no universo FAAAB.",
       "atividades": [
-        "Ocorrências especializadas do Corpo de Bombeiros dentro do roleplay.",
-        "Treinamentos e funções conforme a organização documentada."
+        "Ocorrências fictícias envolvendo produtos e materiais perigosos.",
+        "Identificação de risco, isolamento virtual da área e atendimento às emergências específicas do jogo."
       ],
-      "sistemas": [],
+      "sistemas": [
+        "Equipamentos de proteção e ferramentas especiais devem ser obtidos e habilitados nos sistemas do jogo; não presumir acesso livre.",
+        "O atendimento ocorre no roleplay, não substitui orientação real de emergência."
+      ],
       "formacao": [],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
@@ -993,10 +996,10 @@
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
     "FAB-EAV": {
-      "papel": "Esquadrão de Aviação registrado entre as unidades operacionais da FAB da FAAAB.",
+      "papel": "Esquadrão de Asas Rotativas da Aeronáutica no jogo FAAAB, voltado a aeronaves de asas rotativas.",
       "atividades": [
-        "Atividades de aviação do jogo conforme formação e equipamentos.",
-        "Operações e treinamento do esquadrão em cenário aéreo fictício."
+        "Atividades e treinamentos com helicópteros e outras aeronaves de asas rotativas no roleplay.",
+        "Missões e operações aéreas da unidade conforme habilitação do jogador."
       ],
       "sistemas": [
         "Pilotagem depende de curso e habilitação, não da patente."
@@ -1131,28 +1134,34 @@
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
     "FMB-ComForS": {
-      "papel": "Comando naval cadastrado como ComForS, distinto do ComForSup incluído na atualização de outubro.",
+      "papel": "Comando da Força de Submarinos no universo naval da FAAAB, distinto do ComForSup (Comando da Força de Superfície).",
       "atividades": [
-        "Funções de coordenação na estrutura naval da FAAAB."
+        "Coordenação das missões e dos meios submarinos da Marinha fictícia.",
+        "Integração com as operações navais conforme o planejamento da FAAAB."
       ],
       "sistemas": [
-        "Atribuições específicas de ComForS ainda dependem de conciliação com ComForSup; não juntar as duas entradas automaticamente."
+        "Submarinos e embarcações exigem recursos e habilitação própria.",
+        "ComForS e ComForSup são organizações distintas; não juntar seus cargos nem seu acervo."
       ],
       "formacao": [],
-      "observacoes": [],
+      "observacoes": [
+        "Não duplicar a cadeia de comando da Força de Superfície nesta unidade."
+      ],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
     "FMB-CIAMPA": {
-      "papel": "Centro de Instrução para Aprendizes-Marinheiros, integrante das formações da Marinha fictícia.",
+      "papel": "Centro de Instrução Almirante Milcíades Portela Alves na estrutura naval da FAAAB, relacionado à preparação dos Fuzileiros Navais.",
       "atividades": [
-        "Adaptação e formação inicial de aprendizes.",
-        "Atividades de ensino naval e rotinas da instituição."
+        "Formação e instrução naval de Fuzileiros Navais.",
+        "Adaptação e qualificação para atividades próprias do Corpo de Fuzileiros Navais."
       ],
       "sistemas": [
         "Não atribuir patente por entrar no centro."
       ],
       "formacao": [],
-      "observacoes": [],
+      "observacoes": [
+        "Integra a estrutura da Marinha; não é a Escola de Aprendizes-Marinheiros (EAM), que possui formação própria."
+      ],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
     "FMB-CIAA": {
@@ -1280,16 +1289,18 @@
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
     "CFN-CIAPOL": {
-      "papel": "Centro/especialidade de polícia dentro dos Fuzileiros Navais no universo FAAAB.",
+      "papel": "Companhia de Polícia de Fuzileiros Navais na estrutura da Marinha fictícia.",
       "atividades": [
-        "Atividades de policiamento interno naval fictício.",
-        "Treinamento e formação correspondentes."
+        "Atividades de policiamento militar interno do Corpo de Fuzileiros Navais.",
+        "Segurança e disciplina em instalações e operações navais fictícias."
       ],
       "sistemas": [
         "Não é polícia civil ou unidade da PM."
       ],
       "formacao": [],
-      "observacoes": [],
+      "observacoes": [
+        "É companhia da Marinha/CFN, não centro de formação e não unidade da Polícia Militar civil."
+      ],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
     "FTB-Bda-Inf-Sl": {
