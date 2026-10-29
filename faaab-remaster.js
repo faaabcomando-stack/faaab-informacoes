@@ -180,6 +180,8 @@ const V3={
   const e=cat.find(x=>x.id===id);
   const unit=unitData.mapeamentos?.[id]||null;
   const perfil=perfis.perfis?.[id]||null;
+  const courseNames={"FTB-ESA":["CUR-10-5"],"FTB-EsPCEx":["CUR-10-11"],"FTB-AMAN":["CUR-10-12"],"FTB-EsAO":["CUR-10-13"],"FTB-ECEME":["CUR-10-14"],"FAB-CIAAR":["CUR-11-1"],"FAB-EEAR":["CUR-11-4"],"FAB-EPCAR":["CUR-11-7"],"FAB-AFA":["CUR-11-8"],"FAB-ECEMAR":["CUR-11-9"],"FMB-EAM":["CUR-COMP-01"],"FTB-Bda-Inf-Sl":["CUR-10-7","CUR-10-8"],"FTB-Bda-Inf-Mth":["CUR-10-7","CUR-10-8"],"FTB-Bda-Inf-Mec":["CUR-10-7","CUR-10-8"],"FTB-Bda-Inf-Bld":["CUR-10-7","CUR-10-8"],"FTB-Bda-C-Mec":["CUR-10-7","CUR-10-8"],"FTB-Bda-C-Bld":["CUR-10-7","CUR-10-8"]};
+  const relatedCourses=cursos.filter(x=>(courseNames[id]||[]).includes(x.id));
   const parentUnits=Object.entries(unitData.mapeamentos||{}).filter(([_,o])=>o.subunidades?.some(y=>y.catalogoId===id)).map(([parentId])=>cat.find(x=>x.id===parentId)).filter(Boolean);
   if(!e){V3.set("v3-profile",' <h1>Organização não encontrada</h1><p>Confira o endereço ou volte à <a href="instituicoes.html">página de instituições</a>.</p>');return}
   const sec=Object.prototype.hasOwnProperty.call(sections,s)?s:"sobre";
@@ -226,9 +228,15 @@ const V3={
       (["FTB","FAB","FMB","CFN","CBM","PM"].includes(e.forca)?'<p><a href="carreira.html?forca='+encodeURIComponent(e.forca==="CFN"?"FMB":e.forca)+'">Consultar patentes e carreira da força</a></p>':"")+'</div>';
    }
   }else if(sec==="treinamentos"){
-   content='<div class="v3-doc"><h3>Treinamentos e estágios</h3><p>Cada organização poderá ter etapas próprias de instrução, aulas, treinamentos, estágios e avaliações conforme sua finalidade. A seleção de exercícios não foi aprovada para esta organização.</p><p>Os roteiros dependentes de parkours, estandes e instalações serão preenchidos depois da construção do mapa. Nenhum treinamento genérico será exigido automaticamente de todos os integrantes.</p></div>';
-   if(e.forca==="FTB")content+=V3.note("Referência da FAAAB: Recrutas precisam escolher uma brigada e um batalhão antes do treinamento e da progressão regular. A participação em guerras exige alcançar Soldado. O TC-1 é treinamento geral para classes, praças e graduados; cadetes e superiores não realizam TC-1. Centros ou batalhões não são automaticamente responsáveis por ministrá-lo.");
-   if(e.forca==="FTB"&&unit?.hierarquiaInterna?.modelo==="batalhao")content+='<h3>Progressão de especialização</h3><p>'+V3.esc(unitData.esquema.especializacoes.join(" → "))+'</p><p>Essa progressão não substitui as patentes militares.</p>';
+   const requirements=perfil?.formacao||[];
+   const coursesList=relatedCourses.map(c=>'<details class="v3-course-detail"><summary>'+V3.esc(c.titulo)+'</summary><div class="v3-course-body"><p>'+V3.esc(c.detalhes||"").replace(/\n/g,"<br>")+'</p></div></details>').join("");
+   content='<div class="v3-doc">'+
+     (requirements.length?'<h3>Formações relacionadas à unidade</h3><ul class="v3-profile-bullets">'+requirements.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+
+     (coursesList?'<h3>Programas de formação já cadastrados</h3>'+coursesList:"")+
+     (e.forca==="FTB"&&e.tipo==="unidade"?'<h3>Base da carreira no Exército</h3><p>A CDP do Recruta inclui TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado. As especializações da unidade e a habilitação de equipamentos são etapas distintas de promoção.</p>':"")+
+     (e.tipo==="brigada"?'<h3>Treinamento em brigada</h3><p>O militar escolhe uma brigada para a formação e progressão de carreira. A participação em uma brigada não muda sua patente automaticamente.</p>':"")+
+     (e.forca==="FTB"&&unit?.hierarquiaInterna?.modelo==="batalhao"?'<h3>Evolução da especialização</h3><p>'+V3.esc(unitData.esquema.especializacoes.join(" → "))+'</p><p>Essa cadeia de especialização não é uma segunda cadeia de patentes.</p>':"")+
+     '<p><a href="formacao.html?forca='+encodeURIComponent(e.forca==="CFN"?"FMB":e.forca)+'">Ver outros cursos da força</a></p></div>';
   }else if(sec==="permissoes"){
    content='<div class="v3-doc"><h3>Permissões por função</h3><p>O quadro específico de quem pode comandar instruções, acessar áreas do mapa, operar equipamentos e registrar avaliações ainda precisa ser aprovado.</p><p>Quando o login Roblox estiver implantado, a participação e a função no grupo poderão autorizar <b>acessos comuns de leitura</b>, após verificação segura no servidor.</p><p>Permissões administrativas continuarão dependendo de concessão separada e explícita.</p></div>';
   }else if(sec==="instalacoes"){
