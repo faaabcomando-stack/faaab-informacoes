@@ -1,0 +1,658 @@
+{
+  "revisao": "2026-10-29",
+  "proposito": "Conteúdos de uso no jogo recuperados de decisões anteriores e das fichas aprovadas; não declarar funcionalidade já implementada sem verificação.",
+  "perfis": {
+    "FTB-BFE": {
+      "papel": "Unidade de forças especiais do Exército fictício. Possui os destacamentos DAD e DRE, voltados respectivamente a ações diretas e reconhecimento especial.",
+      "atividades": [
+        "Atuação em missões especiais do roleplay conforme comando e autorização.",
+        "Separação entre o destacamento de ações diretas e o de reconhecimento.",
+        "Seleção e capacitação específicas em integração com os centros de operações especiais."
+      ],
+      "sistemas": [
+        "Divisões internas DAD e DRE no Discord, não grupos independentes.",
+        "A escolha da unidade não substitui a progressão de patentes."
+      ],
+      "formacao": [
+        "CIOpEsp e treinamentos da unidade conforme a função."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BPE": {
+      "papel": "Batalhão de Polícia do Exército com Pelotão de Choque (PC) previsto como subdivisão.",
+      "atividades": [
+        "Segurança interna de instalações e eventos militares fictícios.",
+        "Controle de acesso e apoio à ordem militar nos cenários da FAAAB.",
+        "Atividades específicas de choque por integrantes do PC."
+      ],
+      "sistemas": [
+        "Pelotão de Choque integrado à estrutura do BPE.",
+        "Equipamentos e tarefas liberados conforme função, não apenas patente."
+      ],
+      "formacao": [
+        "Treinamento específico para o PC, distinto da progressão geral."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BI-Caat": {
+      "papel": "Batalhão destinado a operações no bioma árido da FAAAB, com PELOPES e DCS.",
+      "atividades": [
+        "Sobrevivência e deslocamento em terreno de Caatinga.",
+        "PELOPES para operações especiais da área fictícia.",
+        "DCS para tarefas e qualificações relacionadas ao ambiente de Caatinga."
+      ],
+      "sistemas": [
+        "Mecânicas de calor, deslocamento e orientação no bioma são elementos de gameplay em desenvolvimento.",
+        "Divisões PELOPES e DCS permanecem internas."
+      ],
+      "formacao": [
+        "CIOpC, centro voltado ao ambiente de Caatinga."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BIP": {
+      "papel": "Batalhão de Infantaria Paraquedista. Precursores (Precs) e CFP são subequipes citadas nas decisões.",
+      "atividades": [
+        "Treinamento e missões paraquedistas no cenário do jogo.",
+        "Atividades de precursores e preparação das áreas de salto.",
+        "Capacitação de integrantes para deslocamento aéreo e chegada ao solo."
+      ],
+      "sistemas": [
+        "Precs é subdivisão já catalogada; CFP é sigla histórica a detalhar sem inventar nome.",
+        "O jogador não recebe automaticamente uma habilitação de salto por sua patente."
+      ],
+      "formacao": [
+        "CI Pqdt GPB, centro de qualificação paraquedista."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-B-Prec": {
+      "papel": "Batalhão de Precursores como unidade própria prevista, relacionado à especialidade de precursores.",
+      "atividades": [
+        "Missões de reconhecimento e preparação previstas para o papel fictício de precursor.",
+        "Participação com brigadas/unidades que utilizem salto ou reconhecimento especializado."
+      ],
+      "sistemas": [
+        "Não confundir B Prec (batalhão) com Precs (subequipe do BIP)."
+      ],
+      "formacao": [
+        "Especializações paraquedistas e de precursores ainda dependem dos cursos correspondentes."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BIB": {
+      "papel": "Batalhão de Infantaria Blindado, com divisão de tanques e a sigla CFB nas conversas anteriores.",
+      "atividades": [
+        "Apoio à infantaria e utilização de blindados no roleplay.",
+        "Coordenação de tripulações, deslocamentos e proteção de equipes.",
+        "Separação das atividades da divisão Tanques e da qualificação CFB."
+      ],
+      "sistemas": [
+        "Veículos e blindados do jogo são recursos comprados e mantidos, não equipagem infinita.",
+        "A habilitação para operar veículo é separada da patente militar."
+      ],
+      "formacao": [
+        "CIBld para formação de tripulações e condução blindada."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BCC": {
+      "papel": "Batalhão de Carros de Combate dentro da estrutura do Exército do jogo.",
+      "atividades": [
+        "Operação coordenada de carros de combate.",
+        "Treinamento de tripulações e exercícios com veículos.",
+        "Participação em conflitos conforme recursos e disponibilidade de veículos."
+      ],
+      "sistemas": [
+        "Não criar disponibilidade ilimitada de blindados.",
+        "Aquisição e habilitação são processos diferentes da promoção de patente."
+      ],
+      "formacao": [
+        "CIBld, curso e centro de habilitação blindada."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BAC": {
+      "papel": "Batalhão de Ações de Comandos, com DCOE como destacamento interno.",
+      "atividades": [
+        "Missões de comandos no roleplay militar.",
+        "Atuação do Destacamento de Comandos e Operações Especiais (DCOE).",
+        "Qualificação e seleção para tarefas especializadas."
+      ],
+      "sistemas": [
+        "O DCOE permanece uma divisão dentro da unidade.",
+        "Especializações não alteram automaticamente a patente do jogador."
+      ],
+      "formacao": [
+        "CIOpEsp e treinamentos de operações especiais."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-B-Log": {
+      "papel": "Batalhão Logístico, parte obrigatória da mecânica de operações e abastecimento planejada.",
+      "atividades": [
+        "Distribuição e reposição de munição, materiais e recursos militares.",
+        "Apoio de suprimentos durante missões e guerras.",
+        "Controle de equipamentos e logística entre unidades."
+      ],
+      "sistemas": [
+        "Munição não é infinita: abastecimento logístico deve ter consequência real no gameplay.",
+        "Operações e derrotas afetam recursos e capacidade de compra."
+      ],
+      "formacao": [
+        "Qualificações de logística conforme o sistema da FAAAB."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BIM": {
+      "papel": "Batalhão de Infantaria de Montanha, com CFM e PRGM na organização anterior.",
+      "atividades": [
+        "Missões e deslocamentos em ambientes montanhosos.",
+        "PRGM: Pelotão de Reconhecimento e Guerra em Montanha.",
+        "CFM: qualificação ligada ao montanhismo; denominação detalhada ainda não fechada."
+      ],
+      "sistemas": [
+        "Montanhas podem exigir escalada efetiva e minigames em vez de caminhada automática.",
+        "A especialidade de montanha é treinamento, não nova patente."
+      ],
+      "formacao": [
+        "CIOpMth, centro especializado em operações e deslocamentos na montanha."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-B-Sau": {
+      "papel": "Batalhão de Saúde, dedicado ao tratamento médico, resgate e evacuação militar no roleplay.",
+      "atividades": [
+        "Atendimento em campo e estabilização de personagens feridos.",
+        "Evacuação por equipes de resgate e ambulâncias fictícias.",
+        "Trabalho do DRT, GRE e PAPH.",
+        "Tratamento no posto médico ou hospital da unidade."
+      ],
+      "sistemas": [
+        "Não há cura instantânea de todos os ferimentos: tratamento depende do tipo e da parte do corpo atingida.",
+        "Minigames médicos, fraturas e cuidados localizados fazem parte da concepção de gameplay.",
+        "Atuação da especialização médica também pode ocorrer em outros batalhões, sem substituir o B Sau."
+      ],
+      "formacao": [
+        "Qualificação de socorro, atendimento pré-hospitalar e resgate."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-B-Op-Psi": {
+      "papel": "Batalhão de Operações Psicológicas registrado no catálogo do Exército.",
+      "atividades": [
+        "Comunicações e atividades de operações psicológicas exclusivamente fictícias no roleplay.",
+        "Integração ao planejamento de unidades e operações autorizadas."
+      ],
+      "sistemas": [
+        "Não confundir ações de jogo com atividades reais ou acesso a informações privadas."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BI-Pan": {
+      "papel": "Infantaria de Pantanal, adicionada para ampliar a distribuição de unidades pelos biomas.",
+      "atividades": [
+        "Treinamento e deslocamento no bioma pantaneiro.",
+        "Operações em terrenos alagados do mapa planejado.",
+        "Integração com reconhecimento e orientação ambiental."
+      ],
+      "sistemas": [
+        "Ambiente e obstáculos compõem mecânicas do jogo; a presença no catálogo não garante mapa finalizado."
+      ],
+      "formacao": [
+        "CIOPan como centro relacionado ao bioma."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-17--B-Fron": {
+      "papel": "Unidade de fronteira aprovada para a estrutura do Exército do jogo.",
+      "atividades": [
+        "Patrulhas e missões no cenário de fronteira fictícia.",
+        "Vigilância e apoio ao deslocamento das unidades no mapa."
+      ],
+      "sistemas": [
+        "As funções de fronteira seguem as regras de missão do roleplay e não autorizam ações fora do jogo."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-1--RCG": {
+      "papel": "Regimento de Cavalaria de Guardas integrado ao catálogo da FAAAB.",
+      "atividades": [
+        "Participação em cerimônias, guarda e atividades próprias do regimento no roleplay.",
+        "Atividades de cavalaria compatíveis com os recursos fictícios da unidade."
+      ],
+      "sistemas": [
+        "Regimento não é batalhão: possui quadro de cargos próprio e não deve copiar automaticamente os postos internos de todos os batalhões."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BIL": {
+      "papel": "Batalhão de Infantaria Leve, aprovado no catálogo atualizado.",
+      "atividades": [
+        "Tarefas de infantaria leve conforme os cenários de missão.",
+        "Deslocamentos e atividades terrestres da força."
+      ],
+      "sistemas": [
+        "Não criar divisões extras antes de suas denominações serem aprovadas."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BIS": {
+      "papel": "Batalhão de Infantaria de Selva, acrescentado no catálogo recente.",
+      "atividades": [
+        "Atividades de infantaria e deslocamento no bioma de selva.",
+        "Participação em missões próprias do ambiente amazônico da FAAAB."
+      ],
+      "sistemas": [
+        "Qualificações de selva exigem treinamento específico."
+      ],
+      "formacao": [
+        "CIGS e cursos de adaptação à selva."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-BIL-Mth": {
+      "papel": "Batalhão de Infantaria Leve de Montanha, uma das novas unidades aprovadas.",
+      "atividades": [
+        "Atividades de infantaria leve em relevo elevado.",
+        "Adaptação ao deslocamento e obstáculos da montanha."
+      ],
+      "sistemas": [
+        "É unidade distinta do BIM; não duplicar subequipes nem cargos sem registro."
+      ],
+      "formacao": [
+        "CIOpMth para ensino específico."
+      ],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-GAC": {
+      "papel": "Grupo de Artilharia de Campanha aprovado nas atualizações do Exército.",
+      "atividades": [
+        "Atividades e exercícios de artilharia do universo FAAAB.",
+        "Apoio às operações terrestres do jogo conforme permissões próprias."
+      ],
+      "sistemas": [
+        "É um Grupo de Artilharia, não um batalhão; não copiar automaticamente a hierarquia do BFE."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-CIE": {
+      "papel": "Centro de Inteligência do Exército, uma estrutura de análise e assessoria, não batalhão operacional.",
+      "atividades": [
+        "Recepção de relatórios e análises de risco das operações fictícias.",
+        "Seção de Contrainteligência (SC).",
+        "Divisão de Guerra Cibernética (DGC), ambas como equipes internas."
+      ],
+      "sistemas": [
+        "O centro não participa diretamente do combate como tropa comum.",
+        "SC e DGC permanecem divisões documentadas, não novos grupos Roblox automáticos."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-CIGS": {
+      "papel": "Centro de Instrução de Guerra na Selva.",
+      "atividades": [
+        "Treino de orientação, navegação e sobrevivência no bioma de selva.",
+        "Formação de participantes para unidades com missões nesse ambiente.",
+        "Pelotão de Operações na Selva (POS) como subestrutura."
+      ],
+      "sistemas": [
+        "Centro tem funções de instrução próprias, incluindo Supervisores, que não são patentes do batalhão."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-CIBld": {
+      "papel": "Centro de Instrução de Blindados.",
+      "atividades": [
+        "Cursos e habilitações de tripulação de veículos blindados.",
+        "Prática de condução e emprego dos veículos do jogo.",
+        "Avaliações específicas da especialidade."
+      ],
+      "sistemas": [
+        "Patente não libera automaticamente uso de blindados.",
+        "Veículos dependem da economia e inventário da unidade."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-CIOpEsp": {
+      "papel": "Centro de Instrução de Operações Especiais.",
+      "atividades": [
+        "Seleção, capacitação e avaliação das unidades de operações especiais.",
+        "Cursos ligados a funções especializadas do Exército."
+      ],
+      "sistemas": [
+        "Não duplicar os batalhões BFE ou BAC; o Centro forma, as unidades desempenham operações."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-CIOpMth": {
+      "papel": "Centro de Instrução de Operações em Montanha.",
+      "atividades": [
+        "Treino de deslocamento em terreno íngreme.",
+        "Habilidades de orientação e escalada em mapas de montanha.",
+        "Qualificações para unidades de montanha."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-CIOpC": {
+      "papel": "Centro de Instrução e Operações na Caatinga.",
+      "atividades": [
+        "Treinos de resistência e sobrevivência em ambiente árido.",
+        "Orientação e navegação no bioma de Caatinga.",
+        "Formação para integrantes de unidades do ambiente."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-CIOU": {
+      "papel": "Centro de Instrução de Operações Urbanas.",
+      "atividades": [
+        "Treinamentos em estruturas urbanas simuladas.",
+        "Deslocamento, coordenação e segurança em missões da cidade fictícia.",
+        "Avaliações para situações do jogo em ambiente urbano."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-CIOPan": {
+      "papel": "Centro de Instrução de Operações no Pantanal.",
+      "atividades": [
+        "Adaptação a ambientes alagadiços.",
+        "Orientação e operações no bioma pantaneiro.",
+        "Apoio formativo às unidades de Pantanal."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-CI-Pqdt-GPB": {
+      "papel": "Centro de Instrução Paraquedista General Penha Brasil.",
+      "atividades": [
+        "Qualificações de paraquedismo e avaliações funcionais.",
+        "Treinos e orientação para o BIP e especialistas do roleplay."
+      ],
+      "sistemas": [
+        "A patente não equivale a habilitação de salto."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FAB-EAS-PARA-SAR": {
+      "papel": "Equipe/unidade de busca e salvamento militar no universo FAAAB.",
+      "atividades": [
+        "Atividades fictícias de resgate militar e busca e salvamento em combate (CSAR).",
+        "Coordenação com a Aeronáutica para operações do jogo."
+      ],
+      "sistemas": [
+        "Não assumir salvamento civil de rotina: a função civil pertence à estrutura competente."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FAB-CIAER": {
+      "papel": "Centro de Inteligência da Aeronáutica, aprovado no catálogo recente.",
+      "atividades": [
+        "Análise de informações das operações aéreas fictícias.",
+        "Assessoria aos comandos e tratamento de relatórios."
+      ],
+      "sistemas": [
+        "Não é uma unidade de voo nem uma equipe civil de resgate."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FAB-ETA": {
+      "papel": "Esquadrão de Transporte Aéreo incluído no catálogo atual da Aeronáutica.",
+      "atividades": [
+        "Transporte aéreo do jogo conforme missão e acesso ao veículo.",
+        "Coordenação logística com outras forças e unidades."
+      ],
+      "sistemas": [
+        "O equipamento exige qualificação; não confundir com antigo ETA da AVEX, estrutura que deixou de ser aprovada."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FAB-1--GDA": {
+      "papel": "Unidade de defesa aérea fictícia.",
+      "atividades": [
+        "Participação em operações aéreas de defesa do roleplay.",
+        "Treinamento específico para equipamentos e missões da unidade."
+      ],
+      "sistemas": [
+        "O uso de aeronaves depende de habilitação no jogo."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FAB-PARACOM": {
+      "papel": "Unidade fictícia independente da Aeronáutica.",
+      "atividades": [
+        "Missões e tarefas de operações aéreas fictícias previstas para a FAAAB.",
+        "Formação e atividades conforme a especialidade."
+      ],
+      "sistemas": [
+        "O curso CCFA não é a mesma coisa que a unidade PARACOM."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FMB-ComForSup": {
+      "papel": "Comando da Força de Superfície, uma das sete adições aprovadas.",
+      "atividades": [
+        "Coordenação de embarcações e operações de superfície do roleplay.",
+        "Apoio às equipes navais que atuam na superfície."
+      ],
+      "sistemas": [
+        "Órgão de comando de superfície; não confundir com batalhão de infantaria naval."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FMB-CIM": {
+      "papel": "Centro de Inteligência da Marinha, aprovado no catálogo atualizado.",
+      "atividades": [
+        "Análise de informações e relatórios das operações navais fictícias.",
+        "Assessoria ao planejamento das unidades navais."
+      ],
+      "sistemas": [
+        "Centro de inteligência não substitui força de operações ou equipe de embarcações."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "CFN-BtlInfFN": {
+      "papel": "Batalhão de Infantaria de Fuzileiros Navais, unidade já presente nas decisões.",
+      "atividades": [
+        "Atividades de infantaria naval no roleplay.",
+        "Participação em cenários costeiros ou navais da FAAAB."
+      ],
+      "sistemas": [
+        "O Corpo de Fuzileiros Navais integra a Marinha no universo FAAAB."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "CFN-BtlVtrAnf": {
+      "papel": "Batalhão de Viaturas Anfíbias, unidade aprovada posteriormente.",
+      "atividades": [
+        "Atividades e deslocamentos com viaturas anfíbias fictícias.",
+        "Integração com missões costeiras de fuzileiros navais."
+      ],
+      "sistemas": [
+        "Viaturas exigem equipamentos disponíveis e habilitação compatível."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "CFN-BtlOpRib": {
+      "papel": "Batalhão de Operações Ribeirinhas.",
+      "atividades": [
+        "Missões em rios e áreas ribeirinhas do cenário FAAAB.",
+        "Apoio à movimentação em vias fluviais planejadas."
+      ],
+      "sistemas": [
+        "As atividades são militares, não de salvamento civil geral."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "CBM-GBS": {
+      "papel": "Grupamento de Busca e Salvamento dos Bombeiros.",
+      "atividades": [
+        "Atendimentos de busca e salvamento civil nos cenários do jogo.",
+        "Operações de resgate e assistência a vítimas."
+      ],
+      "sistemas": [
+        "Não confundir com o resgate militar da Aeronáutica ou com o Batalhão de Saúde do Exército."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "CBM-GSFMA": {
+      "papel": "Unidade do Corpo de Bombeiros ligada a atividades florestais e de meio ambiente no projeto.",
+      "atividades": [
+        "Resposta a incêndios em vegetação nos mapas da FAAAB.",
+        "Missões de prevenção e controle de riscos ambientais fictícios."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "CBM-GOPP": {
+      "papel": "Unidade operacional dos Bombeiros registrada no catálogo.",
+      "atividades": [
+        "Ocorrências especializadas do Corpo de Bombeiros dentro do roleplay.",
+        "Treinamentos e funções conforme a organização documentada."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "CBM-GOA": {
+      "papel": "Grupamento de Operações Aéreas dos Bombeiros.",
+      "atividades": [
+        "Resposta aérea em ocorrências civis do jogo.",
+        "Coordenação com o sistema de socorro e emergências da FAAAB."
+      ],
+      "sistemas": [
+        "Atuação de socorro civil separada das unidades de combate e resgate militar."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "CBM-GOESP": {
+      "papel": "Grupamento de Operações Especiais dos Bombeiros.",
+      "atividades": [
+        "Ocorrências de resgate especializado e missões dos Bombeiros no roleplay.",
+        "Treinamento em equipamentos próprios da unidade."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "PM-BOPE": {
+      "papel": "Batalhão de Operações Policiais Especiais do universo fictício da PM.",
+      "atividades": [
+        "Operações policiais especiais do roleplay dentro das regras do jogo.",
+        "Seleção e capacitação para atividades da PM."
+      ],
+      "sistemas": [
+        "Não é órgão federal nem batalhão do Exército."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "PM-ROTAM": {
+      "papel": "Unidade policial de patrulhamento tático motorizado no universo FAAAB.",
+      "atividades": [
+        "Patrulhamento e resposta policial em áreas do mapa fictício.",
+        "Uso de veículos conforme habilitação e funções policiais."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "PM-BPChoque": {
+      "papel": "Batalhão de Polícia de Choque da PM fictícia.",
+      "atividades": [
+        "Apoio a eventos e ocorrências de ordem pública do roleplay.",
+        "Treinamento para atividades próprias de choque policial."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "PM-BPP": {
+      "papel": "Unidade ficcional registrada sob a Polícia Militar dentro da FAAAB.",
+      "atividades": [
+        "Atividades da unidade conforme o cenário político e policial fictício."
+      ],
+      "sistemas": [
+        "Não reproduzir a afirmação de que a Polícia Penal real integra a PM: são instituições distintas no Brasil real."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    }
+  }
+}
