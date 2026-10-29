@@ -1612,6 +1612,496 @@
           }
         ]
       }
+    },
+    "geo-07": {
+      "porque": "Biomas dependem de clima, solo, vegetação e fauna. Um mesmo bioma contém paisagens diversas e sofre impactos de uso humano.",
+      "armadilha": "Achar que um bioma se define apenas por uma espécie ou por uma estação do ano.",
+      "verificacao": "Relacione temperatura, chuvas, vegetação e localização.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual adaptação é frequente na vegetação da Caatinga?",
+            "alternativas": [
+              "Folhas largas o ano todo.",
+              "Armazenamento de água em caules.",
+              "Árvores permanentemente submersas.",
+              "Musgos exclusivos de clima polar."
+            ],
+            "correta": 1,
+            "feedback": "O clima semiárido favorece estratégias de economia e armazenamento de água.",
+            "dica": "Pense em reduzir perdas de água."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma área de Cerrado foi convertida em monocultura extensa. Qual efeito ecológico é esperado sem medidas de conservação?",
+            "alternativas": [
+              "Aumento automático da diversidade.",
+              "Desaparecimento do efeito de borda.",
+              "Redução de habitats e biodiversidade.",
+              "Formação espontânea de manguezais."
+            ],
+            "correta": 2,
+            "feedback": "A substituição de vegetação nativa por monocultura reduz diversidade de habitats e pode prejudicar espécies.",
+            "dica": "Compare um sistema diverso com outro de uma única cultura."
+          }
+        ]
+      }
+    },
+    "geo-08": {
+      "porque": "Urbanização envolve concentração populacional, infraestrutura e uso do solo; o crescimento sem planejamento pode produzir desigualdade socioespacial.",
+      "armadilha": "Considerar urbanização sempre sinônimo de melhoria de qualidade de vida.",
+      "verificacao": "Analise acesso a serviços, mobilidade, moradia e saneamento.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Que situação indica segregação socioespacial urbana?",
+            "alternativas": [
+              "Igualdade no acesso ao transporte.",
+              "Distribuição uniforme de hospitais.",
+              "Concentração de serviços em poucos bairros.",
+              "Presença de praças em várias regiões."
+            ],
+            "correta": 2,
+            "feedback": "A concentração de serviços em certos bairros cria desigualdade territorial de acesso.",
+            "dica": "Compare oportunidades entre diferentes bairros."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma cidade cresce nas bordas sem transporte público adequado. Qual consequência provável?",
+            "alternativas": [
+              "Menor dependência de deslocamentos.",
+              "Maior tempo de viagem ao trabalho.",
+              "Fim da necessidade de infraestrutura.",
+              "Redução obrigatória da população."
+            ],
+            "correta": 1,
+            "feedback": "Expansão periférica distante de empregos e serviços, sem mobilidade, tende a elevar o tempo de deslocamento.",
+            "dica": "Relacione distância, serviços e mobilidade."
+          }
+        ]
+      }
+    },
+    "geo-11": {
+      "porque": "Migração envolve deslocamentos temporários ou permanentes; fatores de expulsão e atração podem incluir renda, segurança, família e ambiente.",
+      "armadilha": "Achar que migração sempre cruza fronteiras internacionais.",
+      "verificacao": "Identifique origem, destino, duração e motivo do deslocamento.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Uma família muda do interior para a capital dentro do mesmo país. O movimento é:",
+            "alternativas": [
+              "Migração internacional.",
+              "Migração interna.",
+              "Turismo internacional.",
+              "Movimento tectônico."
+            ],
+            "correta": 1,
+            "feedback": "É migração interna porque não ocorre travessia de fronteira entre países.",
+            "dica": "A fronteira nacional foi cruzada?"
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma pessoa mora em uma cidade e viaja diariamente à cidade vizinha para trabalhar. Isso é:",
+            "alternativas": [
+              "Migração pendular.",
+              "Êxodo internacional.",
+              "Refúgio diplomático.",
+              "Migração transoceânica."
+            ],
+            "correta": 0,
+            "feedback": "O deslocamento cotidiano de ida e volta entre residência e trabalho é movimento pendular.",
+            "dica": "Pense na ida e volta diária."
+          }
+        ]
+      }
+    },
+    "his-08": {
+      "porque": "A Revolução Industrial transformou produção, energia, transporte, relações de trabalho e urbanização; os efeitos variaram no tempo e espaço.",
+      "armadilha": "Reduzir a Revolução Industrial a uma invenção isolada.",
+      "verificacao": "Relacione tecnologia, fábricas, trabalho e cidades.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual mudança está associada à primeira Revolução Industrial?",
+            "alternativas": [
+              "Aumento das fábricas movidas a vapor.",
+              "Substituição total por robôs digitais.",
+              "Fim imediato do trabalho assalariado.",
+              "Retorno dominante ao artesanato rural."
+            ],
+            "correta": 0,
+            "feedback": "O vapor foi importante na mecanização e organização fabril da primeira Revolução Industrial.",
+            "dica": "Localize o período histórico e a fonte de energia."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Por que a industrialização favoreceu o crescimento de cidades?",
+            "alternativas": [
+              "Porque fábricas atraíam trabalhadores.",
+              "Porque toda agricultura deixou de existir.",
+              "Porque as cidades perderam comércio.",
+              "Porque o transporte urbano foi abolido."
+            ],
+            "correta": 0,
+            "feedback": "Empregos fabris e atividades de suporte atraíam populações, ampliando a urbanização.",
+            "dica": "Pense na concentração de oportunidades de trabalho."
+          }
+        ]
+      }
+    },
+    "his-07": {
+      "porque": "Regimes autoritários restringem liberdades e participação; redemocratização envolve restauração de instituições e direitos por processos históricos específicos.",
+      "armadilha": "Confundir eleição isolada com ausência de restrição institucional.",
+      "verificacao": "Compare práticas de censura, direitos políticos e participação.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Durante a ditadura militar brasileira (1964–1985), qual prática limitou liberdades civis?",
+            "alternativas": [
+              "Censura à imprensa e à cultura.",
+              "Voto direto livre para todo cargo.",
+              "Liberdade irrestrita de oposição.",
+              "Independência plena de movimentos."
+            ],
+            "correta": 0,
+            "feedback": "A censura foi mecanismo de repressão e controle político. A existência de eleições limitadas não eliminou o caráter autoritário do regime.",
+            "dica": "Identifique uma restrição de expressão."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Qual marco institucional está ligado à consolidação da redemocratização brasileira?",
+            "alternativas": [
+              "Constituição de 1988.",
+              "Ato Institucional nº 5.",
+              "Golpe de 1964.",
+              "Estado Novo de 1937."
+            ],
+            "correta": 0,
+            "feedback": "A Constituição de 1988 restabeleceu e ampliou garantias democráticas no contexto da redemocratização.",
+            "dica": "Procure o marco de direitos após o fim do regime."
+          }
+        ]
+      }
+    },
+    "cie-12": {
+      "porque": "Uma hipótese científica precisa ser testável, e um experimento deve controlar variáveis para avaliar hipóteses sem confundir causas.",
+      "armadilha": "Confundir correlação com prova de causalidade.",
+      "verificacao": "Identifique variável independente, variável dependente e condições controladas.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Para testar se luz altera o crescimento de plantas, qual comparação é mais adequada?",
+            "alternativas": [
+              "Plantas de espécies e solos diferentes.",
+              "Plantas iguais com luz diferente.",
+              "Plantas de idades e água diferentes.",
+              "Plantas em cidades e climas distintos."
+            ],
+            "correta": 1,
+            "feedback": "Para isolar o efeito da luz, os grupos devem ser semelhantes e variar principalmente a exposição luminosa.",
+            "dica": "Altere somente a variável investigada."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Num experimento sobre fertilizante, o grupo sem fertilizante serve principalmente para:",
+            "alternativas": [
+              "Aumentar a dose total.",
+              "Controlar a comparação.",
+              "Eliminar medidas repetidas.",
+              "Trocar a espécie estudada."
+            ],
+            "correta": 1,
+            "feedback": "O grupo controle permite comparar o efeito observado com a condição sem tratamento.",
+            "dica": "O que aconteceria sem o fator testado?"
+          }
+        ]
+      }
+    },
+    "cie-09": {
+      "porque": "Reduzir, reutilizar e reciclar têm finalidades diferentes. A gestão de resíduos depende de coleta, separação, tratamento e destino adequado.",
+      "armadilha": "Tratar reciclagem como solução automática para qualquer resíduo.",
+      "verificacao": "Observe composição, contaminação e destino do material.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual ação reduz a geração de resíduos antes do descarte?",
+            "alternativas": [
+              "Trocar objetos reparáveis por novos.",
+              "Consertar um equipamento danificado.",
+              "Misturar recicláveis com lixo orgânico.",
+              "Enviar todos os materiais ao aterro."
+            ],
+            "correta": 1,
+            "feedback": "Reparar amplia a vida útil e evita gerar novo descarte.",
+            "dica": "Pense em impedir o resíduo antes de produzi-lo."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Por que misturar resíduos recicláveis com orgânicos dificulta a reciclagem?",
+            "alternativas": [
+              "Pode contaminar materiais separados.",
+              "Aumenta a pureza dos materiais.",
+              "Elimina a necessidade de triagem.",
+              "Transforma plástico em composto."
+            ],
+            "correta": 0,
+            "feedback": "Resíduos orgânicos podem contaminar recicláveis, exigindo tratamento e reduzindo seu aproveitamento.",
+            "dica": "Considere a qualidade da separação."
+          }
+        ]
+      }
+    },
+    "qui-04": {
+      "porque": "Mudanças químicas alteram substâncias por quebra e formação de ligações. Nem toda mudança visível é reação química.",
+      "armadilha": "Confundir fusão, dissolução e evaporação com formação de nova substância.",
+      "verificacao": "Procure evidências de novas substâncias e compare reagentes/produtos.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual situação representa transformação química?",
+            "alternativas": [
+              "Gelo derretendo.",
+              "Água evaporando.",
+              "Ferro enferrujando.",
+              "Sal se dissolvendo."
+            ],
+            "correta": 2,
+            "feedback": "A oxidação do ferro forma substâncias novas, enquanto os demais casos são alterações físicas.",
+            "dica": "Houve formação de nova substância?"
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Na reação 2H₂+O₂→2H₂O, quantos mols de água resultam de 4 mols de H₂ com O₂ suficiente?",
+            "alternativas": [
+              "2 mol",
+              "3 mol",
+              "4 mol",
+              "8 mol"
+            ],
+            "correta": 2,
+            "feedback": "A proporção H₂:H₂O é 2:2, ou seja, 1:1. Quatro mols de H₂ produzem quatro de água.",
+            "dica": "Leia os coeficientes antes de calcular."
+          }
+        ]
+      }
+    },
+    "qui-05": {
+      "porque": "O pH se relaciona à acidez em escala logarítmica. Em condições usuais aquosas, valores menores indicam maior acidez.",
+      "armadilha": "Interpretar diferença de 1 unidade de pH como mudança linear pequena.",
+      "verificacao": "Compare as concentrações relativas de H⁺ na escala logarítmica.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual solução é mais ácida, nas mesmas condições?",
+            "alternativas": [
+              "pH 3",
+              "pH 5",
+              "pH 7",
+              "pH 9"
+            ],
+            "correta": 0,
+            "feedback": "Quanto menor o pH, maior a acidez, em condições comparáveis.",
+            "dica": "Lembre que pH baixo está associado a maior concentração de H⁺."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Em soluções aquosas ideais, pH 4 comparado a pH 6 indica concentração de H⁺ aproximadamente:",
+            "alternativas": [
+              "2 vezes maior.",
+              "10 vezes maior.",
+              "100 vezes maior.",
+              "1.000 vezes maior."
+            ],
+            "correta": 2,
+            "feedback": "A diferença é de duas unidades; cada uma representa fator 10. Assim, 10²=100 vezes.",
+            "dica": "A escala de pH é logarítmica."
+          }
+        ]
+      }
+    },
+    "fis-05": {
+      "porque": "Temperatura descreve o estado térmico; calor é energia transferida devido à diferença de temperatura. Massa influencia a energia necessária ao aquecimento.",
+      "armadilha": "Usar calor e temperatura como sinônimos.",
+      "verificacao": "Identifique se o enunciado fala de transferência de energia ou medida térmica.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Dois corpos em temperaturas diferentes são postos em contato. Em geral, o calor flui:",
+            "alternativas": [
+              "Do mais frio para o mais quente.",
+              "Do mais quente para o mais frio.",
+              "Somente quando as massas são iguais.",
+              "Sem depender da diferença térmica."
+            ],
+            "correta": 1,
+            "feedback": "A transferência espontânea de calor ocorre do corpo mais quente ao mais frio até equilíbrio térmico.",
+            "dica": "Pense na direção da troca espontânea."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma massa de água de 200 g recebe 4.200 J. Com c=4,2 J/(g·°C), qual o aumento de temperatura?",
+            "alternativas": [
+              "2 °C",
+              "3 °C",
+              "5 °C",
+              "10 °C"
+            ],
+            "correta": 2,
+            "feedback": "ΔT=Q/(mc)=4200/(200×4,2)=5 °C.",
+            "dica": "Use Q=m×c×ΔT."
+          }
+        ]
+      }
+    },
+    "ing-03": {
+      "porque": "No present simple, he/she/it costuma exigir -s no verbo afirmativo, mas depois de does o verbo fica na forma base.",
+      "armadilha": "Colocar -s no verbo depois de does.",
+      "verificacao": "Compare sujeito, auxiliar e verbo principal.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Choose the correct sentence.",
+            "alternativas": [
+              "She work every morning.",
+              "She works every morning.",
+              "She working every morning.",
+              "She does works every morning."
+            ],
+            "correta": 1,
+            "feedback": "Third-person singular affirmative uses works. With 'does', use the base verb: 'does work'.",
+            "dica": "Observe a terceira pessoa do singular."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Complete: 'He ___ not play on Sundays.'",
+            "alternativas": [
+              "do",
+              "does",
+              "is",
+              "are"
+            ],
+            "correta": 1,
+            "feedback": "Negative present simple uses 'does not' with he, she, it.",
+            "dica": "O sujeito 'he' pede qual auxiliar?"
+          }
+        ]
+      }
+    },
+    "ing-04": {
+      "porque": "Leitura em língua estrangeira exige encontrar pistas no texto, distinguir causa, contraste e informações explícitas.",
+      "armadilha": "Tentar traduzir cada palavra sem considerar o contexto.",
+      "verificacao": "Localize expressões de tempo, causa e contraste.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Read: 'The gate closed at six, but the team arrived at seven.' What happened?",
+            "alternativas": [
+              "The team arrived before closing.",
+              "The team arrived after closing.",
+              "The gate closed at seven.",
+              "The team arrived at five."
+            ],
+            "correta": 1,
+            "feedback": "'But' marks contrast; seven is after the closing time of six.",
+            "dica": "Compare six e seven."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Read: 'Although the road was wet, the training continued.' Which idea is expressed?",
+            "alternativas": [
+              "The training stopped due to rain.",
+              "The road was dry during training.",
+              "The training continued despite conditions.",
+              "The road was closed to all vehicles."
+            ],
+            "correta": 2,
+            "feedback": "'Although' introduces concession: training continued even though the road was wet.",
+            "dica": "'Although' sinaliza contraste entre dificuldade e resultado."
+          }
+        ]
+      }
+    },
+    "ing-07": {
+      "porque": "Conectivos em inglês articulam causa, contraste, adição e consequência, como because, although, however e therefore.",
+      "armadilha": "Trocar although por because, mudando oposição em causa.",
+      "verificacao": "Teste se a frase quer explicar causa ou opor ideias.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Complete: 'The team stayed indoors ___ it was raining.'",
+            "alternativas": [
+              "although",
+              "because",
+              "however",
+              "therefore"
+            ],
+            "correta": 1,
+            "feedback": "'Because' expresses cause: they stayed indoors because of the rain.",
+            "dica": "A chuva explica a decisão."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Complete: 'The route was difficult; ___, the team completed it.'",
+            "alternativas": [
+              "therefore",
+              "because",
+              "however",
+              "since"
+            ],
+            "correta": 2,
+            "feedback": "'However' introduces contrast between difficulty and completion.",
+            "dica": "O resultado contraria a dificuldade inicial."
+          }
+        ]
+      }
+    },
+    "log-01": {
+      "porque": "Uma proposição pode ser verdadeira ou falsa. Sua verdade não depende de concordarmos com ela; perguntas e ordens não são proposições.",
+      "armadilha": "Confundir valor lógico com opinião pessoal.",
+      "verificacao": "Tente classificar a frase como verdadeira ou falsa.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual frase constitui uma proposição lógica?",
+            "alternativas": [
+              "Abra a porta agora.",
+              "Você estudou ontem?",
+              "O número 5 é primo.",
+              "Que horas são?"
+            ],
+            "correta": 2,
+            "feedback": "'O número 5 é primo' é uma afirmação que admite valor lógico. Perguntas e ordens não têm valor de verdade nesse uso.",
+            "dica": "Uma proposição deve afirmar algo."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Considere P: '8 é par' e Q: '8 é maior que 10'. Qual é o valor de P E Q?",
+            "alternativas": [
+              "Verdadeiro",
+              "Falso",
+              "Indeterminado",
+              "Não é proposição"
+            ],
+            "correta": 1,
+            "feedback": "P é verdadeira, Q é falsa. Uma conjunção 'E' só é verdadeira quando ambas são verdadeiras.",
+            "dica": "Em 'E', basta uma falsa para tornar a conjunção falsa."
+          }
+        ]
+      }
     }
   }
 }
