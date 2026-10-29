@@ -201,10 +201,14 @@ const V3={
       (perfil?.observacoes?.length?'<h3>Regras e distinções</h3><ul class="v3-profile-bullets">'+perfil.observacoes.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+
       '<p class="v3-profile-source">Estas são decisões e concepções do roleplay FAAAB; sua descrição não afirma que os recursos já foram instalados no Roblox Studio.</p></div>';
   }else if(sec==="estrutura"){
-   content='<div class="v3-doc"><h3>Organização interna</h3><p><b>Seção do catálogo:</b> '+V3.esc(e.secao||"A definir")+'</p><p><b>Grupo Roblox independente:</b> '+(e.grupoSeparado===true?"Documentado como separado":e.grupoSeparado===false?"Documentado como estrutura interna":"Ainda não confirmado")+'</p><p>Subunidades e vínculos documentados aparecem abaixo. As demais relações permanecem pendentes.</p></div>';
-   if(unit?.subunidades?.length)content+='<h3>Subunidades recuperadas</h3>'+unit.subunidades.map(x=>'<p><strong>['+V3.esc(x.sigla)+'] '+V3.esc(x.nome||"Nome pendente")+'</strong></p>').join("");
-   if(unit?.observacoes)content+='<p>'+V3.esc(unit.observacoes)+'</p>';
-   if(parentUnits.length)content+='<p><b>Unidade vinculada:</b> '+V3.esc(parentUnits.map(x=>x.nome).join(", "))+'</p>';
+   const subs=unit?.subunidades||[];
+   const linked=parentUnits.map(x=>'<a href="'+V3.url(x)+'">'+V3.esc(x.nome)+'</a>').join(", ");
+   content='<div class="v3-doc"><h3>Localização na estrutura</h3><p>'+V3.esc(e.nome)+' pertence à '+V3.esc(V3.forces[e.forca]?.name||e.forca)+' e está classificado como '+V3.esc(V3.types[e.tipo]||e.tipo)+'.</p>'+
+     (e.tipo==="brigada"?'<p>Na FAAAB, as brigadas organizam o ingresso e a formação das unidades. Integram a estrutura interna do Exército, e não são grupos Roblox independentes nem possuem fardas próprias.</p>':"")+
+     (linked?'<h3>Unidade principal</h3><p>'+linked+'</p>':"")+
+     (subs.length?'<h3>Subdivisões confirmadas</h3><div class="v3-profile-subunits">'+subs.map(x=>'<article><strong>['+V3.esc(x.sigla)+'] '+V3.esc(x.nome||"Nome completo não registrado")+'</strong>'+(x.catalogoId?'<p><a href="ficha.html?id='+encodeURIComponent(x.catalogoId)+'">Consultar equipe</a></p>':"")+'</article>').join("")+'</div>':"")+
+     (unit?.hierarquiaInterna?.nota?'<h3>Organização dos cargos</h3><p>'+V3.esc(unit.hierarquiaInterna.nota)+'</p>':"")+
+     (e.grupoSeparado===false?'<p class="v3-profile-source">Esta é uma estrutura interna, não um grupo Roblox separado.</p>':"")+'</div>';
   }else if(sec==="cargos"){
    if(unit?.hierarquiaInterna?.modelo==="batalhao"){
     const ranks=unit.hierarquiaInterna.patentes||[];
