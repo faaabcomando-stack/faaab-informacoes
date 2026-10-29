@@ -187,11 +187,19 @@ const V3={
   document.title=e.nome+" · "+sections[sec]+" | FAAAB";
   V3.set("v3-crumb-force",'<a href="'+(V3.forces[e.forca]?.url||"instituicoes.html")+'">'+V3.esc(V3.forces[e.forca]?.name||"FAAAB")+'</a>');
   V3.set("v3-crumb-name",V3.esc(e.nome));
-  V3.set("v3-profile-header",'<span class="v3-label">'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' / '+V3.esc(V3.types[e.tipo]||e.tipo)+'</span><h1>'+V3.esc(e.nome)+'</h1><p>'+V3.esc(e.noJogo||"Organização incluída na documentação da FAAAB; detalhes de implantação a confirmar.")+'</p><span class="v3-state">'+V3.esc(e.estadoImplementacao||"Situação ainda não confirmada")+'</span>');
+  V3.set("v3-profile-header",'<span class="v3-label">'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' / '+V3.esc(V3.types[e.tipo]||e.tipo)+'</span><h1>'+V3.esc(e.nome)+'</h1><p>'+V3.esc(perfil?.papel||((e.noJogo&&!/prevista no catálogo aprovado|instituição de ensino prevista|subunidade interna de organização|brigada interna da FAAAB|estrutura do universo FAAAB/i.test(e.noJogo))?e.noJogo:"Organização registrada no catálogo da FAAAB, vinculada à "+(V3.forces[e.forca]?.name||e.forca)+"."))+'</p>'+(e.estadoImplementacao&&e.estadoImplementacao!=="Não confirmado"?'<span class="v3-state">'+V3.esc(e.estadoImplementacao)+'</span>':""));
   V3.set("v3-profile-nav",Object.entries(sections).map(([key,val])=>'<a href="ficha.html?id='+encodeURIComponent(id)+'&secao='+key+'"'+(sec===key?' aria-current="page"':'')+'>'+val+'</a>').join(""));
   let content="";
   if(sec==="sobre"){
-   content='<div class="v3-doc"><h3>Identidade da organização</h3><p><b>Sigla:</b> '+V3.esc(e.sigla||"Não definida")+'</p><p><b>Categoria:</b> '+V3.esc(V3.types[e.tipo]||e.tipo)+'</p><p><b>Força:</b> '+V3.esc(V3.forces[e.forca]?.name||e.forca)+'</p><h3>No universo FAAAB</h3><p>'+V3.esc(e.noJogo||"Ainda não documentado")+'</p><h3>Referência externa</h3><p>'+V3.esc(e.vidaReal||"Nenhuma referência documentada")+'</p><h3>Critérios de ingresso documentados</h3><p>'+V3.esc(e.requisitos||"A definir")+'</p></div>'+V3.note("A presença no catálogo não confirma que esta organização ou seus sistemas já estejam disponíveis no mapa do Roblox.");
+   const activities=perfil?.atividades||[];
+   const real=e.vidaReal&&!/Instituição ou estrutura de coordenação|Organização|Exige examinar|Uma comparação com/i.test(e.vidaReal)?e.vidaReal:"";
+   const noGame=e.noJogo&&!/prevista no catálogo aprovado|instituição de ensino prevista|subunidade interna de organização|brigada interna da FAAAB|estrutura do universo FAAAB/i.test(e.noJogo)?e.noJogo:"";
+   content='<div class="v3-doc"><h3>O papel desta organização</h3><p>'+V3.esc(perfil?.papel||noGame||e.nome+" integra o catálogo institucional da FAAAB.")+'</p>'+
+      (activities.length?'<h3>Atividades e responsabilidades</h3><ul class="v3-profile-bullets">'+activities.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+
+      (!perfil&&noGame?'<h3>No universo do jogo</h3><p>'+V3.esc(noGame)+'</p>':"")+
+      (real?'<h3>Referência de função</h3><p>'+V3.esc(real)+'</p>':"")+
+      (perfil?.observacoes?.length?'<h3>Regras e distinções</h3><ul class="v3-profile-bullets">'+perfil.observacoes.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+
+      '<p class="v3-profile-source">Estas são decisões e concepções do roleplay FAAAB; sua descrição não afirma que os recursos já foram instalados no Roblox Studio.</p></div>';
   }else if(sec==="estrutura"){
    content='<div class="v3-doc"><h3>Organização interna</h3><p><b>Seção do catálogo:</b> '+V3.esc(e.secao||"A definir")+'</p><p><b>Grupo Roblox independente:</b> '+(e.grupoSeparado===true?"Documentado como separado":e.grupoSeparado===false?"Documentado como estrutura interna":"Ainda não confirmado")+'</p><p>Subunidades e vínculos documentados aparecem abaixo. As demais relações permanecem pendentes.</p></div>';
    if(unit?.subunidades?.length)content+='<h3>Subunidades recuperadas</h3>'+unit.subunidades.map(x=>'<p><strong>['+V3.esc(x.sigla)+'] '+V3.esc(x.nome||"Nome pendente")+'</strong></p>').join("");
