@@ -18,15 +18,15 @@
       "resolucao": "O texto não afirma a intenção de Ana, mas a sequência sugere que ela queria impedir que a roupa molhasse.",
       "questoes": [
         {
-          "pergunta": "Por que Ana provavelmente recolheu a roupa?",
+          "pergunta": "Joana viu nuvens escuras e retirou a roupa do varal. Qual motivo o texto sugere?",
           "alternativas": [
-            "Queria impedir que molhasse",
-            "Perdeu o varal",
-            "Ia vender a roupa",
-            "Não havia chuva"
+            "Ela esperava que chovesse.",
+            "Ela queria lavar tudo novamente.",
+            "Ela precisava vender as roupas.",
+            "Ela iria mudar de residência."
           ],
           "correta": 0,
-          "feedback": "A chuva justifica a retirada. Essa conclusão é apoiada pelo contexto."
+          "feedback": "O texto associa nuvens escuras e retirada de roupas, sugerindo preocupação com chuva. As outras hipóteses não têm apoio textual."
         }
       ],
       "nivel": "fundamentos"
@@ -102,15 +102,15 @@
       "resolucao": "Aluno e lição são substantivos. Dedicado é adjetivo que caracteriza aluno.",
       "questoes": [
         {
-          "pergunta": "Na expressão casa antiga, qual é o adjetivo?",
+          "pergunta": "Em 'casa antiga', qual palavra funciona como adjetivo?",
           "alternativas": [
             "Casa",
             "Antiga",
-            "Expressão",
-            "Nenhum"
+            "Casar",
+            "Antiguidade"
           ],
           "correta": 1,
-          "feedback": "Antiga é uma característica atribuída à casa."
+          "feedback": "Antiga caracteriza o substantivo casa. As demais palavras não cumprem essa função na expressão."
         }
       ],
       "nivel": "fundamentos"
@@ -384,15 +384,15 @@
       "resolucao": "Uma tese possível é valorizar educação ambiental e manutenção das redes, acompanhada de razões verificáveis.",
       "questoes": [
         {
-          "pergunta": "Qual atitude fortalece uma redação?",
+          "pergunta": "Qual atitude fortalece uma redação argumentativa?",
           "alternativas": [
-            "Ignorar o tema",
-            "Repetir frases sem sentido",
-            "Usar argumentos relacionados ao tema",
-            "Copiar outro texto"
+            "Relacionar argumentos à tese.",
+            "Repetir opinião sem justificá-la.",
+            "Trocar de tema em cada parágrafo.",
+            "Copiar afirmações sem analisá-las."
           ],
-          "correta": 2,
-          "feedback": "É preciso coerência entre tese, justificativas e conclusão."
+          "correta": 0,
+          "feedback": "Os argumentos devem sustentar a tese com razões e exemplos relevantes. Repetição ou fuga do tema não reforçam a defesa."
         }
       ],
       "nivel": "fundamentos"
@@ -523,15 +523,15 @@
       "resolucao": "Hoje é tempo atmosférico. Verões geralmente quentes é característica do clima.",
       "questoes": [
         {
-          "pergunta": "Qual frase descreve clima?",
+          "pergunta": "Qual frase descreve um padrão climático?",
           "alternativas": [
-            "Agora venta",
-            "Choveu ontem",
-            "Os verões costumam ser úmidos",
-            "A manhã está fria"
+            "Os verões da região são secos.",
+            "Choveu muito na terça-feira.",
+            "Amanheceu frio nesta cidade.",
+            "Houve vento na última noite."
           ],
-          "correta": 2,
-          "feedback": "Clima fala de padrões de muitos anos."
+          "correta": 0,
+          "feedback": "O clima se refere a padrões de longo prazo, como verões regularmente secos; os outros exemplos tratam de eventos de curta duração."
         }
       ],
       "nivel": "fundamentos"
@@ -663,15 +663,15 @@
       "resolucao": "Isso demonstra uma cadeia produtiva conectada internacionalmente.",
       "questoes": [
         {
-          "pergunta": "Qual exemplo indica globalização?",
+          "pergunta": "Qual situação exemplifica a globalização?",
           "alternativas": [
-            "Comércio e comunicação internacionais",
-            "Isolamento total",
-            "Ausência de transporte",
-            "Fim da internet"
+            "Produção distribuída entre vários países.",
+            "Produção restrita a uma única cidade.",
+            "Comércio exclusivo dentro da região.",
+            "Interrupção de redes de comunicação."
           ],
           "correta": 0,
-          "feedback": "As conexões ultrapassam fronteiras nacionais."
+          "feedback": "A distribuição da produção entre diferentes países caracteriza integração econômica internacional, um aspecto da globalização."
         }
       ],
       "nivel": "fundamentos"
@@ -719,15 +719,15 @@
       "resolucao": "É uma migração interna com motivação econômica.",
       "questoes": [
         {
-          "pergunta": "Deslocamento entre estados do mesmo país é migração:",
+          "pergunta": "O deslocamento de pessoas entre estados do mesmo país é migração:",
           "alternativas": [
             "Interna",
-            "Interplanetária",
-            "Sempre internacional",
-            "Nenhuma"
+            "Externa",
+            "Transoceânica",
+            "Intercontinental"
           ],
           "correta": 0,
-          "feedback": "A pessoa não cruzou fronteira nacional."
+          "feedback": "É migração interna porque as pessoas mudam de lugar sem atravessar fronteiras nacionais."
         }
       ],
       "nivel": "fundamentos"
@@ -775,15 +775,15 @@
       "resolucao": "A notícia informa sobre o evento e a perspectiva editorial do período.",
       "questoes": [
         {
-          "pergunta": "Qual é fonte histórica?",
+          "pergunta": "Qual documento é fonte histórica primária sobre um acontecimento?",
           "alternativas": [
-            "Uma carta antiga",
-            "Somente livros atuais",
-            "Apenas mapas novos",
-            "Nenhum objeto"
+            "Uma carta escrita durante os fatos.",
+            "Uma análise feita décadas depois.",
+            "Um resumo escolar do período.",
+            "Uma resenha recente de um livro."
           ],
           "correta": 0,
-          "feedback": "Cartas são vestígios de sociedades passadas."
+          "feedback": "Uma carta produzida durante os acontecimentos é registro contemporâneo aos fatos estudados; as outras são interpretações posteriores."
         }
       ],
       "nivel": "fundamentos"

@@ -675,16 +675,16 @@
       "questoesPorNivel": {
         "intermediario": [
           {
-            "pergunta": "Qual frase contém uma tese defendida por uma justificativa?",
+            "pergunta": "Qual frase apresenta uma tese acompanhada de justificativa?",
             "alternativas": [
-              "A biblioteca é importante.",
-              "É necessário ampliar a biblioteca, pois a demanda cresceu.",
-              "A biblioteca tem mesas.",
-              "Muitos alunos usam livros."
+              "A biblioteca deveria abrir por mais tempo, pois há demanda.",
+              "A biblioteca possui mesas para leitura e pesquisa.",
+              "A biblioteca fica ao lado do pátio da escola.",
+              "A biblioteca recebeu novos livros neste mês."
             ],
-            "correta": 1,
-            "feedback": "A frase apresenta proposta ('ampliar') e razão ('demanda cresceu'). As demais são afirmações isoladas.",
-            "dica": "Procure a palavra que introduz uma razão."
+            "correta": 0,
+            "feedback": "A primeira frase defende uma mudança (ampliar o horário) e apresenta uma razão (há demanda). As demais apenas descrevem fatos, sem defender uma posição.",
+            "dica": "Tese expressa uma posição; justificativa explica por quê."
           }
         ],
         "avancado": [

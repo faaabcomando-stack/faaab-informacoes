@@ -17,15 +17,15 @@
       "resolucao": "Ela apresenta organização celular procariótica, sem núcleo delimitado por membrana.",
       "questoes": [
         {
-          "pergunta": "Qual estrutura regula a entrada e saída de substâncias na célula?",
+          "pergunta": "Que estrutura celular controla seletivamente a entrada e a saída de substâncias?",
           "alternativas": [
             "Membrana plasmática",
-            "Osso",
-            "Pulmão",
-            "Raiz"
+            "Parede celular",
+            "Complexo golgiense",
+            "Material genético"
           ],
           "correta": 0,
-          "feedback": "A membrana plasmática participa do controle das trocas."
+          "feedback": "A membrana plasmática funciona como barreira seletiva. Parede celular oferece proteção e suporte; Golgi processa e distribui substâncias."
         }
       ],
       "nivel": "fundamentos"
@@ -73,15 +73,15 @@
       "resolucao": "O intestino delgado absorve grande parte dos nutrientes.",
       "questoes": [
         {
-          "pergunta": "Onde ocorre grande parte da absorção de nutrientes?",
+          "pergunta": "Onde acontece a maior parte da absorção de nutrientes no sistema digestório?",
           "alternativas": [
             "Intestino delgado",
-            "Traqueia",
-            "Pulmões",
-            "Bexiga"
+            "Intestino grosso",
+            "Estômago",
+            "Esôfago"
           ],
           "correta": 0,
-          "feedback": "O intestino delgado contém estruturas adaptadas à absorção."
+          "feedback": "A superfície com vilosidades do intestino delgado é especializada em absorção de nutrientes. O intestino grosso absorve principalmente água e sais."
         }
       ],
       "nivel": "fundamentos"
@@ -185,15 +185,15 @@
       "resolucao": "Capim é produtor, gafanhoto é consumidor primário e sapo consumidor secundário nessa cadeia.",
       "questoes": [
         {
-          "pergunta": "Na cadeia capim → coelho → raposa, quem é produtor?",
+          "pergunta": "Na cadeia 'capim → coelho → raposa', qual é o produtor?",
           "alternativas": [
-            "Raposa",
-            "Coelho",
             "Capim",
-            "Nenhum"
+            "Coelho",
+            "Raposa",
+            "Predador"
           ],
-          "correta": 2,
-          "feedback": "O capim produz sua própria matéria orgânica por fotossíntese."
+          "correta": 0,
+          "feedback": "O capim é organismo autotrófico produtor, pois produz matéria orgânica por fotossíntese; coelho e raposa dependem de outros seres para alimentar-se."
         }
       ],
       "nivel": "fundamentos"

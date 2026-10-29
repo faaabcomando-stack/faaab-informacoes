@@ -130,13 +130,13 @@
           "assunto": "tese",
           "enunciado": "Qual proposta constitui uma tese argumentativa para um texto sobre uso responsável da água?",
           "alternativas": [
-            "Água.",
-            "A água é importante porque sustenta a saúde e a economia, exigindo gestão responsável.",
-            "Existem rios.",
-            "Que horas são?"
+            "É necessário reduzir desperdícios com educação e boa gestão.",
+            "A água dos reservatórios abastece várias cidades brasileiras.",
+            "A demanda por água varia em diferentes épocas do ano.",
+            "O tratamento da água envolve diversas etapas técnicas."
           ],
-          "correta": 1,
-          "explicacao": "Uma tese é afirmação defendível e delimitada, passível de sustentação por argumentos.",
+          "correta": 0,
+          "explicacao": "Uma tese argumentativa expressa uma posição defendível: reduzir desperdícios por ações de educação e gestão. As outras frases são descrições informativas.",
           "dificuldade": "intermediario",
           "origem": "autoral",
           "oficial": false
@@ -218,15 +218,15 @@
           "id": "esa-q05",
           "materia": "Geografia",
           "assunto": "coordenadas",
-          "enunciado": "Na cartografia, um ponto localizado a 15°S e 45°O está:",
+          "enunciado": "Na cartografia, um ponto situado a 15°S e 45°O está localizado:",
           "alternativas": [
-            "ao norte do Equador e a leste de Greenwich",
-            "ao sul do Equador e a oeste de Greenwich",
-            "no Polo Norte",
-            "ao sul e a leste"
+            "Ao norte do Equador e a oeste de Greenwich.",
+            "Ao sul do Equador e a oeste de Greenwich.",
+            "Ao norte do Equador e a leste de Greenwich.",
+            "Ao sul do Equador e a leste de Greenwich."
           ],
           "correta": 1,
-          "explicacao": "S indica latitude sul; O indica longitude oeste.",
+          "explicacao": "Latitude 15°S significa sul do Equador; longitude 45°O significa oeste de Greenwich.",
           "dificuldade": "intermediario",
           "origem": "autoral",
           "oficial": false
@@ -235,15 +235,15 @@
           "id": "esa-q06",
           "materia": "Inglês",
           "assunto": "compreensão",
-          "enunciado": "Choose the best meaning of 'The students arrived early because the exam started at eight.'",
+          "enunciado": "Choose the best translation: 'The students arrived early because the exam started at eight.'",
           "alternativas": [
-            "A prova foi cancelada.",
+            "Os alunos chegaram tarde porque a prova foi às oito.",
             "Os alunos chegaram cedo porque a prova começou às oito.",
-            "Eles chegaram atrasados.",
-            "Não havia prova."
+            "Os alunos saíram cedo quando a prova terminou às oito.",
+            "Os alunos chegaram cedo embora a prova fosse às nove."
           ],
           "correta": 1,
-          "explicacao": "'Arrived early' significa chegaram cedo; 'because' introduz a causa.",
+          "explicacao": "Arrived early = chegaram cedo; because = porque; started at eight = começou às oito. Confira cada segmento da oração.",
           "dificuldade": "intermediario",
           "origem": "autoral",
           "oficial": false
@@ -449,15 +449,15 @@
           "id": "epcar-q06",
           "materia": "Redação",
           "assunto": "argumentação",
-          "enunciado": "Qual organização mais ajuda a defender uma tese em um texto argumentativo?",
+          "enunciado": "Qual organização fortalece a argumentação de um texto dissertativo?",
           "alternativas": [
-            "Repetir o título três vezes",
-            "Apresentar argumento, justificativa e exemplo",
-            "Acumular palavras sem relação",
-            "Escrever frases aleatórias"
+            "Repetir a tese sem dar razões nem exemplos.",
+            "Mudar de assunto para demonstrar diversidade.",
+            "Apresentar tese, razões e evidências relacionadas.",
+            "Listar informações sem explicar seu significado."
           ],
-          "correta": 1,
-          "explicacao": "Argumentos precisam de razões e desenvolvimento relacionado ao tema.",
+          "correta": 2,
+          "explicacao": "Uma argumentação coerente apresenta uma ideia defendida e razões ou evidências diretamente relacionadas a ela.",
           "dificuldade": "intermediario",
           "origem": "autoral",
           "oficial": false
@@ -539,15 +539,15 @@
           "id": "eear-q05",
           "materia": "Português",
           "assunto": "acentuação",
-          "enunciado": "Qual palavra deve receber acento por ser proparoxítona?",
+          "enunciado": "Qual das palavras é proparoxítona?",
           "alternativas": [
-            "papel",
-            "medico (profissional de saúde)",
-            "cafe",
-            "amor"
+            "médico",
+            "remédio",
+            "caderno",
+            "café"
           ],
-          "correta": 1,
-          "explicacao": "A palavra 'médico' tem sílaba tônica antepenúltima: MÉ-di-co.",
+          "correta": 0,
+          "explicacao": "MÉ-di-co possui tonicidade na antepenúltima sílaba, portanto é proparoxítona. Re-MÉ-dio e ca-DER-no são paroxítonas; ca-FÉ é oxítona.",
           "dificuldade": "intermediario",
           "origem": "autoral",
           "oficial": false
@@ -663,15 +663,15 @@
           "id": "escola-naval-q06",
           "materia": "Redação",
           "assunto": "planejamento",
-          "enunciado": "Qual ação evita fuga ao tema em uma redação?",
+          "enunciado": "Qual ação ajuda a manter o texto dissertativo dentro do tema proposto?",
           "alternativas": [
-            "Usar exemplos sem ligação",
-            "Planejar tese e argumentos ligados ao comando da proposta",
-            "Copiar um texto pronto",
-            "Mudar de assunto na conclusão"
+            "Relacionar tese e argumentos ao tema solicitado.",
+            "Acumular exemplos sem ligação com a questão.",
+            "Mudar de assunto para variar o vocabulário.",
+            "Copiar o enunciado como se fosse argumento."
           ],
-          "correta": 1,
-          "explicacao": "Ler o tema e manter argumento e conclusão coerentes reduz fuga temática.",
+          "correta": 0,
+          "explicacao": "O planejamento de tese e argumentos ligados à proposta evita a fuga ao tema. Os demais procedimentos não garantem pertinência.",
           "dificuldade": "intermediario",
           "origem": "autoral",
           "oficial": false
@@ -787,15 +787,15 @@
           "id": "colegio-naval-q07",
           "materia": "Redação",
           "assunto": "argumentação",
-          "enunciado": "Qual característica é indispensável em um parágrafo argumentativo?",
+          "enunciado": "Qual característica constitui um parágrafo argumentativo consistente?",
           "alternativas": [
-            "Apenas palavras difíceis",
-            "Ideia ligada à tese e sustentada por justificativa",
-            "Muitos tópicos diferentes",
-            "Ausência de conexão"
+            "Uma opinião repetida sem apresentar razões.",
+            "Uma ideia defendida por justificativas pertinentes.",
+            "Uma lista de fatos sem identificar ideia central.",
+            "Uma enumeração de palavras e citações difíceis."
           ],
           "correta": 1,
-          "explicacao": "Desenvolva uma ideia com justificativas pertinentes.",
+          "explicacao": "O parágrafo argumentativo sustenta uma ideia por meio de justificativas e evidências relevantes.",
           "dificuldade": "intermediario",
           "origem": "autoral",
           "oficial": false
@@ -984,15 +984,15 @@
           "id": "ciam-pa-q05",
           "materia": "Português",
           "assunto": "concordância",
-          "enunciado": "Assinale a forma adequada de concordância:",
+          "enunciado": "Assinale a frase com concordância verbal adequada.",
           "alternativas": [
-            "Os candidato chegaram.",
+            "Os candidatos chegou à base.",
             "As instruções foram claras.",
-            "A equipe seguiram.",
-            "Nós estuda."
+            "A equipe seguiram as regras.",
+            "Nós estuda com regularidade."
           ],
           "correta": 1,
-          "explicacao": "O sujeito plural 'as instruções' concorda com 'foram'.",
+          "explicacao": "O sujeito plural 'as instruções' concorda com 'foram'. Os demais verbos não concordam em número e pessoa com seus respectivos sujeitos.",
           "dificuldade": "intermediario",
           "origem": "autoral",
           "oficial": false
