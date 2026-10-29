@@ -550,20 +550,8 @@
       "nome": "Grupo de Artilharia de Campanha",
       "sigla": "GAC",
       "hierarquiaInterna": {
-        "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
-        ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "modelo": "grupo",
+        "nota": "GAC é um grupo de artilharia, não um batalhão. Suas funções internas específicas devem ser preservadas como pendentes, sem copiar automaticamente o quadro dos batalhões."
       },
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
