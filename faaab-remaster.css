@@ -262,3 +262,28 @@ body.faaab-v3 .v3-footer{display:block}
 @media(max-width:690px){.v3-gov-proposal-list{grid-template-columns:1fr}.v3-gov-proposal-list h3{font-size:20px}}
 
 .v3-organization-filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:20px 0}.v3-organization-filters input,.v3-organization-filters select{display:block;width:100%;min-height:44px;margin-top:6px}.v3-organization-filters label{font-size:12px;font-weight:bold}@media(max-width:700px){.v3-organization-filters{grid-template-columns:1fr}}
+
+/* Fichas preenchidas — conteúdo específico, leitura e navegação compacta */
+.v3-profile-bullets{padding:0;margin:12px 0 24px;list-style:none}
+.v3-profile-bullets li{position:relative;border-bottom:1px solid #d9e1d7;padding:11px 9px 11px 22px;font-size:14px;line-height:1.7}
+.v3-profile-bullets li::before{content:"";position:absolute;left:2px;top:21px;width:7px;height:7px;border-radius:50%;background:#66836e}
+.v3-profile-subunits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0 24px}
+.v3-profile-subunits article{padding:16px 18px;border:1px solid #d1dbce;background:#f6f8f2;min-width:0}
+.v3-profile-subunits strong{font-size:14px;color:#254b36}
+.v3-profile-subunits p{margin:8px 0 0;font-size:12px}
+.v3-profile-source{font-size:12px!important;color:#69796b;border-top:1px solid #d8e0d6;padding-top:13px;margin-top:22px}
+.v3-course-detail{border:1px solid #d1d9ce;background:#f9faf6;margin:10px 0}
+.v3-course-detail summary{cursor:pointer;padding:14px 18px;font-size:15px;font-weight:700;color:#244a34;list-style-position:inside}
+.v3-course-detail[open] summary{border-bottom:1px solid #d1d9ce}
+.v3-course-body{padding:17px 20px}
+.v3-course-body p{line-height:1.85!important;white-space:normal!important;word-wrap:break-word}
+.v3-unit-rank-list{padding-left:30px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 25px}
+.v3-unit-rank-list li{border-bottom:1px solid #e1e7dd;padding:9px 8px 9px 4px;font-size:14px}
+.v3-profile-grid article,.v3-profile-grid aside{min-width:0}
+.v3-profile-nav a:focus-visible,.v3-course-detail summary:focus-visible{outline:2px solid #b69a65;outline-offset:2px}
+@media(max-width:760px){
+ .v3-profile-subunits,.v3-unit-rank-list{grid-template-columns:1fr}
+ .v3-profile-bullets li{padding-right:0}
+ .v3-course-body{padding:12px 15px}
+ .v3-doc{padding:18px 17px}
+}
