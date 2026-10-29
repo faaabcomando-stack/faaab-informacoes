@@ -36,23 +36,7 @@
     ],
     "especializacoesNota": "Progressão de qualificação, não patente militar e não ingresso automático em cargo.",
     "operacoes": "Participação em guerra requer chegar a Soldado e receber atribuição na unidade; a escolha de unidade não permite ignorar as etapas de progressão.",
-    "implantacao": "Esta página documenta a estrutura; não modifica permissões nem grupos Roblox.",
-    "modeloBatalhaoAnterior": {
-      "estado": "substituído por correção expressa do responsável",
-      "rotulos": [
-        "Praças",
-        "Graduados",
-        "Oficiais Subalternos",
-        "Oficial Intermediário",
-        "Oficiais Superiores",
-        "Alto Escalão",
-        "Subcomandante",
-        "Comandante",
-        "Alto Comando",
-        "Superintendente"
-      ],
-      "naoExibirComoPatentes": true
-    }
+    "implantacao": "Esta página documenta a estrutura; não modifica permissões nem grupos Roblox."
   },
   "mapeamentos": {
     "FTB-BFE": {
