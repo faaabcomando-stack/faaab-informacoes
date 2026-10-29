@@ -175,10 +175,11 @@ const V3={
  async record(){
   const id=new URLSearchParams(location.search).get("id");
   const s=new URLSearchParams(location.search).get("secao")||"sobre";
-  const sections={sobre:"Apresentação",estrutura:"Subunidades e vínculos",cargos:"Hierarquia interna",treinamentos:"Formação e progressão",permissoes:"Permissões"};
-  const [cat,unitData]=await Promise.all([V3.get("catalogo"),V3.get("estrutura_unidades")]);
+  const sections={sobre:"Missão e atividades",estrutura:"Estrutura e equipes",cargos:"Patentes e comando",treinamentos:"Formação e cursos",sistemas:"Sistemas do jogo"};
+  const [cat,unitData,perfis,cursos]=await Promise.all([V3.get("catalogo"),V3.get("estrutura_unidades"),V3.get("perfis_unidades"),V3.get("cursos")]);
   const e=cat.find(x=>x.id===id);
   const unit=unitData.mapeamentos?.[id]||null;
+  const perfil=perfis.perfis?.[id]||null;
   const parentUnits=Object.entries(unitData.mapeamentos||{}).filter(([_,o])=>o.subunidades?.some(y=>y.catalogoId===id)).map(([parentId])=>cat.find(x=>x.id===parentId)).filter(Boolean);
   if(!e){V3.set("v3-profile",' <h1>Organização não encontrada</h1><p>Confira o endereço ou volte à <a href="instituicoes.html">página de instituições</a>.</p>');return}
   const sec=Object.prototype.hasOwnProperty.call(sections,s)?s:"sobre";
