@@ -1,22 +1,28 @@
 {
-  "versao": "1.0",
+  "versao": "1.1",
   "revisadoEm": "2026-10-29",
-  "origem": "Manual de Patentes e Batalhões V0.9 de setembro de 2026; catálogo aprovado em 24/10/2026; decisões da FAAAB preservadas de conversas anteriores.",
+  "origem": "Manual de Patentes e Batalhões V0.9 de setembro de 2026; catálogo aprovado em 24/10/2026; decisões da FAAAB preservadas de conversas anteriores. Corrigido pelo responsável: patentes de cada batalhão vão de Soldado até Coronel, não por dez classes de Praças a Superintendente.",
   "esquema": {
-    "patenteVsFuncao": "A patente global da Força e a hierarquia interna de um batalhão são coisas distintas; não duplicar todas as patentes dentro de cada batalhão.",
+    "patenteVsFuncao": "Batalhões usam uma sequência de patentes do Exército começando em Soldado e terminando em Coronel. Funções de administração e especialização não substituem as patentes.",
     "modeloBatalhao": [
-      "Praças",
-      "Graduados",
-      "Oficiais Subalternos",
-      "Oficial Intermediário",
-      "Oficiais Superiores",
-      "Alto Escalão",
-      "Subcomandante",
-      "Comandante",
-      "Alto Comando",
-      "Superintendente"
+      "Soldado",
+      "Soldado de 1ª Classe",
+      "Cabo",
+      "Terceiro-Sargento",
+      "Segundo-Sargento",
+      "Primeiro-Sargento",
+      "Subtenente",
+      "Cadete",
+      "Aspirante a Oficial",
+      "Segundo-Tenente",
+      "Primeiro-Tenente",
+      "Capitão",
+      "Capitão-Sênior",
+      "Major",
+      "Tenente-Coronel",
+      "Coronel"
     ],
-    "topo": "Acima do Comandante da unidade estão Alto Comando e Superintendente na administração.",
+    "topo": "A patente máxima na relação de batalhões é Coronel. Atribuições administrativas adicionais não integram esta lista de patentes.",
     "centros": "Supervisor e Supervisor-Chefe reservados para Centros, não são cargos padrão de batalhões.",
     "brigadas": "O Recruta deve escolher uma brigada e um batalhão para ingresso no Exército, seguindo as etapas exigidas; brigadas não possuem farda exclusiva.",
     "especializacoes": [
@@ -30,7 +36,23 @@
     ],
     "especializacoesNota": "Progressão de qualificação, não patente militar e não ingresso automático em cargo.",
     "operacoes": "Participação em guerra requer chegar a Soldado e receber atribuição na unidade; a escolha de unidade não permite ignorar as etapas de progressão.",
-    "implantacao": "Esta página documenta a estrutura; não modifica permissões nem grupos Roblox."
+    "implantacao": "Esta página documenta a estrutura; não modifica permissões nem grupos Roblox.",
+    "modeloBatalhaoAnterior": {
+      "estado": "substituído por correção expressa do responsável",
+      "rotulos": [
+        "Praças",
+        "Graduados",
+        "Oficiais Subalternos",
+        "Oficial Intermediário",
+        "Oficiais Superiores",
+        "Alto Escalão",
+        "Subcomandante",
+        "Comandante",
+        "Alto Comando",
+        "Superintendente"
+      ],
+      "naoExibirComoPatentes": true
+    }
   },
   "mapeamentos": {
     "FTB-BFE": {
@@ -39,19 +61,28 @@
       "sigla": "BFE",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [
         {
@@ -76,19 +107,28 @@
       "sigla": "BPE",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [
         {
@@ -107,19 +147,28 @@
       "sigla": "BI Caat",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [
         {
@@ -144,19 +193,28 @@
       "sigla": "BIP",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [
         {
@@ -181,19 +239,28 @@
       "sigla": "B Prec",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
@@ -205,19 +272,28 @@
       "sigla": "BIB",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [
         {
@@ -236,19 +312,28 @@
       "sigla": "BCC",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
@@ -260,19 +345,28 @@
       "sigla": "BAC",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [
         {
@@ -291,19 +385,28 @@
       "sigla": "B Log",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
@@ -315,19 +418,28 @@
       "sigla": "BIM",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [
         {
@@ -352,19 +464,28 @@
       "sigla": "B Sau",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [
         {
@@ -395,19 +516,28 @@
       "sigla": "B Op Psi",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
@@ -419,19 +549,28 @@
       "sigla": "BI Pan",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
@@ -443,19 +582,28 @@
       "sigla": "17º B Fron",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
@@ -479,19 +627,28 @@
       "sigla": "BIL",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
@@ -503,19 +660,28 @@
       "sigla": "BIS",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
@@ -527,19 +693,28 @@
       "sigla": "BIL Mth",
       "hierarquiaInterna": {
         "modelo": "batalhao",
-        "classes": [
-          "Praças",
-          "Graduados",
-          "Oficiais Subalternos",
-          "Oficial Intermediário",
-          "Oficiais Superiores",
-          "Alto Escalão",
-          "Subcomandante",
-          "Comandante",
-          "Alto Comando",
-          "Superintendente"
+        "patentes": [
+          "Soldado",
+          "Soldado de 1ª Classe",
+          "Cabo",
+          "Terceiro-Sargento",
+          "Segundo-Sargento",
+          "Primeiro-Sargento",
+          "Subtenente",
+          "Cadete",
+          "Aspirante a Oficial",
+          "Segundo-Tenente",
+          "Primeiro-Tenente",
+          "Capitão",
+          "Capitão-Sênior",
+          "Major",
+          "Tenente-Coronel",
+          "Coronel"
         ],
-        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+        "minima": "Soldado",
+        "maxima": "Coronel",
+        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
+        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
@@ -675,7 +850,7 @@
     }
   },
   "pendencias": [
-    "Listas específicas de patentes militares por batalhão não foram fornecidas como segunda cadeia independente; não criar essa duplicação.",
+    "Patentes de batalhões corrigidas para Soldado–Coronel. Requisitos específicos, vagas, nomeações e limites de cada cargo continuam sujeitos ao regulamento de cada unidade.",
     "Algumas subunidades citadas em conversas ainda não têm nome completo ou registro individual no catálogo.",
     "Procedimentos, permissões, provas e cargos por especialização não estão detalhados em todos os batalhões."
   ]
