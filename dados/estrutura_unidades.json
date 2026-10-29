@@ -1,0 +1,694 @@
+{
+  "versao": "1.0",
+  "revisadoEm": "2026-10-29",
+  "origem": "Manual de Patentes e Batalhões V0.9 de setembro de 2026; catálogo aprovado em 24/10/2026; decisões da FAAAB preservadas de conversas anteriores.",
+  "esquema": {
+    "patenteVsFuncao": "A patente global da Força e a hierarquia interna de um batalhão são coisas distintas; não duplicar todas as patentes dentro de cada batalhão.",
+    "modeloBatalhao": [
+      "Praças",
+      "Graduados",
+      "Oficiais Subalternos",
+      "Oficial Intermediário",
+      "Oficiais Superiores",
+      "Alto Escalão",
+      "Subcomandante",
+      "Comandante",
+      "Alto Comando",
+      "Superintendente"
+    ],
+    "topo": "Acima do Comandante da unidade estão Alto Comando e Superintendente na administração.",
+    "centros": "Supervisor e Supervisor-Chefe reservados para Centros, não são cargos padrão de batalhões.",
+    "brigadas": "O Recruta deve escolher uma brigada e um batalhão para ingresso no Exército, seguindo as etapas exigidas; brigadas não possuem farda exclusiva.",
+    "especializacoes": [
+      "Iniciante",
+      "Intermediário",
+      "Experiente",
+      "Especialista",
+      "Instrutor",
+      "Instrutor-Chefe",
+      "Chefe da Especialização"
+    ],
+    "especializacoesNota": "Progressão de qualificação, não patente militar e não ingresso automático em cargo.",
+    "operacoes": "Participação em guerra requer chegar a Soldado e receber atribuição na unidade; a escolha de unidade não permite ignorar as etapas de progressão.",
+    "implantacao": "Esta página documenta a estrutura; não modifica permissões nem grupos Roblox."
+  },
+  "mapeamentos": {
+    "FTB-BFE": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Forças Especiais",
+      "sigla": "BFE",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [
+        {
+          "sigla": "DAD",
+          "nome": "Destacamento de Ações Diretas",
+          "catalogoId": "FTB-DAD",
+          "status": "Presente no catálogo aprovado"
+        },
+        {
+          "sigla": "DRE",
+          "nome": "Destacamento de Reconhecimento Especial",
+          "catalogoId": "FTB-DRE",
+          "status": "Presente no catálogo aprovado"
+        }
+      ],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BPE": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Polícia do Exército",
+      "sigla": "BPE",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [
+        {
+          "sigla": "PC",
+          "nome": "Pelotão de Choque do BPE",
+          "catalogoId": "FTB-PC",
+          "status": "Presente no catálogo aprovado"
+        }
+      ],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BI-Caat": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Infantaria de Caatinga",
+      "sigla": "BI Caat",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [
+        {
+          "sigla": "PELOPES",
+          "nome": "Pelotão de Operações Especiais na Caatinga",
+          "catalogoId": "FTB-PELOPES",
+          "status": "Presente no catálogo aprovado"
+        },
+        {
+          "sigla": "DCS",
+          "nome": "Destacamento de Caatinga e Sobrevivência",
+          "catalogoId": "FTB-DCS",
+          "status": "Presente no catálogo aprovado"
+        }
+      ],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BIP": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Infantaria Paraquedista",
+      "sigla": "BIP",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [
+        {
+          "sigla": "Precs",
+          "nome": "Precursores Paraquedistas",
+          "catalogoId": "FTB-Precs",
+          "status": "Presente no catálogo aprovado"
+        },
+        {
+          "sigla": "CFP",
+          "nome": null,
+          "catalogoId": null,
+          "status": "Sigla recuperada de conversa; nome completo a documentar"
+        }
+      ],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-B-Prec": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Precursores (adaptação da FAAAB)",
+      "sigla": "B Prec",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BIB": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Infantaria Blindado",
+      "sigla": "BIB",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [
+        {
+          "sigla": "CFB",
+          "nome": null,
+          "catalogoId": null,
+          "status": "Sigla recuperada de conversa; nome completo a documentar"
+        }
+      ],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BCC": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Carros de Combate",
+      "sigla": "BCC",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BAC": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Ações de Comandos",
+      "sigla": "BAC",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [
+        {
+          "sigla": "DCOE",
+          "nome": "Destacamento de Comandos e Operações Especiais",
+          "catalogoId": "FTB-DCOE",
+          "status": "Presente no catálogo aprovado"
+        }
+      ],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-B-Log": {
+      "tipo": "unidade",
+      "nome": "Batalhão Logístico",
+      "sigla": "B Log",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BIM": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Infantaria de Montanha",
+      "sigla": "BIM",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [
+        {
+          "sigla": "CFM",
+          "nome": null,
+          "catalogoId": null,
+          "status": "Sigla recuperada de conversa; nome completo a documentar"
+        },
+        {
+          "sigla": "PRGM",
+          "nome": "Pelotão de Reconhecimento e Guerra em Montanha",
+          "catalogoId": "FTB-PRGM",
+          "status": "Presente no catálogo aprovado"
+        }
+      ],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-B-Sau": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Saúde",
+      "sigla": "B Sau",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [
+        {
+          "sigla": "DRT",
+          "nome": "Destacamento de Resgate Tático Militar",
+          "catalogoId": "FTB-DRT",
+          "status": "Presente no catálogo aprovado"
+        },
+        {
+          "sigla": "GRE",
+          "nome": "Grupo de Resgate e Evacuação Militar",
+          "catalogoId": "FTB-GRE",
+          "status": "Presente no catálogo aprovado"
+        },
+        {
+          "sigla": "PAPH",
+          "nome": "Pelotão de Atendimento Pré-Hospitalar Militar",
+          "catalogoId": "FTB-PAPH",
+          "status": "Presente no catálogo aprovado"
+        }
+      ],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-B-Op-Psi": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Operações Psicológicas",
+      "sigla": "B Op Psi",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BI-Pan": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Infantaria de Pantanal (adaptação da FAAAB)",
+      "sigla": "BI Pan",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-17--B-Fron": {
+      "tipo": "unidade",
+      "nome": "17º Batalhão de Fronteira",
+      "sigla": "17º B Fron",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-1--RCG": {
+      "tipo": "unidade",
+      "nome": "1º Regimento de Cavalaria de Guardas - Dragões da Independência",
+      "sigla": "1º RCG",
+      "hierarquiaInterna": {
+        "modelo": "regimento",
+        "nota": "Regimentos mantêm quadro interno mais enxuto, com postos militares até Coronel; cargos superiores administrativos são distintos."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BIL": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Infantaria Leve",
+      "sigla": "BIL",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BIS": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Infantaria de Selva",
+      "sigla": "BIS",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-BIL-Mth": {
+      "tipo": "unidade",
+      "nome": "Batalhão de Infantaria Leve de Montanha",
+      "sigla": "BIL Mth",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-GAC": {
+      "tipo": "unidade",
+      "nome": "Grupo de Artilharia de Campanha",
+      "sigla": "GAC",
+      "hierarquiaInterna": {
+        "modelo": "batalhao",
+        "classes": [
+          "Praças",
+          "Graduados",
+          "Oficiais Subalternos",
+          "Oficial Intermediário",
+          "Oficiais Superiores",
+          "Alto Escalão",
+          "Subcomandante",
+          "Comandante",
+          "Alto Comando",
+          "Superintendente"
+        ],
+        "nota": "10 níveis de autoridade internos; a patente institucional do jogador continua separada da função do batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-CIE": {
+      "tipo": "centro",
+      "nome": "Centro de Inteligência do Exército",
+      "sigla": "CIE",
+      "hierarquiaInterna": {
+        "modelo": "centro",
+        "nota": "Centros usam estrutura própria de instrução/serviços. Supervisor e Supervisor-Chefe são funções de centros, não cargos padrão de batalhões."
+      },
+      "subunidades": [
+        {
+          "sigla": "SC",
+          "nome": "Seção de Contrainteligência (estrutura interna fictícia do CIE na FAAAB)",
+          "catalogoId": "FTB-SC",
+          "status": "Presente no catálogo aprovado"
+        },
+        {
+          "sigla": "DGC",
+          "nome": "Divisão de Guerra Cibernética (estrutura interna fictícia do CIE na FAAAB)",
+          "catalogoId": "FTB-DGC",
+          "status": "Presente no catálogo aprovado"
+        }
+      ],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": "Centro de inteligência sem atividade de combate operacional; suas atividades não são equivalentes às de um batalhão de linha."
+    },
+    "FTB-CIGS": {
+      "tipo": "centro",
+      "nome": "Centro de Instrução de Guerra na Selva",
+      "sigla": "CIGS",
+      "hierarquiaInterna": {
+        "modelo": "centro",
+        "nota": "Centros usam estrutura própria de instrução/serviços. Supervisor e Supervisor-Chefe são funções de centros, não cargos padrão de batalhões."
+      },
+      "subunidades": [
+        {
+          "sigla": "POS",
+          "nome": "Pelotão de Operações na Selva",
+          "catalogoId": "FTB-POS",
+          "status": "Presente no catálogo aprovado"
+        }
+      ],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-Bda-Inf-Sl": {
+      "tipo": "brigada",
+      "nome": "Brigada de Infantaria de Selva",
+      "sigla": "Bda Inf Sl",
+      "hierarquiaInterna": {
+        "modelo": "brigada",
+        "nota": "Brigadas possuem 10 posições internas planejadas, cujo detalhamento individual não está registrado; não possuem farda própria."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-Bda-Inf-Mth": {
+      "tipo": "brigada",
+      "nome": "Brigada de Infantaria de Montanha",
+      "sigla": "Bda Inf Mth",
+      "hierarquiaInterna": {
+        "modelo": "brigada",
+        "nota": "Brigadas possuem 10 posições internas planejadas, cujo detalhamento individual não está registrado; não possuem farda própria."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-Bda-Inf-Mec": {
+      "tipo": "brigada",
+      "nome": "Brigada de Infantaria Mecanizada",
+      "sigla": "Bda Inf Mec",
+      "hierarquiaInterna": {
+        "modelo": "brigada",
+        "nota": "Brigadas possuem 10 posições internas planejadas, cujo detalhamento individual não está registrado; não possuem farda própria."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-Bda-Inf-Bld": {
+      "tipo": "brigada",
+      "nome": "Brigada de Infantaria Blindada",
+      "sigla": "Bda Inf Bld",
+      "hierarquiaInterna": {
+        "modelo": "brigada",
+        "nota": "Brigadas possuem 10 posições internas planejadas, cujo detalhamento individual não está registrado; não possuem farda própria."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-Bda-C-Mec": {
+      "tipo": "brigada",
+      "nome": "Brigada de Cavalaria Mecanizada",
+      "sigla": "Bda C Mec",
+      "hierarquiaInterna": {
+        "modelo": "brigada",
+        "nota": "Brigadas possuem 10 posições internas planejadas, cujo detalhamento individual não está registrado; não possuem farda própria."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    },
+    "FTB-Bda-C-Bld": {
+      "tipo": "brigada",
+      "nome": "Brigada de Cavalaria Blindada",
+      "sigla": "Bda C Bld",
+      "hierarquiaInterna": {
+        "modelo": "brigada",
+        "nota": "Brigadas possuem 10 posições internas planejadas, cujo detalhamento individual não está registrado; não possuem farda própria."
+      },
+      "subunidades": [],
+      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
+      "observacoes": null
+    }
+  },
+  "pendencias": [
+    "Listas específicas de patentes militares por batalhão não foram fornecidas como segunda cadeia independente; não criar essa duplicação.",
+    "Algumas subunidades citadas em conversas ainda não têm nome completo ou registro individual no catálogo.",
+    "Procedimentos, permissões, provas e cargos por especialização não estão detalhados em todos os batalhões."
+  ]
+}
