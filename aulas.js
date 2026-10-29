@@ -89,7 +89,22 @@ function nextLesson(){
  $("academy-reader").scrollIntoView({behavior:"smooth",block:"start"});
 }
 const subjectTotals=()=>Object.fromEntries([...new Set(state.lessons.map(x=>x.materia))].map(x=>[x,state.lessons.filter(y=>y.materia===x).length]));
+
+/* Desafios em contexto para as quatro operações: exigir duas etapas, não apenas números maiores. */
+function appliedDynamic(kind){
+ const q=(pergunta,result,wrongs,feedback,dica)=>{
+  const values=[result,...wrongs.filter(v=>Number.isFinite(v)&&v!==result)];
+  for(let n=result+4;values.length<4;n++)if(!values.includes(n))values.push(n);
+  return {pergunta,alternativas:values.slice(0,4).map(String),correta:0,feedback,dica,generated:true};
+ };
+ if(kind==="soma"){const a=ri(150,480),b=ri(90,350),c=ri(45,200),result=a+b+c;return q("Uma equipe recebeu "+a+", "+b+" e "+c+" itens em lotes diferentes. Qual foi o total?",result,[result-b,result-c,result+10],"Some os três lotes: "+a+" + "+b+" + "+c+" = "+result+". O total deve superar qualquer parcela.","Junte dois lotes e depois acrescente o terceiro.")}
+ if(kind==="subtracao"){const initial=ri(340,690),used=ri(110,210),received=ri(35,100),result=initial-used+received;return q("Um depósito tinha "+initial+" itens. Foram retirados "+used+" e repostos "+received+". Qual é o estoque atual?",result,[initial-used,result+used,result-received],initial+" − "+used+" = "+(initial-used)+"; "+(initial-used)+" + "+received+" = "+result+".","A retirada e a reposição têm sentidos opostos.")}
+ if(kind==="multiplicacao"){const boxes=ri(15,35),each=ri(12,28),reserved=ri(23,61),result=boxes*each-reserved;return q("Uma remessa traz "+boxes+" caixas com "+each+" kits. Após separar "+reserved+" para vistoria, quantos kits restam?",result,[boxes*each,result+boxes,result-reserved],"Primeiro calcule "+boxes+"×"+each+" = "+boxes*each+" kits. Depois subtraia "+reserved+": "+result+".","Há uma multiplicação e uma subtração.")}
+ if(kind==="divisao"){const cap=ri(7,19),full=ri(12,27),rest=ri(1,cap-1),total=full*cap+rest,result=full+1;return q("São "+total+" materiais e cada caixa comporta "+cap+". Quantas caixas precisam ser usadas?",result,[full,result+1,result+cap],total+" dividido por "+cap+" dá "+full+" caixas completas e sobra(m) "+rest+" material(is). É necessária mais uma caixa: "+result+".","A existência de resto exige mais uma caixa.")}
+ return null;
+}
 function buildDynamic(kind,level){
+ if(level==="avancado"&&["soma","subtracao","multiplicacao","divisao"].includes(kind))return appliedDynamic(kind);
  const scale={iniciante:0,intermediario:1,avancado:2}[level]??0;
  const caps=[10,50,200],max=caps[scale];
  let question,result,solution,wrong=[];
