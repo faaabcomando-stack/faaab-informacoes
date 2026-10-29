@@ -33,10 +33,12 @@
       "Instrutor-Chefe",
       "Chefe da Especialização"
     ],
-    "joining": "Recruta escolhe uma brigada e um batalhão antes da progressão; participação em guerra apenas a partir de Soldado.",
+    "joining": "Recruta deve selecionar exatamente uma Brigada e completar a CDP. Recruta não pode integrar Batalhão. Ingresso em Batalhão é opcional, com exame mais difícil; regra expressa de 07/09/2026 liberava a partir de Sargento. A discussão de 18/10/2026 não confirma mudança posterior. CDP Recruta→Soldado: TC-1, Expedição Militar, Seleção de Brigada, Formação de Soldado.",
     "centres": "CIE não é operacional; regimentos têm quadro próprio mais enxuto, com referência a Coronel; brigadas não têm farda própria.",
     "internalRanksNote": "Correção expressa do responsável em 29/10/2026: patentes dos batalhões vão de Soldado a Coronel; nomenclatura intermediária recuperada da carreira EB documentada.",
-    "supersededScheme": "A antiga lista de dez classes de Praças até Superintendente não é a hierarquia de patentes dos batalhões; foi substituída e não deve voltar às fichas."
+    "supersededScheme": "A antiga lista de dez classes de Praças até Superintendente não é a hierarquia de patentes dos batalhões; foi substituída e não deve voltar às fichas.",
+    "joiningCorrectionDate": "2026-10-29",
+    "joiningSource": "Confirmações do usuário em 07/09/2026 e 27/09/2026; CDP de 27/10/2026"
   },
   "rankDiscrepancies": {
     "newerRanksMissingInActiveData": [
