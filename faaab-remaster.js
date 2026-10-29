@@ -198,16 +198,17 @@ const V3={
   V3.set("v3-crumb-force",'<a href="'+(V3.forces[e.forca]?.url||"instituicoes.html")+'">'+V3.esc(V3.forces[e.forca]?.name||"FAAAB")+'</a>');
   V3.set("v3-crumb-name",V3.esc(e.nome));
   const facts=[perfil?.atividades?.length?perfil.atividades.length+" atividades":null,unit?.subunidades?.length?unit.subunidades.length+" subdivisões":null,relatedCourses.length?relatedCourses.length+" cursos cadastrados":null,perfil?.sistemas?.length?perfil.sistemas.length+" regras de gameplay":null].filter(Boolean).join(" · ");
-  V3.set("v3-profile-header",'<span class="v3-label">'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' / '+V3.esc(V3.types[e.tipo]||e.tipo)+'</span><h1>'+V3.esc(e.nome)+'</h1>'+(facts?'<p class="v3-profile-summary">'+V3.esc(facts)+'</p>':"")+(e.estadoImplementacao&&e.estadoImplementacao!=="Não confirmado"?'<span class="v3-state">'+V3.esc(e.estadoImplementacao)+'</span>':""));
+  const introduction=perfil?.papel||e.noJogo||e.nome;
+  V3.set("v3-profile-header",'<span class="v3-label">'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' / '+V3.esc(V3.types[e.tipo]||e.tipo)+'</span><h1>'+V3.esc(e.nome)+'</h1><p class="v3-profile-intro">'+V3.esc(introduction)+'</p>'+(facts?'<p class="v3-profile-summary">'+V3.esc(facts)+'</p>':"")+(e.estadoImplementacao&&e.estadoImplementacao!=="Não confirmado"?'<span class="v3-state">'+V3.esc(e.estadoImplementacao)+'</span>':""));
   V3.set("v3-profile-nav",Object.entries(sections).filter(([key])=>availableKeys.includes(key)).map(([key,val])=>'<a href="ficha.html?id='+encodeURIComponent(id)+'&secao='+key+'"'+(sec===key?' aria-current="page"':'')+'>'+val+'</a>').join(""));
   let content="";
   if(sec==="sobre"){
    const activities=perfil?.atividades||[];
    const real=e.vidaReal&&!/Instituição ou estrutura de coordenação|Organização|Exige examinar|Uma comparação com/i.test(e.vidaReal)?e.vidaReal:"";
    const noGame=e.noJogo&&!/prevista no catálogo aprovado|instituição de ensino prevista|subunidade interna de organização|brigada interna da FAAAB|estrutura do universo FAAAB/i.test(e.noJogo)?e.noJogo:"";
-   content='<div class="v3-doc"><h3>O papel desta organização</h3><p>'+V3.esc(perfil?.papel||noGame||e.nome+" integra o catálogo institucional da FAAAB.")+'</p>'+
+   content='<div class="v3-doc">'+
       (activities.length?'<h3>Atividades e responsabilidades</h3><ul class="v3-profile-bullets">'+activities.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+
-      (!perfil&&noGame?'<h3>No universo do jogo</h3><p>'+V3.esc(noGame)+'</p>':"")+
+      (noGame&&noGame!==perfil?.papel?'<h3>Aplicação na FAAAB</h3><p>'+V3.esc(noGame)+'</p>':"")+
       (real?'<h3>Referência de função</h3><p>'+V3.esc(real)+'</p>':"")+
       (perfil?.observacoes?.length?'<h3>Regras e distinções</h3><ul class="v3-profile-bullets">'+perfil.observacoes.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+
       '<p class="v3-profile-source">Estas são decisões e concepções do roleplay FAAAB; sua descrição não afirma que os recursos já foram instalados no Roblox Studio.</p></div>';
@@ -245,7 +246,7 @@ const V3={
      
      (e.tipo==="brigada"?'<h3>Treinamento em brigada</h3><p>O militar escolhe uma brigada para a formação e progressão de carreira. A participação em uma brigada não muda sua patente automaticamente.</p>':"")+
      (e.forca==="FTB"&&unit?.hierarquiaInterna?.modelo==="batalhao"?'<h3>Evolução da especialização</h3><p>'+V3.esc(unitData.esquema.especializacoes.join(" → "))+'</p><p>Essa cadeia de especialização não é uma segunda cadeia de patentes.</p>':"")+
-     '<p><a href="formacao.html?forca='+encodeURIComponent(e.forca==="CFN"?"FMB":e.forca)+'">Ver outros cursos da força</a></p></div>';
+     '<p><a href="formacao.html?forca='+encodeURIComponent(e.forca)+'">Ver outros cursos da força</a></p></div>';
   }else if(sec==="sistemas"){
    const rules=perfil?.sistemas||[];
    content='<div class="v3-doc"><h3>Mecânicas e regras de participação</h3><ul class="v3-profile-bullets">'+rules.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>'+
