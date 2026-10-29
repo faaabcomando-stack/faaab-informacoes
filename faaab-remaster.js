@@ -184,13 +184,21 @@ const V3={
   const relatedCourses=cursos.filter(x=>(courseNames[id]||[]).includes(x.id));
   const parentUnits=Object.entries(unitData.mapeamentos||{}).filter(([_,o])=>o.subunidades?.some(y=>y.catalogoId===id)).map(([parentId])=>cat.find(x=>x.id===parentId)).filter(Boolean);
   if(!e){V3.set("v3-profile",' <h1>Organização não encontrada</h1><p>Confira o endereço ou volte à <a href="instituicoes.html">página de instituições</a>.</p>');return}
-  const sec=Object.prototype.hasOwnProperty.call(sections,s)?s:"sobre";
+  const availableKeys=Object.keys(sections).filter(key=>{
+   if(key==="sobre")return true;
+   if(key==="estrutura")return !!unit||parentUnits.length>0||e.tipo==="brigada";
+   if(key==="cargos")return !!unit?.hierarquiaInterna||e.tipo==="centro"||!!perfil?.atividades?.length;
+   if(key==="treinamentos")return !!relatedCourses.length||!!perfil?.formacao?.length||(e.forca==="FTB"&&e.tipo==="unidade")||e.tipo==="brigada";
+   if(key==="sistemas")return !!perfil?.sistemas?.length;
+   return false;
+  });
+  const sec=availableKeys.includes(s)?s:"sobre";
   V3.context(e.forca);
   document.title=e.nome+" · "+sections[sec]+" | FAAAB";
   V3.set("v3-crumb-force",'<a href="'+(V3.forces[e.forca]?.url||"instituicoes.html")+'">'+V3.esc(V3.forces[e.forca]?.name||"FAAAB")+'</a>');
   V3.set("v3-crumb-name",V3.esc(e.nome));
   V3.set("v3-profile-header",'<span class="v3-label">'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' / '+V3.esc(V3.types[e.tipo]||e.tipo)+'</span><h1>'+V3.esc(e.nome)+'</h1><p>'+V3.esc(perfil?.papel||((e.noJogo&&!/prevista no catálogo aprovado|instituição de ensino prevista|subunidade interna de organização|brigada interna da FAAAB|estrutura do universo FAAAB/i.test(e.noJogo))?e.noJogo:"Organização registrada no catálogo da FAAAB, vinculada à "+(V3.forces[e.forca]?.name||e.forca)+"."))+'</p>'+(e.estadoImplementacao&&e.estadoImplementacao!=="Não confirmado"?'<span class="v3-state">'+V3.esc(e.estadoImplementacao)+'</span>':""));
-  V3.set("v3-profile-nav",Object.entries(sections).map(([key,val])=>'<a href="ficha.html?id='+encodeURIComponent(id)+'&secao='+key+'"'+(sec===key?' aria-current="page"':'')+'>'+val+'</a>').join(""));
+  V3.set("v3-profile-nav",Object.entries(sections).filter(([key])=>availableKeys.includes(key)).map(([key,val])=>'<a href="ficha.html?id='+encodeURIComponent(id)+'&secao='+key+'"'+(sec===key?' aria-current="page"':'')+'>'+val+'</a>').join(""));
   let content="";
   if(sec==="sobre"){
    const activities=perfil?.atividades||[];
