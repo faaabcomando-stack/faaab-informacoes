@@ -194,6 +194,7 @@ const V3={
   }else if(sec==="estrutura"){
    content='<div class="v3-doc"><h3>Organização interna</h3><p><b>Seção do catálogo:</b> '+V3.esc(e.secao||"A definir")+'</p><p><b>Grupo Roblox independente:</b> '+(e.grupoSeparado===true?"Documentado como separado":e.grupoSeparado===false?"Documentado como estrutura interna":"Ainda não confirmado")+'</p><p>Subunidades e vínculos documentados aparecem abaixo. As demais relações permanecem pendentes.</p></div>';
    if(unit?.subunidades?.length)content+='<h3>Subunidades recuperadas</h3>'+unit.subunidades.map(x=>'<p><strong>['+V3.esc(x.sigla)+'] '+V3.esc(x.nome||"Nome pendente")+'</strong></p>').join("");
+   if(unit?.observacoes)content+='<p>'+V3.esc(unit.observacoes)+'</p>';
   }else if(sec==="cargos"){
    content='<div class="v3-doc"><h3>Cargos da organização</h3><p>Quadro de comando, instrutores, alunos e demais funções internas ainda não foi validado individualmente para '+V3.esc(e.nome)+'. Não atribuímos cargos de outras organizações automaticamente.</p><p>A função interna não altera a patente global do militar. As atribuições e os responsáveis de cada nível ainda precisam ser definidos.</p><p><a href="comando.html">Consultar cargos gerais e autoridades documentados →</a></p></div>';
    if(unit?.hierarquiaInterna?.classes)content+='<h3>Hierarquia interna confirmada</h3><ol>'+unit.hierarquiaInterna.classes.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ol>';
