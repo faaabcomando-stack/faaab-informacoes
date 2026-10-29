@@ -518,7 +518,10 @@
       "sistemas": [
         "O Corpo de Fuzileiros Navais integra a Marinha no universo FAAAB."
       ],
-      "formacao": [],
+      "formacao": [
+        "Formação de Fuzileiros Navais — CIAMPA: curso geral da carreira, não prova de ingresso automático nesta unidade.",
+        "Treinamento da infantaria naval e adaptação ao emprego costeiro, conforme o currículo futuro da unidade."
+      ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
@@ -531,7 +534,10 @@
       "sistemas": [
         "Viaturas exigem equipamentos disponíveis e habilitação compatível."
       ],
-      "formacao": [],
+      "formacao": [
+        "Formação de Fuzileiros Navais — CIAMPA: curso geral da carreira, não prova de ingresso automático nesta unidade.",
+        "Formação para operação de viaturas anfíbias, com habilitação de veículo distinta da patente."
+      ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
@@ -544,7 +550,10 @@
       "sistemas": [
         "As atividades são militares, não de salvamento civil geral."
       ],
-      "formacao": [],
+      "formacao": [
+        "Formação de Fuzileiros Navais — CIAMPA: curso geral da carreira, não prova de ingresso automático nesta unidade.",
+        "Qualificação voltada a deslocamentos ribeirinhos e atividades de navegação do roleplay."
+      ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
@@ -557,7 +566,10 @@
       "sistemas": [
         "Não confundir com o resgate militar da Aeronáutica ou com o Batalhão de Saúde do Exército."
       ],
-      "formacao": [],
+      "formacao": [
+        "Cursos gerais do Corpo de Bombeiros, incluindo CFP/BM e demais formações cadastradas, servem como referências do sistema de ensino da força.",
+        "Treinamento de busca, localização, primeiros atendimentos e salvamento civil do cenário."
+      ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
@@ -568,7 +580,10 @@
         "Missões de prevenção e controle de riscos ambientais fictícios."
       ],
       "sistemas": [],
-      "formacao": [],
+      "formacao": [
+        "Cursos gerais do Corpo de Bombeiros, incluindo CFP/BM e demais formações cadastradas, servem como referências do sistema de ensino da força.",
+        "Qualificação para ocorrências em vegetação e ambiente florestal."
+      ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
@@ -582,7 +597,10 @@
         "Equipamentos de proteção e ferramentas especiais devem ser obtidos e habilitados nos sistemas do jogo; não presumir acesso livre.",
         "O atendimento ocorre no roleplay, não substitui orientação real de emergência."
       ],
-      "formacao": [],
+      "formacao": [
+        "Cursos gerais do Corpo de Bombeiros, incluindo CFP/BM e demais formações cadastradas, servem como referências do sistema de ensino da força.",
+        "Preparação especializada conforme as ocorrências atribuídas ao GOPP dentro do jogo."
+      ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
@@ -595,7 +613,10 @@
       "sistemas": [
         "Atuação de socorro civil separada das unidades de combate e resgate militar."
       ],
-      "formacao": [],
+      "formacao": [
+        "Cursos gerais do Corpo de Bombeiros, incluindo CFP/BM e demais formações cadastradas, servem como referências do sistema de ensino da força.",
+        "Capacitação para atendimento aéreo civil e operação dos equipamentos correspondentes."
+      ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
@@ -606,7 +627,10 @@
         "Treinamento em equipamentos próprios da unidade."
       ],
       "sistemas": [],
-      "formacao": [],
+      "formacao": [
+        "Cursos gerais do Corpo de Bombeiros, incluindo CFP/BM e demais formações cadastradas, servem como referências do sistema de ensino da força.",
+        "Formação operacional especializada em resgate técnico dentro do cenário."
+      ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
@@ -1232,7 +1256,10 @@
       "sistemas": [
         "CFN integra a Marinha; missões não equivalem a segurança civil."
       ],
-      "formacao": [],
+      "formacao": [
+        "Formação de Fuzileiros Navais — CIAMPA: curso geral da carreira, não prova de ingresso automático nesta unidade.",
+        "Preparação especializada vinculada à função da unidade; não considerar ingresso automático."
+      ],
       "observacoes": [],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
@@ -1245,7 +1272,10 @@
       "sistemas": [
         "Não criar autorização automática pela patente."
       ],
-      "formacao": [],
+      "formacao": [
+        "Formação de Fuzileiros Navais — CIAMPA: curso geral da carreira, não prova de ingresso automático nesta unidade.",
+        "Treinamento avançado da especialização de comandos anfíbios, sujeito à seleção da unidade."
+      ],
       "observacoes": [],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
@@ -1258,7 +1288,10 @@
       "sistemas": [
         "Veículos blindados precisam de equipamento, recursos e formação específica."
       ],
-      "formacao": [],
+      "formacao": [
+        "Formação de Fuzileiros Navais — CIAMPA: curso geral da carreira, não prova de ingresso automático nesta unidade.",
+        "Qualificação de tripulações e operação de equipamentos blindados no cenário anfíbio."
+      ],
       "observacoes": [],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
@@ -1271,7 +1304,10 @@
       "sistemas": [
         "É estrutura dos Fuzileiros Navais; não equivale ao BEC rejeitado para o Exército."
       ],
-      "formacao": [],
+      "formacao": [
+        "Formação de Fuzileiros Navais — CIAMPA: curso geral da carreira, não prova de ingresso automático nesta unidade.",
+        "Formação especializada nas tarefas de engenharia dos Fuzileiros Navais."
+      ],
       "observacoes": [],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
@@ -1284,7 +1320,10 @@
       "sistemas": [
         "Não confundir com GAC do Exército."
       ],
-      "formacao": [],
+      "formacao": [
+        "Formação de Fuzileiros Navais — CIAMPA: curso geral da carreira, não prova de ingresso automático nesta unidade.",
+        "Capacitação dos participantes para funções de artilharia naval fictícia."
+      ],
       "observacoes": [],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
@@ -1297,7 +1336,10 @@
       "sistemas": [
         "Não é polícia civil ou unidade da PM."
       ],
-      "formacao": [],
+      "formacao": [
+        "Formação de Fuzileiros Navais — CIAMPA: curso geral da carreira, não prova de ingresso automático nesta unidade.",
+        "Instrução específica compatível com as atribuições próprias do centro ou unidade."
+      ],
       "observacoes": [
         "É companhia da Marinha/CFN, não centro de formação e não unidade da Polícia Militar civil."
       ],
