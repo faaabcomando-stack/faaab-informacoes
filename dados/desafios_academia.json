@@ -1052,6 +1052,566 @@
           }
         ]
       }
+    },
+    "mat-07": {
+      "porque": "Múltiplos são números obtidos ao multiplicar; divisores dividem exatamente. O MMC encontra reencontros de ciclos, e o MDC encontra maiores repartições iguais.",
+      "armadilha": "Trocar MMC e MDC sem interpretar o problema.",
+      "verificacao": "Confira se o resultado é múltiplo de todos os períodos envolvidos.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Dois alarmes tocam a cada 8 e 12 minutos. Quando voltarão a tocar juntos?",
+            "alternativas": [
+              "12 min",
+              "16 min",
+              "24 min",
+              "36 min"
+            ],
+            "correta": 2,
+            "feedback": "MMC(8,12)=24. Múltiplos de 8: 8,16,24; de 12: 12,24.",
+            "dica": "Busque o menor múltiplo comum."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Há 48 kits azuis e 60 vermelhos. Qual o maior número de grupos iguais, sem sobrar kits de nenhuma cor?",
+            "alternativas": [
+              "6",
+              "10",
+              "12",
+              "24"
+            ],
+            "correta": 2,
+            "feedback": "MDC(48,60)=12. Cada grupo terá 4 azuis e 5 vermelhos.",
+            "dica": "Para formar o máximo de grupos iguais, procure o maior divisor comum."
+          }
+        ]
+      }
+    },
+    "mat-10": {
+      "porque": "Decimais precisam ser alinhados pela casa decimal. Em dinheiro, o valor 0,05 é cinco centavos, não cinquenta.",
+      "armadilha": "Deslocar vírgula ao multiplicar ou somar preços de casas diferentes.",
+      "verificacao": "Estime o total em reais inteiros e compare com o resultado.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Um item custa R$ 17,80. Três unidades são pagas com R$ 60,00. Qual é o troco?",
+            "alternativas": [
+              "R$ 5,60",
+              "R$ 6,40",
+              "R$ 6,60",
+              "R$ 7,20"
+            ],
+            "correta": 2,
+            "feedback": "3×17,80=53,40; 60,00−53,40=6,60.",
+            "dica": "Calcule o custo total antes do troco."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Um depósito gastou R$ 124,50 e R$ 79,35. Qual foi o gasto total?",
+            "alternativas": [
+              "R$ 203,75",
+              "R$ 203,85",
+              "R$ 204,05",
+              "R$ 204,15"
+            ],
+            "correta": 1,
+            "feedback": "124,50+79,35=203,85. Alinhe unidades, décimos e centésimos.",
+            "dica": "Alinhe as vírgulas antes da soma."
+          }
+        ]
+      }
+    },
+    "mat-14": {
+      "porque": "Juros simples incidem sempre sobre o capital inicial: J=C×i×t. A taxa e o tempo devem usar a mesma unidade.",
+      "armadilha": "Aplicar juros sobre o montante acumulado como se fosse juros compostos.",
+      "verificacao": "Calcule os juros de um período e multiplique pelo número de períodos.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "R$ 800 rendem juros simples de 2% ao mês por 5 meses. Quais são os juros?",
+            "alternativas": [
+              "R$ 60",
+              "R$ 80",
+              "R$ 100",
+              "R$ 120"
+            ],
+            "correta": 1,
+            "feedback": "J=800×0,02×5=80. O montante seria 880, mas a questão pede os juros.",
+            "dica": "Diferencie juros do montante final."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Um valor de R$ 1.500 gera R$ 360 de juros simples em 8 meses. Qual foi a taxa mensal?",
+            "alternativas": [
+              "2%",
+              "3%",
+              "4%",
+              "5%"
+            ],
+            "correta": 1,
+            "feedback": "i=J/(C×t)=360/(1500×8)=0,03=3% ao mês.",
+            "dica": "Isole i em J=C×i×t."
+          }
+        ]
+      }
+    },
+    "mat-21": {
+      "porque": "PA é sequência que soma sempre a mesma razão. O termo n usa a_n=a_1+(n−1)r; a soma exige contar todos os termos.",
+      "armadilha": "Usar n no lugar de n−1 para calcular o termo.",
+      "verificacao": "Teste a fórmula com n=1: deve devolver o primeiro termo.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Uma PA começa em 7 e cresce 4 por termo. Qual o 12º termo?",
+            "alternativas": [
+              "47",
+              "51",
+              "55",
+              "59"
+            ],
+            "correta": 1,
+            "feedback": "a12=7+(12−1)×4=7+44=51.",
+            "dica": "Há 11 intervalos entre o primeiro e o décimo segundo."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Qual a soma dos 10 primeiros termos da PA 3, 7, 11, ...?",
+            "alternativas": [
+              "190",
+              "200",
+              "210",
+              "220"
+            ],
+            "correta": 2,
+            "feedback": "a10=3+9×4=39. Soma S10=10×(3+39)/2=210.",
+            "dica": "Calcule o último termo e use a média do primeiro e último."
+          }
+        ]
+      }
+    },
+    "mat-22": {
+      "porque": "União reúne elementos de pelo menos um conjunto; interseção mantém apenas os comuns. Na contagem, a interseção não pode ser somada duas vezes.",
+      "armadilha": "Somar os conjuntos e contar a interseção em duplicidade.",
+      "verificacao": "Use um diagrama de Venn e confira a soma das regiões.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "A={1,2,3,4} e B={3,4,5}. Quantos elementos há em A∪B?",
+            "alternativas": [
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "correta": 1,
+            "feedback": "A∪B={1,2,3,4,5}, que tem 5 elementos.",
+            "dica": "Na união, repetições contam uma só vez."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Numa turma, 22 estudam inglês, 18 espanhol e 8 ambos. Quantos estudam pelo menos um dos dois?",
+            "alternativas": [
+              "30",
+              "32",
+              "40",
+              "48"
+            ],
+            "correta": 1,
+            "feedback": "|A∪B|=22+18−8=32. Os 8 que estudam ambos foram contados duas vezes.",
+            "dica": "Subtraia uma vez a interseção."
+          }
+        ]
+      }
+    },
+    "mat-23": {
+      "porque": "Perímetro é a soma das bordas, com unidade linear; área representa superfície e tem unidade quadrada.",
+      "armadilha": "Confundir perímetro com área de retângulos.",
+      "verificacao": "Desenhe as medidas nos lados e some o contorno.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Um terreno mede 24 m por 15 m. Qual é o perímetro?",
+            "alternativas": [
+              "39 m",
+              "62 m",
+              "78 m",
+              "360 m"
+            ],
+            "correta": 2,
+            "feedback": "P=2(24+15)=78 m. 360 seria área, não perímetro.",
+            "dica": "Um retângulo tem dois lados de cada medida."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma pista retangular tem perímetro de 94 m e largura de 18 m. Qual é o comprimento?",
+            "alternativas": [
+              "27 m",
+              "29 m",
+              "31 m",
+              "35 m"
+            ],
+            "correta": 1,
+            "feedback": "2(C+18)=94, então C+18=47 e C=29 m.",
+            "dica": "Divida o perímetro por dois antes de subtrair a largura."
+          }
+        ]
+      }
+    },
+    "mat-25": {
+      "porque": "Volume mede espaço ocupado. Para um bloco retangular, multiplique comprimento, largura e altura; converta unidades antes de calcular.",
+      "armadilha": "Misturar centímetros e metros sem conversão.",
+      "verificacao": "Confira se a resposta está em unidades cúbicas.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Uma caixa mede 5 cm × 8 cm × 12 cm. Qual é seu volume?",
+            "alternativas": [
+              "360 cm³",
+              "420 cm³",
+              "480 cm³",
+              "520 cm³"
+            ],
+            "correta": 2,
+            "feedback": "V=5×8×12=480 cm³.",
+            "dica": "Multiplique as três dimensões."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Um tanque retangular mede 2 m × 1,5 m × 1 m. Qual volume em litros?",
+            "alternativas": [
+              "300 L",
+              "1.500 L",
+              "3.000 L",
+              "4.500 L"
+            ],
+            "correta": 2,
+            "feedback": "V=2×1,5×1=3 m³. Cada 1 m³ equivale a 1.000 L, então são 3.000 L.",
+            "dica": "Converta m³ para litros depois da multiplicação."
+          }
+        ]
+      }
+    },
+    "mat-26": {
+      "porque": "Ângulos internos de um triângulo somam 180°. Em uma reta, ângulos adjacentes formam 180°.",
+      "armadilha": "Somar ângulos de lados externos à mesma conta.",
+      "verificacao": "Confira se o resultado respeita 180° para triângulo ou ângulo raso.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Dois ângulos de um triângulo medem 48° e 67°. Qual o terceiro?",
+            "alternativas": [
+              "55°",
+              "60°",
+              "65°",
+              "75°"
+            ],
+            "correta": 2,
+            "feedback": "180°−48°−67°=65°.",
+            "dica": "A soma de três ângulos internos é 180°."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Em um triângulo, os ângulos medem x, 2x e 3x. Quanto vale o maior?",
+            "alternativas": [
+              "60°",
+              "80°",
+              "90°",
+              "120°"
+            ],
+            "correta": 2,
+            "feedback": "x+2x+3x=180°, logo 6x=180°, x=30° e 3x=90°.",
+            "dica": "Some os coeficientes de x primeiro."
+          }
+        ]
+      }
+    },
+    "mat-28": {
+      "porque": "Seno, cosseno e tangente relacionam lados de triângulos retângulos a um ângulo agudo. A identificação do lado oposto e adjacente depende do ângulo escolhido.",
+      "armadilha": "Confundir hipotenusa com cateto adjacente.",
+      "verificacao": "Desenhe o ângulo, marque os lados e confira que seno e cosseno não passam de 1.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Em um triângulo retângulo, o cateto oposto mede 6 e a hipotenusa 10. Qual é sen(θ)?",
+            "alternativas": [
+              "0,4",
+              "0,6",
+              "0,8",
+              "1,6"
+            ],
+            "correta": 1,
+            "feedback": "sen(θ)=oposto/hipotenusa=6/10=0,6.",
+            "dica": "Identifique o cateto oposto e a hipotenusa."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Para um ângulo θ, cateto adjacente=12 e hipotenusa=13. Quanto é cos(θ)?",
+            "alternativas": [
+              "5/13",
+              "12/13",
+              "13/12",
+              "12/5"
+            ],
+            "correta": 1,
+            "feedback": "cos(θ)=adjacente/hipotenusa=12/13.",
+            "dica": "Cosseno usa adjacente sobre hipotenusa."
+          }
+        ]
+      }
+    },
+    "por-02": {
+      "porque": "A ideia principal dá unidade ao texto; detalhes e exemplos apoiam essa ideia. Um dado isolado não resume o argumento geral.",
+      "armadilha": "Confundir uma informação específica com o assunto central.",
+      "verificacao": "Escreva uma frase que cubra todos os detalhes do texto sem acrescentar fatos.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Texto: 'A escola abriu uma sala de leitura e ampliou o acervo. Desde então, mais alunos retiram livros.' Qual é a ideia principal?",
+            "alternativas": [
+              "Mudanças estimularam a leitura.",
+              "Alunos desistiram da leitura.",
+              "Livros ficaram mais caros.",
+              "A escola fechou o acervo."
+            ],
+            "correta": 0,
+            "feedback": "As duas ações da escola e o crescimento dos empréstimos sustentam que as mudanças incentivaram a leitura.",
+            "dica": "Procure uma frase que reúna as ações e o resultado."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Texto: 'Houve mais árvores nas calçadas, novas sombras e temperaturas menores nas ruas.' Que síntese é adequada?",
+            "alternativas": [
+              "As ruas receberam novas lojas.",
+              "A arborização melhorou o ambiente.",
+              "A prefeitura retirou as árvores.",
+              "As sombras elevaram as temperaturas."
+            ],
+            "correta": 1,
+            "feedback": "Mais árvores geraram sombra e contribuíram para menores temperaturas; essa é a informação central.",
+            "dica": "A ideia principal deve explicar os três detalhes."
+          }
+        ]
+      }
+    },
+    "por-03": {
+      "porque": "Fato é uma afirmação verificável por evidência; opinião expressa avaliação ou julgamento, embora possa ser fundamentada.",
+      "armadilha": "Uma frase com números não é automaticamente verdadeira: ela pode ser uma afirmação verificável, ainda que falsa.",
+      "verificacao": "Pergunte que prova poderia confirmar ou refutar cada frase.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual frase expressa opinião?",
+            "alternativas": [
+              "A biblioteca abre às oito.",
+              "A cidade tem três escolas.",
+              "O novo uniforme é elegante.",
+              "O curso dura quatro meses."
+            ],
+            "correta": 2,
+            "feedback": "'Elegante' é avaliação subjetiva; os demais são dados verificáveis.",
+            "dica": "Procure adjetivos de julgamento pessoal."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Qual enunciado é uma afirmação factual verificável?",
+            "alternativas": [
+              "Esta é a melhor sala do mundo.",
+              "O período de inscrição termina no dia 15.",
+              "O uniforme é mais bonito que todos.",
+              "A aula foi extraordinariamente chata."
+            ],
+            "correta": 1,
+            "feedback": "Uma data de encerramento pode ser conferida em edital. As outras afirmações são avaliações subjetivas.",
+            "dica": "Fato verificável pode ser checado com documento."
+          }
+        ]
+      }
+    },
+    "por-05": {
+      "porque": "Pronomes retomam referentes anteriores e podem ser ambíguos quando há mais de um nome possível.",
+      "armadilha": "Associar o pronome ao último substantivo sem conferir coerência.",
+      "verificacao": "Troque o pronome pelo referente e releia a frase.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Leia: 'Marina encontrou Beatriz e entregou-lhe a pasta.' A quem se refere 'lhe'?",
+            "alternativas": [
+              "Marina",
+              "Beatriz",
+              "Pasta",
+              "Encontro"
+            ],
+            "correta": 1,
+            "feedback": "'Entregou-lhe' indica a pessoa que recebeu a pasta: Beatriz.",
+            "dica": "Pergunte: a quem Marina entregou a pasta?"
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Leia: 'Os monitores orientaram os alunos; estes fizeram perguntas.' 'Estes' retoma:",
+            "alternativas": [
+              "Os monitores",
+              "As perguntas",
+              "Os alunos",
+              "As orientações"
+            ],
+            "correta": 2,
+            "feedback": "Na oposição de referentes, 'estes' retoma o termo mais próximo, 'os alunos'.",
+            "dica": "Compare a ordem dos dois grupos citados."
+          }
+        ]
+      }
+    },
+    "por-06": {
+      "porque": "Tempos verbais situam o fato em relação ao momento de fala. Há diferença entre ação concluída e ação habitual no passado.",
+      "armadilha": "Tratar todos os tempos passados como equivalentes.",
+      "verificacao": "Identifique marcador temporal e aspecto da ação.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual frase indica ação habitual no passado?",
+            "alternativas": [
+              "Eu estudo amanhã.",
+              "Eu estudava todos os dias.",
+              "Eu estudarei depois.",
+              "Eu estudei uma vez."
+            ],
+            "correta": 1,
+            "feedback": "'Estudava' no pretérito imperfeito indica hábito no passado. 'Estudei' pode representar ação concluída.",
+            "dica": "Procure o tempo verbal que indica repetição habitual."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Em 'Quando a equipe chegou, a reunião já havia começado', que fato ocorreu primeiro?",
+            "alternativas": [
+              "A equipe chegou.",
+              "A reunião começou.",
+              "Os dois ocorreram juntos.",
+              "O encontro foi cancelado."
+            ],
+            "correta": 1,
+            "feedback": "'Havia começado' indica anterioridade em relação a 'chegou'.",
+            "dica": "A locução 'havia começado' expressa ação anterior."
+          }
+        ]
+      }
+    },
+    "por-07": {
+      "porque": "Sujeito é o termo sobre o qual se declara algo; núcleo do sujeito é sua palavra principal. Sujeitos podem vir depois do verbo.",
+      "armadilha": "Confundir o primeiro substantivo da frase com o núcleo do sujeito.",
+      "verificacao": "Pergunte quem fez a ação e localize o núcleo.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Em 'Chegaram os novos instrutores', qual é o sujeito?",
+            "alternativas": [
+              "Chegaram",
+              "Novos",
+              "Os novos instrutores",
+              "Instrutores chegaram"
+            ],
+            "correta": 2,
+            "feedback": "O sujeito é 'os novos instrutores', posposto ao verbo. O núcleo é 'instrutores'.",
+            "dica": "Reordene para 'Os novos instrutores chegaram'."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Em 'A equipe de técnicos resolveu o problema', qual é o núcleo do sujeito?",
+            "alternativas": [
+              "Equipe",
+              "Técnicos",
+              "Problema",
+              "Resolveu"
+            ],
+            "correta": 0,
+            "feedback": "O sujeito é 'a equipe de técnicos', mas seu núcleo é 'equipe'.",
+            "dica": "Desconsidere o complemento 'de técnicos'."
+          }
+        ]
+      }
+    },
+    "por-10": {
+      "porque": "Acentuação depende da sílaba tônica e da terminação da palavra. Proparoxítonas são todas acentuadas.",
+      "armadilha": "Acentuar a palavra só porque ela tem muitas sílabas.",
+      "verificacao": "Separe sílabas, identifique a tônica e aplique a regra.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual palavra está acentuada por ser proparoxítona?",
+            "alternativas": [
+              "Café",
+              "Também",
+              "Médico",
+              "Herói"
+            ],
+            "correta": 2,
+            "feedback": "MÉ-di-co tem tonicidade na antepenúltima sílaba, portanto é proparoxítona.",
+            "dica": "Localize a sílaba tônica."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Qual palavra é paroxítona?",
+            "alternativas": [
+              "Sofá",
+              "Lâmpada",
+              "Caderno",
+              "Café"
+            ],
+            "correta": 2,
+            "feedback": "Ca-DER-no tem sílaba tônica na penúltima sílaba. Sofá e café são oxítonas; lâmpada é proparoxítona.",
+            "dica": "Conte as sílabas de trás para frente."
+          }
+        ]
+      }
+    },
+    "por-11": {
+      "porque": "Por que aparece em perguntas diretas e indiretas; porque responde ou explica; por quê antes de pontuação; porquê é substantivo.",
+      "armadilha": "Escolher pela presença de interrogação apenas, ignorando a posição.",
+      "verificacao": "Veja se a expressão pergunta, responde ou funciona como nome.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Complete: 'Não entendi ___ a aula foi cancelada.'",
+            "alternativas": [
+              "porque",
+              "por que",
+              "por quê",
+              "porquê"
+            ],
+            "correta": 1,
+            "feedback": "Trata-se de pergunta indireta sobre a causa, então a grafia é 'por que'.",
+            "dica": "A frase pergunta o motivo, sem terminar logo após a expressão."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Complete: 'Você saiu mais cedo ___?'",
+            "alternativas": [
+              "porque",
+              "por que",
+              "por quê",
+              "porquê"
+            ],
+            "correta": 2,
+            "feedback": "Antes do sinal de interrogação e no fim da frase, usa-se 'por quê'.",
+            "dica": "Observe a posição antes da pontuação."
+          }
+        ]
+      }
     }
   }
 }
