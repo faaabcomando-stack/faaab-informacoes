@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id);
 const escapeHTML=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const norm=v=>String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
 const STORE="faaab-academia-v1";
-const state={lessons:[],subject:"Todas",search:"",selected:null,limit:25,level:"iniciante",progress:{done:{},attempts:0,correct:0},question:null,answered:false,mode:"lesson",session:null,ready:false,programId:null,programName:null,allowedIds:null,groups:[]};
+const state={lessons:[],subject:"Todas",search:"",selected:null,limit:25,level:"intermediario",aprofundados:{},progress:{done:{},attempts:0,correct:0},question:null,answered:false,mode:"lesson",session:null,ready:false,programId:null,programName:null,allowedIds:null,groups:[]};
 const ri=(min,max)=>min+Math.floor(Math.random()*(max-min+1));
 const shuffled=a=>{const b=a.slice();for(let i=b.length-1;i>0;i--){const j=ri(0,i);[b[i],b[j]]=[b[j],b[i]]}return b};
 function loadProgress(){try{const p=JSON.parse(localStorage.getItem(STORE)||"null");if(p&&typeof p==="object"&&p.done&&typeof p.done==="object"){state.progress={done:p.done,attempts:Number(p.attempts)||0,correct:Number(p.correct)||0}}}catch{}}
@@ -107,16 +107,23 @@ function buildDynamic(kind,level){
  const opts=shuffled(unique.slice(0,4));
  return {pergunta:question,alternativas:opts.map(String),correta:opts.findIndex(v=>v===result),feedback:solution,generated:true};
 }
-function makeQuestion(lesson){return lesson.gerador?buildDynamic(lesson.gerador,state.level):(lesson.questoes||[])[0]||null}
+
+function shuffleQuestion(q){if(!q||!Array.isArray(q.alternativas)||q.alternativas.length!==4||!Number.isInteger(q.correta)||q.correta<0||q.correta>3)return null;const a=shuffled(q.alternativas.map((text,original)=>({text:String(text),original})));return {...q,alternativas:a.map(x=>x.text),correta:a.findIndex(x=>x.original===q.correta)}}
+function makeQuestion(lesson){if(!lesson)return null;const levelQuestions=state.aprofundados[lesson.id]?.questoesPorNivel?.[state.level];let q;
+if(state.level!=="iniciante"&&Array.isArray(levelQuestions)&&levelQuestions.length)q=levelQuestions[ri(0,levelQuestions.length-1)];
+else if(lesson.gerador)q=buildDynamic(lesson.gerador,state.level);
+else {const list=lesson.questoes||[];q=list[ri(0,list.length-1)]||null}
+return shuffleQuestion(q)}
+
 function quizMarkup(q,{session=false}={}){
  if(!q)return '<p class="lesson-notice">A prática desta aula está sendo organizada.</p>';
  const answers=q.alternativas.map((text,i)=>'<button type="button" class="lesson-option" data-answer="'+i+'" '+(state.answered?"disabled":"")+'>'+escapeHTML(String.fromCharCode(65+i)+") "+text)+'</button>').join("");
- return '<div class="lesson-quiz" id="lesson-quiz"><div class="lesson-quiz-header"><strong>'+(session?"Questão "+(state.session.index+1)+" de "+state.session.questions.length:"Agora é sua vez")+'</strong><span class="tag">Escolha uma resposta</span></div><h4>'+escapeHTML(q.pergunta)+'</h4><div class="lesson-options">'+answers+'</div><div id="lesson-feedback" class="lesson-feedback" role="status" aria-live="polite" hidden></div></div>';
+ return '<div class="lesson-quiz" id="lesson-quiz"><div class="lesson-quiz-header"><strong>'+(session?"Questão "+(state.session.index+1)+" de "+state.session.questions.length:"Agora é sua vez")+'</strong><span class="tag">Escolha uma resposta</span></div><h4>'+escapeHTML(q.pergunta)+'</h4><div class="lesson-options">'+answers+'</div><div class="lesson-hint-control"><button class="btn outline" type="button" data-show-hint>Ver uma dica</button><p class="lesson-hint" id="lesson-hint" hidden>'+escapeHTML(q.dica||"Identifique os dados, decida o método e resolva sem olhar as alternativas.")+'</p></div><div id="lesson-feedback" class="lesson-feedback" role="status" aria-live="polite" hidden></div></div>';
 }
 function practiceExam(subject){
  const included=subjectLessons(subject);const set=shuffled(included.filter(x=>x.questoes?.length)).slice(0,Math.min(10,included.length));
  if(!set.length)return;
- state.mode="session";state.session={subject,questions:set.map(l=>({lesson:l,question:l.gerador?buildDynamic(l.gerador,state.level):l.questoes[0]})),index:0,score:0,answered:false};
+ state.mode="session";state.session={subject,questions:set.map(l=>({lesson:l,question:makeQuestion(l)})),index:0,score:0,answered:false};
  state.answered=false;state.question=state.session.questions[0].question;
  renderSession();
  $("academy-reader").scrollIntoView({behavior:"smooth",block:"start"});
@@ -136,13 +143,17 @@ function renderReader(){
  const label=state.subject==="Todas"?(state.groups.find(g=>g.ids.has(lesson.id))?.nome||lesson.materia):state.subject;
  const included=subjectLessons(label);const total=included.length;
  const done=included.filter(x=>state.progress.done[doneKey(x.id)]).length;
+ const deep=state.aprofundados[lesson.id]||null;
  const generated=!!lesson.gerador;
+ const hasLevels=generated||!!deep?.questoesPorNivel;
  state.question=makeQuestion(lesson);state.answered=false;
  const theory=escapeHTML(lesson.teoria).replace(/\n/g,"</p><p class=\"lesson-text\">");
  const steps=(lesson.passos||[]).map(x=>'<li>'+escapeHTML(x)+'</li>').join("");
  const d="<div class='lesson-progressline'><span style='width:"+Math.round(100*done/total)+"%'></span></div>";
- const level=generated?'<label class="lesson-level">Dificuldade <select id="lesson-difficulty"><option value="iniciante" '+(state.level==="iniciante"?"selected":"")+'>Iniciante</option><option value="intermediario" '+(state.level==="intermediario"?"selected":"")+'>Intermediário</option><option value="avancado" '+(state.level==="avancado"?"selected":"")+'>Avançado</option></select></label>':"";
- $("academy-reader").innerHTML='<div class="lesson-eyebrow"><span>'+escapeHTML(label+" / "+lesson.unidade)+'</span><span>'+(state.progress.done[doneKey(lesson.id)]?"✓ Aula concluída":"Aula prática")+'</span></div><h3>'+escapeHTML(lesson.titulo)+'</h3>'+d+'<div class="lesson-stats">'+done+' de '+total+' aulas concluídas nesta matéria</div><h4>Entenda a matéria</h4><p class="lesson-text">'+theory+'</p><h4>Aprenda passo a passo</h4><ol class="lesson-steps">'+steps+'</ol><div class="lesson-example"><strong>Exemplo resolvido</strong><p>'+escapeHTML(lesson.exemplo)+'</p><div class="lesson-solution">'+escapeHTML(lesson.resolucao)+'</div></div><div class="lesson-navigation">'+level+'<button type="button" class="btn outline" data-session-start="'+escapeHTML(lesson.materia)+'">Revisão com questões da matéria</button></div>'+quizMarkup(state.question)+'<div class="lesson-navigation">'+(generated?'<button class="btn primary" data-new-exercise type="button">Novo exercício</button>':'<button class="btn outline" data-retry-exercise type="button">Tentar de novo</button>')+'<button class="btn primary" data-next-lesson type="button">Próxima aula</button></div><p class="lesson-notice">Aulas autorais de estudo. Conteúdo e exercícios não são o edital de concurso nem aprovação automática da FAAAB. Os resultados ficam apenas neste navegador.</p>';
+ const level=hasLevels?'<label class="lesson-level">Dificuldade <select id="lesson-difficulty"><option value="iniciante" '+(state.level==="iniciante"?"selected":"")+'>Fundamentos</option><option value="intermediario" '+(state.level==="intermediario"?"selected":"")+'>Intermediário</option><option value="avancado" '+(state.level==="avancado"?"selected":"")+'>Avançado</option></select></label>':"";
+ const deepMarkup=deep?'<section class="lesson-deep"><h4>Por que funciona</h4><p>'+escapeHTML(deep.porque)+'</p><h4>Erro comum</h4><p>'+escapeHTML(deep.armadilha)+'</p><h4>Como conferir</h4><p>'+escapeHTML(deep.verificacao)+'</p></section>':'<section class="lesson-deep"><h4>Explique seu raciocínio</h4><p>Refaça o exemplo sem olhar a resposta. Diga por que escolheu cada operação e confira o resultado.</p></section>';
+
+ $("academy-reader").innerHTML='<div class="lesson-eyebrow"><span>'+escapeHTML(label+" / "+lesson.unidade)+'</span><span>'+(state.progress.done[doneKey(lesson.id)]?"✓ Aula concluída":"Aula prática")+'</span></div><h3>'+escapeHTML(lesson.titulo)+'</h3>'+d+'<div class="lesson-stats">'+done+' de '+total+' aulas concluídas nesta matéria</div><h4>Entenda a matéria</h4><p class="lesson-text">'+theory+'</p><h4>Aprenda passo a passo</h4><ol class="lesson-steps">'+steps+'</ol><div class="lesson-example"><strong>Exemplo resolvido</strong><p>'+escapeHTML(lesson.exemplo)+'</p><div class="lesson-solution">'+escapeHTML(lesson.resolucao)+'</div></div>'+deepMarkup+'<div class="lesson-navigation">'+level+'<button type="button" class="btn outline" data-session-start="'+escapeHTML(lesson.materia)+'">Revisão com questões da matéria</button></div>'+quizMarkup(state.question)+'<div class="lesson-navigation">'+(generated?'<button class="btn primary" data-new-exercise type="button">Novo exercício</button>':'<button class="btn outline" data-retry-exercise type="button">Tentar de novo</button>')+'<button class="btn primary" data-next-lesson type="button">Próxima aula</button></div><p class="lesson-notice">Aulas autorais de estudo. Conteúdo e exercícios não são o edital de concurso nem aprovação automática da FAAAB. Os resultados ficam apenas neste navegador.</p>';
 }
 function respond(index){
  if(state.answered||!state.question)return;
@@ -152,7 +163,7 @@ function respond(index){
  record(lesson,correct);
  const choices=$("academy-reader").querySelectorAll("[data-answer]");
  choices.forEach(b=>{const i=Number(b.dataset.answer);b.disabled=true;b.classList.toggle("correct",i===q.correta);b.classList.toggle("wrong",i===index&&!correct)});
- const result=$("lesson-feedback");if(result){result.hidden=false;result.classList.toggle("error",!correct);result.innerHTML='<strong>'+(correct?"✓ Resposta correta.":"✗ Ainda não. A alternativa correta é "+String.fromCharCode(65+q.correta)+".")+'</strong><p>'+escapeHTML(q.feedback||"Revise o exemplo resolvido antes de tentar novamente.")+'</p>'}
+ const result=$("lesson-feedback");if(result){result.hidden=false;result.classList.toggle("error",!correct);result.innerHTML='<strong>'+(correct?"✓ Resposta correta.":"✗ Vamos corrigir. Alternativa correta: "+String.fromCharCode(65+q.correta)+".")+'</strong><h5>Raciocínio da resolução</h5><p>'+escapeHTML(q.feedback||"Revise o exemplo resolvido antes de tentar novamente.")+'</p><p class="lesson-error-note">'+(correct?"Agora justifique as etapas sem consultar a solução.":"Compare seu caminho com o correto e refaça o exercício antes de avançar.")+'</p>'}
  if(state.mode==="session"){if(correct)state.session.score++;state.session.answered=true;$("lesson-next-question").hidden=false;$("lesson-next-question").textContent=state.session.index+1===state.session.questions.length?"Ver resultado da revisão":"Próxima questão"}
  else {renderList();const caption=$("academy-reader").querySelector(".lesson-eyebrow span:last-child");if(caption&&correct)caption.textContent="✓ Aula concluída"}
 }
@@ -178,6 +189,7 @@ function events(){
   if(btn.hasAttribute("data-answer"))respond(Number(btn.dataset.answer));
   else if(btn.hasAttribute("data-new-exercise")){state.question=makeQuestion(state.selected);state.answered=false;renderQuestionOnly()}
   else if(btn.hasAttribute("data-retry-exercise")){state.question=makeQuestion(state.selected);state.answered=false;renderQuestionOnly()}
+  else if(btn.hasAttribute("data-show-hint")){const h=$("lesson-hint");if(h){h.hidden=false;btn.hidden=true}}
   else if(btn.hasAttribute("data-next-lesson"))nextLesson();
   else if(btn.hasAttribute("data-session-start"))practiceExam(btn.dataset.sessionStart);
   else if(btn.hasAttribute("data-session-next")){state.session.index++;state.session.answered=false;renderSession()}
@@ -195,11 +207,12 @@ async function boot(){
  if(!$("academia"))return;
  loadProgress();events();
  try{
-  const urls=["dados/aulas_matematica.json","dados/aulas_linguagens_humanas.json","dados/aulas_ciencias_exatas.json"];
+  const urls=["dados/aulas_matematica.json","dados/aulas_linguagens_humanas.json","dados/aulas_ciencias_exatas.json","dados/desafios_academia.json"];
   const responses=await Promise.all(urls.map(u=>fetch(u)));
   if(responses.some(r=>!r.ok))throw Error("Um arquivo de aula não foi encontrado");
   const data=await Promise.all(responses.map(r=>r.json()));
-  const lessons=data.flatMap(x=>x.aulas||[]);
+  const lessons=data.slice(0,3).flatMap(x=>x.aulas||[]);
+  state.aprofundados=data[3].aulas||{};
   const ids=new Set();
   for(const lesson of lessons){if(!lesson.id||ids.has(lesson.id)||!lesson.materia||!lesson.titulo||!lesson.teoria||!lesson.resolucao||!lesson.questoes?.[0])throw Error("Aula incompleta: "+lesson.id);ids.add(lesson.id)}
   state.lessons=lessons;state.ready=true;summary();
