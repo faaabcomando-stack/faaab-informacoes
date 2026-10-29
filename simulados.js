@@ -5,6 +5,8 @@ const safe=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"
 const STORE="faaab-simulados-prova-v1";
 const state={data:null,exam:null,questions:[],index:0,score:0,answered:false,history:{}};
 const shuffle=xs=>{const v=xs.slice();for(let i=v.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[v[i],v[j]]=[v[j],v[i]]}return v};
+function shuffleOptions(q){if(!q||!Array.isArray(q.alternativas)||q.alternativas.length!==4||!Number.isInteger(q.correta))throw Error("Questão incompleta");const a=shuffle(q.alternativas.map((text,original)=>({text,original})));return {...q,alternativas:a.map(x=>x.text),correta:a.findIndex(x=>x.original===q.correta)}}
+
 function loadHistory(){try{const x=JSON.parse(localStorage.getItem(STORE)||"{}");if(x&&typeof x==="object")state.history=x}catch{}}
 function saveHistory(){try{localStorage.setItem(STORE,JSON.stringify(state.history))}catch{}}
 function current(){return state.questions[state.index]}
@@ -29,13 +31,13 @@ async function start(examId,title){
  const root=$("specific-quiz");
  if(!root)return;
  root.hidden=false;$("specific-quiz-title").textContent=title||"Treino da prova";
- $("specific-quiz-subtitle").textContent="Questões originais com explicação da resposta, agrupadas exclusivamente para esta prova. Não substituem o edital.";
+ $("specific-quiz-subtitle").textContent="Questões autorais A–D com alternativas embaralhadas e resolução comentada. Este treino não substitui o edital nem uma prova oficial.";
  $("specific-quiz-content").textContent="Carregando as questões desta seleção...";
  root.scrollIntoView({behavior:"smooth",block:"start"});
  try{
   const ok=await load();if(!ok)throw Error("Banco de questões indisponível");
   const d=state.data.provas[examId];if(!d?.questoes?.length)throw Error("Ainda não foram cadastradas questões para esta prova.");
-  state.exam={id:examId,title};state.questions=shuffle(d.questoes);state.index=0;state.score=0;show();
+  state.exam={id:examId,title};state.questions=shuffle(d.questoes).map(shuffleOptions);state.index=0;state.score=0;show();
  }catch(e){$("specific-quiz-content").textContent=e.message}
 }
 $("specific-quiz-close").addEventListener("click",()=>{$("specific-quiz").hidden=true});

@@ -71,3 +71,16 @@
 @media(max-width:1000px){.academy-layout{grid-template-columns:minmax(220px,280px) minmax(0,1fr)}}
 @media(max-width:760px){.academy{padding:13px;margin:12px -1px 16px}.academy-heading{flex-direction:column;gap:10px}.academy-total{width:100%;display:flex;align-items:center;justify-content:space-between;text-align:left}.academy-total strong{font-size:22px}.academy-controls{flex-direction:column;align-items:stretch}.academy-controls button{width:100%}.academy-subjects{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin;gap:7px;padding-bottom:15px}.academy-subjects button{flex:none;white-space:nowrap}.academy-layout{display:flex;flex-direction:column}.academy-listbox{position:static;max-height:none;width:100%;padding:10px}.academy-lessons{display:grid;grid-template-columns:minmax(0,1fr);max-height:300px;overflow-y:auto;overscroll-behavior-y:contain}.academy-reader{width:100%;padding:17px;min-height:330px}.lesson-options{grid-template-columns:minmax(0,1fr)}.lesson-option{min-height:52px}.academy-by-exam{padding:0 12px}.lesson-text{font-size:14px}.lesson-example{padding:14px}.academy-lesson-text b{font-size:13px}}
 @media(max-width:390px){.academy-reader{padding:13px}.academy-quiz,.lesson-quiz{padding:12px}.lesson-navigation button{width:100%}}
+
+/* Estudos FAAAB — leitura, raciocínio e dicas sem entrega antecipada do gabarito */
+.lesson-deep{border-left:3px solid #82997f;background:#f8faf6;padding:19px 23px;margin:20px 0 25px}
+.lesson-deep h4{font:normal 22px Georgia,serif;margin:16px 0 7px;color:#264e36}
+.lesson-deep h4:first-child{margin-top:0}
+.lesson-deep p{font-size:14px;line-height:1.7;color:#4a6150;margin:0 0 9px}
+.lesson-hint-control{margin:16px 0 6px}
+.lesson-hint-control .btn{min-height:35px;font-size:12px}
+.lesson-hint{padding:13px;border-left:3px solid #aa9255;background:#fdf9ee;margin-top:9px;color:#594d2c}
+.lesson-feedback h5{margin:14px 0 5px;font-size:14px}
+.lesson-error-note{font-size:12px;border-top:1px solid #d0ded2;padding-top:9px}
+.academy-reader .lesson-example{line-height:1.7}
+@media(max-width:650px){.lesson-deep{padding:15px}.lesson-deep h4{font-size:20px}}
