@@ -187,8 +187,8 @@ const V3={
   const availableKeys=Object.keys(sections).filter(key=>{
    if(key==="sobre")return true;
    if(key==="estrutura")return !!unit||parentUnits.length>0||e.tipo==="brigada";
-   if(key==="cargos")return !!unit?.hierarquiaInterna||e.tipo==="centro"||!!perfil?.atividades?.length;
-   if(key==="treinamentos")return !!relatedCourses.length||!!perfil?.formacao?.length||(e.forca==="FTB"&&e.tipo==="unidade")||e.tipo==="brigada";
+   if(key==="cargos")return unit?.hierarquiaInterna?.modelo==="batalhao"||e.tipo==="centro";
+   if(key==="treinamentos")return !!relatedCourses.length||!!perfil?.formacao?.length;
    if(key==="sistemas")return !!perfil?.sistemas?.length;
    return false;
   });
