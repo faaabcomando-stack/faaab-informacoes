@@ -2102,6 +2102,146 @@
           }
         ]
       }
+    },
+    "mat-02": {
+      "porque": "Somar números grandes não muda a ideia de juntar partes. Podemos decompor dezenas, centenas ou usar compensação para calcular sem perder os valores.",
+      "armadilha": "Esquecer as dezenas ao transportar ou somar parcelas incompletas.",
+      "verificacao": "Subtraia uma parcela do total para recuperar a outra.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Uma remessa tem 147 itens e outra tem 89. Quantos itens chegaram?",
+            "alternativas": [
+              "234",
+              "235",
+              "236",
+              "237"
+            ],
+            "correta": 2,
+            "feedback": "147+89=147+(90−1)=237−1=236. Também é possível separar dezenas e unidades.",
+            "dica": "Use compensação: some 90 e depois retire 1."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Chegaram lotes de 145, 78 e 96 itens. Qual o total?",
+            "alternativas": [
+              "309",
+              "319",
+              "329",
+              "339"
+            ],
+            "correta": 1,
+            "feedback": "145+78=223; 223+96=319. Você pode agrupar 78+96=174 e depois somar 145.",
+            "dica": "Junte dois lotes antes de acrescentar o terceiro."
+          }
+        ]
+      }
+    },
+    "mat-03": {
+      "porque": "Subtrair exige manter a ideia de diferença. Em contas com empréstimo, cada troca de dezena por unidades conserva o valor total.",
+      "armadilha": "Subtrair o menor algarismo do maior em cada coluna sem considerar sua posição.",
+      "verificacao": "Some o resultado com o que foi retirado; deve retornar o total inicial.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Um estoque tinha 426 itens. Após usar 187, quantos sobraram?",
+            "alternativas": [
+              "229",
+              "239",
+              "249",
+              "259"
+            ],
+            "correta": 1,
+            "feedback": "426−187=239. Confira: 239+187=426.",
+            "dica": "Faça a subtração por casas e confira pela soma."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Um depósito tinha 650 itens, gastou 245 e recebeu 80. Quantos itens tem agora?",
+            "alternativas": [
+              "405",
+              "425",
+              "485",
+              "495"
+            ],
+            "correta": 2,
+            "feedback": "650−245=405; depois 405+80=485. A reposição vem após a retirada.",
+            "dica": "O segundo movimento aumenta o estoque."
+          }
+        ]
+      }
+    },
+    "mat-04": {
+      "porque": "Multiplicar dois números de dois algarismos pode ser feito pela distributiva: 18×24=18×20+18×4.",
+      "armadilha": "Multiplicar só as dezenas e esquecer as unidades.",
+      "verificacao": "Divida um fator e compare: o resultado deve manter o produto.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Uma seção recebeu 16 caixas de 18 itens. Quantos itens chegaram?",
+            "alternativas": [
+              "268",
+              "278",
+              "288",
+              "298"
+            ],
+            "correta": 2,
+            "feedback": "16×18=16×(20−2)=320−32=288.",
+            "dica": "Decomponha 18 em 20−2."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Há 18 caixas com 24 kits, mas 27 kits foram separados. Quantos kits restaram?",
+            "alternativas": [
+              "378",
+              "405",
+              "414",
+              "459"
+            ],
+            "correta": 1,
+            "feedback": "18×24=432; 432−27=405. A subtração ocorre depois da multiplicação.",
+            "dica": "Encontre o total antes de retirar a reserva."
+          }
+        ]
+      }
+    },
+    "mat-05": {
+      "porque": "Uma divisão pode medir o número de grupos completos ou quantos grupos são necessários. Quando sobra item, às vezes é preciso arredondar para mais.",
+      "armadilha": "Tratar o resto como se não precisasse ser acondicionado.",
+      "verificacao": "Multiplique o quociente pelo divisor e some o resto para conferir o total.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "144 itens serão organizados igualmente em 12 caixas. Quantos itens por caixa?",
+            "alternativas": [
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "correta": 2,
+            "feedback": "144÷12=12, pois 12×12=144.",
+            "dica": "Descubra que número multiplicado por 12 dá 144."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "157 materiais devem ser guardados em caixas de 12. Quantas caixas são necessárias?",
+            "alternativas": [
+              "12",
+              "13",
+              "14",
+              "15"
+            ],
+            "correta": 2,
+            "feedback": "13 caixas guardam 156 materiais, e sobra 1. Portanto, é necessária a 14ª caixa.",
+            "dica": "Divida e observe se sobra algum material."
+          }
+        ]
+      }
     }
   }
 }
