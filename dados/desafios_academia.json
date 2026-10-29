@@ -1,0 +1,1057 @@
+{
+  "versao": 1,
+  "objetivo": "Questões contextualizadas por dificuldade, dicas sem revelar resposta, raciocínio e análise de erro; desafios autorais complementares às 104 aulas",
+  "instrucoes": "Questões com alternativas de mesmo tipo, sem pistas óbvias por comprimento, resposta embaralhada na interface. Para aulas não ampliadas, manter prática base sem rotular como avançada.",
+  "aulas": {
+    "mat-06": {
+      "porque": "A ordem das operações evita que a mesma expressão tenha respostas diferentes. Multiplicar e dividir têm a mesma prioridade; resolver da esquerda para a direita.",
+      "armadilha": "Somar antes de multiplicar apenas porque a soma aparece primeiro.",
+      "verificacao": "Refaça por etapas, escrevendo uma linha para cada operação.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Calcule 18 − 3 × (4 + 2) ÷ 2.",
+            "alternativas": [
+              "9",
+              "15",
+              "27",
+              "45"
+            ],
+            "correta": 0,
+            "feedback": "Primeiro (4+2)=6. Depois 3×6=18 e 18÷2=9. Por fim 18−9=9.",
+            "dica": "Resolva primeiro o parêntese e depois multiplicação/divisão na ordem."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma expressão é 48 ÷ (2×3) + 5² − 7. Qual é seu valor?",
+            "alternativas": [
+              "24",
+              "26",
+              "28",
+              "30"
+            ],
+            "correta": 1,
+            "feedback": "(2×3)=6; 48÷6=8; 5²=25. Então 8+25−7=26.",
+            "dica": "Não trate o expoente como multiplicação por dois."
+          }
+        ]
+      }
+    },
+    "mat-08": {
+      "porque": "Uma fração representa uma relação entre partes e o todo; equivalência preserva a quantidade ao multiplicar numerador e denominador pelo mesmo número.",
+      "armadilha": "Comparar apenas numeradores, ignorando os denominadores.",
+      "verificacao": "Converta as frações para denominadores iguais ou compare multiplicando em cruz.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Uma turma completou 3/8 de uma atividade pela manhã e 1/4 à tarde. Qual fração foi concluída?",
+            "alternativas": [
+              "4/12",
+              "4/8",
+              "5/8",
+              "3/12"
+            ],
+            "correta": 2,
+            "feedback": "1/4=2/8. Assim, 3/8+2/8=5/8. Nunca some diretamente os denominadores.",
+            "dica": "Escreva 1/4 em oitavos."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Dois grupos ocuparam 5/12 e 1/3 de uma área. Qual fração ainda ficou livre?",
+            "alternativas": [
+              "1/4",
+              "1/3",
+              "5/12",
+              "7/12"
+            ],
+            "correta": 0,
+            "feedback": "1/3=4/12; ocupado 5/12+4/12=9/12. Livre 12/12−9/12=3/12=1/4.",
+            "dica": "Primeiro calcule a parte ocupada; depois subtraia de um inteiro."
+          }
+        ]
+      }
+    },
+    "mat-09": {
+      "porque": "Para somar frações com denominadores diferentes, precisamos medir partes do mesmo tamanho. Multiplicação e divisão seguem regras distintas.",
+      "armadilha": "Somar numerador e denominador ou inverter a fração errada na divisão.",
+      "verificacao": "Verifique a resposta usando números decimais aproximados.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Quanto é 2/3 + 3/4?",
+            "alternativas": [
+              "5/7",
+              "13/12",
+              "17/12",
+              "11/12"
+            ],
+            "correta": 2,
+            "feedback": "MMC de 3 e 4 é 12. 2/3=8/12; 3/4=9/12; soma 17/12.",
+            "dica": "Transforme ambas em doze avos."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Calcule (3/5 ÷ 9/10) × 4/3.",
+            "alternativas": [
+              "2/3",
+              "8/9",
+              "10/9",
+              "4/5"
+            ],
+            "correta": 1,
+            "feedback": "3/5 ÷ 9/10 = 3/5 × 10/9 = 2/3; depois 2/3 × 4/3 = 8/9.",
+            "dica": "Dividir por fração é multiplicar pelo inverso da segunda."
+          }
+        ]
+      }
+    },
+    "mat-11": {
+      "porque": "Percentuais sempre dependem de uma base. Dois percentuais sucessivos não se somam automaticamente: a segunda alteração usa o novo valor.",
+      "armadilha": "Calcular 20% e 10% sobre a mesma base quando um desconto vem depois do outro.",
+      "verificacao": "Faça um cálculo inverso ou compare a diferença com o valor inicial.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Um produto custa R$ 240. Após desconto de 15%, quanto passa a custar?",
+            "alternativas": [
+              "R$ 204",
+              "R$ 205",
+              "R$ 206",
+              "R$ 208"
+            ],
+            "correta": 0,
+            "feedback": "15% de 240 é 36 (10%=24 e 5%=12). Preço final 240−36=204.",
+            "dica": "Primeiro encontre 10% e 5%."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Um equipamento de R$ 200 recebe aumento de 20% e, depois, desconto de 20%. Qual é o preço final?",
+            "alternativas": [
+              "R$ 192",
+              "R$ 196",
+              "R$ 200",
+              "R$ 208"
+            ],
+            "correta": 0,
+            "feedback": "200×1,20=240; 240×0,80=192. O desconto incide sobre 240, não sobre 200.",
+            "dica": "Faça as duas transformações em sequência, não some percentuais."
+          }
+        ]
+      }
+    },
+    "mat-13": {
+      "porque": "A regra de três só funciona depois de identificar as grandezas. Quando uma aumenta e a outra diminui na mesma proporção, a relação é inversa.",
+      "armadilha": "Usar multiplicação cruzada sem verificar se a relação é direta ou inversa.",
+      "verificacao": "Teste uma situação extrema: dobrar trabalhadores deveria diminuir o prazo.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Quatro impressoras fazem 120 folhas em 3 minutos. No mesmo ritmo, seis impressoras fazem quantas folhas em 5 minutos?",
+            "alternativas": [
+              "250",
+              "270",
+              "300",
+              "360"
+            ],
+            "correta": 2,
+            "feedback": "Cada impressora faz 120÷(4×3)=10 folhas/minuto. Seis em 5 min fazem 6×5×10=300.",
+            "dica": "Descubra a produção por impressora por minuto."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Oito pessoas concluem uma tarefa em 15 dias. Mantendo a produtividade, 12 pessoas concluiriam em quantos dias?",
+            "alternativas": [
+              "8",
+              "10",
+              "12",
+              "18"
+            ],
+            "correta": 1,
+            "feedback": "O esforço é 8×15=120 pessoa-dias. Com 12 pessoas, 120÷12=10 dias. Relação inversa.",
+            "dica": "Mais trabalhadores significam menos dias; conserve pessoa-dias."
+          }
+        ]
+      }
+    },
+    "mat-15": {
+      "porque": "Uma potência representa multiplicação repetida. Potências de mesma base obedecem propriedades que simplificam expressões.",
+      "armadilha": "Multiplicar expoentes em a^m × a^n em vez de somá-los.",
+      "verificacao": "Expanda potências pequenas para conferir a regra usada.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Calcule 2³ × 2⁴ ÷ 2².",
+            "alternativas": [
+              "16",
+              "32",
+              "64",
+              "128"
+            ],
+            "correta": 1,
+            "feedback": "Somamos expoentes na multiplicação e subtraímos na divisão: 2^(3+4−2)=2^5=32.",
+            "dica": "Mantenha a base e opere apenas os expoentes."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Quanto vale (3²)³ ÷ 3⁴?",
+            "alternativas": [
+              "3",
+              "9",
+              "27",
+              "81"
+            ],
+            "correta": 1,
+            "feedback": "(3²)³=3^6; dividindo por 3^4 dá 3²=9.",
+            "dica": "Potência de potência multiplica expoentes."
+          }
+        ]
+      }
+    },
+    "mat-16": {
+      "porque": "√n é o valor não negativo cujo quadrado é n. Uma raiz que não é exata pode ser delimitada entre quadrados perfeitos próximos.",
+      "armadilha": "Confundir √(a+b) com √a+√b; isso não vale em geral.",
+      "verificacao": "Eleve a resposta ao quadrado e confira o intervalo.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Sem calculadora, entre quais números inteiros está √70?",
+            "alternativas": [
+              "7 e 8",
+              "8 e 9",
+              "9 e 10",
+              "10 e 11"
+            ],
+            "correta": 1,
+            "feedback": "8²=64 e 9²=81. Como 70 fica entre 64 e 81, √70 está entre 8 e 9.",
+            "dica": "Procure os quadrados perfeitos vizinhos."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Quanto vale √144 − √49 + √25?",
+            "alternativas": [
+              "7",
+              "10",
+              "12",
+              "14"
+            ],
+            "correta": 1,
+            "feedback": "√144=12, √49=7 e √25=5. Então 12−7+5=10.",
+            "dica": "Resolva cada raiz antes de subtrair ou somar."
+          }
+        ]
+      }
+    },
+    "mat-17": {
+      "porque": "Isolar a incógnita é preservar o equilíbrio de uma igualdade. Cada operação feita de um lado deve ser repetida do outro.",
+      "armadilha": "Mudar um termo de lado sem entender a operação ou esquecer de distribuir o sinal negativo.",
+      "verificacao": "Substitua o valor encontrado na expressão original.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Resolva 4(x−3)+2=18.",
+            "alternativas": [
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "correta": 2,
+            "feedback": "4x−12+2=18, portanto 4x=28 e x=7. Conferência: 4×4+2=18.",
+            "dica": "Distribua o 4 antes de isolar x."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "A solução de 3(2x−1)−2(x+4)=9 é:",
+            "alternativas": [
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "correta": 1,
+            "feedback": "6x−3−2x−8=9, então 4x−11=9, 4x=20 e x=5.",
+            "dica": "Faça distributiva com atenção ao sinal antes do parêntese."
+          }
+        ]
+      }
+    },
+    "mat-18": {
+      "porque": "Um sistema reúne condições que precisam ser verdadeiras ao mesmo tempo. Substituir uma incógnita ou eliminar termos ajuda a encontrar a única solução.",
+      "armadilha": "Resolver só uma das equações ou somar sem controlar os sinais.",
+      "verificacao": "Substitua o par ordenado nas duas equações.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Se x+y=15 e x−y=3, quanto é x?",
+            "alternativas": [
+              "6",
+              "8",
+              "9",
+              "12"
+            ],
+            "correta": 2,
+            "feedback": "Somando as equações, 2x=18, então x=9. Logo y=6. As duas condições são atendidas.",
+            "dica": "Some as equações para eliminar y."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Num sistema, 2x+3y=19 e x−y=2. Qual é o valor de y?",
+            "alternativas": [
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "correta": 1,
+            "feedback": "Da segunda, x=y+2. Substituindo: 2(y+2)+3y=19, 5y=15, então y=3.",
+            "dica": "Isole x na segunda equação antes de substituir."
+          }
+        ]
+      }
+    },
+    "mat-19": {
+      "porque": "Uma equação do segundo grau pode ter duas, uma ou nenhuma raiz real. Fatoração e discriminante são formas de encontrar as soluções.",
+      "armadilha": "Esquecer uma das raízes ou trocar o sinal do coeficiente b.",
+      "verificacao": "Substitua cada raiz na equação para ver se zera.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Quais são as raízes de x²−7x+10=0?",
+            "alternativas": [
+              "1 e 10",
+              "2 e 5",
+              "−2 e −5",
+              "−1 e −10"
+            ],
+            "correta": 1,
+            "feedback": "x²−7x+10=(x−2)(x−5). O produto é zero quando x=2 ou x=5.",
+            "dica": "Procure dois números com soma 7 e produto 10."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "A função f(x)=x²−8x+12 atinge seu mínimo em qual valor de x?",
+            "alternativas": [
+              "2",
+              "3",
+              "4",
+              "6"
+            ],
+            "correta": 2,
+            "feedback": "O vértice fica em x=−b/(2a)=8/2=4. f(4)=−4.",
+            "dica": "Use a coordenada horizontal do vértice."
+          }
+        ]
+      }
+    },
+    "mat-20": {
+      "porque": "Numa função afim y=ax+b, o coeficiente a mede a variação de y a cada aumento de uma unidade em x; b é o valor quando x=0.",
+      "armadilha": "Confundir a taxa de crescimento com o valor inicial.",
+      "verificacao": "Use dois pontos da tabela para verificar a variação por unidade.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Um serviço cobra R$ 12 fixos e R$ 5 por unidade. Qual é o custo de 7 unidades?",
+            "alternativas": [
+              "R$ 35",
+              "R$ 42",
+              "R$ 47",
+              "R$ 49"
+            ],
+            "correta": 2,
+            "feedback": "C=12+5×7=12+35=47. A parte fixa não é multiplicada.",
+            "dica": "Separe valor fixo de valor variável."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma função afim passa pelos pontos (1,5) e (4,17). Quanto vale f(0)?",
+            "alternativas": [
+              "0",
+              "1",
+              "3",
+              "4"
+            ],
+            "correta": 1,
+            "feedback": "a=(17−5)/(4−1)=4. Usando (1,5): 5=4×1+b, logo b=1 e f(0)=1.",
+            "dica": "Ache a taxa de variação e depois b."
+          }
+        ]
+      }
+    },
+    "mat-24": {
+      "porque": "Área mede a superfície coberta em unidades quadradas. Figuras compostas podem ser divididas ou calculadas subtraindo partes.",
+      "armadilha": "Somar comprimentos de bordas achando que está calculando área.",
+      "verificacao": "Confira se a unidade final é cm² ou m².",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Um terreno retangular mede 18 m por 12 m. Uma praça de 6 m por 4 m ocupa parte dele. Qual área restante?",
+            "alternativas": [
+              "176 m²",
+              "186 m²",
+              "192 m²",
+              "216 m²"
+            ],
+            "correta": 2,
+            "feedback": "Área total 18×12=216 m². Praça 6×4=24 m². Restante 216−24=192 m².",
+            "dica": "Calcule separadamente área total e área ocupada."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Um triângulo tem base 14 cm e altura 9 cm. Qual sua área?",
+            "alternativas": [
+              "49 cm²",
+              "56 cm²",
+              "63 cm²",
+              "126 cm²"
+            ],
+            "correta": 2,
+            "feedback": "A=(base×altura)/2=14×9/2=63 cm².",
+            "dica": "Não se esqueça de dividir por dois."
+          }
+        ]
+      }
+    },
+    "mat-27": {
+      "porque": "Pitágoras relaciona os quadrados dos catetos e da hipotenusa SOMENTE em triângulos retângulos. A hipotenusa é o lado oposto ao ângulo de 90°.",
+      "armadilha": "Somar os comprimentos em vez de seus quadrados ou usar o teorema em qualquer triângulo.",
+      "verificacao": "O valor da hipotenusa deve ser maior que qualquer cateto.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Uma escada de 13 m alcança uma parede a 12 m de altura. Qual a distância do pé da escada à parede?",
+            "alternativas": [
+              "3 m",
+              "5 m",
+              "7 m",
+              "9 m"
+            ],
+            "correta": 1,
+            "feedback": "13²=12²+x²; x²=169−144=25; x=5 m.",
+            "dica": "A escada é a hipotenusa."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Num triângulo retângulo, os catetos medem 9 e 12 cm. Qual é a hipotenusa?",
+            "alternativas": [
+              "13 cm",
+              "14 cm",
+              "15 cm",
+              "16 cm"
+            ],
+            "correta": 2,
+            "feedback": "h²=9²+12²=81+144=225; h=15 cm.",
+            "dica": "Eleve ambos os catetos ao quadrado antes de somar."
+          }
+        ]
+      }
+    },
+    "mat-29": {
+      "porque": "Probabilidade exige contar resultados possíveis e favoráveis sob condições claras. Sem reposição, o segundo sorteio depende do primeiro.",
+      "armadilha": "Tratar sorteios sem reposição como independentes.",
+      "verificacao": "A probabilidade final deve ficar entre zero e um.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Uma caixa tem 4 bolas azuis e 6 vermelhas. Qual é a probabilidade de retirar uma azul?",
+            "alternativas": [
+              "20%",
+              "30%",
+              "40%",
+              "60%"
+            ],
+            "correta": 2,
+            "feedback": "Há 4 favoráveis entre 10: 4/10=40%.",
+            "dica": "Conte todas as bolas antes de dividir."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma urna tem 3 azuis e 2 verdes. Retirando duas sem reposição, qual é a probabilidade de ambas serem azuis?",
+            "alternativas": [
+              "20%",
+              "25%",
+              "30%",
+              "36%"
+            ],
+            "correta": 2,
+            "feedback": "Primeira azul: 3/5; segunda azul: 2/4. Multiplicando 6/20=30%.",
+            "dica": "Depois da primeira bola, restam quatro."
+          }
+        ]
+      }
+    },
+    "mat-30": {
+      "porque": "A média considera todos os valores; a mediana é o termo central após ordenar; a moda é o valor mais frequente.",
+      "armadilha": "Confundir mediana com média ou não ordenar os dados antes de localizar o centro.",
+      "verificacao": "Verifique se um valor extremo alterou a média, mas não a mediana.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "As notas 5, 7, 7, 9 e 12 têm qual mediana?",
+            "alternativas": [
+              "7",
+              "8",
+              "9",
+              "12"
+            ],
+            "correta": 0,
+            "feedback": "Os cinco valores já estão ordenados; o terceiro é 7.",
+            "dica": "A mediana usa a posição central, não a soma."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "As vendas foram 2, 3, 4, 4, 7 e 16. Qual é a mediana?",
+            "alternativas": [
+              "4",
+              "4,5",
+              "5",
+              "6"
+            ],
+            "correta": 0,
+            "feedback": "São seis valores, então a mediana é a média do 3º e 4º: (4+4)/2=4.",
+            "dica": "Para quantidade par, use os dois termos centrais."
+          }
+        ]
+      }
+    },
+    "por-01": {
+      "porque": "Inferir exige evidência no texto. Uma hipótese possível no mundo real não basta se o texto não a sustenta.",
+      "armadilha": "Escolher a alternativa mais dramática ou convincente sem localizar pista textual.",
+      "verificacao": "Aponte uma frase que sustente sua inferência.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Leia: 'A estrada amanheceu molhada. Joana levou guarda-chuva, embora o céu estivesse limpo.' Qual inferência é mais bem sustentada?",
+            "alternativas": [
+              "Choveu durante a noite.",
+              "Joana não viu o céu.",
+              "A estrada foi pintada.",
+              "O dia seria ensolarado."
+            ],
+            "correta": 0,
+            "feedback": "A estrada molhada sugere chuva anterior, mas não demonstra com certeza a causa. A inferência tem apoio no texto.",
+            "dica": "Use a pista 'amanheceu molhada'; não invente fatos."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Leia: 'O edital previa inscrições até sexta-feira. Miguel tentou se inscrever no sábado, mas o sistema já estava fechado.' O que se conclui?",
+            "alternativas": [
+              "O prazo foi prorrogado.",
+              "O sistema abriu tarde.",
+              "A tentativa foi fora do prazo.",
+              "Miguel já estava inscrito."
+            ],
+            "correta": 2,
+            "feedback": "O sábado ocorre após a sexta-feira, portanto a tentativa foi após o encerramento previsto.",
+            "dica": "Compare os dias mencionados no texto."
+          }
+        ]
+      }
+    },
+    "por-08": {
+      "porque": "O verbo concorda com o núcleo do sujeito; expressões intermediárias não mudam automaticamente esse núcleo.",
+      "armadilha": "Fazer o verbo concordar com o substantivo mais próximo.",
+      "verificacao": "Encontre o sujeito e pergunte quem pratica a ação.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Assinale a frase com concordância correta.",
+            "alternativas": [
+              "A lista de alunos chegaram.",
+              "A equipe de monitores chegou.",
+              "O grupo de turistas partiram.",
+              "As normas do curso mudou."
+            ],
+            "correta": 1,
+            "feedback": "O núcleo é 'equipe', singular; por isso 'chegou'. Nas demais frases os verbos não concordam com o núcleo.",
+            "dica": "Sublinhe lista, equipe, grupo e normas."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Qual frase mantém a concordância padrão em relação ao verbo impessoal?",
+            "alternativas": [
+              "Faz cinco anos desde o curso.",
+              "Fazem cinco anos desde o curso.",
+              "Houveram três avaliações ontem.",
+              "Existiu três avaliações ontem."
+            ],
+            "correta": 0,
+            "feedback": "'Faz' indicando tempo é impessoal e fica no singular. 'Haver' no sentido de existir também é impessoal; 'existir' concorda com o sujeito.",
+            "dica": "Não confunda 'haver' impessoal com 'existir'."
+          }
+        ]
+      }
+    },
+    "por-09": {
+      "porque": "A vírgula marca relações sintáticas: vocativo, itens em enumeração ou deslocamentos; não é regra para marcar qualquer pausa.",
+      "armadilha": "Separar sujeito e predicado por vírgula.",
+      "verificacao": "Leia a estrutura sintática antes de pontuar.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Em qual frase a vírgula marca um vocativo?",
+            "alternativas": [
+              "Ontem, o portão fechou.",
+              "Professor, revise o edital.",
+              "Os alunos, chegaram cedo.",
+              "A equipe, iniciou a prova."
+            ],
+            "correta": 1,
+            "feedback": "Professor é a pessoa chamada, por isso o vocativo fica separado por vírgula.",
+            "dica": "Vocativo é um chamamento direto."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Qual pontuação evita separar o sujeito do verbo?",
+            "alternativas": [
+              "Os candidatos, preencheram a ficha.",
+              "A turma, terminou o curso.",
+              "Os monitores organizaram a sala.",
+              "As provas, foram aplicadas."
+            ],
+            "correta": 2,
+            "feedback": "Em 'Os monitores organizaram', sujeito e verbo não estão separados. As outras usam vírgula indevida.",
+            "dica": "Procure o núcleo do sujeito e seu verbo."
+          }
+        ]
+      }
+    },
+    "por-12": {
+      "porque": "Conectivos ligam ideias por causa, oposição, conclusão e concessão. Trocar uma conjunção altera o raciocínio do período.",
+      "armadilha": "Escolher conectivo pelo som em vez da relação lógica entre as orações.",
+      "verificacao": "Troque a palavra e confira se o sentido original foi preservado.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Complete: 'A turma estudou bastante; ___, teve dificuldade na avaliação.'",
+            "alternativas": [
+              "portanto",
+              "contudo",
+              "porque",
+              "assim"
+            ],
+            "correta": 1,
+            "feedback": "'Contudo' introduz contraste: apesar do estudo, houve dificuldade. 'Portanto' indicaria conclusão, não oposição.",
+            "dica": "A segunda oração contraria a expectativa criada pela primeira."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Qual conector preserva a relação causal? 'O alarme tocou ___ havia fumaça na sala.'",
+            "alternativas": [
+              "embora",
+              "portanto",
+              "porque",
+              "contudo"
+            ],
+            "correta": 2,
+            "feedback": "'Porque' explica a causa do alarme. Os demais marcam concessão, conclusão ou oposição.",
+            "dica": "Pergunte: qual foi a razão de o alarme tocar?"
+          }
+        ]
+      }
+    },
+    "por-14": {
+      "porque": "Um argumento articula uma tese, evidências relevantes e uma conclusão coerente. Opiniões sem justificativa não se tornam argumentos sólidos.",
+      "armadilha": "Repetir a tese como se fosse prova.",
+      "verificacao": "Diferencie afirmação, evidência e explicação da relação entre ambas.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual frase contém uma tese defendida por uma justificativa?",
+            "alternativas": [
+              "A biblioteca é importante.",
+              "É necessário ampliar a biblioteca, pois a demanda cresceu.",
+              "A biblioteca tem mesas.",
+              "Muitos alunos usam livros."
+            ],
+            "correta": 1,
+            "feedback": "A frase apresenta proposta ('ampliar') e razão ('demanda cresceu'). As demais são afirmações isoladas.",
+            "dica": "Procure a palavra que introduz uma razão."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Um texto defende mais livros na escola. Qual dado fortaleceria diretamente essa defesa?",
+            "alternativas": [
+              "A escola tem dois portões.",
+              "A equipe uniformizou as salas.",
+              "A procura por empréstimos supera o acervo.",
+              "O horário das aulas foi antecipado."
+            ],
+            "correta": 2,
+            "feedback": "Demanda superior ao acervo indica que os livros disponíveis não atendem à necessidade, apoiando a tese.",
+            "dica": "Escolha um dado relacionado diretamente ao acervo."
+          }
+        ]
+      }
+    },
+    "geo-02": {
+      "porque": "Na escala 1:n, cada unidade no mapa representa n unidades reais. Converter unidades é indispensável para chegar a km ou m.",
+      "armadilha": "Misturar centímetros e quilômetros sem conversão.",
+      "verificacao": "Refaça convertendo primeiro para centímetros, depois para quilômetros.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Em escala 1:200.000, uma distância de 3,5 cm no mapa corresponde a:",
+            "alternativas": [
+              "5 km",
+              "6 km",
+              "7 km",
+              "8 km"
+            ],
+            "correta": 2,
+            "feedback": "3,5×200.000=700.000 cm; 700.000÷100.000=7 km.",
+            "dica": "Lembre que 100.000 cm são 1 km."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Duas cidades estão a 18 km. Em mapa 1:300.000, qual a distância entre elas no papel?",
+            "alternativas": [
+              "3 cm",
+              "4 cm",
+              "6 cm",
+              "9 cm"
+            ],
+            "correta": 2,
+            "feedback": "18 km=1.800.000 cm. Divida por 300.000: 6 cm.",
+            "dica": "Converta distância real em centímetros."
+          }
+        ]
+      }
+    },
+    "geo-04": {
+      "porque": "Tempo atmosférico descreve condições de curto prazo; clima representa padrões observados ao longo de décadas.",
+      "armadilha": "Confundir a chuva de hoje com mudança no clima de uma região.",
+      "verificacao": "Identifique se o enunciado fala de um dia ou de tendência de muitos anos.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Qual situação descreve clima, e não tempo atmosférico?",
+            "alternativas": [
+              "Choveu às 15 horas.",
+              "Amanhã haverá vento.",
+              "Os verões da região são secos.",
+              "Hoje a máxima foi 30 °C."
+            ],
+            "correta": 2,
+            "feedback": "Um padrão frequente de verões secos caracteriza clima. Previsões diárias indicam tempo.",
+            "dica": "Observe a escala temporal da afirmação."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma cidade teve uma tarde fria, mas mantém médias anuais altas. Qual conclusão é adequada?",
+            "alternativas": [
+              "O clima mudou naquele dia.",
+              "Um dia não redefine o clima.",
+              "Médias anuais não importam.",
+              "Temperatura e clima são iguais."
+            ],
+            "correta": 1,
+            "feedback": "Um evento isolado pode divergir da média sem caracterizar mudança climática.",
+            "dica": "Distinga evento isolado e padrão de longa duração."
+          }
+        ]
+      }
+    },
+    "cie-05": {
+      "porque": "Características herdadas podem envolver dominância, recessividade, múltiplos genes e ambiente. Um exemplo mendeliano é modelo didático, não regra geral para pessoas.",
+      "armadilha": "Achar que toda característica humana depende de um único gene.",
+      "verificacao": "Construa um quadro de possibilidades e diferencie genótipo de fenótipo.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Num modelo mendeliano simples, Aa × Aa produz qual chance de descendente aa?",
+            "alternativas": [
+              "0%",
+              "25%",
+              "50%",
+              "75%"
+            ],
+            "correta": 1,
+            "feedback": "Os genótipos possíveis são AA, Aa, Aa e aa; um de quatro é aa.",
+            "dica": "Monte as quatro combinações possíveis."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Em um cruzamento Aa × aa, qual a proporção esperada de descendentes Aa?",
+            "alternativas": [
+              "0%",
+              "25%",
+              "50%",
+              "100%"
+            ],
+            "correta": 2,
+            "feedback": "O primeiro fornece A ou a; o segundo fornece a. Metade Aa e metade aa.",
+            "dica": "Liste as combinações: Aa e aa."
+          }
+        ]
+      }
+    },
+    "cie-06": {
+      "porque": "A fotossíntese transforma energia luminosa em química, mas plantas também respiram continuamente. A luz não é matéria incorporada ao alimento.",
+      "armadilha": "Dizer que a planta tira toda a matéria orgânica do solo.",
+      "verificacao": "Rastreie quais materiais entram na planta e de onde vem a energia.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Em uma planta, qual situação tende a reduzir a fotossíntese por falta de reagente?",
+            "alternativas": [
+              "Água insuficiente.",
+              "Mais clorofila.",
+              "Luz adequada.",
+              "Ar com CO₂."
+            ],
+            "correta": 0,
+            "feedback": "Sem água suficiente, o processo pode ficar limitado; água é reagente da fotossíntese.",
+            "dica": "Identifique entrada, não produto."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "O carbono incorporado aos açúcares na fotossíntese vem principalmente de:",
+            "alternativas": [
+              "sais do solo",
+              "gás carbônico",
+              "oxigênio liberado",
+              "energia luminosa"
+            ],
+            "correta": 1,
+            "feedback": "O carbono orgânico é fixado a partir do CO₂, e não do oxigênio nem da energia luminosa.",
+            "dica": "Procure a molécula que contém carbono e entra pelo ar."
+          }
+        ]
+      }
+    },
+    "fis-01": {
+      "porque": "Rapidez média usa distância total dividida pelo tempo. Velocidade média vetorial considera deslocamento, que pode ser zero numa volta completa.",
+      "armadilha": "Confundir distância total percorrida com deslocamento final.",
+      "verificacao": "Calcule separadamente distância e deslocamento antes de dividir pelo tempo.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Um veículo percorre 150 km em 2 h e 90 km em 1 h. Qual é a rapidez média total?",
+            "alternativas": [
+              "60 km/h",
+              "70 km/h",
+              "80 km/h",
+              "90 km/h"
+            ],
+            "correta": 2,
+            "feedback": "Distância total 240 km, tempo 3 h: 240÷3=80 km/h. Não tire a média simples das velocidades.",
+            "dica": "Some distâncias e tempos."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma pessoa caminha 300 m para leste e volta 300 m em 10 min. Qual é o módulo da velocidade média vetorial?",
+            "alternativas": [
+              "0 m/min",
+              "30 m/min",
+              "60 m/min",
+              "120 m/min"
+            ],
+            "correta": 0,
+            "feedback": "Deslocamento final é zero, mesmo tendo caminhado 600 m. Velocidade média vetorial=0÷10=0.",
+            "dica": "A posição final coincide com a inicial."
+          }
+        ]
+      }
+    },
+    "fis-02": {
+      "porque": "Aceleração é variação da velocidade por unidade de tempo. Sinal negativo indica mudança no sentido adotado, não sempre perda de rapidez.",
+      "armadilha": "Confundir velocidade com aceleração e ignorar o intervalo.",
+      "verificacao": "Calcule primeiro Δv e depois divida por Δt.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Um carro passa de 6 m/s a 22 m/s em 4 s. Qual é a aceleração média?",
+            "alternativas": [
+              "2 m/s²",
+              "3 m/s²",
+              "4 m/s²",
+              "5 m/s²"
+            ],
+            "correta": 2,
+            "feedback": "Δv=22−6=16 m/s, Δt=4 s, logo a=16÷4=4 m/s².",
+            "dica": "Use velocidade final menos inicial."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Um objeto reduz a velocidade de 25 m/s para 5 m/s em 5 s. Qual é a aceleração média na direção positiva do movimento?",
+            "alternativas": [
+              "−5 m/s²",
+              "−4 m/s²",
+              "+4 m/s²",
+              "+5 m/s²"
+            ],
+            "correta": 1,
+            "feedback": "a=(5−25)÷5=−20÷5=−4 m/s².",
+            "dica": "A variação de velocidade é negativa."
+          }
+        ]
+      }
+    },
+    "fis-06": {
+      "porque": "Na lei de Ohm U=R×I, a corrente depende da tensão e resistência. Se R fica constante, dobrar U dobra I.",
+      "armadilha": "Confundir watts, volts e amperes ou multiplicar quando deveria dividir.",
+      "verificacao": "Substitua de volta: R×I deve resultar em U.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Um resistor de 8 Ω é ligado a uma tensão de 24 V. Qual corrente passa por ele?",
+            "alternativas": [
+              "2 A",
+              "3 A",
+              "4 A",
+              "6 A"
+            ],
+            "correta": 1,
+            "feedback": "I=U/R=24/8=3 A.",
+            "dica": "Divida tensão pela resistência."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Dois resistores de 6 Ω e 4 Ω estão em série, ligados a 20 V. Qual é a corrente no circuito?",
+            "alternativas": [
+              "1 A",
+              "2 A",
+              "4 A",
+              "5 A"
+            ],
+            "correta": 1,
+            "feedback": "Em série R_total=6+4=10 Ω. I=20÷10=2 A.",
+            "dica": "Primeiro some resistências em série."
+          }
+        ]
+      }
+    },
+    "qui-03": {
+      "porque": "Uma mistura homogênea tem aparência uniforme em sua escala observada; uma heterogênea apresenta fases distinguíveis. Separação depende das propriedades físicas.",
+      "armadilha": "Chamar uma mistura de substância pura só porque parece uniforme.",
+      "verificacao": "Identifique componentes, fases e propriedade usada na separação.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Para separar areia de água, qual método é mais apropriado?",
+            "alternativas": [
+              "Destilação fracionada",
+              "Filtração",
+              "Cromatografia",
+              "Evaporação total"
+            ],
+            "correta": 1,
+            "feedback": "A areia é insolúvel e pode ser retida em filtro enquanto a água passa.",
+            "dica": "A diferença principal é o tamanho das partículas."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Uma mistura de água e etanol pode ser separada por diferença de temperaturas de ebulição usando:",
+            "alternativas": [
+              "Decantação",
+              "Peneiração",
+              "Destilação fracionada",
+              "Separação magnética"
+            ],
+            "correta": 2,
+            "feedback": "Água e etanol são líquidos miscíveis com pontos de ebulição diferentes; destilação fracionada é apropriada.",
+            "dica": "As duas substâncias são líquidos miscíveis."
+          }
+        ]
+      }
+    },
+    "log-03": {
+      "porque": "Uma sequência pode depender de diferenças, razões ou alternâncias. Regra boa explica TODOS os termos apresentados, não só os dois últimos.",
+      "armadilha": "Escolher padrão que só encaixa no último salto.",
+      "verificacao": "Calcule diferenças sucessivas antes de escolher uma resposta.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "A sequência 2, 5, 10, 17, 26 segue qual próximo número?",
+            "alternativas": [
+              "35",
+              "36",
+              "37",
+              "38"
+            ],
+            "correta": 2,
+            "feedback": "As diferenças são 3, 5, 7, 9. A próxima diferença é 11; 26+11=37.",
+            "dica": "Calcule a diferença entre termos vizinhos."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Considere 3, 6, 12, 21, 33, ... Qual é o próximo termo?",
+            "alternativas": [
+              "45",
+              "46",
+              "47",
+              "48"
+            ],
+            "correta": 3,
+            "feedback": "Diferenças: 3, 6, 9, 12. A próxima é 15; 33+15=48.",
+            "dica": "As diferenças também podem formar uma sequência."
+          }
+        ]
+      }
+    },
+    "log-05": {
+      "porque": "O princípio multiplicativo conta escolhas em etapas independentes. Se existem restrições, o número de opções pode mudar de uma etapa para outra.",
+      "armadilha": "Multiplicar o mesmo número de opções mesmo quando não há reposição.",
+      "verificacao": "Faça uma enumeração pequena para conferir a fórmula.",
+      "questoesPorNivel": {
+        "intermediario": [
+          {
+            "pergunta": "Uma senha tem uma letra entre A, B, C e depois um dígito entre 0, 1, 2, 3. Quantas senhas?",
+            "alternativas": [
+              "7",
+              "10",
+              "12",
+              "16"
+            ],
+            "correta": 2,
+            "feedback": "São 3 escolhas de letra e 4 de dígito: 3×4=12 senhas.",
+            "dica": "Multiplique as escolhas por posição."
+          }
+        ],
+        "avancado": [
+          {
+            "pergunta": "Com 5 crachás distintos, quantas maneiras de escolher presidente e vice, sem repetir pessoa?",
+            "alternativas": [
+              "10",
+              "15",
+              "20",
+              "25"
+            ],
+            "correta": 2,
+            "feedback": "Há 5 escolhas para presidente e, depois, 4 para vice: 5×4=20.",
+            "dica": "O segundo posto tem uma pessoa a menos disponível."
+          }
+        ]
+      }
+    }
+  }
+}
