@@ -36,7 +36,9 @@
     ],
     "especializacoesNota": "Progressão de qualificação, não patente militar e não ingresso automático em cargo.",
     "operacoes": "Participação em guerra requer chegar a Soldado e receber atribuição na unidade; a escolha de unidade não permite ignorar as etapas de progressão.",
-    "implantacao": "Esta página documenta a estrutura; não modifica permissões nem grupos Roblox."
+    "implantacao": "Esta página documenta a estrutura; não modifica permissões nem grupos Roblox.",
+    "elite": "Batalhões possuem função ou quadro interno de Elite. Elite não é patente adicional à hierarquia de Soldado até Coronel, e sua forma exata de ingresso depende de regras próprias.",
+    "ingresso": "O Recruta precisa estar vinculado a uma brigada e a um batalhão, cumprindo as etapas de CDP. O registro em uma unidade não elimina requisitos de progressão ou formação."
   },
   "mapeamentos": {
     "FTB-BFE": {
@@ -280,6 +282,12 @@
         "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
       },
       "subunidades": [
+        {
+          "sigla": "Tanques",
+          "nome": "Divisão de Tanques",
+          "catalogoId": null,
+          "status": "Divisão interna confirmada em conversas anteriores; não há ficha independente aprovada para esta divisão."
+        },
         {
           "sigla": "CFB",
           "nome": null,
