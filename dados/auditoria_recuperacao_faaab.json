@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-29",
+  "purpose": "Preservar informações recuperadas de conversas antigas para reconciliação com o catálogo atual sem inventar cargos nem reintroduzir unidades rejeitadas.",
+  "military": {
+    "internalRanks": [
+      "Praças",
+      "Graduados",
+      "Oficiais Subalternos",
+      "Oficial Intermediário",
+      "Oficiais Superiores",
+      "Alto Escalão",
+      "Subcomandante",
+      "Comandante",
+      "Alto Comando",
+      "Superintendente"
+    ],
+    "centreRanks": [
+      "Supervisor",
+      "Supervisor-Chefe"
+    ],
+    "specialisation": [
+      "Iniciante",
+      "Intermediário",
+      "Experiente",
+      "Especialista",
+      "Instrutor",
+      "Instrutor-Chefe",
+      "Chefe da Especialização"
+    ],
+    "joining": "Recruta escolhe uma brigada e um batalhão antes da progressão; participação em guerra apenas a partir de Soldado.",
+    "centres": "CIE não é operacional; regimentos têm quadro próprio mais enxuto, com referência a Coronel; brigadas não têm farda própria."
+  },
+  "rankDiscrepancies": {
+    "newerRanksMissingInActiveData": [
+      "Soldado de 2ª Classe",
+      "Taifeiro Especial",
+      "Sargento-Mor",
+      "Sargento-Mor de Comando"
+    ],
+    "oldNamesRequiringReconciliation": [
+      "Capitão-Sênior",
+      "Soldado sem classe definida"
+    ],
+    "note": "Atualizar dados/hierarquias.json, dados/patentes.json e dados/cargos.json em conjunto depois de conciliar IDs e alterações posteriores."
+  },
+  "catalogue": {
+    "approvedOn": "2026-10-24",
+    "sevenApproved": [
+      "CIM",
+      "CIAER",
+      "BIL",
+      "BIS",
+      "BIL Mth",
+      "GAC",
+      "ComForSup"
+    ],
+    "notAutomaticallyReintroduced": [
+      "AVEX e suas siglas EHA/ETA constam de decisões mais antigas, mas não da consolidação de 24/10.",
+      "CFP, CFB e CFM precisam de denominações completas antes de fichas independentes."
+    ]
+  },
+  "website": {
+    "studies": "Página independente estudos.html",
+    "communication": "Central de notícias, avisos, marketing e editais sem aba Estudos",
+    "organisations": "Diretório de forças e categorias, sem tratar Governo como batalhão.",
+    "units": "27 estruturas no banco específico; cargos internos e especializações visíveis nas fichas."
+  }
+}
