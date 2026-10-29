@@ -653,6 +653,644 @@
       "formacao": [],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
+    },
+    "FTB-DAD": {
+      "papel": "Destacamento de Ações Diretas é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Forças Especiais. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Destacamento de Ações Diretas executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Forças Especiais."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-DRE": {
+      "papel": "Destacamento de Reconhecimento Especial é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Forças Especiais. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Destacamento de Reconhecimento Especial executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Forças Especiais."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-PC": {
+      "papel": "Pelotão de Choque do BPE é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Polícia do Exército. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Pelotão de Choque do BPE executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Polícia do Exército."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-PELOPES": {
+      "papel": "Pelotão de Operações Especiais na Caatinga é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Infantaria de Caatinga. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Pelotão de Operações Especiais na Caatinga executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Infantaria de Caatinga."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-DCS": {
+      "papel": "Destacamento de Caatinga e Sobrevivência é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Infantaria de Caatinga. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Destacamento de Caatinga e Sobrevivência executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Infantaria de Caatinga."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-Precs": {
+      "papel": "Precursores Paraquedistas é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Infantaria Paraquedista. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Precursores Paraquedistas executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Infantaria Paraquedista."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-DCOE": {
+      "papel": "Destacamento de Comandos e Operações Especiais é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Ações de Comandos. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Destacamento de Comandos e Operações Especiais executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Ações de Comandos."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-PRGM": {
+      "papel": "Pelotão de Reconhecimento e Guerra em Montanha é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Infantaria de Montanha. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Pelotão de Reconhecimento e Guerra em Montanha executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Infantaria de Montanha."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-DRT": {
+      "papel": "Destacamento de Resgate Tático Militar é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Saúde. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Destacamento de Resgate Tático Militar executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Saúde."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-GRE": {
+      "papel": "Grupo de Resgate e Evacuação Militar é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Saúde. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Grupo de Resgate e Evacuação Militar executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Saúde."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-PAPH": {
+      "papel": "Pelotão de Atendimento Pré-Hospitalar Militar é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Saúde. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Pelotão de Atendimento Pré-Hospitalar Militar executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Saúde."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-SC": {
+      "papel": "Seção de Contrainteligência (estrutura interna fictícia do CIE na FAAAB) é uma equipe interna do Exército FAAAB, subordinada a Centro de Inteligência do Exército. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Seção de Contrainteligência (estrutura interna fictícia do CIE na FAAAB) executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Centro de Inteligência do Exército."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-DGC": {
+      "papel": "Divisão de Guerra Cibernética (estrutura interna fictícia do CIE na FAAAB) é uma equipe interna do Exército FAAAB, subordinada a Centro de Inteligência do Exército. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Divisão de Guerra Cibernética (estrutura interna fictícia do CIE na FAAAB) executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Centro de Inteligência do Exército."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-POS": {
+      "papel": "Pelotão de Operações na Selva é uma equipe interna do Exército FAAAB, subordinada a Centro de Instrução de Guerra na Selva. Não é patente nem organização Roblox separada.",
+      "atividades": [
+        "Pelotão de Operações na Selva executa as tarefas de sua especialidade no contexto da organização principal.",
+        "Sua atuação e progressão seguem as regras e a autorização do Centro de Instrução de Guerra na Selva."
+      ],
+      "sistemas": [
+        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Qualificações individuais e nomeação dependem das regras da força."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-ESA": {
+      "papel": "Escola de Sargentos das Armas na rota de formação militar da FAAAB.",
+      "atividades": [
+        "Formação e avaliação de alunos da carreira de sargentos.",
+        "Acompanhamento dos cursos por etapa e atuação de instrutores habilitados."
+      ],
+      "sistemas": [
+        "O manual de cursos distingue alunos Cabo, alunos 3º Sargento e instrutores 2º Tenente habilitados; a progressão obedece à CDP."
+      ],
+      "formacao": [
+        "ESA — programas e lotes de ensino documentados no catálogo de cursos."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-EsPCEx": {
+      "papel": "Escola Preparatória de Cadetes do Exército, parte do caminho de formação de oficiais.",
+      "atividades": [
+        "Preparação do Subtenente para ingresso como Cadete na sequência de formação FAAAB.",
+        "Aulas, avaliações e formaturas conforme o programa aprovado."
+      ],
+      "sistemas": [
+        "A formação EsPCEx possui matriciamento próprio e não é treinamento final genérico de CDP."
+      ],
+      "formacao": [
+        "EsPCEx — etapa Subtenente → Cadete."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-AMAN": {
+      "papel": "Academia Militar das Agulhas Negras, a rota de formação dos cadetes e aspirantes.",
+      "atividades": [
+        "Fases acadêmicas e avaliações dos cadetes.",
+        "Etapas de formação dos aspirantes até as promoções previstas.",
+        "Formatura por conclusão do curso."
+      ],
+      "sistemas": [
+        "O manual indica fases 1–5 para Cadetes e 6–10 para Aspirantes; o resultado final é condicionado às fases completadas."
+      ],
+      "formacao": [
+        "AMAN — formação de oficiais."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-EsAO": {
+      "papel": "Escola de Aperfeiçoamento de Oficiais integrada à formação da FAAAB.",
+      "atividades": [
+        "Aperfeiçoamento de oficiais conforme o manual de cursos.",
+        "Progressão e avaliações em etapas já cadastradas."
+      ],
+      "sistemas": [
+        "Não substituir a CDP com uma prova inventada."
+      ],
+      "formacao": [
+        "Aperfeiçoamento de Oficiais — 2º Tenente para 1º Tenente no manual."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-ECEME": {
+      "papel": "Escola de Comando e Estado-Maior do Exército na formação do oficialato superior.",
+      "atividades": [
+        "Estudos e aperfeiçoamento de organização e estado-maior.",
+        "Etapas documentadas de progressão do oficialato."
+      ],
+      "sistemas": [
+        "Cursos do estado-maior não são requisitos automáticos para todos os militares."
+      ],
+      "formacao": [
+        "Escola do Estado-Maior — formação de oficiais."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-EsSLog": {
+      "papel": "Escola de Sargentos de Logística, prevista no catálogo de instituições do Exército.",
+      "atividades": [
+        "Formação voltada à especialidade logística do roleplay.",
+        "Apoio ao ensino técnico e às atribuições de suprimento."
+      ],
+      "sistemas": [
+        "Não confundir a escola com o Batalhão Logístico em operação."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-ESFCEx": {
+      "papel": "Escola de Saúde e Formação Complementar do Exército, registrada no catálogo.",
+      "atividades": [
+        "Cursos complementares e de apoio às especialidades da força.",
+        "Formação relacionada às atribuições de saúde e apoio do Exército."
+      ],
+      "sistemas": [
+        "A Escola não substitui o Batalhão de Saúde nem atribui função médica automaticamente."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-BINFAE-Guarda": {
+      "papel": "Unidade de guarda da Infantaria da Aeronáutica no universo FAAAB.",
+      "atividades": [
+        "Proteção e guarda de instalações aéreas fictícias.",
+        "Treinamento e vigilância conforme a estrutura militar da Aeronáutica."
+      ],
+      "sistemas": [
+        "Guarda de instalações não é automaticamente operação de aeronave."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-BINFAE-Choque": {
+      "papel": "Unidade de choque da Infantaria da Aeronáutica no universo FAAAB.",
+      "atividades": [
+        "Atividades específicas de segurança e choque na base aérea fictícia.",
+        "Treinamentos para a especialização da unidade."
+      ],
+      "sistemas": [
+        "Não confundir o serviço da unidade com o controle operacional de voos."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-EAV": {
+      "papel": "Esquadrão de Aviação registrado entre as unidades operacionais da FAB da FAAAB.",
+      "atividades": [
+        "Atividades de aviação do jogo conforme formação e equipamentos.",
+        "Operações e treinamento do esquadrão em cenário aéreo fictício."
+      ],
+      "sistemas": [
+        "Pilotagem depende de curso e habilitação, não da patente."
+      ],
+      "formacao": [
+        "Curso de Pilotagem (C-PIL) em duas etapas teórica e prática."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-ECDA": {
+      "papel": "Esquadrão ligado ao controle e defesa aérea no catálogo FAAAB.",
+      "atividades": [
+        "Tarefas próprias de controle e defesa aérea do jogo.",
+        "Coordenação com outras unidades aéreas quando previsto na missão."
+      ],
+      "sistemas": [
+        "Não conceder habilitação de controle aéreo por simples ingresso."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-CIAAR": {
+      "papel": "Centro de Instrução e Adaptação da Aeronáutica, mantido como centro e não um curso único.",
+      "atividades": [
+        "Organização de instrução, especializações e formações aeronáuticas.",
+        "Apoio à adaptação conforme a carreira do integrante."
+      ],
+      "sistemas": [
+        "CIAAR e CFAer não são sinônimos: o CFAer é a formação dos Recrutas planejada pela FAAAB."
+      ],
+      "formacao": [
+        "CFAer — adaptação e fundamentos aeronáuticos, linhas de Infantaria e Operações Aéreas."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-EEAR": {
+      "papel": "Escola de Especialistas de Aeronáutica na formação dos graduados.",
+      "atividades": [
+        "Curso de Formação de Sargentos do ramo da Aeronáutica.",
+        "Programa com alunos Cabo e instrução conforme habilitação."
+      ],
+      "sistemas": [
+        "Etapas e instrutores são especificados no manual; não aceitar automaticamente outras patentes como alunos."
+      ],
+      "formacao": [
+        "EEAR/CFS — curso do manual."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-EPCAR": {
+      "papel": "Escola Preparatória de Cadetes do Ar, parte da rota de formação de oficiais.",
+      "atividades": [
+        "Preparação de alunos para sequência de carreira na Aeronáutica.",
+        "Etapas educacionais próprias do programa."
+      ],
+      "sistemas": [
+        "O curso EPCAR tem versão em revisão no manual; não inventar formatura final."
+      ],
+      "formacao": [
+        "EPCAR — programa em revisão."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-AFA": {
+      "papel": "Academia da Força Aérea, parte da formação de oficiais da FAAAB.",
+      "atividades": [
+        "Formação militar e aeronáutica dos Cadetes e Aspirantes.",
+        "Fases de formação e avaliações conforme a carreira."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-ECEMAR": {
+      "papel": "Escola de Comando e Estado-Maior da Aeronáutica, formação de oficiais superiores.",
+      "atividades": [
+        "Aperfeiçoamento do oficialato superior.",
+        "Etapas do CCEM e formações vinculadas ao Estado-Maior."
+      ],
+      "sistemas": [
+        "O manual registra Major como aluno, Tenente-Coronel na formatura e Coronel instrutor; não universalizar sem a CDP correspondente."
+      ],
+      "formacao": [
+        "ECEMAR/CCEM."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FMB-GrupPatNav": {
+      "papel": "Grupamento de Patrulha Naval da FAAAB.",
+      "atividades": [
+        "Patrulhas navais dentro do mapa marítimo fictício.",
+        "Coordenação com embarcações de superfície conforme missão."
+      ],
+      "sistemas": [
+        "Uso de embarcação exige habilitação própria."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FMB-BtlPolNav": {
+      "papel": "Batalhão de Polícia Naval registrado na Marinha do jogo.",
+      "atividades": [
+        "Segurança de instalações e atividades militares navais.",
+        "Fiscalização da área naval dentro das regras do roleplay."
+      ],
+      "sistemas": [
+        "É unidade naval, não organização policial civil."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FMB-GrupCom": {
+      "papel": "Grupamento de comunicação na estrutura naval fictícia.",
+      "atividades": [
+        "Apoio às comunicações e coordenação entre unidades navais.",
+        "Tarefas internas relacionadas às operações da Marinha."
+      ],
+      "sistemas": [
+        "Não confundir o grupamento de comunicação com comando da Força de Superfície."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FMB-ComForS": {
+      "papel": "Comando naval cadastrado como ComForS, distinto do ComForSup incluído na atualização de outubro.",
+      "atividades": [
+        "Funções de coordenação na estrutura naval da FAAAB."
+      ],
+      "sistemas": [
+        "Atribuições específicas de ComForS ainda dependem de conciliação com ComForSup; não juntar as duas entradas automaticamente."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FMB-CIAMPA": {
+      "papel": "Centro de Instrução para Aprendizes-Marinheiros, integrante das formações da Marinha fictícia.",
+      "atividades": [
+        "Adaptação e formação inicial de aprendizes.",
+        "Atividades de ensino naval e rotinas da instituição."
+      ],
+      "sistemas": [
+        "Não atribuir patente por entrar no centro."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FMB-CIAA": {
+      "papel": "Centro de Instrução Almirante Alexandrino, parte do ensino naval.",
+      "atividades": [
+        "Formação e especialização de praças navais.",
+        "Curso de formação de sargentos e outras especialidades conforme habilitação."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FMB-CIAW": {
+      "papel": "Centro de Instrução Almirante Wandenkolk, na formação militar naval.",
+      "atividades": [
+        "Formações e cursos de oficiais em etapas próprias.",
+        "Qualificações específicas da Marinha."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FMB-EAM": {
+      "papel": "Escola de Aprendizes-Marinheiros na trilha naval da FAAAB.",
+      "atividades": [
+        "Formação inicial com progressão de Aprendiz-Marinheiro para Grumete.",
+        "Programa de ensino naval próprio."
+      ],
+      "sistemas": [
+        "Cursos e promoção seguem critérios do manual, não simulados públicos."
+      ],
+      "formacao": [
+        "Ensino Naval — Aprendiz-Marinheiro."
+      ],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FMB-CN": {
+      "papel": "Colégio Naval, formação preparatória de oficiais da Marinha.",
+      "atividades": [
+        "Aulas e formação preparatória naval.",
+        "Etapas próprias de ingresso e progressão para Escola Naval."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FMB-EN": {
+      "papel": "Escola Naval na formação de oficiais da Marinha fictícia.",
+      "atividades": [
+        "Formação dos futuros oficiais de carreira naval.",
+        "Fases de ensino e avaliações segundo a estrutura do projeto."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "CFN-BOE-FN": {
+      "papel": "Unidade de operações especiais dos Fuzileiros Navais.",
+      "atividades": [
+        "Atividades especiais militares dentro dos cenários do CFN.",
+        "Treinamento e seleção próprios da organização."
+      ],
+      "sistemas": [
+        "CFN integra a Marinha; missões não equivalem a segurança civil."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "CFN-COMANF": {
+      "papel": "Comandos Anfíbios dos Fuzileiros Navais.",
+      "atividades": [
+        "Operações e qualificações especiais anfíbias do roleplay.",
+        "Atividades de reconhecimento e deslocamento próprias da especialização."
+      ],
+      "sistemas": [
+        "Não criar autorização automática pela patente."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "CFN-BtlBldFN": {
+      "papel": "Batalhão Blindado dos Fuzileiros Navais.",
+      "atividades": [
+        "Atividades de uso de blindados em cenários litorâneos e militares.",
+        "Treinamento e habilitação de tripulações da unidade."
+      ],
+      "sistemas": [
+        "Veículos blindados precisam de equipamento, recursos e formação específica."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "CFN-BtlEngFN": {
+      "papel": "Batalhão de Engenharia dos Fuzileiros Navais.",
+      "atividades": [
+        "Atividades de apoio técnico e engenharia próprias do roleplay naval.",
+        "Tarefas de construção e suporte das missões militares."
+      ],
+      "sistemas": [
+        "É estrutura dos Fuzileiros Navais; não equivale ao BEC rejeitado para o Exército."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "CFN-BtlArtFN": {
+      "papel": "Batalhão de Artilharia dos Fuzileiros Navais.",
+      "atividades": [
+        "Atividades de artilharia naval terrestre em apoio às unidades do CFN.",
+        "Treinamentos e funções próprios da organização fictícia."
+      ],
+      "sistemas": [
+        "Não confundir com GAC do Exército."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "CFN-CIAPOL": {
+      "papel": "Centro/especialidade de polícia dentro dos Fuzileiros Navais no universo FAAAB.",
+      "atividades": [
+        "Atividades de policiamento interno naval fictício.",
+        "Treinamento e formação correspondentes."
+      ],
+      "sistemas": [
+        "Não é polícia civil ou unidade da PM."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     }
   }
 }
