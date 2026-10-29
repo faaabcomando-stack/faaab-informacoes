@@ -1291,6 +1291,218 @@
       "formacao": [],
       "observacoes": [],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FTB-Bda-Inf-Sl": {
+      "papel": "Brigada de Infantaria de Selva integra a organização interna do Exército FAAAB. A brigada é escolhida durante a progressão militar e tem atribuições relacionadas a selva.",
+      "atividades": [
+        "Organizar o ingresso de integrantes no setor de selva.",
+        "Conduzir formação básica e atividades internas antes da progressão para postos superiores.",
+        "Articular batalhões e equipes da força conforme sua especialidade."
+      ],
+      "sistemas": [
+        "Brigadas não são grupos Roblox separados.",
+        "Brigadas podem ter bases próprias, mas não têm farda exclusiva; especialidades podem utilizar símbolos e equipamentos associados.",
+        "A seleção e treinamento de brigada integram a carreira, não promovem automaticamente."
+      ],
+      "formacao": [
+        "Treinamento na Brigada (TB).",
+        "Curso de Formação de Sargentos da Brigada (não é ESA 2)."
+      ],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "FTB-Bda-Inf-Mth": {
+      "papel": "Brigada de Infantaria de Montanha integra a organização interna do Exército FAAAB. A brigada é escolhida durante a progressão militar e tem atribuições relacionadas a montanha.",
+      "atividades": [
+        "Organizar o ingresso de integrantes no setor de montanha.",
+        "Conduzir formação básica e atividades internas antes da progressão para postos superiores.",
+        "Articular batalhões e equipes da força conforme sua especialidade."
+      ],
+      "sistemas": [
+        "Brigadas não são grupos Roblox separados.",
+        "Brigadas podem ter bases próprias, mas não têm farda exclusiva; especialidades podem utilizar símbolos e equipamentos associados.",
+        "A seleção e treinamento de brigada integram a carreira, não promovem automaticamente."
+      ],
+      "formacao": [
+        "Treinamento na Brigada (TB).",
+        "Curso de Formação de Sargentos da Brigada (não é ESA 2)."
+      ],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "FTB-Bda-Inf-Mec": {
+      "papel": "Brigada de Infantaria Mecanizada integra a organização interna do Exército FAAAB. A brigada é escolhida durante a progressão militar e tem atribuições relacionadas a deslocamento mecanizado.",
+      "atividades": [
+        "Organizar o ingresso de integrantes no setor de deslocamento mecanizado.",
+        "Conduzir formação básica e atividades internas antes da progressão para postos superiores.",
+        "Articular batalhões e equipes da força conforme sua especialidade."
+      ],
+      "sistemas": [
+        "Brigadas não são grupos Roblox separados.",
+        "Brigadas podem ter bases próprias, mas não têm farda exclusiva; especialidades podem utilizar símbolos e equipamentos associados.",
+        "A seleção e treinamento de brigada integram a carreira, não promovem automaticamente."
+      ],
+      "formacao": [
+        "Treinamento na Brigada (TB).",
+        "Curso de Formação de Sargentos da Brigada (não é ESA 2)."
+      ],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "FTB-Bda-Inf-Bld": {
+      "papel": "Brigada de Infantaria Blindada integra a organização interna do Exército FAAAB. A brigada é escolhida durante a progressão militar e tem atribuições relacionadas a blindados.",
+      "atividades": [
+        "Organizar o ingresso de integrantes no setor de blindados.",
+        "Conduzir formação básica e atividades internas antes da progressão para postos superiores.",
+        "Articular batalhões e equipes da força conforme sua especialidade."
+      ],
+      "sistemas": [
+        "Brigadas não são grupos Roblox separados.",
+        "Brigadas podem ter bases próprias, mas não têm farda exclusiva; especialidades podem utilizar símbolos e equipamentos associados.",
+        "A seleção e treinamento de brigada integram a carreira, não promovem automaticamente."
+      ],
+      "formacao": [
+        "Treinamento na Brigada (TB).",
+        "Curso de Formação de Sargentos da Brigada (não é ESA 2)."
+      ],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "FTB-Bda-C-Mec": {
+      "papel": "Brigada de Cavalaria Mecanizada integra a organização interna do Exército FAAAB. A brigada é escolhida durante a progressão militar e tem atribuições relacionadas a cavalaria mecanizada.",
+      "atividades": [
+        "Organizar o ingresso de integrantes no setor de cavalaria mecanizada.",
+        "Conduzir formação básica e atividades internas antes da progressão para postos superiores.",
+        "Articular batalhões e equipes da força conforme sua especialidade."
+      ],
+      "sistemas": [
+        "Brigadas não são grupos Roblox separados.",
+        "Brigadas podem ter bases próprias, mas não têm farda exclusiva; especialidades podem utilizar símbolos e equipamentos associados.",
+        "A seleção e treinamento de brigada integram a carreira, não promovem automaticamente."
+      ],
+      "formacao": [
+        "Treinamento na Brigada (TB).",
+        "Curso de Formação de Sargentos da Brigada (não é ESA 2)."
+      ],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "FTB-Bda-C-Bld": {
+      "papel": "Brigada de Cavalaria Blindada integra a organização interna do Exército FAAAB. A brigada é escolhida durante a progressão militar e tem atribuições relacionadas a cavalaria blindada.",
+      "atividades": [
+        "Organizar o ingresso de integrantes no setor de cavalaria blindada.",
+        "Conduzir formação básica e atividades internas antes da progressão para postos superiores.",
+        "Articular batalhões e equipes da força conforme sua especialidade."
+      ],
+      "sistemas": [
+        "Brigadas não são grupos Roblox separados.",
+        "Brigadas podem ter bases próprias, mas não têm farda exclusiva; especialidades podem utilizar símbolos e equipamentos associados.",
+        "A seleção e treinamento de brigada integram a carreira, não promovem automaticamente."
+      ],
+      "formacao": [
+        "Treinamento na Brigada (TB).",
+        "Curso de Formação de Sargentos da Brigada (não é ESA 2)."
+      ],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "CBM-ABMDP-II": {
+      "papel": "Curso ABMDP II registrado como formação no catálogo do Corpo de Bombeiros Militar.",
+      "atividades": [
+        "Integra os programas de formação e capacitação previstos para os Bombeiros na FAAAB.",
+        "A elegibilidade e o efeito do curso seguem as regras próprias de formação, não as patentes de outra força."
+      ],
+      "sistemas": [
+        "O registro do curso não equivale a inscrição aberta ou formatura automática."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "CBM-CFP-BM": {
+      "papel": "Curso de Formação de Praças dos Bombeiros Militares.",
+      "atividades": [
+        "Formação inicial de integrantes da carreira de praças dos Bombeiros.",
+        "Etapas próprias do curso e avaliação de ingresso."
+      ],
+      "sistemas": [
+        "Não aplicar automaticamente a CDP de Recruta do Exército ao Corpo de Bombeiros."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "CBM-CFS-BM": {
+      "papel": "Curso de Formação de Sargentos dos Bombeiros Militares.",
+      "atividades": [
+        "Formação de sargentos de acordo com os requisitos do CBM.",
+        "Aulas, avaliações e progressão dos participantes elegíveis."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "CBM-CFO-BM": {
+      "papel": "Curso de Formação de Oficiais dos Bombeiros Militares.",
+      "atividades": [
+        "Formação de oficiais e cadetes bombeiros.",
+        "Etapas de avaliação da carreira de oficial da força."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "CBM-CAO-BM": {
+      "papel": "Curso de Aperfeiçoamento de Oficiais dos Bombeiros Militares.",
+      "atividades": [
+        "Aperfeiçoamento dos oficiais conforme sua carreira.",
+        "Atualização e avaliações dentro da estrutura do Corpo de Bombeiros."
+      ],
+      "sistemas": [],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "CBM-CSBM": {
+      "papel": "Curso registrado do Corpo de Bombeiros Militar na documentação FAAAB.",
+      "atividades": [
+        "Formação especializada para as atribuições do CBM, condicionada à regulamentação do curso."
+      ],
+      "sistemas": [
+        "O significado detalhado da sigla e as condições específicas de aprovação não estão confirmados em sua ficha."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "FAB-CCFA": {
+      "papel": "Curso CCFA relacionado a qualificações aéreas no projeto FAAAB.",
+      "atividades": [
+        "Formação e qualificação própria da Aeronáutica.",
+        "Ações didáticas do curso, sem se confundir com uma unidade operacional."
+      ],
+      "sistemas": [
+        "CCFA é um curso: não deve ser apresentado como a unidade PARACOM."
+      ],
+      "formacao": [],
+      "observacoes": [],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
+    },
+    "FMB-GRUMEC": {
+      "papel": "Registro histórico de unidade de operações especiais navais no catálogo, cuja permanência no plano atual exige reconciliação das decisões de retirada.",
+      "atividades": [
+        "No planejamento anterior, atividades militares de reconhecimento e operações especiais navais."
+      ],
+      "sistemas": [
+        "Não considerar o GRUMEC ativo ou criado no Roblox automaticamente enquanto a situação no projeto não for conciliada."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Registro legado preservado sem reativação automática."
+      ],
+      "fonte": "Catálogo aprovado FAAAB e decisões de organização do Exército/Bombeiros; detalhes de implementação dependem dos sistemas."
     }
   }
 }
