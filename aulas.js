@@ -128,7 +128,7 @@ function buildDynamic(kind,level){
 
 function shuffleQuestion(q){if(!q||!Array.isArray(q.alternativas)||q.alternativas.length!==4||!Number.isInteger(q.correta)||q.correta<0||q.correta>3)return null;const a=shuffled(q.alternativas.map((text,original)=>({text:String(text),original})));return {...q,alternativas:a.map(x=>x.text),correta:a.findIndex(x=>x.original===q.correta)}}
 function makeQuestion(lesson){if(!lesson)return null;const levelQuestions=state.aprofundados[lesson.id]?.questoesPorNivel?.[state.level];let q;
-if(state.level!=="iniciante"&&Array.isArray(levelQuestions)&&levelQuestions.length){const key=lesson.id+":"+state.level;const turn=state.cycle[key]||0;state.cycle[key]=turn+1;q=lesson.gerador&&turn%2===1?buildDynamic(lesson.gerador,state.level):levelQuestions[ri(0,levelQuestions.length-1)];}
+if(state.level!=="iniciante"&&Array.isArray(levelQuestions)&&levelQuestions.length){const key=lesson.id+":"+state.level;const turn=state.cycle[key]||0;state.cycle[key]=turn+1;q=lesson.gerador&&state.level==="avancado"&&turn%2===1?buildDynamic(lesson.gerador,state.level):levelQuestions[ri(0,levelQuestions.length-1)];}
 else if(lesson.gerador)q=buildDynamic(lesson.gerador,state.level);
 else {const list=lesson.questoes||[];q=list[ri(0,list.length-1)]||null}
 return shuffleQuestion(q)}
