@@ -237,17 +237,12 @@ const V3={
      (e.tipo==="brigada"?'<h3>Treinamento em brigada</h3><p>O militar escolhe uma brigada para a formação e progressão de carreira. A participação em uma brigada não muda sua patente automaticamente.</p>':"")+
      (e.forca==="FTB"&&unit?.hierarquiaInterna?.modelo==="batalhao"?'<h3>Evolução da especialização</h3><p>'+V3.esc(unitData.esquema.especializacoes.join(" → "))+'</p><p>Essa cadeia de especialização não é uma segunda cadeia de patentes.</p>':"")+
      '<p><a href="formacao.html?forca='+encodeURIComponent(e.forca==="CFN"?"FMB":e.forca)+'">Ver outros cursos da força</a></p></div>';
-  }else if(sec==="permissoes"){
-   content='<div class="v3-doc"><h3>Permissões por função</h3><p>O quadro específico de quem pode comandar instruções, acessar áreas do mapa, operar equipamentos e registrar avaliações ainda precisa ser aprovado.</p><p>Quando o login Roblox estiver implantado, a participação e a função no grupo poderão autorizar <b>acessos comuns de leitura</b>, após verificação segura no servidor.</p><p>Permissões administrativas continuarão dependendo de concessão separada e explícita.</p></div>';
-  }else if(sec==="instalacoes"){
-   content='<div class="v3-private"><strong>Dependente do mapa do jogo</strong><p>As áreas permitidas, áreas restritas, salas, pistas, guaritas e instalações desta organização serão descritas depois de existirem no Roblox Studio. Não há planta ou liberação fictícia publicada.</p></div>';
-  }else if(sec==="equipamentos"){
-   content='<div class="v3-private"><strong>Equipamentos aguardando implementação</strong><p>Veículos, ferramentas, armamentos virtuais, uniformes e controles do jogo serão listados quando estiverem disponíveis e testados. A documentação tratará somente do uso das mecânicas do Roblox.</p></div>';
-  }else if(sec==="integrantes"){
-   content='<div class="v3-private"><strong>Área interna ainda não disponível</strong><p>O login Roblox e a verificação de participação em grupos ainda não estão ativados neste portal. Não são exibidas fichas, nomes, escalas ou materiais restritos nesta página pública.</p><p>Uma página estática não protege dados apenas ocultando o conteúdo. O acesso privado exigirá backend, verificação de identidade e permissões no servidor.</p></div>';
-  }else if(sec==="agenda"){
-   content='<div class="v3-private"><strong>Programação a definir</strong><p>Não há treinamentos, aulas ou estágios confirmados para publicação nesta organização. A agenda poderá ser preenchida por responsáveis autorizados quando o sistema estiver disponível.</p></div>';
+  }else if(sec==="sistemas"){
+   const rules=perfil?.sistemas||[];
+   content='<div class="v3-doc"><h3>Mecânicas e regras de participação</h3><ul class="v3-profile-bullets">'+rules.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>'+
+     '<h3>Planejamento versus implementação</h3><p>As mecânicas aqui descritas fazem parte das decisões ou do planejamento de gameplay. Equipamentos, construções, veículos e acesso automático só funcionam quando os respectivos scripts e recursos forem implantados no Roblox.</p></div>';
   }
+
   V3.set("v3-profile",'<span class="v3-label">Seção da organização</span><h2 style="margin:9px 0 23px">'+sections[sec]+'</h2>'+content);
  },
  async courses(){
