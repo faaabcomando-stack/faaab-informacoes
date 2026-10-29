@@ -250,3 +250,13 @@ body.faaab-v3 .v3-footer{display:block}
  .v3-government-lines h3{font-size:21px}
  .v3-government-lines small{grid-column:2}
 }
+
+/* Governo: propostas separadas de regras confirmadas */
+.v3-gov-proposal-section{margin:35px 0 49px;padding-top:25px;border-top:2px solid #b8aa8a}
+.v3-gov-proposal-section>h2{font:400 clamp(27px,4vw,37px)/1.2 Georgia,serif;margin:0 0 19px}
+.v3-gov-proposal-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:38px}
+.v3-gov-proposal-list article{border-bottom:1px solid #cad5c8;padding:18px 0 21px}
+.v3-gov-proposal-list h3{font:400 22px/1.25 Georgia,serif;margin:7px 0 8px}
+.v3-gov-proposal-list p{font-size:14px;line-height:1.65;margin-bottom:9px}
+.v3-gov-proposal-list small{display:block;font-size:12px;color:#6b735f;line-height:1.5}
+@media(max-width:690px){.v3-gov-proposal-list{grid-template-columns:1fr}.v3-gov-proposal-list h3{font-size:20px}}
