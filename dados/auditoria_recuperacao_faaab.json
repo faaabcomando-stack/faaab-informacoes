@@ -3,16 +3,22 @@
   "purpose": "Preservar informações recuperadas de conversas antigas para reconciliação com o catálogo atual sem inventar cargos nem reintroduzir unidades rejeitadas.",
   "military": {
     "internalRanks": [
-      "Praças",
-      "Graduados",
-      "Oficiais Subalternos",
-      "Oficial Intermediário",
-      "Oficiais Superiores",
-      "Alto Escalão",
-      "Subcomandante",
-      "Comandante",
-      "Alto Comando",
-      "Superintendente"
+      "Soldado",
+      "Soldado de 1ª Classe",
+      "Cabo",
+      "Terceiro-Sargento",
+      "Segundo-Sargento",
+      "Primeiro-Sargento",
+      "Subtenente",
+      "Cadete",
+      "Aspirante a Oficial",
+      "Segundo-Tenente",
+      "Primeiro-Tenente",
+      "Capitão",
+      "Capitão-Sênior",
+      "Major",
+      "Tenente-Coronel",
+      "Coronel"
     ],
     "centreRanks": [
       "Supervisor",
@@ -28,7 +34,9 @@
       "Chefe da Especialização"
     ],
     "joining": "Recruta escolhe uma brigada e um batalhão antes da progressão; participação em guerra apenas a partir de Soldado.",
-    "centres": "CIE não é operacional; regimentos têm quadro próprio mais enxuto, com referência a Coronel; brigadas não têm farda própria."
+    "centres": "CIE não é operacional; regimentos têm quadro próprio mais enxuto, com referência a Coronel; brigadas não têm farda própria.",
+    "internalRanksNote": "Correção expressa do responsável em 29/10/2026: patentes dos batalhões vão de Soldado a Coronel; nomenclatura intermediária recuperada da carreira EB documentada.",
+    "supersededScheme": "A antiga lista de dez classes de Praças até Superintendente não é a hierarquia de patentes dos batalhões; foi substituída e não deve voltar às fichas."
   },
   "rankDiscrepancies": {
     "newerRanksMissingInActiveData": [
@@ -63,6 +71,6 @@
     "studies": "Página independente estudos.html",
     "communication": "Central de notícias, avisos, marketing e editais sem aba Estudos",
     "organisations": "Diretório de forças e categorias, sem tratar Governo como batalhão.",
-    "units": "27 estruturas no banco específico; cargos internos e especializações visíveis nas fichas."
+    "units": "17 batalhões com hierarquia Soldado–Coronel (dentro de 27 registros de unidades, brigadas e centros); a revisão não altera outros modelos."
   }
 }
