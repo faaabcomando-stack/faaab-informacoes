@@ -210,11 +210,20 @@ const V3={
      (unit?.hierarquiaInterna?.nota?'<h3>Organização dos cargos</h3><p>'+V3.esc(unit.hierarquiaInterna.nota)+'</p>':"")+
      (e.grupoSeparado===false?'<p class="v3-profile-source">Esta é uma estrutura interna, não um grupo Roblox separado.</p>':"")+'</div>';
   }else if(sec==="cargos"){
-   if(unit?.hierarquiaInterna?.modelo==="batalhao"){
-    const ranks=unit.hierarquiaInterna.patentes||[];
-    content='<div class="v3-doc"><h3>Patentes do batalhão — Soldado até Coronel</h3><p>Esta é a relação de patentes adotada para os batalhões do Exército FAAAB, em ordem crescente. Recruta, generais e cargos administrativos não estão nesta faixa.</p><ol class="v3-unit-rank-list">'+ranks.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ol><p>As regras de ingresso, promoção e atribuição de funções próprias desta unidade dependem de seus critérios específicos.</p></div>';
+   const inner=unit?.hierarquiaInterna;
+   if(inner?.modelo==="batalhao"){
+    const ranks=inner.patentes||[];
+    content='<div class="v3-doc"><h3>Patentes do batalhão</h3><p>A faixa interna começa em <strong>Soldado</strong> e termina em <strong>Coronel</strong>. Os cargos de comando e as qualificações são funções separadas.</p><ol class="v3-unit-rank-list">'+ranks.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ol>'+
+     '<h3>Progressão e CDP</h3><p>As promoções respeitam as etapas de capacitação, formação e avaliações da patente, conforme a carreira do Exército. Estar em um batalhão não substitui a formação.</p><p><a href="carreira.html?forca=FTB">Ver regras de CDP por patente</a></p></div>';
+   }else if(inner?.modelo==="centro"||e.tipo==="centro"){
+    content='<div class="v3-doc"><h3>Equipe de instrução e supervisão</h3><p>Os centros podem ter <strong>Supervisor</strong> e <strong>Supervisor-Chefe</strong>, funções que não são patentes padrão dos batalhões. Instrutores, especialistas e avaliadores exercem atribuições de formação de acordo com a autorização da instituição.</p>'+
+       (perfil?.atividades?.length?'<h3>Responsabilidades documentadas</h3><ul class="v3-profile-bullets">'+perfil.atividades.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+'</div>';
+   }else if(e.tipo==="brigada"){
+    content='<div class="v3-doc"><h3>Brigada e cadeia de comando</h3><p>A brigada organiza os integrantes e a instrução de sua área. A patente do participante continua pertencendo ao Exército, e a progressão segue as etapas de carreira da força.</p><p>Brigada não representa um grupo Roblox separado e não exige uma farda exclusiva.</p><p><a href="carreira.html?forca=FTB">Consultar patentes e CDP</a></p></div>';
    }else{
-    content='<div class="v3-doc"><h3>Funções da organização</h3><p>Os nomes específicos dos cargos ainda não foram integralmente recuperados para '+V3.esc(e.nome)+'. Não serão inventados.</p></div>';
+    content='<div class="v3-doc"><h3>Atividades e responsabilidades da unidade</h3><p>'+V3.esc(perfil?.papel||e.noJogo||e.nome)+'</p>'+
+      (perfil?.atividades?.length?'<ul class="v3-profile-bullets">'+perfil.atividades.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+
+      (["FTB","FAB","FMB","CFN","CBM","PM"].includes(e.forca)?'<p><a href="carreira.html?forca='+encodeURIComponent(e.forca==="CFN"?"FMB":e.forca)+'">Consultar patentes e carreira da força</a></p>':"")+'</div>';
    }
   }else if(sec==="treinamentos"){
    content='<div class="v3-doc"><h3>Treinamentos e estágios</h3><p>Cada organização poderá ter etapas próprias de instrução, aulas, treinamentos, estágios e avaliações conforme sua finalidade. A seleção de exercícios não foi aprovada para esta organização.</p><p>Os roteiros dependentes de parkours, estandes e instalações serão preenchidos depois da construção do mapa. Nenhum treinamento genérico será exigido automaticamente de todos os integrantes.</p></div>';
