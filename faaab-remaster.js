@@ -197,7 +197,8 @@ const V3={
   document.title=e.nome+" · "+sections[sec]+" | FAAAB";
   V3.set("v3-crumb-force",'<a href="'+(V3.forces[e.forca]?.url||"instituicoes.html")+'">'+V3.esc(V3.forces[e.forca]?.name||"FAAAB")+'</a>');
   V3.set("v3-crumb-name",V3.esc(e.nome));
-  V3.set("v3-profile-header",'<span class="v3-label">'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' / '+V3.esc(V3.types[e.tipo]||e.tipo)+'</span><h1>'+V3.esc(e.nome)+'</h1><p>'+V3.esc(perfil?.papel||((e.noJogo&&!/prevista no catálogo aprovado|instituição de ensino prevista|subunidade interna de organização|brigada interna da FAAAB|estrutura do universo FAAAB/i.test(e.noJogo))?e.noJogo:"Organização registrada no catálogo da FAAAB, vinculada à "+(V3.forces[e.forca]?.name||e.forca)+"."))+'</p>'+(e.estadoImplementacao&&e.estadoImplementacao!=="Não confirmado"?'<span class="v3-state">'+V3.esc(e.estadoImplementacao)+'</span>':""));
+  const facts=[perfil?.atividades?.length?perfil.atividades.length+" atividades":null,unit?.subunidades?.length?unit.subunidades.length+" subdivisões":null,relatedCourses.length?relatedCourses.length+" cursos cadastrados":null,perfil?.sistemas?.length?perfil.sistemas.length+" regras de gameplay":null].filter(Boolean).join(" · ");
+  V3.set("v3-profile-header",'<span class="v3-label">'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' / '+V3.esc(V3.types[e.tipo]||e.tipo)+'</span><h1>'+V3.esc(e.nome)+'</h1>'+(facts?'<p class="v3-profile-summary">'+V3.esc(facts)+'</p>':"")+(e.estadoImplementacao&&e.estadoImplementacao!=="Não confirmado"?'<span class="v3-state">'+V3.esc(e.estadoImplementacao)+'</span>':""));
   V3.set("v3-profile-nav",Object.entries(sections).filter(([key])=>availableKeys.includes(key)).map(([key,val])=>'<a href="ficha.html?id='+encodeURIComponent(id)+'&secao='+key+'"'+(sec===key?' aria-current="page"':'')+'>'+val+'</a>').join(""));
   let content="";
   if(sec==="sobre"){
@@ -241,7 +242,7 @@ const V3={
    content='<div class="v3-doc">'+
      (requirements.length?'<h3>Formações relacionadas à unidade</h3><ul class="v3-profile-bullets">'+requirements.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+
      (coursesList?'<h3>Programas de formação já cadastrados</h3>'+coursesList:"")+
-     (e.forca==="FTB"&&e.tipo==="unidade"?'<h3>Base da carreira no Exército</h3><p>A CDP do Recruta inclui TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado. As especializações da unidade e a habilitação de equipamentos são etapas distintas de promoção.</p>':"")+
+     
      (e.tipo==="brigada"?'<h3>Treinamento em brigada</h3><p>O militar escolhe uma brigada para a formação e progressão de carreira. A participação em uma brigada não muda sua patente automaticamente.</p>':"")+
      (e.forca==="FTB"&&unit?.hierarquiaInterna?.modelo==="batalhao"?'<h3>Evolução da especialização</h3><p>'+V3.esc(unitData.esquema.especializacoes.join(" → "))+'</p><p>Essa cadeia de especialização não é uma segunda cadeia de patentes.</p>':"")+
      '<p><a href="formacao.html?forca='+encodeURIComponent(e.forca==="CFN"?"FMB":e.forca)+'">Ver outros cursos da força</a></p></div>';
