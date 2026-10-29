@@ -12,7 +12,7 @@ const V3={
  sectorRows(rows,sector){if(sector==="central")return rows.filter(x=>["FTB","FAB","FMB","CFN"].includes(x.forca)||["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN"].includes(x.id));if(sector==="civil")return rows.filter(x=>["PM","CBM"].includes(x.forca)||["ADM-PM","ADM-CBM"].includes(x.id));if(sector==="governo")return rows.filter(x=>x.forca==="ADM"&&!["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN","ADM-PM","ADM-CBM"].includes(x.id));return rows},
  typeRows(rows,type){if(!type)return rows;if(type==="divisao")return rows.filter(x=>x.tipo==="divisao");if(type==="unidade")return rows.filter(x=>x.tipo==="unidade");return rows.filter(x=>x.tipo===type)},
  url(e){return "ficha.html?id="+encodeURIComponent(e.id)},
- row(e){return '<article class="v3-record-item"><div class="v3-record-code">'+V3.esc(e.sigla||e.forca)+'</div><div><h3><a href="'+V3.url(e)+'">'+V3.esc(e.nome)+'</a></h3><p>'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' · '+V3.esc(V3.types[e.tipo]||e.tipo||"Organização")+' · '+V3.esc(e.estadoImplementacao||"Situação a confirmar")+'</p></div><a href="'+V3.url(e)+'">Abrir organização →</a></article>'},
+ row(e){return '<article class="v3-record-item"><div class="v3-record-code">'+V3.esc(e.sigla||e.forca)+'</div><div><h3><a href="'+V3.url(e)+'">'+V3.esc(e.nome)+'</a></h3><p>'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' · '+V3.esc(V3.types[e.tipo]||e.tipo||"Organização")+' · '+V3.esc(e.estadoImplementacao||"Situação a confirmar")+'</p></div></article>'},
  rows(rows){return rows.length?'<div class="v3-record-list">'+rows.map(V3.row).join("")+'</div>':'<p class="v3-empty">Nenhuma organização desse tipo está registrada no catálogo atual. Não foram criadas entradas fictícias.</p>'},
  note(txt){return '<div class="v3-note">'+V3.esc(txt)+'</div>'},
  context(key,active=""){
@@ -156,12 +156,21 @@ const V3={
    document.title=(V3.types[type]||"Organizações")+" | "+name+" | FAAAB";
   }
   let rows=V3.typeRows(V3.forceList(V3.sectorRows(all,sector),force),type);
+  if(!force&&!sector)rows=rows.filter(x=>x.forca!=="ADM"&&x.forca!=="GOV");
   const title=type?(V3.types[type]||"Organizações"):body.dataset.collectionName||"Organizações";
   const detail=document.getElementById("v3-dynamic-title");if(detail&&type)detail.textContent=title+(force?" — "+(V3.forces[force]?.full||V3.forces[force]?.name||force):"");
   const descriptor=document.getElementById("v3-dynamic-description");if(descriptor)descriptor.textContent=(force?"Instituição: "+(V3.forces[force]?.name||force)+". ":"")+rows.length+" registros disponíveis. Todos levam a uma ficha individual.";
   const input=document.getElementById("v3-search");
-  function paint(){const q=V3.clean(input?.value.trim()||"");const r=q?rows.filter(e=>V3.clean([e.nome,e.sigla,e.forca,e.secao].join(" ")).includes(q)):rows;V3.set("v3-list-count",r.length+" organizações encontradas");V3.set("v3-directory",V3.rows(r))}
-  input?.addEventListener("input",paint);paint();
+  function paint(){
+   const q=V3.clean(input?.value.trim()||"");
+   const f=document.getElementById("v3-force-filter")?.value||"",t=document.getElementById("v3-type-filter")?.value||"";
+   const list=rows.filter(x=>(!q||V3.clean([x.nome,x.sigla,x.forca,x.secao].join(" ")).includes(q))&&(!f||(f==="FMB"?["FMB","CFN"].includes(x.forca):x.forca===f))&&(!t||x.tipo===t));
+   V3.set("v3-list-count",list.length+" organizações encontradas");V3.set("v3-directory",V3.rows(list));
+  }
+  input?.addEventListener("input",paint);
+  document.getElementById("v3-force-filter")?.addEventListener("change",paint);
+  document.getElementById("v3-type-filter")?.addEventListener("change",paint);
+  paint();
  },
  async record(){
   const id=new URLSearchParams(location.search).get("id");
