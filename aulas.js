@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id);
 const escapeHTML=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const norm=v=>String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
 const STORE="faaab-academia-v1";
-const state={lessons:[],subject:"Todas",search:"",selected:null,limit:25,level:"intermediario",aprofundados:{},progress:{done:{},attempts:0,correct:0},question:null,answered:false,mode:"lesson",session:null,ready:false,programId:null,programName:null,allowedIds:null,groups:[]};
+const state={lessons:[],subject:"Todas",search:"",selected:null,limit:25,level:"intermediario",aprofundados:{},cycle:{},progress:{done:{},attempts:0,correct:0},question:null,answered:false,mode:"lesson",session:null,ready:false,programId:null,programName:null,allowedIds:null,groups:[]};
 const ri=(min,max)=>min+Math.floor(Math.random()*(max-min+1));
 const shuffled=a=>{const b=a.slice();for(let i=b.length-1;i>0;i--){const j=ri(0,i);[b[i],b[j]]=[b[j],b[i]]}return b};
 function loadProgress(){try{const p=JSON.parse(localStorage.getItem(STORE)||"null");if(p&&typeof p==="object"&&p.done&&typeof p.done==="object"){state.progress={done:p.done,attempts:Number(p.attempts)||0,correct:Number(p.correct)||0}}}catch{}}
@@ -97,6 +97,9 @@ function appliedDynamic(kind){
   for(let n=result+4;values.length<4;n++)if(!values.includes(n))values.push(n);
   return {pergunta,alternativas:values.slice(0,4).map(String),correta:0,feedback,dica,generated:true};
  };
+
+ if(kind==="porcentagem"){const value=ri(5,18)*100,raise=[10,20,25][ri(0,2)],cut=[10,20][ri(0,1)],first=value*(100+raise)/100,r=Math.round(first*(100-cut))/100;return q("Um equipamento custa R$ "+value+". Após aumento de "+raise+"% e desconto de "+cut+"%, qual o preço final em reais?",r,[value*(100+raise-cut)/100,first,value*(100-cut)/100],"O primeiro valor é "+value+"×"+(100+raise)+"/100 = "+first+". Depois aplique o desconto ao novo preço: "+first+"×"+(100-cut)+"/100 = "+r+".","O desconto incide sobre o preço já aumentado.");}
+ if(kind==="equacao"){const x=ri(6,26),a=ri(4,7),b=ri(1,3),c=ri(7,30),d=(a-b)*x+c;return q("Resolva "+a+"x + "+c+" = "+b+"x + "+d+". Qual é x?",x,[x-1,x+1,x+2],"Subtraia "+b+"x e "+c+" de ambos os lados: "+(a-b)+"x = "+(d-c)+". Dividindo pelo coeficiente, x = "+x+".","Reúna as incógnitas em um lado e os números no outro.");}
  if(kind==="soma"){const a=ri(150,480),b=ri(90,350),c=ri(45,200),result=a+b+c;return q("Uma equipe recebeu "+a+", "+b+" e "+c+" itens em lotes diferentes. Qual foi o total?",result,[result-b,result-c,result+10],"Some os três lotes: "+a+" + "+b+" + "+c+" = "+result+". O total deve superar qualquer parcela.","Junte dois lotes e depois acrescente o terceiro.")}
  if(kind==="subtracao"){const initial=ri(340,690),used=ri(110,210),received=ri(35,100),result=initial-used+received;return q("Um depósito tinha "+initial+" itens. Foram retirados "+used+" e repostos "+received+". Qual é o estoque atual?",result,[initial-used,result+used,result-received],initial+" − "+used+" = "+(initial-used)+"; "+(initial-used)+" + "+received+" = "+result+".","A retirada e a reposição têm sentidos opostos.")}
  if(kind==="multiplicacao"){const boxes=ri(15,35),each=ri(12,28),reserved=ri(23,61),result=boxes*each-reserved;return q("Uma remessa traz "+boxes+" caixas com "+each+" kits. Após separar "+reserved+" para vistoria, quantos kits restam?",result,[boxes*each,result+boxes,result-reserved],"Primeiro calcule "+boxes+"×"+each+" = "+boxes*each+" kits. Depois subtraia "+reserved+": "+result+".","Há uma multiplicação e uma subtração.")}
@@ -104,7 +107,7 @@ function appliedDynamic(kind){
  return null;
 }
 function buildDynamic(kind,level){
- if(level==="avancado"&&["soma","subtracao","multiplicacao","divisao"].includes(kind))return appliedDynamic(kind);
+ if(level==="avancado"&&["soma","subtracao","multiplicacao","divisao","porcentagem","equacao"].includes(kind))return appliedDynamic(kind);
  const scale={iniciante:0,intermediario:1,avancado:2}[level]??0;
  const caps=[10,50,200],max=caps[scale];
  let question,result,solution,wrong=[];
@@ -125,7 +128,7 @@ function buildDynamic(kind,level){
 
 function shuffleQuestion(q){if(!q||!Array.isArray(q.alternativas)||q.alternativas.length!==4||!Number.isInteger(q.correta)||q.correta<0||q.correta>3)return null;const a=shuffled(q.alternativas.map((text,original)=>({text:String(text),original})));return {...q,alternativas:a.map(x=>x.text),correta:a.findIndex(x=>x.original===q.correta)}}
 function makeQuestion(lesson){if(!lesson)return null;const levelQuestions=state.aprofundados[lesson.id]?.questoesPorNivel?.[state.level];let q;
-if(state.level!=="iniciante"&&Array.isArray(levelQuestions)&&levelQuestions.length)q=levelQuestions[ri(0,levelQuestions.length-1)];
+if(state.level!=="iniciante"&&Array.isArray(levelQuestions)&&levelQuestions.length){const key=lesson.id+":"+state.level;const turn=state.cycle[key]||0;state.cycle[key]=turn+1;q=lesson.gerador&&turn%2===1?buildDynamic(lesson.gerador,state.level):levelQuestions[ri(0,levelQuestions.length-1)];}
 else if(lesson.gerador)q=buildDynamic(lesson.gerador,state.level);
 else {const list=lesson.questoes||[];q=list[ri(0,list.length-1)]||null}
 return shuffleQuestion(q)}
