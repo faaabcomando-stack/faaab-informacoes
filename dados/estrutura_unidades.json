@@ -24,7 +24,7 @@
     ],
     "topo": "A patente máxima na relação de batalhões é Coronel. Atribuições administrativas adicionais não integram esta lista de patentes.",
     "centros": "Supervisor e Supervisor-Chefe reservados para Centros, não são cargos padrão de batalhões.",
-    "brigadas": "O Recruta deve escolher uma brigada e um batalhão para ingresso no Exército, seguindo as etapas exigidas; brigadas não possuem farda exclusiva.",
+    "brigadas": "Recruta entra em exatamente uma brigada mediante seleção. Brigadas são estruturas internas e não possuem farda própria. Entrar em brigada não significa entrar em batalhão.",
     "especializacoes": [
       "Iniciante",
       "Intermediário",
@@ -38,7 +38,8 @@
     "operacoes": "Participação em guerra requer chegar a Soldado e receber atribuição na unidade; a escolha de unidade não permite ignorar as etapas de progressão.",
     "implantacao": "Esta página documenta a estrutura; não modifica permissões nem grupos Roblox.",
     "elite": "Batalhões possuem função ou quadro interno de Elite. Elite não é patente adicional à hierarquia de Soldado até Coronel, e sua forma exata de ingresso depende de regras próprias.",
-    "ingresso": "O Recruta precisa estar vinculado a uma brigada e a um batalhão, cumprindo as etapas de CDP. O registro em uma unidade não elimina requisitos de progressão ou formação."
+    "ingresso": "Recruta participa da brigada, não de batalhão. CDP Recruta→Soldado: TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado. A conclusão não promove automaticamente. Batalhão é opcional, exige exame mais difícil e a última regra expressa recuperada o liberava a partir de Sargento. O limite foi rediscutido em outubro sem mudança aprovada recuperada.",
+    "batalhoesIngresso": "Batalhão não aceita Recruta. O ingresso é separado, opcional e com exame próprio. A faixa Soldado–Coronel exibida na ficha não equivale a autorização de ingresso para toda patente."
   },
   "mapeamentos": {
     "FTB-BFE": {
