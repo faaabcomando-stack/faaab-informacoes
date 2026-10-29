@@ -175,9 +175,11 @@ const V3={
  async record(){
   const id=new URLSearchParams(location.search).get("id");
   const s=new URLSearchParams(location.search).get("secao")||"sobre";
-  const sections={sobre:"Apresentação",estrutura:"Estrutura",cargos:"Cargos e atribuições",treinamentos:"Treinamentos e estágios",permissoes:"Permissões",instalacoes:"Instalações",equipamentos:"Equipamentos virtuais",integrantes:"Área de integrantes",agenda:"Agenda"};
-  const cat=await V3.get("catalogo");
+  const sections={sobre:"Apresentação",estrutura:"Subunidades e vínculos",cargos:"Hierarquia interna",treinamentos:"Formação e progressão",permissoes:"Permissões"};
+  const [cat,unitData]=await Promise.all([V3.get("catalogo"),V3.get("estrutura_unidades")]);
   const e=cat.find(x=>x.id===id);
+  const unit=unitData.mapeamentos?.[id]||null;
+  const parentUnits=Object.entries(unitData.mapeamentos||{}).filter(([_,o])=>o.subunidades?.some(y=>y.catalogoId===id)).map(([parentId])=>cat.find(x=>x.id===parentId)).filter(Boolean);
   if(!e){V3.set("v3-profile",' <h1>Organização não encontrada</h1><p>Confira o endereço ou volte à <a href="instituicoes.html">página de instituições</a>.</p>');return}
   const sec=Object.prototype.hasOwnProperty.call(sections,s)?s:"sobre";
   V3.context(e.forca);
@@ -207,7 +209,7 @@ const V3={
   }else if(sec==="agenda"){
    content='<div class="v3-private"><strong>Programação a definir</strong><p>Não há treinamentos, aulas ou estágios confirmados para publicação nesta organização. A agenda poderá ser preenchida por responsáveis autorizados quando o sistema estiver disponível.</p></div>';
   }
-  V3.set("v3-profile",'<span class="v3-label">Seção da organização</span><h2 style="margin:9px 0 23px">'+sections[sec]+'</h2>'+content+'<div class="v3-pager"><a class="v3-button" href="'+(V3.forces[e.forca]?.url||"instituicoes.html")+'">Voltar à instituição</a></div>');
+  V3.set("v3-profile",'<span class="v3-label">Seção da organização</span><h2 style="margin:9px 0 23px">'+sections[sec]+'</h2>'+content);
  },
  async courses(){
   const rows=await V3.get("cursos"),input=document.getElementById("v3-search");
