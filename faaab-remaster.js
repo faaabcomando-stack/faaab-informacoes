@@ -226,7 +226,7 @@ const V3={
    if(inner?.modelo==="batalhao"){
     const ranks=inner.patentes||[];
     content='<div class="v3-doc"><h3>Patentes do batalhão</h3><p>A faixa interna começa em <strong>Soldado</strong> e termina em <strong>Coronel</strong>. Os cargos de comando e as qualificações são funções separadas.</p><ol class="v3-unit-rank-list">'+ranks.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ol>'+
-     '<h3>Progressão e CDP</h3><p>As promoções respeitam as etapas de capacitação, formação e avaliações da patente, conforme a carreira do Exército. Estar em um batalhão não substitui a formação.</p><p><a href="carreira.html?forca=FTB">Ver regras de CDP por patente</a></p></div>';
+     '<h3>Progressão e CDP</h3><p>As promoções respeitam as etapas de capacitação, formação e avaliações da patente, conforme a carreira do Exército. Estar em um batalhão não substitui a formação.</p><h3>Função Elite</h3><p>'+V3.esc(unitData.esquema.elite)+'</p></div>';
    }else if(inner?.modelo==="centro"||e.tipo==="centro"){
     content='<div class="v3-doc"><h3>Equipe de instrução e supervisão</h3><p>Os centros podem ter <strong>Supervisor</strong> e <strong>Supervisor-Chefe</strong>, funções que não são patentes padrão dos batalhões. Instrutores, especialistas e avaliadores exercem atribuições de formação de acordo com a autorização da instituição.</p>'+
        (perfil?.atividades?.length?'<h3>Responsabilidades documentadas</h3><ul class="v3-profile-bullets">'+perfil.atividades.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+'</div>';
@@ -245,6 +245,7 @@ const V3={
      (coursesList?'<h3>Programas de formação já cadastrados</h3>'+coursesList:"")+
      
      (e.tipo==="brigada"?'<h3>Treinamento em brigada</h3><p>O militar escolhe uma brigada para a formação e progressão de carreira. A participação em uma brigada não muda sua patente automaticamente.</p>':"")+
+     (e.forca==="FTB"&&(unit?.hierarquiaInterna?.modelo==="batalhao"||e.tipo==="brigada")?'<h3>Ingresso do Recruta</h3><p>'+V3.esc(unitData.esquema.ingresso)+'</p>':"")+
      (e.forca==="FTB"&&unit?.hierarquiaInterna?.modelo==="batalhao"?'<h3>Evolução da especialização</h3><p>'+V3.esc(unitData.esquema.especializacoes.join(" → "))+'</p><p>Essa cadeia de especialização não é uma segunda cadeia de patentes.</p>':"")+
      '<p><a href="formacao.html?forca='+encodeURIComponent(e.forca)+'">Ver outros cursos da força</a></p></div>';
   }else if(sec==="sistemas"){
