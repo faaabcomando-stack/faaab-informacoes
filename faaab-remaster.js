@@ -197,8 +197,12 @@ const V3={
    if(unit?.observacoes)content+='<p>'+V3.esc(unit.observacoes)+'</p>';
    if(parentUnits.length)content+='<p><b>Unidade vinculada:</b> '+V3.esc(parentUnits.map(x=>x.nome).join(", "))+'</p>';
   }else if(sec==="cargos"){
-   content='<div class="v3-doc"><h3>Cargos da organização</h3><p>Quadro de comando, instrutores, alunos e demais funções internas ainda não foi validado individualmente para '+V3.esc(e.nome)+'. Não atribuímos cargos de outras organizações automaticamente.</p><p>A função interna não altera a patente global do militar. As atribuições e os responsáveis de cada nível ainda precisam ser definidos.</p><p><a href="comando.html">Consultar cargos gerais e autoridades documentados →</a></p></div>';
-   if(unit?.hierarquiaInterna?.classes)content+='<h3>Hierarquia interna confirmada</h3><ol>'+unit.hierarquiaInterna.classes.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ol>';
+   if(unit?.hierarquiaInterna?.modelo==="batalhao"){
+    const ranks=unit.hierarquiaInterna.patentes||[];
+    content='<div class="v3-doc"><h3>Patentes do batalhão — Soldado até Coronel</h3><p>Esta é a relação de patentes adotada para os batalhões do Exército FAAAB, em ordem crescente. Recruta, generais e cargos administrativos não estão nesta faixa.</p><ol class="v3-unit-rank-list">'+ranks.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ol><p>As regras de ingresso, promoção e atribuição de funções próprias desta unidade dependem de seus critérios específicos.</p></div>';
+   }else{
+    content='<div class="v3-doc"><h3>Funções da organização</h3><p>Os nomes específicos dos cargos ainda não foram integralmente recuperados para '+V3.esc(e.nome)+'. Não serão inventados.</p></div>';
+   }
   }else if(sec==="treinamentos"){
    content='<div class="v3-doc"><h3>Treinamentos e estágios</h3><p>Cada organização poderá ter etapas próprias de instrução, aulas, treinamentos, estágios e avaliações conforme sua finalidade. A seleção de exercícios não foi aprovada para esta organização.</p><p>Os roteiros dependentes de parkours, estandes e instalações serão preenchidos depois da construção do mapa. Nenhum treinamento genérico será exigido automaticamente de todos os integrantes.</p></div>';
    if(e.forca==="FTB")content+=V3.note("Referência da FAAAB: Recrutas precisam escolher uma brigada e um batalhão antes do treinamento e da progressão regular. A participação em guerras exige alcançar Soldado. O TC-1 é treinamento geral para classes, praças e graduados; cadetes e superiores não realizam TC-1. Centros ou batalhões não são automaticamente responsáveis por ministrá-lo.");
