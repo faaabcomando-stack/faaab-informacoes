@@ -1115,31 +1115,6 @@
   },
   {
     "forca": "FMB",
-    "ordem": 1,
-    "sigla": "ALM",
-    "nome": "Almirante",
-    "competencias": "Representação máxima do poder naval dentro do sistema do jogo.",
-    "requisitos": "Posto superior especial da FAAAB: só após exercício como Comandante da Marinha, histórico exemplar, tempo mínimo e aprovação do Conselho Naval Superior.",
-    "formacao": "Conselho Naval Superior - não é curso",
-    "diasMinimos": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial.",
-    "proximaEtapa": "Final",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
-    "classe": "Oficiais-generais e postos especiais",
-    "cdpStatus": "Registrada no manual FAAAB",
-    "cdpExiste": true,
-    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
-    "cdpCriterios": "Posto superior especial da FAAAB: só após exercício como Comandante da Marinha, histórico exemplar, tempo mínimo e aprovação do Conselho Naval Superior.",
-    "cdpEtapas": [
-      {
-        "nome": "Conselho Naval Superior - não é curso",
-        "obrigatorio": null,
-        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
-      }
-    ],
-    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial."
-  },
-  {
-    "forca": "FMB",
     "ordem": 2,
     "sigla": "ALM-ESQ",
     "nome": "Almirante de Esquadra",
@@ -1147,7 +1122,7 @@
     "requisitos": "26 dias mínimos + mérito; passar Conselho do Almirantado e cumprir qualificação de alta direção.",
     "formacao": "Conselho do Almirantado; CDEPN opcional/alto nível FAAAB",
     "diasMinimos": "26 dias - proposta de balanceamento",
-    "proximaEtapa": "Comandante da Marinha",
+    "proximaEtapa": "Final",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "classe": "Oficiais-generais e postos especiais",
     "cdpStatus": "Registrada no manual FAAAB",
