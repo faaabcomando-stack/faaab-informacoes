@@ -1676,7 +1676,7 @@
     "requisitos": "26 dias mínimos + mérito; passar Conselho do Almirantado e cumprir qualificação de alta direção.",
     "competencias": "Condução da Marinha em nível estratégico e supervisão dos grandes comandos.",
     "formacao": "Conselho do Almirantado; CDEPN opcional/alto nível FAAAB",
-    "proximaEtapa": "Comandante da Marinha",
+    "proximaEtapa": "Final",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
     "cdpStatus": "Registrada no manual FAAAB",
@@ -1696,47 +1696,6 @@
       }
     ],
     "cdpTempoProposto": "26 dias - proposta de balanceamento",
-    "tipoRegistro": "Patente/graduação"
-  },
-  {
-    "id": "FMB-CMD-MB",
-    "forca": "FMB",
-    "sigla": "CMD-MB",
-    "cargo": "Comandante da Marinha",
-    "diasMinimos": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial.",
-    "requisitos": "Função de comando máximo regular; período funcional + desempenho + decisão institucional.",
-    "competencias": "Direção máxima da Marinha.",
-    "formacao": "Sem curso de patente obrigatório",
-    "proximaEtapa": "Almirante",
-    "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
-    "cdpStatus": "Em revisão; requisitos herdados de versão anterior, ainda não confirmados como CDP atual",
-    "tipoRegistro": "Função de comando ou registro legado, não parte da hierarquia de patentes"
-  },
-  {
-    "id": "FMB-ALM",
-    "forca": "FMB",
-    "sigla": "ALM",
-    "cargo": "Almirante",
-    "diasMinimos": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial.",
-    "requisitos": "Posto superior especial da FAAAB: só após exercício como Comandante da Marinha, histórico exemplar, tempo mínimo e aprovação do Conselho Naval Superior.",
-    "competencias": "Representação máxima do poder naval dentro do sistema do jogo.",
-    "formacao": "Conselho Naval Superior - não é curso",
-    "proximaEtapa": "Final",
-    "fonte": "Manual CDP da FAAAB (setembro/2026)",
-    "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados.",
-    "cdpStatus": "Registrada no manual FAAAB",
-    "cdpExiste": true,
-    "cdpFonte": "Manual de Capacitação de Patente da FAAAB (setembro/2026); alterações posteriores a verificar",
-    "cdpCriterios": "Posto superior especial da FAAAB: só após exercício como Comandante da Marinha, histórico exemplar, tempo mínimo e aprovação do Conselho Naval Superior.",
-    "cdpEtapas": [
-      {
-        "nome": "Conselho Naval Superior - não é curso",
-        "obrigatorio": null,
-        "observacao": "Etapa citada no manual; obrigatoriedade e condições na descrição dos requisitos"
-      }
-    ],
-    "cdpTempoProposto": "Sem número fixo neste manual; etapa dominada por formação/cargo/condição especial.",
     "tipoRegistro": "Patente/graduação"
   },
   {
