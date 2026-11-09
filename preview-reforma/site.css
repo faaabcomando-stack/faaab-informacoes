@@ -169,3 +169,13 @@ a:hover{text-decoration:none}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}.force-card:hover,.btn:hover,.mini-story:hover,.entry:hover{transform:none}}
 
 .demo-banner{background:#fff4d9;border-bottom:1px solid #e2c68f;color:#6b4b1d;font-size:12px}.demo-banner .wrap{display:flex;gap:14px;align-items:center;min-height:44px}.demo-banner strong{text-transform:uppercase;font-size:10px;letter-spacing:.06em;white-space:nowrap}.demo-banner span{line-height:1.5}@media(max-width:650px){.demo-banner .wrap{display:block;padding:10px 0}.demo-banner strong{display:block;margin-bottom:4px}}
+
+/* Portais das forças: indicadores derivados do catálogo e navegação de categorias */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 24px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:8px;padding:17px 19px;display:flex;flex-direction:column;gap:2px}
+.stat strong{font-size:30px;font-weight:900;letter-spacing:-.055em;color:#1b5372;line-height:1.1}
+.stat span{font-size:11px;font-weight:700;color:#6f8490}
+.entry-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:7px}
+.unit-seal{width:48px;height:48px;flex:0 0 48px;filter:drop-shadow(0 3px 4px #0000000c)}
+.entry .tag{max-width:calc(100% - 58px);overflow-wrap:anywhere;text-align:right}
+@media(max-width:600px){.stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:1/-1}.stat{padding:15px}.stat strong{font-size:27px}}
