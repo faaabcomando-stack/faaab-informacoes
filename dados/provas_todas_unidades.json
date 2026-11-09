@@ -2132,23 +2132,6 @@
       "inscricaoAbertaFAAAB": false
     },
     {
-      "id": "CAT-FTB-ESFCEx",
-      "origem": "catalogo",
-      "origemId": "FTB-ESFCEx",
-      "forca": "FTB",
-      "tipo": "escola",
-      "nome": "Escola de Saúde e Formação Complementar do Exército",
-      "sigla": "ESFCEx",
-      "estadoFAAAB": "Não confirmado",
-      "situacaoProva": "sem_prova_publica_comprovada",
-      "referenciaId": null,
-      "referenciaUrl": null,
-      "observacao": "Instituição de ensino prevista no planejamento. Consulte 'Ensino e cursos' e a CDP da patente para verificar a rota formativa quando documentada.",
-      "efeitoDocumentado": null,
-      "formaAcesso": "Seleção ou curso específico a definir; pertencer a uma unidade não implica prova escrita individual",
-      "inscricaoAbertaFAAAB": false
-    },
-    {
       "id": "CAT-FTB-Bda-Inf-Sl",
       "origem": "catalogo",
       "origemId": "FTB-Bda-Inf-Sl",
