@@ -87,3 +87,37 @@ Nunca conceder cargo, patente, whitelist ou autorização com base somente na pa
 ### Escopo e proteção do projeto
 Nenhuma patente, grupo Roblox, bot Discord, curso, jogo, banco em produção ou whitelist foi alterado nesta etapa.
 O Worker atual ainda não está implantado; nada aqui significa que o login esteja disponível para usuários reais.
+
+
+## Iteração 3 — portal editorial com identidade própria
+
+### Alterações de interface
+- A página `preview-reforma/index.html` foi reconstruída: **Notícias importantes aparecem primeiro**; sequência: forças, avisos gerais, anúncios identificados (se houver), catálogo e ensino.
+- Novo sistema visual em `site.css` e comportamento público em `site.js`. A prévia anterior não é a implementação exibida nesta versão.
+- Marca vetorial original `assets/marca-faaab.svg`, favicon próprio e seis selos vetoriais em `assets/simbolos.svg`. Os símbolos **não são emblemas oficiais** e não representam endosso institucional.
+- Layout específico para Exército, Marinha/Fuzileiros, Aeronáutica, Polícia Militar, Bombeiros e Governo em `forca.html?sigla=...`, com contadores reais e filtros de categorias calculados de `../dados/catalogo.json`.
+- Arquivo público `noticias.html`, página de leitura `noticia.html?item=N` e separação de notícias urgentes, importantes, avisos e publicidade.
+- O editor `painel-v2.html` aceita a categoria `anuncio` e a identifica visivelmente como publicidade da comunidade. A autorização de publicação permanece no servidor e o login OAuth segue não implantado.
+
+### Conteúdo de demonstração sem notícias inventadas
+- `dados/noticias.json` permanece como fonte real e não foi preenchido com comunicados falsos.
+- Para revisar o layout completo, abra `preview-reforma/index.html?demo=1` **somente depois que o branch estiver disponível em um ambiente de prévia**. Essa opção carrega `demo-noticias.json` com textos marcados como **EXEMPLO**, incluindo um anúncio fictício.
+- O aviso amarelo do modo demonstrativo identifica claramente que o conteúdo não representa decisões, emergências ou publicidade real.
+- O parâmetro `demo=1` acompanha os links das notícias de exemplo para abrir o detalhe correto.
+
+### Verificação automatizada
+A partir da raiz do repositório, com Node.js 18 ou superior:
+
+```sh
+node preview-reforma/verificar.mjs
+```
+
+O script checa: integridade de arquivos, links locais da prévia, IDs duplicados, sintaxe do JavaScript, prioridades editoriais, identificação de anúncios, origem dos dados e organização por áreas. **Não substitui testes no navegador**, acessibilidade manual, OAuth real, integração Roblox ou verificação do deploy.
+
+### Próximas exigências antes de publicar
+- Abrir o branch em uma URL de prévia e conferir navegador desktop/celular e resoluções intermediárias.
+- Validar junto à administração os emblemas de cada unidade, sem reutilizar marcas oficiais de forma que sugira afiliação.
+- Auditorar o catálogo legado antes de substituir hierarquias ou atribuir situações de funcionamento não confirmadas.
+- Configurar OAuth Roblox, Worker, D1 e whitelist apenas com credenciais guardadas em ambiente seguro; testar login, CSRF, cookies e permissões.
+- Aprovar conteúdos e quaisquer anúncios reais pela equipe editorial.
+- **Não mesclar esta prévia com `main` até a revisão e implantação do backend.**
