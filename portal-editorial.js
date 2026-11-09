@@ -30,12 +30,18 @@
   const card=el("article","side-story"),tag=el("div","meta",meta(x)),h=el("h3"),p=el("p",null,x.resumo||""),read=a(linkPost(x),"Ler notícia ↗","read-more");
   h.append(a(linkPost(x),x.titulo));card.append(tag,h,p,read);return card
  }
- function fallbackCard(){
+ function emptyNews(){
+  const card=el("article","news-empty-state");
+  const img=document.createElement("img");img.src="assets/sem-noticia-bloqueio.svg";img.alt="Noticiário sem publicação";img.width=86;img.height=86;
+  const c=el("div");c.append(el("span","meta","Noticiário FAAAB"),el("h3",null,"Sem notícia"),el("p",null,"Nenhuma publicação disponível no momento."));
+  card.append(img,c);return card
+ }
+  function fallbackCard(){
   const card=el("article","side-story");card.append(el("div","meta","Diretório FAAAB"),el("h3",null,"Explore unidades, centros de ensino e carreiras"),el("p",null,"As informações das organizações estão disponíveis em suas páginas próprias."),a("instituicoes.html","Consultar unidades ↗","read-more"));return card
  }
  function leadRender(posts){
   const list=$("lead-news");list.replaceChildren();
-  if(!posts.length){const c=el("article","lead-story"),media=el("div","lead-media"),content=el("div","lead-copy");media.append(el("span","media-mark","Central de Notícias"),el("span","media-constellation","F"),el("span","media-bottom","Aguardando novas publicações"));content.append(el("div","meta","Comunicados FAAAB"),el("h3",null,"As próximas notícias da FAAAB aparecerão aqui."),el("p",null,"O portal já está preparado para publicar notícias importantes, gerais e comunicados de unidades."),a("central.html#noticias","Acessar Central de Comunicação ↗","read-more"));c.append(media,content);list.append(c);const col=el("div","lead-side");col.append(fallbackCard());list.append(col);return}
+  if(!posts.length){list.append(emptyNews());return}
   list.append(mainStory(posts[0]));
   const col=el("div","lead-side");for(const x of posts.slice(1,3))col.append(sideStory(x));for(let n=col.children.length;n<2;n++)col.append(fallbackCard());list.append(col)
  }
@@ -54,6 +60,7 @@
  function renderFeed(){
   const list=$("news-feed");list.replaceChildren();
   const posts=state.posts.filter(x=>!isAd(x)),ads=state.posts.filter(isAd);
+  if(!state.posts.length){list.append(emptyNews());return;}
   let filter=state.filter;
   let feed=filter==="todas"?posts.slice(3):posts.filter(x=>norm(x.setor)===filter);
   if(filter==="publicidade"){feed=[];if(ads.length){ads.forEach(x=>list.append(sponsored(x)));return}list.append(sponsored({titulo:"Nenhum anúncio patrocinado publicado",resumo:"Espaço reservado a parceiros aprovados. Conteúdo comercial só aparece após identificação do anunciante."}));return}
@@ -96,9 +103,10 @@
   state.posts=raw.filter(x=>x&&typeof x.titulo==="string"&&typeof x.resumo==="string")
    .sort((a,b)=>{const p=x=>classification(x)==="urgente"?2:classification(x)==="importante"?1:0;return p(b)-p(a)||String(b.data||"").localeCompare(String(a.data||""))});
   const editorial=state.posts.filter(x=>!isAd(x));
+  const filters=$("filters");if(filters)filters.hidden=editorial.length===0;
   leadRender(editorial);renderFeed();renderTicker();renderSideAd();
-  const counter=$("news-total");if(counter)counter.textContent=editorial.length+" publicação(ões)";
-  }catch(err){leadRender([]);renderFeed();const status=$("news-total");if(status)status.textContent="Noticiário temporariamente indisponível"}
+  const counter=$("news-total");if(counter)counter.textContent=editorial.length?editorial.length+" publicação(ões)":"Sem notícia";
+  }catch(err){leadRender([]);renderFeed();const status=$("news-total");if(status)status.textContent="Sem notícia"}
  }
  load()
 })();
