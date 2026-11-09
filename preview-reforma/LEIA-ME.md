@@ -121,3 +121,11 @@ O script checa: integridade de arquivos, links locais da prévia, IDs duplicados
 - Configurar OAuth Roblox, Worker, D1 e whitelist apenas com credenciais guardadas em ambiente seguro; testar login, CSRF, cookies e permissões.
 - Aprovar conteúdos e quaisquer anúncios reais pela equipe editorial.
 - **Não mesclar esta prévia com `main` até a revisão e implantação do backend.**
+
+### Integração visual das páginas antigas
+- `faaab-remaster.css` recebeu uma camada final de harmonização com cores, tipografia, navegação, botões e animações da reforma. Isso deixa as páginas existentes mais coerentes visualmente **no branch de prévia**, sem reescrever o HTML das páginas antigas nem mexer nas rotas ou scripts.
+- A correção inclui contrastes separados para botões em fundos claros e para botões sobre o cabeçalho escuro. Ainda é necessário inspecionar cada página em um navegador antes de integrar essa camada à produção.
+
+### Auditoria desta iteração
+- Verificados por inspeção estática: sintaxe de `site.js` e `painel-v2.js`, caminhos dos recursos da prévia, IDs únicos, integridade de categorias de anúncio, origem separada de dados reais e de demonstração, presença das seis áreas no catálogo, e ordem de notícias na entrada.
+- **10 grupos de checagens estáticas passaram** nesta revisão. O script `verificar.mjs` também está disponível para execução no Node; ainda não houve execução em navegador real nem validação visual da interface publicada.
