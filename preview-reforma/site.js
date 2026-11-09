@@ -132,19 +132,35 @@ function initDetail(items){
  const a=el("a","","← Voltar às notícias");a.href="noticias.html";place.append(a);
 }
 function renderArea(data){
- const params=new URLSearchParams(location.search),key=params.get("sigla")||"FTB",a=AREAS[key]||AREAS.FTB,valid=AREAS[key]?key:"FTB";
+ const params=new URLSearchParams(location.search),requested=params.get("sigla")||"FTB",valid=requested==="GOV"?"ADM":AREAS[requested]?requested:"FTB",a=AREAS[valid];
  const title=$("area-title"),desc=$("area-desc"),seal=$("area-seal"),hero=$("area-hero");
  if(title)title.textContent=a.title;if(desc)desc.textContent=a.desc;
  document.title=a.title+" | FAAAB";if(hero)hero.classList.add(a.klass);
  if(seal){const use=document.createElementNS("http://www.w3.org/2000/svg","use");use.setAttribute("href","assets/simbolos.svg#"+valid);seal.replaceChildren(use)}
  if($("area-breadcrumb"))$("area-breadcrumb").textContent=a.short;
  const all=Array.isArray(data)?data.filter(x=>x&&x.id&&x.nome):[];
- const area=all.filter(x=>valid==="FMB"?["FMB","CFN"].includes(x.forca):valid==="ADM"?(x.forca==="ADM"):x.forca===valid);
- const count=$("unit-counter"),out=$("unit-list"),q=$("unit-q"),type=$("unit-type"),more=$("more-units");if(!out)return;
- const typeNames={instituicao:"Instituições",unidade:"Unidades",brigada:"Brigadas",divisao:"Divisões",batalhao:"Batalhões",centro:"Centros",escola:"Escolas",academia:"Academias",curso:"Cursos",subdivisao:"Subdivisões",administracao:"Administração"};
+ const area=all.filter(x=>valid==="FMB"?["FMB","CFN"].includes(x.forca):x.forca===valid);
+ const count=$("unit-counter"),out=$("unit-list"),q=$("unit-q"),type=$("unit-type"),more=$("more-units"),stats=$("area-stats"),tabs=$("unit-groups");if(!out)return;
+ const typeNames={instituicao:"Instituições",unidade:"Unidades",brigada:"Brigadas",divisao:"Divisões",batalhao:"Batalhões",centro:"Centros",escola:"Escolas",academia:"Academias",curso:"Cursos",subdivisao:"Subdivisões",administracao:"Administração",regimento:"Regimentos"};
  const types=[...new Set(area.map(x=>x.tipo).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"pt-BR"));
  if(type){types.forEach(v=>{const option=el("option","",typeNames[v]||v);option.value=v;type.append(option)})}
+ if(stats){
+  stats.replaceChildren();
+  const values=[
+   [area.length,"Registros no catálogo"],
+   [types.length,"Categorias de organização"],
+   [area.filter(x=>["escola","academia","curso","centro"].includes(x.tipo)).length,"Registros de ensino e centros"]
+  ];
+  values.forEach(([number,name])=>{const cell=el("div","stat");cell.append(el("strong","",String(number)),el("span","",name));stats.append(cell)});
+ }
  let limit=18;
+ if(tabs){
+  tabs.replaceChildren();
+  [["","Todas",area.length],...types.map(t=>[t,typeNames[t]||t,area.filter(x=>x.tipo===t).length])].forEach(([v,name,n])=>{
+   const b=el("button","tab",name+" · "+n);b.type="button";b.dataset.type=v;b.setAttribute("aria-pressed",String(v===""));
+   b.addEventListener("click",()=>{if(type)type.value=v;limit=18;draw()});tabs.append(b);
+  });
+ }
  function draw(){
   const term=clean(q?.value.trim()),t=type?.value||"";
   const filtered=area.filter(x=>(!t||x.tipo===t)&&(!term||clean([x.sigla,x.nome,x.secao,x.tipo].join(" ")).includes(term)));
@@ -152,13 +168,17 @@ function renderArea(data){
   if(!area.length)out.append(el("div","empty-state","Nenhum registro dessa área foi encontrado no catálogo atual."));
   else if(!filtered.length)out.append(el("div","empty-state","Nenhuma organização corresponde aos filtros."));
   else filtered.slice(0,limit).forEach(x=>{
-   const card=el("article","entry"),tag=el("span","tag",(x.sigla||x.tipo||"Organização"));
-   const h=el("h3","",x.nome),p=el("p","",(x.tipo||"Estrutura")+" · "+(x.estadoImplementacao||"Situação não confirmada"));
-   const link=el("a","","Abrir ficha →");link.href="../ficha.html?id="+encodeURIComponent(x.id);
-   card.append(tag,h,p,link);out.append(card);
+   const card=el("article","entry"),top=el("div","entry-top"),badge=el("svg","unit-seal"),tag=el("span","tag",(x.sigla||x.tipo||"Organização"));
+   badge.setAttribute("viewBox","0 0 80 80");badge.setAttribute("aria-hidden","true");
+   const use=document.createElementNS("http://www.w3.org/2000/svg","use");
+   use.setAttribute("href","assets/simbolos.svg#"+(x.forca==="CFN"?"FMB":valid));badge.append(use);top.append(badge,tag);
+   const h=el("h3","",x.nome),p=el("p","",(typeNames[x.tipo]||x.tipo||"Estrutura")+" · "+(x.estadoImplementacao||"Situação não confirmada"));
+   const link=el("a","","Consultar ficha →");link.href="../ficha.html?id="+encodeURIComponent(x.id);
+   card.append(top,h,p,link);out.append(card);
   });
   if(count)count.textContent=filtered.length+" organizações encontradas · "+Math.min(limit,filtered.length)+" exibidas";
   if(more)more.hidden=limit>=filtered.length;
+  if(tabs)tabs.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.type===t)));
  }
  if(q)q.addEventListener("input",()=>{limit=18;draw()});
  if(type)type.addEventListener("change",()=>{limit=18;draw()});
