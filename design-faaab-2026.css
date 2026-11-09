@@ -1,0 +1,125 @@
+/* FAAAB | identidade digital e movimento, novembro 2026. Sem animações obrigatórias. */
+:root {--faaab-blue:#142e42;--faaab-blue-deep:#0c2233;--faaab-blue-bright:#296078;--faaab-accent:#bb925f;--faaab-canvas:#f3f6f7;--faaab-motion:cubic-bezier(.2,.8,.2,1)}
+html{scroll-behavior:smooth}
+body{scroll-behavior:smooth}
+a,button,select,input,summary{transition:color .22s var(--faaab-motion),background-color .22s var(--faaab-motion),border-color .22s var(--faaab-motion),box-shadow .25s var(--faaab-motion),transform .25s var(--faaab-motion)}
+button:active,a[class*="button"]:active,.login-pill:active,.cta:active{transform:translateY(1px) scale(.985)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--faaab-accent)!important;outline-offset:4px}
+::selection{background:#c6dded;color:#122d41}
+
+/* Marca exclusiva FAAAB */
+.brand .brand-glyph{background:#102c44 url("assets/logo-faaab.svg") center/contain no-repeat!important;clip-path:none!important;border:0!important;border-radius:12px!important;font-size:0!important;box-shadow:0 7px 20px #142e421a;transition:transform .3s var(--faaab-motion),box-shadow .3s var(--faaab-motion)}
+.brand-glyph:after{display:none!important}
+.brand:hover .brand-glyph{transform:rotate(-3deg) scale(1.04);box-shadow:0 12px 24px #142e4225}
+.brand-type strong{letter-spacing:.035em!important;color:var(--faaab-blue)!important}
+.faaab-v3:not([data-force]) .v3-brand:not(.v3-force-brand){display:inline-flex;align-items:center;gap:11px}
+.faaab-v3:not([data-force]) .v3-brand:not(.v3-force-brand):before{content:"";display:inline-block;width:48px;height:48px;background:url("assets/logo-faaab.svg") center/contain no-repeat;flex:none;transition:transform .3s var(--faaab-motion)}
+.faaab-v3:not([data-force]) .v3-brand:hover:before{transform:rotate(-4deg) scale(1.06)}
+.brand:hover,.v3-brand:hover,.mast-title:hover{text-decoration:none}
+
+/* Capas com presença editorial e hierarquia */
+.mast,.v3-mast,.header,.masthead{background:#fff!important;box-shadow:0 1px 0 #dce5e9}
+.mast,.v3-mast{position:relative;z-index:3}
+.primary-nav,.v3-nav{box-shadow:0 2px 14px #182f3c0c}
+.primary-nav a,.v3-nav a,.nav a{position:relative}
+.primary-nav .nav-links a:after,.v3-nav a:after{content:"";position:absolute;height:2px;width:0;bottom:2px;left:16px;background:var(--faaab-accent);transition:width .28s var(--faaab-motion)}
+.primary-nav .nav-links a:hover:after,.v3-nav a:hover:after,.primary-nav .nav-links a[aria-current="page"]:after,.v3-nav a[aria-current="page"]:after{width:calc(100% - 32px)}
+.primary-nav .nav-links a:hover,.v3-nav a:hover,.nav a:hover{background:#eaf1f4!important;color:#163c55!important;text-decoration:none}
+.primary-nav .nav-links a[aria-current="page"],.v3-nav a[aria-current="page"],.nav a[aria-current="page"]{font-weight:850}
+.utility,.v3-utility,.top{background:linear-gradient(110deg,#0b2234,#174257)!important}
+.mast .container,.v3-mast .v3-wrap{gap:17px}
+.hero,.heading,.v3-intro,.provas-hero{isolation:isolate}
+.heading,.provas-hero,.hero{position:relative;overflow:hidden}
+.heading:after,.provas-hero:after,.hero:after{content:"";pointer-events:none;position:absolute;right:-80px;top:-155px;width:420px;height:420px;border:1px solid #ffffff2a;border-radius:50%;box-shadow:0 0 0 60px #ffffff0a,0 0 0 133px #ffffff05;z-index:-1}
+.section-cap .kicker,.sectionhead .kicker,.eyebrow,.tag,.code{letter-spacing:.12em}
+.v3-intro{background:linear-gradient(115deg,#edf3f6,#f9fbfc)!important}
+.v3-intro h1,.v3-section-head h2,.sectionhead h2{letter-spacing:-.028em}
+
+/* Cartões e elementos interativos */
+.institution,.after-card,.lead-story,.side-story,.sidebar-box,.ad-slot,.lead-card,.card,.panel,.div-card,.brig-card,.block-card,.unit,.v3-record-item,.v3-category-block,.v3-course-detail,.v3-gov-feature,.v3-course-detail,.entry,.lead-copy{transition:transform .3s var(--faaab-motion),box-shadow .3s var(--faaab-motion),border-color .3s var(--faaab-motion),background-color .3s var(--faaab-motion)}
+.institution,.after-card,.lead-story,.side-story,.sidebar-box,.ad-slot,.card,.panel,.div-card,.block-card,.unit,.v3-category-block,.v3-record-item,.entry,.news-empty-state{border-radius:13px!important}
+.institution:hover,.after-card:hover,.lead-story:hover,.side-story:hover,.card:hover,.div-card:hover,.unit:hover,.v3-record-item:hover,.v3-category-block:hover,.entry:hover{transform:translateY(-5px);border-color:#adc5ce!important;box-shadow:0 16px 34px #17384917}
+.institution:focus-visible,.after-card:focus-within,.card:focus-within,.v3-record-item:focus-within{box-shadow:0 0 0 3px #c3a27888,0 15px 28px #1738491e}
+.institution,.card,.unit,.after-card,.div-card,.v3-category-block{overflow:hidden}
+.institution:before,.div-card:before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,#275675,#bb925f,#7baeb4);transform:scaleX(0);transform-origin:left;transition:transform .32s var(--faaab-motion)}
+.institution:hover:before,.div-card:hover:before{transform:scaleX(1)}
+.institution,.div-card{position:relative}
+.institution strong{font-size:12px;color:#29465b}
+.institution small{font-size:10px;line-height:1.45}
+.institution:hover strong{color:#164d70}
+.institution .emblem-thumb{transition:transform .3s var(--faaab-motion),filter .25s var(--faaab-motion)}
+.institution:hover .emblem-thumb{transform:scale(1.07);filter:saturate(1.12)}
+.v3-record-code,.code{background:linear-gradient(120deg,#eaf1f4,#f5f8f8);border-radius:7px!important}
+.v3-record-item h3 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.sidebar-box .link:hover{padding-left:6px;color:#1c607a}
+.feed-row{transition:background-color .2s,transform .2s var(--faaab-motion)}
+.feed-row:hover{background:#f1f6f8;transform:translateX(3px)}
+
+/* Botões animados sem movimento contínuo */
+.login-pill,.hero-links a,.v3-button,.cta,.ad-slot a,.sector-news .sector-news-links a,.go,.read-more,.source,.toplinks a,.directory-all{transition:transform .24s var(--faaab-motion),box-shadow .25s var(--faaab-motion),color .2s,background-color .2s,border-color .2s}
+.login-pill,.hero-links a,.v3-button,.cta,.ad-slot a{border-radius:9px!important}
+.login-pill:hover,.hero-links a:hover,.v3-button:hover,.cta:hover,.sector-news .sector-news-links a:hover{transform:translateY(-3px);box-shadow:0 9px 20px #1b506123;text-decoration:none}
+.login-pill:hover{background:#23536b!important}
+:is(.filter-tabs button,.toolbar input,.toolbar select):focus-visible{box-shadow:0 0 0 3px #bad2dc}
+.filter-tabs button{border-radius:7px}
+.filter-tabs button:hover{background:#e7eff3;color:#1b5370}
+.filter-tabs button.active{background:#204c64;color:#fff}
+.sect-head,.news-head,.section-cap{border-bottom-color:#c9d9df}
+
+/* Assinatura original FAAAB, abaixo das insígnias fictícias do projeto */
+.institution .emblem-frame{display:flex;align-items:center;flex-direction:column;gap:0;transition:transform .3s var(--faaab-motion)}
+.institution:hover .emblem-frame{transform:translateY(-2px)}
+.institution .emblem-thumb{width:72px!important;height:72px!important;border-radius:8px 8px 0 0!important;background-color:#fff;box-shadow:none;border:1px solid #d7e2e6}
+.emblem-stamp{display:block;min-width:72px;background:#183e56;color:#eac99b;font-size:9px;font-weight:900;letter-spacing:.2em;text-align:center;padding:4px 4px;border-radius:0 0 6px 6px}
+.unit .unit-frame{flex:0 0 83px;display:flex;flex-direction:column;align-items:stretch}
+.unit .unit-frame .unit-logo{border-radius:7px 7px 0 0}
+.unit .unit-frame .emblem-stamp{width:83px;min-width:83px;border-radius:0 0 6px 6px}
+
+/* Logo do Exército em páginas próprias com identificação de simulação */
+.crest{border-radius:9px 9px 0 0;position:relative}
+.mast .crest+ .mast-title:after{content:"· SIMULAÇÃO FAAAB";display:block;color:#aa8558;font-size:10px;letter-spacing:.11em;margin-top:3px;font-weight:800}
+.faaab-v3 .v3-force-brand{align-items:center}
+.faaab-v3 .v3-force-brand:before{border-radius:9px!important;box-shadow:0 6px 16px #152f4217}
+
+/* Botões internos e links de navegação */
+button:not(:disabled):hover{filter:saturate(1.06)}
+a:not([href]){cursor:default}
+input,select,textarea{border-radius:8px}
+summary{cursor:pointer}
+summary:hover{color:#235c77}
+
+/* Aparição inicial única, de baixo impacto */
+@keyframes faaab-enter{from{opacity:0;transform:translateY(11px)}to{opacity:1;transform:translateY(0)}}
+.main-content>.container,.dir-main>.container,.heading .wrap,.hero .wrap,.v3-intro .v3-wrap{animation:faaab-enter .55s var(--faaab-motion) both}
+
+/* Estados sem conteúdo */
+.news-empty-state,.news-empty,.empty,.locked{background:linear-gradient(120deg,#fff,#f2f7f9)!important;border:1px solid #d7e4e9;border-left:4px solid #b78c58!important;box-shadow:0 8px 22px #163b5011;border-radius:13px}
+.news-empty-state{display:flex;align-items:center;gap:24px;min-height:180px;padding:30px}
+.news-empty-state img,.news-empty img,.sector-news .empty img{width:86px;height:86px;object-fit:contain;flex:none}
+.news-empty-state h3,.news-empty h3{font:400 29px Georgia,serif;letter-spacing:-.025em;margin:7px 0}
+.news-empty-state p,.news-empty p{font-size:13px;color:#6d7f89}
+#lead-news:has(.news-empty-state){display:block}
+#lead-news>.news-empty-state{width:100%;min-height:235px}
+#news-feed>.news-empty-state{min-height:155px}
+
+/* Capas por força mais sólidas, sem interfaces militarizadas fake */
+body[data-force="FTB"]{--faaab-blue:#284c46;--faaab-blue-bright:#477a67}
+body[data-force="FMB"]{--faaab-blue:#163e5d;--faaab-blue-bright:#357397}
+body[data-force="FAB"]{--faaab-blue:#235473;--faaab-blue-bright:#4784a8}
+body[data-force="PM"]{--faaab-blue:#273e58}
+body[data-force="CBM"]{--faaab-blue:#713b39}
+
+@media(max-width:650px){
+  .nav-links a:after,.v3-nav a:after{display:none}
+  .institution .emblem-thumb{width:61px!important;height:61px!important}
+  .emblem-stamp{min-width:61px;font-size:8px}
+  .unit .unit-frame{flex-basis:67px}
+  .unit .unit-frame .unit-logo{width:67px;height:67px}
+  .unit .unit-frame .emblem-stamp{min-width:67px;width:67px}
+  .news-empty-state{padding:20px;gap:15px;min-height:130px}
+  .news-empty-state img{width:62px;height:62px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{animation:none!important;transition-duration:.01ms!important;transform:none!important}
+}
