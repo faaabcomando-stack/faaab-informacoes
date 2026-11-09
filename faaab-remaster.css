@@ -327,3 +327,13 @@ body.faaab-v3{background:#f6f7f7;color:#253d4b}
 
 /* Simplificação definitiva: não mostrar trilhas duplicadas 'Início / FAAAB Central / Estudos' nas páginas institucionais. */
 .faaab-v3 .v3-breadcrumb,.v3-breadcrumb{display:none!important}
+
+
+/* Emblemas originais FAAAB das seis forças. Posição da grade da coleção aprovada. */
+.faaab-v3 .v3-force-brand:before{content:"";display:inline-block;vertical-align:middle;width:59px;height:59px;margin-right:13px;background-image:url("assets/emblemas-faaab-6.webp");background-repeat:no-repeat;background-size:300% 200%;border:1px solid #d9e2e4}
+.faaab-v3[data-force="FTB"] .v3-force-brand:before{background-position:100% 0%}
+.faaab-v3[data-force="FMB"] .v3-force-brand:before{background-position:50% 100%}
+.faaab-v3[data-force="FAB"] .v3-force-brand:before{background-position:100% 100%}
+.faaab-v3[data-force="PM"] .v3-force-brand:before{background-position:50% 0%}
+.faaab-v3[data-force="CBM"] .v3-force-brand:before{background-position:0% 100%}
+@media(max-width:680px){.faaab-v3 .v3-force-brand:before{width:43px;height:43px;margin-right:8px}}
