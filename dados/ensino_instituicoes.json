@@ -367,6 +367,86 @@
       "formacao": true,
       "catalogoId": "FAB-EAOAR",
       "vinculoFAAAB": "unifa"
+    },
+    {
+      "id": "eear",
+      "sigla": "EEAR",
+      "nome": "Escola de Especialistas de Aeronáutica",
+      "grupo": "FAB",
+      "tipo": "Formação de sargentos especialistas",
+      "resumo": "Ensino profissional e formação de especialistas da FAB.",
+      "real": "A EEAR forma sargentos especialistas, com cursos técnicos e militares em diferentes especialidades da Aeronáutica.",
+      "jogo": "Curso de Formação de Sargentos: Cabo como aluno, 3º Sargento na formatura e Capitão habilitado como instrutor, segundo a prévia documental FAAAB. Só libera progressão após regras aprovadas.",
+      "noticias": [
+        "turmas de formação",
+        "especialidades",
+        "provas",
+        "formaturas"
+      ],
+      "fonte": "https://www2.fab.mil.br/eear/",
+      "formacao": true,
+      "catalogoId": "FAB-EEAR",
+      "estado": "planejado"
+    },
+    {
+      "id": "epcar",
+      "sigla": "EPCAR",
+      "nome": "Escola Preparatória de Cadetes do Ar",
+      "grupo": "FAB",
+      "tipo": "Preparação de futuros oficiais",
+      "resumo": "Ensino preparatório para a carreira de oficiais aviadores.",
+      "real": "A EPCAR oferece ensino médio e formação militar preparatória voltada à carreira na Academia da Força Aérea.",
+      "jogo": "A prévia FAAAB está congelada para revisão. Antes de reabrir, deve ser definida a relação com a formação de alunos superiores e a progressão correspondente.",
+      "noticias": [
+        "ensino preparatório",
+        "revisão de currículo",
+        "seleções",
+        "formaturas"
+      ],
+      "fonte": "https://www2.fab.mil.br/epcar/",
+      "formacao": true,
+      "catalogoId": "FAB-EPCAR",
+      "estado": "congelado_para_revisao"
+    },
+    {
+      "id": "afa",
+      "sigla": "AFA",
+      "nome": "Academia da Força Aérea",
+      "grupo": "FAB",
+      "tipo": "Formação de oficiais",
+      "resumo": "Academia de formação de oficiais da Aeronáutica.",
+      "real": "A AFA forma oficiais aviadores, intendentes e de infantaria da Aeronáutica, em percursos acadêmicos e militares próprios.",
+      "jogo": "Formação de oficiais FAAAB; etapas envolvendo Cadete/Aspirante dependem da progressão superior da FAB, ainda não homologada.",
+      "noticias": [
+        "formação de oficiais",
+        "turmas",
+        "formaturas",
+        "currículo"
+      ],
+      "fonte": "https://www2.fab.mil.br/afa/",
+      "formacao": true,
+      "catalogoId": "FAB-AFA",
+      "estado": "aguardando_progressao"
+    },
+    {
+      "id": "ciaar",
+      "sigla": "CIAAR",
+      "nome": "Centro de Instrução e Adaptação da Aeronáutica",
+      "grupo": "FAB",
+      "tipo": "Formação e adaptação de quadros",
+      "resumo": "Preparação de oficiais e quadros especializados.",
+      "real": "O CIAAR oferece cursos de formação, adaptação e preparação para diferentes quadros da Força Aérea, segundo os editais e programas correspondentes.",
+      "jogo": "Formação especializada de quadros da FAB somente para carreiras implementadas no universo FAAAB. Requisitos de ingresso ainda não definidos.",
+      "noticias": [
+        "formação de quadros",
+        "adaptação",
+        "turmas",
+        "avaliações"
+      ],
+      "fonte": "https://www2.fab.mil.br/ciaar/",
+      "formacao": true,
+      "catalogoId": "FAB-CIAAR",
+      "estado": "planejado"
     }
   ],
   "hierarquiaFAB": {
