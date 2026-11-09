@@ -287,3 +287,40 @@ body.faaab-v3 .v3-footer{display:block}
  .v3-course-body{padding:12px 15px}
  .v3-doc{padding:18px 17px}
 }
+
+
+/* 2026-11-09: unidade visual editorial — menu claro e navegação sem verde escuro */
+:root{--v3-forest:#203e52;--v3-deep:#0f2737;--v3-olive:#547487;--v3-gold:#b48b5c;--v3-line:#d8e0e4;--v3-paper:#f6f7f7;--v3-white:#fff;--v3-muted:#6a7f89}
+body.faaab-v3{background:#f6f7f7;color:#253d4b}
+.faaab-v3 a{color:#24546c}
+.faaab-v3 h1,.faaab-v3 h2,.faaab-v3 h3{color:#1c3444}
+.faaab-v3 p{color:#526d7c}
+.v3-brand{color:#173247!important}
+.v3-brand-desc{color:#5c707b;border-left-color:#cbd5da}
+.v3-mast{background:#fff;border-bottom:1px solid #dce3e7}
+.v3-header-aside{color:#75858e}
+.v3-utility{background:#102738;color:#d6e1e5}
+.v3-nav{background:#fff;border-bottom:1px solid #d8e1e5}
+.v3-nav a,.v3-nav-force a{color:#355064;background:transparent;border-right:0;border-bottom:3px solid transparent;padding:16px 18px}
+.v3-nav a:first-child{border-left:0}
+.v3-nav a:hover,.v3-nav a[aria-current="page"],.v3-nav-force a[aria-current="page"]{color:#234b63;background:#edf2f4;border-bottom:3px solid #b18a58;text-decoration:none}
+.v3-breadcrumb{color:#75838b}
+.v3-breadcrumb a{color:#496577}
+.v3-intro{background:linear-gradient(110deg,#e9eff1 0%,#f7f8f7 73%);border-bottom:1px solid #d8e1e5}
+.v3-intro:before{background:#b18a58;width:4px}
+.v3-side-heading{color:#234557}
+.v3-margin-rule{border-top-color:#ba9464}
+.v3-button{color:#20516c!important;border-color:#8baab9;background:#fff}
+.v3-button.primary{background:#22566e;color:#fff!important;border-color:#22566e}
+.v3-button.primary:hover{background:#163d52}
+.v3-button:hover{background:#edf3f5}
+.v3-section.tint{background:#eff2f3;border-color:#dae3e6}
+.v3-section-head{border-bottom-color:#be9b6d}
+.v3-toc a strong{color:#244e63}
+.v3-toc a small{color:#6c808b}
+.v3-gov-page-head h2,.v3-gov-feature strong,.v3-gov-detail-line strong,.v3-gov-group-head h2,.v3-government-lines strong{color:#23485d}
+.v3-profile-bullets li::before{background:#648ca0}
+.v3-profile-subunits article{background:#f4f7f8;border-color:#d6e0e4}
+.v3-profile-subunits strong,.v3-course-detail summary{color:#27526a}
+.v3-course-detail{background:#f9fbfb;border-color:#d8e1e5}
+@media(max-width:700px){.v3-nav .v3-wrap{gap:0}.v3-nav a{padding:13px 14px}}
