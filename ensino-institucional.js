@@ -32,6 +32,7 @@
   }
  };
  const renderSite=(item,all,news)=>{
+  document.body.dataset.force=item.grupo;
   document.title=item.nome+" | FAAAB";$("site-name").textContent=item.nome;$("site-small").textContent=item.sigla+" · "+item.tipo;
   $("hero-title").textContent=item.nome;$("hero-desc").textContent=item.resumo;
   $("intro-title").textContent=item.tipo;$("real-desc").textContent=item.real;
@@ -49,10 +50,12 @@
   const sub=all.filter(x=>(item.subunidades||[]).includes(x.id));
   const subsec=$("sub-section");subsec.hidden=!sub.length;if(sub.length)renderCards(sub,"subunit-list");
   if(item.id==="unifa"){$("special-note").hidden=false;$("special-note").textContent="No universo FAAAB, UNIFA reúne os portais acadêmicos de ECEMAR e EAOAR. Na estrutura real atual, a DIRENS é responsável pelas escolas, que funcionam no campus da UNIFA."}
+  if(item.estado==="congelado_para_revisao"||item.estado==="aguardando_progressao"){$("special-note").hidden=false;$("special-note").textContent=item.estado==="congelado_para_revisao"?"Projeto congelado para revisão: esta escola não aceita inscrições ou novos cursos no momento.":"Progressão ainda não homologada: esta escola não pode abrir etapas seletivas sem aprovação do comando."}
   if(item.id==="sspm"){$("special-note").hidden=false;$("special-note").textContent="A SSPM administra as seleções navais fictícias. As seleções dos Fuzileiros Navais permanecem separadas. Não concede patente ou matrícula automaticamente."}
   appendNews(news,item.id,null);
  };
  const renderDirectory=(group,all,news)=>{
+  document.body.dataset.force=group;
   const d=dirs[group];document.title=d.title+" | FAAAB";
   $("site-name").textContent=d.title;$("site-small").textContent=d.force+" · Educação institucional";
   $("hero-title").textContent=d.title;$("hero-desc").textContent=d.desc;
