@@ -372,3 +372,13 @@ body.faaab-v3 a{color:#185373}
 .v3-profile-subunits strong,.v3-course-detail summary{color:#285876}
 @media(max-width:640px){.v3-intro{padding:40px 0}.v3-three>article{padding:19px}.v3-nav a{padding-inline:13px}}
 @media(prefers-reduced-motion:reduce){.v3-three>article:hover,.v3-button:hover{transform:none}}
+
+/* Contraste dos botões fora do banner escuro */
+body.faaab-v3 .v3-button{color:#184e6d!important;background:#fff;border-color:#a6c1d0}
+body.faaab-v3 .v3-button:hover{background:#e6f1f5;color:#0d3d59!important}
+body.faaab-v3 .v3-button.primary{background:#165374;color:#fff!important;border-color:#165374}
+body.faaab-v3 .v3-button.primary:hover{background:#103c59;color:#fff!important}
+body.faaab-v3 .v3-intro .v3-button{color:#fff!important;background:transparent;border-color:#a9c0cf}
+body.faaab-v3 .v3-intro .v3-button:hover{background:#315974;color:#fff!important}
+body.faaab-v3 .v3-intro .v3-button.primary{background:#fff;color:#16415d!important;border-color:#fff}
+body.faaab-v3 .v3-intro .v3-button.primary:hover{background:#e9f2f6;color:#16415d!important}
