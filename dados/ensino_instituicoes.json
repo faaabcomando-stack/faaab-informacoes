@@ -1,0 +1,308 @@
+{
+  "versao": 1,
+  "atualizadoEm": "2026-11-09",
+  "observacao": "Catálogo editorial FAAAB, baseado em fontes públicas e objetivos fictícios. Não estabelece concursos abertos nem autentica patentes.",
+  "selecoesNaval": "O SSPM organiza seleções da Marinha do jogo. Processos do CFN permanecem separados.",
+  "instituicoes": [
+    {
+      "id": "espcex",
+      "sigla": "EsPCEx",
+      "nome": "Escola Preparatória de Cadetes do Exército",
+      "grupo": "FTB",
+      "tipo": "Preparação de oficiais",
+      "resumo": "Preparação para a formação de oficiais combatentes.",
+      "real": "Prepara os futuros cadetes que continuarão a formação na AMAN.",
+      "jogo": "A etapa fictícia registrada considera Subtenente na seleção para a rota de oficial.",
+      "noticias": [
+        "seleções",
+        "preparação",
+        "formaturas",
+        "turmas"
+      ],
+      "fonte": "https://www.espcex.eb.mil.br/",
+      "formacao": true,
+      "catalogoId": "FTB-EsPCEx"
+    },
+    {
+      "id": "aman",
+      "sigla": "AMAN",
+      "nome": "Academia Militar das Agulhas Negras",
+      "grupo": "FTB",
+      "tipo": "Formação de oficiais",
+      "resumo": "Formação de oficiais combatentes.",
+      "real": "Forma oficiais combatentes de carreira, com disciplinas e treinamento militar.",
+      "jogo": "Curso e progressão de cadetes e aspirantes até a formação fictícia de oficiais.",
+      "noticias": [
+        "formação",
+        "turmas",
+        "formaturas",
+        "avaliações"
+      ],
+      "fonte": "https://www.aman.eb.mil.br/",
+      "formacao": true,
+      "catalogoId": "FTB-AMAN"
+    },
+    {
+      "id": "esa",
+      "sigla": "ESA",
+      "nome": "Escola de Sargentos das Armas",
+      "grupo": "FTB",
+      "tipo": "Formação de sargentos",
+      "resumo": "Formação de sargentos combatentes.",
+      "real": "Forma sargentos das Armas.",
+      "jogo": "Formação de Cabos e continuidade de 3º Sargentos, conforme registro do projeto.",
+      "noticias": [
+        "formação",
+        "turmas",
+        "formaturas",
+        "cursos"
+      ],
+      "fonte": "https://esa.eb.mil.br/",
+      "formacao": true,
+      "catalogoId": "FTB-ESA"
+    },
+    {
+      "id": "easa",
+      "sigla": "EASA",
+      "nome": "Escola de Aperfeiçoamento de Sargentos das Armas",
+      "grupo": "FTB",
+      "tipo": "Aperfeiçoamento de sargentos",
+      "resumo": "Desenvolvimento profissional de sargentos experientes.",
+      "real": "Aperfeiçoa sargentos para funções de maior complexidade.",
+      "jogo": "Aperfeiçoamento de sargentos, sem criar patente extra.",
+      "noticias": [
+        "aperfeiçoamento",
+        "turmas",
+        "capacitação"
+      ],
+      "fonte": "https://www.easa.eb.mil.br/",
+      "formacao": true,
+      "catalogoId": null
+    },
+    {
+      "id": "esao",
+      "sigla": "EsAO",
+      "nome": "Escola de Aperfeiçoamento de Oficiais",
+      "grupo": "FTB",
+      "tipo": "Aperfeiçoamento de oficiais",
+      "resumo": "Aperfeiçoamento para oficiais já formados.",
+      "real": "Aperfeiçoa oficiais para funções de comando e estado-maior.",
+      "jogo": "Capacitação de oficiais, sem promoção automática.",
+      "noticias": [
+        "aperfeiçoamento",
+        "cursos",
+        "formaturas",
+        "gestão"
+      ],
+      "fonte": "https://www.esao.eb.mil.br/",
+      "formacao": true,
+      "catalogoId": "FTB-EsAO"
+    },
+    {
+      "id": "eceme",
+      "sigla": "ECEME",
+      "nome": "Escola de Comando e Estado-Maior do Exército",
+      "grupo": "FTB",
+      "tipo": "Altos estudos",
+      "resumo": "Comando e estado-maior.",
+      "real": "Especialização e altos estudos de comando, estado-maior, política e estratégia.",
+      "jogo": "Formação superior em liderança, administração, planejamento e comando da FAAAB.",
+      "noticias": [
+        "altos estudos",
+        "cursos",
+        "formação superior"
+      ],
+      "fonte": "https://www.eceme.eb.mil.br/",
+      "formacao": true,
+      "catalogoId": "FTB-ECEME"
+    },
+    {
+      "id": "esslog",
+      "sigla": "EsSLog",
+      "nome": "Escola de Sargentos de Logística",
+      "grupo": "FTB",
+      "tipo": "Logística militar",
+      "resumo": "Apoio, manutenção e logística.",
+      "real": "Forma e especializa sargentos para atividades logísticas.",
+      "jogo": "Ensino de logística e manutenção com utilidade dentro do jogo.",
+      "noticias": [
+        "logística",
+        "formaturas",
+        "qualificação técnica"
+      ],
+      "fonte": "https://www.esslog.eb.mil.br/",
+      "formacao": true,
+      "catalogoId": "FTB-EsSLog"
+    },
+    {
+      "id": "esie",
+      "sigla": "EsIE",
+      "nome": "Escola de Instrução Especializada",
+      "grupo": "FTB",
+      "tipo": "Instrução técnica",
+      "resumo": "Capacitação profissional e técnica.",
+      "real": "Ministra ensino especializado e capacitações técnicas.",
+      "jogo": "Cursos práticos relacionados aos sistemas realmente implementados.",
+      "noticias": [
+        "especializações",
+        "qualificação",
+        "turmas"
+      ],
+      "fonte": "https://www.esie.eb.mil.br/",
+      "formacao": true,
+      "catalogoId": null
+    },
+    {
+      "id": "esefex",
+      "sigla": "EsEFEx",
+      "nome": "Escola de Educação Física do Exército",
+      "grupo": "FTB",
+      "tipo": "Educação física",
+      "resumo": "Formação de instrutores de educação física.",
+      "real": "Ensino e pesquisa em educação física militar.",
+      "jogo": "Formação de instrutores e avaliações físicas simuladas.",
+      "noticias": [
+        "educação física",
+        "formação de instrutores",
+        "esportes"
+      ],
+      "fonte": "https://www.esefex.eb.mil.br/",
+      "formacao": true,
+      "catalogoId": null
+    },
+    {
+      "id": "eseqex",
+      "sigla": "EsEqEx",
+      "nome": "Escola de Equitação do Exército",
+      "grupo": "FTB",
+      "tipo": "Equitação",
+      "resumo": "Ensino e prática de equitação.",
+      "real": "Ensino especializado relacionado ao emprego e à prática equestre.",
+      "jogo": "Implementação opcional, condicionada à existência de cavalos e atividades equestres no jogo.",
+      "noticias": [
+        "equitação",
+        "ensino",
+        "esportes"
+      ],
+      "fonte": "https://www.eseqex.eb.mil.br/",
+      "formacao": true,
+      "catalogoId": null,
+      "estado": "futuro_condicional"
+    },
+    {
+      "id": "sspm",
+      "sigla": "SSPM",
+      "nome": "Serviço de Seleção do Pessoal da Marinha",
+      "grupo": "FMB",
+      "tipo": "Seleção e recrutamento",
+      "resumo": "Processos seletivos, recrutamento e concursos da Marinha.",
+      "real": "Coordena e executa seleções, recrutamento, concursos e avaliações psicológicas para ingresso e progressão naval, ressalvadas as seleções de Fuzileiros Navais de competência própria.",
+      "jogo": "Organizar editais fictícios, convocação, conferência de requisitos e resultados de seleções da Marinha FAAAB. Não decide promoções automaticamente.",
+      "noticias": [
+        "inscrições",
+        "convocações",
+        "editais",
+        "resultados",
+        "seleções"
+      ],
+      "fonte": "https://www.marinha.mil.br/sspm/",
+      "formacao": false,
+      "catalogoId": "FMB-SSPM"
+    },
+    {
+      "id": "ciaa",
+      "sigla": "CIAA",
+      "nome": "Centro de Instrução Almirante Alexandrino",
+      "grupo": "FMB",
+      "tipo": "Aperfeiçoamento de praças",
+      "resumo": "Qualificação, especialização e aperfeiçoamento de praças.",
+      "real": "Especializa e aperfeiçoa praças, habilita sargentos e suboficiais e oferece qualificações técnicas e cursos específicos.",
+      "jogo": "Cursos de formação continuada de praças e qualificação técnica, com regras definidas por curso.",
+      "noticias": [
+        "formaturas",
+        "cursos de praças",
+        "turmas",
+        "qualificações"
+      ],
+      "fonte": "https://www.marinha.mil.br/ciaa/",
+      "formacao": true,
+      "catalogoId": "FMB-CIAA"
+    },
+    {
+      "id": "ciaw",
+      "sigla": "CIAW",
+      "nome": "Centro de Instrução Almirante Wandenkolk",
+      "grupo": "FMB",
+      "tipo": "Formação e especialização de oficiais",
+      "resumo": "Formação e aperfeiçoamento de oficiais.",
+      "real": "Forma oficiais de quadros profissionais e ministra especialização e aperfeiçoamento técnico-profissional.",
+      "jogo": "Formação de oficiais de quadros especializados do universo FAAAB, somente onde houver cargos e funções existentes.",
+      "noticias": [
+        "cursos de oficiais",
+        "especializações",
+        "formaturas",
+        "aprimoramento"
+      ],
+      "fonte": "https://www.marinha.mil.br/ciaw/",
+      "formacao": true,
+      "catalogoId": "FMB-CIAW"
+    },
+    {
+      "id": "en",
+      "sigla": "EN",
+      "nome": "Escola Naval",
+      "grupo": "FMB",
+      "tipo": "Formação de oficiais",
+      "resumo": "Formação de oficiais da Armada, Fuzileiros e Intendência.",
+      "real": "Forma oficiais de carreira dos corpos da Armada, Fuzileiros Navais e Intendentes; inclui formação superior em Ciências Navais.",
+      "jogo": "Fases de formação de oficiais na carreira naval; progressão conforme patentes e regras homologadas na FAAAB.",
+      "noticias": [
+        "formaturas",
+        "turmas de oficiais",
+        "atividades acadêmicas",
+        "instrução naval"
+      ],
+      "fonte": "https://www.marinha.mil.br/en/",
+      "formacao": true,
+      "catalogoId": "FMB-EN"
+    },
+    {
+      "id": "cn",
+      "sigla": "CN",
+      "nome": "Colégio Naval",
+      "grupo": "FMB",
+      "tipo": "Preparação naval",
+      "resumo": "Preparação para a Escola Naval.",
+      "real": "Oferece ensino médio e formação militar-naval preparatória para ingresso na Escola Naval.",
+      "jogo": "Formação preparatória dentro do percurso educacional da Marinha FAAAB.",
+      "noticias": [
+        "seleção de alunos",
+        "vida acadêmica",
+        "atividades preparatórias",
+        "turmas"
+      ],
+      "fonte": "https://www.marinha.mil.br/cn/",
+      "formacao": true,
+      "catalogoId": "FMB-CN"
+    },
+    {
+      "id": "eam",
+      "sigla": "EAM",
+      "nome": "Escolas de Aprendizes-Marinheiros",
+      "grupo": "FMB",
+      "tipo": "Formação inicial de marinheiros",
+      "resumo": "Formação inicial de marinheiros e qualificação profissional.",
+      "real": "Formam marinheiros da ativa, com ensino básico, militar-naval e iniciação profissional em especialidades.",
+      "jogo": "Formação básica inicial de marinheiros com percursos de treinamento naval e técnico.",
+      "noticias": [
+        "ingresso",
+        "formação de marinheiros",
+        "turmas",
+        "ensino profissional"
+      ],
+      "fonte": "https://www.marinha.mil.br/ensino/",
+      "formacao": true,
+      "catalogoId": "FMB-EAM"
+    }
+  ]
+}
