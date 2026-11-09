@@ -1,0 +1,179 @@
+{
+  "versao": 1,
+  "atualizadoEm": "2026-11-09",
+  "inscricoesAtivas": false,
+  "notas": [
+    "Esta listagem não abre inscrições nem concede patente, matrícula ou curso.",
+    "Para iniciar uma prova com efeitos de carreira, autenticar ID Roblox via OAuth, consultar grupo e patente no backend, conferir vaga, datas, requisitos e autorização da direção.",
+    "Requisitos obtidos de documentos de planejamento da FAAAB; campos desconhecidos permanecem explicitamente pendentes.",
+    "Simulados de estudo não são processos seletivos de promoção."
+  ],
+  "grupos": {
+    "FTB": {
+      "nome": "Exército",
+      "groupId": null
+    },
+    "FMB": {
+      "nome": "Marinha",
+      "groupId": null
+    },
+    "FAB": {
+      "nome": "Aeronáutica",
+      "groupId": null
+    }
+  },
+  "provas": [
+    {
+      "id": "espcex",
+      "instituicao": "espcex",
+      "titulo": "Seleção preparatória da EsPCEx",
+      "forca": "FTB",
+      "tipo": "Seleção para formação",
+      "patentesCandidatas": [
+        "Subtenente"
+      ],
+      "patentesStatus": "registro_preliminar",
+      "grupoId": null,
+      "inscricaoAberta": false,
+      "situacao": "Regulamento e datas pendentes",
+      "origem": "CURSO-CUR-10-11",
+      "formacao": "Trilha de carreira de oficial; resultado previsto no registro: Cadete."
+    },
+    {
+      "id": "esa",
+      "instituicao": "esa",
+      "titulo": "Ingresso e continuidade na ESA",
+      "forca": "FTB",
+      "tipo": "Formação de sargentos",
+      "patentesCandidatas": [
+        "Cabo",
+        "3º Sargento em continuidade"
+      ],
+      "patentesStatus": "registro_preliminar",
+      "grupoId": null,
+      "inscricaoAberta": false,
+      "situacao": "Regulamento e datas pendentes",
+      "origem": "CURSO-CUR-10-5",
+      "formacao": "Alunos e instrutores são categorias distintas. Instrutor: 2º Tenente habilitado, conforme catálogo."
+    },
+    {
+      "id": "aman",
+      "instituicao": "aman",
+      "titulo": "Fases de formação da AMAN",
+      "forca": "FTB",
+      "tipo": "Formação de oficiais",
+      "patentesCandidatas": [
+        "Cadete",
+        "Aspirante"
+      ],
+      "patentesStatus": "registro_preliminar",
+      "grupoId": null,
+      "inscricaoAberta": false,
+      "situacao": "Avaliações internas sem abertura confirmada",
+      "origem": "CURSO-CUR-10-12",
+      "formacao": "Fases internas de formação documentadas; resultado de carreira depende de homologação."
+    },
+    {
+      "id": "ecemar",
+      "instituicao": "ecemar",
+      "titulo": "Curso de Comando e Estado-Maior",
+      "forca": "FAB",
+      "tipo": "Altos estudos",
+      "patentesCandidatas": [
+        "Major"
+      ],
+      "patentesStatus": "registro_preliminar",
+      "grupoId": null,
+      "inscricaoAberta": false,
+      "situacao": "Prévia documental, sem inscrição",
+      "origem": "CURSO-CUR-11-9",
+      "formacao": "A documentação antiga da FAAAB lista Major aluno e Tenente-Coronel na formatura; regra final sujeita a aprovação."
+    },
+    {
+      "id": "eaoar",
+      "instituicao": "eaoar",
+      "titulo": "Aperfeiçoamento de oficiais da Aeronáutica",
+      "forca": "FAB",
+      "tipo": "Aperfeiçoamento",
+      "patentesCandidatas": [],
+      "patentesStatus": "a_definir",
+      "grupoId": null,
+      "inscricaoAberta": false,
+      "situacao": "Requisitos e curso CAP a regulamentar na FAAAB",
+      "origem": "planejamento_2026",
+      "formacao": "Formação complementar de oficiais; nível de patente ainda não homologado no jogo."
+    },
+    {
+      "id": "unifa",
+      "instituicao": "unifa",
+      "titulo": "Cursos acadêmicos vinculados à UNIFA",
+      "forca": "FAB",
+      "tipo": "Ensino e pesquisa",
+      "patentesCandidatas": [],
+      "patentesStatus": "a_definir",
+      "grupoId": null,
+      "inscricaoAberta": false,
+      "situacao": "Cursos cadastrados individualmente, sem seleção geral",
+      "origem": "planejamento_2026",
+      "formacao": "A UNIFA é portal acadêmico e não substitui os requisitos da ECEMAR ou EAOAR."
+    },
+    {
+      "id": "sspm",
+      "instituicao": "sspm",
+      "titulo": "Seleções da Marinha — SSPM",
+      "forca": "FMB",
+      "tipo": "Seleção e recrutamento",
+      "patentesCandidatas": [],
+      "patentesStatus": "a_definir",
+      "grupoId": null,
+      "inscricaoAberta": false,
+      "situacao": "Editais internos a publicar",
+      "origem": "planejamento_2026",
+      "formacao": "A SSPM publicará seleções de instituições navais; processos de Fuzileiros Navais ficam separados."
+    },
+    {
+      "id": "cn",
+      "instituicao": "cn",
+      "titulo": "Formação preparatória do Colégio Naval",
+      "forca": "FMB",
+      "tipo": "Preparação naval",
+      "patentesCandidatas": [],
+      "patentesStatus": "a_definir",
+      "grupoId": null,
+      "inscricaoAberta": false,
+      "situacao": "Requisitos internos a publicar",
+      "origem": "catalogo_2026",
+      "formacao": "Acesso condicionado a regulamento de ensino naval da FAAAB."
+    },
+    {
+      "id": "en",
+      "instituicao": "en",
+      "titulo": "Formação da Escola Naval",
+      "forca": "FMB",
+      "tipo": "Academia naval",
+      "patentesCandidatas": [],
+      "patentesStatus": "a_definir",
+      "grupoId": null,
+      "inscricaoAberta": false,
+      "situacao": "Regras e vagas não confirmadas",
+      "origem": "catalogo_2026",
+      "formacao": "Academia naval com etapas próprias de formação."
+    },
+    {
+      "id": "eear",
+      "instituicao": "eear",
+      "titulo": "Formação de especialistas EEAR",
+      "forca": "FAB",
+      "tipo": "Formação de praças",
+      "patentesCandidatas": [
+        "Cabo"
+      ],
+      "patentesStatus": "registro_preliminar",
+      "grupoId": null,
+      "inscricaoAberta": false,
+      "situacao": "Regras e vagas não confirmadas",
+      "origem": "CURSO-CUR-11-4",
+      "formacao": "Na documentação antiga, Cabo aluno e 3º Sargento na formatura; implantação pendente."
+    }
+  ]
+}
