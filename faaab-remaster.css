@@ -1,3 +1,4 @@
+@import url("design-faaab-2026.css");
 /* FAAAB / REMASTER 2026 — tipografia, hierarquia, páginas por instituição. */
 :root{--v3-forest:#183a2d;--v3-deep:#11291f;--v3-olive:#53664f;--v3-gold:#b69a65;--v3-line:#d0d6cd;--v3-paper:#f8f8f4;--v3-white:#fffefa;--v3-muted:#5f6c62;--v3-width:1190px}
 html{scroll-behavior:smooth}
@@ -337,3 +338,6 @@ body.faaab-v3{background:#f6f7f7;color:#253d4b}
 .faaab-v3[data-force="PM"] .v3-force-brand:before{background-position:50% 0%}
 .faaab-v3[data-force="CBM"] .v3-force-brand:before{background-position:0% 100%}
 @media(max-width:680px){.faaab-v3 .v3-force-brand:before{width:43px;height:43px;margin-right:8px}}
+
+/* Marca da comunidade: emblema principal, sem fingir ser órgão oficial */
+.v3-brand-desc{font-size:11px}.v3-record-item:hover{border-color:#9cbccc!important}

@@ -2,11 +2,11 @@
   {
     "id": "ADM-FAAAB",
     "sigla": "FAAAB",
-    "nome": "Forças Armadas e Administração Brasileira",
+    "nome": "Forças Armadas e Auxiliares Aliadas Brasileiras",
     "forca": "ADM",
     "tipo": "instituicao",
     "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
-    "logo": null,
+    "logo": "assets/logo-faaab.svg",
     "vidaReal": "Instituição ou estrutura de coordenação. Uma comparação com organizações reais exige examinar suas competências legais, que não se transferem automaticamente para o jogo.",
     "noJogo": "Estrutura do universo FAAAB com competências gerais documentadas. Implantação, ocupantes e regras particulares: a confirmar.",
     "requisitos": null,
@@ -16,7 +16,7 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Correção institucional oficial FAAAB 09/11/2026"
   },
   {
     "id": "ADM-EGAF",

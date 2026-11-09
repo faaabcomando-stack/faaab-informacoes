@@ -1,3 +1,4 @@
+@import url("design-faaab-2026.css");
 /* FAAAB | páginas públicas de privacidade e termos */
 :root{--paper:#f6f5f1;--nav:#172a3a;--ink:#1a2b3a;--muted:#647480;--line:#d7dddc;--accent:#ae6d3a;--serif:Georgia,"Times New Roman",serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.72 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}a{color:#20536d;text-decoration-thickness:1px;text-underline-offset:3px}a:hover{color:#a15e2f}a:focus-visible{outline:3px solid #bd8952;outline-offset:4px}
