@@ -10,6 +10,9 @@ workers_dev = true
 PUBLIC_SITE = "https://faaabcomando-stack.github.io/faaab-informacoes"
 GITHUB_OWNER = "faaabcomando-stack"
 GITHUB_REPO = "faaab-informacoes"
+# IDs dos grupos Roblox cuja associação será verificada. Separe por vírgula.
+# Deixe vazio enquanto não houver identificadores reais confirmados. NÃO concede cargos.
+FAAAB_GROUP_IDS = ""
 # Configure GOOGLE_CLIENT_ID, ROBLOX_CLIENT_ID, OWNER_ROBLOX_ID por Wrangler secrets ou variables conforme a política.
 # Use OWNERS apenas por ID verificado, nunca por nickname.
 

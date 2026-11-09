@@ -1,0 +1,70 @@
+<!doctype html><html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#172737">
+<title>Centro de Controle · FAAAB</title><link rel="stylesheet" href="/painel-v2.css">
+<script src="/painel-v2.js" defer></script>
+</head><body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<div class="shell">
+<aside class="side" aria-label="Menu administrativo">
+<a class="brand" href="/painel-v2"><span class="symbol">F</span><span><strong>FAAAB</strong><small>CENTRO DE CONTROLE</small></span></a>
+<div class="side-meta"><span class="status-dot" aria-hidden="true"></span><span>Ambiente protegido</span></div>
+<nav class="side-nav" id="menu">
+<button class="active" data-view="visao" type="button"><span class="nav-icon">▦</span> Visão geral</button>
+<button data-view="noticias" type="button"><span class="nav-icon">▤</span> Notícias e avisos</button>
+<button data-view="grupos" type="button"><span class="nav-icon">◎</span> Verificação de grupos</button>
+<button data-view="config" type="button"><span class="nav-icon">⚙</span> Configurações</button>
+</nav>
+<div class="side-bottom"><span>PUBLICAÇÃO</span><p>As alterações são verificadas pelo servidor. A whitelist e os cargos continuam separados.</p><a href="/membros">Área de membros ↗</a><a href="/cargos" id="side-roles" hidden>Gerenciar cargos ↗</a><a href="/painel">Painel clássico ↗</a></div>
+</aside>
+<div class="bodywrap">
+<header class="topbar"><div class="crumb">FAAAB <span>/</span> Administração <span>/</span> <b id="crumb-view">Visão geral</b></div><div class="top-actions"><span id="server-status" class="server-status">Verificando sessão…</span><div class="user"><span class="avatar" id="avatar">R</span><span><strong id="username">Conta Roblox</strong><small id="user-role">Verificação pendente</small></span></div></div></header>
+<main id="main" tabindex="-1">
+<div class="heading"><div><span class="kicker">PORTAL FAAAB · ADMINISTRAÇÃO</span><h1 id="view-title">Visão geral</h1><p id="view-description">Acompanhe conteúdos e acesse ferramentas de publicação.</p></div><div class="heading-links"><a href="/membros">Minha conta</a><form class="logout-form" action="/logout" method="post"><button type="submit">Sair da conta ↗</button></form></div></div>
+<div id="message" class="message" hidden role="status" aria-live="polite"></div>
+<section data-section="visao">
+<div class="stats"><article class="stat"><span>Notícias no arquivo</span><strong id="news-count">—</strong><small>Dados publicados no repositório</small></article><article class="stat"><span>Meu acesso</span><strong id="access-count">—</strong><small id="access-sub">Validação pelo servidor</small></article><article class="stat"><span>Publicação</span><strong id="publish-count">—</strong><small>Autorização do cargo</small></article></div>
+<div class="twocol"><article class="panel"><div class="panel-head"><span class="kicker">ACESSO RÁPIDO</span><h2>O que deseja administrar?</h2></div><div class="quick">
+<button type="button" data-jump="noticias"><span class="quick-symbol">✎</span><span><b>Notícias e avisos</b><small>Elaborar, revisar e publicar</small></span><span>→</span></button>
+<button type="button" data-jump="grupos"><span class="quick-symbol">◎</span><span><b>Verificação de grupos</b><small>Consultar vínculos Roblox autenticados</small></span><span>→</span></button>
+<button type="button" data-jump="config"><span class="quick-symbol">⚙</span><span><b>Configurações</b><small>Portal público e preferências locais</small></span><span>→</span></button>
+<a href="/cargos" id="quick-roles" hidden><span class="quick-symbol">♙</span><span><b>Equipe e permissões</b><small>Whitelist e cargos do painel</small></span><span>→</span></a>
+</div></article>
+<article class="panel panel-tone"><span class="kicker">SEGURANÇA DE ACESSO</span><h2>Identidade não é permissão</h2><p>O login confirma a conta Roblox. A entrada administrativa depende de whitelist e cargos atribuídos. A filiação a um grupo também não concede acesso editorial por si só.</p><div class="status-line"><span>Roblox OAuth</span><strong id="oauth-check">A confirmar</strong></div><div class="status-line"><span>Whitelist</span><strong id="wl-check">A confirmar</strong></div><div class="status-line"><span>Permissão de publicação</span><strong id="perm-check">A confirmar</strong></div></article></div>
+</section>
+<section data-section="noticias" hidden>
+<div class="twocol editlayout">
+<article class="panel"><div class="panel-head"><span class="kicker">EDITOR DE COMUNICAÇÃO</span><h2 id="editor-heading">Novo comunicado</h2><p>Publicações importantes ficam no destaque principal; notícias de rotina aparecem em Avisos gerais e anúncios são rotulados separadamente como publicidade da comunidade.</p></div>
+<form id="news-form">
+<label for="news-category">Categoria</label>
+<select id="news-category"><option value="importante">Notícia importante</option><option value="urgente">Notícia urgente</option><option value="informativa">Informativa / aviso geral</option><option value="menor_relevancia">Menor relevância</option><option value="anuncio">Anúncio / publicidade da comunidade</option></select>
+<div class="fieldrow"><div><label for="news-date">Data</label><input id="news-date" type="date" required></div><div><label for="news-status">Destino</label><input id="news-status" value="Portal FAAAB" disabled></div></div>
+<label for="news-title">Título</label><input id="news-title" type="text" maxlength="150" placeholder="Digite um título informativo" required>
+<label for="news-summary">Resumo e conteúdo</label><textarea id="news-summary" rows="8" maxlength="2500" placeholder="Explique a informação, o que muda e onde consultar os detalhes" required></textarea>
+<div class="form-actions"><button class="btn btn-primary" id="news-save" type="submit">Salvar no rascunho</button><button type="button" class="btn btn-light" id="news-cancel">Limpar</button></div></form>
+<div class="draftbar" id="draftbar" hidden><div><strong>Rascunho com alterações</strong><small>Revise antes de enviar ao GitHub pelo servidor.</small></div><button type="button" class="btn btn-dark" id="news-publish">Publicar</button></div>
+<p class="help">Somente cargos autorizados podem publicar. O sistema usa sessão, CSRF e controle de versão do arquivo; uma mudança simultânea exige recarregar antes de publicar.</p></article>
+<article class="panel"><div class="panel-head"><span class="kicker">ACERVO EDITORIAL</span><h2>Notícias cadastradas</h2><p>Selecione um registro para editar. Os controles de edição respeitam as permissões reais do servidor.</p></div>
+<div class="itemlist" id="news-list"><p class="empty">Carregando notícias…</p></div>
+<button class="text-button" id="news-reload" type="button">↻ Recarregar dados do servidor</button>
+</article></div></section>
+<section data-section="grupos" hidden>
+<div class="twocol"><article class="panel"><span class="kicker">ROBLOX · VERIFICAÇÃO</span><h2>Grupos e organizações</h2><p>O servidor consulta os vínculos da conta autenticada com os grupos configurados pela administração. O resultado não altera patentes, Discord ou whitelist.</p><button class="btn btn-primary" id="verify-groups">Verificar meus grupos</button><div class="group-results" id="group-results"><p class="empty">Clique para consultar os grupos, quando estiverem configurados no backend.</p></div></article>
+<article class="panel panel-tone"><span class="kicker">ETAPAS</span><h2>Como o acesso funciona</h2><ol class="steps"><li><strong>Identidade Roblox</strong><small>OAuth oficial com ID permanente</small></li><li><strong>Vínculos em grupos</strong><small>Consulta de associação, se configurada</small></li><li><strong>Whitelist</strong><small>Aprovação administrativa separada</small></li><li><strong>Cargos</strong><small>Permissões específicas atribuídas pelo proprietário</small></li></ol><p class="help">A verificação falhar ou estar indisponível não deve gerar aprovação automática.</p></article></div>
+</section>
+<section data-section="config" hidden>
+<div class="twocol editlayout">
+<article class="panel"><span class="kicker">CONFIGURAÇÕES PÚBLICAS</span><h2>Identidade e comunicados do portal</h2><p>Essas configurações são aplicadas ao portal somente depois de publicação autorizada. Alterações não interferem em Roblox, Discord ou no sistema de patentes.</p>
+<form id="config-form"><label for="config-hero">Título da apresentação</label><input id="config-hero" required maxlength="120">
+<label for="config-desc">Descrição da apresentação</label><textarea id="config-desc" required rows="4" maxlength="450"></textarea>
+<label class="checkline"><input id="config-maint" type="checkbox"> Exibir aviso de manutenção</label>
+<label for="config-maint-text">Texto do aviso de manutenção</label><textarea id="config-maint-text" rows="3" maxlength="250"></textarea>
+<div class="form-actions"><button type="submit" class="btn btn-primary" id="config-save">Salvar no rascunho</button><button type="button" class="btn btn-light" id="config-reset">Descartar alterações</button></div></form>
+<div class="draftbar" id="config-draftbar" hidden><div><strong>Configurações alteradas</strong><small>Publicação reservada ao proprietário.</small></div><button type="button" class="btn btn-dark" id="config-publish">Publicar</button></div></article>
+<article class="panel"><span class="kicker">PREFERÊNCIAS DE EXIBIÇÃO</span><h2>Como você vê o painel</h2><p>As preferências abaixo são locais e não alteram o site público.</p>
+<label class="checkline"><input id="pref-compact" type="checkbox"> Interface compacta</label>
+<label class="checkline"><input id="pref-motion" type="checkbox"> Reduzir animações</label>
+<div class="separator"></div><h3>Controle de acessos</h3><p>Whitelist, cargos e atribuições dependem do servidor seguro. Não podem ser editados em um JSON público.</p><a class="link-row" href="/cargos" id="config-roles" hidden>Gerenciar permissões (proprietário) →</a><a class="link-row" href="/membros">Área de membros →</a><a class="link-row" href="/painel">Ferramentas administrativas anteriores →</a>
+</article></div></section>
+</main><footer class="footer">FAAAB · Simulação independente no Roblox <span>Área protegida pelo servidor, sem login simulado.</span></footer>
+</div></div></body></html>

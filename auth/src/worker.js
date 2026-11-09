@@ -3,8 +3,8 @@
 // OAuth somente Roblox, whitelist verificável por identidade, sessão HttpOnly e proteção CSRF.
 const SITE_DEFAULT="https://faaabcomando-stack.github.io/faaab-informacoes";
 const API="https://api.github.com/repos/";
-const ALLOWED=new Set(["admin_roles","noticias","autoridades","admin_whitelist","catalogo","hierarquias","cursos","sistemas","historico","geral","pm_progressao"]);
-const PUBLIC_ASSETS=new Set(["admin-panel.css","admin-roles.css","admin-panel.js"]);
+const ALLOWED=new Set(["admin_roles","noticias","autoridades","admin_whitelist","catalogo","hierarquias","cursos","sistemas","historico","geral","pm_progressao","portal_config"]);
+const PUBLIC_ASSETS=new Set(["admin-panel.css","admin-roles.css","admin-panel.js","painel-v2.css","painel-v2.js"]);
 const COOKIE="__Host-faaab_session";
 const ONE_DAY=86400;
 const now=()=>Math.floor(Date.now()/1000);
@@ -221,6 +221,7 @@ function mayWrite(ctx,name){
  if(!ctx?.approved)return false;
  const p=ctx.permissions||{};
  if(name==="admin_whitelist")return !!p.manageWhitelist;
+ if(name==="portal_config")return ctx?.role==="owner";
  if(p.publishAllContent)return true;
  if(name==="noticias")return !!p.publishNews;
  if(name==="autoridades")return !!p.publishAuthorities;
@@ -269,6 +270,16 @@ async function apiWrite(req,env,ctx,name){
  let parsed;
  try{parsed=JSON.parse(body.content)}catch{return jsonify({error:"JSON inválido"},400)}
  if(["noticias","autoridades","catalogo","hierarquias","cursos","sistemas","historico"].includes(name)&&!Array.isArray(parsed))return jsonify({error:"Esperada lista JSON"},400);
+ if(name==="portal_config"){
+  if(!parsed||Array.isArray(parsed)||typeof parsed!=="object"||parsed.versao!==1||
+   typeof parsed.heroTitle!=="string"||!parsed.heroTitle.trim()||parsed.heroTitle.length>120||
+   typeof parsed.heroDescription!=="string"||!parsed.heroDescription.trim()||parsed.heroDescription.length>450||
+   typeof parsed.maintenanceEnabled!=="boolean"||
+   typeof parsed.maintenanceNotice!=="string"||parsed.maintenanceNotice.length>250||
+   (parsed.maintenanceEnabled&&!parsed.maintenanceNotice.trim())||
+   Object.keys(parsed).some(k=>!["versao","heroTitle","heroDescription","maintenanceEnabled","maintenanceNotice"].includes(k)))
+   return jsonify({error:"Configuração pública inválida"},400);
+ }
  if(name==="admin_whitelist"){
   if(!Array.isArray(parsed.membros)||parsed.proprietarioGitHub!=="faaabcomando-stack")return jsonify({error:"Whitelist inválida"},400);
   const seen=new Set();
@@ -296,6 +307,24 @@ async function fetchStatic(env,path,contentType){
  if(!r.ok)return textResponse("Arquivo do painel ainda não publicado no GitHub Pages",502);
  return new Response(r.body,{status:200,headers:{"content-type":contentType,"cache-control":"no-store","x-content-type-options":"nosniff","content-security-policy":"default-src 'self'; img-src 'self' https://tr.rbxcdn.com https://*.rbxcdn.com data:; connect-src 'self'; style-src 'self'; script-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'","x-frame-options":"DENY","referrer-policy":"no-referrer"}});
 }
+async function groupStatus(ctx,env){
+ const ids=[...new Set(String(env.FAAAB_GROUP_IDS||"").split(",").map(x=>x.trim()).filter(x=>/^\d{1,20}$/.test(x)))].slice(0,20);
+ if(!ids.length)return{enabled:false,checked:false,robloxId:null,memberships:[]};
+ const uid=ctx?.user?.provider==="roblox"?ctx.user.subject:ctx?.user?.linked_roblox_id;
+ if(!uid||!/^\d{1,20}$/.test(String(uid)))return{enabled:true,checked:false,error:"Conta sem ID Roblox verificado.",memberships:[]};
+ try{
+  const response=await fetch("https://groups.roblox.com/v2/users/"+encodeURIComponent(uid)+"/groups/roles",{headers:{"accept":"application/json"},redirect:"error",cf:{cacheTtl:60}});
+  if(!response.ok)return{enabled:true,checked:false,error:"Consulta Roblox indisponível.",memberships:[]};
+  const raw=await response.json();
+  if(!Array.isArray(raw.data))return{enabled:true,checked:false,error:"Formato de grupo inesperado.",memberships:[]};
+  const found=new Map(raw.data.map(x=>[String(x.group?.id||""),x]));
+  const memberships=ids.map(groupId=>{
+   const x=found.get(groupId);
+   return{groupId,name:String(x?.group?.name||"Grupo "+groupId).slice(0,90),member:!!x,role:x?String(x.role?.name||"Membro").slice(0,70):null}
+  });
+  return{enabled:true,checked:true,robloxId:String(uid),memberships};
+ }catch(e){console.warn("FAAAB group lookup unavailable",String(e?.message||e));return{enabled:true,checked:false,error:"Consulta de grupos temporariamente indisponível.",memberships:[]}}
+}
 export default {
  async fetch(req,env){
   try{
@@ -311,7 +340,11 @@ export default {
    const ctx=await userContext(req,env);
    if(req.method==="GET"&&path==="/"){if(ctx?.approved)return redirect("/membros");return textResponse(loginPage(ctx),200,"text/html; charset=utf-8");}
    if(req.method==="GET"&&path==="/api/me")return jsonify({loggedIn:!!ctx,user:ctx?{provider:ctx.user.provider,displayName:ctx.user.display_name,robloxId:ctx.user.provider==="roblox"?ctx.user.subject:ctx.user.linked_roblox_id}:null,whitelisted:!!ctx?.approved,role:ctx?.role||null,roles:ctx?.roles||[],permissions:ctx?.permissions||{},csrf:ctx?.approved?ctx.csrf:null});
-   if(!ctx?.role)return req.method==="GET"?redirect("/"):jsonify({error:"Acesso negado. Login e whitelist necessários."},403);
+   if(req.method==="GET"&&path==="/api/groups"){
+     if(!ctx)return jsonify({error:"Login Roblox necessário"},401);
+     return jsonify(await groupStatus(ctx,env));
+    }
+    if(!ctx?.role)return req.method==="GET"?redirect("/"):jsonify({error:"Acesso negado. Login e whitelist necessários."},403);
    if(req.method==="GET"&&path==="/api/registrations"){
     if(ctx.role!=="owner")return jsonify({error:"Reservado ao proprietário"},403);
     const rows=await env.DB.prepare("SELECT i.user_key,i.provider,i.display_name,i.email,i.linked_roblox_id,i.last_login_at,a.approved_at FROM identities i LEFT JOIN access_approvals a ON a.user_key=i.user_key ORDER BY i.last_login_at DESC LIMIT 100").all();
@@ -370,7 +403,8 @@ export default {
     }
     return jsonify({ok:true,action,userKey:target,role});
    }
-   if(req.method==="GET"&&path==="/painel"){if(ctx.role==="membro")return redirect("/membros");return fetchStatic(env,"admin-app.html","text/html; charset=utf-8");}
+   if(req.method==="GET"&&path==="/painel-v2")return fetchStatic(env,"painel-v2.html","text/html; charset=utf-8");
+    if(req.method==="GET"&&path==="/painel"){if(ctx.role==="membro")return redirect("/membros");return fetchStatic(env,"admin-app.html","text/html; charset=utf-8");}
    if(req.method==="GET"&&path==="/membros")return fetchStatic(env,"membros.html","text/html; charset=utf-8");
    if(req.method==="GET"&&path==="/membros.js")return fetchStatic(env,"membros.js","application/javascript; charset=utf-8");
    if(req.method==="GET"&&path==="/cargos"){if(ctx.role!=="owner")return jsonify({error:"Cargos são atribuídos somente pelo proprietário"},403);return fetchStatic(env,"cargos.html","text/html; charset=utf-8")}
