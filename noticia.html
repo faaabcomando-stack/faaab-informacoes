@@ -1,0 +1,38 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#112638"><meta name="description" content="Leia notícias e comunicados do portal da comunidade FAAAB."><title>Notícia | Portal FAAAB</title><link rel="stylesheet" href="portal-editorial.css">
+<style>
+.article-shell{width:min(820px,calc(100% - 40px));margin:0 auto;padding:61px 0 88px}.article-topline{font-size:11px;color:#7c8a91;text-transform:uppercase;letter-spacing:.14em;font-weight:800;margin-bottom:21px}.article-category{display:inline-block;background:#e3ebed;color:#325b6d;padding:7px 10px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:850}.article-headline{font:400 clamp(38px,5vw,64px)/1.12 Georgia,serif;letter-spacing:-.032em;margin:18px 0 17px;overflow-wrap:break-word}.article-subtitle{font-size:18px;line-height:1.7;color:#586f7b;margin:0 0 23px}.article-info{border-block:1px solid #d6dfe3;padding:14px 0;color:#6e818a;font-size:11px;display:flex;gap:17px;flex-wrap:wrap}.article-hero{background:linear-gradient(115deg,#14354b,#37667e);min-height:240px;margin:31px 0 39px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.article-hero:before{content:"";position:absolute;width:400px;height:400px;right:-120px;top:-140px;border:1px solid #ffffff3b;border-radius:50%;box-shadow:0 0 0 55px #ffffff0b,0 0 0 113px #ffffff05}.article-hero span{font:400 126px Georgia,serif;color:#ffffff1b;position:relative}.article-content p{font-size:17px;line-height:1.93;color:#2f4552;margin:0 0 25px}.article-footer{border-top:1px solid #d7e0e4;margin-top:43px;padding-top:22px;color:#6b808b;font-size:12px}.article-footer a{font-weight:800;color:#275e77;text-decoration:underline}.related{margin-top:60px}.related h2{font:400 30px Georgia,serif;margin:0 0 17px}.related-item{display:block;border-top:1px solid #d7e0e4;padding:17px 0}.related-item span{display:block;font-size:10px;color:#a4794e;text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}.related-item strong{font:400 22px Georgia,serif}.article-error{padding:40px;background:white;border:1px solid #d8e0e4}.article-error h1{font:400 34px Georgia,serif}.article-actions{display:flex;gap:10px;margin-top:16px}.article-actions button{background:white;border:1px solid #cdd9de;padding:10px 13px;font-size:12px;font-weight:750;color:#214c61}
+@media(max-width:600px){.article-shell{padding:38px 0 60px}.article-headline{font-size:39px}.article-subtitle{font-size:16px}.article-hero{min-height:180px}.article-content p{font-size:16px}}
+</style></head><body>
+<a href="#article" class="skip">Ir para a notícia</a><div class="utility"><div class="container utility-inner"><span>FAAAB · NOTICIÁRIO</span><span>Comunidade independente no Roblox</span></div></div>
+<header class="mast"><div class="container mast-inner"><a href="index.html" class="brand"><span class="brand-glyph" aria-hidden="true">F</span><span class="brand-type"><strong>FAAAB</strong><span>Notícias e informações da comunidade</span></span></a><div class="mast-side">Central de comunicação<br>Universo de simulação</div></div></header>
+<nav class="primary-nav" aria-label="Navegação principal"><div class="container nav-inner"><div class="nav-links" style="display:flex"><a href="index.html">Notícias</a><a href="index.html#avisos">Últimas publicações</a><a href="instituicoes.html">Organizações</a><a href="estudos.html">Estudos</a></div></div></nav>
+<main id="article" class="article-shell" aria-live="polite"><p>Carregando notícia…</p></main>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h2>FAAAB</h2><p>Conteúdo da comunidade fictícia no Roblox. Não vinculado a órgãos públicos ou forças militares reais.</p></div><div><h3>Portal</h3><a href="index.html">Notícias</a><a href="instituicoes.html">Organizações</a><a href="central.html">Comunicação</a></div><div><h3>Transparência</h3><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de uso</a><a href="anuncie.html">Publicidade</a></div></div></div></footer>
+<script>
+(()=>{
+ const main=document.getElementById("article"),params=new URLSearchParams(location.search),id=params.get("id")||"";
+ const esc=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,100);
+ const el=(tag,cls,text)=>{const x=document.createElement(tag);if(cls)x.className=cls;if(text!==undefined)x.textContent=text;return x};
+ const format=s=>{const d=new Date(String(s||"")+"T12:00:00Z");return Number.isNaN(d.getTime())?"Data não informada":new Intl.DateTimeFormat("pt-BR",{day:"2-digit",month:"long",year:"numeric",timeZone:"UTC"}).format(d)};
+ const fail=(message)=>{main.replaceChildren();const box=el("div","article-error");box.append(el("h1",null,"Notícia não encontrada"),el("p",null,message));const a=el("a",null,"Consultar todas as notícias ↗");a.href="index.html";box.append(a);main.append(box)};
+ if(!id||id.length>130){fail("Verifique o endereço da notícia.");return}
+ fetch("dados/noticias.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("Arquivo indisponível");return r.json()}).then(posts=>{
+  if(!Array.isArray(posts))throw Error("Formato de dados inválido");
+  const item=posts.find(p=>String(p.id||esc(p.titulo))===id);
+  if(!item){fail("Essa notícia ainda não está cadastrada ou foi removida.");return}
+  const ad=["publicidade","patrocinado","anuncio"].includes(esc(item.categoria));
+  main.replaceChildren();
+  main.append(el("div","article-topline","FAAAB / Comunicação / "+(ad?"Publicidade":"Notícias")));
+  main.append(el("span","article-category",ad?"Publicidade · Conteúdo patrocinado":item.categoria==="importante"?"Notícia importante":item.categoria==="urgente"?"Urgente":"Notícia"));
+  const title=el("h1","article-headline",item.titulo);main.append(title);document.title=item.titulo+" | FAAAB";
+  const description=el("p","article-subtitle",item.resumo||"");main.append(description);
+  const meta=el("div","article-info");meta.append(el("span",null,format(item.data)),el("span",null,"Origem: "+(item.autor||item.patrocinador||"Comunicação FAAAB")));if(item.estado)meta.append(el("span",null,"Situação: "+item.estado));main.append(meta);
+  const hero=el("div","article-hero");hero.setAttribute("aria-hidden","true");hero.append(el("span",null,(item.setor||"F").slice(0,1).toUpperCase()));main.append(hero);
+  const body=el("div","article-content");String(item.conteudo||item.resumo||"").split(/\n\s*\n/).filter(Boolean).forEach(p=>body.append(el("p",null,p.trim())));main.append(body);
+  const foot=el("div","article-footer");foot.append(el("p",null,"FAAAB é um projeto independente de simulação no Roblox. Conteúdos planejados não indicam recursos já implantados."));
+  const link=el("a",null,"Consultar outras publicações ↗");link.href="index.html";foot.append(link);main.append(foot);
+  const others=posts.filter(p=>p!==item&&!["publicidade","patrocinado","anuncio"].includes(esc(p.categoria))).slice(0,3);
+  if(others.length){const sec=el("section","related");sec.append(el("h2",null,"Outras publicações"));for(const x of others){const a=el("a","related-item");a.href="noticia.html?id="+encodeURIComponent(x.id||esc(x.titulo));a.append(el("span",null,format(x.data)),el("strong",null,x.titulo));sec.append(a)}main.append(sec)}
+ }).catch(()=>fail("Não foi possível carregar esta notícia agora."));
+})();
+</script></body></html>
