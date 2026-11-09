@@ -20,7 +20,7 @@
   if(!s.news.length){const p=document.createElement("p");p.className="empty";p.textContent="Nenhuma notícia publicada. O catálogo está vazio.";target.append(p);newsPending();return}
   s.news.map((n,i)=>({n,i})).sort((a,b)=>String(b.n.data||"").localeCompare(String(a.n.data||""))).forEach(({n,i})=>{
    const wrap=document.createElement("article");wrap.className="item";
-   const meta=document.createElement("div");meta.className="meta";meta.textContent=(n.categoria||"informativa")+" · "+(n.data||"Sem data");
+   const meta=document.createElement("div");meta.className="meta";meta.textContent=(n.categoria==="anuncio"?"PUBLICIDADE DA COMUNIDADE":n.categoria||"informativa")+" · "+(n.data||"Sem data");
    const title=document.createElement("h3");title.textContent=n.titulo||"Sem título";
    const summary=document.createElement("p");summary.textContent=n.resumo||"Sem resumo";
    wrap.append(meta,title,summary);
@@ -42,7 +42,7 @@
  }
  function newsAction(ev){const b=ev.target.closest("button[data-action]");if(!b||!canEditOld()||!canNews())return;const i=Number(b.dataset.index),n=s.news[i];if(!n)return;
   if(b.dataset.action==="remove"){if(!confirm("Excluir esta notícia do rascunho? A exclusão só terá efeito depois de publicada."))return;s.news.splice(i,1);clearNews();renderNews();msg("Notícia removida do rascunho.");return}
-  s.editing=i;$("news-date").value=n.data||isoToday();$("news-title").value=n.titulo||"";$("news-summary").value=n.resumo||"";$("news-category").value=["urgente","importante","informativa","menor_relevancia"].includes(n.categoria)?n.categoria:"informativa";$("editor-heading").textContent="Editar comunicado";$("news-save").textContent="Atualizar rascunho";$("news-title").focus()
+  s.editing=i;$("news-date").value=n.data||isoToday();$("news-title").value=n.titulo||"";$("news-summary").value=n.resumo||"";$("news-category").value=["urgente","importante","informativa","menor_relevancia","anuncio"].includes(n.categoria)?n.categoria:"informativa";$("editor-heading").textContent="Editar comunicado";$("news-save").textContent="Atualizar rascunho";$("news-title").focus()
  }
  async function publishNews(){if(!canNews()||!newsDirty())return;if(!confirm("Publicar as alterações das notícias no GitHub?"))return;
   $("news-publish").disabled=true;try{const r=await putJSON("noticias",s.news,s.newsSha);s.newsSha=r.sha||s.newsSha;s.newsBaseline=JSON.stringify(s.news);renderNews();msg("Notícias publicadas pelo servidor. O portal atualizará depois da implantação.")}catch(e){msg(e.message,true)}finally{$("news-publish").disabled=false}
