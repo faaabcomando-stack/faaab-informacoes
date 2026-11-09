@@ -27,15 +27,10 @@ const V3={
    if(nav&&holder){
     nav.classList.add("v3-nav-force");
     nav.setAttribute("aria-label","Categorias existentes na instituição");
-    holder.innerHTML=V3.navMarkup([{title:"Início",url:p.url,group:"home"},V3.backLink(key)],active);
+    holder.innerHTML=V3.navMarkup([{title:"Visão da força",url:p.url,group:"home"}],active);
     V3.refreshForceNav(key,active,holder).catch(e=>console.error("Categorias FAAAB indisponíveis",e));
    }
   }
- },
- backLink(key){
-  const parent=V3.forces[key]?.sector==="civil"?"civil.html":key==="CFN"?"marinha.html":"central-faaab.html";
-  const title=V3.forces[key]?.sector==="civil"?"← Civil":key==="CFN"?"← Marinha":"← FAAAB CENTRAL";
-  return {title,url:parent,group:"back"};
  },
  navMarkup(items,active){
   return items.map(item=>'<a href="'+V3.esc(item.url)+'"'+(item.group===active?' aria-current="page"':'')+'>'+V3.esc(item.title)+'</a>').join("");
@@ -45,7 +40,7 @@ const V3={
   const entries=V3.forceList(catalogue,key);
   const names={FTB:"Batalhões e unidades",FAB:"Unidades aéreas",FMB:"Unidades navais e Fuzileiros",CFN:"Batalhões e unidades",PM:"Unidades da Polícia Militar",CBM:"Unidades dos Bombeiros"};
   const allTypes=[["unidade",names[key]||"Unidades"],["brigada","Brigadas"],["divisao","Divisões"],["centro","Centros de instrução"],["escola","Escolas"],["academia","Academias"],["subdivisao","Subdivisões"],["administracao","Administração"],["instituicao","Instituições"]];
-  const items=[{title:"Início",url:V3.forces[key].url,group:"home"}];
+  const items=[{title:"Visão da força",url:V3.forces[key].url,group:"home"}];
   for(const [type,title] of allTypes){
    if(entries.some(e=>e.tipo===type)){
     items.push({title,url:"organizacoes.html?forca="+encodeURIComponent(key)+"&tipo="+encodeURIComponent(type),group:type});
@@ -55,7 +50,6 @@ const V3={
   if(courseRows.length||entries.some(e=>e.tipo==="curso"))items.push({title:"Cursos",url:"formacao.html?forca="+encodeURIComponent(key),group:"curso"});
   if(career.some(e=>e.forca===key))items.push({title:"Patentes e CDP",url:"carreira.html?forca="+encodeURIComponent(key),group:"career"});
   if(positions.some(e=>e.forca===key))items.push({title:"Comando",url:"comando.html",group:"command"});
-  items.push(V3.backLink(key));
   return items;
  },
  async refreshForceNav(key,active,holder){
