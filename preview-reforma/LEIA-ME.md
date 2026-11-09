@@ -37,3 +37,53 @@ Após publicação de um branch de prévia pela Cloudflare, abrir `/preview-refo
 
 ## Separação institucional
 FAAAB é projeto independente de simulação no Roblox. Não reivindicar endosso de instituições públicas brasileiras.
+
+
+## Iteração 2 — Login Roblox, grupos, painel e configurações
+
+Implementado na ramificação de prévia, sem publicação automática.
+
+### Interface do portal
+- preview-reforma/index.html contém Entrar com Roblox e Painel no canto superior direito.
+- O endereço do backend vem de dados/auth_public.json. Com enabled=true e backendUrl HTTPS válido, direciona ao Worker nos caminhos /auth/roblox e /painel-v2. Quando desativado, usa a página pública de explicações admin.html.
+- A página inicial lê dados/noticias.json: somente categoria importante ou urgente fica em Notícias importantes. Notícias informativas ficam em Avisos gerais. O arquivo está vazio atualmente, por isso não inventa notícias.
+- dados/portal_config.json define o título público, a descrição e eventual aviso de manutenção.
+
+### Painel protegido
+Os novos arquivos painel-v2.html, painel-v2.css e painel-v2.js compõem um painel responsivo com Visão geral, Notícias, Verificação de grupos e Configurações.
+
+O Worker existente foi ampliado apenas no branch:
+- GET /painel-v2 exige whitelist e sessão válida;
+- GET /api/groups consulta grupos do usuário autenticado;
+- PUT /api/data/portal_config exige proprietário, valida os campos, CSRF e versão;
+- publicação de notícias usa o mesmo PUT /api/data/noticias, CSRF, SHA e permissões do backend anterior.
+- Membros sem cargo não podem publicar; whitelist e cargos continuam separados.
+
+### Grupos Roblox
+Definir no Worker a variável de ambiente FAAAB_GROUP_IDS com IDs numéricos oficiais separados por vírgula.
+A consulta ao Roblox é feita pelo Worker utilizando o ID de usuário confirmado no OAuth.
+Se não configurado, o painel exibe não configurado. Se a API falhar, exibe indisponível.
+Nunca conceder cargo, patente, whitelist ou autorização com base somente na participação em grupos.
+
+### Implantação para começar a funcionar
+1. Revisar a versão de prévia sem substituir o site principal.
+2. Criar/configurar aplicação Roblox OAuth oficial, Worker Cloudflare, banco D1 e segredos OWNER_ROBLOX_ID e CLIENT_SECRET conforme auth/README.md.
+3. Preencher FAAAB_GROUP_IDS apenas com IDs reais de comunidades escolhidas.
+4. Configurar PUBLIC_SITE para servir os novos arquivos estáticos, disponibilizar a rota protegida no Worker e executar deploy em ambiente de teste.
+5. Verificar login, retorno OAuth, cookies, whitelist, cargos, /api/groups, editor de notícias e painel de configurações.
+6. Somente após testes reais, ativar dados/auth_public.json e preparar a substituição da página inicial.
+
+### Checklist de testes
+- Sem login: painel bloqueado.
+- Login sem whitelist: aguardar aprovação, sem editor.
+- Whitelist sem cargo: leitura limitada, sem publicação.
+- Jornalista: criar notícia, sem poder sobrescrever registros antigos.
+- Proprietário: alterar configurações e notícias; outras pessoas não podem alterar portal_config.
+- Ausência ou falha de API Roblox: não afirmar associação.
+- CSRF ausente: escrita negada. SHA desatualizado: conflito 409.
+- Campos de texto não podem executar HTML injetado.
+- Navegação por teclado, celular, contraste e retorno de erro testados.
+
+### Escopo e proteção do projeto
+Nenhuma patente, grupo Roblox, bot Discord, curso, jogo, banco em produção ou whitelist foi alterado nesta etapa.
+O Worker atual ainda não está implantado; nada aqui significa que o login esteja disponível para usuários reais.
