@@ -8,7 +8,8 @@
     "categoria": "importante",
     "setor": "institucional",
     "autor": "Equipe do portal FAAAB",
-    "estado": "Em desenvolvimento"
+    "estado": "Em desenvolvimento",
+    "imagem": "assets/editorial-portal.svg"
   },
   {
     "id": "estudos-faaab-2026",
@@ -19,7 +20,8 @@
     "categoria": "informativa",
     "setor": "ensino",
     "autor": "Equipe do portal FAAAB",
-    "estado": "Disponível"
+    "estado": "Disponível",
+    "imagem": "assets/editorial-ensino.svg"
   },
   {
     "id": "catalogo-unidades-revisao-2026",
@@ -30,7 +32,8 @@
     "categoria": "informativa",
     "setor": "institucional",
     "autor": "Equipe do portal FAAAB",
-    "estado": "Em revisão"
+    "estado": "Em revisão",
+    "imagem": "assets/editorial-organizacoes.svg"
   },
   {
     "id": "forcas-portais-setoriais-2026",
@@ -41,7 +44,8 @@
     "categoria": "informativa",
     "setor": "comunidade",
     "autor": "Equipe do portal FAAAB",
-    "estado": "Estrutura existente"
+    "estado": "Estrutura existente",
+    "imagem": "assets/editorial-organizacoes.svg"
   },
   {
     "id": "publicidade-identificada-2026",
