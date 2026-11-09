@@ -1,65 +1,80 @@
 "use strict";
-(()=>{const $=id=>document.getElementById(id),site=document.body.dataset.site,dir=document.body.dataset.dir,portal=document.body.dataset.portal;
- const E=(tag,cls,text)=>{const x=document.createElement(tag);if(cls)x.className=cls;if(text!==undefined)x.textContent=String(text);return x};
- const A=(href,text,cls)=>{const a=E("a",cls,text);a.href=href;return a};
- const sectionName={FTB:"DECEx — Ensino do Exército",FMB:"Diretoria de Ensino da Marinha"};
- const dirUrl={FTB:"decex.html",FMB:"ensino-marinha.html"};
- const forceUrl={FTB:"exercito.html",FMB:"marinha.html"};
- const slug=id=>/^[a-z0-9-]{1,30}$/.test(id);
- const srcSafe=u=>{try{const x=new URL(u);return x.protocol==="https:"?x.href:null}catch{return null}};
- const nameNews=v=>v==="sspm"?"Seleções, editais e convocações":"Notícias e comunicados";
- function newsList(all,id,group){
-   const box=$("news-list");box.replaceChildren();
-   const list=all.filter(x=>x&&typeof x.titulo==="string"&&
-    ((id&&String(x.instituicao||x.unidade||"").toLowerCase()===id)||
-    (!id&&group&&x.setor===(group==="FTB"?"exercito":"marinha")&&x.nivel==="diretoria")));
-   list.sort((a,b)=>String(b.data||"").localeCompare(String(a.data||"")));
-   if(!list.length){const holder=E("article","news-empty");holder.append(E("h3",null,"Nenhuma publicação desta instituição no momento."),E("p",null,"Quando a equipe publicar comunicados específicos, eles aparecerão aqui. Notícias gerais da FAAAB não são copiadas para esta página."));box.append(holder);return}
-   for(const x of list.slice(0,6)){const article=E("article","story");article.append(E("span","meta",(x.categoria||"Informativa")+" · "+(x.data||"")),E("h3",null,x.titulo),E("p",null,x.resumo||""));const a=A("noticia.html?id="+encodeURIComponent(x.id||""),"Ler notícia completa ↗","source");article.append(a);box.append(article)}
- }
- function renderCards(items){
-   const box=$("institution-list");box.replaceChildren();
-   for(const x of items){const card=E("article","card"),tag=E("span","eyebrow",x.tipo||(x.formacao?"Formação":"Seleção")),h=E("h3",null,x.sigla+" — "+x.nome),p=E("p",null,x.resumo);
-    const a=A(x.id+".html","Abrir portal da instituição ↗","foot-link");if(x.estado==="futuro_condicional")card.append(E("span","eyebrow","Proposta para expansão futura"));card.append(tag,h,p,a);box.append(card)}
- }
- function addScopes(list){const box=$("themes");box.replaceChildren();for(const value of list){box.append(E("span","chip",value))}}
- function apply(item,data){
-   document.title=item.nome+" | FAAAB";
-   $("site-name").textContent=item.nome;$("site-small").textContent=item.sigla+" · "+item.tipo;
-   $("hero-title").textContent=item.nome;$("hero-desc").textContent=item.resumo;
-   $("intro-title").textContent=item.foco||item.tipo;$("real-desc").textContent=item.real;$("game-desc").textContent=item.jogo;
-   $("source").href=srcSafe(item.fonte)||"https://www.marinha.mil.br/ensino/";$("source").textContent="Consultar instituição de referência ↗";
-   $("exam-link").href="provas.html?instituicao="+encodeURIComponent(item.id);
-   $("nav-directory").href=dirUrl[item.grupo];$("nav-directory").textContent=sectionName[item.grupo];
-   $("nav-force").href=forceUrl[item.grupo];$("nav-force").textContent=item.grupo==="FTB"?"Exército":"Marinha";
-   $("local-news-name").textContent=nameNews(item.id);
-   $("exam-status").textContent="Seleção FAAAB: aguardando edital e verificação de cargo/patente";
-   addScopes(item.noticias||[]);newsList(data,item.id,null);
-   if(item.id==="sspm"){$("custom").hidden=false;$("custom").textContent="A SSPM organiza as seleções navais do universo FAAAB. O Corpo de Fuzileiros Navais mantém sua própria estrutura de recrutamento. A entrada em escolas e cursos depende de edital autorizado, vagas e requisitos de patente, nunca do simples clique no site.";}
- }
- function applyDirectory(all,group,news){
-   const list=all.filter(x=>x.grupo===group),isMB=group==="FMB";
-   document.title=(isMB?"Ensino da Marinha":"DECEx — Escolas Militares")+" | FAAAB";
-   $("site-name").textContent=isMB?"Diretoria de Ensino da Marinha":"Departamento de Educação e Cultura do Exército";
-   $("site-small").textContent=isMB?"Ensino naval · FAAAB":"DECEx · FAAAB";
-   $("hero-title").textContent=isMB?"Ensino naval e seleções":"DECEx — Escolas Militares";
-   $("hero-desc").textContent=isMB?"Conheça as instituições responsáveis pela formação naval, o aperfeiçoamento profissional e a SSPM, responsável pelas seleções.":"Escolas e academias com funções próprias na formação e no aperfeiçoamento da carreira militar fictícia.";
-   $("nav-force").href=forceUrl[group];$("nav-force").textContent=isMB?"Marinha":"Exército";
-   $("source").href=isMB?"https://www.marinha.mil.br/ensino/":"https://www.decex.eb.mil.br/";
-   $("source").textContent="Portal de referência oficial ↗";
-   $("roles-desc").textContent=isMB?"SSPM é serviço de seleção. CIAA, CIAW, EN, CN e EAM oferecem formações distintas; os processos dos Fuzileiros Navais permanecem separados.":"EsPCEx prepara, AMAN e ESA formam; EASA, EsAO e ECEME aperfeiçoam. As escolas são diferentes e seus regulamentos FAAAB serão próprios.";
-   $("exam-link").href="provas.html"+(isMB?"?forca=FMB":"?forca=FTB");
-   renderCards(list);newsList(news,null,group);
- }
- async function init(){
+/* FAAAB — portais individuais de ensino, notícias por instituição, sem permissões simuladas. */
+(()=>{
+ const $=id=>document.getElementById(id);
+ const page=document.body.dataset.portal||"",group=document.body.dataset.dir||"";
+ const dirs={FTB:{title:"DECEx — Escolas Militares",short:"DECEx",url:"decex.html",force:"Exército",forceUrl:"exercito.html",desc:"Formação, aperfeiçoamento e educação especializada do Exército da FAAAB. Cada escola tem seus próprios cursos e comunicados."},FMB:{title:"Ensino da Marinha",short:"Ensino Naval",url:"ensino-marinha.html",force:"Marinha",forceUrl:"marinha.html",desc:"Escolas de formação e centros navais, com a SSPM para administrar seleções. O Corpo de Fuzileiros Navais possui seleção própria."},FAB:{title:"Ensino da Aeronáutica",short:"Ensino FAB",url:"ensino-fab.html",force:"Aeronáutica",forceUrl:"aeronautica.html",desc:"Instituições de ensino da FAB. A UNIFA organiza o portal acadêmico da FAAAB para ECEMAR e EAOAR."}};
+ const node=(name,cls,text)=>{const x=document.createElement(name);if(cls)x.className=cls;if(text!=null)x.textContent=String(text);return x};
+ const link=(href,text,cls)=>{const e=node("a",cls,text);e.href=href;return e};
+ const allowedUrl=s=>{try{const u=new URL(s);return u.protocol==="https:"?u.href:null}catch{return null}};
+ const pageId=id=>/^[a-z0-9-]{1,35}$/.test(id);
+ const appendNews=(all,site,section)=>{
+  const host=$("news-list");if(!host)return;host.replaceChildren();
+  let news=all.filter(n=>n&&typeof n.titulo==="string"&&typeof n.resumo==="string"&&(
+   site?String(n.instituicao||n.unidade||"").toLowerCase()===site:
+    (n.setor===(section==="FTB"?"exercito":section==="FMB"?"marinha":"fab")&&n.nivel==="diretoria")));
+  news.sort((a,b)=>String(b.data||"").localeCompare(String(a.data||"")));
+  if(!news.length){const c=node("div","news-empty");c.append(node("h3",null,"Nenhuma notícia específica publicada."),node("p",null,"Quando esta instituição publicar informações sobre cursos, seleções, turmas ou formaturas, elas aparecerão aqui. O noticiário geral não é repetido."));host.append(c);return}
+  for(const n of news.slice(0,8)){
+   const a=node("article","story");
+   a.append(node("span","meta",(n.categoria||"Notícia")+" · "+(n.data||"")),node("h3",null,n.titulo),node("p",null,n.resumo));
+   a.append(link("noticia.html?id="+encodeURIComponent(n.id||""),"Ler matéria completa ↗","source"));host.append(a)}
+ };
+ const renderCards=(items,target,emptyText)=>{
+  const host=$(target);if(!host)return;host.replaceChildren();
+  if(!items.length){host.append(node("p","news-empty",emptyText||"Nenhuma escola cadastrada."));return}
+  for(const item of items){
+   const c=node("article","card");
+   if(item.estado==="futuro_condicional")c.append(node("span","eyebrow","Proposta para o futuro"));
+   else c.append(node("span","eyebrow",item.tipo||"Instituição"));
+   c.append(node("h3",null,item.sigla+" · "+item.nome),node("p",null,item.resumo));
+   c.append(link(item.id+".html","Acessar portal ↗","foot-link"));host.append(c)
+  }
+ };
+ const renderSite=(item,all,news)=>{
+  document.title=item.nome+" | FAAAB";$("site-name").textContent=item.nome;$("site-small").textContent=item.sigla+" · "+item.tipo;
+  $("hero-title").textContent=item.nome;$("hero-desc").textContent=item.resumo;
+  $("intro-title").textContent=item.tipo;$("real-desc").textContent=item.real;
+  $("game-desc").textContent=item.jogo;
+  const d=dirs[item.grupo];
+  $("nav-force").href=d.forceUrl;$("nav-force").textContent=d.force;
+  $("nav-directory").href=d.url;$("nav-directory").textContent=d.short;
+  const source=$("source"),url=allowedUrl(item.fonte);
+  if(url){source.href=url;source.hidden=false}else source.hidden=true;
+  const test=$("exam-link");test.href="provas-faaab.html?instituicao="+encodeURIComponent(item.id);
+  if(item.id==="unifa"){test.textContent="Consultar cursos e avaliações ↗";$("exam-note").textContent="A UNIFA não é uma seleção única. Consulte a ECEMAR e a EAOAR para verificar provas ou requisitos específicos."}
+  else $("exam-note").textContent="Sem inscrições oficiais abertas. A elegibilidade real exige validação de patente e grupo pelo backend.";
+  $("themes").replaceChildren();
+  for(const t of item.noticias||[])$("themes").append(node("span","chip",t));
+  const sub=all.filter(x=>(item.subunidades||[]).includes(x.id));
+  const subsec=$("sub-section");subsec.hidden=!sub.length;if(sub.length)renderCards(sub,"subunit-list");
+  if(item.id==="unifa"){$("special-note").hidden=false;$("special-note").textContent="No universo FAAAB, UNIFA reúne os portais acadêmicos de ECEMAR e EAOAR. Na estrutura real atual, a DIRENS é responsável pelas escolas, que funcionam no campus da UNIFA."}
+  if(item.id==="sspm"){$("special-note").hidden=false;$("special-note").textContent="A SSPM administra as seleções navais fictícias. As seleções dos Fuzileiros Navais permanecem separadas. Não concede patente ou matrícula automaticamente."}
+  appendNews(news,item.id,null);
+ };
+ const renderDirectory=(group,all,news)=>{
+  const d=dirs[group];document.title=d.title+" | FAAAB";
+  $("site-name").textContent=d.title;$("site-small").textContent=d.force+" · Educação institucional";
+  $("hero-title").textContent=d.title;$("hero-desc").textContent=d.desc;
+  $("nav-force").href=d.forceUrl;$("nav-force").textContent=d.force;
+  $("directory-note").textContent=group==="FTB"?"EsPCEx prepara, AMAN e ESA formam, EASA, EsAO e ECEME aperfeiçoam. EsACosAAe e ESFCEx não integram esta estrutura.":
+    group==="FMB"?"SSPM faz seleções; EN, CN, CIAA, CIAW e EAM realizam formações. Seleções dos Fuzileiros Navais são distintas.":
+    "UNIFA reúne academicamente os portais ECEMAR e EAOAR na FAAAB; na FAB real atual, a DIRENS figura como superior das escolas.";
+  $("exam-link").href="provas-faaab.html?forca="+group;
+  renderCards(all.filter(x=>x.grupo===group),"institution-list");
+  appendNews(news,null,group)
+ };
+ async function start(){
   try{
-   const [r,n]=await Promise.all([fetch("dados/ensino_instituicoes.json",{cache:"no-store"}),fetch("dados/noticias.json",{cache:"no-store"})]);if(!r.ok)throw Error("Dados institucionais indisponíveis");
-   const data=await r.json(),news=n.ok?await n.json():[];
-   const all=Array.isArray(data.instituicoes)?data.instituicoes:[],item=all.find(x=>x.id===portal);
-   if(portal){if(!slug(portal)||!item)throw Error("Instituição não cadastrada");apply(item,Array.isArray(news)?news:[])}
-   else if(dir){applyDirectory(all,dir,Array.isArray(news)?news:[])}
-   else throw Error("Página sem identificação");
-  }catch(e){$("hero-desc").textContent="Não foi possível carregar os dados institucionais. "+e.message;$("institution-list")?.replaceChildren(E("p","news-empty","Catálogo temporariamente indisponível"))}
+   const [a,b]=await Promise.all([fetch("dados/ensino_instituicoes.json",{cache:"no-store"}),fetch("dados/noticias.json",{cache:"no-store"})]);
+   if(!a.ok)throw Error("Catálogo de ensino indisponível");
+   const raw=await a.json(),n=b.ok?await b.json():[];
+   const all=Array.isArray(raw.instituicoes)?raw.instituicoes:[],news=Array.isArray(n)?n:[];
+   if(page){if(!pageId(page))throw Error("Identificação inválida");const item=all.find(x=>x.id===page);if(!item)throw Error("Instituição não cadastrada");renderSite(item,all,news)}
+   else if(dirs[group])renderDirectory(group,all,news);
+   else throw Error("Página de ensino sem identificação.");
+  }catch(err){$("hero-desc").textContent="Não foi possível carregar os dados desta página: "+err.message;
+   const host=$("news-list");if(host){host.replaceChildren(node("div","news-empty","Notícias temporariamente indisponíveis."))}}
  }
- init();
+ start();
 })();
