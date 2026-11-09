@@ -324,3 +324,6 @@ body.faaab-v3{background:#f6f7f7;color:#253d4b}
 .v3-profile-subunits strong,.v3-course-detail summary{color:#27526a}
 .v3-course-detail{background:#f9fbfb;border-color:#d8e1e5}
 @media(max-width:700px){.v3-nav .v3-wrap{gap:0}.v3-nav a{padding:13px 14px}}
+
+/* Simplificação definitiva: não mostrar trilhas duplicadas 'Início / FAAAB Central / Estudos' nas páginas institucionais. */
+.faaab-v3 .v3-breadcrumb,.v3-breadcrumb{display:none!important}
