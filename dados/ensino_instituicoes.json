@@ -303,6 +303,79 @@
       "fonte": "https://www.marinha.mil.br/ensino/",
       "formacao": true,
       "catalogoId": "FMB-EAM"
+    },
+    {
+      "id": "unifa",
+      "sigla": "UNIFA",
+      "nome": "Universidade da Força Aérea",
+      "grupo": "FAB",
+      "tipo": "Universidade e ensino superior",
+      "resumo": "Centro universitário de ensino, pesquisa, extensão e pós-formação da Aeronáutica.",
+      "real": "A UNIFA realiza ensino, pesquisa e extensão na FAB. ECEMAR e EAOAR estão sediadas no campus; documentos mais recentes indicam subordinação direta destas escolas à DIRENS, não administração hierárquica exclusiva da UNIFA.",
+      "jogo": "Na organização fictícia FAAAB, centraliza o acesso acadêmico a ECEMAR e EAOAR, reunindo seus portais e comunicados, mantendo editais e formações específicos de cada escola.",
+      "noticias": [
+        "pesquisa",
+        "pós-formação",
+        "eventos acadêmicos",
+        "atividades universitárias"
+      ],
+      "fonte": "https://www2.fab.mil.br/unifa/",
+      "formacao": true,
+      "catalogoId": "FAB-UNIFA",
+      "subunidades": [
+        "ecemar",
+        "eaoar"
+      ],
+      "vinculo": "Portais acadêmicos associados na FAAAB; organização real sob DIRENS."
+    },
+    {
+      "id": "ecemar",
+      "sigla": "ECEMAR",
+      "nome": "Escola de Comando e Estado-Maior da Aeronáutica",
+      "grupo": "FAB",
+      "tipo": "Altos estudos de oficiais",
+      "resumo": "Cursos de altos estudos, comando, estado-maior e gestão superior.",
+      "real": "Prepara oficiais superiores para funções de comando e estado-maior, com cursos como CCEM e programas relacionados.",
+      "jogo": "Desenvolvimento avançado de oficiais da FAB; o registro antigo da FAAAB prevê Major aluno, Tenente-Coronel na formatura e Coronel instrutor, sujeito à revisão do regulamento.",
+      "noticias": [
+        "altos estudos",
+        "cursos de comando",
+        "formaturas",
+        "seminários"
+      ],
+      "fonte": "https://www2.fab.mil.br/ecemar/",
+      "formacao": true,
+      "catalogoId": "FAB-ECEMAR",
+      "vinculoFAAAB": "unifa"
+    },
+    {
+      "id": "eaoar",
+      "sigla": "EAOAR",
+      "nome": "Escola de Aperfeiçoamento de Oficiais da Aeronáutica",
+      "grupo": "FAB",
+      "tipo": "Aperfeiçoamento de oficiais",
+      "resumo": "Cursos de aperfeiçoamento para oficiais da Aeronáutica.",
+      "real": "Aperfeiçoa oficiais subalternos e intermediários em competências administrativas, operacionais e de assessoramento, incluindo o CAP.",
+      "jogo": "Aperfeiçoamento de oficiais da FAB para responsabilidades maiores, sem promoções automáticas nem requisitos de patente definidos por suposição.",
+      "noticias": [
+        "aperfeiçoamento de oficiais",
+        "curso CAP",
+        "formaturas",
+        "capacitação administrativa"
+      ],
+      "fonte": "https://www2.fab.mil.br/eaoar/",
+      "formacao": true,
+      "catalogoId": "FAB-EAOAR",
+      "vinculoFAAAB": "unifa"
     }
-  ]
+  ],
+  "hierarquiaFAB": {
+    "coordenacaoFAAAB": "UNIFA",
+    "portaisAssociados": [
+      "ECEMAR",
+      "EAOAR"
+    ],
+    "notaReal": "Na organização atual da FAB, a DIRENS é a referência de subordinação de ECEMAR e EAOAR, no campus da UNIFA. A vinculação hierárquica escolhida para a FAAAB é ficcional.",
+    "fonte": "https://www2.fab.mil.br/unifa/"
+  }
 }
