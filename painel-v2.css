@@ -1,3 +1,4 @@
+[hidden]{display:none!important}
 :root{--bg:#f4f5f3;--paper:#fff;--ink:#20303e;--ink2:#506070;--muted:#7b858d;--line:#e0e4e2;--nav:#142636;--navline:#334555;--accent:#b16b36;--accent-bg:#f9eee1;--blue:#214964}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #bd875b;outline-offset:3px}
