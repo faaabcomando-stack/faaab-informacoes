@@ -18,7 +18,8 @@ const read=async file=>{const r=await fetch(D+file+".json",{cache:"no-store"});i
 const getDate=s=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(String(s||"")))return "Data não informada";const d=new Date(s+"T12:00:00");return Number.isNaN(d.getTime())?String(s):d.toLocaleDateString("pt-BR",{day:"2-digit",month:"long",year:"numeric"})};
 const category=n=>{const c=clean(n.categoria||n.prioridade||(n.destaque?"importante":"informativa"));return ["urgente","importante","informativa","menor_relevancia","anuncio"].includes(c)?c:"informativa"};
 const label=n=>({urgente:"Urgente",importante:"Notícia importante",informativa:"Aviso geral",menor_relevancia:"Comunicado",anuncio:"Publicidade da comunidade"})[category(n)];
-const articleUrl=index=>"noticia.html?item="+encodeURIComponent(index);
+const demoMode=new URLSearchParams(location.search).get("demo")==="1";
+const articleUrl=index=>"noticia.html?item="+encodeURIComponent(index)+(demoMode?"&demo=1":"");
 const validNews=data=>Array.isArray(data)?data.map((n,i)=>({n,i})).filter(x=>x.n&&typeof x.n.titulo==="string"&&x.n.titulo.trim()&&typeof x.n.resumo==="string"&&x.n.resumo.trim()).sort((a,b)=>String(b.n.data||"").localeCompare(String(a.n.data||""))):[];
 function initMenu(){
  const toggle=$("menu-toggle"),links=$("navlinks");if(!toggle||!links)return;
@@ -165,9 +166,14 @@ function renderArea(data){
  draw();
 }
 initMenu();initAuth();initConfig();
+if(demoMode){
+ const banner=$("demo-banner");if(banner)banner.hidden=false;
+ document.querySelectorAll('a[href="noticias.html"]').forEach(a=>a.href="noticias.html?demo=1");
+ document.querySelectorAll('a[href="index.html#importantes"]').forEach(a=>a.href="index.html?demo=1#importantes");
+}
 const page=document.body.dataset.page;
 if(page==="home"||page==="archive"||page==="article"){
- read("noticias").then(data=>{const items=validNews(data);if(page==="home")renderHomeNews(items);if(page==="archive")initArchive(items);if(page==="article")initDetail(items)}).catch(()=>{
+ (demoMode?fetch("demo-noticias.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("Demonstração indisponível");return r.json()}):read("noticias")).then(data=>{const items=validNews(data);if(page==="home")renderHomeNews(items);if(page==="archive")initArchive(items);if(page==="article")initDetail(items)}).catch(()=>{
   if(page==="home"){$("news-state")?.replaceChildren(el("span","","Não foi possível atualizar o noticiário no momento."));}
   if(page==="archive")$("archive-results")?.replaceChildren(el("p","empty-state","Notícias indisponíveis. Tente novamente."));
   if(page==="article")$("article-detail")?.replaceChildren(el("p","empty-state","Não foi possível abrir a publicação."));
