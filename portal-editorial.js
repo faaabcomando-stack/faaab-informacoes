@@ -9,6 +9,7 @@
  const slug=s=>norm(s).replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,100);
  const isAd=x=>["publicidade","patrocinado","anuncio"].includes(norm(x?.categoria||x?.tipo));
  const safeUrl=s=>{try{const u=new URL(s);return u.protocol==="https:"?u.href:null}catch{return null}};
+ const safeImage=s=>typeof s==="string"&&/^assets\/[a-z0-9/_\-.]+\.svg$/.test(s)&&!s.includes("..")?s:null;
  const date=x=>{const s=String(x||"");if(!/^\d{4}-\d{2}-\d{2}$/.test(s))return "Data não informada";const [y,m,d]=s.split("-").map(Number);return new Intl.DateTimeFormat("pt-BR",{day:"2-digit",month:"short",year:"numeric",timeZone:"UTC"}).format(new Date(Date.UTC(y,m-1,d,12)))};
  const a=(href,text,cls)=>{const link=document.createElement("a");link.href=href;link.textContent=text;if(cls)link.className=cls;return link};
  const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node};
@@ -20,6 +21,7 @@
  function mainStory(x){
   const card=el("article","lead-story");
   const media=el("div","lead-media");media.dataset.theme=theme[norm(x.setor)]||"geral";
+  const imageSrc=safeImage(x.imagem);if(imageSrc){const img=document.createElement("img");img.src=imageSrc;img.alt="";img.decoding="async";media.classList.add("has-cover");media.append(img)}
   media.append(el("span","media-mark",classification(x)==="urgente"?"Urgente":classification(x)==="importante"?"Notícia importante":caption(x)),el("span","media-constellation",letter(x)),el("span","media-bottom","FAAAB  /  Comunicação institucional"));
   const copy=el("div","lead-copy"),tag=el("div","meta",meta(x)),h=el("h3"),p=el("p",null,x.resumo||""),read=a(linkPost(x),"Ler notícia completa ↗","read-more");
   h.append(a(linkPost(x),x.titulo));copy.append(tag,h,p,read);card.append(media,copy);return card
@@ -39,10 +41,10 @@
  }
  function newsRow(x){
   const card=el("article","feed-row"),thumb=el("div","feed-thumb",letter(x)),copy=el("div"),tag=el("div","meta",meta(x)),h=el("h3"),p=el("p",null,x.resumo||"");
-  thumb.dataset.theme=theme[norm(x.setor)]||"geral";thumb.setAttribute("aria-hidden","true");h.append(a(linkPost(x),x.titulo));copy.append(tag,h,p);card.append(thumb,copy);return card
+  thumb.dataset.theme=theme[norm(x.setor)]||"geral";thumb.setAttribute("aria-hidden","true");const imageSrc=safeImage(x.imagem);if(imageSrc){thumb.textContent="";thumb.classList.add("has-cover");const img=document.createElement("img");img.src=imageSrc;img.alt="";img.loading="lazy";thumb.append(img)}h.append(a(linkPost(x),x.titulo));copy.append(tag,h,p);card.append(thumb,copy);return card
  }
  function sponsored(x){
-  const card=el("article","sponsored-item"),tag=el("span","label","Publicidade · Conteúdo patrocinado"),h=el("h3",null,x.titulo||"Conteúdo patrocinado"),p=el("p",null,x.resumo||"");
+  const card=el("article","sponsored-item"),tag=el("span","label",x.patrocinador?"Publicidade · Conteúdo patrocinado":"Espaço publicitário disponível"),h=el("h3",null,x.titulo||"Conteúdo patrocinado"),p=el("p",null,x.resumo||"");
   card.append(tag,h,p);
   if(x.patrocinador)card.append(el("small","sponsor-name","Anunciante: "+x.patrocinador));
   const href=safeUrl(x.url||x.destino);
