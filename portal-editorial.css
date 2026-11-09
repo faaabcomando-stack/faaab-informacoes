@@ -1,4 +1,3 @@
-@import url("design-faaab-2026.css");
 /* FAAAB | Portal editorial • 2026 | Sem componentes de navegação duplicados */
 :root{--ink:#142735;--ink2:#304657;--muted:#657782;--navy:#112638;--navy2:#1d384e;--paper:#f6f7f7;--white:#fff;--line:#dce3e7;--gold:#ae7b43;--gold2:#e4b878;--accent:#245b76;--radius:4px;--serif:Georgia,"Times New Roman",serif;--sans:"Segoe UI",Inter,system-ui,-apple-system,Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:14px/1.58 var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:hover{text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #c58d4b;outline-offset:4px}
