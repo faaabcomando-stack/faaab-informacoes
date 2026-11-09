@@ -1032,25 +1032,6 @@
     "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
-    "id": "FTB-ESFCEx",
-    "sigla": "ESFCEx",
-    "nome": "Escola de Saúde e Formação Complementar do Exército",
-    "forca": "FTB",
-    "tipo": "escola",
-    "secao": "EXÉRCITO - ESCOLAS E ACADEMIAS",
-    "logo": null,
-    "vidaReal": "Instituição educacional militar ou de formação; as regras de ingresso, cursos e diplomas do mundo real não são reproduzidas automaticamente na FAAAB.",
-    "noJogo": "Não faz parte da estrutura atual da FAAAB; registro mantido apenas para histórico do catálogo.",
-    "requisitos": null,
-    "aprovado": false,
-    "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null,
-    "estadoImplementacao": "Excluída do plano atual da FAAAB por decisão do projeto em 09/11/2026",
-    "responsavel": null,
-    "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
-  },
-  {
     "id": "FTB-Bda-Inf-Sl",
     "sigla": "Bda Inf Sl",
     "nome": "Brigada de Infantaria de Selva",
