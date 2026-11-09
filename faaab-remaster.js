@@ -11,7 +11,7 @@ const V3={
  forceList(rows,key){const visible=rows.filter(x=>x.aprovado!==false);if(!key)return visible;if(key==="FMB")return visible.filter(x=>x.forca==="FMB"||x.forca==="CFN");return visible.filter(x=>x.forca===key)},
  sectorRows(rows,sector){rows=rows.filter(x=>x.aprovado!==false);if(sector==="central")return rows.filter(x=>["FTB","FAB","FMB","CFN"].includes(x.forca)||["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN"].includes(x.id));if(sector==="civil")return rows.filter(x=>["PM","CBM"].includes(x.forca)||["ADM-PM","ADM-CBM"].includes(x.id));if(sector==="governo")return rows.filter(x=>x.forca==="ADM"&&!["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN","ADM-PM","ADM-CBM"].includes(x.id));return rows},
  typeRows(rows,type){if(!type)return rows;if(type==="divisao")return rows.filter(x=>x.tipo==="divisao");if(type==="unidade")return rows.filter(x=>x.tipo==="unidade");return rows.filter(x=>x.tipo===type)},
- url(e){const own={"FTB-ESA":"esa.html","FTB-EsPCEx":"espcex.html","FTB-AMAN":"aman.html","FTB-EsAO":"esao.html","FTB-ECEME":"eceme.html","FTB-EsSLog":"esslog.html","FMB-CIAA":"ciaa.html","FMB-CIAW":"ciaw.html","FMB-EAM":"eam.html","FMB-CN":"cn.html","FMB-EN":"en.html","FAB-ECEMAR":"ecemar.html","FAB-UNIFA":"unifa.html","FAB-EAOAR":"eaoar.html","FMB-SSPM":"sspm.html"};return own[e.id]||"ficha.html?id="+encodeURIComponent(e.id)},
+ url(e){const own={"FTB-ESA":"esa.html","FTB-EsPCEx":"espcex.html","FTB-AMAN":"aman.html","FTB-EsAO":"esao.html","FTB-ECEME":"eceme.html","FTB-EsSLog":"esslog.html","FMB-CIAA":"ciaa.html","FMB-CIAW":"ciaw.html","FMB-EAM":"eam.html","FMB-CN":"cn.html","FMB-EN":"en.html","FAB-ECEMAR":"ecemar.html","FAB-EEAR":"eear.html","FAB-EPCAR":"epcar.html","FAB-AFA":"afa.html","FAB-CIAAR":"ciaar.html","FAB-UNIFA":"unifa.html","FAB-EAOAR":"eaoar.html","FMB-SSPM":"sspm.html"};return own[e.id]||"ficha.html?id="+encodeURIComponent(e.id)},
  row(e){return '<article class="v3-record-item"><div class="v3-record-code">'+V3.esc(e.sigla||e.forca)+'</div><div><h3><a href="'+V3.url(e)+'">'+V3.esc(e.nome)+'</a></h3><p>'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' · '+V3.esc(V3.types[e.tipo]||e.tipo||"Organização")+' · '+V3.esc(e.estadoImplementacao||"Situação a confirmar")+'</p></div></article>'},
  rows(rows){return rows.length?'<div class="v3-record-list">'+rows.map(V3.row).join("")+'</div>':'<p class="v3-empty">Nenhuma organização desse tipo está registrada no catálogo atual. Não foram criadas entradas fictícias.</p>'},
  note(txt){return '<div class="v3-note">'+V3.esc(txt)+'</div>'},
@@ -36,6 +36,14 @@ const V3={
   return items.map(item=>'<a href="'+V3.esc(item.url)+'"'+(item.group===active?' aria-current="page"':'')+'>'+V3.esc(item.title)+'</a>').join("");
  },
  async forceMenuItems(key){
+  if(key==="FTB")return [
+   {title:"Exército",url:"exercito.html",group:"home"},
+   {title:"Divisões",url:"divisoes.html",group:"divisao"},
+   {title:"Brigadas",url:"brigadas.html",group:"brigada"},
+   {title:"Unidades por brigada",url:"batalhoes.html",group:"unidade"},
+   {title:"Hierarquia do EB",url:"hierarquia.html?forca=FTB",group:"career"},
+   {title:"DECEx",url:"decex.html",group:"escola"},
+   {title:"Provas do EB",url:"provas-faaab.html?forca=FTB",group:"provas"}];
   const [catalogue,courses,career,positions]=await Promise.all([V3.get("catalogo"),V3.get("cursos"),V3.get("hierarquias"),V3.get("cargos")]);
   const entries=V3.forceList(catalogue,key);
   const names={FTB:"Batalhões e unidades",FAB:"Unidades aéreas",FMB:"Unidades navais e Fuzileiros",CFN:"Batalhões e unidades",PM:"Unidades da Polícia Militar",CBM:"Unidades dos Bombeiros"};
@@ -136,6 +144,10 @@ const V3={
   const force=params.get("forca")||body.dataset.force||"";
   const sector=params.get("setor")||body.dataset.sector||"";
   const type=params.get("tipo")||body.dataset.type||"";
+  if(force==="FTB"&&["divisao","brigada","unidade"].includes(type)){
+    location.replace({divisao:"divisoes.html",brigada:"brigadas.html",unidade:"batalhoes.html"}[type]);
+    return;
+  }
   if(force&&V3.forces[force]){
    const genericFooter=document.querySelector(".v3-section.tint");
    if(genericFooter)genericFooter.hidden=true;
@@ -177,6 +189,14 @@ const V3={
   const courseNames={"FTB-ESA":["CUR-10-5"],"FTB-EsPCEx":["CUR-10-11"],"FTB-AMAN":["CUR-10-12"],"FTB-EsAO":["CUR-10-13"],"FTB-ECEME":["CUR-10-14"],"FAB-CIAAR":["CUR-11-1"],"FAB-EEAR":["CUR-11-4"],"FAB-EPCAR":["CUR-11-7"],"FAB-AFA":["CUR-11-8"],"FAB-ECEMAR":["CUR-11-9"],"FMB-EAM":["CUR-COMP-01"],"FMB-CIAMPA":["CUR-COMP-10"],"FMB-CIAA":["CUR-COMP-06"],"FMB-EN":["CUR-COMP-09"],"FMB-GrupPatNav":["CUR-COMP-03","CUR-COMP-04"],"CBM-ABMDP-II":["CUR-COMP-13"],"CBM-CFP-BM":["CUR-COMP-21"],"CBM-CFS-BM":["CUR-COMP-15"],"CBM-CFO-BM":["CUR-COMP-18"],"CBM-CAO-BM":["CUR-COMP-19"],"CBM-CSBM":["CUR-COMP-22"],"FAB-EAV":["CUR-11-11"],"FAB-ECDA":["CUR-11-12"],"FTB-Bda-Inf-Sl":["CUR-10-7","CUR-10-8"],"FTB-Bda-Inf-Mth":["CUR-10-7","CUR-10-8"],"FTB-Bda-Inf-Mec":["CUR-10-7","CUR-10-8"],"FTB-Bda-Inf-Bld":["CUR-10-7","CUR-10-8"],"FTB-Bda-C-Mec":["CUR-10-7","CUR-10-8"],"FTB-Bda-C-Bld":["CUR-10-7","CUR-10-8"]};
   const relatedCourses=cursos.filter(x=>(courseNames[id]||[]).includes(x.id));
   const parentUnits=Object.entries(unitData.mapeamentos||{}).filter(([_,o])=>o.subunidades?.some(y=>y.catalogoId===id)).map(([parentId])=>cat.find(x=>x.id===parentId)).filter(Boolean);
+  const ebTree=e?.forca==="FTB"?await V3.get("estrutura_eb_2026").catch(()=>null):null;
+  const locs=ebTree?.divisoes?.flatMap(d=>d.brigadas.flatMap(b=>[
+   ...(b.catalogoId?[{d,b,kind:"brigada",target:b.catalogoId}]:[]),
+   ...b.unidades.filter(u=>u.catalogoId).map(u=>({d,b,u,kind:"unidade",target:u.catalogoId}))
+  ]))||[];
+  const ebLoc=locs.find(x=>x.target===id)||null;
+  const ebCommand=ebTree?.comandos?.find(x=>x.unidades.some(u=>u.catalogoId===id))||null;
+  const ebDirect=ebTree?.apoioDireto?.some(x=>x.catalogoId===id)||false;
   if(!e){V3.set("v3-profile",' <h1>Organização não encontrada</h1><p>Confira o endereço ou volte à <a href="instituicoes.html">página de instituições</a>.</p>');return}
   const availableKeys=Object.keys(sections).filter(key=>{
    if(key==="sobre")return true;
@@ -207,12 +227,13 @@ const V3={
       (perfil?.observacoes?.length?'<h3>Regras e distinções</h3><ul class="v3-profile-bullets">'+perfil.observacoes.map(x=>'<li>'+V3.esc(x)+'</li>').join("")+'</ul>':"")+
       '<p class="v3-profile-source">Estas são decisões e concepções do roleplay FAAAB; sua descrição não afirma que os recursos já foram instalados no Roblox Studio.</p></div>';
   }else if(sec==="estrutura"){
-   const subs=unit?.subunidades||[];
-   const linked=parentUnits.map(x=>'<a href="'+V3.url(x)+'">'+V3.esc(x.nome)+'</a>').join(", ");
+   const ebBrigade=ebLoc?.kind==="brigada"?ebLoc.b:null;
+   const subs=ebBrigade?ebBrigade.unidades.map(u=>({...u,catalogoId:u.catalogoId||null})):unit?.subunidades||[];
+   const linked=ebLoc?'<a href="divisoes.html?id='+encodeURIComponent(ebLoc.d.id)+'">'+V3.esc(ebLoc.d.nome)+'</a> → <a href="brigadas.html?divisao='+encodeURIComponent(ebLoc.d.id)+'&brigada='+encodeURIComponent(ebLoc.b.id)+'">'+V3.esc(ebLoc.b.nome)+'</a>':ebCommand?'Comando de Operações Especiais · apoio direto do Exército':ebDirect?'Apoio direto do Exército':parentUnits.map(x=>'<a href="'+V3.url(x)+'">'+V3.esc(x.nome)+'</a>').join(", ");
    content='<div class="v3-doc"><h3>Localização na estrutura</h3><p>'+V3.esc(e.nome)+' pertence à '+V3.esc(V3.forces[e.forca]?.name||e.forca)+' e está classificado como '+V3.esc(V3.types[e.tipo]||e.tipo)+'.</p>'+
      (e.tipo==="brigada"?'<p>Na FAAAB, as brigadas organizam o ingresso e a formação das unidades. Integram a estrutura interna do Exército, e não são grupos Roblox independentes nem possuem fardas próprias.</p>':"")+
      (linked?'<h3>Unidade principal</h3><p>'+linked+'</p>':"")+
-     (subs.length?'<h3>Subdivisões confirmadas</h3><div class="v3-profile-subunits">'+subs.map(x=>'<article><strong>['+V3.esc(x.sigla)+'] '+V3.esc(x.nome||"Nome completo não registrado")+'</strong>'+(x.catalogoId?'<p><a href="ficha.html?id='+encodeURIComponent(x.catalogoId)+'">Consultar equipe</a></p>':"")+'</article>').join("")+'</div>':"")+
+     (subs.length?'<h3>'+(ebBrigade?'Unidades da brigada':'Subdivisões cadastradas')+'</h3><div class="v3-profile-subunits">'+subs.map(x=>'<article><strong>['+V3.esc(x.sigla)+'] '+V3.esc(x.nome||"Nome completo não registrado")+'</strong>'+(x.catalogoId?'<p><a href="ficha.html?id='+encodeURIComponent(x.catalogoId)+'">Consultar equipe</a></p>':"")+'</article>').join("")+'</div>':"")+
      (unit?.hierarquiaInterna?.nota?'<h3>Organização dos cargos</h3><p>'+V3.esc(unit.hierarquiaInterna.nota)+'</p>':"")+
      (e.grupoSeparado===false?'<p class="v3-profile-source">Esta é uma estrutura interna, não um grupo Roblox separado.</p>':"")+'</div>';
   }else if(sec==="cargos"){
@@ -258,7 +279,7 @@ const V3={
    if(genericFooter)genericFooter.hidden=true;
    V3.context(selected,"curso");
   }
-  V3.set("v3-course-forces",order.map(k=>'<a class="v3-button'+(k===selected?' primary':'')+'" href="formacao.html?forca='+k+'">'+V3.forces[k].name+'</a>').join("")+'<a class="v3-button'+(!selected?' primary':'')+'" href="formacao.html">Todos</a>');
+  V3.set("v3-course-forces",selected?'<a class="v3-button primary" href="formacao.html?forca='+encodeURIComponent(selected)+'">'+V3.esc(V3.forces[selected]?.name||selected)+'</a>':order.map(k=>'<a class="v3-button" href="formacao.html?forca='+k+'">'+V3.forces[k].name+'</a>').join(""));
   function paint(){let list=selected?rows.filter(x=>x.forca===selected):rows;const q=V3.clean(input?.value||"");if(q)list=list.filter(x=>V3.clean([x.titulo,x.sigla,x.detalhes].join(" ")).includes(q));V3.set("v3-course-count",list.length+" cursos e formações documentados");V3.set("v3-course-list",list.map(x=>'<details class="rank"><summary><span>'+V3.esc(x.titulo)+'</span><small>'+V3.esc(x.forca)+'</small></summary><div class="rank-detail"><p><b>Situação:</b> '+V3.esc(x.estado||"A confirmar")+'</p><p style="white-space:pre-wrap">'+V3.esc(x.detalhes||"Detalhes a confirmar")+'</p></div></details>').join("")||'<p>Não há cursos registrados nesta seleção.</p>')}
   input?.addEventListener("input",paint);paint();
  },
@@ -266,7 +287,7 @@ const V3={
   const [rows,patentes]=await Promise.all([V3.get("hierarquias"),V3.get("patentes")]);
   const allowed=["FTB","FAB","FMB","CBM","PM"];let key=new URLSearchParams(location.search).get("forca");if(!allowed.includes(key))key="FTB";
   V3.context(key,"career");
-  V3.set("v3-career-forces",allowed.map(k=>'<a class="v3-button'+(k===key?' primary':'')+'" href="carreira.html?forca='+k+'">'+V3.forces[k].name+'</a>').join(""));
+  V3.set("v3-career-forces",'<a class="v3-button primary" href="carreira.html?forca='+key+'">'+V3.esc(V3.forces[key].name)+'</a>');
   const list=rows.filter(x=>x.forca===key).sort((a,b)=>a.ordem-b.ordem);
   V3.set("v3-career-count",list.length+" patentes e graduações · "+V3.forces[key].name);
   V3.set("v3-career-list",'<h2>'+V3.forces[key].name+'</h2>'+list.map(x=>{const p=patentes.find(y=>y.forca===x.forca&&(y.cargo===x.nome||y.sigla===x.sigla));const stages=p?.cdpEtapas||x.cdpEtapas||[];return '<details class="rank"><summary><span>'+V3.esc(x.nome)+'</span><small>'+V3.esc(x.sigla)+'</small></summary><div class="rank-detail"><p><b>Situação da CDP:</b> '+V3.esc(p?.cdpStatus||x.cdpStatus||"A confirmar")+'</p><p><b>Critérios:</b> '+V3.esc(p?.cdpCriterios||x.cdpCriterios||x.requisitos||"A confirmar")+'</p>'+(stages.length?'<p><b>Etapas:</b> '+stages.map(z=>V3.esc(z.nome)).join(" · ")+'</p>':'')+'<p><b>Tempo documentado:</b> '+V3.esc(x.cdpTempoProposto||"Não definido")+' (não é prazo final aprovado)</p></div></details>'}).join(""));
