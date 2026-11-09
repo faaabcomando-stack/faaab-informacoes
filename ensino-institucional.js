@@ -14,7 +14,7 @@
    site?String(n.instituicao||n.unidade||"").toLowerCase()===site:
     (n.setor===(section==="FTB"?"exercito":section==="FMB"?"marinha":"fab")&&n.nivel==="diretoria")));
   news.sort((a,b)=>String(b.data||"").localeCompare(String(a.data||"")));
-  if(!news.length){const c=node("div","news-empty");c.append(node("h3",null,"Nenhuma notícia específica publicada."),node("p",null,"Quando esta instituição publicar informações sobre cursos, seleções, turmas ou formaturas, elas aparecerão aqui. O noticiário geral não é repetido."));host.append(c);return}
+  if(!news.length){const c=node("div","news-empty news-empty-art"),img=node("img");img.src="assets/sem-noticia-bloqueio.svg";img.alt="Noticiário sem publicação";img.width=75;img.height=75;const desc=node("div");desc.append(node("h3",null,"Sem notícia"),node("p",null,"Nenhuma publicação desta instituição no momento."));c.append(img,desc);host.append(c);return}
   for(const n of news.slice(0,8)){
    const a=node("article","story");
    a.append(node("span","meta",(n.categoria||"Notícia")+" · "+(n.data||"")),node("h3",null,n.titulo),node("p",null,n.resumo));
