@@ -287,3 +287,88 @@ body.faaab-v3 .v3-footer{display:block}
  .v3-course-body{padding:12px 15px}
  .v3-doc{padding:18px 17px}
 }
+
+
+/* FAAAB 2026 / Integração visual das páginas legadas à reforma editorial.
+   Apenas apresentação: mantém IDs, DOM, scripts, dados, rotas e permissões. */
+:root{--v3-forest:#16445f;--v3-deep:#0d283e;--v3-olive:#4d6d7d;--v3-gold:#b58b4d;--v3-line:#d9e3e9;--v3-paper:#f5f7f8;--v3-white:#fff;--v3-muted:#647987}
+body.faaab-v3{background:#f5f7f8;color:#203849;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+body.faaab-v3 a{color:#185373}
+.v3-utility{background:#0c2436;color:#d8e3ea;letter-spacing:.065em}
+.v3-mast{background:#fff;border-bottom:1px solid #d8e2e8}
+.v3-mast .v3-wrap{padding:22px 0}
+.faaab-v3 .v3-brand{font:900 clamp(26px,3vw,40px)/1.1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.055em;color:#123650!important}
+.v3-brand-desc{color:#526f80;border-left:2px solid #b99a63;letter-spacing:.08em}
+.v3-header-aside{color:#617684}
+.v3-nav{background:#fff;border-bottom:1px solid #d8e2e8;box-shadow:0 5px 17px #1030470b}
+.v3-nav a{border-color:transparent;color:#345265!important;position:relative;transition:color .2s,background .2s}
+.v3-nav a:first-child{border-color:transparent}
+.v3-nav a:after{content:"";position:absolute;bottom:0;left:16px;right:16px;height:3px;background:#ba9456;transform:scaleX(0);transition:transform .22s ease}
+.v3-nav a:hover,.v3-nav a[aria-current="page"]{background:#f1f6f8!important;color:#123e5b!important}
+.v3-nav a:hover:after,.v3-nav a[aria-current="page"]:after{transform:scaleX(1)}
+.faaab-v3 h1,.faaab-v3 h2,.faaab-v3 h3{color:#1a3549;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:850;letter-spacing:-.045em}
+.faaab-v3 h1{letter-spacing:-.06em}.faaab-v3 h3{line-height:1.25}
+.faaab-v3 p{color:#586e7b}
+.v3-label{color:#986d39;letter-spacing:.11em}
+.v3-intro{background:linear-gradient(120deg,#12354f 0%,#22495f 78%);border-bottom:3px solid #bb9357;padding:61px 0 57px;overflow:hidden}
+.v3-intro:before{width:4px;background:#cfab70}
+.v3-intro:after{content:"";position:absolute;right:-100px;top:-170px;width:470px;height:470px;border:55px solid #ffffff09;border-radius:50%;pointer-events:none}
+.v3-intro .v3-wrap{position:relative;z-index:1}
+.v3-intro h1{color:#fff}
+.v3-intro p,.v3-intro .v3-sidecopy{color:#d1e0e8!important}
+.v3-intro .v3-label{color:#dfb983}
+.v3-intro .v3-side-heading{color:#fff;font-family:system-ui,sans-serif;font-weight:800}
+.v3-margin-rule{border-top-color:#d1a56b}
+.v3-button{border-radius:6px;background:transparent;border:1px solid #c0d0dc;color:#fff!important;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.v3-button.primary{background:#fff;color:#143f5a!important;border-color:#fff}
+.v3-button:hover{transform:translateY(-2px);background:#2b5670;color:#fff!important;box-shadow:0 8px 20px #0f263b26}
+.v3-button.primary:hover{background:#e8f0f4;color:#143f5a!important}
+.v3-section{padding:55px 0}
+.v3-section.tint{background:#eaf0f3;border-block:1px solid #dde7eb}
+.v3-section-head{border-bottom:1px solid #c6d8df;padding-bottom:17px}
+.v3-section-head>a{color:#155476!important}
+.v3-lede{font-family:system-ui,sans-serif!important;font-weight:600!important;color:#3e6175!important}
+.v3-three{gap:16px}.v3-three>article{background:#fff;border:1px solid #dbe5e9;border-top:3px solid #bf995e;border-radius:0 0 7px 7px;padding:23px;transition:transform .2s ease,box-shadow .2s ease}
+.v3-three>article:hover{transform:translateY(-3px);box-shadow:0 12px 24px #18364b14}
+.v3-three article h3{font-size:26px}.v3-three .v3-num{color:#9a7341}
+.v3-inline-links{border-top-color:#d7e3e7}.v3-inline-links li{border-bottom-color:#d7e3e7}
+.v3-inline-links a:hover{color:#13587a}
+.v3-toc a{padding:23px 8px;border-top-color:#d5e1e6;transition:background .2s,padding .2s}
+.v3-toc a:hover{background:#edf4f7;padding-left:14px}
+.v3-toc a strong{font-family:system-ui,sans-serif;color:#224b63;font-weight:800}
+.v3-toc a small{color:#6c8390}
+.v3-rail{border-left-color:#d9e3e8}
+.v3-record-list{border-top-color:#b38e54}
+.v3-record-item{border-bottom-color:#dee7eb;transition:background .2s}
+.v3-record-item:hover{background:#edf4f7}
+.v3-record-item .v3-record-code{font-family:system-ui,sans-serif;font-weight:900;color:#276588}
+.v3-directory-search{background:#fff;border-color:#d6e2e7;border-radius:7px}
+.v3-directory-search label{color:#385e73}
+.v3-directory-search input{border-color:#cadbe4;border-radius:5px}
+.v3-doc{background:#fff;border:1px solid #dae5e9;border-top:3px solid #b9965b;border-radius:0 0 7px 7px}
+.v3-state{background:#f4eddf;color:#705834}
+.v3-note{background:#e9f0f4;border-left-color:#b69157;color:#395b70}
+.v3-stat strong{color:#1f5c79;font-family:system-ui,sans-serif;font-weight:850}
+.v3-footer{background:#0d293e;color:#d0dfe6}
+.v3-footer h3,.v3-footer .v3-brand-footer{color:#fff}
+.v3-footer p,.v3-footer a{color:#d1dfe6!important}
+.v3-profile-nav{border-top-color:#be995c}
+.v3-profile-nav a:hover{background:#e8f0f4}
+.v3-profile-nav a[aria-current="page"]{background:#e0ebf1;color:#154868}
+.v3-profile-head{border-bottom-color:#c3a06a}
+.v3-private{background:#edf3f6;border-color:#d1e0e7}
+.v3-private strong{font-family:system-ui,sans-serif;font-weight:850;color:#1c4f6c}
+.v3-force-index{background:#eaf0f3;border-bottom-color:#d7e2e7}
+.v3-force-category-links{border-top-color:#b99b68}
+.v3-force-category-links a{color:#285c77;border-bottom-color:#d1e1e8}
+.v3-force-category-links a:hover,.v3-force-category-links a[aria-current="page"]{background:#dbe8ee}
+.v3-force-index .v3-force-context{font-family:system-ui,sans-serif;font-weight:800;color:#204b65}
+.v3-gov-link strong,.v3-gov-feature strong{font-family:system-ui,sans-serif;font-weight:850;color:#214b66}
+.v3-gov-link small,.v3-gov-feature span:not(.v3-gov-kicker){color:#6b7f8b}
+.v3-gov-page-head h2,.v3-gov-group-head h2,.v3-gov-proposal-section>h2{font-family:system-ui,sans-serif;font-weight:850;color:#1c435c}
+.v3-gov-feature-grid,.v3-gov-proposal-list{gap:0 22px}
+.v3-gov-feature{transition:padding .2s ease,background .2s}.v3-gov-feature:hover{padding-left:10px;background:#edf4f7}
+.v3-profile-subunits article,.v3-course-detail{background:#f5f9fb;border-color:#dbe5eb;border-radius:5px}
+.v3-profile-subunits strong,.v3-course-detail summary{color:#285876}
+@media(max-width:640px){.v3-intro{padding:40px 0}.v3-three>article{padding:19px}.v3-nav a{padding-inline:13px}}
+@media(prefers-reduced-motion:reduce){.v3-three>article:hover,.v3-button:hover{transform:none}}
