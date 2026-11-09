@@ -30,3 +30,11 @@
 .lead-media.has-cover .media-constellation{display:none}
 .lead-media .media-mark,.lead-media .media-bottom{position:relative;z-index:2}
 .feed-thumb.has-cover{position:relative}.feed-thumb.has-cover img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+
+
+/* Logos criadas para a FAAAB e fornecidas pelo projeto (sprite 3 colunas x 2 linhas). */
+.institution .emblem-thumb{display:block;width:62px;height:62px;background-image:url("assets/emblemas-faaab-6.webp");background-repeat:no-repeat;background-size:300% 200%;border-radius:2px;border:1px solid #dce4e7;flex-shrink:0}
+.emblem-gov{background-position:0% 0%}.emblem-pm{background-position:50% 0%}.emblem-eb{background-position:100% 0%}
+.emblem-cbm{background-position:0% 100%}.emblem-mb{background-position:50% 100%}.emblem-fab{background-position:100% 100%}
+.institution{gap:9px;padding:15px 7px}.institution svg{display:none}
+@media(max-width:590px){.institution .emblem-thumb{width:56px;height:56px}}
