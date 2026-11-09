@@ -57,5 +57,67 @@
     "setor": "institucional",
     "autor": "Equipe do portal FAAAB",
     "estado": "Em planejamento"
+  },
+  {
+    "id": "decex-diretorio-escolas-faaab-2026",
+    "data": "2026-11-09",
+    "titulo": "DECEx ganha diretório de escolas com portais e funções próprias",
+    "resumo": "O portal de educação do Exército da FAAAB agora organiza escolas de formação, aperfeiçoamento e altos estudos, cada uma com notícias e cursos específicos.",
+    "conteudo": "O DECEx da FAAAB passa a reunir portais individuais das escolas do Exército, organizadas conforme sua função no universo fictício.\n\nA EsPCEx concentra a preparação; a AMAN e a ESA tratam da formação; EASA, EsAO e ECEME possuem foco em aperfeiçoamento e altos estudos.\n\nEsACosAAe e ESFCEx não integram o planejamento atual da FAAAB, conforme decisão do projeto. Cursos e provas dependem de regulamentos específicos antes de serem abertos.",
+    "categoria": "informativa",
+    "setor": "exercito",
+    "nivel": "diretoria",
+    "autor": "Equipe do portal FAAAB",
+    "estado": "Catálogo publicado"
+  },
+  {
+    "id": "sspm-ensino-naval-2026",
+    "data": "2026-11-09",
+    "titulo": "SSPM integra o planejamento das seleções da Marinha FAAAB",
+    "resumo": "O Serviço de Seleção do Pessoal da Marinha ganhou página própria para concentrar regras e futuros editais fictícios.",
+    "conteudo": "A SSPM foi incluída na organização fictícia da Marinha FAAAB como serviço de seleção de pessoal.\n\nSeu portal concentra informações sobre futuros editais, elegibilidade, convocações e resultados, quando os processos estiverem aprovados. O acesso a provas permanece fechado enquanto não houver validação autenticada de grupo e patente.\n\nOs Fuzileiros Navais mantêm processos de seleção próprios na estrutura do jogo.",
+    "categoria": "informativa",
+    "setor": "marinha",
+    "nivel": "diretoria",
+    "instituicao": "sspm",
+    "autor": "Equipe do portal FAAAB",
+    "estado": "Em planejamento"
+  },
+  {
+    "id": "unifa-ecemar-eaoar-2026",
+    "data": "2026-11-09",
+    "titulo": "UNIFA reúne ECEMAR e EAOAR no portal acadêmico da FAAAB",
+    "resumo": "O novo portal da UNIFA apresenta as duas escolas de aperfeiçoamento e altos estudos como organizações acadêmicas associadas, cada uma com página própria.",
+    "conteudo": "A FAAAB ganhou portais próprios para a Universidade da Força Aérea, para a Escola de Comando e Estado-Maior e para a Escola de Aperfeiçoamento de Oficiais da Aeronáutica.\n\nNa organização fictícia da FAAAB, a UNIFA funciona como eixo acadêmico para as páginas das duas escolas. Isso não representa necessariamente a subordinação administrativa atual dessas instituições na FAB real.\n\nAs páginas exibem missão, objetivos no jogo, comunicados locais e o estado das provas planejadas. Não houve abertura de inscrições.",
+    "categoria": "informativa",
+    "setor": "fab",
+    "nivel": "diretoria",
+    "instituicao": "unifa",
+    "autor": "Equipe do portal FAAAB",
+    "estado": "Portais publicados"
+  },
+  {
+    "id": "eear-provas-cursos-2026",
+    "data": "2026-11-09",
+    "titulo": "EEAR recebe portal de formação de especialistas na FAAAB",
+    "resumo": "A escola agora tem página própria, com informações da trilha de formação de sargentos especialistas e consulta aos requisitos de prova em planejamento.",
+    "conteudo": "O portal da Escola de Especialistas de Aeronáutica foi integrado ao diretório de ensino da FAB na FAAAB.\n\nA documentação anterior do projeto prevê o ingresso de Cabo como aluno e a formação na patente de 3º Sargento, dependendo de regras de curso e avaliação aprovadas.\n\nO sistema de provas consulta essa documentação para informar as patentes previstas, mas não permite matrículas ou promoções automáticas.",
+    "categoria": "informativa",
+    "setor": "fab",
+    "instituicao": "eear",
+    "autor": "Equipe do portal FAAAB",
+    "estado": "Planejamento de cursos"
+  },
+  {
+    "id": "epcar-revisao-2026",
+    "data": "2026-11-09",
+    "titulo": "EPCAR permanece em revisão antes de novas etapas de formação",
+    "resumo": "A página da EPCAR informa que a progressão e a relação com os cursos superiores ainda não foram definidas no planejamento da FAAAB.",
+    "conteudo": "A EPCAR ganhou um espaço próprio no novo portal, mas continua marcada como congelada para revisão.\n\nAntes de criar provas, vagas ou etapas de formação com efeitos na carreira, a direção da FAAAB precisa definir a relação dessa escola com o Curso de Formação de Alunos Superiores e a progressão correspondente.\n\nAté essa definição, o site não apresenta inscrições abertas.",
+    "categoria": "informativa",
+    "setor": "fab",
+    "instituicao": "epcar",
+    "autor": "Equipe do portal FAAAB",
+    "estado": "Congelado para revisão"
   }
 ]
