@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "id": "reforma-portal-noticias-2026",
+    "data": "2026-11-09",
+    "titulo": "Portal FAAAB passa a dar prioridade às notícias na página inicial",
+    "resumo": "A entrada do portal foi reorganizada para destacar manchetes, publicações recentes e avisos, deixando a navegação institucional em segundo plano.",
+    "conteudo": "A página inicial da FAAAB está sendo reformulada para funcionar como um portal de notícias e informações da comunidade, em vez de uma página de apresentação genérica.\n\nAs manchetes e as comunicações importantes agora recebem prioridade visual. Avisos comuns permanecem separados, enquanto o acesso às forças e organizações continua disponível em áreas próprias.\n\nAs alterações são desenvolvidas no repositório público do projeto. Recursos que dependem de configurações externas, como a autenticação Roblox, permanecem identificados como não ativados.",
+    "categoria": "importante",
+    "setor": "institucional",
+    "autor": "Equipe do portal FAAAB",
+    "estado": "Em desenvolvimento"
+  },
+  {
+    "id": "estudos-faaab-2026",
+    "data": "2026-11-09",
+    "titulo": "Aulas e exercícios da Central de Estudos continuam disponíveis sem login",
+    "resumo": "O ambiente de estudos público reúne conteúdos de preparação em diferentes disciplinas, sem exigir autenticação Roblox para consultar as atividades abertas.",
+    "conteudo": "A Central de Estudos do portal FAAAB mantém materiais públicos de preparação em diferentes disciplinas, com explicações e exercícios.\n\nOs materiais educacionais são parte do universo da FAAAB, mas não equivalem a certificados oficiais nem concedem promoções dentro do jogo automaticamente.\n\nO acesso às funções administrativas ou a inscrições restritas, quando disponibilizadas, depende de regras de autorização específicas.",
+    "categoria": "informativa",
+    "setor": "ensino",
+    "autor": "Equipe do portal FAAAB",
+    "estado": "Disponível"
+  },
+  {
+    "id": "catalogo-unidades-revisao-2026",
+    "data": "2026-11-09",
+    "titulo": "Catálogo de unidades e centros recebe revisão de organização",
+    "resumo": "Os registros de batalhões, brigadas, escolas e centros serão apresentados com distinção entre estruturas planejadas, existentes e informações que ainda precisam de confirmação.",
+    "conteudo": "O portal FAAAB utiliza um catálogo de organizações, unidades e cursos já documentado no repositório do projeto.\n\nO planejamento inclui separar as cadeias militares das estruturas de ensino, administração e governo. Algumas nomenclaturas antigas ainda dependem de revisão para corresponder às decisões mais recentes.\n\nA existência de um registro no site não confirma que um grupo Roblox, mapa, sistema ou curso esteja efetivamente disponível.",
+    "categoria": "informativa",
+    "setor": "institucional",
+    "autor": "Equipe do portal FAAAB",
+    "estado": "Em revisão"
+  },
+  {
+    "id": "forcas-portais-setoriais-2026",
+    "data": "2026-11-09",
+    "titulo": "Exército, Marinha e Aeronáutica mantêm caminhos próprios no diretório",
+    "resumo": "Cada força continuará com páginas para suas organizações e formações, respeitando diferenças entre divisões, batalhões, unidades navais, bases aéreas e esquadrões.",
+    "conteudo": "A FAAAB organiza suas instituições por áreas: Exército, Marinha, Aeronáutica, Polícia Militar, Bombeiros e Governo.\n\nNo portal, cada força reúne páginas de organizações, centros, escolas e formações. A organização deve respeitar os modelos próprios de cada uma, evitando simplesmente copiar a estrutura do Exército para as demais forças.\n\nOs portais individuais continuam em aperfeiçoamento e as informações não homologadas devem aparecer como pendentes de confirmação.",
+    "categoria": "informativa",
+    "setor": "comunidade",
+    "autor": "Equipe do portal FAAAB",
+    "estado": "Estrutura existente"
+  },
+  {
+    "id": "publicidade-identificada-2026",
+    "data": "2026-11-09",
+    "titulo": "Publicidade terá identificação própria no noticiário da FAAAB",
+    "resumo": "O portal passou a reservar espaços comerciais entre as publicações e na lateral, com identificação clara para diferenciar conteúdo patrocinado de notícias e avisos.",
+    "conteudo": "O novo modelo editorial da FAAAB prevê espaços de publicidade discretos, inclusive entre as publicações do portal.\n\nTodo conteúdo comercial deverá aparecer com indicação de publicidade e, quando contratado, identificação do patrocinador. Não serão utilizados anúncios ocultos ou textos patrocinados apresentados como notícias independentes.\n\nAs formas de contratação e valores ainda não estão disponíveis no site. Os espaços atualmente exibidos são reservas de layout e não correspondem a patrocinadores contratados.",
+    "categoria": "informativa",
+    "setor": "institucional",
+    "autor": "Equipe do portal FAAAB",
+    "estado": "Em planejamento"
+  }
+]
