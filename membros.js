@@ -9,7 +9,7 @@ $("member-status").textContent="Whitelist aprovada. Seus cargos são definidos s
 $("member-account").textContent=(d.user?.provider==="google"?"Google":"Roblox")+" · "+(d.user?.displayName||"Conta autenticada");
 $("member-whitelist").textContent="Acesso liberado para membros";
 const roles=d.roles||[];$("member-roles").innerHTML=roles.length?roles.map(x=>'<span>'+esc(x.role.replaceAll("_"," "))+'</span>').join(""):'<span>Sem cargo atribuído</span>';
-const links=[{url:"/anunciadores",title:"Painel de anunciadores",desc:d.permissions?.canAnnounce?"Publicar comunicados conforme sua função":"Consultar comunicados publicados"},{url:"/painel",title:"Painel administrativo",desc:"Ferramentas de edição conforme sua atribuição",allowed:d.role==="owner"||d.role!=="membro"},{url:"/cargos",title:"Atribuir cargos",desc:"Whitelist primeiro, cargos depois",allowed:d.role==="owner"}];
+const links=[{url:"/painel-v2",title:"Novo Centro de Controle",desc:"Notícias, verificação de grupos e configurações conforme seu cargo"},{url:"/anunciadores",title:"Painel de anunciadores",desc:d.permissions?.canAnnounce?"Publicar comunicados conforme sua função":"Consultar comunicados publicados"},{url:"/painel",title:"Painel administrativo",desc:"Ferramentas de edição conforme sua atribuição",allowed:d.role==="owner"||d.role!=="membro"},{url:"/cargos",title:"Atribuir cargos",desc:"Whitelist primeiro, cargos depois",allowed:d.role==="owner"}];
 $("member-links").innerHTML=links.filter(x=>x.allowed!==false).map(x=>'<a href="'+x.url+'" class="member-link"><span><b>'+x.title+'</b><small>'+esc(x.desc)+'</small></span><span>›</span></a>').join("");
 }catch(e){$("member-status").textContent="Não foi possível verificar a sessão. Reabra o login do site."}
 })();
