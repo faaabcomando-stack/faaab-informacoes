@@ -10,7 +10,7 @@
  const stateTag=x=>x?.catalogoId?"Cadastrada na FAAAB":x?.situacao||"Planejada";
  const unitLabel=x=>{
   const li=el("li"),sig=el("strong",null,x.sigla),name=x.catalogoId?a("ficha.html?id="+encodeURIComponent(x.catalogoId),x.nome):el("span",null,x.nome);
-  li.append(sig,name);if(!x.catalogoId)li.append(el("small","pending",stateTag(x)));
+  const badge=window.FAAABEmblemas?.element(x.catalogoId,"eb-tree-mini");if(badge)li.append(badge);li.append(sig,name);if(!x.catalogoId)li.append(el("small","pending",stateTag(x)));
   return li
  };
  const unitList=items=>{const ul=el("ul","unitlist");(items||[]).forEach(x=>ul.append(unitLabel(x)));return ul};
@@ -21,11 +21,15 @@
  const divisionUrl=id=>"divisoes.html?id="+encodeURIComponent(id);
  const brigadeUrl=(divId,id)=>"brigadas.html?divisao="+encodeURIComponent(divId)+"&brigada="+encodeURIComponent(id);
  const divisionCard=d=>{
-  const card=el("article","div-card");card.append(el("span","code",d.sigla),el("h3",null,d.nome),paragraph(d.perfil+" · "+d.brigadas.length+" brigadas"));
+  const card=el("article","div-card");const badge=window.FAAABEmblemas?.element("FTB-"+String(d.sigla).match(/^\d+/)?.[0]+"DE","eb-tree-emblem eb-tree-division");if(badge)card.append(badge);card.append(el("span","code",d.sigla),el("h3",null,d.nome),paragraph(d.perfil+" · "+d.brigadas.length+" brigadas"));
   card.append(a(divisionUrl(d.id),"Abrir divisão e suas brigadas ↗"));return card;
  };
  function brigadeCard(d,b,showUnits=true){
-  const card=el("article","brig-card");card.append(el("span","code","Brigada · "+d.sigla),el("h4",null,b.nome));
+  const card=el("article","brig-card");
+  const brigadeLogos={"inf-selva":"FTB-Bda-Inf-Sl","inf-montanha":"FTB-Bda-Inf-Mth","inf-aeromovel":"FTB-Bda-Inf-AMV","inf-mecanizada":"FTB-Bda-Inf-Mec","cav-mecanizada":"FTB-Bda-C-Mec","inf-motorizada":"FTB-Bda-Inf-Mtz","inf-blindada":"FTB-Bda-Inf-Bld","cav-blindada":"FTB-Bda-C-Bld"};
+  const badge=window.FAAABEmblemas?.element(brigadeLogos[b.id],"eb-tree-emblem eb-tree-brigade");
+  if(badge)card.append(badge);
+  card.append(el("span","code","Brigada · "+d.sigla),el("h4",null,b.nome));
   card.append(el("small","status",stateTag(b)));
   if(showUnits)card.append(unitList(b.unidades));
   card.append(a(brigadeUrl(d.id,b.id),"Consultar organização da brigada ↗","go"));
@@ -39,7 +43,7 @@
  function commands(data){
   const section=el("section"),headWrap=el("div","sect-head"),heading=el("div");heading.append(el("h2",null,"Comandos e apoio direto"));headWrap.append(heading,paragraph("Fora da cadeia das nove brigadas. Não são brigadas adicionais."));section.append(headWrap);
   const grid=el("div","other-commands");
-  for(const c of data.comandos||[]){const card=el("article","block-card");card.append(el("span","code","Comando direto"),el("h3",null,c.nome),paragraph(c.descricao),unitList(c.unidades));grid.append(card)}
+  for(const c of data.comandos||[]){const card=el("article","block-card");const badge=c.id==="copesp"?window.FAAABEmblemas?.element("FTB-COpEsp","eb-tree-emblem"):null;if(badge)card.append(badge);card.append(el("span","code","Comando direto"),el("h3",null,c.nome),paragraph(c.descricao),unitList(c.unidades));grid.append(card)}
   const card=el("article","block-card");card.append(el("span","code","Estrutura de apoio"),el("h3",null,"Apoio direto do Exército"),paragraph("Organizações sem inclusão artificial em brigadas."),unitList(data.apoioDireto||[]));grid.append(card);section.append(grid);return section
  }
  function intro(page){
