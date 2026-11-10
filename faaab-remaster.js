@@ -12,7 +12,11 @@ const V3={
  sectorRows(rows,sector){rows=rows.filter(x=>x.aprovado!==false);if(sector==="central")return rows.filter(x=>["FTB","FAB","FMB","CFN"].includes(x.forca)||["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN"].includes(x.id));if(sector==="civil")return rows.filter(x=>["PM","CBM"].includes(x.forca)||["ADM-PM","ADM-CBM"].includes(x.id));if(sector==="governo")return rows.filter(x=>x.forca==="ADM"&&!["ADM-FTB","ADM-FAB","ADM-FMB","ADM-CFN","ADM-PM","ADM-CBM"].includes(x.id));return rows},
  typeRows(rows,type){if(!type)return rows;if(type==="divisao")return rows.filter(x=>x.tipo==="divisao");if(type==="unidade")return rows.filter(x=>x.tipo==="unidade");return rows.filter(x=>x.tipo===type)},
  url(e){const own={"FTB-ESA":"esa.html","FTB-EsPCEx":"espcex.html","FTB-AMAN":"aman.html","FTB-EsAO":"esao.html","FTB-ECEME":"eceme.html","FTB-EsSLog":"esslog.html","FMB-CIAA":"ciaa.html","FMB-CIAW":"ciaw.html","FMB-EAM":"eam.html","FMB-CN":"cn.html","FMB-EN":"en.html","FAB-ECEMAR":"ecemar.html","FAB-EEAR":"eear.html","FAB-EPCAR":"epcar.html","FAB-AFA":"afa.html","FAB-CIAAR":"ciaar.html","FAB-UNIFA":"unifa.html","FAB-EAOAR":"eaoar.html","FMB-SSPM":"sspm.html"};return own[e.id]||"ficha.html?id="+encodeURIComponent(e.id)},
- row(e){return '<article class="v3-record-item"><div class="v3-record-code">'+V3.esc(e.sigla||e.forca)+'</div><div><h3><a href="'+V3.url(e)+'">'+V3.esc(e.nome)+'</a></h3><p>'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' · '+V3.esc(V3.types[e.tipo]||e.tipo||"Organização")+' · '+V3.esc(e.estadoImplementacao||"Situação a confirmar")+'</p></div></article>'},
+ row(e){
+  const badge=window.FAAABEmblemas?.markup(e.id,e.nome)||"";
+  const mark=badge?'<div class="faaab-record-mark">'+badge+'<span class="v3-record-code">'+V3.esc(e.sigla||e.forca)+'</span></div>':'<div class="v3-record-code">'+V3.esc(e.sigla||e.forca)+'</div>';
+  return '<article class="v3-record-item">'+mark+'<div><h3><a href="'+V3.url(e)+'">'+V3.esc(e.nome)+'</a></h3><p>'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' · '+V3.esc(V3.types[e.tipo]||e.tipo||"Organização")+' · '+V3.esc(e.estadoImplementacao||"Situação a confirmar")+'</p></div></article>'
+ },
  rows(rows){return rows.length?'<div class="v3-record-list">'+rows.map(V3.row).join("")+'</div>':'<p class="v3-empty">Nenhuma organização desse tipo está registrada no catálogo atual. Não foram criadas entradas fictícias.</p>'},
  note(txt){return '<div class="v3-note">'+V3.esc(txt)+'</div>'},
  context(key,active=""){
@@ -213,7 +217,9 @@ const V3={
   V3.set("v3-crumb-name",V3.esc(e.nome));
   const facts=[perfil?.atividades?.length?perfil.atividades.length+" atividades":null,unit?.subunidades?.length?unit.subunidades.length+" subdivisões":null,relatedCourses.length?relatedCourses.length+" cursos cadastrados":null,perfil?.sistemas?.length?perfil.sistemas.length+" regras de gameplay":null].filter(Boolean).join(" · ");
   const introduction=perfil?.papel||e.noJogo||e.nome;
-  V3.set("v3-profile-header",'<span class="v3-label">'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' / '+V3.esc(V3.types[e.tipo]||e.tipo)+'</span><h1>'+V3.esc(e.nome)+'</h1><p class="v3-profile-intro">'+V3.esc(introduction)+'</p>'+(facts?'<p class="v3-profile-summary">'+V3.esc(facts)+'</p>':"")+(e.estadoImplementacao&&e.estadoImplementacao!=="Não confirmado"?'<span class="v3-state">'+V3.esc(e.estadoImplementacao)+'</span>':""));
+  const profileMarkup='<span class="v3-label">'+V3.esc(V3.forces[e.forca]?.name||e.forca)+' / '+V3.esc(V3.types[e.tipo]||e.tipo)+'</span><h1>'+V3.esc(e.nome)+'</h1><p class="v3-profile-intro">'+V3.esc(introduction)+'</p>'+(facts?'<p class="v3-profile-summary">'+V3.esc(facts)+'</p>':"")+(e.estadoImplementacao&&e.estadoImplementacao!=="Não confirmado"?'<span class="v3-state">'+V3.esc(e.estadoImplementacao)+'</span>':"");
+  const profileBadge=window.FAAABEmblemas?.markup(e.id,e.nome)||"";
+  V3.set("v3-profile-header",profileBadge?'<div class="faaab-profile-top">'+profileBadge+'<div class="faaab-profile-body">'+profileMarkup+'</div></div>':profileMarkup);
   V3.set("v3-profile-nav",Object.entries(sections).filter(([key])=>availableKeys.includes(key)).map(([key,val])=>'<a href="ficha.html?id='+encodeURIComponent(id)+'&secao='+key+'"'+(sec===key?' aria-current="page"':'')+'>'+val+'</a>').join(""));
   let content="";
   if(sec==="sobre"){
