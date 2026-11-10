@@ -155,8 +155,8 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 
 - ✅ recebido — **CiaPolBtlNav** (Companhia de Polícia do Batalhão Naval)
 - ☐ referência ainda não identificada com segurança — **BtlInfFN** (Batalhão de Infantaria de Fuzileiros Navais)
-- ☐ referência ainda não identificada com segurança — **BOE FN** (Batalhão de Operações Especiais de Fuzileiros Navais - Tonelero (nome adaptado à FAAAB))
-- ☐ referência ainda não identificada com segurança — **COMANF** (Comandos Anfíbios)
+- ✅ recebido — **BOE FN** (Batalhão de Operações Especiais de Fuzileiros Navais - Tonelero (nome adaptado à FAAAB))
+- ✅ recebido — **COMANF** (Comandos Anfíbios)
 - ✅ recebido — **BtlBldFN** (Batalhão de Blindados de Fuzileiros Navais)
 - ✅ recebido — **BtlEngFN** (Batalhão de Engenharia de Fuzileiros Navais)
 - ☐ referência ainda não identificada com segurança — **BtlVtrAnf** (Batalhão de Viaturas Anfíbias)
@@ -180,7 +180,7 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ☐ referência ainda não identificada com segurança — **ABMDP II** (Programa de formação ABMDP II (nome por extenso não confirmado))
 - ☐ referência ainda não identificada com segurança — **CFP/BM** (Curso de Formação de Praças Bombeiros Militares (nomenclatura do projeto))
 - ☐ referência ainda não identificada com segurança — **CFS/BM** (Curso de Formação de Sargentos Bombeiros Militares (nomenclatura do projeto))
-- ☐ referência ainda não identificada com segurança — **CFO/BM** (Curso de Formação de Oficiais Bombeiros Militares (nomenclatura do projeto))
+- ✅ recebido — **CFO/BM** (Curso de Formação de Oficiais Bombeiros Militares (nomenclatura do projeto))
 - ✅ recebido — **CAO/BM** (Curso de Aperfeiçoamento de Oficiais Bombeiros Militares (a validar na FAAAB))
 - ☐ referência ainda não identificada com segurança — **CSBM** (Curso Superior de Bombeiro Militar (a validar na FAAAB))
 
@@ -230,3 +230,17 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ◐ **Águia/espada em traços claros** (`1000171980.jpg`): recebido, nome exato não confirmado.
 - ✅ **CFO e CAO da PMDF**: brasões adaptados recebidos em arquivos separados; não substituem os cursos dos Bombeiros.
 - **Atenção:** PNG ausente no repositório não significa brasão não enviado; algumas subdivisões usam o emblema da unidade superior e não precisam de um próprio.
+
+## Auditoria de duplicatas e lacunas — 10/11/2026
+
+**Fonte verificada:** `dados/catalogo.json`, `dados/referencias_emblemas.json`, árvore de `assets/emblemas-png/` e anexos desta conversa. Quantidades após esta correção: **120 entradas** no catálogo, **94 entradas marcadas como recebidas**, **90 PNGs por ID publicado**. O fato de ter arquivo PNG não confirma o recorte ou a associação corretos.
+
+**Já recebidos mas sem PNG individual publicado (14):** ADM-FAAAB, ADM-EGAF, ADM-GOV, ADM-FTB, ADM-FAB, ADM-SGEx, FTB-CIOpMth (apenas distintivo Guia de Montanha Avançado, não brasão institucional), CFN-CiaPolBtlNav, FMB-ComForSup, FMB-CIM, CFN-BtlVtrAnf, CBM-CFO-BM, CBM-CAO-BM, FAB-CCFA. **Não pedir nenhuma dessas imagens de novo automaticamente.**
+
+**Duas divergências reparadas:** CFN-BOE-FN e CFN-COMANF tinham PNG publicado, mas estavam ausentes da lista de recebidos. Agora constam como recebidos.
+
+**Outras entradas sem PNG e sem vínculo de recebimento confirmado (26):** 5 departamentos administrativos (SEP, SMP, DOC, EVC, DEV), 15 subdivisões que podem herdar emblemas, 2 unidades do CFN (BtlInfFN, BtlOpRib) e 4 cursos do CBM (ABMDP II, CFP/BM, CFS/BM, CSBM). **Não confundir isso com 26 pedidos de imagens novas.** O usuário enviou uma imagem de CFP de força não identificada; esta não deve ser atribuída sem confirmação ao CFP/BM.
+
+**Cursos recentes recebidos fora do catálogo de organizações:** CAEP-BM tem entrada `CUR-COMP-17` em `dados/cursos.json`; os dois brasões gerados de CFO/CAO da PMDF também foram recebidos e são distintos dos cursos dos Bombeiros.
+
+**Repetição bloqueada:** CIGS, ESA, EsPCEx, AMAN, EAM, SSPM, CI Pqdt GPB, QTE, QTA, CPA, 1º GDA Jaguar, CIAER, BOPE, Cia Prec Pqdt, CCFA e BtlVtrAnf são referências já enviadas ou publicadas. Antes de declarar qualquer logo faltante, verificar anexos e o atlas.
