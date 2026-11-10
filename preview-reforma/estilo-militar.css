@@ -1,0 +1,191 @@
+/*
+ FAAAB — Identidade Institucional 2026
+ Linguagem de portal militar inspirada em princípios editoriais da FAB,
+ sem reproduzir marcas oficiais. Azul aço, branco mineral e bronze discreto.
+*/
+:root{
+  color-scheme:light;
+  --paper:#f3f5f5;--white:#fff;--ink:#243e50;--ink-soft:#4e6575;--muted:#657987;
+  --navy:#234b68;--navy2:#2c607e;--blue:#285f83;--gold:#ae9166;
+  --line:#d5e0e5;--max:1240px;--ease:cubic-bezier(.2,.8,.24,1);
+}
+html{scroll-padding-top:72px}
+body{background:#f3f5f5;color:#243e50;font-family:"Segoe UI",Inter,system-ui,-apple-system,Arial,sans-serif;font-size:15px}
+::selection{background:#cbdde9;color:#1f425b}
+.wrap{width:min(var(--max),calc(100% - 56px))}
+.utility{background:#e8eef1;color:#4b6475;border-bottom:1px solid #d4e0e5;font-size:10px;letter-spacing:.075em;text-transform:uppercase;font-weight:750}
+.utility .wrap{min-height:35px}
+.mast{background:linear-gradient(125deg,#fff 64%,#f0f4f6);border-bottom:0}
+.mast .wrap{min-height:112px}
+.brand img{width:244px}
+.brand-tag{color:#496375;border-left:2px solid #b89c70;font-weight:750;letter-spacing:.105em}
+.btn{border-radius:5px;background:#fff;border-color:#cbd7de;color:#2b536d;box-shadow:0 1px 2px #1f3c4a08}
+.btn:hover{box-shadow:0 11px 20px #31516b12;background:#f2f7fa;border-color:#9bb9c8}
+.btn.primary{background:#285a7a;border-color:#285a7a;color:#fff}
+.btn.primary:hover{background:#1c4562;border-color:#1c4562}
+.roblox-mark:after{background:#285a7a}
+.nav{background:#fff;box-shadow:0 7px 20px #254a5e0a;border-top:1px solid #e1e7eb;border-bottom:1px solid #d5e0e5;transition:box-shadow .25s ease}
+.nav.is-scrolled{box-shadow:0 12px 25px #21425822}
+.navlinks{gap:28px}
+.navlinks a{font-size:12px;letter-spacing:.015em;color:#425e70;min-height:60px}
+.navlinks a::after{height:2px;background:#a78a62}
+.navlinks a[aria-current=page],.navlinks a:hover{color:#245879}
+.nav-admin{font-weight:750;color:#285a79}
+.kicker{color:#90774e;letter-spacing:.17em;font-weight:800}
+.intro{padding:48px 0 23px;gap:40px}
+.intro h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(40px,4.6vw,64px);font-weight:500;letter-spacing:-.043em;line-height:1.05;color:#193c56;margin:10px 0 10px}
+.intro p{font-size:14px;line-height:1.7;max-width:620px;color:#657b89}
+.intro-archive{color:#285f83;border-bottom:1px solid #9eb4c1;padding-bottom:7px;font-weight:750}
+.news-stage{gap:18px;padding-bottom:57px;grid-template-columns:minmax(0,1.6fr) minmax(275px,.83fr)}
+.lead-story{
+  border-radius:7px;min-height:430px;padding:46px;
+  background:linear-gradient(90deg,rgba(26,61,86,.97) 1%,rgba(29,67,93,.88) 50%,rgba(29,70,94,.42) 100%),url("assets/horizonte-faaab.svg") center/cover no-repeat;
+  box-shadow:0 18px 35px #21465a16;
+}
+.lead-story:before{
+  content:"";position:absolute;z-index:-1;inset:auto -12% -30% auto;width:320px;height:320px;
+  border:1px solid #ffffff25;border-radius:50%;transform:none;
+}
+.lead-story:after{height:3px;background:#bb9a69}
+.lead-story .flag{align-self:flex-start;background:#ffffff20;border:1px solid #e7eef342;border-radius:3px;letter-spacing:.12em}
+.lead-story h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(31px,3.3vw,49px);line-height:1.12;letter-spacing:-.035em;max-width:590px}
+.lead-story p{color:#dbe8ef;font-size:14px}
+.lead-story .story-link{color:#f3e0c4;border-color:#d7ba8d}
+.lead-side{gap:17px}
+.mini-story{border-radius:6px;padding:29px 30px;background:linear-gradient(155deg,#fff 72%,#f3f7f9);border:1px solid #d8e2e7;position:relative;overflow:hidden}
+.mini-story:after{content:"";position:absolute;right:21px;top:23px;width:36px;height:36px;border-top:1px solid #b3c5d0;border-right:1px solid #b3c5d0;opacity:.6;pointer-events:none}
+.mini-story:hover{border-color:#a4becd;transform:translateY(-3px);box-shadow:0 12px 25px #28465915}
+.mini-story .meta{color:#8e795c}
+.mini-story h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:25px;letter-spacing:-.025em;color:#20455e}
+.mini-story p{font-size:13px}
+.mini-story a{color:#2a6486}
+.section{padding:72px 0 76px}
+.section.tint{background:linear-gradient(135deg,#e8eef1,#f0f3f3 70%);border-block:1px solid #dce4e6}
+.section.white{background:#fbfcfc}
+.section-heading{margin-bottom:27px;gap:45px;align-items:end}
+.section-heading h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(31px,3.5vw,47px);font-weight:500;letter-spacing:-.04em;color:#20445f}
+.section-heading p{font-size:13px;max-width:465px;color:#687c88}
+.section-heading a{color:#326989}
+.forces{gap:16px}
+.force-card{
+  --c:#6b8493;border:1px solid #d9e2e6;border-radius:5px;
+  background:linear-gradient(145deg,#fff,#f7f9fa);min-height:152px;padding:25px 22px;
+  box-shadow:0 4px 14px #36526908;
+}
+.force-card:before{width:3px;transform:scaleY(1);opacity:.72}
+.force-card:after{content:"";position:absolute;top:0;right:0;width:68px;height:68px;background:linear-gradient(45deg,transparent 50%,#a3bbc810 50%);pointer-events:none}
+.force-card:hover{border-color:#adc2ce;box-shadow:0 14px 30px #29495c18;transform:translateY(-4px)}
+.force-card .seal{width:76px;height:76px;flex-basis:76px;filter:drop-shadow(0 3px 6px #26445816)}
+.force-card:hover .seal{transform:translateY(-3px) scale(1.025)}
+.force-card strong{font-family:Georgia,"Times New Roman",serif;font-size:23px;font-weight:500;letter-spacing:-.026em;color:#1d415d}
+.force-card small{font-size:11px;color:#6f808c}
+.force-card.eb{--c:#687b70}.force-card.mb{--c:#4a738c}.force-card.fab{--c:#4588a8}
+.force-card.pm{--c:#727f93}.force-card.cbm{--c:#9f756d}.force-card.gov{--c:#a38d6d}
+.notice-layout{gap:25px;grid-template-columns:minmax(0,1fr) 320px}
+.notice-list{gap:14px}
+.notice,.study-card,.article-card{border-radius:5px;background:#fff;border-color:#d8e2e6}
+.notice{padding:26px}
+.notice h3,.news-aside h3,.study-card h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;color:#20455f;letter-spacing:-.025em}
+.news-aside{border-radius:5px;background:linear-gradient(148deg,#eef3f5,#e5edf1);border:1px solid #d4e2e8;padding:32px}
+.news-aside h3{font-size:28px}
+.news-aside p{color:#5f7786}
+.directory{grid-template-columns:315px minmax(0,1fr);gap:27px}
+.directory-intro{
+  background:linear-gradient(150deg,rgba(28,67,94,.92),rgba(35,78,103,.9)),url("assets/horizonte-faaab.svg") 64% center/cover;
+  border-radius:5px;padding:34px;
+}
+.directory-intro h3{font-family:Georgia,"Times New Roman",serif;font-size:32px;font-weight:500;letter-spacing:-.035em}
+.directory-intro p{color:#dce6ec}
+.directory-intro a{color:#eddfc9}
+.directory-results{border-color:#d9e3e7;border-radius:5px}
+.record{padding:17px 19px}
+.record:hover{background:#f4f8fa}
+.record-code{background:#e8eff3;border:1px solid #dce7ec;color:#2f6280;border-radius:3px}
+.directory-controls input,.directory-controls select,.filterbar input,.filterbar select{border-radius:4px;border-color:#cbd9e0;min-height:48px;background:#fff}
+.directory-foot button{color:#2a6484}
+.study-card{border-top:2px solid #aa906b;padding:30px}
+.study-card h3{font-size:25px}
+.footer{background:linear-gradient(138deg,#24465f,#19384f);color:#d9e4e9;padding:58px 0 28px}
+.footer h3{color:#d9c4a5}
+.footer-end{border-top-color:#ffffff2c;color:#b9cbd6}
+.footer a:not(.brand){color:#dce7ed}
+.footer img{background:#fff}
+.page-hero{
+  padding:79px 0 82px;
+  background:linear-gradient(95deg,rgba(27,62,86,.97),rgba(32,75,100,.88) 58%,rgba(39,82,107,.42)),url("assets/horizonte-faaab.svg") center 45%/cover no-repeat;
+}
+.page-hero:before{border-width:1px;border-color:#ffffff19;top:-145px;right:2%;width:480px;height:480px}
+.page-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#9d8b73,#c9b58e 28%,transparent 70%)}
+.page-hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.04em;font-size:clamp(40px,4.8vw,68px)}
+.page-hero p{font-size:15px;color:#dae6ed;max-width:680px}
+.page-hero .seal{filter:drop-shadow(0 12px 15px #1432464d);width:174px;height:174px;flex-basis:174px}
+.page-hero.eb,.page-hero.mb,.page-hero.fab,.page-hero.pm,.page-hero.cbm,.page-hero.gov{
+ background:linear-gradient(95deg,rgba(27,62,86,.97),rgba(32,75,100,.88) 58%,rgba(39,82,107,.42)),url("assets/horizonte-faaab.svg") center 45%/cover no-repeat;
+}
+.breadcrumbs{color:#d4e1e8}
+.stats{gap:15px;margin-bottom:30px}
+.stat{border-radius:4px;border-color:#d6e1e5;padding:23px}
+.stat strong{color:#2c6384;font-family:Georgia,"Times New Roman",serif;font-weight:500}
+.tab{border-radius:4px;background:#fff}
+.tab[aria-pressed=true]{background:#2c6282;border-color:#2c6282}
+.entry{border-radius:5px;padding:24px;gap:10px}
+.entry h3{font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:500}
+.entry:hover{border-color:#aac2d0}
+.article-card h3{font-family:Georgia,"Times New Roman",serif;font-size:26px;font-weight:500}
+.article-body{border-radius:5px;padding:49px}
+.article-body h1{font-family:Georgia,"Times New Roman",serif;font-weight:500}
+.empty-state{border-radius:5px;border-color:#c8d7df;color:#647987}
+@media(min-width:721px){.mobile-toggle{display:none}}
+@media(max-width:1020px){
+ .news-stage{grid-template-columns:minmax(0,1.3fr) minmax(260px,1fr)}
+ .directory{grid-template-columns:260px minmax(0,1fr)}
+ .navlinks{gap:18px}
+}
+@media(max-width:720px){
+ .wrap{width:calc(100% - 36px)}
+ .mast .wrap{min-height:80px}
+ .brand img{width:174px}
+ .nav .wrap{display:block}
+ .mobile-toggle{display:flex}
+ .navlinks{gap:0}
+ .navlinks a{min-height:46px}
+ .intro{padding:36px 0 22px}
+ .intro h1{font-size:clamp(35px,8vw,49px)}
+ .news-stage{display:flex;flex-direction:column;padding-bottom:42px}
+ .lead-story{min-height:365px;padding:33px}
+ .section{padding:52px 0 56px}
+ .section-heading{display:block}
+ .force-card{min-height:139px;padding:20px}
+ .notice-layout,.directory{grid-template-columns:1fr}
+ .page-hero{padding:56px 0}
+ .page-hero .seal{width:104px;height:104px;flex-basis:104px}
+}
+@media(max-width:490px){
+ .wrap{width:calc(100% - 30px)}
+ .brand img{width:145px}
+ .mast-actions .btn.primary{font-size:10px;gap:8px;padding:10px 9px}
+ .mast-actions .btn.primary .roblox-mark{width:12px;height:12px}
+ .lead-story{min-height:342px;padding:27px}
+ .lead-story h2{font-size:33px}
+ .forces{grid-template-columns:1fr}
+ .force-card{min-height:114px;padding:19px 21px}
+ .force-card .seal{width:66px;height:66px;flex-basis:66px}
+ .force-card strong{font-size:22px}
+ .news-aside{padding:27px}
+ .entry-grid,.archive-grid,.notice-list{grid-template-columns:1fr}
+ .page-hero h1{font-size:38px}
+ .page-hero .seal{width:72px;height:72px;flex-basis:72px}
+ .article-body{padding:25px}
+}
+@media(prefers-reduced-motion:no-preference){
+ .motion-ready .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s var(--ease)}
+ .motion-ready .reveal.is-visible{opacity:1;transform:none}
+ .lead-story{animation:arrive-soft .75s both}
+ @keyframes arrive-soft{from{opacity:.6;transform:translateY(9px)}to{opacity:1;transform:none}}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .reveal{opacity:1!important;transform:none!important}
+ .lead-story{animation:none!important}
+ .nav,.btn,.force-card,.entry{transition:none!important}
+}

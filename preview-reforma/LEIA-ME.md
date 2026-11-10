@@ -129,3 +129,14 @@ O script checa: integridade de arquivos, links locais da prévia, IDs duplicados
 ### Auditoria desta iteração
 - Verificados por inspeção estática: sintaxe de `site.js` e `painel-v2.js`, caminhos dos recursos da prévia, IDs únicos, integridade de categorias de anúncio, origem separada de dados reais e de demonstração, presença das seis áreas no catálogo, e ordem de notícias na entrada.
 - **10 grupos de checagens estáticas passaram** nesta revisão. O script `verificar.mjs` também está disponível para execução no Node; ainda não houve execução em navegador real nem validação visual da interface publicada.
+
+
+## Iteração 4 — identidade militar contemporânea (10/11/2026)
+- Inspirada na arquitetura editorial do novo portal da FAB, sem copiar marcas, textos ou emblemas oficiais.
+- Paleta azul aço, off-white, cinza névoa e acentos bronze, sem neon, faixas verdes ou fundos pretos.
+- Novo plano de fundo vetorial local (`assets/horizonte-faaab.svg`), sem dependências externas nem fotografias que sugiram operações reais.
+- `estilo-militar.css` redefine hierarquia tipográfica, cartões de notícias, força, catálogo, responsividade e páginas internas, sem afetar APIs.
+- `interacoes-militares.js` adiciona entrada suave dos elementos e sombra de navegação ao rolar, respeitando acessibilidade e movimento reduzido.
+- `index.html` passou a usar a entrada editorial de notícias, e `faaab-remaster.css` recebeu camada visual coerente para páginas históricas.
+- O conteúdo de notícias reais continua vazio e não foi inventado; nenhuma permissão, token, catálogo, login, Worker ou dado administrativo foi alterado.
+- **Atenção:** todo o redesenho permanece no branch desta PR, e o novo CSS do legado só será carregado na produção após merge; testes manuais no navegador e no celular continuam necessários.
