@@ -2,7 +2,7 @@
   "version": 1,
   "format": "png",
   "transparent": true,
-  "count": 85,
+  "count": 86,
   "items": {
     "FTB-BFE": {
       "id": "FTB-BFE",
@@ -683,6 +683,12 @@
       "x": 3,
       "y": 2,
       "status": "distintivo de qualificação"
+    },
+    "FAB-1--GDA": {
+      "id": "FAB-1--GDA",
+      "path": "assets/emblemas-png/FAB-1--GDA.png",
+      "source": "recorte provisório do motivo jaguar/radar; sem legenda do brasão antigo",
+      "status": "referência visual provisória; não é insígnia integral do 1º GDA"
     }
   },
   "notes": "PNGs extraídos dos WebPs antigos; substitua por fontes originais de alta resolução quando possível. GDA não foi substituído por GOA."
