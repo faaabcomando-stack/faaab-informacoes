@@ -1450,7 +1450,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "gda-jaguar",
+    "estadoDoEmblema": "PNG provisório publicado com o motivo do jaguar, sem cabeçalho GOA; insígnia completa 1º GDA ainda depende de importação da fonte oficial.",
+    "referenciaVisual": "Brasão 1º GDA Jaguar confirmado no acervo heráldico INCAER, https://www2.fab.mil.br/incaer/index.php/heraldica-siscult/emblemas2/376-1-gda"
   },
   {
     "id": "FAB-IEAV",
@@ -1950,7 +1953,7 @@
     "dataRegistro": "2026-10-24",
     "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
     "emblemaRef": "eamce",
-    "referenciaVisual": "Imagem recebida: Escola de Aprendizes-Marinheiros do Ceará (EAMCE). É um brasão regional, não o emblema de todas as EAM.",
+    "referenciaVisual": "Imagem específica da Escola de Aprendizes-Marinheiros do Ceará (EAMCE), exibida no portal com essa identificação.",
     "estadoDoEmblema": "Referência EAMCE recebida; uso na EAM genérica exige distinção regional"
   },
   {
@@ -2387,7 +2390,7 @@
     "dataRegistro": "2026-11-09",
     "versaoFonte": "Inclusão aprovada pelo usuário em 09/11/2026",
     "emblemaRef": "sspm",
-    "estadoDoEmblema": "Referência recebida/confirmada pelo usuário; imagem publicada no site NÃO confirmada.",
+    "estadoDoEmblema": "Referência original enviada pelo usuário e identificada como SSPM; arquivo original ainda não instalado entre os PNGs públicos.",
     "referenciaVisual": "SSPM: usuário confirmou recebimento anterior; associação do arquivo específico ainda precisa ser validada."
   },
   {
