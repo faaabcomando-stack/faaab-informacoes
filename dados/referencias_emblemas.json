@@ -245,7 +245,8 @@
     "DEnsM — brasão enviado 1794311970465.jpeg",
     "DIRENS — brasão enviado 1794312287320.jpeg",
     "COMSUB — brasão original enviado (1000171966.jpg)",
-    "COMSUB / ComForS — brasão enviado 1000171966.jpg"
+    "COMSUB / ComForS — brasão enviado 1000171966.jpg",
+    "CIM — imagem original 1000171967.png"
   ],
   "receivedBatches": [
     {
@@ -506,6 +507,18 @@
           "ref": "comsub-original",
           "status": "received-not-published",
           "description": "Coroa naval dourada, faixas azuis e brancas e submarino dourado em campo preto"
+        }
+      ]
+    },
+    {
+      "batchId": "cim-original-20261110",
+      "note": "Confirmação expressa: imagem é do CIM. Distinta do COMSUB. Não solicitar novamente.",
+      "items": [
+        {
+          "catalogId": "FMB-CIM",
+          "file": "1000171967.png",
+          "ref": "cim-original",
+          "status": "received-not-published"
         }
       ]
     }
