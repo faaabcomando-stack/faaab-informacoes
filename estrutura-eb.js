@@ -40,6 +40,26 @@
   const list=el("div","brig-grid");d.brigadas.filter(b=>!onlyBrig||b.id===onlyBrig).forEach(b=>list.append(brigadeCard(d,b)));
   section.append(list);return section
  }
+ function unitBlock(d){
+  const section=el("article","eb-unit-division"),header=el("div","eb-unit-division-head");
+  header.append(el("span","code",d.sigla),el("h3",null,d.nome));
+  section.append(header);
+  for(const b of d.brigadas||[]){
+   const group=el("section","eb-unit-group");
+   group.append(el("h4",null,b.nome));
+   const entries=el("div","eb-units-grid");
+   for(const x of b.unidades||[]){
+    const item=el(x.catalogoId?"a":"article","eb-unit-item");
+    if(x.catalogoId)item.href="ficha.html?id="+encodeURIComponent(x.catalogoId);
+    item.append(el("strong",null,x.sigla||"Unidade"),el("span",null,x.nome));
+    if(x.catalogoId)item.append(el("small",null,"Abrir ficha da unidade ↗"));
+    else item.append(el("small","pending",x.situacao||"Planejada"));
+    entries.append(item);
+   }
+   group.append(entries);section.append(group);
+  }
+  return section;
+ }
  function commands(data){
   const section=el("section"),headWrap=el("div","sect-head"),heading=el("div");heading.append(el("h2",null,"Comandos e apoio direto"));headWrap.append(heading,paragraph("Fora da cadeia das nove brigadas. Não são brigadas adicionais."));section.append(headWrap);
   const grid=el("div","other-commands");
@@ -64,12 +84,18 @@
     const section=el("section");section.append(head("Divisões do Exército","Três divisões que reúnem nove brigadas. Abra a divisão para conhecer suas unidades."));
     const grid=el("div","divgrid");divisions.forEach(d=>grid.append(divisionCard(d)));section.append(grid);wrap.append(section);
     wrap.append(commands(data));
+   }else if(view==="unidades"){
+    const section=el("section");
+    section.append(head("Batalhões, regimentos e companhias","As brigadas aparecem somente como indicação de subordinação. Cada cartão abaixo é uma unidade."));
+    for(const d of chosen)section.append(unitBlock(d));
+    wrap.append(section);
+    if(!selectedDiv)wrap.append(commands(data));
    }else{
     const section=el("section");
-    const title=view==="divisoes"?"Divisões e suas brigadas":view==="brigadas"?"Brigadas por divisão":"Batalhões dentro das brigadas";
+    const title=view==="divisoes"?"Divisões e suas brigadas":"Brigadas por divisão";
     section.append(head(title,"Hierarquia 2026 da FAAAB: divisão → brigada → unidade. Propostas são identificadas."));
     for(const d of chosen){const unit=selectedBrig&&d.brigadas.some(b=>b.id===selectedBrig)?selectedBrig:null;section.append(divisionBlock(d,unit))}
-    wrap.append(section);if(view==="unidades"&&!selectedDiv)wrap.append(commands(data))
+    wrap.append(section);
    }
    const note=el("div","note","O plano de 07/11/2026 distingue unidades já cadastradas e propostas. Organizações sem subordinação homologada não foram colocadas arbitrariamente em nenhuma brigada.");
    wrap.append(note);

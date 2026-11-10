@@ -35,5 +35,5 @@
   }
   input?.addEventListener("input",()=>{limit=10;render()});select?.addEventListener("change",()=>{limit=10;render()});more?.addEventListener("click",()=>{limit+=10;render()});render();
  }
- fetch("dados/catalogo.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("Catalogo indisponivel");return r.json()}).then(catalog).catch(()=>{$("fp-list")?.replaceChildren(elem("p","fp-empty","Não foi possível carregar o catálogo."));if($("fp-total"))$("fp-total").textContent="Indisponível"});
+ if($("fp-list"))fetch("dados/catalogo.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("Catalogo indisponivel");return r.json()}).then(catalog).catch(()=>{$("fp-list")?.replaceChildren(elem("p","fp-empty","Não foi possível carregar o catálogo."));if($("fp-total"))$("fp-total").textContent="Indisponível"});
 })();
