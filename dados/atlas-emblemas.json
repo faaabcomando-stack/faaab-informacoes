@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "asset": "assets/faaab-emblemas-site.webp",
+  "tile": 56,
+  "columns": 10,
+  "rows": 8,
+  "count": 74,
+  "items": {
+    "FTB-BFE": {
+      "index": 0,
+      "col": 0,
+      "row": 0
+    },
+    "FTB-BPE": {
+      "index": 1,
+      "col": 1,
+      "row": 0
+    },
+    "FTB-BI-Caat": {
+      "index": 2,
+      "col": 2,
+      "row": 0
+    },
+    "FTB-BIB": {
+      "index": 3,
+      "col": 3,
+      "row": 0
+    },
+    "FTB-BAC": {
+      "index": 4,
+      "col": 4,
+      "row": 0
+    },
+    "FTB-CIE": {
+      "index": 5,
+      "col": 5,
+      "row": 0
+    },
+    "FTB-BIM": {
+      "index": 6,
+      "col": 6,
+      "row": 0
+    },
+    "FTB-BIL": {
+      "index": 7,
+      "col": 7,
+      "row": 0
+    },
+    "FTB-BIS": {
+      "index": 8,
+      "col": 8,
+      "row": 0
+    },
+    "FTB-GAC": {
+      "index": 9,
+      "col": 9,
+      "row": 0
+    },
+    "ADM-FMB": {
+      "index": 10,
+      "col": 0,
+      "row": 1
+    },
+    "FTB-AMAN": {
+      "index": 11,
+      "col": 1,
+      "row": 1
+    },
+    "FTB-EsPCEx": {
+      "index": 12,
+      "col": 2,
+      "row": 1
+    },
+    "FTB-ESA": {
+      "index": 13,
+      "col": 3,
+      "row": 1
+    },
+    "ADM-STF": {
+      "index": 14,
+      "col": 4,
+      "row": 1
+    },
+    "ADM-CBM": {
+      "index": 15,
+      "col": 5,
+      "row": 1
+    },
+    "ADM-GOV": {
+      "index": 16,
+      "col": 6,
+      "row": 1
+    },
+    "FTB-B-Log-Sl": {
+      "index": 17,
+      "col": 7,
+      "row": 1
+    },
+    "FTB-B-Log": {
+      "index": 18,
+      "col": 8,
+      "row": 1
+    },
+    "FAB-AFA": {
+      "index": 19,
+      "col": 9,
+      "row": 1
+    },
+    "FAB-EEAR": {
+      "index": 20,
+      "col": 0,
+      "row": 2
+    },
+    "FAB-EPCAR": {
+      "index": 21,
+      "col": 1,
+      "row": 2
+    },
+    "FAB-SIA": {
+      "index": 22,
+      "col": 2,
+      "row": 2
+    },
+    "FAB-UNIFA": {
+      "index": 23,
+      "col": 3,
+      "row": 2
+    },
+    "FAB-ECEMAR": {
+      "index": 24,
+      "col": 4,
+      "row": 2
+    },
+    "FAB-EAOAR": {
+      "index": 25,
+      "col": 5,
+      "row": 2
+    },
+    "FAB-1-GOA": {
+      "index": 26,
+      "col": 6,
+      "row": 2
+    },
+    "FAB-EAS-PARA-SAR": {
+      "index": 27,
+      "col": 7,
+      "row": 2
+    },
+    "FAB-GSD": {
+      "index": 28,
+      "col": 8,
+      "row": 2
+    },
+    "FAB-ETA": {
+      "index": 29,
+      "col": 9,
+      "row": 2
+    },
+    "FAB-IEAV": {
+      "index": 30,
+      "col": 0,
+      "row": 3
+    },
+    "FMB-CIAW": {
+      "index": 31,
+      "col": 1,
+      "row": 3
+    },
+    "FMB-CIAMPA": {
+      "index": 32,
+      "col": 2,
+      "row": 3
+    },
+    "FMB-CIAA": {
+      "index": 33,
+      "col": 3,
+      "row": 3
+    },
+    "FMB-EN": {
+      "index": 34,
+      "col": 4,
+      "row": 3
+    },
+    "FMB-CN": {
+      "index": 35,
+      "col": 5,
+      "row": 3
+    },
+    "FMB-EAM": {
+      "index": 36,
+      "col": 6,
+      "row": 3
+    },
+    "FMB-GRUMEC": {
+      "index": 37,
+      "col": 7,
+      "row": 3
+    },
+    "FTB-1DE": {
+      "index": 38,
+      "col": 8,
+      "row": 3
+    },
+    "FTB-3DE": {
+      "index": 39,
+      "col": 9,
+      "row": 3
+    },
+    "FTB-5DE": {
+      "index": 40,
+      "col": 0,
+      "row": 4
+    },
+    "FTB-Bda-Inf-Sl": {
+      "index": 41,
+      "col": 1,
+      "row": 4
+    },
+    "FTB-Bda-Inf-Mth": {
+      "index": 42,
+      "col": 2,
+      "row": 4
+    },
+    "FTB-BIP": {
+      "index": 43,
+      "col": 3,
+      "row": 4
+    },
+    "ADM-CFN": {
+      "index": 44,
+      "col": 4,
+      "row": 4
+    },
+    "FTB-Bda-Inf-AMV": {
+      "index": 45,
+      "col": 5,
+      "row": 4
+    },
+    "FTB-Bda-Inf-Mec": {
+      "index": 46,
+      "col": 6,
+      "row": 4
+    },
+    "FTB-Bda-C-Mec": {
+      "index": 47,
+      "col": 7,
+      "row": 4
+    },
+    "FTB-Bda-Inf-Mtz": {
+      "index": 48,
+      "col": 8,
+      "row": 4
+    },
+    "FTB-Bda-Inf-Bld": {
+      "index": 49,
+      "col": 9,
+      "row": 4
+    },
+    "FTB-Bda-C-Bld": {
+      "index": 50,
+      "col": 0,
+      "row": 5
+    },
+    "FTB-COpEsp": {
+      "index": 51,
+      "col": 1,
+      "row": 5
+    },
+    "FTB-DECEx": {
+      "index": 52,
+      "col": 2,
+      "row": 5
+    },
+    "FTB-CIGS": {
+      "index": 53,
+      "col": 3,
+      "row": 5
+    },
+    "FTB-CIOU": {
+      "index": 54,
+      "col": 4,
+      "row": 5
+    },
+    "FTB-CIOpC": {
+      "index": 55,
+      "col": 5,
+      "row": 5
+    },
+    "FTB-CIOpEsp": {
+      "index": 56,
+      "col": 6,
+      "row": 5
+    },
+    "FTB-CIBld": {
+      "index": 57,
+      "col": 7,
+      "row": 5
+    },
+    "FTB-CI-Pqdt-GPB": {
+      "index": 58,
+      "col": 8,
+      "row": 5
+    },
+    "ADM-SGM": {
+      "index": 59,
+      "col": 9,
+      "row": 5
+    },
+    "ADM-SEFA": {
+      "index": 60,
+      "col": 0,
+      "row": 6
+    },
+    "FTB-EsAO": {
+      "index": 61,
+      "col": 1,
+      "row": 6
+    },
+    "FTB-EsSLog": {
+      "index": 62,
+      "col": 2,
+      "row": 6
+    },
+    "ADM-TAI-EB": {
+      "index": 63,
+      "col": 3,
+      "row": 6
+    },
+    "ADM-TAI-MB": {
+      "index": 64,
+      "col": 4,
+      "row": 6
+    },
+    "ADM-TAI-FAB": {
+      "index": 65,
+      "col": 5,
+      "row": 6
+    },
+    "FTB-Cia-Prec-Pqdt": {
+      "index": 66,
+      "col": 6,
+      "row": 6
+    },
+    "FTB-RCC": {
+      "index": 67,
+      "col": 7,
+      "row": 6
+    },
+    "FTB-17--B-Fron": {
+      "index": 68,
+      "col": 8,
+      "row": 6
+    },
+    "FTB-1--RCG": {
+      "index": 69,
+      "col": 9,
+      "row": 6
+    },
+    "FTB-ECEME": {
+      "index": 70,
+      "col": 0,
+      "row": 7
+    },
+    "FTB-B-Op-Psi": {
+      "index": 71,
+      "col": 1,
+      "row": 7
+    },
+    "PM-ROTAM": {
+      "index": 72,
+      "col": 2,
+      "row": 7
+    },
+    "PM-BPChoque": {
+      "index": 73,
+      "col": 3,
+      "row": 7
+    }
+  },
+  "notes": [
+    "Miniaturas compactadas de arquivos recebidos da comunidade FAAAB.",
+    "FMB-EAM e FAB-ETA são referências específicas EAMCE e 1º ETA: evitar brasão genérico.",
+    "5º RCC foi disponibilizado como referência visual para RCC."
+  ]
+}
