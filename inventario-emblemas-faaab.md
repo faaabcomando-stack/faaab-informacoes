@@ -6,7 +6,8 @@
 
 - **BIP:** águia com paraquedas já recebida; não pedir de novo.
 - **CIOPan:** imagem recebida; **recortar a arte original** para eliminar área sobrando e manter brasão inteiro, sem redesenhar.
-- **B Prec e BCC:** descontinuados. Não constam do catálogo atual; não pedir emblemas.
+- **Precs:** confirmados como subdivisão da **Companhia de Precursores Paraquedistas (Cia Prec Pqdt)**, diretamente na Brigada de Infantaria Paraquedista. **Não existe Batalhão de Precursores**. BIP é outra unidade da mesma brigada.
+- **RCC:** **Regimento de Carros de Combate** da Brigada de Cavalaria Blindada, 5ª DE; a designação antiga BCC foi corrigida, não é uma exclusão do regimento.
 - **BtlPolNav:** nome incorreto; substituído por **Companhia de Polícia do Batalhão Naval (CiaPolBtlNav)** sob o CFN, sem registro duplicado.
 - **GrupCom:** sem denominação confirmada, excluído do projeto.
 - **Patrulha naval:** existem **Comandos de Grupamento de Patrulha Naval regionais** na Marinha real (Norte, Nordeste, Leste, Sudeste, Sul etc.). O genérico GrupPatNav foi retirado até homologar a unidade FAAAB correta; não atribuir logo regional aleatório.
@@ -169,3 +170,9 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - Atualizar o campo `emblemaRef` no catálogo após identificação, salvar a arte processada no repositório e conferir visualmente no navegador.
 - Para CIOPan, aplicar recorte fiel no PNG original e preservar cópia da fonte.
 - Um curso genérico pode usar o brasão da instituição responsável; não é obrigatório inventar um logo por curso.
+
+## Retificação específica — 09/11/2026
+
+- **Cia Prec Pqdt** confirmada na Brigada de Infantaria Paraquedista, com **Precs** como subdivisão interna. Não criar Batalhão de Precursores.
+- **RCC** confirmado como Regimento de Carros de Combate, não BCC.
+- Ambos incluídos nos dados e vinculados à estrutura; a implantação dentro do Roblox e emblemas específicos continuam sujeitos à conferência.
