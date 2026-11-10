@@ -95,7 +95,9 @@
     "ADM-FAB",
     "CBM-CAO-BM",
     "CFN-BOE-FN",
-    "CFN-COMANF"
+    "CFN-COMANF",
+    "FMB-DEnsM",
+    "FAB-DIRENS"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -237,7 +239,9 @@
     "EAM",
     "BOE FN",
     "COMANF",
-    "Curso de Formação de Praças (imagem recebida, força a confirmar)"
+    "Curso de Formação de Praças (imagem recebida, força a confirmar)",
+    "DEnsM — brasão enviado 1794311970465.jpeg",
+    "DIRENS — brasão enviado 1794312287320.jpeg"
   ],
   "receivedBatches": [
     {
@@ -465,6 +469,26 @@
           "filename": "1794306392042.png",
           "visibleText": "Brasão CAO PMDF adaptado",
           "status": "received-outside-catalog"
+        }
+      ]
+    },
+    {
+      "batchId": "remessa-diretorias-ensino-20261110",
+      "note": "Imagens originais enviadas para uso na FAAAB; cadastradas DEnsM e DIRENS. Fotos em conversa não foram automaticamente publicadas no GitHub.",
+      "items": [
+        {
+          "catalogId": "FMB-DEnsM",
+          "file": "1794311970465.jpeg",
+          "ref": "densm",
+          "sourceOfficial": "https://www.marinha.mil.br/ensino/node/8",
+          "status": "received-not-published"
+        },
+        {
+          "catalogId": "FAB-DIRENS",
+          "file": "1794312287320.jpeg",
+          "ref": "direns",
+          "sourceOfficial": "https://dirensvirtual.educaer.fab.mil.br/",
+          "status": "received-not-published"
         }
       ]
     }
