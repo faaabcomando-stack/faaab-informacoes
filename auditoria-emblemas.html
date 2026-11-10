@@ -12,20 +12,23 @@ input,select{padding:11px 13px;border:1px solid #b9c9d3;border-radius:8px;backgr
 .card img{width:100%;height:120px;object-fit:contain;background:transparent}
 .card h2{margin:0;font-size:14px;line-height:1.35;overflow-wrap:anywhere}
 .card .code{font:700 12px/1.3 ui-monospace,monospace;color:#536d7a;overflow-wrap:anywhere}
-.status{font-size:12px;font-weight:700}.warning{color:#a14c0d}.missing{color:#a82129}.good{color:#1a674b}
+.status{font-size:12px;font-weight:700}.warning{color:#a14c0d}.missing{color:#a82129}.good{color:#1a674b}.inherited{color:#3d658f}
 .note{font-size:12px;color:#58717b}.card a{font-size:12px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style></head><body>
 <header><h1>Auditoria visual de brasões FAAAB</h1><p>Inspeção dos arquivos PNG efetivamente publicados. Um arquivo ser PNG não garante boa resolução. Este relatório mostra dimensões reais, referências ausentes e imagens que exigem substituição por originais.</p></header>
 <main><nav><a href="instituicoes.html">Voltar às organizações</a></nav>
 <p>Não atribua automaticamente o brasão de uma instituição a outra. Subdivisões podem herdar o símbolo da organização superior se isso estiver identificado.</p>
-<div class="controls"><input id="query" type="search" placeholder="Buscar nome ou sigla" aria-label="Buscar"><select id="force" aria-label="Força"><option value="">Todas as forças</option><option>FTB</option><option>FAB</option><option>FMB</option><option>CFN</option><option>PM</option><option>CBM</option><option>ADM</option></select><select id="status" aria-label="Condição"><option value="">Todos</option><option value="missing">Sem arquivo PNG</option><option value="warning">Baixa resolução</option><option value="good">Dimensões adequadas</option></select></div>
+<div class="controls"><input id="query" type="search" placeholder="Buscar nome ou sigla" aria-label="Buscar"><select id="force" aria-label="Força"><option value="">Todas as forças</option><option>FTB</option><option>FAB</option><option>FMB</option><option>CFN</option><option>PM</option><option>CBM</option><option>ADM</option></select><select id="status" aria-label="Condição"><option value="">Todos</option><option value="missing">Sem arquivo PNG</option><option value="warning">Baixa resolução</option><option value="good">Dimensões adequadas</option><option value="inherited">Brasão da unidade superior</option></select></div>
 <p id="summary" role="status">Verificando arquivos...</p><div class="grid" id="gallery"></div>
 </main>
 <script>
 "use strict";
-const published=["ADM-CBM","ADM-CFN","ADM-FMB","ADM-GOV","ADM-SEFA","ADM-SGM","ADM-STF","ADM-TAI-EB","ADM-TAI-FAB","ADM-TAI-MB","CBM-GBS","CBM-GOA","CBM-GOESP","CBM-GOPP","CBM-GSFMA","CFN-BOE-FN","CFN-BtlArtFN","CFN-BtlBldFN","CFN-BtlEngFN","CFN-COMANF","FAB-1--GDA","FAB-AFA","FAB-CIAER","FAB-EAOAR","FAB-EAS-PARA-SAR","FAB-ECEMAR","FAB-EEAR","FAB-EPCAR","FAB-ETA","FAB-GSD","FAB-IEAV","FAB-SIA","FAB-UNIFA","FMB-CIAA","FMB-CIAMPA","FMB-CIAW","FMB-CN","FMB-EAM","FMB-EN","FMB-GRUMEC","FMB-SSPM","FTB-1--RCG","FTB-17--B-Fron","FTB-1DE","FTB-3DE","FTB-5DE","FTB-AMAN","FTB-B-Log","FTB-B-Log-Sl","FTB-B-Op-Psi","FTB-BAC","FTB-BFE","FTB-BI-Caat","FTB-BIB","FTB-BIL","FTB-BIM","FTB-BIP","FTB-BIS","FTB-BPE","FTB-Bda-C-Bld","FTB-Bda-C-Mec","FTB-Bda-Inf-AMV","FTB-Bda-Inf-Bld","FTB-Bda-Inf-Mec","FTB-Bda-Inf-Mth","FTB-Bda-Inf-Mtz","FTB-Bda-Inf-Sl","FTB-CI-Pqdt-GPB","FTB-CIBld","FTB-CIE","FTB-CIGS","FTB-CIOPan","FTB-CIOU","FTB-CIOpC","FTB-CIOpEsp","FTB-CIOpMth-QUALIFICACAO","FTB-COpEsp","FTB-Cia-Prec-Pqdt","FTB-DECEx","FTB-ECEME","FTB-ESA","FTB-EsAO","FTB-EsPCEx","FTB-EsSLog","FTB-GAC","FTB-RCC","PM-BOPE","PM-BPChoque","PM-BPP","PM-ROTAM"];
+const published=["ADM-CBM","ADM-CFN","ADM-FMB","ADM-PM","ADM-SEFA","ADM-SGM","ADM-STF","ADM-TAI-EB","ADM-TAI-FAB","ADM-TAI-MB","CBM-GBS","CBM-GOA","CBM-GOESP","CBM-GOPP","CBM-GSFMA","CFN-BOE-FN","CFN-BtlArtFN","CFN-BtlBldFN","CFN-BtlEngFN","CFN-COMANF","FAB-1--GDA","FAB-AFA","FAB-CIAER","FAB-EAOAR","FAB-EAS-PARA-SAR","FAB-ECEMAR","FAB-EEAR","FAB-EPCAR","FAB-ETA","FAB-GSD","FAB-IEAV","FAB-SIA","FAB-UNIFA","FMB-CIAA","FMB-CIAMPA","FMB-CIAW","FMB-CN","FMB-EAM","FMB-EN","FMB-GRUMEC","FMB-SSPM","FTB-1--RCG","FTB-17--B-Fron","FTB-1DE","FTB-3DE","FTB-5DE","FTB-AMAN","FTB-B-Log","FTB-B-Log-Sl","FTB-B-Op-Psi","FTB-BAC","FTB-BFE","FTB-BI-Caat","FTB-BIB","FTB-BIL","FTB-BIM","FTB-BIP","FTB-BIS","FTB-BPE","FTB-Bda-C-Bld","FTB-Bda-C-Mec","FTB-Bda-Inf-AMV","FTB-Bda-Inf-Bld","FTB-Bda-Inf-Mec","FTB-Bda-Inf-Mth","FTB-Bda-Inf-Mtz","FTB-Bda-Inf-Sl","FTB-CI-Pqdt-GPB","FTB-CIBld","FTB-CIE","FTB-CIGS","FTB-CIOPan","FTB-CIOU","FTB-CIOpC","FTB-CIOpEsp","FTB-CIOpMth-QUALIFICACAO","FTB-COpEsp","FTB-Cia-Prec-Pqdt","FTB-DECEx","FTB-ECEME","FTB-ESA","FTB-EsAO","FTB-EsPCEx","FTB-EsSLog","FTB-GAC","FTB-RCC","PM-BOPE","PM-BPChoque","PM-BPP","PM-ROTAM"];
 const files=new Set(published);
+const inherited={
+ "FTB-DAD":"FTB-BFE","FTB-DRE":"FTB-BFE","FTB-PC":"FTB-BPE","FTB-PELOPES":"FTB-BI-Caat","FTB-DCS":"FTB-BI-Caat","FTB-Precs":"FTB-Cia-Prec-Pqdt","FTB-DCOE":"FTB-BAC","FTB-PRGM":"FTB-BIM","FTB-POS":"FTB-CIGS","FTB-SC":"FTB-CIE","FTB-DGC":"FTB-CIE","FAB-GSD-CHOQUE":"FAB-GSD","CFN-BtlInfFN":"ADM-CFN","CFN-BtlVtrAnf":"ADM-CFN","CFN-BtlOpRib":"ADM-CFN"
+};
 const gallery=document.getElementById("gallery"), summary=document.getElementById("summary");
 let rows=[];
 function E(tag,cls,txt){const el=document.createElement(tag);if(cls)el.className=cls;if(txt!==undefined)el.textContent=txt;return el}
@@ -34,10 +37,10 @@ function render(){
  const q=document.getElementById("query").value.trim().toLowerCase();
  const force=document.getElementById("force").value,status=document.getElementById("status").value;
  const current=rows.filter(x=>(!force||x.forca===force)&&(!status||x.state===status)&&(!q||(x.sigla+" "+x.nome).toLowerCase().includes(q)));
- summary.textContent=rows.length+" organizações · "+rows.filter(x=>x.state==="warning").length+" PNGs abaixo de 160px em algum lado · "+rows.filter(x=>x.state==="missing").length+" sem PNG próprio · exibindo "+current.length;
+ summary.textContent=rows.length+" organizações · "+rows.filter(x=>x.state==="warning").length+" PNGs abaixo de 160px em algum lado · "+rows.filter(x=>x.state==="missing").length+" sem PNG próprio · "+rows.filter(x=>x.state==="inherited").length+" com brasão da unidade superior · exibindo "+current.length;
  for(const r of current){
   const card=E("article","card");const img=E("img");img.loading="lazy";img.alt=r.hasFile?"Brasão de referência "+r.sigla:"Sem PNG publicado";
-  if(r.hasFile)img.src="assets/emblemas-png/"+encodeURIComponent(r.id)+".png";
+  if(r.hasFile)img.src="assets/emblemas-png/"+encodeURIComponent(r.sourceId||r.id)+".png";
   else img.style.display="none";
   card.append(img,E("span","code",r.sigla||r.id),E("h2",null,r.nome),E("span","status "+r.state,r.msg));
   if(r.dim)card.append(E("span","note",r.dim));
@@ -50,12 +53,14 @@ async function init(){
   const res=await fetch("dados/catalogo.json",{cache:"no-store"});if(!res.ok)throw Error("Erro HTTP "+res.status);
   const data=await res.json();
   rows=await Promise.all(data.map(async item=>{
-   const r={id:item.id,nome:item.nome,sigla:item.sigla||item.id,forca:item.forca,hasFile:files.has(item.id),state:"missing",msg:"Sem PNG próprio",dim:""};
+   const sourceId=files.has(item.id)?item.id:inherited[item.id];
+   const inheritedLogo=sourceId!==item.id&&Boolean(sourceId)&&files.has(sourceId);
+   const r={id:item.id,nome:item.nome,sigla:item.sigla||item.id,forca:item.forca,sourceId,hasFile:Boolean(sourceId&&files.has(sourceId)),state:"missing",msg:"Sem PNG próprio",dim:""};
    if(!r.hasFile)return r;
-   const image=new Image();image.src="assets/emblemas-png/"+encodeURIComponent(item.id)+".png";
+   const image=new Image();image.src="assets/emblemas-png/"+encodeURIComponent(sourceId)+".png";
    try {await image.decode();r.dim=image.naturalWidth+" × "+image.naturalHeight+" pixels";
-    r.state=Math.min(image.naturalWidth,image.naturalHeight)<160?"warning":"good";
-    r.msg=r.state==="warning"?"Miniatura: substituir pelo original":"PNG disponível";
+    r.state=inheritedLogo?"inherited":Math.min(image.naturalWidth,image.naturalHeight)<160?"warning":"good";
+    r.msg=inheritedLogo?"Brasão de referência da organização superior ("+sourceId+")":r.state==="warning"?"Miniatura: substituir pelo original":"PNG disponível";
    } catch {r.state="missing";r.msg="Erro ao carregar PNG";}
    return r;
   }));
