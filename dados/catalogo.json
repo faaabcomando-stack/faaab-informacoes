@@ -584,7 +584,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "b-op-psi",
+    "estadoDoEmblema": "Referência recebida/confirmada pelo usuário; imagem publicada no site NÃO confirmada.",
+    "referenciaVisual": "1º B Op Psc: brasão de Operações Psicológicas recebido nesta remessa; conferir designação exata do distintivo antes de usar."
   },
   {
     "id": "FTB-BI-Pan",
@@ -622,7 +625,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "17-b-fron",
+    "estadoDoEmblema": "Referência recebida/confirmada pelo usuário; imagem publicada no site NÃO confirmada.",
+    "referenciaVisual": "17º B Fron: brasão recebido nesta remessa, nome legível."
   },
   {
     "id": "FTB-1--RCG",
@@ -641,7 +647,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "1-rcg",
+    "estadoDoEmblema": "Referência recebida/confirmada pelo usuário; imagem publicada no site NÃO confirmada.",
+    "referenciaVisual": "1º RCG: brasão recebido nesta remessa, nome legível."
   },
   {
     "id": "FTB-BIL",
@@ -995,7 +1004,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "eceme",
+    "estadoDoEmblema": "Referência recebida/confirmada pelo usuário; imagem publicada no site NÃO confirmada.",
+    "referenciaVisual": "ECEME: brasão recebido nesta remessa, nome legível."
   },
   {
     "id": "FTB-EsSLog",
@@ -1642,7 +1654,10 @@
     "estadoImplementacao": "Planejada; não confirmada no Roblox",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Correção solicitada pela administração FAAAB em 10/11/2026"
+    "versaoFonte": "Correção solicitada pela administração FAAAB em 10/11/2026",
+    "emblemaRef": "ciapol-btl-nav",
+    "estadoDoEmblema": "Referência recebida/confirmada pelo usuário; imagem publicada no site NÃO confirmada.",
+    "referenciaVisual": "CiaPolBtlNav: usuário confirmou envio anterior; associação do arquivo específico ainda precisa ser validada."
   },
   {
     "id": "FMB-GRUMEC",
@@ -1703,7 +1718,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "cim",
+    "estadoDoEmblema": "Referência recebida/confirmada pelo usuário; imagem publicada no site NÃO confirmada.",
+    "referenciaVisual": "CIM: usuário confirmou que já enviou brasão naval; associação do arquivo específico ainda precisa ser validada."
   },
   {
     "id": "CFN-BtlInfFN",
@@ -2347,7 +2365,10 @@
     "estadoImplementacao": "Planejada; não confirmada no Roblox",
     "responsavel": null,
     "dataRegistro": "2026-11-09",
-    "versaoFonte": "Inclusão aprovada pelo usuário em 09/11/2026"
+    "versaoFonte": "Inclusão aprovada pelo usuário em 09/11/2026",
+    "emblemaRef": "sspm",
+    "estadoDoEmblema": "Referência recebida/confirmada pelo usuário; imagem publicada no site NÃO confirmada.",
+    "referenciaVisual": "SSPM: usuário confirmou recebimento anterior; associação do arquivo específico ainda precisa ser validada."
   },
   {
     "id": "FTB-B-Log-Sl",
