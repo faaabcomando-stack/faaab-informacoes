@@ -1,6 +1,6 @@
 {
-  "versao": "2026-11-10-r2",
-  "revisadoEm": "2026-11-10",
+  "versao": "2026-11-09-r3",
+  "revisadoEm": "2026-11-09",
   "origem": "Manual de Patentes e Batalhões V0.9 de setembro de 2026; catálogo aprovado em 24/10/2026; decisões da FAAAB preservadas de conversas anteriores. Corrigido pelo responsável: patentes de cada batalhão vão de Soldado até Coronel, não por dez classes de Praças a Superintendente.",
   "esquema": {
     "patenteVsFuncao": "Batalhões usam uma sequência de patentes do Exército começando em Soldado e terminando em Coronel. Funções de administração e especialização não substituem as patentes.",
@@ -205,12 +205,6 @@
       },
       "subunidades": [
         {
-          "sigla": "Precs",
-          "nome": "Precursores Paraquedistas",
-          "catalogoId": "FTB-Precs",
-          "status": "Presente no catálogo aprovado"
-        },
-        {
           "sigla": "CFP",
           "nome": null,
           "catalogoId": null,
@@ -218,7 +212,7 @@
         }
       ],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
-      "observacoes": null
+      "observacoes": "BIP e Cia Prec Pqdt são unidades distintas da Brigada de Infantaria Paraquedista. Precs pertence à Cia Prec Pqdt; CFP permanece como formação associada ao BIP, sem criar unidade independente."
     },
     "FTB-BIB": {
       "tipo": "unidade",
@@ -689,6 +683,37 @@
       "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
       "observacoes": null
+    },
+    "FTB-Cia-Prec-Pqdt": {
+      "tipo": "companhia",
+      "nome": "Companhia de Precursores Paraquedistas",
+      "sigla": "Cia Prec Pqdt",
+      "hierarquiaInterna": {
+        "modelo": "companhia",
+        "nota": "Companhia de Precursores Paraquedistas; não usar hierarquia de batalhão automaticamente. Cargos e requisitos internos dependem de registro."
+      },
+      "subunidades": [
+        {
+          "sigla": "Precs",
+          "nome": "Precursores Paraquedistas",
+          "catalogoId": "FTB-Precs",
+          "status": "Subdivisão interna confirmada"
+        }
+      ],
+      "status": "Estrutura confirmada; funcionamento e permissões no Roblox ainda não verificados",
+      "observacoes": "Subordinada à Brigada de Infantaria Paraquedista, paralela ao BIP."
+    },
+    "FTB-RCC": {
+      "tipo": "regimento",
+      "nome": "Regimento de Carros de Combate",
+      "sigla": "RCC",
+      "hierarquiaInterna": {
+        "modelo": "regimento",
+        "nota": "Regimento de Carros de Combate. Não usar denominação BCC ou modelo de batalhão."
+      },
+      "subunidades": [],
+      "status": "Estrutura confirmada; funcionamento e permissões no Roblox ainda não verificados",
+      "observacoes": "5ª DE → Brigada de Cavalaria Blindada → RCC."
     }
   },
   "pendencias": [
