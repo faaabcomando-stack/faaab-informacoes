@@ -173,10 +173,10 @@
     "id": "CUR-11-1",
     "forca": "FAB",
     "titulo": "CFAer — curso proposto sem centro definido",
-    "detalhes": "CFAer é uma proposta de formação FAAAB. O CIAAR não faz parte da estrutura da comunidade por decisão expressa da administração. Instituição responsável e implantação: a definir.\n\nALUNO:\nRecruta FAB.\n\nRESULTADO:\nescolha de linha:\n- Infantaria da Aeronáutica\n- Operações Aéreas / Aviação\n\nFARDA:\nusar farda normal da FAB.\n\nMATRIZ:\nIF X\nIC X\nAO X\nAT X\nAF X",
+    "detalhes": "CFAer é uma proposta de formação FAAAB. Instituição responsável e implantação: a definir.\n\nALUNO:\nRecruta FAB.\n\nRESULTADO:\nescolha de linha:\n- Infantaria da Aeronáutica\n- Operações Aéreas / Aviação\n\nFARDA:\nusar farda normal da FAB.\n\nMATRIZ:\nIF X\nIC X\nAO X\nAT X\nAF X",
     "sigla": "CFAer",
     "origem": "Manual mestre de cursos FAAAB",
-    "estado": "Proposta; responsável institucional pendente após exclusão do CIAAR",
+    "estado": "Proposta; instituição responsável e implementação a definir",
     "tipo": "curso"
   },
   {
