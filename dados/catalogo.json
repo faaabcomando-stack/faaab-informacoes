@@ -1201,10 +1201,10 @@
     "nome": "Precursores Paraquedistas",
     "forca": "FTB",
     "tipo": "subdivisao",
-    "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
+    "secao": "EXÉRCITO - PRECURSORES / COMPANHIA DE PRECURSORES PARAQUEDISTAS",
     "logo": null,
-    "vidaReal": "Denominação de seção, pelotão, destacamento ou divisão; algumas entradas são criações internas do projeto sem equivalente oficial direto.",
-    "noJogo": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
+    "vidaReal": "Precursores Paraquedistas vinculados à Companhia de Precursores Paraquedistas, na estrutura FAAAB.",
+    "noJogo": "Precs é uma subdivisão interna da Companhia de Precursores Paraquedistas (Cia Prec Pqdt), vinculada à Brigada de Infantaria Paraquedista da 1ª DE. Não é batalhão nem grupo Roblox próprio.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
@@ -1212,7 +1212,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Reafirmação expressa da administração FAAAB: não é Batalhão de Precursores.",
+    "grupoPaiId": "FTB-Cia-Prec-Pqdt"
   },
   {
     "id": "FTB-DCOE",
@@ -2334,5 +2335,46 @@
     "responsavel": null,
     "dataRegistro": "2026-11-09",
     "versaoFonte": "Correção solicitada pela administração FAAAB em 09/11/2026"
+  },
+  {
+    "id": "FTB-Cia-Prec-Pqdt",
+    "sigla": "Cia Prec Pqdt",
+    "nome": "Companhia de Precursores Paraquedistas",
+    "forca": "FTB",
+    "logo": null,
+    "requisitos": null,
+    "aprovado": true,
+    "grupoSeparado": false,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-11-09",
+    "versaoFonte": "Estrutura FAAAB confirmada em 09/11/2026; revisão de nomenclatura",
+    "tipo": "companhia",
+    "secao": "EXÉRCITO - 1ª DE / BRIGADA DE INFANTARIA PARAQUEDISTA",
+    "vidaReal": "Companhia de Precursores Paraquedistas; denominação de companhia, não batalhão.",
+    "noJogo": "Companhia diretamente ligada à Brigada de Infantaria Paraquedista da 1ª DE; abriga Precs como subdivisão interna. O BIP é outra unidade da mesma brigada.",
+    "referencia": "Estrutura FAAAB confirmada pela administração. Não criar Batalhão de Precursores.",
+    "subdivisoesIds": [
+      "FTB-Precs"
+    ]
+  },
+  {
+    "id": "FTB-RCC",
+    "sigla": "RCC",
+    "nome": "Regimento de Carros de Combate",
+    "forca": "FTB",
+    "logo": null,
+    "requisitos": null,
+    "aprovado": true,
+    "grupoSeparado": null,
+    "estadoImplementacao": "Não confirmado",
+    "responsavel": null,
+    "dataRegistro": "2026-11-09",
+    "versaoFonte": "Estrutura FAAAB confirmada em 09/11/2026; revisão de nomenclatura",
+    "tipo": "regimento",
+    "secao": "EXÉRCITO - 5ª DE / BRIGADA DE CAVALARIA BLINDADA",
+    "vidaReal": "Regimento de Carros de Combate, unidade do escalão regimento, não batalhão.",
+    "noJogo": "Regimento subordinado à Brigada de Cavalaria Blindada da 5ª DE. Substitui a designação antiga BCC (Batalhão de Carros de Combate), que não deve voltar.",
+    "referencia": "Correção expressa da administração FAAAB: BCC → RCC."
   }
 ]
