@@ -1,10 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "asset": "assets/faaab-emblemas-site.webp",
   "tile": 56,
   "columns": 10,
   "rows": 8,
-  "count": 74,
+  "count": 86,
   "items": {
     "FTB-BFE": {
       "index": 0,
@@ -377,9 +377,74 @@
       "row": 7
     }
   },
-  "notes": [
-    "Miniaturas compactadas de arquivos recebidos da comunidade FAAAB.",
-    "FMB-EAM e FAB-ETA são referências específicas EAMCE e 1º ETA: evitar brasão genérico.",
-    "5º RCC foi disponibilizado como referência visual para RCC."
-  ]
+  "notes": " | Atlas adicional com imagens confirmadas pelo usuário. O símbolo de Guia de Montanha é distintivo de qualificação, não brasão oficial do CIOpMth; no CIAER, a Secretaria de Inteligência é referência visual escolhida na FAAAB.",
+  "extras": {
+    "asset": "assets/faaab-emblemas-extra.webp",
+    "tile": 64,
+    "columns": 4,
+    "rows": 3,
+    "count": 12,
+    "items": {
+      "PM-BOPE": {
+        "index": 0,
+        "col": 0,
+        "row": 0
+      },
+      "FAB-CIAER": {
+        "index": 1,
+        "col": 1,
+        "row": 0
+      },
+      "CFN-BtlBldFN": {
+        "index": 2,
+        "col": 2,
+        "row": 0
+      },
+      "CFN-BtlEngFN": {
+        "index": 3,
+        "col": 3,
+        "row": 0
+      },
+      "CFN-BtlArtFN": {
+        "index": 4,
+        "col": 0,
+        "row": 1
+      },
+      "PM-BPP": {
+        "index": 5,
+        "col": 1,
+        "row": 1
+      },
+      "CBM-GBS": {
+        "index": 6,
+        "col": 2,
+        "row": 1
+      },
+      "CBM-GSFMA": {
+        "index": 7,
+        "col": 3,
+        "row": 1
+      },
+      "CBM-GOPP": {
+        "index": 8,
+        "col": 0,
+        "row": 2
+      },
+      "CBM-GOA": {
+        "index": 9,
+        "col": 1,
+        "row": 2
+      },
+      "CBM-GOESP": {
+        "index": 10,
+        "col": 2,
+        "row": 2
+      },
+      "FTB-CIOpMth": {
+        "index": 11,
+        "col": 3,
+        "row": 2
+      }
+    }
+  }
 }
