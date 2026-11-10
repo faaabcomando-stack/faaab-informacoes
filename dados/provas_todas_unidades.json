@@ -1692,23 +1692,6 @@
       "inscricaoAbertaFAAAB": false
     },
     {
-      "id": "CAT-FTB-BI-Pan",
-      "origem": "catalogo",
-      "origemId": "FTB-BI-Pan",
-      "forca": "FTB",
-      "tipo": "unidade",
-      "nome": "Batalhão de Infantaria de Pantanal (adaptação da FAAAB)",
-      "sigla": "BI Pan",
-      "estadoFAAAB": "Não confirmado",
-      "situacaoProva": "sem_prova_publica_comprovada",
-      "referenciaId": null,
-      "referenciaUrl": null,
-      "observacao": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
-      "efeitoDocumentado": null,
-      "formaAcesso": "Seleção ou curso específico a definir; pertencer a uma unidade não implica prova escrita individual",
-      "inscricaoAbertaFAAAB": false
-    },
-    {
       "id": "CAT-FTB-17--B-Fron",
       "origem": "catalogo",
       "origemId": "FTB-17--B-Fron",
