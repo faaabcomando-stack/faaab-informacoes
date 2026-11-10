@@ -1719,6 +1719,28 @@
     "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
+    "id": "FMB-COMSUB",
+    "sigla": "COMSUB",
+    "nome": "Comando da Força de Submarinos",
+    "forca": "FMB",
+    "tipo": "comando",
+    "secao": "MARINHA - UNIDADES NAVAIS DO PROJETO",
+    "logo": null,
+    "vidaReal": "O nome e a sigla oficiais da Marinha são Comando da Força de Submarinos (ComForS). Sob a Esquadra, é responsável pela prontidão dos meios subordinados e pelo controle operativo dos submarinos no mar e por atividades de mergulho.",
+    "noJogo": "Comando responsável pela área de submarinos na Marinha da FAAAB, com a sigla COMSUB escolhida pelo responsável. As unidades e permissões subordinadas precisam de definição específica.",
+    "requisitos": null,
+    "aprovado": true,
+    "referencia": "https://www.marinha.mil.br/comfors/",
+    "grupoSeparado": null,
+    "estadoImplementacao": "Cadastro documental no portal; não confirmado no Roblox",
+    "responsavel": null,
+    "dataRegistro": "2026-11-10",
+    "versaoFonte": "Inclusão expressa pelo responsável FAAAB com brasão enviado na conversa",
+    "emblemaRef": "comsub-original",
+    "referenciaVisual": "Brasão naval com coroa de navios dourada, escudo azul e preto, faixas brancas onduladas, submarino dourado; arquivo original 1000171966.jpg",
+    "estadoDoEmblema": "Recebido na conversa (1000171966.jpg), ainda sem PNG próprio publicado no GitHub."
+  },
+  {
     "id": "FMB-CIM",
     "sigla": "CIM",
     "nome": "Centro de Inteligência da Marinha",
