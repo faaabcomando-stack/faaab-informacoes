@@ -64,6 +64,25 @@ for path,records,cols,rows in ATLASES:
             'source':path.name,'x':x,'y':y,
             'status':'distintivo de qualificação' if key.endswith('-QUALIFICACAO') else 'miniatura recortada'
         })
+# The real 1º GDA (Esquadrão Jaguar) has its own official emblem.
+# Never relabel the old 'GOA' badge. Download the correctly labeled FAB source, when reachable.
+try:
+    import io
+    from urllib.request import Request, urlopen
+    gda_url='https://www2.fab.mil.br/incaer/images/eventgallery/SISCULT/Heraldica/Emblemas/Imagens/1gda.gif'
+    req=Request(gda_url,headers={'User-Agent':'Mozilla/5.0 (FAAAB heraldry reference)'})
+    with urlopen(req,timeout=12) as response:
+        image_bytes=response.read(2_000_000)
+    gda=Image.open(io.BytesIO(image_bytes)).convert('RGBA')
+    gda=trim_white_background(gda)
+    gda.save(OUT/'FAB-1--GDA.png',optimize=True)
+    items.append({'id':'FAB-1--GDA','path':'assets/emblemas-png/FAB-1--GDA.png',
+                  'source':'Força Aérea Brasileira (INCAER), 1gda.gif',
+                  'status':'1º GDA / Esquadrão Jaguar, fonte oficial'})
+    print('1º GDA: emblema oficial instalado como PNG')
+except Exception as exc:
+    print('1º GDA: download oficial indisponível, mantendo entrada sem imagem incorreta:',str(exc)[:140])
+
 manifest={
     'version':1,'format':'png','transparent':True,'count':len(items),
     'items':{row['id']:row for row in items},
