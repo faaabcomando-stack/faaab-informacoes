@@ -1,0 +1,32 @@
+// FAAAB — verificação do cadastro institucional (Node 18+).
+// Execute na raiz do repositório: node scripts/auditar-catalogo-faaab.mjs
+import assert from "node:assert/strict";
+import {readFileSync} from "node:fs";
+const load=p=>JSON.parse(readFileSync(p,"utf8"));
+const cat=load("dados/catalogo.json"),tree=load("dados/estrutura_eb_2026.json");
+const {mapeamentos}=load("dados/estrutura_unidades.json");
+const {perfis}=load("dados/perfis_unidades.json");
+const {registros}=load("dados/provas_todas_unidades.json");
+const edu=load("dados/ensino_instituicoes.json");
+const ids=new Set(cat.map(x=>x.id));
+assert.equal(ids.size,cat.length,"IDs duplicados no catálogo");
+for(const id of Object.keys(mapeamentos))assert.ok(ids.has(id),"mapeamento órfão: "+id);
+for(const id of Object.keys(perfis))assert.ok(ids.has(id),"perfil órfão: "+id);
+for(const item of registros.filter(x=>x.origem==="catalogo"))assert.ok(ids.has(item.origemId),"prova com entidade órfã: "+item.origemId);
+for(const e of edu.instituicoes.filter(x=>x.catalogoId))assert.ok(ids.has(e.catalogoId),"escola órfã: "+e.catalogoId);
+const forbidden=["FTB-B-Prec","FTB-BCC","FTB-B-Sau","FTB-BIL-Mth","FMB-BtlPolNav","FMB-GrupCom","FMB-GrupPatNav","FMB-ComForS","FAB-CIAAR","FAB-BINFAE-Guarda","FAB-BINFAE-Choque","FAB-EAV","FAB-PARACOM","FAB-ECDA","CFN-CIAPOL"];
+for(const id of forbidden)assert.ok(!ids.has(id),"unidade descartada reapareceu: "+id);
+assert.equal(cat.filter(x=>x.id==="FTB-BIM").length,1,"montanha duplicada");
+assert.equal(cat.find(x=>x.id==="FTB-BIM").sigla,"BI Mth");
+assert.equal(cat.find(x=>x.id==="FMB-ComForSup").forca,"FMB");
+const cia=cat.find(x=>x.id==="CFN-CiaPolBtlNav");assert.equal(cia.nome,"Companhia de Polícia do Batalhão Naval");assert.equal(cia.forca,"CFN");
+assert.equal(cat.find(x=>x.id==="FAB-GSD-CHOQUE").grupoPaiId,"FAB-GSD");
+assert.equal(cat.find(x=>x.id==="FAB-IEAV").sigla,"IEAv");
+assert.equal(cat.find(x=>x.id==="FTB-BIP").emblemaRef,"bip","imagem do BIP já foi enviada");
+assert.match(cat.find(x=>x.id==="FTB-CIOPan").estadoDoEmblema,/recorte/i,"CIOPan requer recorte");
+assert.equal(tree.forca,"FTB");
+assert.equal(tree.divisoes.length,3);
+assert.deepEqual(tree.divisoes.map(x=>x.brigadas.length),[4,3,2]);
+assert.ok(registros.every(x=>x.inscricaoAbertaFAAAB!==true),"Prova aberta inadvertidamente");
+assert.ok(edu.instituicoes.every(x=>x.catalogoId!=="FAB-CIAAR"));
+console.log("FAAAB: catálogo coerente —",cat.length,"organizações;",registros.length,"registros de provas/consultas.");
