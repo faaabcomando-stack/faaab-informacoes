@@ -27,7 +27,7 @@ const LABELS=Object.freeze({
  "FMB-EAM":"Referência: Escola de Aprendizes-Marinheiros do Ceará (EAMCE)",
  "FAB-ETA":"Referência: primeiro Esquadrão de Transporte Aéreo (1º ETA)",
  "FTB-CIOpMth":"Distintivo de Guia de Montanha Avançado; referência de curso, não brasão do centro",
- "FAB-1--GDA":"Motivo do jaguar sem a legenda GOA: versão provisória da comunidade, não brasão oficial completo.",
+ "FAB-1--GDA":"1º GDA — Esquadrão Jaguar. No desenho da sigla, a letra D pode parecer O.",
  "ADM-TAI-EB":"Taifa do Exército — QTE.",
  "ADM-TAI-MB":"Taifa da Marinha — referência CPA.",
  "ADM-TAI-FAB":"Taifa da Aeronáutica — QTA."
