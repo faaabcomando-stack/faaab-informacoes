@@ -1,5 +1,5 @@
 {
-  "versao": "2026-11-10-r2",
+  "versao": "2026-11-10-r3-diretorias",
   "atualizadoEm": "2026-11-10",
   "observacao": "Catálogo editorial FAAAB, baseado em fontes públicas e objetivos fictícios. Não estabelece concursos abertos nem autentica patentes.",
   "selecoesNaval": "O SSPM organiza seleções da Marinha do jogo. Processos do CFN permanecem separados.",
@@ -190,6 +190,45 @@
       "estado": "futuro_condicional"
     },
     {
+      "id": "densm",
+      "sigla": "DEnsM",
+      "nome": "Diretoria de Ensino da Marinha",
+      "grupo": "FMB",
+      "tipo": "Diretoria superior de ensino",
+      "resumo": "Coordenação de ensino naval, escolas, instrução e processos de seleção da Marinha.",
+      "real": "Órgão central do Sistema de Ensino Naval: EN, CN, CIAA, CIAW e SSPM são subordinadas diretamente; EAM recebe supervisão funcional.",
+      "jogo": "Direção superior dos ensinos da Marinha FAAAB; coordena as escolas e seus cursos, preservando as administrações e seleções próprias de cada organização.",
+      "noticias": [
+        "diretrizes de ensino",
+        "escolas e centros",
+        "formação naval",
+        "recrutamento e seleção"
+      ],
+      "fonte": "https://www.marinha.mil.br/ensino/",
+      "formacao": false,
+      "catalogoId": "FMB-DEnsM",
+      "subunidades": [
+        "sspm",
+        "ciaa",
+        "ciaw",
+        "en",
+        "cn",
+        "eam"
+      ],
+      "subordinadasDiretas": [
+        "sspm",
+        "ciaa",
+        "ciaw",
+        "en",
+        "cn"
+      ],
+      "supervisaoFuncional": [
+        "eam"
+      ],
+      "emblemaOriginal": "1794311970465.jpeg",
+      "vinculo": "Órgão de direção do ensino naval"
+    },
+    {
       "id": "sspm",
       "sigla": "SSPM",
       "nome": "Serviço de Seleção do Pessoal da Marinha",
@@ -207,7 +246,9 @@
       ],
       "fonte": "https://www.marinha.mil.br/sspm/",
       "formacao": false,
-      "catalogoId": "FMB-SSPM"
+      "catalogoId": "FMB-SSPM",
+      "diretoriaEnsino": "densm",
+      "vinculoEnsino": "subordinação direta"
     },
     {
       "id": "ciaa",
@@ -226,7 +267,9 @@
       ],
       "fonte": "https://www.marinha.mil.br/ciaa/",
       "formacao": true,
-      "catalogoId": "FMB-CIAA"
+      "catalogoId": "FMB-CIAA",
+      "diretoriaEnsino": "densm",
+      "vinculoEnsino": "subordinação direta"
     },
     {
       "id": "ciaw",
@@ -245,7 +288,9 @@
       ],
       "fonte": "https://www.marinha.mil.br/ciaw/",
       "formacao": true,
-      "catalogoId": "FMB-CIAW"
+      "catalogoId": "FMB-CIAW",
+      "diretoriaEnsino": "densm",
+      "vinculoEnsino": "subordinação direta"
     },
     {
       "id": "en",
@@ -264,7 +309,9 @@
       ],
       "fonte": "https://www.marinha.mil.br/en/",
       "formacao": true,
-      "catalogoId": "FMB-EN"
+      "catalogoId": "FMB-EN",
+      "diretoriaEnsino": "densm",
+      "vinculoEnsino": "subordinação direta"
     },
     {
       "id": "cn",
@@ -283,7 +330,9 @@
       ],
       "fonte": "https://www.marinha.mil.br/cn/",
       "formacao": true,
-      "catalogoId": "FMB-CN"
+      "catalogoId": "FMB-CN",
+      "diretoriaEnsino": "densm",
+      "vinculoEnsino": "subordinação direta"
     },
     {
       "id": "eam",
@@ -302,7 +351,46 @@
       ],
       "fonte": "https://www.marinha.mil.br/ensino/",
       "formacao": true,
-      "catalogoId": "FMB-EAM"
+      "catalogoId": "FMB-EAM",
+      "diretoriaEnsino": "densm",
+      "vinculoEnsino": "supervisão funcional"
+    },
+    {
+      "id": "direns",
+      "sigla": "DIRENS",
+      "nome": "Diretoria de Ensino da Aeronáutica",
+      "grupo": "FAB",
+      "tipo": "Diretoria superior de ensino",
+      "resumo": "Coordenação da formação, pós-formação e educação das escolas da Aeronáutica.",
+      "real": "Planeja, gerencia e controla o Sistema de Ensino da Aeronáutica, abrangendo as organizações de ensino da FAB.",
+      "jogo": "Direção superior de ensino da FAAAB FAB: coordena cursos e escolas do projeto. A UNIFA permanece portal acadêmico de ECEMAR e EAOAR, sem substituir a DIRENS.",
+      "noticias": [
+        "diretrizes de ensino",
+        "formação da FAB",
+        "escolas e academias",
+        "pós-formação"
+      ],
+      "fonte": "https://dirensvirtual.educaer.fab.mil.br/",
+      "formacao": false,
+      "catalogoId": "FAB-DIRENS",
+      "subunidades": [
+        "afa",
+        "epcar",
+        "eear",
+        "unifa",
+        "ecemar",
+        "eaoar"
+      ],
+      "subordinadasDiretas": [
+        "afa",
+        "epcar",
+        "eear",
+        "unifa",
+        "ecemar",
+        "eaoar"
+      ],
+      "emblemaOriginal": "1794312287320.jpeg",
+      "vinculo": "Órgão de direção do ensino da FAB"
     },
     {
       "id": "unifa",
@@ -326,7 +414,9 @@
         "ecemar",
         "eaoar"
       ],
-      "vinculo": "Portais acadêmicos associados na FAAAB; organização real sob DIRENS."
+      "vinculo": "Portais acadêmicos associados na FAAAB; organização real sob DIRENS.",
+      "diretoriaEnsino": "direns",
+      "vinculoEnsino": "subordinação de ensino"
     },
     {
       "id": "ecemar",
@@ -346,7 +436,9 @@
       "fonte": "https://www2.fab.mil.br/ecemar/",
       "formacao": true,
       "catalogoId": "FAB-ECEMAR",
-      "vinculoFAAAB": "unifa"
+      "vinculoFAAAB": "unifa",
+      "diretoriaEnsino": "direns",
+      "vinculoEnsino": "subordinação de ensino"
     },
     {
       "id": "eaoar",
@@ -366,7 +458,9 @@
       "fonte": "https://www2.fab.mil.br/eaoar/",
       "formacao": true,
       "catalogoId": "FAB-EAOAR",
-      "vinculoFAAAB": "unifa"
+      "vinculoFAAAB": "unifa",
+      "diretoriaEnsino": "direns",
+      "vinculoEnsino": "subordinação de ensino"
     },
     {
       "id": "eear",
@@ -386,7 +480,9 @@
       "fonte": "https://www2.fab.mil.br/eear/",
       "formacao": true,
       "catalogoId": "FAB-EEAR",
-      "estado": "planejado"
+      "estado": "planejado",
+      "diretoriaEnsino": "direns",
+      "vinculoEnsino": "subordinação de ensino"
     },
     {
       "id": "epcar",
@@ -406,7 +502,9 @@
       "fonte": "https://www2.fab.mil.br/epcar/",
       "formacao": true,
       "catalogoId": "FAB-EPCAR",
-      "estado": "congelado_para_revisao"
+      "estado": "congelado_para_revisao",
+      "diretoriaEnsino": "direns",
+      "vinculoEnsino": "subordinação de ensino"
     },
     {
       "id": "afa",
@@ -426,16 +524,45 @@
       "fonte": "https://www2.fab.mil.br/afa/",
       "formacao": true,
       "catalogoId": "FAB-AFA",
-      "estado": "aguardando_progressao"
+      "estado": "aguardando_progressao",
+      "diretoriaEnsino": "direns",
+      "vinculoEnsino": "subordinação de ensino"
     }
   ],
   "hierarquiaFAB": {
-    "coordenacaoFAAAB": "UNIFA",
-    "portaisAssociados": [
-      "ECEMAR",
-      "EAOAR"
+    "coordenacaoFAAAB": "DIRENS",
+    "diretoria": "direns",
+    "subordinadasDiretas": [
+      "afa",
+      "epcar",
+      "eear",
+      "unifa",
+      "ecemar",
+      "eaoar"
     ],
-    "notaReal": "Na organização atual da FAB, a DIRENS é a referência de subordinação de ECEMAR e EAOAR, no campus da UNIFA. A vinculação hierárquica escolhida para a FAAAB é ficcional.",
-    "fonte": "https://www2.fab.mil.br/unifa/"
+    "portaisAcademicosAssociados": {
+      "unifa": [
+        "ecemar",
+        "eaoar"
+      ]
+    },
+    "notaReal": "DIRENS dirige o Sistema de Ensino da FAB. A associação de ECEMAR e EAOAR à UNIFA neste portal é acadêmica, não subordinação hierárquica daquelas escolas à universidade.",
+    "fonte": "https://www.sislaer.fab.mil.br/TerminalWebCENDOC/VisualizadorHtml?codigoArquivo=45417&tipoMidia=0"
+  },
+  "hierarquiaMarinha": {
+    "coordenacaoFAAAB": "DEnsM",
+    "diretoria": "densm",
+    "subordinadasDiretas": [
+      "sspm",
+      "ciaa",
+      "ciaw",
+      "en",
+      "cn"
+    ],
+    "supervisaoFuncional": [
+      "eam"
+    ],
+    "notaReal": "A DEnsM coordena o Sistema de Ensino Naval; EAM recebe supervisão funcional e não deve ser listada como subordinada direta.",
+    "fonte": "https://www.marinha.mil.br/ensino/"
   }
 }
