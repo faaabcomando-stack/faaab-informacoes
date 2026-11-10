@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-09-r3",
+  "version": "2026-11-10-auditoria-recebimentos",
   "source": "Imagens enviadas na conversa e catalogo atual; status de recebimento não equivale a arquivo publicado",
   "receivedIds": [
     "ADM-FAAAB",
@@ -137,13 +137,15 @@
     "BtlVtrAnf": "Imagem com escudo de viatura anfíbia recebida: 1000171999.jpg. Não pedir novamente; sem PNG individual instalado.",
     "FAB logo principal": "Imagem enviada com asas e espada prateadas. Está recebida, não pedir novamente nem confundir com emblema do esquadrão.",
     "CAO/BM": "Brasão do Curso de Aperfeiçoamento de Oficiais (CBMDF) recebido, arquivo 1000171978.jpg; ainda não há PNG individual publicado.",
-    "CAEP-BM": "Insígnia CAEP-BM recebida e imagem restaurada nesta conversa; não existe registro próprio no catálogo corrente, não pedir de novo.",
+    "CAEP-BM": "Imagem e versões recortadas/restauradas enviadas. Referência ligada ao curso CUR-COMP-17 de dados/cursos.json; ainda sem id próprio no catálogo de organizações e sem PNG publicado.",
     "CFO/PMDF e CAO/PMDF": "Duas imagens de brasões adaptados já criadas/recebidas; não confundir com CFO/BM e CAO/BM do catálogo.",
     "CFP (losango azul/vermelho)": "Arquivo 1000171973.png: curso de Formação de Praças confirmado pelo usuário, mas força/entidade específica ainda não identificada. Não atribuir automaticamente ao CFP/BM.",
     "Insígnia com águia e espada em branco no preto": "Arquivo 1000171980.jpg recebido, unidade exata não identificada. Não pedir reenvio até verificar.",
     "GDA Jaguar": "1º GDA já recebido. A letra D do brasão pode parecer O. Não chamar de GOA.",
     "BOE FN e COMANF": "PNGs individuais já publicados; não solicitar reenvio. A qualidade/identificação ainda deve ser conferida visualmente.",
-    "Pendências 2026-11-10": "Consultar auditoria-emblemas-faaab-2026-11-10.md: ausência de PNG não é ausência de envio."
+    "Pendências 2026-11-10": "Consultar auditoria-emblemas-faaab-2026-11-10.md: ausência de PNG não é ausência de envio.",
+    "BOE FN/COMANF": "Recebidos na conversa e já constam em assets/emblemas-png. Anteriormente tinham PNG publicado mas status de recebimento falso. Não pedir novamente.",
+    "CFP não atribuído": "O losango azul/vermelho do Curso de Formação de Praças foi enviado em 1000171973.png; força não confirmada pelo usuário, portanto não rotular como CBM-CFP-BM."
   },
   "excludedDoNotReAdd": [
     "FTB-B-Sau",
@@ -232,7 +234,10 @@
     "ESA",
     "EsPCEx",
     "AMAN",
-    "EAM"
+    "EAM",
+    "BOE FN",
+    "COMANF",
+    "Curso de Formação de Praças (imagem recebida, força a confirmar)"
   ],
   "receivedBatches": [
     {
