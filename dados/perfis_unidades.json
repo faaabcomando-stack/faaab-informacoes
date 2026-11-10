@@ -1686,6 +1686,25 @@
         "Estrutura documental confirmada, não comprova implementação real em Roblox."
       ],
       "fonte": "Decisão expressa da administração FAAAB, confirmada em novembro de 2026."
+    },
+    "FMB-COMSUB": {
+      "papel": "Comando da área de submarinos da Marinha FAAAB, distinto do comando de superfície ComForSup.",
+      "atividades": [
+        "Coordenação de atividades de submarinos dentro do roleplay.",
+        "Organização de treinamentos navais próprios da área de submarinos, conforme regras aprovadas da comunidade."
+      ],
+      "sistemas": [
+        "Comando registrado no catálogo; estrutura de grupos, unidades subordinadas e permissões não homologada.",
+        "Brasão original recebido, publicação no portal pendente."
+      ],
+      "formacao": [
+        "Formação e qualificação de pessoal submarinista, quando previstas nas regras do projeto."
+      ],
+      "observacoes": [
+        "Na Marinha real a sigla é ComForS; a FAAAB utiliza COMSUB para distinguir seu cadastro.",
+        "Não substituir ComForSup e não atribuir unidades subordinadas sem aprovação do usuário."
+      ],
+      "fonte": "Registro expresso do usuário, referência institucional https://www.marinha.mil.br/comfors/"
     }
   }
 }
