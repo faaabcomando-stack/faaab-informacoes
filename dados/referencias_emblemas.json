@@ -87,7 +87,8 @@
     "CBM-GOPP",
     "CBM-GOA",
     "CBM-GOESP",
-    "FTB-CIOpMth"
+    "FTB-CIOpMth",
+    "FAB-1--GDA"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -118,10 +119,12 @@
     "GOA": "image(20261110-013038).png lê-se 1º GOA. Não confundir com GAV ou GDA.",
     "MarinhaRemessa": "image(20261110-013443).png: brasão naval recebido, nome institucional não confirmado, não atribuir unidade por palpite.",
     "CIM": "Usuário confirmou ter enviado o emblema. Nome e arquivo exato ainda não verificados no material montado.",
-    "SSPM": "Usuário confirmou ter enviado o emblema. Nome e arquivo exato ainda não verificados no material montado.",
+    "SSPM": "Enviado repetidamente; imagem correta é o escudo de campo preto com letra psi dourada, ondas azuis e brancas e coroa naval. Original ainda não publicado como PNG separado.",
     "BOPE": "Caveira atravessada por faca, imagem image(20261110-013840).png; não confundir com Comandos da Marinha.",
     "Montanha": "Guia de Montanha Avançado já enviado; é distintivo de qualificação, NÃO emblema institucional confirmado do CIOpMth.",
-    "CBM-GOA": "GOA Bombeiros é distinto do 1º GOA da FAB."
+    "CBM-GOA": "GOA Bombeiros é distinto do 1º GOA da FAB.",
+    "1º GDA": "PNG provisório (motivo Jaguar, sem o texto GOA) publicado; insígnia completa oficial fonte INCAER aguarda importação.",
+    "EscolaAprendizes": "Referência visual é a EAMCE; não apresentar um brasão regional como único brasão de todas as EAM."
   },
   "excludedDoNotReAdd": [
     "FTB-B-Sau",
@@ -194,7 +197,9 @@
     "GOPP",
     "GOA Bombeiros",
     "GOESP",
-    "BPP"
+    "BPP",
+    "1º GDA Jaguar",
+    "Escola de Aprendizes-Marinheiros (EAMCE)"
   ],
   "receivedBatches": [
     {
