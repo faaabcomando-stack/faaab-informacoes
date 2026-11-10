@@ -9,24 +9,79 @@ const EXTRA_IDS=["PM-BOPE","FAB-CIAER","CFN-BtlBldFN","CFN-BtlEngFN","CFN-BtlArt
 const EXTRA_COLS=4,EXTRA_ROWS=3;
 const extraMap=new Map(EXTRA_IDS.map((id,i)=>[id,i]));
 // Não exibir versões regionais como brasões universais de toda a instituição.
-const genericUnavailable=new Set(["FMB-EAM","FAB-ETA"]);
+// Um emblema regional pode ser exibido com a origem explícita, não como insígnia universal.
+const genericUnavailable=new Set(["FAB-1-GOA"]);
+const ALIASES=Object.freeze({
+ "FTB-DAD":"FTB-BFE","FTB-DRE":"FTB-BFE",
+ "FTB-PC":"FTB-BPE","FTB-PELOPES":"FTB-BI-Caat","FTB-DCS":"FTB-BI-Caat",
+ "FTB-Precs":"FTB-Cia-Prec-Pqdt","FTB-DCOE":"FTB-BAC",
+ "FTB-PRGM":"FTB-BIM","FTB-POS":"FTB-CIGS",
+ "FTB-SC":"FTB-CIE","FTB-DGC":"FTB-CIE",
+ "FAB-GSD-CHOQUE":"FAB-GSD",
+ "CFN-BtlInfFN":"ADM-CFN","CFN-BtlVtrAnf":"ADM-CFN","CFN-BtlOpRib":"ADM-CFN"
+});
+const PNG_ALIASES=Object.freeze({
+ "FTB-CIOpMth":"FTB-CIOpMth-QUALIFICACAO"
+});
+const LABELS=Object.freeze({
+ "FMB-EAM":"Referência: Escola de Aprendizes-Marinheiros do Ceará (EAMCE)",
+ "FAB-ETA":"Referência: primeiro Esquadrão de Transporte Aéreo (1º ETA)",
+ "FTB-CIOpMth":"Distintivo de Guia de Montanha Avançado; referência de curso, não brasão do centro"
+});
+const pngCache=new Map();
+const selfUrl=document.currentScript?.src||location.href;
+function loadPng(key){
+ if(pngCache.has(key))return pngCache.get(key);
+ const url=new URL("emblemas-png/"+encodeURIComponent(key)+".png",selfUrl).href;
+ const result=new Promise(resolve=>{
+   const img=new Image();
+   img.onload=()=>resolve(url);
+   img.onerror=()=>resolve(null);
+   img.src=url;
+ });
+ pngCache.set(key,result);
+ return result;
+}
+function effective(id){
+ const key=normalized(id);
+ return ALIASES[key]||key;
+}
 const src=new URL("faaab-emblemas-site.webp",document.currentScript.src).href;
 const srcExtra=new URL("faaab-emblemas-extra.webp",document.currentScript.src).href;
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const normalized=id=>typeof id==="string"&&/^[\w-]{2,60}$/.test(id)?id:"";
-function has(id){const k=normalized(id);return (map.has(k)||extraMap.has(k))&&!genericUnavailable.has(k)}
+function has(id){const k=effective(id);return (map.has(k)||extraMap.has(k)||Object.prototype.hasOwnProperty.call(PNG_ALIASES,k))&&!genericUnavailable.has(k)}
 function decorate(node,id){
  if(!node||!has(id))return false;
- const extra=extraMap.has(id);
- const columns=extra?EXTRA_COLS:COLS,rows=extra?EXTRA_ROWS:ROWS;
- const index=extra?extraMap.get(id):map.get(id),col=index%columns,row=Math.floor(index/columns);
+ const key=effective(id);
+ const extra=extraMap.has(key);
+ const hasSprite=map.has(key)||extra;
+ if(hasSprite){
+   const columns=extra?EXTRA_COLS:COLS,rows=extra?EXTRA_ROWS:ROWS;
+   const index=extra?extraMap.get(key):map.get(key);
+   const col=index%columns,row=Math.floor(index/columns);
+   node.style.backgroundImage='url("'+(extra?srcExtra:src)+'")';
+   node.style.backgroundSize=(columns*100)+"% "+(rows*100)+"%";
+   node.style.backgroundPosition=(100*col/(columns-1))+"% "+(100*row/(rows-1))+"%";
+ }
  node.classList.add("faaab-emblem");
- node.style.backgroundImage='url("'+(extra?srcExtra:src)+'")';
- node.style.backgroundSize=(columns*100)+"% "+(rows*100)+"%";
- node.style.backgroundPosition=(100*col/(columns-1))+"% "+(100*row/(rows-1))+"%";
  node.dataset.faaabAtlasReady="1";
- if(!node.hasAttribute("aria-label"))node.setAttribute("aria-label","Emblema de referência FAAAB");
+ const qualified=Object.prototype.hasOwnProperty.call(PNG_ALIASES,key);
+ const referenceKey=qualified?PNG_ALIASES[key]:key;
+ const inherited=ALIASES[id]&&ALIASES[id]!==id;
+ const note=LABELS[key]||(inherited?"Emblema de referência da organização superior, não insígnia específica da subdivisão.":"Emblema de referência FAAAB.");
+ node.title=note;
+ if(!node.hasAttribute("aria-label"))node.setAttribute("aria-label",note);
  if(!node.hasAttribute("role"))node.setAttribute("role","img");
+ // O PNG individual em alta definição prevalece. Se o Pages ainda não o publicou,
+ // o sprite WebP anterior permanece visível sem quebrar a página.
+ loadPng(referenceKey).then(url=>{
+   if(!url||!node.isConnected)return;
+   node.style.backgroundImage='url("'+url+'")';
+   node.style.backgroundPosition="center";
+   node.style.backgroundSize="contain";
+   node.classList.add("faaab-png");
+ });
  return true;
 }
 function element(id,klass=""){
@@ -52,5 +107,5 @@ const observer=new MutationObserver(records=>{
 if(document.documentElement)observer.observe(document.documentElement,{childList:true,subtree:true});
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",()=>hydrate(document.documentElement),{once:true});
 else hydrate(document.documentElement);
-window.FAAABEmblemas=Object.freeze({has,element,markup,decorate,hydrate,count:IDS.length+EXTRA_IDS.length});
+window.FAAABEmblemas=Object.freeze({has,element,markup,decorate,hydrate,count:IDS.length+EXTRA_IDS.length,aliases:ALIASES});
 })();
