@@ -1,6 +1,6 @@
 {
-  "versao": "1.1",
-  "revisadoEm": "2026-10-29",
+  "versao": "2026-11-10-r2",
+  "revisadoEm": "2026-11-10",
   "origem": "Manual de Patentes e Batalhões V0.9 de setembro de 2026; catálogo aprovado em 24/10/2026; decisões da FAAAB preservadas de conversas anteriores. Corrigido pelo responsável: patentes de cada batalhão vão de Soldado até Coronel, não por dez classes de Praças a Superintendente.",
   "esquema": {
     "patenteVsFuncao": "Batalhões usam uma sequência de patentes do Exército começando em Soldado e terminando em Coronel. Funções de administração e especialização não substituem as patentes.",
@@ -220,39 +220,6 @@
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
       "observacoes": null
     },
-    "FTB-B-Prec": {
-      "tipo": "unidade",
-      "nome": "Batalhão de Precursores (adaptação da FAAAB)",
-      "sigla": "B Prec",
-      "hierarquiaInterna": {
-        "modelo": "batalhao",
-        "patentes": [
-          "Soldado",
-          "Soldado de 1ª Classe",
-          "Cabo",
-          "Terceiro-Sargento",
-          "Segundo-Sargento",
-          "Primeiro-Sargento",
-          "Subtenente",
-          "Cadete",
-          "Aspirante a Oficial",
-          "Segundo-Tenente",
-          "Primeiro-Tenente",
-          "Capitão",
-          "Capitão-Sênior",
-          "Major",
-          "Tenente-Coronel",
-          "Coronel"
-        ],
-        "minima": "Soldado",
-        "maxima": "Coronel",
-        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
-        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
-      },
-      "subunidades": [],
-      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
-      "observacoes": null
-    },
     "FTB-BIB": {
       "tipo": "unidade",
       "nome": "Batalhão de Infantaria Blindado",
@@ -296,39 +263,6 @@
           "status": "Sigla recuperada de conversa; nome completo a documentar"
         }
       ],
-      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
-      "observacoes": null
-    },
-    "FTB-BCC": {
-      "tipo": "unidade",
-      "nome": "Batalhão de Carros de Combate",
-      "sigla": "BCC",
-      "hierarquiaInterna": {
-        "modelo": "batalhao",
-        "patentes": [
-          "Soldado",
-          "Soldado de 1ª Classe",
-          "Cabo",
-          "Terceiro-Sargento",
-          "Segundo-Sargento",
-          "Primeiro-Sargento",
-          "Subtenente",
-          "Cadete",
-          "Aspirante a Oficial",
-          "Segundo-Tenente",
-          "Primeiro-Tenente",
-          "Capitão",
-          "Capitão-Sênior",
-          "Major",
-          "Tenente-Coronel",
-          "Coronel"
-        ],
-        "minima": "Soldado",
-        "maxima": "Coronel",
-        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
-        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
-      },
-      "subunidades": [],
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
       "observacoes": null
     },
@@ -445,58 +379,6 @@
           "sigla": "PRGM",
           "nome": "Pelotão de Reconhecimento e Guerra em Montanha",
           "catalogoId": "FTB-PRGM",
-          "status": "Presente no catálogo aprovado"
-        }
-      ],
-      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
-      "observacoes": null
-    },
-    "FTB-B-Sau": {
-      "tipo": "unidade",
-      "nome": "Batalhão de Saúde",
-      "sigla": "B Sau",
-      "hierarquiaInterna": {
-        "modelo": "batalhao",
-        "patentes": [
-          "Soldado",
-          "Soldado de 1ª Classe",
-          "Cabo",
-          "Terceiro-Sargento",
-          "Segundo-Sargento",
-          "Primeiro-Sargento",
-          "Subtenente",
-          "Cadete",
-          "Aspirante a Oficial",
-          "Segundo-Tenente",
-          "Primeiro-Tenente",
-          "Capitão",
-          "Capitão-Sênior",
-          "Major",
-          "Tenente-Coronel",
-          "Coronel"
-        ],
-        "minima": "Soldado",
-        "maxima": "Coronel",
-        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
-        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
-      },
-      "subunidades": [
-        {
-          "sigla": "DRT",
-          "nome": "Destacamento de Resgate Tático Militar",
-          "catalogoId": "FTB-DRT",
-          "status": "Presente no catálogo aprovado"
-        },
-        {
-          "sigla": "GRE",
-          "nome": "Grupo de Resgate e Evacuação Militar",
-          "catalogoId": "FTB-GRE",
-          "status": "Presente no catálogo aprovado"
-        },
-        {
-          "sigla": "PAPH",
-          "nome": "Pelotão de Atendimento Pré-Hospitalar Militar",
-          "catalogoId": "FTB-PAPH",
           "status": "Presente no catálogo aprovado"
         }
       ],
@@ -651,39 +533,6 @@
       "tipo": "unidade",
       "nome": "Batalhão de Infantaria de Selva",
       "sigla": "BIS",
-      "hierarquiaInterna": {
-        "modelo": "batalhao",
-        "patentes": [
-          "Soldado",
-          "Soldado de 1ª Classe",
-          "Cabo",
-          "Terceiro-Sargento",
-          "Segundo-Sargento",
-          "Primeiro-Sargento",
-          "Subtenente",
-          "Cadete",
-          "Aspirante a Oficial",
-          "Segundo-Tenente",
-          "Primeiro-Tenente",
-          "Capitão",
-          "Capitão-Sênior",
-          "Major",
-          "Tenente-Coronel",
-          "Coronel"
-        ],
-        "minima": "Soldado",
-        "maxima": "Coronel",
-        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
-        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
-      },
-      "subunidades": [],
-      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
-      "observacoes": null
-    },
-    "FTB-BIL-Mth": {
-      "tipo": "unidade",
-      "nome": "Batalhão de Infantaria Leve de Montanha",
-      "sigla": "BIL Mth",
       "hierarquiaInterna": {
         "modelo": "batalhao",
         "patentes": [
