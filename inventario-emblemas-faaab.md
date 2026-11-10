@@ -48,7 +48,7 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ✅ recebido — **EGAF** (Equipe Geral da Administração da FAAAB)
 - ✅ recebido — **GOV** (Governo da FAAAB)
 - ✅ recebido — **FTB** (Exército Brasileiro)
-- ☐ referência ainda não identificada com segurança — **FAB** (Força Aérea Brasileira)
+- ✅ recebido — **FAB** (Força Aérea Brasileira)
 - ✅ recebido — **FMB** (Marinha Brasileira)
 - ✅ recebido — **CFN** (Corpo de Fuzileiros Navais)
 - ✅ recebido — **CBM** (Corpo de Bombeiros Militar)
@@ -179,7 +179,7 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ☐ referência ainda não identificada com segurança — **CFP/BM** (Curso de Formação de Praças Bombeiros Militares (nomenclatura do projeto))
 - ☐ referência ainda não identificada com segurança — **CFS/BM** (Curso de Formação de Sargentos Bombeiros Militares (nomenclatura do projeto))
 - ☐ referência ainda não identificada com segurança — **CFO/BM** (Curso de Formação de Oficiais Bombeiros Militares (nomenclatura do projeto))
-- ☐ referência ainda não identificada com segurança — **CAO/BM** (Curso de Aperfeiçoamento de Oficiais Bombeiros Militares (a validar na FAAAB))
+- ✅ recebido — **CAO/BM** (Curso de Aperfeiçoamento de Oficiais Bombeiros Militares (a validar na FAAAB))
 - ☐ referência ainda não identificada com segurança — **CSBM** (Curso Superior de Bombeiro Militar (a validar na FAAAB))
 
 ## Arquivos e validação
@@ -213,3 +213,18 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - **PM:** BPP imagem recebida (PMEDF).
 - **CBM:** GBS, GSFMA, GOPP, GOA e GOESP recebidos. Não confundir GOA dos Bombeiros com 1º GOA da FAB.
 - Registros visuais recebidos não comprovam integração técnica até teste de navegador.
+
+## Conferência definitiva dos envios recentes — 10/11/2026
+
+**Não solicitar novamente:** CIGS, ESA, EsPCEx, AMAN, CI Pqdt GPB, EAM, SSPM, QTE, QTA, CPA, GDA Jaguar, logos principais do Exército, Marinha e FAB.
+
+- ✅ **FAB principal**: asas e espada prateadas, recebido (`1794306390375.jpeg`), ainda sem PNG próprio.
+- ✅ **CAO/BM (CBMDF)**: imagem enviada (`1000171978.jpg`), ainda sem PNG próprio.
+- ✅ **CFO/BM**: imagem enviada anteriormente e registro existente.
+- ✅ **CAEP-BM**: imagem original e versão restaurada recebidas; **não existe registro próprio** no catálogo atual; não confundir com CAO/BM.
+- ✅ **CCFA**: brasão de Paracomandos recebido; não repetir pedido.
+- ✅ **BtlVtrAnf**: escudo de viatura anfíbia recebido, falta publicação como PNG próprio.
+- ◐ **Curso de Formação de Praças**: distintivo em losango azul/vermelho recebido (`1000171973.png`), mas força específica não confirmada; **não atribuir automaticamente** ao CFP/BM.
+- ◐ **Águia/espada em traços claros** (`1000171980.jpg`): recebido, nome exato não confirmado.
+- ✅ **CFO e CAO da PMDF**: brasões adaptados recebidos em arquivos separados; não substituem os cursos dos Bombeiros.
+- **Atenção:** PNG ausente no repositório não significa brasão não enviado; algumas subdivisões usam o emblema da unidade superior e não precisam de um próprio.
