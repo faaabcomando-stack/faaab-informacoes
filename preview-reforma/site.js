@@ -86,7 +86,7 @@ function record(item){
  const article=el("article","record");const code=el("span","record-code",item.sigla||item.id||"FAAAB");
  const body=el("div","record-body"),title=el("strong","",item.nome||"Organização"),sub=el("small","",(item.tipo||"Estrutura")+" · "+(item.estadoImplementacao||"Situação não confirmada"));
  body.append(title,sub);const link=el("a","","↗");link.href="../ficha.html?id="+encodeURIComponent(item.id);link.setAttribute("aria-label","Abrir ficha de "+(item.nome||item.id));
- article.append(code,body,link);return article;
+ const badge=window.FAAABEmblemas?.element(item.id,"preview-emblem");if(badge)article.append(badge);article.append(code,body,link);return article;
 }
 function renderHomeDirectory(data){
  const q=$("q"),sel=$("area-select"),target=$("results"),count=$("result-count"),more=$("more-results");
@@ -136,7 +136,7 @@ function renderArea(data){
  const title=$("area-title"),desc=$("area-desc"),seal=$("area-seal"),hero=$("area-hero");
  if(title)title.textContent=a.title;if(desc)desc.textContent=a.desc;
  document.title=a.title+" | FAAAB";if(hero)hero.classList.add(a.klass);
- if(seal){const use=document.createElementNS("http://www.w3.org/2000/svg","use");use.setAttribute("href","assets/simbolos.svg#"+valid);seal.replaceChildren(use)}
+ if(seal){const forceId={FMB:"ADM-FMB",CBM:"ADM-CBM",ADM:"ADM-GOV",FTB:"ADM-FTB",FAB:"ADM-FAB",PM:"ADM-PM"}[valid];const emblem=window.FAAABEmblemas?.element(forceId,"seal");if(emblem){seal.replaceWith(emblem)}else{const use=document.createElementNS("http://www.w3.org/2000/svg","use");use.setAttribute("href","assets/simbolos.svg#"+valid);seal.replaceChildren(use)}}
  if($("area-breadcrumb"))$("area-breadcrumb").textContent=a.short;
  const all=Array.isArray(data)?data.filter(x=>x&&x.id&&x.nome):[];
  const area=all.filter(x=>valid==="FMB"?["FMB","CFN"].includes(x.forca):x.forca===valid);
@@ -171,7 +171,7 @@ function renderArea(data){
    const card=el("article","entry"),top=el("div","entry-top"),badge=el("svg","unit-seal"),tag=el("span","tag",(x.sigla||x.tipo||"Organização"));
    badge.setAttribute("viewBox","0 0 80 80");badge.setAttribute("aria-hidden","true");
    const use=document.createElementNS("http://www.w3.org/2000/svg","use");
-   use.setAttribute("href","assets/simbolos.svg#"+(x.forca==="CFN"?"FMB":valid));badge.append(use);top.append(badge,tag);
+   use.setAttribute("href","assets/simbolos.svg#"+(x.forca==="CFN"?"FMB":valid));badge.append(use);const realBadge=window.FAAABEmblemas?.element(x.id,"unit-seal");top.append(realBadge||badge,tag);
    const h=el("h3","",x.nome),p=el("p","",(typeNames[x.tipo]||x.tipo||"Estrutura")+" · "+(x.estadoImplementacao||"Situação não confirmada"));
    const link=el("a","","Consultar ficha →");link.href="../ficha.html?id="+encodeURIComponent(x.id);
    card.append(top,h,p,link);out.append(card);
