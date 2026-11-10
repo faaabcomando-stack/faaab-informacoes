@@ -246,7 +246,8 @@
     "DIRENS — brasão enviado 1794312287320.jpeg",
     "COMSUB — brasão original enviado (1000171966.jpg)",
     "COMSUB / ComForS — brasão enviado 1000171966.jpg",
-    "CIM — imagem original 1000171967.png"
+    "CIM — imagem original 1000171967.png",
+    "FMB-CIM — brasão original recebido (1000171967.png)"
   ],
   "receivedBatches": [
     {
@@ -519,6 +520,20 @@
           "file": "1000171967.png",
           "ref": "cim-original",
           "status": "received-not-published"
+        }
+      ]
+    },
+    {
+      "batchId": "cim-imagem-confirmada-20261110",
+      "note": "O usuário confirmou que 1000171967.png (446x633) é o emblema do CIM. Arquivo idêntico disponibilizado pelo Wikimedia Commons e procedência heráldica confirmada no acervo da Marinha. Exibir imagem original sem gerar ou degradar.",
+      "items": [
+        {
+          "catalogId": "FMB-CIM",
+          "file": "1000171967.png",
+          "ref": "cim-original-1000171967",
+          "remoteOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Centro_de_Informa%C3%A7%C3%B5es_da_Marinha.png",
+          "archive": "https://repositoriodphdm.marinha.mil.br/handle/123456789/848228",
+          "status": "received-published-as-remote-original"
         }
       ]
     }
