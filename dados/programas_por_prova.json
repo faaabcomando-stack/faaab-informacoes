@@ -1932,18 +1932,6 @@
       "fonte": null
     },
     {
-      "id": "CAT-FTB-BI-Pan",
-      "catalogoId": "CAT-FTB-BI-Pan",
-      "origemId": "FTB-BI-Pan",
-      "forca": "FTB",
-      "tipo": "unidade",
-      "nome": "Batalhão de Infantaria de Pantanal (adaptação da FAAAB)",
-      "estado": "aguardando_programa_faaab",
-      "programaId": null,
-      "motivo": "Ainda não existe conteúdo programático confirmado para uma prova própria desta unidade. Não aplicar provas genéricas automaticamente.",
-      "fonte": null
-    },
-    {
       "id": "CAT-FTB-17--B-Fron",
       "catalogoId": "CAT-FTB-17--B-Fron",
       "origemId": "FTB-17--B-Fron",
