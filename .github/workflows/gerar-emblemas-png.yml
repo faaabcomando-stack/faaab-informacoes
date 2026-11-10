@@ -1,0 +1,35 @@
+name: Gerar emblemas PNG FAAAB
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/gerar-emblemas-png.yml"
+      - "scripts/gerar-emblemas-png.py"
+      - "assets/faaab-emblemas-site.webp"
+      - "assets/faaab-emblemas-extra.webp"
+      - "dados/atlas-emblemas.json"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dependência de imagens
+        run: python -m pip install Pillow==11.3.0
+      - name: Exportar PNG recortados
+        run: python scripts/gerar-emblemas-png.py
+      - name: Atualizar artefatos do próprio repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/emblemas-png dados/atlas-png-emblemas.json
+          if ! git diff --staged --quiet; then
+            git commit -m "assets: exportar emblemas transparentes PNG"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
