@@ -91,7 +91,9 @@
     "FAB-1--GDA",
     "CBM-CFO-BM",
     "FAB-CCFA",
-    "CFN-BtlVtrAnf"
+    "CFN-BtlVtrAnf",
+    "ADM-FAB",
+    "CBM-CAO-BM"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -129,8 +131,15 @@
     "1º GDA": "A imagem recebida em 10/11/2026 diz 1º GDA, não GOA: o D se assemelha graficamente a O. Usar assets/emblemas-png/FAB-1--GDA.png; não inventar GOA.",
     "EscolaAprendizes": "Referência visual é a EAMCE; não apresentar um brasão regional como único brasão de todas as EAM.",
     "CFO/BM": "A arte circular com CBMDF foi convertida em NOVO BRASÃO heráldico; PNG gerado na conversa, publicação no GitHub ainda pendente. A imagem PMDF 1000171976.webp não é CBMDF.",
-    "CCFA": "O emblema PARACOMANDOS 1000171981.jpg é do Curso de Comandos de Força Aérea; não cadastrar como unidade PARACOM.",
-    "BtlVtrAnf": "Novo escudo BTLVTRANF recebido em 1000171999.jpg, precisa PNG individual."
+    "CCFA": "Paracomandos imagem já enviada: 1000171981.jpg. Não solicitar novamente.",
+    "BtlVtrAnf": "Imagem com escudo de viatura anfíbia recebida: 1000171999.jpg. Não pedir novamente; sem PNG individual instalado.",
+    "FAB logo principal": "Imagem enviada com asas e espada prateadas. Está recebida, não pedir novamente nem confundir com emblema do esquadrão.",
+    "CAO/BM": "Brasão do Curso de Aperfeiçoamento de Oficiais (CBMDF) recebido, arquivo 1000171978.jpg; ainda não há PNG individual publicado.",
+    "CAEP-BM": "Insígnia CAEP-BM recebida e imagem restaurada nesta conversa; não existe registro próprio no catálogo corrente, não pedir de novo.",
+    "CFO/PMDF e CAO/PMDF": "Duas imagens de brasões adaptados já criadas/recebidas; não confundir com CFO/BM e CAO/BM do catálogo.",
+    "CFP (losango azul/vermelho)": "Arquivo 1000171973.png: curso de Formação de Praças confirmado pelo usuário, mas força/entidade específica ainda não identificada. Não atribuir automaticamente ao CFP/BM.",
+    "Insígnia com águia e espada em branco no preto": "Arquivo 1000171980.jpg recebido, unidade exata não identificada. Não pedir reenvio até verificar.",
+    "GDA Jaguar": "1º GDA já recebido. A letra D do brasão pode parecer O. Não chamar de GOA."
   },
   "excludedDoNotReAdd": [
     "FTB-B-Sau",
@@ -208,7 +217,18 @@
     "Escola de Aprendizes-Marinheiros (EAMCE)",
     "CFO/BM (CBMDF)",
     "CCFA / Paracomandos",
-    "BtlVtrAnf"
+    "BtlVtrAnf",
+    "FAB (principal)",
+    "CAO/BM",
+    "CAEP-BM",
+    "CFP — losango vermelho/azul",
+    "CCFA",
+    "CFO/PMDF",
+    "CAO/PMDF",
+    "ESA",
+    "EsPCEx",
+    "AMAN",
+    "EAM"
   ],
   "receivedBatches": [
     {
@@ -375,6 +395,67 @@
           "file": "image(20261110-022305).png",
           "status": "repetido",
           "note": "1º GOA FAB, NÃO CBM-GOA"
+        }
+      ]
+    },
+    {
+      "batchId": "verificacao-historico-20261110",
+      "note": "Conferência dos anexos recentes com catálogo e arquivos do GitHub. Recebido não significa publicado, e cursos de forças diferentes não devem ser confundidos.",
+      "attachmentNames": [
+        {
+          "filename": "1794306390375.jpeg",
+          "visibleText": "Asas e espada (FAB principal)",
+          "catalogId": "ADM-FAB",
+          "status": "received-not-published"
+        },
+        {
+          "filename": "1000171978.jpg",
+          "visibleText": "Curso de Aperfeiçoamento de Oficiais CBMDF",
+          "catalogId": "CBM-CAO-BM",
+          "status": "received-not-published"
+        },
+        {
+          "filename": "1794308747433.png",
+          "visibleText": "CAEP-BM",
+          "status": "received-not-in-current-catalog"
+        },
+        {
+          "filename": "1000171981.jpg",
+          "visibleText": "Paracomandos CCFA",
+          "catalogId": "FAB-CCFA",
+          "status": "received-not-published"
+        },
+        {
+          "filename": "1000171999.jpg",
+          "visibleText": "BtlVtrAnf",
+          "catalogId": "CFN-BtlVtrAnf",
+          "status": "received-not-published"
+        },
+        {
+          "filename": "1000171973.png",
+          "visibleText": "Curso Formação de Praças, força não confirmada",
+          "status": "received-unassigned"
+        },
+        {
+          "filename": "1000171980.jpg",
+          "visibleText": "Águia espada e ramos, identificação incompleta",
+          "status": "received-unassigned"
+        },
+        {
+          "filename": "1000171974.jpg",
+          "visibleText": "CFO CBMDF",
+          "catalogId": "CBM-CFO-BM",
+          "status": "received"
+        },
+        {
+          "filename": "1794306391793.png",
+          "visibleText": "Brasão CFO PMDF adaptado",
+          "status": "received-outside-catalog"
+        },
+        {
+          "filename": "1794306392042.png",
+          "visibleText": "Brasão CAO PMDF adaptado",
+          "status": "received-outside-catalog"
         }
       ]
     }
