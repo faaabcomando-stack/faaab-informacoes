@@ -17,9 +17,9 @@ const ALIASES=Object.freeze({
  "FTB-PRGM":"FTB-BIM","FTB-POS":"FTB-CIGS",
  "FTB-SC":"FTB-CIE","FTB-DGC":"FTB-CIE",
  "FAB-GSD-CHOQUE":"FAB-GSD",
- "CFN-BtlInfFN":"ADM-CFN","CFN-BtlVtrAnf":"ADM-CFN","CFN-BtlOpRib":"ADM-CFN"
+ "CFN-BtlInfFN":"ADM-CFN","CFN-BtlVtrAnf":"ADM-CFN"
 });
-const PNG_ONLY_IDS=new Set(["FAB-1--GDA","FTB-CIOPan","FMB-SSPM","CFN-BOE-FN","CFN-COMANF","ADM-PM","ADM-TAI-EB","ADM-TAI-FAB","ADM-TAI-MB"]); // GOA nunca substitui GDA.
+const PNG_ONLY_IDS=new Set(["CFN-BtlOpRib","FAB-1--GDA","FTB-CIOPan","FMB-SSPM","CFN-BOE-FN","CFN-COMANF","ADM-PM","ADM-TAI-EB","ADM-TAI-FAB","ADM-TAI-MB"]); // GOA nunca substitui GDA.
 // Referência heráldica original publicada pela Marinha, em PNG transparente.
 const REMOTE_EMBLEMS=Object.freeze({
  "FMB-CIM":"https://upload.wikimedia.org/wikipedia/commons/4/4c/Centro_de_Informa%C3%A7%C3%B5es_da_Marinha.png",
@@ -34,6 +34,8 @@ const LABELS=Object.freeze({
  "FMB-EAM":"Referência: Escola de Aprendizes-Marinheiros do Ceará (EAMCE)",
  "FAB-ETA":"Referência: primeiro Esquadrão de Transporte Aéreo (1º ETA)",
  "FTB-CIOpMth":"Distintivo de Guia de Montanha Avançado; referência de curso, não brasão do centro",
+ "FTB-Bda-Inf-Mth":"Brasão da 4ª Brigada de Infantaria Leve – Montanha, unidade predecessora renomeada para Brigada de Infantaria de Montanha.",
+ "CFN-BtlOpRib":"Distintivo 2D do 1º Batalhão de Operações Ribeirinhas, fonte Marinha do Brasil.",
  "FAB-1--GDA":"1º GDA — Esquadrão Jaguar. No desenho da sigla, a letra D pode parecer O.",
  "ADM-TAI-EB":"Taifa do Exército — QTE.",
  "ADM-TAI-MB":"Taifa da Marinha — referência CPA.",

@@ -1046,7 +1046,7 @@
     "forca": "FTB",
     "tipo": "brigada",
     "secao": "EXÉRCITO - BRIGADAS INTERNAS (NÃO GRUPOS INDEPENDENTES)",
-    "logo": null,
+    "logo": "assets/emblemas-png/FTB-Bda-Inf-Mth.png",
     "vidaReal": "Brigada militar é uma grande unidade que pode reunir batalhões e elementos de apoio e comando.",
     "noJogo": "Brigada interna da FAAAB, subordinada à força correspondente. Não representa automaticamente um grupo Roblox individual.",
     "requisitos": null,
@@ -1056,7 +1056,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "fonteLogo": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d12906.htm",
+    "creditoLogo": "Brasão da unidade predecessora 4ª Brigada de Infantaria Leve – Montanha, renomeada para Brigada de Infantaria de Montanha."
   },
   {
     "id": "FTB-Bda-Inf-Mec",
@@ -1914,7 +1916,7 @@
     "forca": "CFN",
     "tipo": "unidade",
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
-    "logo": null,
+    "logo": "assets/emblemas-png/CFN-BtlOpRib.png",
     "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
     "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
     "requisitos": null,
@@ -1924,7 +1926,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "fonteLogo": "https://commons.wikimedia.org/wiki/File:Distintivo_1%C2%BABtlOpRib.png",
+    "creditoLogo": "Distintivo 2D do 1º Batalhão de Operações Ribeirinhas, fonte Marinha do Brasil via Wikimedia Commons; arquivo PNG em alta resolução."
   },
   {
     "id": "FMB-CIAMPA",

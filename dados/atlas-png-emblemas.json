@@ -335,10 +335,11 @@
     "FTB-Bda-Inf-Mth": {
       "id": "FTB-Bda-Inf-Mth",
       "path": "assets/emblemas-png/FTB-Bda-Inf-Mth.png",
-      "source": "faaab-emblemas-site.webp",
+      "source": "Decreto 12.906/2026 / brasão da 4ª Bda Inf L (Mth)",
       "x": 2,
       "y": 4,
-      "status": "miniatura recortada"
+      "status": "unidade renomeada; imagem oficial da unidade predecessora",
+      "sourceUrl": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d12906.htm"
     },
     "FTB-BIP": {
       "id": "FTB-BIP",
@@ -689,6 +690,14 @@
       "path": "assets/emblemas-png/FAB-1--GDA.png",
       "source": "recorte provisório do motivo jaguar/radar; sem legenda do brasão antigo",
       "status": "referência visual provisória; não é insígnia integral do 1º GDA"
+    },
+    "CFN-BtlOpRib": {
+      "id": "CFN-BtlOpRib",
+      "path": "assets/emblemas-png/CFN-BtlOpRib.png",
+      "source": "Marinha do Brasil / Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Distintivo_1%C2%BABtlOpRib.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Distintivo_1%C2%BABtlOpRib.png",
+      "status": "distintivo 2D oficial em PNG, alta resolução"
     }
   },
   "notes": "PNGs extraídos dos WebPs antigos; substitua por fontes originais de alta resolução quando possível. GDA não foi substituído por GOA."
