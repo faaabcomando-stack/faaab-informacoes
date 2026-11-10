@@ -196,7 +196,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "sgex",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "ADM-SGM",
@@ -215,7 +217,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "sgm",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "ADM-SEFA",
@@ -234,7 +238,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "sefa",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "ADM-TAI-EB",
@@ -1393,15 +1399,15 @@
     "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
-    "id": "FAB-BINFAE-Guarda",
-    "sigla": "BINFAE-Guarda",
-    "nome": "1º Batalhão de Infantaria da Aeronáutica - Guarda (designação da FAAAB)",
+    "id": "FAB-GSD",
+    "sigla": "GSD",
+    "nome": "Grupo de Segurança e Defesa",
     "forca": "FAB",
     "tipo": "unidade",
-    "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
+    "secao": "FAB - SEGURANÇA E DEFESA",
     "logo": null,
     "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
-    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
+    "noJogo": "Organização de Segurança e Defesa da FAB no universo FAAAB; substitui os dois antigos BINFAE no planejamento. O Pelotão de Choque é subdivisão da GSD, não outro batalhão.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
@@ -1409,18 +1415,20 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Reorganização expressa da administração FAAAB em 10/11/2026",
+    "emblemaRef": "gsd",
+    "notaNomenclatura": "GSD. Não restaurar BINFAE-Guarda nem BINFAE-Choque como unidades independentes."
   },
   {
-    "id": "FAB-BINFAE-Choque",
-    "sigla": "BINFAE-Choque",
-    "nome": "2º Batalhão de Infantaria da Aeronáutica - Choque (designação da FAAAB)",
+    "id": "FAB-GSD-CHOQUE",
+    "sigla": "Pel Choque",
+    "nome": "Pelotão de Choque da GSD",
     "forca": "FAB",
-    "tipo": "unidade",
-    "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
+    "tipo": "subdivisao",
+    "secao": "FAB - SEGURANÇA E DEFESA",
     "logo": null,
     "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
-    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
+    "noJogo": "Pelotão de Choque subordinado à GSD; não é um segundo BINFAE independente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
@@ -1428,7 +1436,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Reorganização expressa da administração FAAAB em 10/11/2026",
+    "grupoPaiId": "FAB-GSD"
   },
   {
     "id": "FAB-1--GDA",
@@ -1450,23 +1459,24 @@
     "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
-    "id": "FAB-EAV",
-    "sigla": "EAV",
-    "nome": "Esquadrão de Asas Rotativas (nome/sigla de uso interno da FAAAB; não há sigla oficial genérica equivalente)",
+    "id": "FAB-IEAV",
+    "sigla": "IEAv",
+    "nome": "Instituto de Estudos Avançados",
     "forca": "FAB",
-    "tipo": "unidade",
-    "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
+    "tipo": "instituicao",
+    "secao": "FAB - CIÊNCIA, TECNOLOGIA E PESQUISA",
     "logo": null,
-    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
-    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
+    "vidaReal": "Instituto de Estudos Avançados (IEAv) do Comando da Aeronáutica, dedicado a pesquisas científicas e tecnologias aeroespaciais.",
+    "noJogo": "Referência institucional para tecnologia e pesquisa na FAAAB. Não é Esquadrão de Asas Rotativas (EAV). Funções, implantação e direção no jogo dependem de aprovação específica.",
     "requisitos": null,
     "aprovado": true,
-    "referencia": "Verificar correspondência exata caso a caso",
+    "referencia": "https://www2.fab.mil.br/incaer/index.php/heraldica-siscult/emblemas2/352-ieav",
     "grupoSeparado": null,
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Correção expressa da administração FAAAB em 10/11/2026",
+    "emblemaRef": "ieav"
   },
   {
     "id": "FAB-ETA",
@@ -1485,26 +1495,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
-  },
-  {
-    "id": "FAB-ECDA",
-    "sigla": "ECDA",
-    "nome": "Esquadrão de Controle e Defesa Antiaérea (denominação fictícia da FAAAB)",
-    "forca": "FAB",
-    "tipo": "unidade",
-    "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
-    "logo": null,
-    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
-    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
-    "requisitos": null,
-    "aprovado": true,
-    "referencia": "Adaptação fictícia FAAAB",
-    "grupoSeparado": null,
-    "estadoImplementacao": "Não confirmado",
-    "responsavel": null,
-    "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "eta-1",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada",
+    "referenciaVisual": "Imagem recebida corresponde especificamente ao 1º ETA, não automaticamente a todo Esquadrão de Transporte Aéreo."
   },
   {
     "id": "FAB-EAS-PARA-SAR",
@@ -1523,45 +1517,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
-  },
-  {
-    "id": "FAB-PARACOM",
-    "sigla": "PARACOM",
-    "nome": "Paracomandos (unidade independente FICTÍCIA da FAAAB; sigla não oficial)",
-    "forca": "FAB",
-    "tipo": "unidade",
-    "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
-    "logo": null,
-    "vidaReal": "Não existe equivalência institucional direta confirmada com essa sigla.",
-    "noJogo": "Unidade fictícia independente da FAAAB. A qualificação CCFA é curso, não o mesmo que essa unidade.",
-    "requisitos": null,
-    "aprovado": true,
-    "referencia": "Adaptação fictícia FAAAB",
-    "grupoSeparado": null,
-    "estadoImplementacao": "Não confirmado",
-    "responsavel": null,
-    "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
-  },
-  {
-    "id": "FAB-CIAAR",
-    "sigla": "CIAAR",
-    "nome": "Centro de Instrução e Adaptação da Aeronáutica",
-    "forca": "FAB",
-    "tipo": "centro",
-    "secao": "FAB - CENTROS E ESCOLAS QUE JÁ APARECIAM NO PLANEJAMENTO",
-    "logo": null,
-    "vidaReal": "Centro destinado a instrução, especialização ou inteligência, conforme sua denominação. A equivalência institucional exata deve ser verificada para cada item.",
-    "noJogo": "Estrutura de instrução especializada, formação ou inteligência da FAAAB. Cursos internos, vagas e seleção devem ser definidos separadamente.",
-    "requisitos": null,
-    "aprovado": true,
-    "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null,
-    "estadoImplementacao": "Não confirmado",
-    "responsavel": null,
-    "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "para-sar",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FAB-EEAR",
@@ -1580,7 +1538,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "eear",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FAB-EPCAR",
@@ -1599,7 +1559,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "epcar",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FAB-AFA",
@@ -1618,7 +1580,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "afa",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FAB-ECEMAR",
@@ -1637,7 +1601,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "ecemar",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FAB-CIAER",
@@ -1697,25 +1663,6 @@
     "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
   },
   {
-    "id": "FMB-ComForS",
-    "sigla": "ComForS",
-    "nome": "Comando da Força de Submarinos",
-    "forca": "FMB",
-    "tipo": "unidade",
-    "secao": "MARINHA - UNIDADES NAVAIS DO PROJETO",
-    "logo": null,
-    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
-    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
-    "requisitos": null,
-    "aprovado": true,
-    "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null,
-    "estadoImplementacao": "Não confirmado",
-    "responsavel": null,
-    "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
-  },
-  {
     "id": "FMB-GrupCom",
     "sigla": "GrupCom",
     "nome": "Grupamento de Comando e Comunicações (denominação da FAAAB)",
@@ -1751,7 +1698,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "grumec",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FMB-ComForSup",
@@ -1770,7 +1719,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Revisão FAAAB de 10/11/2026",
+    "emblemaRef": "comforsup",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada",
+    "notaNomenclatura": "Na FAAAB, a administração optou por não manter ComForS como entrada própria. Na Marinha real, ComForS designa Submarinos e ComForSup designa Superfície; não são sinônimos."
   },
   {
     "id": "FMB-CIM",
@@ -1979,7 +1931,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "ciampa",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FMB-CIAA",
@@ -1998,7 +1952,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "ciaa",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FMB-CIAW",
@@ -2017,7 +1973,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "ciaw",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FMB-EAM",
@@ -2036,7 +1994,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "eamce",
+    "referenciaVisual": "Imagem recebida: Escola de Aprendizes-Marinheiros do Ceará (EAMCE). É um brasão regional, não o emblema de todas as EAM.",
+    "estadoDoEmblema": "Referência EAMCE recebida; uso na EAM genérica exige distinção regional"
   },
   {
     "id": "FMB-CN",
@@ -2055,7 +2016,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "cn",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FMB-EN",
@@ -2074,7 +2037,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "en",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "CBM-GBS",
@@ -2397,7 +2362,9 @@
     "estadoImplementacao": "Planejada; não confirmada no Roblox",
     "responsavel": null,
     "dataRegistro": "2026-11-09",
-    "versaoFonte": "Inclusão aprovada pelo usuário em 09/11/2026"
+    "versaoFonte": "Inclusão aprovada pelo usuário em 09/11/2026",
+    "emblemaRef": "unifa",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FAB-EAOAR",
@@ -2416,7 +2383,9 @@
     "estadoImplementacao": "Planejada; não confirmada no Roblox",
     "responsavel": null,
     "dataRegistro": "2026-11-09",
-    "versaoFonte": "Inclusão aprovada pelo usuário em 09/11/2026"
+    "versaoFonte": "Inclusão aprovada pelo usuário em 09/11/2026",
+    "emblemaRef": "eaoar",
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FMB-SSPM",
