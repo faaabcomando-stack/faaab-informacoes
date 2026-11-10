@@ -73,7 +73,9 @@
     "FTB-B-Op-Psi",
     "FMB-CIM",
     "FMB-SSPM",
-    "CFN-CiaPolBtlNav"
+    "CFN-CiaPolBtlNav",
+    "PM-ROTAM",
+    "PM-BPChoque"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -162,7 +164,9 @@
     "B Op Psi",
     "CIM",
     "SSPM",
-    "CiaPolBtlNav"
+    "CiaPolBtlNav",
+    "ROTAM",
+    "BPChoque"
   ],
   "receivedBatches": [
     {
@@ -230,6 +234,46 @@
         }
       ],
       "note": "Arquivos originais enviados na conversa; o inventário não implica que os PNGs já estejam no GitHub."
+    },
+    {
+      "batchId": "remessa-20261110-0138",
+      "note": "Seis imagens recebidas. As duas primeiras são brasões navais não identificados com segurança; as duas seguintes mostram emblemas de comandos sem vínculo categórico confirmado; as duas últimas são ROTAM e Batalhão de Polícia de Choque.",
+      "attachmentNames": [
+        {
+          "filename": "image(20261110-013805).png",
+          "visibleText": "Brasão naval com timão e âncora",
+          "status": "unidentified"
+        },
+        {
+          "filename": "image(20261110-013813).png",
+          "visibleText": "Brasão naval com letra J, muralha e âncora",
+          "status": "unidentified"
+        },
+        {
+          "filename": "image(20261110-013825).png",
+          "visibleText": "Comandos — caveira, âncora, raio",
+          "status": "unassigned",
+          "notes": "Não atribuir automaticamente a COMANF ou BOE FN"
+        },
+        {
+          "filename": "image(20261110-013840).png",
+          "visibleText": "Emblema circular caveira e adaga",
+          "status": "unassigned",
+          "notes": "Não atribuir automaticamente a unidade"
+        },
+        {
+          "filename": "image(20261110-013849).png",
+          "visibleText": "ROTAM",
+          "status": "identified",
+          "catalogId": "PM-ROTAM"
+        },
+        {
+          "filename": "image(20261110-013905).png",
+          "visibleText": "PMERJ Batalhão de Polícia de Choque",
+          "status": "identified",
+          "catalogId": "PM-BPChoque"
+        }
+      ]
     }
   ]
 }
