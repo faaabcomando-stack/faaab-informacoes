@@ -2247,7 +2247,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "rotam",
+    "estadoDoEmblema": "Imagem recebida no chat; ainda não confirmada como integrada ao site",
+    "referenciaVisual": "Distintivo ROTAM Polícia Militar com raio vermelho"
   },
   {
     "id": "PM-BPChoque",
@@ -2266,7 +2269,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bpchoque",
+    "estadoDoEmblema": "Imagem recebida no chat; ainda não confirmada como integrada ao site",
+    "referenciaVisual": "Distintivo PMERJ Batalhão de Polícia de Choque (BPChoque)"
   },
   {
     "id": "PM-BPP",
