@@ -1,3 +1,4 @@
+@import url("../assets/faaab-atlas.css");
 /* FAAAB / reforma editorial v4 — arte própria; sem bibliotecas externas */
 :root{--ink:#172b39;--ink-soft:#465b69;--muted:#637785;--navy:#102b43;--navy2:#1c4664;--gold:#b58b4d;--paper:#f4f6f7;--white:#fff;--line:#dbe3e8;--blue:#174969;--max:1220px;--ease:cubic-bezier(.2,.7,.1,1)}
 *,*::before,*::after{box-sizing:border-box}
