@@ -560,11 +560,11 @@
       "tipo": "curso",
       "nome": "CFAer — curso proposto sem centro definido",
       "sigla": "CFAer",
-      "estadoFAAAB": "Proposta; responsável institucional pendente após exclusão do CIAAR",
+      "estadoFAAAB": "Proposta; instituição responsável e implementação a definir",
       "situacaoProva": "a_definir",
       "referenciaId": null,
       "referenciaUrl": null,
-      "observacao": "CFAer é uma proposta de formação FAAAB. O CIAAR não faz parte da estrutura da comunidade por decisão expressa da administração. Instituição responsável e implantação: a definir.\n\nALUNO:\nRecruta FAB.\n\nRESULTADO:\nescolha de linha:\n- Infantaria da Aeronáutica\n- Operações Aéreas / Aviação\n\nFARDA:\nusar farda normal da FAB.\n\nMATRIZ:\nIF X\nIC X\nAO X\nAT X\nAF X",
+      "observacao": "CFAer é uma proposta de formação FAAAB. Instituição responsável e implantação: a definir.\n\nALUNO:\nRecruta FAB.\n\nRESULTADO:\nescolha de linha:\n- Infantaria da Aeronáutica\n- Operações Aéreas / Aviação\n\nFARDA:\nusar farda normal da FAB.\n\nMATRIZ:\nIF X\nIC X\nAO X\nAT X\nAF X",
       "efeitoDocumentado": "ALUNO: · RESULTADO:",
       "formaAcesso": "Proposta de formação; nenhuma inscrição ou avaliação habilitada",
       "inscricaoAbertaFAAAB": false
@@ -2400,7 +2400,7 @@
       "situacaoProva": "sem_prova_publica_comprovada",
       "referenciaId": null,
       "referenciaUrl": null,
-      "observacao": "Organização de Segurança e Defesa da FAB no universo FAAAB; substitui os dois antigos BINFAE no planejamento. O Pelotão de Choque é subdivisão da GSD, não outro batalhão.",
+      "observacao": "Grupo de Segurança e Defesa da FAB no universo FAAAB. O Pelotão de Choque é subdivisão da GSD; funções, cargos e funcionamento dependem de aprovação no jogo.",
       "efeitoDocumentado": null,
       "formaAcesso": "Seleção ou curso específico a definir; pertencer a uma unidade não implica prova escrita individual",
       "inscricaoAbertaFAAAB": false
@@ -2417,7 +2417,7 @@
       "situacaoProva": "sem_prova_publica_comprovada",
       "referenciaId": null,
       "referenciaUrl": null,
-      "observacao": "Pelotão de Choque subordinado à GSD; não é um segundo BINFAE independente.",
+      "observacao": "Pelotão de Choque subordinado à GSD. Não é um batalhão independente.",
       "efeitoDocumentado": null,
       "formaAcesso": "Seleção ou curso específico a definir; pertencer a uma unidade não implica prova escrita individual",
       "inscricaoAbertaFAAAB": false
@@ -2451,7 +2451,7 @@
       "situacaoProva": "sem_prova_publica_comprovada",
       "referenciaId": null,
       "referenciaUrl": null,
-      "observacao": "Referência institucional para tecnologia e pesquisa na FAAAB. Não é Esquadrão de Asas Rotativas (EAV). Funções, implantação e direção no jogo dependem de aprovação específica.",
+      "observacao": "Instituto de Estudos Avançados na área de ciência e tecnologia aeroespaciais da FAAAB. Implantação e equipe ainda não confirmadas.",
       "efeitoDocumentado": null,
       "formaAcesso": "Seleção ou curso específico a definir; pertencer a uma unidade não implica prova escrita individual",
       "inscricaoAbertaFAAAB": false
@@ -2587,7 +2587,7 @@
       "situacaoProva": "sem_prova_publica_comprovada",
       "referenciaId": null,
       "referenciaUrl": null,
-      "observacao": "Referência para a Companhia de Polícia do Batalhão Naval na FAAAB. Não confundir com o extinto cadastro de Batalhão de Polícia Naval. Vínculos internos e funcionamento no Roblox dependem de homologação.",
+      "observacao": "Companhia de Polícia do Batalhão Naval no universo FAAAB. A estrutura e a atuação interna dependem de aprovação; não se trata de batalhão independente.",
       "efeitoDocumentado": null,
       "formaAcesso": "Seleção ou curso específico a definir; pertencer a uma unidade não implica prova escrita individual",
       "inscricaoAbertaFAAAB": false
