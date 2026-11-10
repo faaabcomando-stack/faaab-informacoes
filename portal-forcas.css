@@ -94,3 +94,9 @@ body.forceportal[data-force="FAB"]{--accent:#317b9f;--tint:#e8f3f8;--panel:#dcec
 .home-force-mark.home-fab{background-position:50% 50%!important;background-color:#211b53!important}.home-force-mark.home-mb{background-position:100% 50%!important}
 .institution .emblem-frame:has(.home-force-mark){padding:0!important;overflow:hidden!important;border-radius:3px!important}
 .institution .emblem-frame:has(.home-force-mark) .emblem-stamp{display:none!important}
+
+
+/* Moldura com tamanho fixo para que os brasoes aparecam na home em qualquer tela. */
+.institution .emblem-frame:has(.home-force-mark){width:88px!important;height:88px!important;flex:0 0 88px!important;display:block!important;border:1px solid #d7e2e6!important;overflow:hidden!important}
+.institution .emblem-frame .home-force-mark{width:100%!important;height:100%!important;min-height:100%!important}
+@media(max-width:650px){.institution .emblem-frame:has(.home-force-mark){width:70px!important;height:70px!important;flex-basis:70px!important}}
