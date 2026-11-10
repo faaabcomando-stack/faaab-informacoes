@@ -62,11 +62,11 @@
     "GrupamentosPatrulha": "Há comandos regionais com brasões distintos; não criar comando genérico fictício sem decisão.",
     "CiaPolBtlNav": "Corrigido para Companhia de Polícia do Batalhão Naval; integração da imagem ainda não verificada.",
     "GSD": "Substitui BINFAE-Guarda; Pelotão de Choque é subordinado à GSD.",
-    "IEAv": "Instituto de Estudos Avançados, não EAV."
+    "IEAv": "Instituto de Estudos Avançados, não EAV.",
+    "Precs": "Precs fica dentro da Companhia de Precursores Paraquedistas (Cia Prec Pqdt), e NÃO como batalhão. BIP é unidade paralela da brigada.",
+    "RCC": "RCC = Regimento de Carros de Combate; corrigido do nome antigo BCC. Não pedir imagem sem conferir registros atuais."
   },
   "excludedDoNotReAdd": [
-    "FTB-B-Prec",
-    "FTB-BCC",
     "FTB-B-Sau",
     "FAB-CIAAR",
     "FAB-PARACOM",
@@ -76,7 +76,9 @@
     "FMB-ComForS",
     "FMB-BtlPolNav",
     "CFN-CIAPOL",
-    "FTB-BIL-Mth"
+    "FTB-BIL-Mth",
+    "FTB-B-Prec (batalhão autônomo — não reintroduzir)",
+    "FTB-BCC (nome antigo — substituído por FTB-RCC)"
   ],
   "neverAskAgain": [
     "FAAAB principal",
