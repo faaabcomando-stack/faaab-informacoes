@@ -1,9 +1,9 @@
 {
-  "versao": "2026-11-09-r2",
+  "versao": "2026-11-09-r3",
   "forca": "FTB",
   "tipo": "estrutura ficcional",
   "fontePlano": "FAAAB_EB_Estrutura_Divisoes_Brigadas_Atualizada_2026-11-07.txt",
-  "nota": "Estrutura própria FAAAB; referências de emblemas recebidas em 09/11/2026 não comprovam ativação no jogo. BI Mth é uma unidade única (BIL Mth/BIM eram entradas duplicadas).",
+  "nota": "Precs não constitui batalhão: Bda Inf Pqdt → Cia Prec Pqdt → Precs; BIP é outra unidade da mesma brigada. BCC corrigido para RCC (Regimento de Carros de Combate). Implantação no Roblox não confirmada.",
   "divisoes": [
     {
       "id": "1de",
@@ -66,8 +66,16 @@
             {
               "sigla": "Cia Prec Pqdt",
               "nome": "Companhia de Precursores Paraquedistas",
-              "catalogoId": null,
-              "situacao": "proposta"
+              "catalogoId": "FTB-Cia-Prec-Pqdt",
+              "situacao": "Estrutura confirmada",
+              "subunidades": [
+                {
+                  "sigla": "Precs",
+                  "nome": "Precursores Paraquedistas",
+                  "catalogoId": "FTB-Precs",
+                  "situacao": "Subdivisão interna confirmada"
+                }
+              ]
             }
           ]
         },
@@ -196,8 +204,8 @@
             {
               "sigla": "RCC",
               "nome": "Regimento de Carros de Combate",
-              "catalogoId": null,
-              "situacao": "proposta anterior"
+              "catalogoId": "FTB-RCC",
+              "situacao": "Estrutura confirmada"
             },
             {
               "sigla": "RC Bld",
@@ -267,6 +275,8 @@
     "Brigada de Operações Especiais",
     "AVEX",
     "B Sau",
-    "BIL Mth (duplicado de BI Mth)"
+    "BIL Mth (duplicado de BI Mth)",
+    "B Prec (batalhão independente, não existe na estrutura)",
+    "BCC (denominação antiga, substituir por RCC)"
   ]
 }
