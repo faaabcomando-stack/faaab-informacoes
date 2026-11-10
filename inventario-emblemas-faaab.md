@@ -261,3 +261,11 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ⚠ **Sigla oficial na Marinha real: ComForS**, não COMSUB. Sigla COMSUB é adaptação/identificador da FAAAB; **ComForSup** é outra instituição (Força de Superfície), já cadastrada e não foi alterada.
 - ⚠ Imagem original ainda não publicada em `assets/emblemas-png/FMB-COMSUB.png`. Não alegar que o brasão aparece no portal até publicar e validar.
 - Fonte oficial: https://www.marinha.mil.br/comfors/
+
+## Brasão COMSUB — 10/11/2026
+
+- ✅ **COMSUB** (`FMB-COMSUB`) — Comando da Força de Submarinos (sigla institucional real: **ComForS**; sigla escolhida para FAAAB: **COMSUB**). Brasão original enviado: `1000171966.jpg`.
+- ✅ Identificação confirmada em https://www.marinha.mil.br/comfors/pt-br/node/42 (coroa naval, faixas ondadas azuis/prata, submarino dourado em campo preto).
+- **COMSUB ≠ ComForSup**. ComForSup é comando dos meios de superfície. A decisão anterior da FAAAB de manter apenas ComForSup foi superada por esta inclusão expressa e não permite excluir ComForSup.
+- Imagem oficial transparente para exibição no site: `https://www.marinha.mil.br/sites/www.marinha.mil.br.comfors/files/field/image/brasao.png`. Imagem recebida não foi incorporada como arquivo PNG local; a versão web usa a referência oficial remota.
+- Não pedir o brasão novamente. Não inventar subordinação funcional no Roblox até que seja aprovada.
