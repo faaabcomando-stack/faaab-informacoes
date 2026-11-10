@@ -76,7 +76,7 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ✅ recebido — **B Log** (Batalhão Logístico)
 - ✅ recebido — **BI Mth** (Batalhão de Infantaria de Montanha)
 - ✅ recebido — **B Op Psi** (Batalhão de Operações Psicológicas)
-- ☐ referência ainda não identificada com segurança — **BI Pan** (Batalhão de Infantaria de Pantanal (adaptação da FAAAB))
+
 - ✅ recebido — **17º B Fron** (17º Batalhão de Fronteira)
 - ✅ recebido — **1º RCG** (1º Regimento de Cavalaria de Guardas - Dragões da Independência)
 - ✅ recebido — **BIL** (Batalhão de Infantaria Leve)
@@ -131,7 +131,7 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ✅ recebido — **EPCAR** (Escola Preparatória de Cadetes do Ar)
 - ✅ recebido — **AFA** (Academia da Força Aérea)
 - ✅ recebido — **ECEMAR** (Escola de Comando e Estado-Maior da Aeronáutica)
-- ☐ referência ainda não identificada com segurança — **CIAER** (Centro de Inteligência da Aeronáutica)
+- ✅ recebido — **CIAER** (Centro de Inteligência da Aeronáutica)
 - ☐ referência ainda não identificada com segurança — **CCFA** (Curso de Comandos de Força Aérea (Paracomandos))
 - ✅ recebido — **UNIFA** (Universidade da Força Aérea)
 - ✅ recebido — **EAOAR** (Escola de Aperfeiçoamento de Oficiais da Aeronáutica)
@@ -155,26 +155,26 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ☐ referência ainda não identificada com segurança — **BtlInfFN** (Batalhão de Infantaria de Fuzileiros Navais)
 - ☐ referência ainda não identificada com segurança — **BOE FN** (Batalhão de Operações Especiais de Fuzileiros Navais - Tonelero (nome adaptado à FAAAB))
 - ☐ referência ainda não identificada com segurança — **COMANF** (Comandos Anfíbios)
-- ☐ referência ainda não identificada com segurança — **BtlBldFN** (Batalhão de Blindados de Fuzileiros Navais)
-- ☐ referência ainda não identificada com segurança — **BtlEngFN** (Batalhão de Engenharia de Fuzileiros Navais)
+- ✅ recebido — **BtlBldFN** (Batalhão de Blindados de Fuzileiros Navais)
+- ✅ recebido — **BtlEngFN** (Batalhão de Engenharia de Fuzileiros Navais)
 - ☐ referência ainda não identificada com segurança — **BtlVtrAnf** (Batalhão de Viaturas Anfíbias)
-- ☐ referência ainda não identificada com segurança — **BtlArtFN** (Batalhão de Artilharia de Fuzileiros Navais)
+- ✅ recebido — **BtlArtFN** (Batalhão de Artilharia de Fuzileiros Navais)
 - ☐ referência ainda não identificada com segurança — **BtlOpRib** (Batalhão de Operações Ribeirinhas (adaptação da FAAAB))
 
 ### Polícia Militar
 
-- ☐ referência ainda não identificada com segurança — **BOPE** (Batalhão de Operações Policiais Especiais)
+- ✅ recebido — **BOPE** (Batalhão de Operações Policiais Especiais)
 - ✅ recebido — **ROTAM** (Rondas Ostensivas Táticas Metropolitanas)
 - ✅ recebido — **BPChoque** (Batalhão de Polícia de Choque)
-- ☐ referência ainda não identificada com segurança — **BPP** (Batalhão de Polícia Penal (adaptação fictícia da FAAAB; não pertence à PM real))
+- ✅ recebido — **BPP** (Batalhão de Polícia Penal (adaptação fictícia da FAAAB; não pertence à PM real))
 
 ### Bombeiros
 
-- ☐ referência ainda não identificada com segurança — **GBS** (Grupamento de Busca e Salvamento)
-- ☐ referência ainda não identificada com segurança — **GSFMA** (Grupamento de Socorro Florestal e Meio Ambiente)
-- ☐ referência ainda não identificada com segurança — **GOPP** (Grupamento de Operações com Produtos Perigosos)
-- ☐ referência ainda não identificada com segurança — **GOA** (Grupamento de Operações Aéreas)
-- ☐ referência ainda não identificada com segurança — **GOESP** (Grupo de Operações Especiais (designação mantida no projeto))
+- ✅ recebido — **GBS** (Grupamento de Busca e Salvamento)
+- ✅ recebido — **GSFMA** (Grupamento de Socorro Florestal e Meio Ambiente)
+- ✅ recebido — **GOPP** (Grupamento de Operações com Produtos Perigosos)
+- ✅ recebido — **GOA** (Grupamento de Operações Aéreas)
+- ✅ recebido — **GOESP** (Grupo de Operações Especiais (designação mantida no projeto))
 - ☐ referência ainda não identificada com segurança — **ABMDP II** (Programa de formação ABMDP II (nome por extenso não confirmado))
 - ☐ referência ainda não identificada com segurança — **CFP/BM** (Curso de Formação de Praças Bombeiros Militares (nomenclatura do projeto))
 - ☐ referência ainda não identificada com segurança — **CFS/BM** (Curso de Formação de Sargentos Bombeiros Militares (nomenclatura do projeto))
@@ -202,3 +202,14 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ◐ Dois brasões navais (timão/âncora e letra J/âncora): recebidos, aguardando identificação exata.
 - ◐ Dois emblemas com caveiras, um identificado visualmente como **Comandos**: recebidos; associação institucional ainda não comprovada, portanto não os atribuir arbitrariamente.
 - Os anexos estão na conversa; registrar recebimento não significa ter publicado o arquivo no site.
+
+## Correções visuais confirmadas pelo usuário — 09/11/2026
+
+- **BI Pan excluído** do planejamento; não solicitar emblema.
+- **CIOpMth:** distintivo **Guia de Montanha Avançado** já recebido; não tratá-lo como escudo institucional oficial do centro.
+- **BOPE:** caveira com faca do arquivo `image(20261110-013840).png`, confirmado.
+- **CIAER FAAAB:** o usuário escolheu o emblema da **Secretaria de Inteligência da Aeronáutica** como referência visual, sem alegar equivalência entre as instituições reais.
+- **CFN:** BtlBldFN, BtlEngFN, BtlArtFN recebidos agora; primeiro escudo naval desta remessa não identificado.
+- **PM:** BPP imagem recebida (PMEDF).
+- **CBM:** GBS, GSFMA, GOPP, GOA e GOESP recebidos. Não confundir GOA dos Bombeiros com 1º GOA da FAB.
+- Registros visuais recebidos não comprovam integração técnica até teste de navegador.
