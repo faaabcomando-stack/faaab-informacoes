@@ -590,25 +590,6 @@
     "referenciaVisual": "1º B Op Psc: brasão de Operações Psicológicas recebido nesta remessa; conferir designação exata do distintivo antes de usar."
   },
   {
-    "id": "FTB-BI-Pan",
-    "sigla": "BI Pan",
-    "nome": "Batalhão de Infantaria de Pantanal (adaptação da FAAAB)",
-    "forca": "FTB",
-    "tipo": "unidade",
-    "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
-    "logo": null,
-    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
-    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
-    "requisitos": null,
-    "aprovado": true,
-    "referencia": "Adaptação fictícia FAAAB",
-    "grupoSeparado": null,
-    "estadoImplementacao": "Não confirmado",
-    "responsavel": null,
-    "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
-  },
-  {
     "id": "FTB-17--B-Fron",
     "sigla": "17º B Fron",
     "nome": "17º Batalhão de Fronteira",
@@ -1635,7 +1616,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "ciaer-inteligencia",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "Para o CIAER da FAAAB, referência visual selecionada é o emblema da Secretaria de Inteligência da Aeronáutica, por decisão do projeto; não afirmar que é denominação oficial do CIAER real — origem: image(20261110-013118).png"
   },
   {
     "id": "CFN-CiaPolBtlNav",
@@ -1797,7 +1781,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "btlbldfn",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "Batalhão de Blindados de Fuzileiros Navais — origem: image(20261110-022203).png"
   },
   {
     "id": "CFN-BtlEngFN",
@@ -1816,7 +1803,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "btlengfn",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "Batalhão de Engenharia de Fuzileiros Navais — origem: image(20261110-022210).png"
   },
   {
     "id": "CFN-BtlVtrAnf",
@@ -1854,7 +1844,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "btlartfn",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "Batalhão de Artilharia de Fuzileiros Navais — origem: image(20261110-022222).png"
   },
   {
     "id": "CFN-BtlOpRib",
@@ -2019,7 +2012,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "gbs",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "Grupamento de Busca e Salvamento RJ — origem: image(20261110-022334).png"
   },
   {
     "id": "CBM-GSFMA",
@@ -2038,7 +2034,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "gsfma",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "1º GSFMA Alto da Boa Vista CBMERJ — origem: image(20261110-022347).png"
   },
   {
     "id": "CBM-GOPP",
@@ -2057,7 +2056,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "gopp",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "Produtos Perigosos CBMERJ — origem: image(20261110-022358).png"
   },
   {
     "id": "CBM-GOA",
@@ -2076,7 +2078,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "cbm-goa",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "Operações Aéreas do Corpo de Bombeiros RJ, não confundir com 1º GOA da FAB — origem: image(20261110-022406).png"
   },
   {
     "id": "CBM-GOESP",
@@ -2095,7 +2100,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "goesp",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "Operações Especiais CBMERJ — origem: image(20261110-022415).png"
   },
   {
     "id": "CBM-ABMDP-II",
@@ -2228,7 +2236,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bope-caveira-faca",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "BOPE: caveira com faca, confirmado pelo responsável pelo projeto — origem: image(20261110-013840).png"
   },
   {
     "id": "PM-ROTAM",
@@ -2291,7 +2302,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bpp-pmedf",
+    "estadoDoEmblema": "Imagem enviada e associada no inventário; conferir publicação do atlas",
+    "referenciaVisual": "Emblema visual PMEDF Batalhão de Polícia Penal, adaptado à unidade fictícia BPP; não confundir com brasão oficial da PM — origem: image(20261110-022230).png"
   },
   {
     "id": "FAB-CCFA",
