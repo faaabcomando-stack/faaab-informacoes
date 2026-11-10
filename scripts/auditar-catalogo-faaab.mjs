@@ -20,6 +20,15 @@ const forbidden=["FTB-B-Prec","FTB-BCC","FTB-B-Sau","FTB-BIL-Mth","FMB-BtlPolNav
 for(const id of forbidden)assert.ok(!ids.has(id),"unidade descartada reapareceu: "+id);
 assert.equal(cat.filter(x=>x.id==="FTB-BIM").length,1,"montanha duplicada");
 assert.equal(cat.find(x=>x.id==="FTB-BIM").sigla,"BI Mth");
+assert.equal(cat.find(x=>x.id==="FTB-Precs").grupoPaiId,"FTB-Cia-Prec-Pqdt","Precs pertence à Companhia de Precursores");
+assert.equal(cat.find(x=>x.id==="FTB-Cia-Prec-Pqdt").tipo,"companhia");
+assert.equal(cat.find(x=>x.id==="FTB-RCC").nome,"Regimento de Carros de Combate");
+assert.equal(cat.find(x=>x.id==="FTB-RCC").tipo,"regimento");
+const para=tree.divisoes.find(x=>x.sigla==="1ª DE").brigadas.find(x=>x.id==="inf-paraquedista");
+assert.ok(para.unidades.some(x=>x.catalogoId==="FTB-Cia-Prec-Pqdt"&&x.subunidades.some(u=>u.catalogoId==="FTB-Precs")));
+assert.ok(para.unidades.some(x=>x.catalogoId==="FTB-BIP"));
+const caval=tree.divisoes.find(x=>x.sigla==="5ª DE").brigadas.find(x=>x.id==="cav-blindada");
+assert.ok(caval.unidades.some(x=>x.catalogoId==="FTB-RCC"&&x.sigla==="RCC"));
 assert.equal(cat.find(x=>x.id==="FMB-ComForSup").forca,"FMB");
 const cia=cat.find(x=>x.id==="CFN-CiaPolBtlNav");assert.equal(cia.nome,"Companhia de Polícia do Batalhão Naval");assert.equal(cia.forca,"CFN");
 assert.equal(cat.find(x=>x.id==="FAB-GSD-CHOQUE").grupoPaiId,"FAB-GSD");
