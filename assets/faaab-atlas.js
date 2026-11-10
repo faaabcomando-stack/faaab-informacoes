@@ -20,13 +20,15 @@ const ALIASES=Object.freeze({
  "FAB-GSD-CHOQUE":"FAB-GSD",
  "CFN-BtlInfFN":"ADM-CFN","CFN-BtlVtrAnf":"ADM-CFN","CFN-BtlOpRib":"ADM-CFN"
 });
+const PNG_ONLY_IDS=new Set(["FAB-1--GDA"]); // GOA nunca substitui GDA.
 const PNG_ALIASES=Object.freeze({
  "FTB-CIOpMth":"FTB-CIOpMth-QUALIFICACAO"
 });
 const LABELS=Object.freeze({
  "FMB-EAM":"Referência: Escola de Aprendizes-Marinheiros do Ceará (EAMCE)",
  "FAB-ETA":"Referência: primeiro Esquadrão de Transporte Aéreo (1º ETA)",
- "FTB-CIOpMth":"Distintivo de Guia de Montanha Avançado; referência de curso, não brasão do centro"
+ "FTB-CIOpMth":"Distintivo de Guia de Montanha Avançado; referência de curso, não brasão do centro",
+ "FAB-1--GDA":"Referência visual do 1º GDA Jaguar, sem a legenda do antigo GOA."
 });
 const pngCache=new Map();
 const selfUrl=document.currentScript?.src||location.href;
@@ -50,7 +52,7 @@ const src=new URL("faaab-emblemas-site.webp",document.currentScript.src).href;
 const srcExtra=new URL("faaab-emblemas-extra.webp",document.currentScript.src).href;
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const normalized=id=>typeof id==="string"&&/^[\w-]{2,60}$/.test(id)?id:"";
-function has(id){const k=effective(id);return (map.has(k)||extraMap.has(k)||Object.prototype.hasOwnProperty.call(PNG_ALIASES,k))&&!genericUnavailable.has(k)}
+function has(id){const k=effective(id);return (map.has(k)||extraMap.has(k)||PNG_ONLY_IDS.has(k)||Object.prototype.hasOwnProperty.call(PNG_ALIASES,k))&&!genericUnavailable.has(k)}
 function decorate(node,id){
  if(!node||!has(id))return false;
  const key=effective(id);
@@ -76,7 +78,8 @@ function decorate(node,id){
  // O PNG individual em alta definição prevalece. Se o Pages ainda não o publicou,
  // o sprite WebP anterior permanece visível sem quebrar a página.
  loadPng(referenceKey).then(url=>{
-   if(!url||!node.isConnected)return;
+   if(!node.isConnected)return;
+   if(!url){if(!hasSprite)node.remove();return;}
    node.style.backgroundImage='url("'+url+'")';
    node.style.backgroundPosition="center";
    node.style.backgroundSize="contain";
