@@ -1,199 +1,171 @@
-# Inventário de emblemas FAAAB — revisão de 10/11/2026
+# Inventário de emblemas FAAAB — conferido em 10/11/2026
 
-> Fonte: **catálogo real** do projeto em `dados/catalogo.json` e imagens enviadas pela administração nesta conversa. Um logotipo enviado **não significa** que já foi instalado ou que o grupo esteja ativo no Roblox.
->
-> **✅ Recebido** = referência visual enviada e identificada. **◐ Pré-existente** = existe ícone/posição no sprite antigo, mas a imagem definitiva precisa de conferência. **☐ Pendente** = referência definitiva não confirmada; pode ter sido enviada sem identificação suficiente. **Não marcado como faltante só por não existir um arquivo separado**.
->
-> Emblemas recebidos de forças e organizações reais são usados como **referências visuais**. As versões FAAAB devem ser distinguíveis das instituições oficiais.
+**Regra:** antes de pedir novo brasão, consultar esta lista. «Recebido» = imagem enviada pelo usuário, NÃO necessariamente integrada ao GitHub Pages. As imagens atuais do usuário devem ser preservadas; a versão FAAAB precisa ser visualmente identificável como adaptação da comunidade, sem sugerir vínculo oficial.
 
-## Referências principais já recebidas
+## Correções que NÃO podem ser revertidas
 
-- ✅ Marca FAAAB (segundo a administração).
-- ✅ EGAF e DPT (segundo a administração; não solicitar novamente).
-- ✅ Governo FAAAB, STF, Exército, Marinha, CFN e CBM (referências enviadas).
-- ✅ **Exército: divisões** — 1ª DE, 3ª DE, 5ª DE.
-- ✅ **Brigadas do EB** — Infantaria de Selva, Infantaria de Montanha, Infantaria Paraquedista, Infantaria Leve/Aeromóvel, Infantaria Mecanizada, Cavalaria Mecanizada, Infantaria Motorizada, Infantaria Blindada, Cavalaria Blindada.
-- ✅ **Comando e ensino do EB** — C Op Esp, DECEx.
-- ✅ **Unidades e escolas** — BFE, BPE, BI Caat, BIB, BAC, CIE, BI Mth, BIL, BIS, GAC, B Log, B Log Sl, AMAN, EsPCEx e ESA.
-- ⚠ Alguns brasões marítimos recebidos não tiveram o nome institucional confirmado; **não atribuir a CIAW/CIAA/SSPM/ComForSup por semelhança**.
-- ⚠ Os 3 anexos mais recentes ainda precisam ser mapeados a uma sigla inequívoca antes de alterar os status no site.
+- **BIP:** águia com paraquedas já recebida; não pedir de novo.
+- **CIOPan:** imagem recebida; **recortar a arte original** para eliminar área sobrando e manter brasão inteiro, sem redesenhar.
+- **B Prec e BCC:** descontinuados. Não constam do catálogo atual; não pedir emblemas.
+- **BtlPolNav:** nome incorreto; substituído por **Companhia de Polícia do Batalhão Naval (CiaPolBtlNav)** sob o CFN, sem registro duplicado.
+- **GrupCom:** sem denominação confirmada, excluído do projeto.
+- **Patrulha naval:** existem **Comandos de Grupamento de Patrulha Naval regionais** na Marinha real (Norte, Nordeste, Leste, Sudeste, Sul etc.). O genérico GrupPatNav foi retirado até homologar a unidade FAAAB correta; não atribuir logo regional aleatório.
+- **ComForSup/ComForS:** são instituições diferentes na Marinha real; a FAAAB optou por manter somente ComForSup. Não duplicar.
+- **GSD:** grupo que substitui BINFAE-Guarda; **Pelotão de Choque** subordinado à GSD, não outro batalhão.
+- **IEAv:** Instituto de Estudos Avançados, não esquadrão EAV.
+- **CIAAR, PARACOM, ECDA, AVEX e B Sau:** não reintroduzir no catálogo atual.
+- **BI Mth:** único registro; não duplicar como BIM/BIL Mth.
 
-## Pendências prioritárias (novas imagens definitivas / substituições)
+## Marcas gerais já recebidas
 
-- **FAB:** marca principal específica, CIAAR, AFA, EEAR, EPCAR, UNIFA, ECEMAR, EAOAR, CIAER; Esquadrão Jaguar/1º GDA, PARA-SAR, BINFAE-Guarda, BINFAE-Choque, ETA e EAV.
-- **Ensino da Marinha:** CIAW, CIAA, CIAMPA, EAM, Colégio Naval, Escola Naval, SSPM.
-- **Comandos e órgãos navais:** ComForSup, ComForS, CIM, GRUMEC, GrupPatNav, BtlPolNav e GrupCom.
-- **Secretarias:** SGEx (Exército), SGM (Marinha), SEFA (FAB); no site há posições em sprite antigo para SGEx, SGM e SEFA, que não equivalem a uma identidade definitiva aprovada.
-- **EB ainda sem referência individual:** CIGS, CIOU, CIOpC, CIOpEsp, CIOpMth, CIOPan, CIBld, CI Pqdt GPB, EsAO, ECEME, EsSLog, BIP, B Prec, BCC, B Op Psi, BI Pan, 17º B Fron e 1º RCG.
-- **CFN:** BtlInfFN, BOE FN/Tonelero, COMANF, BtlBldFN, BtlEngFN, BtlVtrAnf, BtlArtFN, BtlOpRib e CIAPOL.
-- **PM:** emblema principal específico, BOPE, ROTAM, BPChoque, BPP.
-- **CBM:** GBS, GSFMA, GOPP, GOA e GOESP.
-- **Setores administrativos:** TAI-EB, TAI-FAB, TAI-MB, SEP, SMP, DOC, EVC, DEV, além de emblemas próprios para setores políticos ainda não homologados.
+FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviada); CFN; CBM; PM; STF; DECEx; C Op Esp; três Divisões de Exército e nove Brigadas do EB (fornecidas anteriormente). Não solicitar de novo.
 
-## Catálogo completo, para controle de uploads
+## Brasões por instituição e situação da referência
 
-### Administração, secretarias e forças (ADM)
+### Administração e forças
 
-- ✅ **FAAAB** — Forças Armadas e Auxiliares Aliadas Brasileiras
-- ✅ **EGAF** — Equipe Geral da Administração da FAAAB
-- ✅ **GOV** — Governo da FAAAB
-- ✅ **FTB** — Exército Brasileiro
-- ☐ **FAB** — Força Aérea Brasileira
-- ✅ **FMB** — Marinha Brasileira
-- ✅ **CFN** — Corpo de Fuzileiros Navais
-- ✅ **CBM** — Corpo de Bombeiros Militar
-- ☐ **PM** — Polícia Militar
-- ◐ **SGEx** — Secretaria-Geral do Exército
-- ◐ **SGM** — Secretaria-Geral da Marinha
-- ◐ **SEFA** — Secretaria de Economia, Finanças e Administração da Aeronáutica
-- ☐ **TAI-EB** — Taifa do Exército
-- ☐ **TAI-FAB** — Taifa da Aeronáutica
-- ☐ **TAI-MB** — Taifa da Marinha
-- ☐ **SEP** — Segurança e Patentes
-- ☐ **SMP** — Marketing e Propaganda
-- ☐ **DOC** — Documentação
-- ☐ **EVC** — Eventos e Cerimonial
-- ☐ **DEV** — Desenvolvimento e Infraestrutura
+- ✅ recebido — **FAAAB** (Forças Armadas e Auxiliares Aliadas Brasileiras)
+- ✅ recebido — **EGAF** (Equipe Geral da Administração da FAAAB)
+- ✅ recebido — **GOV** (Governo da FAAAB)
+- ✅ recebido — **FTB** (Exército Brasileiro)
+- ☐ referência ainda não identificada com segurança — **FAB** (Força Aérea Brasileira)
+- ✅ recebido — **FMB** (Marinha Brasileira)
+- ✅ recebido — **CFN** (Corpo de Fuzileiros Navais)
+- ✅ recebido — **CBM** (Corpo de Bombeiros Militar)
+- ✅ recebido — **PM** (Polícia Militar)
+- ✅ recebido — **SGEx** (Secretaria-Geral do Exército)
+- ◐ sprite antigo (confirmar) — **SGM** (Secretaria-Geral da Marinha)
+- ◐ sprite antigo (confirmar) — **SEFA** (Secretaria de Economia, Finanças e Administração da Aeronáutica)
+- ☐ referência ainda não identificada com segurança — **TAI-EB** (Taifa do Exército)
+- ☐ referência ainda não identificada com segurança — **TAI-FAB** (Taifa da Aeronáutica)
+- ☐ referência ainda não identificada com segurança — **TAI-MB** (Taifa da Marinha)
+- ☐ referência ainda não identificada com segurança — **SEP** (Segurança e Patentes)
+- ☐ referência ainda não identificada com segurança — **SMP** (Marketing e Propaganda)
+- ☐ referência ainda não identificada com segurança — **DOC** (Documentação)
+- ☐ referência ainda não identificada com segurança — **EVC** (Eventos e Cerimonial)
+- ☐ referência ainda não identificada com segurança — **DEV** (Desenvolvimento e Infraestrutura)
 
-### Exército (FTB)
+### Exército
 
-- ✅ **BFE** — Batalhão de Forças Especiais
-- ✅ **BPE** — Batalhão de Polícia do Exército
-- ✅ **BI Caat** — Batalhão de Infantaria de Caatinga
-- ☐ **BIP** — Batalhão de Infantaria Paraquedista
-- ☐ **B Prec** — Batalhão de Precursores (adaptação da FAAAB)
-- ✅ **BIB** — Batalhão de Infantaria Blindado
-- ☐ **BCC** — Batalhão de Carros de Combate
-- ✅ **BAC** — Batalhão de Ações de Comandos
-- ✅ **B Log** — Batalhão Logístico
-- ✅ **BI Mth** — Batalhão de Infantaria de Montanha
-- ☐ **B Op Psi** — Batalhão de Operações Psicológicas
-- ☐ **BI Pan** — Batalhão de Infantaria de Pantanal (adaptação da FAAAB)
-- ☐ **17º B Fron** — 17º Batalhão de Fronteira
-- ☐ **1º RCG** — 1º Regimento de Cavalaria de Guardas - Dragões da Independência
-- ✅ **BIL** — Batalhão de Infantaria Leve
-- ✅ **BIS** — Batalhão de Infantaria de Selva
-- ✅ **GAC** — Grupo de Artilharia de Campanha
-- ✅ **CIE** — Centro de Inteligência do Exército
-- ☐ **CIOU** — Centro de Instrução de Operações Urbanas
-- ☐ **CIGS** — Centro de Instrução de Guerra na Selva
-- ☐ **CIOpC** — Centro de Instrução e Operações na Caatinga
-- ☐ **CIOpEsp** — Centro de Instrução de Operações Especiais
-- ☐ **CIOpMth** — Centro de Instrução de Operações em Montanha
-- ☐ **CIOPan** — Centro de Instrução de Operações no Pantanal
-- ☐ **CIBld** — Centro de Instrução de Blindados
-- ☐ **CI Pqdt GPB** — Centro de Instrução Paraquedista General Penha Brasil
-- ✅ **ESA** — Escola de Sargentos das Armas
-- ✅ **EsPCEx** — Escola Preparatória de Cadetes do Exército
-- ✅ **AMAN** — Academia Militar das Agulhas Negras
-- ☐ **EsAO** — Escola de Aperfeiçoamento de Oficiais
-- ☐ **ECEME** — Escola de Comando e Estado-Maior do Exército
-- ☐ **EsSLog** — Escola de Sargentos de Logística
-- ✅ **Bda Inf Sl** — Brigada de Infantaria de Selva
-- ✅ **Bda Inf Mth** — Brigada de Infantaria de Montanha
-- ✅ **Bda Inf Mec** — Brigada de Infantaria Mecanizada
-- ✅ **Bda Inf Bld** — Brigada de Infantaria Blindada
-- ✅ **Bda C Mec** — Brigada de Cavalaria Mecanizada
-- ✅ **Bda C Bld** — Brigada de Cavalaria Blindada
-- ☐ **DAD** — Destacamento de Ações Diretas
-- ☐ **DRE** — Destacamento de Reconhecimento Especial
-- ☐ **PC** — Pelotão de Choque do BPE
-- ☐ **PELOPES** — Pelotão de Operações Especiais na Caatinga
-- ☐ **DCS** — Destacamento de Caatinga e Sobrevivência
-- ☐ **Precs** — Precursores Paraquedistas
-- ☐ **DCOE** — Destacamento de Comandos e Operações Especiais
-- ☐ **PRGM** — Pelotão de Reconhecimento e Guerra em Montanha
-- ☐ **DRT** — Destacamento de Resgate Tático Militar
-- ☐ **GRE** — Grupo de Resgate e Evacuação Militar
-- ☐ **PAPH** — Pelotão de Atendimento Pré-Hospitalar Militar
-- ☐ **SC** — Seção de Contrainteligência (estrutura interna fictícia do CIE na FAAAB)
-- ☐ **DGC** — Divisão de Guerra Cibernética (estrutura interna fictícia do CIE na FAAAB)
-- ☐ **POS** — Pelotão de Operações na Selva
-- ✅ **B Log Sl** — Batalhão Logístico de Selva
+- ✅ recebido — **BFE** (Batalhão de Forças Especiais)
+- ✅ recebido — **BPE** (Batalhão de Polícia do Exército)
+- ✅ recebido — **BI Caat** (Batalhão de Infantaria de Caatinga)
+- ✅ recebido — **BIP** (Batalhão de Infantaria Paraquedista)
+- ✅ recebido — **BIB** (Batalhão de Infantaria Blindado)
+- ✅ recebido — **BAC** (Batalhão de Ações de Comandos)
+- ✅ recebido — **B Log** (Batalhão Logístico)
+- ✅ recebido — **BI Mth** (Batalhão de Infantaria de Montanha)
+- ☐ referência ainda não identificada com segurança — **B Op Psi** (Batalhão de Operações Psicológicas)
+- ☐ referência ainda não identificada com segurança — **BI Pan** (Batalhão de Infantaria de Pantanal (adaptação da FAAAB))
+- ☐ referência ainda não identificada com segurança — **17º B Fron** (17º Batalhão de Fronteira)
+- ☐ referência ainda não identificada com segurança — **1º RCG** (1º Regimento de Cavalaria de Guardas - Dragões da Independência)
+- ✅ recebido — **BIL** (Batalhão de Infantaria Leve)
+- ✅ recebido — **BIS** (Batalhão de Infantaria de Selva)
+- ✅ recebido — **GAC** (Grupo de Artilharia de Campanha)
+- ✅ recebido — **CIE** (Centro de Inteligência do Exército)
+- ☐ referência ainda não identificada com segurança — **CIOU** (Centro de Instrução de Operações Urbanas)
+- ☐ referência ainda não identificada com segurança — **CIGS** (Centro de Instrução de Guerra na Selva)
+- ☐ referência ainda não identificada com segurança — **CIOpC** (Centro de Instrução e Operações na Caatinga)
+- ☐ referência ainda não identificada com segurança — **CIOpEsp** (Centro de Instrução de Operações Especiais)
+- ☐ referência ainda não identificada com segurança — **CIOpMth** (Centro de Instrução de Operações em Montanha)
+- ✅ recebido — **CIOPan** (Centro de Instrução de Operações no Pantanal) · **recorte pendente**
+- ☐ referência ainda não identificada com segurança — **CIBld** (Centro de Instrução de Blindados)
+- ☐ referência ainda não identificada com segurança — **CI Pqdt GPB** (Centro de Instrução Paraquedista General Penha Brasil)
+- ✅ recebido — **ESA** (Escola de Sargentos das Armas)
+- ✅ recebido — **EsPCEx** (Escola Preparatória de Cadetes do Exército)
+- ✅ recebido — **AMAN** (Academia Militar das Agulhas Negras)
+- ☐ referência ainda não identificada com segurança — **EsAO** (Escola de Aperfeiçoamento de Oficiais)
+- ☐ referência ainda não identificada com segurança — **ECEME** (Escola de Comando e Estado-Maior do Exército)
+- ☐ referência ainda não identificada com segurança — **EsSLog** (Escola de Sargentos de Logística)
+- ✅ recebido — **Bda Inf Sl** (Brigada de Infantaria de Selva)
+- ✅ recebido — **Bda Inf Mth** (Brigada de Infantaria de Montanha)
+- ✅ recebido — **Bda Inf Mec** (Brigada de Infantaria Mecanizada)
+- ✅ recebido — **Bda Inf Bld** (Brigada de Infantaria Blindada)
+- ✅ recebido — **Bda C Mec** (Brigada de Cavalaria Mecanizada)
+- ✅ recebido — **Bda C Bld** (Brigada de Cavalaria Blindada)
+- ☐ referência ainda não identificada com segurança — **DAD** (Destacamento de Ações Diretas)
+- ☐ referência ainda não identificada com segurança — **DRE** (Destacamento de Reconhecimento Especial)
+- ☐ referência ainda não identificada com segurança — **PC** (Pelotão de Choque do BPE)
+- ☐ referência ainda não identificada com segurança — **PELOPES** (Pelotão de Operações Especiais na Caatinga)
+- ☐ referência ainda não identificada com segurança — **DCS** (Destacamento de Caatinga e Sobrevivência)
+- ☐ referência ainda não identificada com segurança — **Precs** (Precursores Paraquedistas)
+- ☐ referência ainda não identificada com segurança — **DCOE** (Destacamento de Comandos e Operações Especiais)
+- ☐ referência ainda não identificada com segurança — **PRGM** (Pelotão de Reconhecimento e Guerra em Montanha)
+- ☐ referência ainda não identificada com segurança — **DRT** (Destacamento de Resgate Tático Militar)
+- ☐ referência ainda não identificada com segurança — **GRE** (Grupo de Resgate e Evacuação Militar)
+- ☐ referência ainda não identificada com segurança — **PAPH** (Pelotão de Atendimento Pré-Hospitalar Militar)
+- ☐ referência ainda não identificada com segurança — **SC** (Seção de Contrainteligência (estrutura interna fictícia do CIE na FAAAB))
+- ☐ referência ainda não identificada com segurança — **DGC** (Divisão de Guerra Cibernética (estrutura interna fictícia do CIE na FAAAB))
+- ☐ referência ainda não identificada com segurança — **POS** (Pelotão de Operações na Selva)
+- ✅ recebido — **B Log Sl** (Batalhão Logístico de Selva)
 
-### Aeronáutica (FAB)
+### Aeronáutica
 
-- ☐ **BINFAE-Guarda** — 1º Batalhão de Infantaria da Aeronáutica - Guarda (designação da FAAAB)
-- ☐ **BINFAE-Choque** — 2º Batalhão de Infantaria da Aeronáutica - Choque (designação da FAAAB)
-- ☐ **1º GDA** — Primeiro Grupo de Defesa Aérea - Esquadrão Jaguar (referência real para a aviação de caça)
-- ☐ **EAV** — Esquadrão de Asas Rotativas (nome/sigla de uso interno da FAAAB; não há sigla oficial genérica equivalente)
-- ☐ **ETA** — Esquadrão de Transporte Aéreo (designação genérica adotada na FAAAB)
-- ☐ **ECDA** — Esquadrão de Controle e Defesa Antiaérea (denominação fictícia da FAAAB) — **CONFERIR: unidade anteriormente rejeitada; não pedir emblema**
-- ☐ **EAS/PARA-SAR** — Esquadrão Aeroterrestre de Salvamento - PARA-SAR
-- ☐ **PARACOM** — Paracomandos (unidade independente FICTÍCIA da FAAAB; sigla não oficial) — **CONFERIR: unidade anteriormente rejeitada; não pedir emblema**
-- ☐ **CIAAR** — Centro de Instrução e Adaptação da Aeronáutica
-- ☐ **EEAR** — Escola de Especialistas de Aeronáutica
-- ☐ **EPCAR** — Escola Preparatória de Cadetes do Ar
-- ☐ **AFA** — Academia da Força Aérea
-- ☐ **ECEMAR** — Escola de Comando e Estado-Maior da Aeronáutica
-- ☐ **CIAER** — Centro de Inteligência da Aeronáutica
-- ☐ **CCFA** — Curso de Comandos de Força Aérea (Paracomandos)
-- ☐ **UNIFA** — Universidade da Força Aérea
-- ☐ **EAOAR** — Escola de Aperfeiçoamento de Oficiais da Aeronáutica
+- ✅ recebido — **GSD** (Grupo de Segurança e Defesa)
+- ☐ referência ainda não identificada com segurança — **Pel Choque** (Pelotão de Choque da GSD)
+- ☐ referência ainda não identificada com segurança — **1º GDA** (Primeiro Grupo de Defesa Aérea - Esquadrão Jaguar (referência real para a aviação de caça))
+- ✅ recebido — **IEAv** (Instituto de Estudos Avançados)
+- ✅ recebido — **ETA** (Esquadrão de Transporte Aéreo (designação genérica adotada na FAAAB)) · **imagem 1º ETA específica**
+- ✅ recebido — **EAS/PARA-SAR** (Esquadrão Aeroterrestre de Salvamento - PARA-SAR)
+- ✅ recebido — **EEAR** (Escola de Especialistas de Aeronáutica)
+- ✅ recebido — **EPCAR** (Escola Preparatória de Cadetes do Ar)
+- ✅ recebido — **AFA** (Academia da Força Aérea)
+- ✅ recebido — **ECEMAR** (Escola de Comando e Estado-Maior da Aeronáutica)
+- ☐ referência ainda não identificada com segurança — **CIAER** (Centro de Inteligência da Aeronáutica)
+- ☐ referência ainda não identificada com segurança — **CCFA** (Curso de Comandos de Força Aérea (Paracomandos))
+- ✅ recebido — **UNIFA** (Universidade da Força Aérea)
+- ✅ recebido — **EAOAR** (Escola de Aperfeiçoamento de Oficiais da Aeronáutica)
 
-### Marinha (FMB)
+### Marinha
 
-- ☐ **GrupPatNav** — Grupamento de Patrulha Naval (denominação da FAAAB)
-- ☐ **BtlPolNav** — Batalhão de Polícia Naval (denominação da FAAAB)
-- ☐ **ComForS** — Comando da Força de Submarinos
-- ☐ **GrupCom** — Grupamento de Comando e Comunicações (denominação da FAAAB)
-- ☐ **GRUMEC** — Grupamento de Mergulhadores de Combate
-- ☐ **ComForSup** — Comando da Força de Superfície
-- ☐ **CIM** — Centro de Inteligência da Marinha
-- ☐ **CIAMPA** — Centro de Instrução Almirante Milcíades Portela Alves
-- ☐ **CIAA** — Centro de Instrução Almirante Alexandrino
-- ☐ **CIAW** — Centro de Instrução Almirante Wandenkolk
-- ☐ **EAM** — Escola de Aprendizes-Marinheiros
-- ☐ **CN** — Colégio Naval
-- ☐ **EN** — Escola Naval
-- ☐ **SSPM** — Serviço de Seleção do Pessoal da Marinha
+- ✅ recebido — **GRUMEC** (Grupamento de Mergulhadores de Combate)
+- ✅ recebido — **ComForSup** (Comando da Força de Superfície)
+- ☐ referência ainda não identificada com segurança — **CIM** (Centro de Inteligência da Marinha)
+- ✅ recebido — **CIAMPA** (Centro de Instrução Almirante Milcíades Portela Alves)
+- ✅ recebido — **CIAA** (Centro de Instrução Almirante Alexandrino)
+- ✅ recebido — **CIAW** (Centro de Instrução Almirante Wandenkolk)
+- ✅ recebido — **EAM** (Escola de Aprendizes-Marinheiros) · **imagem EAMCE específica**
+- ✅ recebido — **CN** (Colégio Naval)
+- ✅ recebido — **EN** (Escola Naval)
+- ☐ referência ainda não identificada com segurança — **SSPM** (Serviço de Seleção do Pessoal da Marinha)
 
-### Fuzileiros Navais (CFN)
+### Fuzileiros Navais
 
-- ☐ **BtlInfFN** — Batalhão de Infantaria de Fuzileiros Navais
-- ☐ **BOE FN** — Batalhão de Operações Especiais de Fuzileiros Navais - Tonelero (nome adaptado à FAAAB)
-- ☐ **COMANF** — Comandos Anfíbios
-- ☐ **BtlBldFN** — Batalhão de Blindados de Fuzileiros Navais
-- ☐ **BtlEngFN** — Batalhão de Engenharia de Fuzileiros Navais
-- ☐ **BtlVtrAnf** — Batalhão de Viaturas Anfíbias
-- ☐ **BtlArtFN** — Batalhão de Artilharia de Fuzileiros Navais
-- ☐ **BtlOpRib** — Batalhão de Operações Ribeirinhas (adaptação da FAAAB)
-- ☐ **CIAPOL** — Companhia de Polícia de Fuzileiros Navais
+- ☐ referência ainda não identificada com segurança — **CiaPolBtlNav** (Companhia de Polícia do Batalhão Naval)
+- ☐ referência ainda não identificada com segurança — **BtlInfFN** (Batalhão de Infantaria de Fuzileiros Navais)
+- ☐ referência ainda não identificada com segurança — **BOE FN** (Batalhão de Operações Especiais de Fuzileiros Navais - Tonelero (nome adaptado à FAAAB))
+- ☐ referência ainda não identificada com segurança — **COMANF** (Comandos Anfíbios)
+- ☐ referência ainda não identificada com segurança — **BtlBldFN** (Batalhão de Blindados de Fuzileiros Navais)
+- ☐ referência ainda não identificada com segurança — **BtlEngFN** (Batalhão de Engenharia de Fuzileiros Navais)
+- ☐ referência ainda não identificada com segurança — **BtlVtrAnf** (Batalhão de Viaturas Anfíbias)
+- ☐ referência ainda não identificada com segurança — **BtlArtFN** (Batalhão de Artilharia de Fuzileiros Navais)
+- ☐ referência ainda não identificada com segurança — **BtlOpRib** (Batalhão de Operações Ribeirinhas (adaptação da FAAAB))
 
-### Polícia Militar (PM)
+### Polícia Militar
 
-- ☐ **BOPE** — Batalhão de Operações Policiais Especiais
-- ☐ **ROTAM** — Rondas Ostensivas Táticas Metropolitanas
-- ☐ **BPChoque** — Batalhão de Polícia de Choque
-- ☐ **BPP** — Batalhão de Polícia Penal (adaptação fictícia da FAAAB; não pertence à PM real)
+- ☐ referência ainda não identificada com segurança — **BOPE** (Batalhão de Operações Policiais Especiais)
+- ☐ referência ainda não identificada com segurança — **ROTAM** (Rondas Ostensivas Táticas Metropolitanas)
+- ☐ referência ainda não identificada com segurança — **BPChoque** (Batalhão de Polícia de Choque)
+- ☐ referência ainda não identificada com segurança — **BPP** (Batalhão de Polícia Penal (adaptação fictícia da FAAAB; não pertence à PM real))
 
-### Bombeiros (CBM)
+### Bombeiros
 
-- ☐ **GBS** — Grupamento de Busca e Salvamento
-- ☐ **GSFMA** — Grupamento de Socorro Florestal e Meio Ambiente
-- ☐ **GOPP** — Grupamento de Operações com Produtos Perigosos
-- ☐ **GOA** — Grupamento de Operações Aéreas
-- ☐ **GOESP** — Grupo de Operações Especiais (designação mantida no projeto)
-- ☐ **ABMDP II** — Programa de formação ABMDP II (nome por extenso não confirmado)
-- ☐ **CFP/BM** — Curso de Formação de Praças Bombeiros Militares (nomenclatura do projeto)
-- ☐ **CFS/BM** — Curso de Formação de Sargentos Bombeiros Militares (nomenclatura do projeto)
-- ☐ **CFO/BM** — Curso de Formação de Oficiais Bombeiros Militares (nomenclatura do projeto)
-- ☐ **CAO/BM** — Curso de Aperfeiçoamento de Oficiais Bombeiros Militares (a validar na FAAAB)
-- ☐ **CSBM** — Curso Superior de Bombeiro Militar (a validar na FAAAB)
+- ☐ referência ainda não identificada com segurança — **GBS** (Grupamento de Busca e Salvamento)
+- ☐ referência ainda não identificada com segurança — **GSFMA** (Grupamento de Socorro Florestal e Meio Ambiente)
+- ☐ referência ainda não identificada com segurança — **GOPP** (Grupamento de Operações com Produtos Perigosos)
+- ☐ referência ainda não identificada com segurança — **GOA** (Grupamento de Operações Aéreas)
+- ☐ referência ainda não identificada com segurança — **GOESP** (Grupo de Operações Especiais (designação mantida no projeto))
+- ☐ referência ainda não identificada com segurança — **ABMDP II** (Programa de formação ABMDP II (nome por extenso não confirmado))
+- ☐ referência ainda não identificada com segurança — **CFP/BM** (Curso de Formação de Praças Bombeiros Militares (nomenclatura do projeto))
+- ☐ referência ainda não identificada com segurança — **CFS/BM** (Curso de Formação de Sargentos Bombeiros Militares (nomenclatura do projeto))
+- ☐ referência ainda não identificada com segurança — **CFO/BM** (Curso de Formação de Oficiais Bombeiros Militares (nomenclatura do projeto))
+- ☐ referência ainda não identificada com segurança — **CAO/BM** (Curso de Aperfeiçoamento de Oficiais Bombeiros Militares (a validar na FAAAB))
+- ☐ referência ainda não identificada com segurança — **CSBM** (Curso Superior de Bombeiro Militar (a validar na FAAAB))
 
-## Não duplicar nem reintroduzir
+## Arquivos e validação
 
-- **BI Mth = BIL Mth/BIM**: uma única unidade; não pedir 3 brasões.
-- **ComForSup** é Marinha, não Exército.
-- **AVEX** e **B Sau** foram retirados da estrutura atual e não devem ser cobrados.
-- **PARACOM e ECDA** aparecem em versões antigas do catálogo, mas a administração já pediu exclusão; conferir antes de qualquer exibição pública.
-- **Fuzileiros Navais** são componente da Marinha, não quarta Força Armada independente.
-- **Curso** não precisa obrigatoriamente de um logo próprio: a prioridade são instituições, comandos, unidades e escolas.
-
-## Procedimento de integração
-
-1. Registrar nome/sigla da imagem fornecida (não supor por semelhança).
-2. Fazer versão marcada **FAAAB**, aprovada pela administração e sem sugerir vínculo institucional real.
-3. Exportar em PNG/WebP e manter o original recebido preservado.
-4. Vincular ao ID correto em `dados/catalogo.json`; usar a árvore `dados/estrutura_eb_2026.json` para divisões, brigadas e batalhões.
-5. Conferir a imagem nas páginas do site em desktop/celular; só então marcar como “integrado”.
+- Registrar o arquivo original exato por organização antes de processar.
+- Nunca confundir 'recebido' com 'publicado' ou 'aprovado'.
+- Atualizar o campo `emblemaRef` no catálogo após identificação, salvar a arte processada no repositório e conferir visualmente no navegador.
+- Para CIOPan, aplicar recorte fiel no PNG original e preservar cópia da fonte.
+- Um curso genérico pode usar o brasão da instituição responsável; não é obrigatório inventar um logo por curso.
