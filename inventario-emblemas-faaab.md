@@ -253,3 +253,11 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ✅ **DIRENS** (`FAB-DIRENS`) — Diretoria de Ensino da Aeronáutica. **Imagem enviada**: `1794312287320.jpeg`, escudo azul com inscrição DIRENS. Coordenação superior de AFA, EPCAR, EEAR, UNIFA, ECEMAR, EAOAR no projeto. https://dirensvirtual.educaer.fab.mil.br/
 - **Não pedir novamente esses dois brasões**. Envio de imagens confirmado nesta conversa; arquivos JPG/PNG ainda precisam ser inseridos fisicamente em `assets/emblemas-png/` antes de afirmar exibição no site.
 - **Não duplicar** as escolas existentes; vínculo com as diretorias consta em `dados/ensino_instituicoes.json`.
+
+## COMSUB — Comando da Força de Submarinos (10/11/2026)
+
+- ✅ **COMSUB** (`FMB-COMSUB`) — Comando da Força de Submarinos, categoria comando da Marinha FAAAB, seção unidades navais.
+- ✅ **Brasão recebido:** `1000171966.jpg`, escudo com coroa naval dourada, faixas azuis e brancas e submarino dourado sobre campo preto. **Não pedir a imagem novamente.**
+- ⚠ **Sigla oficial na Marinha real: ComForS**, não COMSUB. Sigla COMSUB é adaptação/identificador da FAAAB; **ComForSup** é outra instituição (Força de Superfície), já cadastrada e não foi alterada.
+- ⚠ Imagem original ainda não publicada em `assets/emblemas-png/FMB-COMSUB.png`. Não alegar que o brasão aparece no portal até publicar e validar.
+- Fonte oficial: https://www.marinha.mil.br/comfors/
