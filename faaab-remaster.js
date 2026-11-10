@@ -2,7 +2,7 @@
 /* FAAAB Remaster — só informações públicas. Acesso privado exige backend autenticado. */
 const V3={
  forces:{FTB:{name:"Exército",full:"Exército Brasileiro",url:"exercito.html",sector:"central"},FAB:{name:"Força Aérea",full:"Força Aérea Brasileira",url:"aeronautica.html",sector:"central"},FMB:{name:"Marinha",full:"Marinha Brasileira",url:"marinha.html",sector:"central"},CFN:{name:"Fuzileiros Navais",full:"Corpo de Fuzileiros Navais",url:"fuzileiros.html",sector:"central"},PM:{name:"Polícia Militar",full:"Polícia Militar",url:"policia-militar.html",sector:"civil"},CBM:{name:"Corpo de Bombeiros",full:"Corpo de Bombeiros Militar",url:"bombeiros.html",sector:"civil"},ADM:{name:"Administração",url:"governo.html",sector:"governo"},GOV:{name:"Governo",url:"governo.html",sector:"governo"}},
- types:{instituicao:"Instituição",unidade:"Batalhões e unidades",brigada:"Brigadas",centro:"Centros de instrução",escola:"Escolas",academia:"Academias",subdivisao:"Subdivisões",curso:"Cursos",administracao:"Setores administrativos",divisao:"Divisões"},
+ types:{instituicao:"Instituições",comando:"Comandos navais",diretoria:"Diretorias",regimento:"Regimentos",unidade:"Batalhões e unidades",brigada:"Brigadas",centro:"Centros de instrução",escola:"Escolas",academia:"Academias",subdivisao:"Subdivisões",curso:"Cursos",administracao:"Setores administrativos",divisao:"Divisões"},
  cached:new Map(),
  esc:v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),
  clean:v=>String(v??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(),
@@ -136,7 +136,7 @@ const V3={
  async force(){
   const key=document.body.dataset.force;
   V3.context(key,"home");const all=await V3.get("catalogo"),rows=V3.forceList(all,key);
-  const types=["unidade","brigada","divisao","centro","escola","academia","subdivisao","curso"];
+  const types=["comando","diretoria","unidade","regimento","brigada","divisao","centro","escola","academia","instituicao","subdivisao","curso"];
   const sections=types.map(type=>{let a=V3.typeRows(rows,type);if(!a.length)return "";
   const q="organizacoes.html?forca="+encodeURIComponent(key)+"&tipo="+encodeURIComponent(type);
   return '<section class="v3-category-block"><div class="v3-section-head"><div><span class="v3-label">'+a.length+' registros</span><h2>'+V3.types[type]+'</h2></div><a href="'+q+'">Abrir página desta categoria →</a></div>'+V3.rows(a.slice(0,4))+'</section>'}).filter(Boolean);
