@@ -1,6 +1,5 @@
 "use strict";
-/* Atlas de emblemas FAAAB. Imagens cedidas pelo projeto, com associação nominal controlada.
-   O arquivo compactado contém 74 miniaturas e 12 imagens adicionais; não é banco de emblemas oficiais. */
+/* Emblemas FAAAB: somente PNG individual, sem fallback ampliado de sprites WebP. */
 (()=>{
 const IDS=["FTB-BFE","FTB-BPE","FTB-BI-Caat","FTB-BIB","FTB-BAC","FTB-CIE","FTB-BIM","FTB-BIL","FTB-BIS","FTB-GAC","ADM-FMB","FTB-AMAN","FTB-EsPCEx","FTB-ESA","ADM-STF","ADM-CBM","ADM-GOV","FTB-B-Log-Sl","FTB-B-Log","FAB-AFA","FAB-EEAR","FAB-EPCAR","FAB-SIA","FAB-UNIFA","FAB-ECEMAR","FAB-EAOAR","FAB-1-GOA","FAB-EAS-PARA-SAR","FAB-GSD","FAB-ETA","FAB-IEAV","FMB-CIAW","FMB-CIAMPA","FMB-CIAA","FMB-EN","FMB-CN","FMB-EAM","FMB-GRUMEC","FTB-1DE","FTB-3DE","FTB-5DE","FTB-Bda-Inf-Sl","FTB-Bda-Inf-Mth","FTB-BIP","ADM-CFN","FTB-Bda-Inf-AMV","FTB-Bda-Inf-Mec","FTB-Bda-C-Mec","FTB-Bda-Inf-Mtz","FTB-Bda-Inf-Bld","FTB-Bda-C-Bld","FTB-COpEsp","FTB-DECEx","FTB-CIGS","FTB-CIOU","FTB-CIOpC","FTB-CIOpEsp","FTB-CIBld","FTB-CI-Pqdt-GPB","ADM-SGM","ADM-SEFA","FTB-EsAO","FTB-EsSLog","ADM-TAI-EB","ADM-TAI-MB","ADM-TAI-FAB","FTB-Cia-Prec-Pqdt","FTB-RCC","FTB-17--B-Fron","FTB-1--RCG","FTB-ECEME","FTB-B-Op-Psi","PM-ROTAM","PM-BPChoque"];
 const COLS=10,ROWS=8;
@@ -48,42 +47,37 @@ function effective(id){
  const key=normalized(id);
  return ALIASES[key]||key;
 }
-const src=new URL("faaab-emblemas-site.webp",document.currentScript.src).href;
-const srcExtra=new URL("faaab-emblemas-extra.webp",document.currentScript.src).href;
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const normalized=id=>typeof id==="string"&&/^[\w-]{2,60}$/.test(id)?id:"";
 function has(id){const k=effective(id);return (map.has(k)||extraMap.has(k)||PNG_ONLY_IDS.has(k)||Object.prototype.hasOwnProperty.call(PNG_ALIASES,k))&&!genericUnavailable.has(k)}
 function decorate(node,id){
  if(!node||!has(id))return false;
- const key=effective(id);
- const extra=extraMap.has(key);
- const hasSprite=map.has(key)||extra;
- if(hasSprite){
-   const columns=extra?EXTRA_COLS:COLS,rows=extra?EXTRA_ROWS:ROWS;
-   const index=extra?extraMap.get(key):map.get(key);
-   const col=index%columns,row=Math.floor(index/columns);
-   node.style.backgroundImage='url("'+(extra?srcExtra:src)+'")';
-   node.style.backgroundSize=(columns*100)+"% "+(rows*100)+"%";
-   node.style.backgroundPosition=(100*col/(columns-1))+"% "+(100*row/(rows-1))+"%";
- }
+ const key=effective(id),qualified=Object.prototype.hasOwnProperty.call(PNG_ALIASES,key);
+ const ref=qualified?PNG_ALIASES[key]:key;
+ const inherited=Object.prototype.hasOwnProperty.call(ALIASES,id)&&ALIASES[id]!==id;
+ const note=LABELS[key]||(inherited?"Brasão da organização superior; esta subdivisão não possui emblema específico publicado.":"Brasão FAAAB de referência.");
  node.classList.add("faaab-emblem");
  node.dataset.faaabAtlasReady="1";
- const qualified=Object.prototype.hasOwnProperty.call(PNG_ALIASES,key);
- const referenceKey=qualified?PNG_ALIASES[key]:key;
- const inherited=ALIASES[id]&&ALIASES[id]!==id;
- const note=LABELS[key]||(inherited?"Emblema de referência da organização superior, não insígnia específica da subdivisão.":"Emblema de referência FAAAB.");
+ node.style.backgroundImage="none"; // Não mostrar sprites WebP de 56px como se fossem PNGs nítidos.
  node.title=note;
  if(!node.hasAttribute("aria-label"))node.setAttribute("aria-label",note);
  if(!node.hasAttribute("role"))node.setAttribute("role","img");
- // O PNG individual em alta definição prevalece. Se o Pages ainda não o publicou,
- // o sprite WebP anterior permanece visível sem quebrar a página.
- loadPng(referenceKey).then(url=>{
+ loadPng(ref).then(url=>{
    if(!node.isConnected)return;
-   if(!url){if(!hasSprite)node.remove();return;}
-   node.style.backgroundImage='url("'+url+'")';
-   node.style.backgroundPosition="center";
-   node.style.backgroundSize="contain";
-   node.classList.add("faaab-png");
+   if(!url){node.classList.add("faaab-sem-png");node.setAttribute("aria-label","Brasão em PNG indisponível");return;}
+   const img=new Image();
+   img.onload=()=>{
+     if(!node.isConnected)return;
+     node.style.backgroundImage='url("'+url+'")';
+     node.style.backgroundPosition="center";
+     node.style.backgroundSize="contain";
+     node.classList.add("faaab-png");
+     if(img.naturalWidth<160||img.naturalHeight<160){
+       node.classList.add("faaab-baixa-resolucao");
+       node.title=note+" Miniatura antiga: arquivo de maior resolução pendente.";
+     }
+   };
+   img.src=url;
  });
  return true;
 }
