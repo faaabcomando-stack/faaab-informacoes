@@ -259,7 +259,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "qte",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "Quadro de Taifeiros do Exército (QTE), duas referências recebidas"
   },
   {
     "id": "ADM-TAI-FAB",
@@ -278,7 +281,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "qta",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "Quadro de Taifeiros da Aeronáutica (QTA), referência recebida"
   },
   {
     "id": "ADM-TAI-MB",
@@ -297,7 +303,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "cpa-taifa",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "Corpo de Praças da Armada (CPA), referência de Taifa da Marinha recebida"
   },
   {
     "id": "ADM-SEP",
@@ -731,7 +740,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "ciou",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "Operações Urbanas, imagem com punho e raio recebida em lote anterior"
   },
   {
     "id": "FTB-CIGS",
@@ -750,7 +762,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "cigs",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "CIGS, brasão recebido em lote anterior"
   },
   {
     "id": "FTB-CIOpC",
@@ -769,7 +784,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "ciopc",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "CIOpC, brasão recebido em lote anterior"
   },
   {
     "id": "FTB-CIOpEsp",
@@ -788,7 +806,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "ciopesp",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "CIOpEsp, brasão recebido em lote anterior"
   },
   {
     "id": "FTB-CIOpMth",
@@ -848,7 +869,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "cibld",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "CIBld, brasão recebido em lote anterior"
   },
   {
     "id": "FTB-CI-Pqdt-GPB",
@@ -867,7 +891,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "ci-pqdt-gpb",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "CI Pqdt GPB, brasão recebido em lote anterior"
   },
   {
     "id": "FTB-ESA",
@@ -946,7 +973,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "esao",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "EsAO, brasão recebido em lote anterior"
   },
   {
     "id": "FTB-ECEME",
@@ -984,7 +1014,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "esslog",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "EsSLog, brasão recebido em lote anterior"
   },
   {
     "id": "FTB-Bda-Inf-Sl",
@@ -2356,7 +2389,10 @@
     "referencia": "Estrutura FAAAB confirmada pela administração. Não criar Batalhão de Precursores.",
     "subdivisoesIds": [
       "FTB-Precs"
-    ]
+    ],
+    "emblemaRef": "cia-prec-pqdt",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "Brasão Cia Prec Pqdt enviado em 09/11/2026"
   },
   {
     "id": "FTB-RCC",
@@ -2375,6 +2411,9 @@
     "secao": "EXÉRCITO - 5ª DE / BRIGADA DE CAVALARIA BLINDADA",
     "vidaReal": "Regimento de Carros de Combate, unidade do escalão regimento, não batalhão.",
     "noJogo": "Regimento subordinado à Brigada de Cavalaria Blindada da 5ª DE. Substitui a designação antiga BCC (Batalhão de Carros de Combate), que não deve voltar.",
-    "referencia": "Correção expressa da administração FAAAB: BCC → RCC."
+    "referencia": "Correção expressa da administração FAAAB: BCC → RCC.",
+    "emblemaRef": "rcc-5",
+    "estadoDoEmblema": "Referência recebida nesta conversa; não confirmado como arquivo publicado no site.",
+    "referenciaVisual": "Brasão 5º RCC enviado em 09/11/2026; a identificação 5º deve ser preservada, não generalizar aos demais RCC"
   }
 ]
