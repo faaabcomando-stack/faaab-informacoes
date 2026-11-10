@@ -1758,9 +1758,9 @@
     "responsavel": null,
     "dataRegistro": "2026-10-24",
     "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
-    "emblemaRef": "cim",
-    "estadoDoEmblema": "Referência recebida/confirmada pelo usuário; imagem publicada no site NÃO confirmada.",
-    "referenciaVisual": "CIM: usuário confirmou que já enviou brasão naval; associação do arquivo específico ainda precisa ser validada."
+    "emblemaRef": "cim-original",
+    "estadoDoEmblema": "Brasão original fornecido em 1000171967.png. Referência recebida; publicação do arquivo como PNG ainda a confirmar.",
+    "referenciaVisual": "Brasão do CIM enviado pelo responsável (1000171967.png): coroa naval, cabo dourado, escudo magenta com âncoras brancas, escudo azul central e face dourada. Não confundir com COMSUB."
   },
   {
     "id": "CFN-BtlInfFN",
