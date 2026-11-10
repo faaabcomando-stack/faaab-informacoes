@@ -341,3 +341,52 @@ body.faaab-v3{background:#f6f7f7;color:#253d4b}
 
 /* Marca da comunidade: emblema principal, sem fingir ser órgão oficial */
 .v3-brand-desc{font-size:11px}.v3-record-item:hover{border-color:#9cbccc!important}
+
+
+/* FAAAB — modernização institucional global (páginas históricas), 10/11/2026 */
+:root{--v3-forest:#254c67;--v3-deep:#1e3e57;--v3-olive:#54798d;--v3-gold:#aa9068;--v3-line:#d5e0e4;--v3-paper:#f4f6f6;--v3-white:#fff;--v3-muted:#637b89}
+body.faaab-v3{background:#f3f6f7;color:#264559;font-family:"Segoe UI",Arial,sans-serif}
+body.faaab-v3 .v3-utility{background:#e7edf1;color:#4a6576;letter-spacing:.09em}
+body.faaab-v3 .v3-mast{background:#fff;border-bottom:1px solid #e2e9ec}
+body.faaab-v3 .v3-brand{color:#1e4b6a!important;font-family:Georgia,"Times New Roman",serif}
+body.faaab-v3 .v3-brand-desc{color:#607986;border-left-color:#a58f70}
+body.faaab-v3 .v3-header-aside{color:#718694}
+body.faaab-v3 .v3-nav{background:#fff;border-bottom:1px solid #d4e1e7;box-shadow:0 6px 18px #21475c10}
+body.faaab-v3 .v3-nav a{color:#345a73;border-right-color:#e6edf0}
+body.faaab-v3 .v3-nav a:first-child{border-left-color:#e6edf0}
+body.faaab-v3 .v3-nav a:hover,body.faaab-v3 .v3-nav a[aria-current="page"]{color:#1f4b68;background:#eaf1f5}
+body.faaab-v3 :is(h1,h2,h3){color:#21465f;font-family:Georgia,"Times New Roman",serif}
+body.faaab-v3 a{color:#285f7f}
+body.faaab-v3 p{color:#5b7281}
+body.faaab-v3 .v3-label{color:#977e58}
+body.faaab-v3 .v3-intro{background:linear-gradient(108deg,rgba(232,239,243,.95),rgba(247,249,249,.93)),url("preview-reforma/assets/horizonte-faaab.svg") 70% center/cover;border-bottom-color:#d9e5eb}
+body.faaab-v3 .v3-intro:before{background:#aa9069;width:3px}
+body.faaab-v3 .v3-intro p{color:#536e7f}
+body.faaab-v3 .v3-margin-rule{border-top-color:#af9672}
+body.faaab-v3 .v3-side-heading{color:#244963}
+body.faaab-v3 .v3-button{border-radius:4px;border-color:#53758a;color:#244f6b!important}
+body.faaab-v3 .v3-button.primary{background:#2c6283;border-color:#2c6283;color:#fff!important}
+body.faaab-v3 .v3-button.primary:hover{background:#1f4a68}
+body.faaab-v3 .v3-button:hover{background:#edf3f6}
+body.faaab-v3 .v3-section.tint{background:#ebf0f2;border-color:#dce6ea}
+body.faaab-v3 .v3-section-head{border-bottom-color:#a8916c}
+body.faaab-v3 .v3-three>article,body.faaab-v3 .v3-doc,body.faaab-v3 .v3-profile-nav,body.faaab-v3 .v3-sector-banner{border-top-color:#a78c66}
+body.faaab-v3 .v3-three article p{color:#617b8b}
+body.faaab-v3 .v3-inline-links{border-top-color:#d9e3e6}
+body.faaab-v3 .v3-inline-links li{border-bottom-color:#dce6e8}
+body.faaab-v3 .v3-inline-links a:after{color:#a58b66}
+body.faaab-v3 .v3-toc a{color:#244f68}
+body.faaab-v3 .v3-rail{border-left-color:#d2e0e4}
+body.faaab-v3 .v3-directory-search,body.faaab-v3 .v3-doc,body.faaab-v3 .v3-private{background:#fff;border-color:#d6e2e7;border-radius:4px}
+body.faaab-v3 .v3-directory-search label,body.faaab-v3 .v3-stat strong,body.faaab-v3 .v3-private strong{color:#2b617d}
+body.faaab-v3 .v3-record-list,body.faaab-v3 .v3-record-item,body.faaab-v3 .v3-inline-list li,body.faaab-v3 .v3-category-block{border-color:#d4e1e6}
+body.faaab-v3 .v3-footer{background:linear-gradient(130deg,#21435d,#19384f);color:#dce5ea}
+body.faaab-v3 .v3-footer :is(a,h3){color:#e4ebef}
+body.faaab-v3 .v3-footer p{color:#c0d1dc}
+body.faaab-v3 .v3-credit{color:#c2d2da}
+@media(prefers-reduced-motion:no-preference){
+ body.faaab-v3 .v3-button,body.faaab-v3 .v3-nav a{transition:background .24s ease,color .24s ease,transform .24s ease}
+ body.faaab-v3 .v3-button:hover{transform:translateY(-2px)}
+}
+@media(prefers-reduced-motion:reduce){body.faaab-v3 *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Ilustração abstrata de horizonte aéreo">
+<defs>
+ <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#7ca1b7"/><stop offset=".59" stop-color="#b4c8ce"/><stop offset="1" stop-color="#f0e7d4"/></linearGradient>
+ <linearGradient id="far" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#8ca5ad"/><stop offset="1" stop-color="#587b8f"/></linearGradient>
+ <linearGradient id="ground" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#6a8a9a"/><stop offset="1" stop-color="#234b64"/></linearGradient>
+ <pattern id="grid" width="75" height="75" patternUnits="userSpaceOnUse"><path d="M75 0H0V75" fill="none" stroke="#e2edf0" stroke-opacity=".07" stroke-width="1"/></pattern>
+</defs>
+<path fill="url(#sky)" d="M0 0h1600v900H0z"/>
+<g fill="#fff" opacity=".22"><ellipse cx="1190" cy="154" rx="400" ry="38"/><ellipse cx="1360" cy="215" rx="245" ry="20"/><ellipse cx="800" cy="300" rx="220" ry="24"/></g>
+<circle cx="1200" cy="235" r="154" fill="#f1eee0" opacity=".32"/>
+<path d="M0 570c170-48 260-43 400-19 160 28 255-34 391-68 138-34 268-10 393 24 127 35 265-9 416-53v446H0z" fill="url(#far)" opacity=".72"/>
+<path d="M0 650c190 2 320-61 470-31 150 31 212 48 358 7 143-41 249-15 376 5 124 20 270 6 396-39v308H0z" fill="url(#ground)"/>
+<path d="M0 770c220-16 480-29 730-31 270-2 573 6 870-49v210H0z" fill="#1e465e" opacity=".82"/>
+<g stroke="#dce9e9" stroke-opacity=".24" stroke-width="2" fill="none">
+ <path d="M0 796Q470 746 840 777T1600 748"/>
+ <path d="M0 823Q400 780 810 809T1600 784"/>
+ <path d="M0 853Q455 822 830 838T1600 818"/>
+ <path d="M0 883Q495 866 825 879T1600 858"/>
+</g>
+<path fill="url(#grid)" d="M0 0h1600v900H0z"/>
+<g transform="translate(1180 320) rotate(-9)" fill="#edf3f3" opacity=".62">
+ <path d="M-238 5l197-20 88-136q10-13 19-11l15 3-45 128 124-11 52-47 17-1-19 54 66 4 21 15-87 9-43 48-16 2-20-42-128 12-22 127-18 5-47-120-203 21-49 35-15-1 21-43-26-33 16-2z"/>
+</g>
+<g stroke="#dce9f0" stroke-opacity=".18" fill="none">
+ <circle cx="1320" cy="405" r="285"/><circle cx="1320" cy="405" r="360"/><circle cx="1320" cy="405" r="445"/>
+ <path d="M1050 420h550M1320 80v720"/>
+</g>
+</svg>
