@@ -1,5 +1,7 @@
 # Inventário de emblemas FAAAB — conferido em 10/11/2026
 
+> **ATENÇÃO — INVENTÁRIO HISTÓRICO:** para saber o que falta ou já foi recebido, consulte [a auditoria conciliada de 10/11/2026](auditoria-emblemas-faaab-2026-11-10.md). As marcações antigas abaixo podem estar desatualizadas e NÃO autorizam pedir imagens de novo.
+
 **Regra:** antes de pedir novo brasão, consultar esta lista. «Recebido» = imagem enviada pelo usuário, NÃO necessariamente integrada ao GitHub Pages. As imagens atuais do usuário devem ser preservadas; a versão FAAAB precisa ser visualmente identificável como adaptação da comunidade, sem sugerir vínculo oficial.
 
 ## Correções que NÃO podem ser revertidas
