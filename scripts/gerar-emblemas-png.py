@@ -81,7 +81,20 @@ try:
                   'status':'1º GDA / Esquadrão Jaguar, fonte oficial'})
     print('1º GDA: emblema oficial instalado como PNG')
 except Exception as exc:
-    print('1º GDA: download oficial indisponível, mantendo entrada sem imagem incorreta:',str(exc)[:140])
+    print('1º GDA: fonte oficial remota indisponível:',str(exc)[:140])
+    # Reference-only fallback: crop the feline/radar motif below the incorrect GOA heading.
+    # Do not display that heading, relabel the insignia, or present this as a complete official badge.
+    old=Image.open(BASE/'assets/faaab-emblemas-site.webp').convert('RGBA')
+    tw,th=old.width//10,old.height//8
+    idx=26
+    x=idx%10;y=idx//10
+    motif=old.crop((x*tw+4,y*th+17,(x+1)*tw-4,(y+1)*th-2))
+    motif=trim_white_background(motif)
+    motif.save(OUT/'FAB-1--GDA.png',optimize=True)
+    items.append({'id':'FAB-1--GDA','path':'assets/emblemas-png/FAB-1--GDA.png',
+                  'source':'recorte provisório do motivo jaguar/radar; sem legenda do brasão antigo',
+                  'status':'referência visual provisória; não é insígnia integral do 1º GDA'})
+
 
 manifest={
     'version':1,'format':'png','transparent':True,'count':len(items),
