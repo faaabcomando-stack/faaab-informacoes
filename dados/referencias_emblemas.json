@@ -97,7 +97,8 @@
     "CFN-BOE-FN",
     "CFN-COMANF",
     "FMB-DEnsM",
-    "FAB-DIRENS"
+    "FAB-DIRENS",
+    "FMB-COMSUB"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -241,7 +242,8 @@
     "COMANF",
     "Curso de Formação de Praças (imagem recebida, força a confirmar)",
     "DEnsM — brasão enviado 1794311970465.jpeg",
-    "DIRENS — brasão enviado 1794312287320.jpeg"
+    "DIRENS — brasão enviado 1794312287320.jpeg",
+    "COMSUB — brasão original enviado (1000171966.jpg)"
   ],
   "receivedBatches": [
     {
@@ -489,6 +491,19 @@
           "ref": "direns",
           "sourceOfficial": "https://dirensvirtual.educaer.fab.mil.br/",
           "status": "received-not-published"
+        }
+      ]
+    },
+    {
+      "batchId": "remessa-comsub-20261110",
+      "note": "Brasão COMSUB confirmado pelo usuário. COMSUB é a sigla escolhida para FAAAB. O Comando da Força de Submarinos oficial usa a sigla ComForS, diferente de ComForSup. Imagem recebida não implica publicação do binário.",
+      "items": [
+        {
+          "catalogId": "FMB-COMSUB",
+          "file": "1000171966.jpg",
+          "ref": "comsub-original",
+          "status": "received-not-published",
+          "description": "Coroa naval dourada, faixas azuis e brancas e submarino dourado em campo preto"
         }
       ]
     }
