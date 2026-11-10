@@ -88,7 +88,10 @@
     "CBM-GOA",
     "CBM-GOESP",
     "FTB-CIOpMth",
-    "FAB-1--GDA"
+    "FAB-1--GDA",
+    "CBM-CFO-BM",
+    "FAB-CCFA",
+    "CFN-BtlVtrAnf"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -124,7 +127,10 @@
     "Montanha": "Guia de Montanha Avançado já enviado; é distintivo de qualificação, NÃO emblema institucional confirmado do CIOpMth.",
     "CBM-GOA": "GOA Bombeiros é distinto do 1º GOA da FAB.",
     "1º GDA": "PNG provisório (motivo Jaguar, sem o texto GOA) publicado; insígnia completa oficial fonte INCAER aguarda importação.",
-    "EscolaAprendizes": "Referência visual é a EAMCE; não apresentar um brasão regional como único brasão de todas as EAM."
+    "EscolaAprendizes": "Referência visual é a EAMCE; não apresentar um brasão regional como único brasão de todas as EAM.",
+    "CFO/BM": "A arte circular com CBMDF foi convertida em NOVO BRASÃO heráldico; PNG gerado na conversa, publicação no GitHub ainda pendente. A imagem PMDF 1000171976.webp não é CBMDF.",
+    "CCFA": "O emblema PARACOMANDOS 1000171981.jpg é do Curso de Comandos de Força Aérea; não cadastrar como unidade PARACOM.",
+    "BtlVtrAnf": "Novo escudo BTLVTRANF recebido em 1000171999.jpg, precisa PNG individual."
   },
   "excludedDoNotReAdd": [
     "FTB-B-Sau",
@@ -199,7 +205,10 @@
     "GOESP",
     "BPP",
     "1º GDA Jaguar",
-    "Escola de Aprendizes-Marinheiros (EAMCE)"
+    "Escola de Aprendizes-Marinheiros (EAMCE)",
+    "CFO/BM (CBMDF)",
+    "CCFA / Paracomandos",
+    "BtlVtrAnf"
   ],
   "receivedBatches": [
     {
