@@ -25,6 +25,17 @@
 - ✅ **CIGS, CIOU, CIOpC, CIOpEsp, CIBld, CI Pqdt GPB, EsAO e EsSLog:** já tinham sido enviados anteriormente; corrigir status.
 - **Recebido não significa publicado:** conferir vínculo e arquivo real antes de afirmar que aparece no site.
 
+## Remessa mais recente de imagens — identificações sem suposição
+
+- ✅ 17º B Fron, 1º RCG, ECEME e 1º B Op Psc/B Op Psi: imagens recebidas nesta remessa.
+- ✅ CIM, SSPM e CiaPolBtlNav: usuário reafirmou o envio anterior; arquivo exato ainda requer associação visual, **não pedir novamente**.
+- ⚠ 10ª Brigada de Infantaria do Pantanal **não é** automaticamente o brasão do BI Pan.
+- ⚠ Guia de Montanha Avançado é distintivo de qualificação; não marcar CIOpMth como recebido por essa imagem.
+- ⚠ Secretaria de Inteligência da Aeronáutica **não é** automaticamente o CIAER.
+- ⚠ 1º/11º GAV, 1º GOA e 1º GDA são denominações distintas; não trocar as imagens.
+- ⚠ O brasão naval com letra psi/lança nesta remessa não tem identificação segura; registrar sem atribuir.
+- Recebido **não significa integrado/publicado**.
+
 ## Marcas gerais já recebidas
 
 FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviada); CFN; CBM; PM; STF; DECEx; C Op Esp; três Divisões de Exército e nove Brigadas do EB (fornecidas anteriormente). Não solicitar de novo.
@@ -64,10 +75,10 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ✅ recebido — **BAC** (Batalhão de Ações de Comandos)
 - ✅ recebido — **B Log** (Batalhão Logístico)
 - ✅ recebido — **BI Mth** (Batalhão de Infantaria de Montanha)
-- ☐ referência ainda não identificada com segurança — **B Op Psi** (Batalhão de Operações Psicológicas)
+- ✅ recebido — **B Op Psi** (Batalhão de Operações Psicológicas)
 - ☐ referência ainda não identificada com segurança — **BI Pan** (Batalhão de Infantaria de Pantanal (adaptação da FAAAB))
-- ☐ referência ainda não identificada com segurança — **17º B Fron** (17º Batalhão de Fronteira)
-- ☐ referência ainda não identificada com segurança — **1º RCG** (1º Regimento de Cavalaria de Guardas - Dragões da Independência)
+- ✅ recebido — **17º B Fron** (17º Batalhão de Fronteira)
+- ✅ recebido — **1º RCG** (1º Regimento de Cavalaria de Guardas - Dragões da Independência)
 - ✅ recebido — **BIL** (Batalhão de Infantaria Leve)
 - ✅ recebido — **BIS** (Batalhão de Infantaria de Selva)
 - ✅ recebido — **GAC** (Grupo de Artilharia de Campanha)
@@ -84,7 +95,7 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ✅ recebido — **EsPCEx** (Escola Preparatória de Cadetes do Exército)
 - ✅ recebido — **AMAN** (Academia Militar das Agulhas Negras)
 - ✅ recebido — **EsAO** (Escola de Aperfeiçoamento de Oficiais)
-- ☐ referência ainda não identificada com segurança — **ECEME** (Escola de Comando e Estado-Maior do Exército)
+- ✅ recebido — **ECEME** (Escola de Comando e Estado-Maior do Exército)
 - ✅ recebido — **EsSLog** (Escola de Sargentos de Logística)
 - ✅ recebido — **Bda Inf Sl** (Brigada de Infantaria de Selva)
 - ✅ recebido — **Bda Inf Mth** (Brigada de Infantaria de Montanha)
@@ -129,18 +140,18 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 
 - ✅ recebido — **GRUMEC** (Grupamento de Mergulhadores de Combate)
 - ✅ recebido — **ComForSup** (Comando da Força de Superfície)
-- ☐ referência ainda não identificada com segurança — **CIM** (Centro de Inteligência da Marinha)
+- ✅ recebido — **CIM** (Centro de Inteligência da Marinha)
 - ✅ recebido — **CIAMPA** (Centro de Instrução Almirante Milcíades Portela Alves)
 - ✅ recebido — **CIAA** (Centro de Instrução Almirante Alexandrino)
 - ✅ recebido — **CIAW** (Centro de Instrução Almirante Wandenkolk)
 - ✅ recebido — **EAM** (Escola de Aprendizes-Marinheiros) · **imagem EAMCE específica**
 - ✅ recebido — **CN** (Colégio Naval)
 - ✅ recebido — **EN** (Escola Naval)
-- ☐ referência ainda não identificada com segurança — **SSPM** (Serviço de Seleção do Pessoal da Marinha)
+- ✅ recebido — **SSPM** (Serviço de Seleção do Pessoal da Marinha)
 
 ### Fuzileiros Navais
 
-- ☐ referência ainda não identificada com segurança — **CiaPolBtlNav** (Companhia de Polícia do Batalhão Naval)
+- ✅ recebido — **CiaPolBtlNav** (Companhia de Polícia do Batalhão Naval)
 - ☐ referência ainda não identificada com segurança — **BtlInfFN** (Batalhão de Infantaria de Fuzileiros Navais)
 - ☐ referência ainda não identificada com segurança — **BOE FN** (Batalhão de Operações Especiais de Fuzileiros Navais - Tonelero (nome adaptado à FAAAB))
 - ☐ referência ainda não identificada com segurança — **COMANF** (Comandos Anfíbios)
