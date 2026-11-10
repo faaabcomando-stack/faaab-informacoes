@@ -330,14 +330,14 @@ body.faaab-v3{background:#f6f7f7;color:#253d4b}
 .faaab-v3 .v3-breadcrumb,.v3-breadcrumb{display:none!important}
 
 
-/* Emblemas originais FAAAB das seis forças. Posição da grade da coleção aprovada. */
-.faaab-v3 .v3-force-brand:before{content:"";display:inline-block;vertical-align:middle;width:59px;height:59px;margin-right:13px;background-image:url("assets/emblemas-faaab-6.webp");background-repeat:no-repeat;background-size:300% 200%;border:1px solid #d9e2e4}
-.faaab-v3[data-force="FTB"] .v3-force-brand:before{background-position:100% 0%}
-.faaab-v3[data-force="FMB"] .v3-force-brand:before{background-position:50% 100%}
-.faaab-v3[data-force="FAB"] .v3-force-brand:before{background-position:100% 100%}
-.faaab-v3[data-force="PM"] .v3-force-brand:before{background-position:50% 0%}
-.faaab-v3[data-force="CBM"] .v3-force-brand:before{background-position:0% 100%}
-@media(max-width:680px){.faaab-v3 .v3-force-brand:before{width:43px;height:43px;margin-right:8px}}
+/* Símbolos dos portais: PNG individual onde existe, sem mosaico WebP comprimido. */
+.faaab-v3 .v3-force-brand:before{content:"";display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;width:59px;height:59px;margin-right:13px;flex:0 0 59px;background-color:transparent;background-image:none;background-repeat:no-repeat;background-position:center;background-size:contain;border:0;color:#20425e;font:800 16px/1 system-ui,sans-serif}
+.faaab-v3[data-force="FTB"] .v3-force-brand:before{content:"EB"}
+.faaab-v3[data-force="FMB"] .v3-force-brand:before{background-image:url("assets/emblemas-png/ADM-FMB.png")}
+.faaab-v3[data-force="FAB"] .v3-force-brand:before{content:"FAB"}
+.faaab-v3[data-force="PM"] .v3-force-brand:before{content:"PM"}
+.faaab-v3[data-force="CBM"] .v3-force-brand:before{background-image:url("assets/emblemas-png/ADM-CBM.png")}
+@media(max-width:680px){.faaab-v3 .v3-force-brand:before{width:43px;height:43px;flex-basis:43px;margin-right:8px;font-size:12px}}
 
 /* Marca da comunidade: emblema principal, sem fingir ser órgão oficial */
 .v3-brand-desc{font-size:11px}.v3-record-item:hover{border-color:#9cbccc!important}
