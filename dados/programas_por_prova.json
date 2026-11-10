@@ -3010,6 +3010,30 @@
       "programaId": null,
       "motivo": "Conteúdo programático depende de confirmação. Não aplicar provas genéricas automaticamente.",
       "fonte": null
+    },
+    {
+      "id": "CAT-FTB-Cia-Prec-Pqdt",
+      "catalogoId": "CAT-FTB-Cia-Prec-Pqdt",
+      "origemId": "FTB-Cia-Prec-Pqdt",
+      "forca": "FTB",
+      "tipo": "companhia",
+      "nome": "Companhia de Precursores Paraquedistas",
+      "estado": "aguardando_programa_faaab",
+      "programaId": null,
+      "motivo": "Programa próprio e requisitos de ingresso ainda não aprovados; não aplicar prova genérica automaticamente.",
+      "fonte": null
+    },
+    {
+      "id": "CAT-FTB-RCC",
+      "catalogoId": "CAT-FTB-RCC",
+      "origemId": "FTB-RCC",
+      "forca": "FTB",
+      "tipo": "regimento",
+      "nome": "Regimento de Carros de Combate",
+      "estado": "aguardando_programa_faaab",
+      "programaId": null,
+      "motivo": "Programa próprio e requisitos de ingresso ainda não aprovados; não aplicar prova genérica automaticamente.",
+      "fonte": null
     }
   ],
   "adicionais": [],
