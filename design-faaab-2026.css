@@ -123,3 +123,6 @@ body[data-force="CBM"]{--faaab-blue:#713b39}
   html{scroll-behavior:auto}
   *,*:before,*:after{animation:none!important;transition-duration:.01ms!important;transform:none!important}
 }
+/* Correção universal de cartões: PNG sem fundo, bordas de miniatura ou sombra branca. */
+.institution .emblem-thumb.faaab-emblem,.institution .emblem-thumb.faaab-png{background-color:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;background-size:contain!important}
+.institution .emblem-frame:has(.faaab-png){background:transparent!important}
