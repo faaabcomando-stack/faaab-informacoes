@@ -132,12 +132,6 @@
               "nome": "Regimento de Cavalaria Mecanizado",
               "catalogoId": null,
               "situacao": "proposta anterior"
-            },
-            {
-              "sigla": "BI Pan",
-              "nome": "Batalhão de Infantaria do Pantanal",
-              "catalogoId": "FTB-BI-Pan",
-              "situacao": "Cadastrada"
             }
           ]
         },
@@ -277,6 +271,7 @@
     "B Sau",
     "BIL Mth (duplicado de BI Mth)",
     "B Prec (batalhão independente, não existe na estrutura)",
-    "BCC (denominação antiga, substituir por RCC)"
+    "BCC (denominação antiga, substituir por RCC)",
+    "BI Pan (unidade não faz parte do planejamento atual FAAAB)"
   ]
 }
