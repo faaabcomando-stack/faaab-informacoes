@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-09-r2",
+  "version": "2026-11-09-r3",
   "source": "Imagens enviadas na conversa e catalogo atual; status de recebimento não equivale a arquivo publicado",
   "receivedIds": [
     "ADM-FAAAB",
@@ -75,7 +75,19 @@
     "FMB-SSPM",
     "CFN-CiaPolBtlNav",
     "PM-ROTAM",
-    "PM-BPChoque"
+    "PM-BPChoque",
+    "PM-BOPE",
+    "FAB-CIAER",
+    "CFN-BtlBldFN",
+    "CFN-BtlEngFN",
+    "CFN-BtlArtFN",
+    "PM-BPP",
+    "CBM-GBS",
+    "CBM-GSFMA",
+    "CBM-GOPP",
+    "CBM-GOA",
+    "CBM-GOESP",
+    "FTB-CIOpMth"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -99,14 +111,17 @@
     "1º RCG": "Imagem identificada na remessa atual: image(20261110-012927).png.",
     "ECEME": "Imagem identificada na remessa atual: image(20261110-013013).png.",
     "B Op Psi": "Imagem recebida do 1º B Op Psc: image(20261110-013023).png. Confirmar se a unidade fictícia usa esta denominação específica.",
-    "BI Pan": "image(20261110-012857).png mostra 10ª Brigada de Infantaria do Pantanal, NÃO um Batalhão de Infantaria do Pantanal; não vincular automaticamente a FTB-BI-Pan.",
+    "BI Pan": "Inexistente na estrutura FAAAB vigente. Não restaurar, não solicitar logo.",
     "CIOpMth": "image(20261110-013000).png mostra distintivo Guia de Montanha Avançado, NÃO necessariamente o emblema institucional do CIOpMth.",
-    "CIAER": "A imagem da Secretaria de Inteligência da Aeronáutica NÃO deve ser identificada como brasão do CIAER sem confirmação.",
+    "CIAER": "Na FAAAB, a imagem associada ao CIAER é a arte da Secretaria de Inteligência da Aeronáutica por escolha do usuário. Não atribuir esse símbolo a CIAER real.",
     "GAV": "image(20261110-013345).png identifica 1º/11º GAV (Grupo de Aviação), NÃO o 1º GDA e não GOA.",
     "GOA": "image(20261110-013038).png lê-se 1º GOA. Não confundir com GAV ou GDA.",
     "MarinhaRemessa": "image(20261110-013443).png: brasão naval recebido, nome institucional não confirmado, não atribuir unidade por palpite.",
     "CIM": "Usuário confirmou ter enviado o emblema. Nome e arquivo exato ainda não verificados no material montado.",
-    "SSPM": "Usuário confirmou ter enviado o emblema. Nome e arquivo exato ainda não verificados no material montado."
+    "SSPM": "Usuário confirmou ter enviado o emblema. Nome e arquivo exato ainda não verificados no material montado.",
+    "BOPE": "Caveira atravessada por faca, imagem image(20261110-013840).png; não confundir com Comandos da Marinha.",
+    "Montanha": "Guia de Montanha Avançado já enviado; é distintivo de qualificação, NÃO emblema institucional confirmado do CIOpMth.",
+    "CBM-GOA": "GOA Bombeiros é distinto do 1º GOA da FAB."
   },
   "excludedDoNotReAdd": [
     "FTB-B-Sau",
@@ -120,7 +135,8 @@
     "CFN-CIAPOL",
     "FTB-BIL-Mth",
     "FTB-B-Prec (batalhão autônomo — não reintroduzir)",
-    "FTB-BCC (nome antigo — substituído por FTB-RCC)"
+    "FTB-BCC (nome antigo — substituído por FTB-RCC)",
+    "FTB-BI-Pan"
   ],
   "neverAskAgain": [
     "FAAAB principal",
@@ -166,7 +182,19 @@
     "SSPM",
     "CiaPolBtlNav",
     "ROTAM",
-    "BPChoque"
+    "BPChoque",
+    "BOPE caveira com faca",
+    "CIAER (referência Secretaria de Inteligência)",
+    "Guia de Montanha Avançado",
+    "BtlBldFN",
+    "BtlEngFN",
+    "BtlArtFN",
+    "GBS",
+    "GSFMA",
+    "GOPP",
+    "GOA Bombeiros",
+    "GOESP",
+    "BPP"
   ],
   "receivedBatches": [
     {
@@ -272,6 +300,67 @@
           "visibleText": "PMERJ Batalhão de Polícia de Choque",
           "status": "identified",
           "catalogId": "PM-BPChoque"
+        }
+      ]
+    },
+    {
+      "batchId": "remessa-20261110-0221",
+      "note": "11 imagens recebidas; dez brasões foram identificados ou são repetição, uma imagem naval ficou sem identificação inequívoca. BOPE e CIAER vinculados a imagens anteriores por correção da administração. Originais preservados no chat.",
+      "items": [
+        {
+          "catalogId": "CFN-BtlBldFN",
+          "file": "image(20261110-022203).png",
+          "ref": "btlbldfn"
+        },
+        {
+          "catalogId": "CFN-BtlEngFN",
+          "file": "image(20261110-022210).png",
+          "ref": "btlengfn"
+        },
+        {
+          "catalogId": "CFN-BtlArtFN",
+          "file": "image(20261110-022222).png",
+          "ref": "btlartfn"
+        },
+        {
+          "catalogId": "PM-BPP",
+          "file": "image(20261110-022230).png",
+          "ref": "bpp-pmedf"
+        },
+        {
+          "catalogId": "CBM-GBS",
+          "file": "image(20261110-022334).png",
+          "ref": "gbs"
+        },
+        {
+          "catalogId": "CBM-GSFMA",
+          "file": "image(20261110-022347).png",
+          "ref": "gsfma"
+        },
+        {
+          "catalogId": "CBM-GOPP",
+          "file": "image(20261110-022358).png",
+          "ref": "gopp"
+        },
+        {
+          "catalogId": "CBM-GOA",
+          "file": "image(20261110-022406).png",
+          "ref": "cbm-goa"
+        },
+        {
+          "catalogId": "CBM-GOESP",
+          "file": "image(20261110-022415).png",
+          "ref": "goesp"
+        },
+        {
+          "file": "image(20261110-022157).png",
+          "status": "aguardando_identificacao",
+          "note": "Escudo marítimo com timão e âncora"
+        },
+        {
+          "file": "image(20261110-022305).png",
+          "status": "repetido",
+          "note": "1º GOA FAB, NÃO CBM-GOA"
         }
       ]
     }
