@@ -1,0 +1,689 @@
+{
+  "version": 1,
+  "format": "png",
+  "transparent": true,
+  "count": 85,
+  "items": {
+    "FTB-BFE": {
+      "id": "FTB-BFE",
+      "path": "assets/emblemas-png/FTB-BFE.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 0,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "FTB-BPE": {
+      "id": "FTB-BPE",
+      "path": "assets/emblemas-png/FTB-BPE.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 1,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "FTB-BI-Caat": {
+      "id": "FTB-BI-Caat",
+      "path": "assets/emblemas-png/FTB-BI-Caat.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 2,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "FTB-BIB": {
+      "id": "FTB-BIB",
+      "path": "assets/emblemas-png/FTB-BIB.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 3,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "FTB-BAC": {
+      "id": "FTB-BAC",
+      "path": "assets/emblemas-png/FTB-BAC.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 4,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "FTB-CIE": {
+      "id": "FTB-CIE",
+      "path": "assets/emblemas-png/FTB-CIE.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 5,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "FTB-BIM": {
+      "id": "FTB-BIM",
+      "path": "assets/emblemas-png/FTB-BIM.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 6,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "FTB-BIL": {
+      "id": "FTB-BIL",
+      "path": "assets/emblemas-png/FTB-BIL.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 7,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "FTB-BIS": {
+      "id": "FTB-BIS",
+      "path": "assets/emblemas-png/FTB-BIS.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 8,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "FTB-GAC": {
+      "id": "FTB-GAC",
+      "path": "assets/emblemas-png/FTB-GAC.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 9,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "ADM-FMB": {
+      "id": "ADM-FMB",
+      "path": "assets/emblemas-png/ADM-FMB.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 0,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "FTB-AMAN": {
+      "id": "FTB-AMAN",
+      "path": "assets/emblemas-png/FTB-AMAN.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 1,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "FTB-EsPCEx": {
+      "id": "FTB-EsPCEx",
+      "path": "assets/emblemas-png/FTB-EsPCEx.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 2,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "FTB-ESA": {
+      "id": "FTB-ESA",
+      "path": "assets/emblemas-png/FTB-ESA.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 3,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "ADM-STF": {
+      "id": "ADM-STF",
+      "path": "assets/emblemas-png/ADM-STF.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 4,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "ADM-CBM": {
+      "id": "ADM-CBM",
+      "path": "assets/emblemas-png/ADM-CBM.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 5,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "ADM-GOV": {
+      "id": "ADM-GOV",
+      "path": "assets/emblemas-png/ADM-GOV.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 6,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "FTB-B-Log-Sl": {
+      "id": "FTB-B-Log-Sl",
+      "path": "assets/emblemas-png/FTB-B-Log-Sl.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 7,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "FTB-B-Log": {
+      "id": "FTB-B-Log",
+      "path": "assets/emblemas-png/FTB-B-Log.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 8,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "FAB-AFA": {
+      "id": "FAB-AFA",
+      "path": "assets/emblemas-png/FAB-AFA.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 9,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "FAB-EEAR": {
+      "id": "FAB-EEAR",
+      "path": "assets/emblemas-png/FAB-EEAR.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 0,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "FAB-EPCAR": {
+      "id": "FAB-EPCAR",
+      "path": "assets/emblemas-png/FAB-EPCAR.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 1,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "FAB-SIA": {
+      "id": "FAB-SIA",
+      "path": "assets/emblemas-png/FAB-SIA.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 2,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "FAB-UNIFA": {
+      "id": "FAB-UNIFA",
+      "path": "assets/emblemas-png/FAB-UNIFA.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 3,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "FAB-ECEMAR": {
+      "id": "FAB-ECEMAR",
+      "path": "assets/emblemas-png/FAB-ECEMAR.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 4,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "FAB-EAOAR": {
+      "id": "FAB-EAOAR",
+      "path": "assets/emblemas-png/FAB-EAOAR.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 5,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "FAB-EAS-PARA-SAR": {
+      "id": "FAB-EAS-PARA-SAR",
+      "path": "assets/emblemas-png/FAB-EAS-PARA-SAR.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 7,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "FAB-GSD": {
+      "id": "FAB-GSD",
+      "path": "assets/emblemas-png/FAB-GSD.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 8,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "FAB-ETA": {
+      "id": "FAB-ETA",
+      "path": "assets/emblemas-png/FAB-ETA.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 9,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "FAB-IEAV": {
+      "id": "FAB-IEAV",
+      "path": "assets/emblemas-png/FAB-IEAV.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 0,
+      "y": 3,
+      "status": "miniatura recortada"
+    },
+    "FMB-CIAW": {
+      "id": "FMB-CIAW",
+      "path": "assets/emblemas-png/FMB-CIAW.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 1,
+      "y": 3,
+      "status": "miniatura recortada"
+    },
+    "FMB-CIAMPA": {
+      "id": "FMB-CIAMPA",
+      "path": "assets/emblemas-png/FMB-CIAMPA.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 2,
+      "y": 3,
+      "status": "miniatura recortada"
+    },
+    "FMB-CIAA": {
+      "id": "FMB-CIAA",
+      "path": "assets/emblemas-png/FMB-CIAA.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 3,
+      "y": 3,
+      "status": "miniatura recortada"
+    },
+    "FMB-EN": {
+      "id": "FMB-EN",
+      "path": "assets/emblemas-png/FMB-EN.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 4,
+      "y": 3,
+      "status": "miniatura recortada"
+    },
+    "FMB-CN": {
+      "id": "FMB-CN",
+      "path": "assets/emblemas-png/FMB-CN.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 5,
+      "y": 3,
+      "status": "miniatura recortada"
+    },
+    "FMB-EAM": {
+      "id": "FMB-EAM",
+      "path": "assets/emblemas-png/FMB-EAM.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 6,
+      "y": 3,
+      "status": "miniatura recortada"
+    },
+    "FMB-GRUMEC": {
+      "id": "FMB-GRUMEC",
+      "path": "assets/emblemas-png/FMB-GRUMEC.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 7,
+      "y": 3,
+      "status": "miniatura recortada"
+    },
+    "FTB-1DE": {
+      "id": "FTB-1DE",
+      "path": "assets/emblemas-png/FTB-1DE.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 8,
+      "y": 3,
+      "status": "miniatura recortada"
+    },
+    "FTB-3DE": {
+      "id": "FTB-3DE",
+      "path": "assets/emblemas-png/FTB-3DE.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 9,
+      "y": 3,
+      "status": "miniatura recortada"
+    },
+    "FTB-5DE": {
+      "id": "FTB-5DE",
+      "path": "assets/emblemas-png/FTB-5DE.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 0,
+      "y": 4,
+      "status": "miniatura recortada"
+    },
+    "FTB-Bda-Inf-Sl": {
+      "id": "FTB-Bda-Inf-Sl",
+      "path": "assets/emblemas-png/FTB-Bda-Inf-Sl.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 1,
+      "y": 4,
+      "status": "miniatura recortada"
+    },
+    "FTB-Bda-Inf-Mth": {
+      "id": "FTB-Bda-Inf-Mth",
+      "path": "assets/emblemas-png/FTB-Bda-Inf-Mth.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 2,
+      "y": 4,
+      "status": "miniatura recortada"
+    },
+    "FTB-BIP": {
+      "id": "FTB-BIP",
+      "path": "assets/emblemas-png/FTB-BIP.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 3,
+      "y": 4,
+      "status": "miniatura recortada"
+    },
+    "ADM-CFN": {
+      "id": "ADM-CFN",
+      "path": "assets/emblemas-png/ADM-CFN.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 4,
+      "y": 4,
+      "status": "miniatura recortada"
+    },
+    "FTB-Bda-Inf-AMV": {
+      "id": "FTB-Bda-Inf-AMV",
+      "path": "assets/emblemas-png/FTB-Bda-Inf-AMV.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 5,
+      "y": 4,
+      "status": "miniatura recortada"
+    },
+    "FTB-Bda-Inf-Mec": {
+      "id": "FTB-Bda-Inf-Mec",
+      "path": "assets/emblemas-png/FTB-Bda-Inf-Mec.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 6,
+      "y": 4,
+      "status": "miniatura recortada"
+    },
+    "FTB-Bda-C-Mec": {
+      "id": "FTB-Bda-C-Mec",
+      "path": "assets/emblemas-png/FTB-Bda-C-Mec.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 7,
+      "y": 4,
+      "status": "miniatura recortada"
+    },
+    "FTB-Bda-Inf-Mtz": {
+      "id": "FTB-Bda-Inf-Mtz",
+      "path": "assets/emblemas-png/FTB-Bda-Inf-Mtz.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 8,
+      "y": 4,
+      "status": "miniatura recortada"
+    },
+    "FTB-Bda-Inf-Bld": {
+      "id": "FTB-Bda-Inf-Bld",
+      "path": "assets/emblemas-png/FTB-Bda-Inf-Bld.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 9,
+      "y": 4,
+      "status": "miniatura recortada"
+    },
+    "FTB-Bda-C-Bld": {
+      "id": "FTB-Bda-C-Bld",
+      "path": "assets/emblemas-png/FTB-Bda-C-Bld.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 0,
+      "y": 5,
+      "status": "miniatura recortada"
+    },
+    "FTB-COpEsp": {
+      "id": "FTB-COpEsp",
+      "path": "assets/emblemas-png/FTB-COpEsp.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 1,
+      "y": 5,
+      "status": "miniatura recortada"
+    },
+    "FTB-DECEx": {
+      "id": "FTB-DECEx",
+      "path": "assets/emblemas-png/FTB-DECEx.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 2,
+      "y": 5,
+      "status": "miniatura recortada"
+    },
+    "FTB-CIGS": {
+      "id": "FTB-CIGS",
+      "path": "assets/emblemas-png/FTB-CIGS.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 3,
+      "y": 5,
+      "status": "miniatura recortada"
+    },
+    "FTB-CIOU": {
+      "id": "FTB-CIOU",
+      "path": "assets/emblemas-png/FTB-CIOU.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 4,
+      "y": 5,
+      "status": "miniatura recortada"
+    },
+    "FTB-CIOpC": {
+      "id": "FTB-CIOpC",
+      "path": "assets/emblemas-png/FTB-CIOpC.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 5,
+      "y": 5,
+      "status": "miniatura recortada"
+    },
+    "FTB-CIOpEsp": {
+      "id": "FTB-CIOpEsp",
+      "path": "assets/emblemas-png/FTB-CIOpEsp.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 6,
+      "y": 5,
+      "status": "miniatura recortada"
+    },
+    "FTB-CIBld": {
+      "id": "FTB-CIBld",
+      "path": "assets/emblemas-png/FTB-CIBld.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 7,
+      "y": 5,
+      "status": "miniatura recortada"
+    },
+    "FTB-CI-Pqdt-GPB": {
+      "id": "FTB-CI-Pqdt-GPB",
+      "path": "assets/emblemas-png/FTB-CI-Pqdt-GPB.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 8,
+      "y": 5,
+      "status": "miniatura recortada"
+    },
+    "ADM-SGM": {
+      "id": "ADM-SGM",
+      "path": "assets/emblemas-png/ADM-SGM.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 9,
+      "y": 5,
+      "status": "miniatura recortada"
+    },
+    "ADM-SEFA": {
+      "id": "ADM-SEFA",
+      "path": "assets/emblemas-png/ADM-SEFA.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 0,
+      "y": 6,
+      "status": "miniatura recortada"
+    },
+    "FTB-EsAO": {
+      "id": "FTB-EsAO",
+      "path": "assets/emblemas-png/FTB-EsAO.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 1,
+      "y": 6,
+      "status": "miniatura recortada"
+    },
+    "FTB-EsSLog": {
+      "id": "FTB-EsSLog",
+      "path": "assets/emblemas-png/FTB-EsSLog.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 2,
+      "y": 6,
+      "status": "miniatura recortada"
+    },
+    "ADM-TAI-EB": {
+      "id": "ADM-TAI-EB",
+      "path": "assets/emblemas-png/ADM-TAI-EB.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 3,
+      "y": 6,
+      "status": "miniatura recortada"
+    },
+    "ADM-TAI-MB": {
+      "id": "ADM-TAI-MB",
+      "path": "assets/emblemas-png/ADM-TAI-MB.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 4,
+      "y": 6,
+      "status": "miniatura recortada"
+    },
+    "ADM-TAI-FAB": {
+      "id": "ADM-TAI-FAB",
+      "path": "assets/emblemas-png/ADM-TAI-FAB.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 5,
+      "y": 6,
+      "status": "miniatura recortada"
+    },
+    "FTB-Cia-Prec-Pqdt": {
+      "id": "FTB-Cia-Prec-Pqdt",
+      "path": "assets/emblemas-png/FTB-Cia-Prec-Pqdt.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 6,
+      "y": 6,
+      "status": "miniatura recortada"
+    },
+    "FTB-RCC": {
+      "id": "FTB-RCC",
+      "path": "assets/emblemas-png/FTB-RCC.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 7,
+      "y": 6,
+      "status": "miniatura recortada"
+    },
+    "FTB-17--B-Fron": {
+      "id": "FTB-17--B-Fron",
+      "path": "assets/emblemas-png/FTB-17--B-Fron.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 8,
+      "y": 6,
+      "status": "miniatura recortada"
+    },
+    "FTB-1--RCG": {
+      "id": "FTB-1--RCG",
+      "path": "assets/emblemas-png/FTB-1--RCG.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 9,
+      "y": 6,
+      "status": "miniatura recortada"
+    },
+    "FTB-ECEME": {
+      "id": "FTB-ECEME",
+      "path": "assets/emblemas-png/FTB-ECEME.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 0,
+      "y": 7,
+      "status": "miniatura recortada"
+    },
+    "FTB-B-Op-Psi": {
+      "id": "FTB-B-Op-Psi",
+      "path": "assets/emblemas-png/FTB-B-Op-Psi.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 1,
+      "y": 7,
+      "status": "miniatura recortada"
+    },
+    "PM-ROTAM": {
+      "id": "PM-ROTAM",
+      "path": "assets/emblemas-png/PM-ROTAM.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 2,
+      "y": 7,
+      "status": "miniatura recortada"
+    },
+    "PM-BPChoque": {
+      "id": "PM-BPChoque",
+      "path": "assets/emblemas-png/PM-BPChoque.png",
+      "source": "faaab-emblemas-site.webp",
+      "x": 3,
+      "y": 7,
+      "status": "miniatura recortada"
+    },
+    "PM-BOPE": {
+      "id": "PM-BOPE",
+      "path": "assets/emblemas-png/PM-BOPE.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 0,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "FAB-CIAER": {
+      "id": "FAB-CIAER",
+      "path": "assets/emblemas-png/FAB-CIAER.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 1,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "CFN-BtlBldFN": {
+      "id": "CFN-BtlBldFN",
+      "path": "assets/emblemas-png/CFN-BtlBldFN.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 2,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "CFN-BtlEngFN": {
+      "id": "CFN-BtlEngFN",
+      "path": "assets/emblemas-png/CFN-BtlEngFN.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 3,
+      "y": 0,
+      "status": "miniatura recortada"
+    },
+    "CFN-BtlArtFN": {
+      "id": "CFN-BtlArtFN",
+      "path": "assets/emblemas-png/CFN-BtlArtFN.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 0,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "PM-BPP": {
+      "id": "PM-BPP",
+      "path": "assets/emblemas-png/PM-BPP.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 1,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "CBM-GBS": {
+      "id": "CBM-GBS",
+      "path": "assets/emblemas-png/CBM-GBS.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 2,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "CBM-GSFMA": {
+      "id": "CBM-GSFMA",
+      "path": "assets/emblemas-png/CBM-GSFMA.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 3,
+      "y": 1,
+      "status": "miniatura recortada"
+    },
+    "CBM-GOPP": {
+      "id": "CBM-GOPP",
+      "path": "assets/emblemas-png/CBM-GOPP.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 0,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "CBM-GOA": {
+      "id": "CBM-GOA",
+      "path": "assets/emblemas-png/CBM-GOA.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 1,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "CBM-GOESP": {
+      "id": "CBM-GOESP",
+      "path": "assets/emblemas-png/CBM-GOESP.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 2,
+      "y": 2,
+      "status": "miniatura recortada"
+    },
+    "FTB-CIOpMth-QUALIFICACAO": {
+      "id": "FTB-CIOpMth-QUALIFICACAO",
+      "path": "assets/emblemas-png/FTB-CIOpMth-QUALIFICACAO.png",
+      "source": "faaab-emblemas-extra.webp",
+      "x": 3,
+      "y": 2,
+      "status": "distintivo de qualificação"
+    }
+  },
+  "notes": "PNGs extraídos dos WebPs antigos; substitua por fontes originais de alta resolução quando possível. GDA não foi substituído por GOA."
+}
