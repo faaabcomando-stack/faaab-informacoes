@@ -164,8 +164,8 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 ### Polícia Militar
 
 - ☐ referência ainda não identificada com segurança — **BOPE** (Batalhão de Operações Policiais Especiais)
-- ☐ referência ainda não identificada com segurança — **ROTAM** (Rondas Ostensivas Táticas Metropolitanas)
-- ☐ referência ainda não identificada com segurança — **BPChoque** (Batalhão de Polícia de Choque)
+- ✅ recebido — **ROTAM** (Rondas Ostensivas Táticas Metropolitanas)
+- ✅ recebido — **BPChoque** (Batalhão de Polícia de Choque)
 - ☐ referência ainda não identificada com segurança — **BPP** (Batalhão de Polícia Penal (adaptação fictícia da FAAAB; não pertence à PM real))
 
 ### Bombeiros
@@ -195,3 +195,10 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - **Cia Prec Pqdt** confirmada na Brigada de Infantaria Paraquedista, com **Precs** como subdivisão interna. Não criar Batalhão de Precursores.
 - **RCC** confirmado como Regimento de Carros de Combate, não BCC.
 - Ambos incluídos nos dados e vinculados à estrutura; a implantação dentro do Roblox e emblemas específicos continuam sujeitos à conferência.
+
+## Remessa de seis imagens (10/11/2026)
+
+- ✅ **ROTAM** e **BPChoque** (PMERJ): recebidos; não pedir novamente.
+- ◐ Dois brasões navais (timão/âncora e letra J/âncora): recebidos, aguardando identificação exata.
+- ◐ Dois emblemas com caveiras, um identificado visualmente como **Comandos**: recebidos; associação institucional ainda não comprovada, portanto não os atribuir arbitrariamente.
+- Os anexos estão na conversa; registrar recebimento não significa ter publicado o arquivo no site.
