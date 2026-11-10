@@ -64,7 +64,9 @@
     "FTB-CIBld",
     "FTB-CI-Pqdt-GPB",
     "FTB-EsAO",
-    "FTB-EsSLog"
+    "FTB-EsSLog",
+    "ADM-SGM",
+    "ADM-SEFA"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -82,7 +84,8 @@
     "Cia Prec Pqdt": "Emblema da Companhia de Precursores Paraquedistas recebido. Precs é sua subdivisão, não batalhão.",
     "Taifas": "QTE, QTA e CPA recebidos; não pedir novamente.",
     "CentrosExercito": "CIGS, CIOU, CIOpC, CIOpEsp, CIBld e CI Pqdt GPB recebidos. CIOPan também recebido, requer recorte.",
-    "EscolasExercito": "EsAO e EsSLog recebidos. Não pedir de novo."
+    "EscolasExercito": "EsAO e EsSLog recebidos. Não pedir de novo.",
+    "SGM/SEFA": "Brasões enviados na remessa anterior de logos da Marinha e Aeronáutica, não solicitar novamente."
   },
   "excludedDoNotReAdd": [
     "FTB-B-Sau",
@@ -131,6 +134,8 @@
     "CIBld",
     "CI Pqdt GPB",
     "EsAO",
-    "EsSLog"
+    "EsSLog",
+    "SGM",
+    "SEFA"
   ]
 }
