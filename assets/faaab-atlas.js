@@ -22,12 +22,14 @@ const ALIASES=Object.freeze({
 const PNG_ONLY_IDS=new Set(["FAB-1--GDA","FTB-CIOPan","FMB-SSPM","CFN-BOE-FN","CFN-COMANF","ADM-PM","ADM-TAI-EB","ADM-TAI-FAB","ADM-TAI-MB"]); // GOA nunca substitui GDA.
 // Referência heráldica original publicada pela Marinha, em PNG transparente.
 const REMOTE_EMBLEMS=Object.freeze({
+ "FMB-CIM":"https://upload.wikimedia.org/wikipedia/commons/4/4c/Centro_de_Informa%C3%A7%C3%B5es_da_Marinha.png",
  "FMB-COMSUB":"https://www.marinha.mil.br/sites/www.marinha.mil.br.comfors/files/field/image/brasao.png"
 });
 const PNG_ALIASES=Object.freeze({
  "FTB-CIOpMth":"FTB-CIOpMth-QUALIFICACAO"
 });
 const LABELS=Object.freeze({
+ "FMB-CIM":"CIM — Centro de Inteligência da Marinha. Emblema original com a cabeça de Argus, confirmado pelo usuário.",
  "FMB-COMSUB":"Comando da Força de Submarinos (ComForS); brasão oficial da Marinha. COMSUB é a sigla adotada na FAAAB.",
  "FMB-EAM":"Referência: Escola de Aprendizes-Marinheiros do Ceará (EAMCE)",
  "FAB-ETA":"Referência: primeiro Esquadrão de Transporte Aéreo (1º ETA)",
