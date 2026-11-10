@@ -1,7 +1,7 @@
 {
   "versao": 1,
   "geradoEm": "2026-11-10",
-  "escopo": "Catálogo revisado da FAAAB: 119 organizações e 55 cursos, sem criação de provas ou inscrições automáticas.",
+  "escopo": "Catálogo revisado FAAAB: 121 organizações e 55 cursos. Fichas de consulta não criam provas nem abrem inscrições.",
   "avisos": [
     "Escolas de formação podem ter prova escrita pública; centros e unidades operacionais frequentemente têm avaliação interna, sem caderno público",
     "Cursos com progressão documentada não concedem patente automaticamente: dependem da CDP e da decisão FAAAB",
@@ -2247,7 +2247,7 @@
       "situacaoProva": "sem_prova_publica_comprovada",
       "referenciaId": null,
       "referenciaUrl": null,
-      "observacao": "Subunidade interna de organização e especialização da FAAAB. Não representa um grupo Roblox separado.",
+      "observacao": "Precs é uma subdivisão interna da Companhia de Precursores Paraquedistas (Cia Prec Pqdt), vinculada à Brigada de Infantaria Paraquedista da 1ª DE. Não é batalhão nem grupo Roblox próprio.",
       "efeitoDocumentado": null,
       "formaAcesso": "Seleção ou curso específico a definir; pertencer a uma unidade não implica prova escrita individual",
       "inscricaoAbertaFAAAB": false
@@ -3219,6 +3219,40 @@
       "observacao": "Unidade prevista na Brigada de Infantaria de Selva da 1ª DE; implementação e cargos ainda não confirmados.",
       "efeitoDocumentado": null,
       "formaAcesso": "Sem inscrição automática; requisitos dependem de regulamentação e autorização.",
+      "inscricaoAbertaFAAAB": false
+    },
+    {
+      "id": "CAT-FTB-Cia-Prec-Pqdt",
+      "origem": "catalogo",
+      "origemId": "FTB-Cia-Prec-Pqdt",
+      "forca": "FTB",
+      "tipo": "companhia",
+      "nome": "Companhia de Precursores Paraquedistas",
+      "sigla": "Cia Prec Pqdt",
+      "estadoFAAAB": "Não confirmado",
+      "situacaoProva": "sem_prova_publica_comprovada",
+      "referenciaId": null,
+      "referenciaUrl": null,
+      "observacao": "Companhia diretamente ligada à Brigada de Infantaria Paraquedista da 1ª DE; abriga Precs como subdivisão interna. O BIP é outra unidade da mesma brigada.",
+      "efeitoDocumentado": null,
+      "formaAcesso": "Nenhuma prova ou inscrição aberta automaticamente; critérios dependem de regulamentação FAAAB.",
+      "inscricaoAbertaFAAAB": false
+    },
+    {
+      "id": "CAT-FTB-RCC",
+      "origem": "catalogo",
+      "origemId": "FTB-RCC",
+      "forca": "FTB",
+      "tipo": "regimento",
+      "nome": "Regimento de Carros de Combate",
+      "sigla": "RCC",
+      "estadoFAAAB": "Não confirmado",
+      "situacaoProva": "sem_prova_publica_comprovada",
+      "referenciaId": null,
+      "referenciaUrl": null,
+      "observacao": "Regimento subordinado à Brigada de Cavalaria Blindada da 5ª DE. Substitui a designação antiga BCC (Batalhão de Carros de Combate), que não deve voltar.",
+      "efeitoDocumentado": null,
+      "formaAcesso": "Nenhuma prova ou inscrição aberta automaticamente; critérios dependem de regulamentação FAAAB.",
       "inscricaoAbertaFAAAB": false
     }
   ]
