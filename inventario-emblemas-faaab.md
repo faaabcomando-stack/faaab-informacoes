@@ -17,6 +17,14 @@
 - **CIAAR, PARACOM, ECDA, AVEX e B Sau:** não reintroduzir no catálogo atual.
 - **BI Mth:** único registro; não duplicar como BIM/BIL Mth.
 
+## Adições e correções confirmadas pelo envio de imagens
+
+- ✅ **Cia Prec Pqdt:** emblema recebido (não pedir novamente). Não confundir com Batalhão de Precursores.
+- ✅ **5º RCC:** emblema recebido para a referência do RCC; preservar o ordinal do brasão.
+- ✅ **QTE, QTA, CPA:** três Taifas com emblemas recebidos.
+- ✅ **CIGS, CIOU, CIOpC, CIOpEsp, CIBld, CI Pqdt GPB, EsAO e EsSLog:** já tinham sido enviados anteriormente; corrigir status.
+- **Recebido não significa publicado:** conferir vínculo e arquivo real antes de afirmar que aparece no site.
+
 ## Marcas gerais já recebidas
 
 FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviada); CFN; CBM; PM; STF; DECEx; C Op Esp; três Divisões de Exército e nove Brigadas do EB (fornecidas anteriormente). Não solicitar de novo.
@@ -37,9 +45,9 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ✅ recebido — **SGEx** (Secretaria-Geral do Exército)
 - ◐ sprite antigo (confirmar) — **SGM** (Secretaria-Geral da Marinha)
 - ◐ sprite antigo (confirmar) — **SEFA** (Secretaria de Economia, Finanças e Administração da Aeronáutica)
-- ☐ referência ainda não identificada com segurança — **TAI-EB** (Taifa do Exército)
-- ☐ referência ainda não identificada com segurança — **TAI-FAB** (Taifa da Aeronáutica)
-- ☐ referência ainda não identificada com segurança — **TAI-MB** (Taifa da Marinha)
+- ✅ recebido — **TAI-EB** (Taifa do Exército)
+- ✅ recebido — **TAI-FAB** (Taifa da Aeronáutica)
+- ✅ recebido — **TAI-MB** (Taifa da Marinha)
 - ☐ referência ainda não identificada com segurança — **SEP** (Segurança e Patentes)
 - ☐ referência ainda não identificada com segurança — **SMP** (Marketing e Propaganda)
 - ☐ referência ainda não identificada com segurança — **DOC** (Documentação)
@@ -64,20 +72,20 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - ✅ recebido — **BIS** (Batalhão de Infantaria de Selva)
 - ✅ recebido — **GAC** (Grupo de Artilharia de Campanha)
 - ✅ recebido — **CIE** (Centro de Inteligência do Exército)
-- ☐ referência ainda não identificada com segurança — **CIOU** (Centro de Instrução de Operações Urbanas)
-- ☐ referência ainda não identificada com segurança — **CIGS** (Centro de Instrução de Guerra na Selva)
-- ☐ referência ainda não identificada com segurança — **CIOpC** (Centro de Instrução e Operações na Caatinga)
-- ☐ referência ainda não identificada com segurança — **CIOpEsp** (Centro de Instrução de Operações Especiais)
+- ✅ recebido — **CIOU** (Centro de Instrução de Operações Urbanas)
+- ✅ recebido — **CIGS** (Centro de Instrução de Guerra na Selva)
+- ✅ recebido — **CIOpC** (Centro de Instrução e Operações na Caatinga)
+- ✅ recebido — **CIOpEsp** (Centro de Instrução de Operações Especiais)
 - ☐ referência ainda não identificada com segurança — **CIOpMth** (Centro de Instrução de Operações em Montanha)
 - ✅ recebido — **CIOPan** (Centro de Instrução de Operações no Pantanal) · **recorte pendente**
-- ☐ referência ainda não identificada com segurança — **CIBld** (Centro de Instrução de Blindados)
-- ☐ referência ainda não identificada com segurança — **CI Pqdt GPB** (Centro de Instrução Paraquedista General Penha Brasil)
+- ✅ recebido — **CIBld** (Centro de Instrução de Blindados)
+- ✅ recebido — **CI Pqdt GPB** (Centro de Instrução Paraquedista General Penha Brasil)
 - ✅ recebido — **ESA** (Escola de Sargentos das Armas)
 - ✅ recebido — **EsPCEx** (Escola Preparatória de Cadetes do Exército)
 - ✅ recebido — **AMAN** (Academia Militar das Agulhas Negras)
-- ☐ referência ainda não identificada com segurança — **EsAO** (Escola de Aperfeiçoamento de Oficiais)
+- ✅ recebido — **EsAO** (Escola de Aperfeiçoamento de Oficiais)
 - ☐ referência ainda não identificada com segurança — **ECEME** (Escola de Comando e Estado-Maior do Exército)
-- ☐ referência ainda não identificada com segurança — **EsSLog** (Escola de Sargentos de Logística)
+- ✅ recebido — **EsSLog** (Escola de Sargentos de Logística)
 - ✅ recebido — **Bda Inf Sl** (Brigada de Infantaria de Selva)
 - ✅ recebido — **Bda Inf Mth** (Brigada de Infantaria de Montanha)
 - ✅ recebido — **Bda Inf Mec** (Brigada de Infantaria Mecanizada)
