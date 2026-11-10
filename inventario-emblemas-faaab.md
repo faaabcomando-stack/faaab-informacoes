@@ -233,7 +233,7 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 
 ## Auditoria de duplicatas e lacunas — 10/11/2026
 
-**Fonte verificada:** `dados/catalogo.json`, `dados/referencias_emblemas.json`, árvore de `assets/emblemas-png/` e anexos desta conversa. Quantidades após esta correção: **120 entradas** no catálogo, **94 entradas marcadas como recebidas**, **90 PNGs por ID publicado**. O fato de ter arquivo PNG não confirma o recorte ou a associação corretos.
+**Fonte verificada:** `dados/catalogo.json`, `dados/referencias_emblemas.json`, árvore de `assets/emblemas-png/` e anexos desta conversa. Quantidades após esta correção: **120 entradas** no catálogo, **94 entradas marcadas como recebidas**, **90 arquivos PNG no diretório, dos quais 80 correspondem a IDs do catálogo; os outros 10 são referências adicionais de divisões, ensino ou organização**. O fato de ter arquivo PNG não confirma o recorte ou a associação corretos.
 
 **Já recebidos mas sem PNG individual publicado (14):** ADM-FAAAB, ADM-EGAF, ADM-GOV, ADM-FTB, ADM-FAB, ADM-SGEx, FTB-CIOpMth (apenas distintivo Guia de Montanha Avançado, não brasão institucional), CFN-CiaPolBtlNav, FMB-ComForSup, FMB-CIM, CFN-BtlVtrAnf, CBM-CFO-BM, CBM-CAO-BM, FAB-CCFA. **Não pedir nenhuma dessas imagens de novo automaticamente.**
 
@@ -244,3 +244,5 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 **Cursos recentes recebidos fora do catálogo de organizações:** CAEP-BM tem entrada `CUR-COMP-17` em `dados/cursos.json`; os dois brasões gerados de CFO/CAO da PMDF também foram recebidos e são distintos dos cursos dos Bombeiros.
 
 **Repetição bloqueada:** CIGS, ESA, EsPCEx, AMAN, EAM, SSPM, CI Pqdt GPB, QTE, QTA, CPA, 1º GDA Jaguar, CIAER, BOPE, Cia Prec Pqdt, CCFA e BtlVtrAnf são referências já enviadas ou publicadas. Antes de declarar qualquer logo faltante, verificar anexos e o atlas.
+
+**Diferenciação importante:** 10 PNGs não têm ID equivalente no `dados/catalogo.json`: `ADM-STF`, `FAB-SIA`, `FTB-1DE`, `FTB-3DE`, `FTB-5DE`, `FTB-Bda-Inf-AMV`, `FTB-Bda-Inf-Mtz`, `FTB-CIOpMth-QUALIFICACAO`, `FTB-COpEsp`, `FTB-DECEx`. Não significa que devem ser apagados: revisar sua ligação com seções fora do catálogo principal. As 80 entradas de catálogo com PNG próprio também constam como recebidas.
