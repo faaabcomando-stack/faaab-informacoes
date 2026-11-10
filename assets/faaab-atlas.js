@@ -20,10 +20,15 @@ const ALIASES=Object.freeze({
  "CFN-BtlInfFN":"ADM-CFN","CFN-BtlVtrAnf":"ADM-CFN","CFN-BtlOpRib":"ADM-CFN"
 });
 const PNG_ONLY_IDS=new Set(["FAB-1--GDA","FTB-CIOPan","FMB-SSPM","CFN-BOE-FN","CFN-COMANF","ADM-PM","ADM-TAI-EB","ADM-TAI-FAB","ADM-TAI-MB"]); // GOA nunca substitui GDA.
+// Referência heráldica original publicada pela Marinha, em PNG transparente.
+const REMOTE_EMBLEMS=Object.freeze({
+ "FMB-COMSUB":"https://www.marinha.mil.br/sites/www.marinha.mil.br.comfors/files/field/image/brasao.png"
+});
 const PNG_ALIASES=Object.freeze({
  "FTB-CIOpMth":"FTB-CIOpMth-QUALIFICACAO"
 });
 const LABELS=Object.freeze({
+ "FMB-COMSUB":"Comando da Força de Submarinos (ComForS); brasão oficial da Marinha. COMSUB é a sigla adotada na FAAAB.",
  "FMB-EAM":"Referência: Escola de Aprendizes-Marinheiros do Ceará (EAMCE)",
  "FAB-ETA":"Referência: primeiro Esquadrão de Transporte Aéreo (1º ETA)",
  "FTB-CIOpMth":"Distintivo de Guia de Montanha Avançado; referência de curso, não brasão do centro",
@@ -36,6 +41,8 @@ const pngCache=new Map();
 const selfUrl=document.currentScript?.src||location.href;
 function loadPng(key){
  if(pngCache.has(key))return pngCache.get(key);
+ const remote=REMOTE_EMBLEMS[key];
+ if(remote){const result=new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(remote);img.onerror=()=>resolve(null);img.src=remote;});pngCache.set(key,result);return result;}
  const asset=new URL("emblemas-png/"+encodeURIComponent(key)+".png",selfUrl);
  asset.searchParams.set("v","20261110-pngoriginais");
  const url=asset.href;
@@ -54,7 +61,7 @@ function effective(id){
 }
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const normalized=id=>typeof id==="string"&&/^[\w-]{2,60}$/.test(id)?id:"";
-function has(id){const k=effective(id);return (map.has(k)||extraMap.has(k)||PNG_ONLY_IDS.has(k)||Object.prototype.hasOwnProperty.call(PNG_ALIASES,k))&&!genericUnavailable.has(k)}
+function has(id){const k=effective(id);return (map.has(k)||extraMap.has(k)||PNG_ONLY_IDS.has(k)||Object.prototype.hasOwnProperty.call(PNG_ALIASES,k)||Object.prototype.hasOwnProperty.call(REMOTE_EMBLEMS,k))&&!genericUnavailable.has(k)}
 function decorate(node,id){
  if(!node||!has(id))return false;
  const key=effective(id),qualified=Object.prototype.hasOwnProperty.call(PNG_ALIASES,key);
