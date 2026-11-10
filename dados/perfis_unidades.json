@@ -1,5 +1,5 @@
 {
-  "revisao": "2026-11-10-r2",
+  "revisao": "2026-11-09-r3",
   "proposito": "Conteúdos de uso no jogo recuperados de decisões anteriores e das fichas aprovadas; não declarar funcionalidade já implementada sem verificação.",
   "perfis": {
     "FTB-BFE": {
@@ -54,15 +54,15 @@
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
     "FTB-BIP": {
-      "papel": "Batalhão de Infantaria Paraquedista. Precursores (Precs) e CFP são subequipes citadas nas decisões.",
+      "papel": "Batalhão de Infantaria Paraquedista (BIP) da Brigada de Infantaria Paraquedista. A Cia Prec Pqdt é unidade paralela da brigada.",
       "atividades": [
         "Treinamento e missões paraquedistas no cenário do jogo.",
-        "Atividades de precursores e preparação das áreas de salto.",
         "Capacitação de integrantes para deslocamento aéreo e chegada ao solo."
       ],
       "sistemas": [
-        "Precs é subdivisão já catalogada; CFP é sigla histórica a detalhar sem inventar nome.",
-        "O jogador não recebe automaticamente uma habilitação de salto por sua patente."
+        "CFP é formação ligada ao BIP, sem criar unidade ou batalhão separado.",
+        "Precs pertence à Companhia de Precursores Paraquedistas, não ao BIP.",
+        "Habilitação de salto não é automática pela patente."
       ],
       "formacao": [
         "CI Pqdt GPB, centro de qualificação paraquedista."
@@ -678,13 +678,13 @@
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
     "FTB-Precs": {
-      "papel": "Precursores Paraquedistas é uma equipe interna do Exército FAAAB, subordinada a Batalhão de Infantaria Paraquedista. Não é patente nem organização Roblox separada.",
+      "papel": "Precs é a subdivisão de Precursores Paraquedistas dentro da Cia Prec Pqdt, subordinada à Brigada de Infantaria Paraquedista. Não é batalhão separado nem grupo Roblox autônomo.",
       "atividades": [
-        "Precursores Paraquedistas executa as tarefas de sua especialidade no contexto da organização principal.",
-        "Sua atuação e progressão seguem as regras e a autorização do Batalhão de Infantaria Paraquedista."
+        "Atividades especializadas na Companhia de Precursores Paraquedistas, conforme planejamento do roleplay."
       ],
       "sistemas": [
-        "A equipe não substitui a patente militar do integrante e não garante equipamento automático."
+        "Não é patente, batalhão ou organização Roblox autônoma.",
+        "Cia Prec Pqdt e BIP são estruturas distintas da mesma brigada."
       ],
       "formacao": [],
       "observacoes": [
@@ -1673,6 +1673,35 @@
         "Registro atualizado em 10/11/2026; não comprova implementação no jogo."
       ],
       "fonte": "https://arquivodamarinha.marinha.mil.br/index.php/companhia-de-policia-do-batalhao-naval"
+    },
+    "FTB-Cia-Prec-Pqdt": {
+      "papel": "Companhia de Precursores Paraquedistas da Brigada de Infantaria Paraquedista, com Precs como subdivisão interna.",
+      "atividades": [
+        "Organização e formação da especialidade Precursores Paraquedistas no roleplay."
+      ],
+      "sistemas": [
+        "Companhia não é batalhão e não substitui o BIP.",
+        "Precs é subdivisão interna, sem grupo Roblox próprio."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Organização estrutural confirmada; funcionamento do grupo e cargos específicos ainda não comprovados."
+      ],
+      "fonte": "Decisão expressa da administração FAAAB, reafirmada em novembro de 2026."
+    },
+    "FTB-RCC": {
+      "papel": "Regimento de Carros de Combate na Brigada de Cavalaria Blindada da 5ª DE.",
+      "atividades": [
+        "Atividades da unidade blindada simulada, se implementadas no jogo."
+      ],
+      "sistemas": [
+        "RCC é regimento; a nomenclatura antiga BCC não deve retornar."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Estrutura documental confirmada, não comprova implementação real em Roblox."
+      ],
+      "fonte": "Decisão expressa da administração FAAAB, confirmada em novembro de 2026."
     }
   }
 }
