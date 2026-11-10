@@ -148,7 +148,8 @@
     "BOE FN e COMANF": "PNGs individuais já publicados; não solicitar reenvio. A qualidade/identificação ainda deve ser conferida visualmente.",
     "Pendências 2026-11-10": "Consultar auditoria-emblemas-faaab-2026-11-10.md: ausência de PNG não é ausência de envio.",
     "BOE FN/COMANF": "Recebidos na conversa e já constam em assets/emblemas-png. Anteriormente tinham PNG publicado mas status de recebimento falso. Não pedir novamente.",
-    "CFP não atribuído": "O losango azul/vermelho do Curso de Formação de Praças foi enviado em 1000171973.png; força não confirmada pelo usuário, portanto não rotular como CBM-CFP-BM."
+    "CFP não atribuído": "O losango azul/vermelho do Curso de Formação de Praças foi enviado em 1000171973.png; força não confirmada pelo usuário, portanto não rotular como CBM-CFP-BM.",
+    "COMSUB/ComForS": "COMSUB é a sigla usada no projeto para Comando da Força de Submarinos (ComForS, sigla oficial). Não confundir com ComForSup, Comando da Força de Superfície."
   },
   "excludedDoNotReAdd": [
     "FTB-B-Sau",
@@ -243,7 +244,8 @@
     "Curso de Formação de Praças (imagem recebida, força a confirmar)",
     "DEnsM — brasão enviado 1794311970465.jpeg",
     "DIRENS — brasão enviado 1794312287320.jpeg",
-    "COMSUB — brasão original enviado (1000171966.jpg)"
+    "COMSUB — brasão original enviado (1000171966.jpg)",
+    "COMSUB / ComForS — brasão enviado 1000171966.jpg"
   ],
   "receivedBatches": [
     {
