@@ -1,6 +1,6 @@
 {
   "versao": 1,
-  "atualizadoEm": "2026-11-09",
+  "atualizadoEm": "2026-11-10",
   "inscricoesAtivas": false,
   "notas": [
     "Esta listagem não abre inscrições nem concede patente, matrícula ou curso.",
@@ -328,20 +328,6 @@
       "situacao": "Aguardando progressão de carreira homologada",
       "origem": "dados/ensino_instituicoes.json",
       "formacao": "Formação de oficiais FAAAB; etapas envolvendo Cadete/Aspirante dependem da progressão superior da FAB, ainda não homologada."
-    },
-    {
-      "id": "ciaar",
-      "instituicao": "ciaar",
-      "titulo": "Cursos e avaliações — CIAAR",
-      "forca": "FAB",
-      "tipo": "Formação e adaptação de quadros",
-      "patentesCandidatas": [],
-      "patentesStatus": "a_definir",
-      "grupoId": null,
-      "inscricaoAberta": false,
-      "situacao": "Regulamento e editais internos pendentes",
-      "origem": "dados/ensino_instituicoes.json",
-      "formacao": "Formação especializada de quadros da FAB somente para carreiras implementadas no universo FAAAB. Requisitos de ingresso ainda não definidos."
     }
   ]
 }
