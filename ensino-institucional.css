@@ -15,3 +15,8 @@ body[data-force="FAB"] .seal{background:#215b7b}
 @media(max-width:560px){.hero .wrap{padding:23px 0 26px}.hero h1{font-size:34px}.section:first-of-type{padding-top:23px}.nav{gap:4px}.nav a{padding:8px 9px}}
 
 .news-empty-art{display:flex;align-items:center;gap:22px;min-height:165px;border-left:4px solid #b38c62;background:linear-gradient(110deg,#fff,#eff5f7)}.news-empty-art img{width:75px;height:75px;flex:none}.news-empty-art h3{font:400 29px Georgia,serif;margin:0 0 8px}.news-empty-art p{margin:0}
+
+/* Diretorias superiores de ensino: destaque estrutural, sem duplicar os portais das escolas. */
+.director-card{grid-column:1/-1;min-height:0;border-top:4px solid #b7a17c;background:#fffefc;padding:27px 30px}
+.director-card h3{font-size:30px}.director-card p{font-size:14px;max-width:760px;margin-bottom:16px}
+@media(max-width:620px){.director-card{padding:22px}.director-card h3{font-size:25px}}
