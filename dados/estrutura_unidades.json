@@ -412,39 +412,6 @@
       "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
       "observacoes": null
     },
-    "FTB-BI-Pan": {
-      "tipo": "unidade",
-      "nome": "Batalhão de Infantaria de Pantanal (adaptação da FAAAB)",
-      "sigla": "BI Pan",
-      "hierarquiaInterna": {
-        "modelo": "batalhao",
-        "patentes": [
-          "Soldado",
-          "Soldado de 1ª Classe",
-          "Cabo",
-          "Terceiro-Sargento",
-          "Segundo-Sargento",
-          "Primeiro-Sargento",
-          "Subtenente",
-          "Cadete",
-          "Aspirante a Oficial",
-          "Segundo-Tenente",
-          "Primeiro-Tenente",
-          "Capitão",
-          "Capitão-Sênior",
-          "Major",
-          "Tenente-Coronel",
-          "Coronel"
-        ],
-        "minima": "Soldado",
-        "maxima": "Coronel",
-        "fonte": "Faixa confirmada pelo responsável e sequência de patentes do Exército registrada em dados/hierarquias.json",
-        "nota": "A hierarquia de patentes desta unidade vai de Soldado a Coronel. Os dez grupos genéricos publicados anteriormente estavam incorretos."
-      },
-      "subunidades": [],
-      "status": "Estrutura interna documental; funções específicas, ocupantes e permissões técnicas dependem de registro",
-      "observacoes": null
-    },
     "FTB-17--B-Fron": {
       "tipo": "unidade",
       "nome": "17º Batalhão de Fronteira",
