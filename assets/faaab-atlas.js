@@ -19,7 +19,7 @@ const ALIASES=Object.freeze({
  "FAB-GSD-CHOQUE":"FAB-GSD",
  "CFN-BtlInfFN":"ADM-CFN","CFN-BtlVtrAnf":"ADM-CFN","CFN-BtlOpRib":"ADM-CFN"
 });
-const PNG_ONLY_IDS=new Set(["FAB-1--GDA"]); // GOA nunca substitui GDA.
+const PNG_ONLY_IDS=new Set(["FAB-1--GDA","FTB-CIOPan","FMB-SSPM","CFN-BOE-FN","CFN-COMANF"]); // GOA nunca substitui GDA.
 const PNG_ALIASES=Object.freeze({
  "FTB-CIOpMth":"FTB-CIOpMth-QUALIFICACAO"
 });
@@ -33,7 +33,9 @@ const pngCache=new Map();
 const selfUrl=document.currentScript?.src||location.href;
 function loadPng(key){
  if(pngCache.has(key))return pngCache.get(key);
- const url=new URL("emblemas-png/"+encodeURIComponent(key)+".png",selfUrl).href;
+ const asset=new URL("emblemas-png/"+encodeURIComponent(key)+".png",selfUrl);
+ asset.searchParams.set("v","20261110-pngoriginais");
+ const url=asset.href;
  const result=new Promise(resolve=>{
    const img=new Image();
    img.onload=()=>resolve(url);
