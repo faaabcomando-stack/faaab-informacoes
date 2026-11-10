@@ -3,7 +3,7 @@
 (()=>{
  const $=id=>document.getElementById(id);
  const page=document.body.dataset.portal||"",group=document.body.dataset.dir||"";
- const dirs={FTB:{title:"DECEx — Escolas Militares",short:"DECEx",url:"decex.html",force:"Exército",forceUrl:"exercito.html",desc:"Formação, aperfeiçoamento e educação especializada do Exército da FAAAB. Cada escola tem seus próprios cursos e comunicados."},FMB:{title:"Ensino da Marinha",short:"Ensino Naval",url:"ensino-marinha.html",force:"Marinha",forceUrl:"marinha.html",desc:"Escolas de formação e centros navais, com a SSPM para administrar seleções. O Corpo de Fuzileiros Navais possui seleção própria."},FAB:{title:"Ensino da Aeronáutica",short:"Ensino FAB",url:"ensino-fab.html",force:"Aeronáutica",forceUrl:"aeronautica.html",desc:"Instituições de ensino da FAB. A UNIFA organiza o portal acadêmico da FAAAB para ECEMAR e EAOAR."}};
+ const dirs={FTB:{title:"DECEx — Escolas Militares",short:"DECEx",url:"decex.html",force:"Exército",forceUrl:"exercito.html",desc:"Formação, aperfeiçoamento e educação especializada do Exército da FAAAB. Cada escola tem seus próprios cursos e comunicados."},FMB:{title:"DEnsM — Diretoria de Ensino da Marinha",short:"DEnsM",url:"ensino-marinha.html",force:"Marinha",forceUrl:"marinha.html",desc:"Diretoria de Ensino da Marinha: coordenação de EN, CN, CIAA, CIAW e SSPM; EAM sob supervisão funcional. O CFN mantém processos de seleção próprios."},FAB:{title:"DIRENS — Diretoria de Ensino da Aeronáutica",short:"DIRENS",url:"ensino-fab.html",force:"Aeronáutica",forceUrl:"aeronautica.html",desc:"A DIRENS coordena as escolas de ensino da FAB, incluindo AFA, EPCAR, EEAR, UNIFA, ECEMAR e EAOAR. Na FAAAB, a UNIFA mantém os portais acadêmicos associados."}};
  const node=(name,cls,text)=>{const x=document.createElement(name);if(cls)x.className=cls;if(text!=null)x.textContent=String(text);return x};
  const link=(href,text,cls)=>{const e=node("a",cls,text);e.href=href;return e};
  const allowedUrl=s=>{try{const u=new URL(s);return u.protocol==="https:"?u.href:null}catch{return null}};
@@ -24,11 +24,11 @@
   const host=$(target);if(!host)return;host.replaceChildren();
   if(!items.length){host.append(node("p","news-empty",emptyText||"Nenhuma escola cadastrada."));return}
   for(const item of items){
-   const c=node("article","card");
+   const c=node("article","card"+(item.id==="densm"||item.id==="direns"?" director-card":""));
    if(item.estado==="futuro_condicional")c.append(node("span","eyebrow","Proposta para o futuro"));
    else c.append(node("span","eyebrow",item.tipo||"Instituição"));
    c.append(node("h3",null,item.sigla+" · "+item.nome),node("p",null,item.resumo));
-   c.append(link(item.id+".html","Acessar portal ↗","foot-link"));host.append(c)
+   c.append(link(item.id+".html",item.id==="densm"||item.id==="direns"?"Abrir diretoria e escolas ↗":"Acessar portal ↗","foot-link"));host.append(c)
   }
  };
  const renderSite=(item,all,news)=>{
@@ -49,6 +49,8 @@
   for(const t of item.noticias||[])$("themes").append(node("span","chip",t));
   const sub=all.filter(x=>(item.subunidades||[]).includes(x.id));
   const subsec=$("sub-section");subsec.hidden=!sub.length;if(sub.length)renderCards(sub,"subunit-list");
+  if(item.id==="densm"){$("special-note").hidden=false;$("special-note").textContent="EN, CN, CIAA, CIAW e SSPM são subordinadas à DEnsM. EAM recebe supervisão funcional e não deve ser confundida com subordinação direta."}
+  if(item.id==="direns"){$("special-note").hidden=false;$("special-note").textContent="DIRENS coordena as organizações de ensino da FAB. A UNIFA reúne portais acadêmicos de ECEMAR e EAOAR na FAAAB, mas não substitui a direção superior."}
   if(item.id==="unifa"){$("special-note").hidden=false;$("special-note").textContent="No universo FAAAB, UNIFA reúne os portais acadêmicos de ECEMAR e EAOAR. Na estrutura real atual, a DIRENS é responsável pelas escolas, que funcionam no campus da UNIFA."}
   if(item.estado==="congelado_para_revisao"||item.estado==="aguardando_progressao"){$("special-note").hidden=false;$("special-note").textContent=item.estado==="congelado_para_revisao"?"Projeto congelado para revisão: esta escola não aceita inscrições ou novos cursos no momento.":"Progressão ainda não homologada: esta escola não pode abrir etapas seletivas sem aprovação do comando."}
   if(item.id==="sspm"){$("special-note").hidden=false;$("special-note").textContent="A SSPM administra as seleções navais fictícias. As seleções dos Fuzileiros Navais permanecem separadas. Não concede patente ou matrícula automaticamente."}
@@ -61,8 +63,8 @@
   $("hero-title").textContent=d.title;$("hero-desc").textContent=d.desc;
   $("nav-force").href=d.forceUrl;$("nav-force").textContent=d.force;
   $("directory-note").textContent=group==="FTB"?"EsPCEx prepara, AMAN e ESA formam, EASA, EsAO e ECEME aperfeiçoam. EsACosAAe e ESFCEx não integram esta estrutura.":
-    group==="FMB"?"SSPM faz seleções; EN, CN, CIAA, CIAW e EAM realizam formações. Seleções dos Fuzileiros Navais são distintas.":
-    "UNIFA reúne academicamente os portais ECEMAR e EAOAR na FAAAB; na FAB real atual, a DIRENS figura como superior das escolas.";
+    group==="FMB"?"A DEnsM coordena EN, CN, CIAA, CIAW e SSPM. As Escolas de Aprendizes-Marinheiros recebem supervisão funcional. O CFN mantém seleção própria.":
+    "A DIRENS é a diretoria superior de ensino da FAB. A UNIFA agrega portais acadêmicos de ECEMAR e EAOAR na FAAAB, sem substituir a subordinação à DIRENS.";
   $("exam-link").href="provas-faaab.html?forca="+group;
   renderCards(all.filter(x=>x.grupo===group),"institution-list");
   appendNews(news,null,group)
