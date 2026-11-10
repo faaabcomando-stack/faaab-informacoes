@@ -9,7 +9,7 @@ const EXTRA_COLS=4,EXTRA_ROWS=3;
 const extraMap=new Map(EXTRA_IDS.map((id,i)=>[id,i]));
 // Não exibir versões regionais como brasões universais de toda a instituição.
 // Um emblema regional pode ser exibido com a origem explícita, não como insígnia universal.
-const genericUnavailable=new Set(["FAB-1-GOA"]);
+const genericUnavailable=new Set(["FAB-1-GOA","ADM-GOV"]);
 const ALIASES=Object.freeze({
  "FTB-DAD":"FTB-BFE","FTB-DRE":"FTB-BFE",
  "FTB-PC":"FTB-BPE","FTB-PELOPES":"FTB-BI-Caat","FTB-DCS":"FTB-BI-Caat",
@@ -19,7 +19,7 @@ const ALIASES=Object.freeze({
  "FAB-GSD-CHOQUE":"FAB-GSD",
  "CFN-BtlInfFN":"ADM-CFN","CFN-BtlVtrAnf":"ADM-CFN","CFN-BtlOpRib":"ADM-CFN"
 });
-const PNG_ONLY_IDS=new Set(["FAB-1--GDA","FTB-CIOPan","FMB-SSPM","CFN-BOE-FN","CFN-COMANF"]); // GOA nunca substitui GDA.
+const PNG_ONLY_IDS=new Set(["FAB-1--GDA","FTB-CIOPan","FMB-SSPM","CFN-BOE-FN","CFN-COMANF","ADM-PM","ADM-TAI-EB","ADM-TAI-FAB","ADM-TAI-MB"]); // GOA nunca substitui GDA.
 const PNG_ALIASES=Object.freeze({
  "FTB-CIOpMth":"FTB-CIOpMth-QUALIFICACAO"
 });
@@ -27,7 +27,10 @@ const LABELS=Object.freeze({
  "FMB-EAM":"Referência: Escola de Aprendizes-Marinheiros do Ceará (EAMCE)",
  "FAB-ETA":"Referência: primeiro Esquadrão de Transporte Aéreo (1º ETA)",
  "FTB-CIOpMth":"Distintivo de Guia de Montanha Avançado; referência de curso, não brasão do centro",
- "FAB-1--GDA":"Referência visual do 1º GDA Jaguar, sem a legenda do antigo GOA."
+ "FAB-1--GDA":"Motivo do jaguar sem a legenda GOA: versão provisória da comunidade, não brasão oficial completo.",
+ "ADM-TAI-EB":"Taifa do Exército — QTE.",
+ "ADM-TAI-MB":"Taifa da Marinha — referência CPA.",
+ "ADM-TAI-FAB":"Taifa da Aeronáutica — QTA."
 });
 const pngCache=new Map();
 const selfUrl=document.currentScript?.src||location.href;
