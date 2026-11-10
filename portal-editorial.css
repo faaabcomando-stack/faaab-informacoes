@@ -34,9 +34,12 @@
 
 
 /* Logos criadas para a FAAAB e fornecidas pelo projeto (sprite 3 colunas x 2 linhas). */
-.institution .emblem-thumb{display:block;width:62px;height:62px;background-image:url("assets/emblemas-faaab-6.webp");background-repeat:no-repeat;background-size:300% 200%;border-radius:2px;border:1px solid #dce4e7;flex-shrink:0}
-.emblem-gov{background-position:0% 0%}.emblem-pm{background-position:50% 0%}.emblem-eb{background-position:100% 0%}
-.emblem-cbm{background-position:0% 100%}.emblem-mb{background-position:50% 100%}.emblem-fab{background-position:100% 100%}
+.institution .emblem-thumb{display:grid;place-items:center;width:62px;height:62px;background:transparent center/contain no-repeat;border:0;border-radius:0;flex-shrink:0;color:#1d4d67;font:850 17px/1 system-ui,sans-serif}
+/* Somente os três brasões efetivamente associados recebem PNG via faaab-atlas.js.
+   As demais forças aguardam seu PNG próprio, sem usar WebP de outra instituição. */
+.emblem-eb:not([data-faaab-emblem])::after{content:"EB"}
+.emblem-pm:not([data-faaab-emblem])::after{content:"PM"}
+.emblem-fab:not([data-faaab-emblem])::after{content:"FAB"}
 .institution{gap:9px;padding:15px 7px}.institution svg{display:none}
 @media(max-width:590px){.institution .emblem-thumb{width:56px;height:56px}}
 
