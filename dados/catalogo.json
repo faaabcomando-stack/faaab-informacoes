@@ -54,7 +54,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "governo"
   },
   {
     "id": "ADM-FTB",
@@ -117,7 +118,8 @@
     "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
     "logoReferencia": "https://www.marinha.mil.br/delsebastiao/sites/www.marinha.mil.br.delsebastiao/files/inline-images/image.png",
     "fonteReferencia": "https://www.marinha.mil.br/delsebastiao/construcao",
-    "creditoReferencia": "Logomarca da Marinha do Brasil com assinatura tipográfica, em página oficial; referência para futura marca FAAAB."
+    "creditoReferencia": "Logomarca da Marinha do Brasil com assinatura tipográfica, em página oficial; referência para futura marca FAAAB.",
+    "emblemaRef": "marinha"
   },
   {
     "id": "ADM-CFN",
@@ -155,7 +157,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bombeiros"
   },
   {
     "id": "ADM-PM",
@@ -402,7 +405,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bfe"
   },
   {
     "id": "FTB-BPE",
@@ -421,7 +425,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bpe"
   },
   {
     "id": "FTB-BI-Caat",
@@ -440,7 +445,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bi-caat"
   },
   {
     "id": "FTB-BIP",
@@ -497,7 +503,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bib"
   },
   {
     "id": "FTB-BCC",
@@ -535,7 +542,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bac"
   },
   {
     "id": "FTB-B-Log",
@@ -554,11 +562,13 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "b-log",
+    "referenciaEmblema": "28º B Log (imagem fornecida pela administração)."
   },
   {
     "id": "FTB-BIM",
-    "sigla": "BIM",
+    "sigla": "BI Mth",
     "nome": "Batalhão de Infantaria de Montanha",
     "forca": "FTB",
     "tipo": "unidade",
@@ -573,26 +583,9 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
-  },
-  {
-    "id": "FTB-B-Sau",
-    "sigla": "B Sau",
-    "nome": "Batalhão de Saúde",
-    "forca": "FTB",
-    "tipo": "unidade",
-    "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
-    "logo": null,
-    "vidaReal": "Unidades militares de saúde dão suporte ao atendimento e à evacuação de tropas.",
-    "noJogo": "Atendimento médico militar, hospital de campanha e evacuação de combatentes.",
-    "requisitos": null,
-    "aprovado": true,
-    "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null,
-    "estadoImplementacao": "Não confirmado",
-    "responsavel": null,
-    "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bi-mth",
+    "notaNomenclatura": "BI Mth / BIL Mth: entrada única; antes aparecia duplicada como BIM e BIL Mth."
   },
   {
     "id": "FTB-B-Op-Psi",
@@ -687,7 +680,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bil"
   },
   {
     "id": "FTB-BIS",
@@ -706,26 +700,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
-  },
-  {
-    "id": "FTB-BIL-Mth",
-    "sigla": "BIL Mth",
-    "nome": "Batalhão de Infantaria Leve de Montanha",
-    "forca": "FTB",
-    "tipo": "unidade",
-    "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
-    "logo": null,
-    "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
-    "noJogo": "Unidade prevista no catálogo aprovado. Missão específica, comandante, requisitos de entrada, sede e estado de implantação: a confirmar nos regulamentos da FAAAB.",
-    "requisitos": null,
-    "aprovado": true,
-    "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null,
-    "estadoImplementacao": "Não confirmado",
-    "responsavel": null,
-    "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "bis"
   },
   {
     "id": "FTB-GAC",
@@ -744,7 +720,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "gac"
   },
   {
     "id": "FTB-CIE",
@@ -763,7 +740,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "cie"
   },
   {
     "id": "FTB-CIOU",
@@ -934,7 +912,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "esa"
   },
   {
     "id": "FTB-EsPCEx",
@@ -953,7 +932,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "espcex"
   },
   {
     "id": "FTB-AMAN",
@@ -972,7 +952,8 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "aman"
   },
   {
     "id": "FTB-EsAO",
@@ -2455,5 +2436,25 @@
     "responsavel": null,
     "dataRegistro": "2026-11-09",
     "versaoFonte": "Inclusão aprovada pelo usuário em 09/11/2026"
+  },
+  {
+    "id": "FTB-B-Log-Sl",
+    "sigla": "B Log Sl",
+    "nome": "Batalhão Logístico de Selva",
+    "forca": "FTB",
+    "tipo": "unidade",
+    "secao": "LOGÍSTICA DE SELVA · 1ª DIVISÃO DE EXÉRCITO",
+    "logo": null,
+    "emblemaRef": "b-log-sl",
+    "vidaReal": "Referência visual enviada: 1º Batalhão Logístico de Selva.",
+    "noJogo": "Unidade prevista na Brigada de Infantaria de Selva da 1ª DE; implementação e cargos ainda não confirmados.",
+    "requisitos": null,
+    "aprovado": true,
+    "referencia": "Imagem fornecida pela administração FAAAB",
+    "grupoSeparado": null,
+    "estadoImplementacao": "Planejada; não confirmada no Roblox",
+    "responsavel": null,
+    "dataRegistro": "2026-11-09",
+    "versaoFonte": "Correção solicitada pela administração FAAAB em 09/11/2026"
   }
 ]
