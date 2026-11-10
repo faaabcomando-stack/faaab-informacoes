@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-10",
+  "version": "2026-11-09-r2",
   "source": "Imagens enviadas na conversa e catalogo atual; status de recebimento não equivale a arquivo publicado",
   "receivedIds": [
     "ADM-FAAAB",
@@ -51,7 +51,20 @@
     "FMB-EN",
     "FMB-EAM",
     "FMB-GRUMEC",
-    "FMB-ComForSup"
+    "FMB-ComForSup",
+    "FTB-Cia-Prec-Pqdt",
+    "FTB-RCC",
+    "ADM-TAI-EB",
+    "ADM-TAI-FAB",
+    "ADM-TAI-MB",
+    "FTB-CIGS",
+    "FTB-CIOU",
+    "FTB-CIOpC",
+    "FTB-CIOpEsp",
+    "FTB-CIBld",
+    "FTB-CI-Pqdt-GPB",
+    "FTB-EsAO",
+    "FTB-EsSLog"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -64,7 +77,12 @@
     "GSD": "Substitui BINFAE-Guarda; Pelotão de Choque é subordinado à GSD.",
     "IEAv": "Instituto de Estudos Avançados, não EAV.",
     "Precs": "Precs fica dentro da Companhia de Precursores Paraquedistas (Cia Prec Pqdt), e NÃO como batalhão. BIP é unidade paralela da brigada.",
-    "RCC": "RCC = Regimento de Carros de Combate; corrigido do nome antigo BCC. Não pedir imagem sem conferir registros atuais."
+    "RCC": "RCC = Regimento de Carros de Combate; corrigido do nome antigo BCC. Não pedir imagem sem conferir registros atuais.",
+    "5º RCC": "Foi enviada a imagem 5º RCC para a entrada geral RCC; não assumir logo universal.",
+    "Cia Prec Pqdt": "Emblema da Companhia de Precursores Paraquedistas recebido. Precs é sua subdivisão, não batalhão.",
+    "Taifas": "QTE, QTA e CPA recebidos; não pedir novamente.",
+    "CentrosExercito": "CIGS, CIOU, CIOpC, CIOpEsp, CIBld e CI Pqdt GPB recebidos. CIOPan também recebido, requer recorte.",
+    "EscolasExercito": "EsAO e EsSLog recebidos. Não pedir de novo."
   },
   "excludedDoNotReAdd": [
     "FTB-B-Sau",
@@ -100,6 +118,19 @@
     "ComForSup",
     "SGEx",
     "GSD",
-    "IEAv"
+    "IEAv",
+    "Cia Prec Pqdt",
+    "5º RCC",
+    "QTE",
+    "QTA",
+    "CPA",
+    "CIGS",
+    "CIOU",
+    "CIOpC",
+    "CIOpEsp",
+    "CIBld",
+    "CI Pqdt GPB",
+    "EsAO",
+    "EsSLog"
   ]
 }
