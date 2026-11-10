@@ -66,7 +66,14 @@
     "FTB-EsAO",
     "FTB-EsSLog",
     "ADM-SGM",
-    "ADM-SEFA"
+    "ADM-SEFA",
+    "FTB-17--B-Fron",
+    "FTB-1--RCG",
+    "FTB-ECEME",
+    "FTB-B-Op-Psi",
+    "FMB-CIM",
+    "FMB-SSPM",
+    "CFN-CiaPolBtlNav"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -75,7 +82,7 @@
     "ETA": "Imagem especificamente do 1º ETA; não generalizar.",
     "ComForSup": "Manter somente entrada da superfície na FAAAB; ComForS não faz parte do planejamento.",
     "GrupamentosPatrulha": "Há comandos regionais com brasões distintos; não criar comando genérico fictício sem decisão.",
-    "CiaPolBtlNav": "Corrigido para Companhia de Polícia do Batalhão Naval; integração da imagem ainda não verificada.",
+    "CiaPolBtlNav": "Usuário confirmou ter enviado o emblema. Companhia de Polícia do Batalhão Naval, não batalhão independente.",
     "GSD": "Substitui BINFAE-Guarda; Pelotão de Choque é subordinado à GSD.",
     "IEAv": "Instituto de Estudos Avançados, não EAV.",
     "Precs": "Precs fica dentro da Companhia de Precursores Paraquedistas (Cia Prec Pqdt), e NÃO como batalhão. BIP é unidade paralela da brigada.",
@@ -85,7 +92,19 @@
     "Taifas": "QTE, QTA e CPA recebidos; não pedir novamente.",
     "CentrosExercito": "CIGS, CIOU, CIOpC, CIOpEsp, CIBld e CI Pqdt GPB recebidos. CIOPan também recebido, requer recorte.",
     "EscolasExercito": "EsAO e EsSLog recebidos. Não pedir de novo.",
-    "SGM/SEFA": "Brasões enviados na remessa anterior de logos da Marinha e Aeronáutica, não solicitar novamente."
+    "SGM/SEFA": "Brasões enviados na remessa anterior de logos da Marinha e Aeronáutica, não solicitar novamente.",
+    "17º B Fron": "Imagem identificada na remessa atual: image(20261110-012916).png.",
+    "1º RCG": "Imagem identificada na remessa atual: image(20261110-012927).png.",
+    "ECEME": "Imagem identificada na remessa atual: image(20261110-013013).png.",
+    "B Op Psi": "Imagem recebida do 1º B Op Psc: image(20261110-013023).png. Confirmar se a unidade fictícia usa esta denominação específica.",
+    "BI Pan": "image(20261110-012857).png mostra 10ª Brigada de Infantaria do Pantanal, NÃO um Batalhão de Infantaria do Pantanal; não vincular automaticamente a FTB-BI-Pan.",
+    "CIOpMth": "image(20261110-013000).png mostra distintivo Guia de Montanha Avançado, NÃO necessariamente o emblema institucional do CIOpMth.",
+    "CIAER": "A imagem da Secretaria de Inteligência da Aeronáutica NÃO deve ser identificada como brasão do CIAER sem confirmação.",
+    "GAV": "image(20261110-013345).png identifica 1º/11º GAV (Grupo de Aviação), NÃO o 1º GDA e não GOA.",
+    "GOA": "image(20261110-013038).png lê-se 1º GOA. Não confundir com GAV ou GDA.",
+    "MarinhaRemessa": "image(20261110-013443).png: brasão naval recebido, nome institucional não confirmado, não atribuir unidade por palpite.",
+    "CIM": "Usuário confirmou ter enviado o emblema. Nome e arquivo exato ainda não verificados no material montado.",
+    "SSPM": "Usuário confirmou ter enviado o emblema. Nome e arquivo exato ainda não verificados no material montado."
   },
   "excludedDoNotReAdd": [
     "FTB-B-Sau",
@@ -136,6 +155,81 @@
     "EsAO",
     "EsSLog",
     "SGM",
-    "SEFA"
+    "SEFA",
+    "17º B Fron",
+    "1º RCG",
+    "ECEME",
+    "B Op Psi",
+    "CIM",
+    "SSPM",
+    "CiaPolBtlNav"
+  ],
+  "receivedBatches": [
+    {
+      "batchId": "remessa-20261110-0128",
+      "attachmentNames": [
+        {
+          "filename": "image(20261110-012857).png",
+          "visibleText": "10ª Bda Inf Pan",
+          "status": "distinct",
+          "notes": "Brigada do Pantanal ≠ BI Pan"
+        },
+        {
+          "filename": "image(20261110-012916).png",
+          "visibleText": "17º B Fron",
+          "status": "identified",
+          "notes": "FTB-17--B-Fron"
+        },
+        {
+          "filename": "image(20261110-012927).png",
+          "visibleText": "1º RCG",
+          "status": "identified",
+          "notes": "FTB-1--RCG"
+        },
+        {
+          "filename": "image(20261110-013000).png",
+          "visibleText": "Guia de Montanha Avançado",
+          "status": "distinct",
+          "notes": "insígnia de qualificação ≠ CIOpMth"
+        },
+        {
+          "filename": "image(20261110-013013).png",
+          "visibleText": "ECEME",
+          "status": "identified",
+          "notes": "FTB-ECEME"
+        },
+        {
+          "filename": "image(20261110-013023).png",
+          "visibleText": "1º B Op Psc",
+          "status": "identified-with-caveat",
+          "notes": "FTB-B-Op-Psi; designação específica a conferir"
+        },
+        {
+          "filename": "image(20261110-013038).png",
+          "visibleText": "1º GOA",
+          "status": "distinct",
+          "notes": "≠ GAV; ≠ GDA"
+        },
+        {
+          "filename": "image(20261110-013118).png",
+          "visibleText": "Secretaria de Inteligência da Aeronáutica",
+          "status": "distinct",
+          "notes": "≠ CIAER"
+        },
+        {
+          "filename": "image(20261110-013345).png",
+          "visibleText": "1º/11º GAV",
+          "status": "distinct",
+          "notes": "≠ GOA; ≠ 1º GDA"
+        },
+        {
+          "filename": "image(20261110-013443).png",
+          "visibleText": "Brasão naval com psi",
+          "status": "unidentified",
+          "notes": "não atribuir sem confirmação"
+        }
+      ],
+      "note": "Arquivos originais enviados na conversa; o inventário não implica que os PNGs já estejam no GitHub."
+    }
   ]
 }
