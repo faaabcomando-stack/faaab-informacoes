@@ -1828,7 +1828,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "btlvtranf",
+    "estadoDoEmblema": "Emblema recebido em 1000171999.jpg; ainda requer publicação como PNG recortado",
+    "referenciaVisual": "Escudo azul/verde com veículo anfíbio amarelo, identificação BTLVTRANF"
   },
   {
     "id": "CFN-BtlArtFN",
@@ -2182,7 +2185,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Revisão de identidade visual FAAAB novembro 2026",
+    "emblemaRef": "cfo-bm-brasao",
+    "estadoDoEmblema": "Nova arte heráldica PNG criada em conversa; arquivo de produção ainda não foi importado ao GitHub",
+    "referenciaVisual": "Arte nova em formato de escudo, coroamento dourado, livro, tocha e machados, com identificação CBMDF/CURSO DE FORMAÇÃO DE OFICIAIS; substituir logo circular da imagem 1000171974.jpg. NÃO utilizar o símbolo da PMDF em 1000171976.webp"
   },
   {
     "id": "CBM-CAO-BM",
@@ -2327,7 +2333,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Identificação expressa da administração FAAAB novembro 2026",
+    "emblemaRef": "curso-paracomandos",
+    "estadoDoEmblema": "Imagem do curso recebida em 1000171981.jpg; PNG recortado precisa ser importado",
+    "referenciaVisual": "Distintivo preto/dourado com caveira e asas, escrito PARACOMANDOS, pertence exclusivamente ao Curso de Comandos de Força Aérea, não a uma unidade extra."
   },
   {
     "id": "FAB-UNIFA",
