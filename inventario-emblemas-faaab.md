@@ -269,3 +269,8 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 - **COMSUB ≠ ComForSup**. ComForSup é comando dos meios de superfície. A decisão anterior da FAAAB de manter apenas ComForSup foi superada por esta inclusão expressa e não permite excluir ComForSup.
 - Imagem oficial transparente para exibição no site: `https://www.marinha.mil.br/sites/www.marinha.mil.br.comfors/files/field/image/brasao.png`. Imagem recebida não foi incorporada como arquivo PNG local; a versão web usa a referência oficial remota.
 - Não pedir o brasão novamente. Não inventar subordinação funcional no Roblox até que seja aprovada.
+
+## CIM — confirmação do brasão
+
+- ✅ **CIM (FMB-CIM)** — Centro de Inteligência da Marinha. Imagem original fornecida: `1000171967.png` (446 × 633). Escudo magenta com âncoras brancas, escudo central azul e face dourada; coroa naval e cordame dourado. **Não confundir com COMSUB e não solicitar novamente.**
+- ⚠ Recebido é diferente de publicado: atualizar situação após arquivo existir em `assets/emblemas-png/FMB-CIM.png`.
