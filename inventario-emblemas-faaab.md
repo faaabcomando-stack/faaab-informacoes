@@ -246,3 +246,10 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 **Repetição bloqueada:** CIGS, ESA, EsPCEx, AMAN, EAM, SSPM, CI Pqdt GPB, QTE, QTA, CPA, 1º GDA Jaguar, CIAER, BOPE, Cia Prec Pqdt, CCFA e BtlVtrAnf são referências já enviadas ou publicadas. Antes de declarar qualquer logo faltante, verificar anexos e o atlas.
 
 **Diferenciação importante:** 10 PNGs não têm ID equivalente no `dados/catalogo.json`: `ADM-STF`, `FAB-SIA`, `FTB-1DE`, `FTB-3DE`, `FTB-5DE`, `FTB-Bda-Inf-AMV`, `FTB-Bda-Inf-Mtz`, `FTB-CIOpMth-QUALIFICACAO`, `FTB-COpEsp`, `FTB-DECEx`. Não significa que devem ser apagados: revisar sua ligação com seções fora do catálogo principal. As 80 entradas de catálogo com PNG próprio também constam como recebidas.
+
+## Diretorias superiores de ensino — 10/11/2026
+
+- ✅ **DEnsM** (`FMB-DEnsM`) — Diretoria de Ensino da Marinha. **Imagem enviada**: `1794311970465.jpeg`, escudo púrpura com âncora e livro, coroa naval e cabo. EN, CN, CIAA, CIAW, SSPM subordinadas; EAM sob supervisão funcional. https://www.marinha.mil.br/ensino/
+- ✅ **DIRENS** (`FAB-DIRENS`) — Diretoria de Ensino da Aeronáutica. **Imagem enviada**: `1794312287320.jpeg`, escudo azul com inscrição DIRENS. Coordenação superior de AFA, EPCAR, EEAR, UNIFA, ECEMAR, EAOAR no projeto. https://dirensvirtual.educaer.fab.mil.br/
+- **Não pedir novamente esses dois brasões**. Envio de imagens confirmado nesta conversa; arquivos JPG/PNG ainda precisam ser inseridos fisicamente em `assets/emblemas-png/` antes de afirmar exibição no site.
+- **Não duplicar** as escolas existentes; vínculo com as diretorias consta em `dados/ensino_instituicoes.json`.
