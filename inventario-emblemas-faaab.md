@@ -274,3 +274,10 @@ FAAAB principal; EGAF; DPT; Governo; Exército; Marinha; FAB (referência enviad
 
 - ✅ **CIM (FMB-CIM)** — Centro de Inteligência da Marinha. Imagem original fornecida: `1000171967.png` (446 × 633). Escudo magenta com âncoras brancas, escudo central azul e face dourada; coroa naval e cordame dourado. **Não confundir com COMSUB e não solicitar novamente.**
 - ⚠ Recebido é diferente de publicado: atualizar situação após arquivo existir em `assets/emblemas-png/FMB-CIM.png`.
+
+## CIM — Centro de Inteligência da Marinha (10/11/2026)
+
+- ✅ **Brasão original recebido**: `1000171967.png` (446×633 px), com cabeça de Argus dourada, escudo azul com bordadura púrpura e âncoras, coroa naval e cabo de ouro. **Não pedir de novo.**
+- ✅ **Imagem vinculada à ficha `FMB-CIM`**, exibida no portal via URL do mesmo PNG original público: https://upload.wikimedia.org/wikipedia/commons/4/4c/Centro_de_Informa%C3%A7%C3%B5es_da_Marinha.png
+- **Procedência heráldica**: [Arquivo da Marinha](https://repositoriodphdm.marinha.mil.br/handle/123456789/848228). O Wikimedia Commons identifica o mesmo arquivo como *Centro de Informações da Marinha.png*, nome histórico distinto da designação atual Centro de Inteligência da Marinha.
+- O arquivo está hospedado no Wikimedia Commons; ainda falta uma cópia local binária em `assets/emblemas-png/`. Não afirmar que o PNG original foi copiado fisicamente para o GitHub.
