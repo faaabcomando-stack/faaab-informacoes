@@ -93,7 +93,9 @@
     "FAB-CCFA",
     "CFN-BtlVtrAnf",
     "ADM-FAB",
-    "CBM-CAO-BM"
+    "CBM-CAO-BM",
+    "CFN-BOE-FN",
+    "CFN-COMANF"
   ],
   "special": {
     "BIP": "Águia com paraquedas: recebida anteriormente, NÃO pedir novamente.",
@@ -139,7 +141,9 @@
     "CFO/PMDF e CAO/PMDF": "Duas imagens de brasões adaptados já criadas/recebidas; não confundir com CFO/BM e CAO/BM do catálogo.",
     "CFP (losango azul/vermelho)": "Arquivo 1000171973.png: curso de Formação de Praças confirmado pelo usuário, mas força/entidade específica ainda não identificada. Não atribuir automaticamente ao CFP/BM.",
     "Insígnia com águia e espada em branco no preto": "Arquivo 1000171980.jpg recebido, unidade exata não identificada. Não pedir reenvio até verificar.",
-    "GDA Jaguar": "1º GDA já recebido. A letra D do brasão pode parecer O. Não chamar de GOA."
+    "GDA Jaguar": "1º GDA já recebido. A letra D do brasão pode parecer O. Não chamar de GOA.",
+    "BOE FN e COMANF": "PNGs individuais já publicados; não solicitar reenvio. A qualidade/identificação ainda deve ser conferida visualmente.",
+    "Pendências 2026-11-10": "Consultar auditoria-emblemas-faaab-2026-11-10.md: ausência de PNG não é ausência de envio."
   },
   "excludedDoNotReAdd": [
     "FTB-B-Sau",
