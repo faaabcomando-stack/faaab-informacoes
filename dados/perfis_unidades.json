@@ -1,5 +1,5 @@
 {
-  "revisao": "2026-10-29",
+  "revisao": "2026-11-10-r2",
   "proposito": "Conteúdos de uso no jogo recuperados de decisões anteriores e das fichas aprovadas; não declarar funcionalidade já implementada sem verificação.",
   "perfis": {
     "FTB-BFE": {
@@ -70,21 +70,6 @@
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
     },
-    "FTB-B-Prec": {
-      "papel": "Batalhão de Precursores como unidade própria prevista, relacionado à especialidade de precursores.",
-      "atividades": [
-        "Missões de reconhecimento e preparação previstas para o papel fictício de precursor.",
-        "Participação com brigadas/unidades que utilizem salto ou reconhecimento especializado."
-      ],
-      "sistemas": [
-        "Não confundir B Prec (batalhão) com Precs (subequipe do BIP)."
-      ],
-      "formacao": [
-        "Especializações paraquedistas e de precursores ainda dependem dos cursos correspondentes."
-      ],
-      "observacoes": [],
-      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
-    },
     "FTB-BIB": {
       "papel": "Batalhão de Infantaria Blindado, com divisão de tanques e a sigla CFB nas conversas anteriores.",
       "atividades": [
@@ -98,23 +83,6 @@
       ],
       "formacao": [
         "CIBld para formação de tripulações e condução blindada."
-      ],
-      "observacoes": [],
-      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
-    },
-    "FTB-BCC": {
-      "papel": "Batalhão de Carros de Combate dentro da estrutura do Exército do jogo.",
-      "atividades": [
-        "Operação coordenada de carros de combate.",
-        "Treinamento de tripulações e exercícios com veículos.",
-        "Participação em conflitos conforme recursos e disponibilidade de veículos."
-      ],
-      "sistemas": [
-        "Não criar disponibilidade ilimitada de blindados.",
-        "Aquisição e habilitação são processos diferentes da promoção de patente."
-      ],
-      "formacao": [
-        "CIBld, curso e centro de habilitação blindada."
       ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
@@ -166,25 +134,6 @@
       ],
       "formacao": [
         "CIOpMth, centro especializado em operações e deslocamentos na montanha."
-      ],
-      "observacoes": [],
-      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
-    },
-    "FTB-B-Sau": {
-      "papel": "Batalhão de Saúde, dedicado ao tratamento médico, resgate e evacuação militar no roleplay.",
-      "atividades": [
-        "Atendimento em campo e estabilização de personagens feridos.",
-        "Evacuação por equipes de resgate e ambulâncias fictícias.",
-        "Trabalho do DRT, GRE e PAPH.",
-        "Tratamento no posto médico ou hospital da unidade."
-      ],
-      "sistemas": [
-        "Não há cura instantânea de todos os ferimentos: tratamento depende do tipo e da parte do corpo atingida.",
-        "Minigames médicos, fraturas e cuidados localizados fazem parte da concepção de gameplay.",
-        "Atuação da especialização médica também pode ocorrer em outros batalhões, sem substituir o B Sau."
-      ],
-      "formacao": [
-        "Qualificação de socorro, atendimento pré-hospitalar e resgate."
       ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
@@ -268,21 +217,6 @@
       ],
       "formacao": [
         "CIGS e cursos de adaptação à selva."
-      ],
-      "observacoes": [],
-      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
-    },
-    "FTB-BIL-Mth": {
-      "papel": "Batalhão de Infantaria Leve de Montanha, uma das novas unidades aprovadas.",
-      "atividades": [
-        "Atividades de infantaria leve em relevo elevado.",
-        "Adaptação ao deslocamento e obstáculos da montanha."
-      ],
-      "sistemas": [
-        "É unidade distinta do BIM; não duplicar subequipes nem cargos sem registro."
-      ],
-      "formacao": [
-        "CIOpMth para ensino específico."
       ],
       "observacoes": [],
       "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
@@ -465,19 +399,6 @@
       ],
       "sistemas": [
         "O uso de aeronaves depende de habilitação no jogo."
-      ],
-      "formacao": [],
-      "observacoes": [],
-      "fonte": "Decisões anteriores FAAAB e catálogo institucional; sistemas descritos como concepção de gameplay, não comprovação de implantação no Roblox."
-    },
-    "FAB-PARACOM": {
-      "papel": "Unidade fictícia independente da Aeronáutica.",
-      "atividades": [
-        "Missões e tarefas de operações aéreas fictícias previstas para a FAAAB.",
-        "Formação e atividades conforme a especialidade."
-      ],
-      "sistemas": [
-        "O curso CCFA não é a mesma coisa que a unidade PARACOM."
       ],
       "formacao": [],
       "observacoes": [],
@@ -980,88 +901,6 @@
       "observacoes": [],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
-    "FTB-ESFCEx": {
-      "papel": "Escola de Saúde e Formação Complementar do Exército, registrada no catálogo.",
-      "atividades": [
-        "Cursos complementares e de apoio às especialidades da força.",
-        "Formação relacionada às atribuições de saúde e apoio do Exército."
-      ],
-      "sistemas": [
-        "A Escola não substitui o Batalhão de Saúde nem atribui função médica automaticamente."
-      ],
-      "formacao": [],
-      "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
-    "FAB-BINFAE-Guarda": {
-      "papel": "Unidade de guarda da Infantaria da Aeronáutica no universo FAAAB.",
-      "atividades": [
-        "Proteção e guarda de instalações aéreas fictícias.",
-        "Treinamento e vigilância conforme a estrutura militar da Aeronáutica."
-      ],
-      "sistemas": [
-        "Guarda de instalações não é automaticamente operação de aeronave."
-      ],
-      "formacao": [],
-      "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
-    "FAB-BINFAE-Choque": {
-      "papel": "Unidade de choque da Infantaria da Aeronáutica no universo FAAAB.",
-      "atividades": [
-        "Atividades específicas de segurança e choque na base aérea fictícia.",
-        "Treinamentos para a especialização da unidade."
-      ],
-      "sistemas": [
-        "Não confundir o serviço da unidade com o controle operacional de voos."
-      ],
-      "formacao": [],
-      "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
-    "FAB-EAV": {
-      "papel": "Esquadrão de Asas Rotativas da Aeronáutica no jogo FAAAB, voltado a aeronaves de asas rotativas.",
-      "atividades": [
-        "Atividades e treinamentos com helicópteros e outras aeronaves de asas rotativas no roleplay.",
-        "Missões e operações aéreas da unidade conforme habilitação do jogador."
-      ],
-      "sistemas": [
-        "Pilotagem depende de curso e habilitação, não da patente."
-      ],
-      "formacao": [
-        "Curso de Pilotagem (C-PIL) em duas etapas teórica e prática."
-      ],
-      "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
-    "FAB-ECDA": {
-      "papel": "Esquadrão ligado ao controle e defesa aérea no catálogo FAAAB.",
-      "atividades": [
-        "Tarefas próprias de controle e defesa aérea do jogo.",
-        "Coordenação com outras unidades aéreas quando previsto na missão."
-      ],
-      "sistemas": [
-        "Não conceder habilitação de controle aéreo por simples ingresso."
-      ],
-      "formacao": [],
-      "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
-    "FAB-CIAAR": {
-      "papel": "Centro de Instrução e Adaptação da Aeronáutica, mantido como centro e não um curso único.",
-      "atividades": [
-        "Organização de instrução, especializações e formações aeronáuticas.",
-        "Apoio à adaptação conforme a carreira do integrante."
-      ],
-      "sistemas": [
-        "CIAAR e CFAer não são sinônimos: o CFAer é a formação dos Recrutas planejada pela FAAAB."
-      ],
-      "formacao": [
-        "CFAer — adaptação e fundamentos aeronáuticos, linhas de Infantaria e Operações Aéreas."
-      ],
-      "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
     "FAB-EEAR": {
       "papel": "Escola de Especialistas de Aeronáutica na formação dos graduados.",
       "atividades": [
@@ -1116,61 +955,6 @@
         "ECEMAR/CCEM."
       ],
       "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
-    "FMB-GrupPatNav": {
-      "papel": "Grupamento de Patrulha Naval da FAAAB.",
-      "atividades": [
-        "Patrulhas navais dentro do mapa marítimo fictício.",
-        "Coordenação com embarcações de superfície conforme missão."
-      ],
-      "sistemas": [
-        "Uso de embarcação exige habilitação própria."
-      ],
-      "formacao": [],
-      "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
-    "FMB-BtlPolNav": {
-      "papel": "Batalhão de Polícia Naval registrado na Marinha do jogo.",
-      "atividades": [
-        "Segurança de instalações e atividades militares navais.",
-        "Fiscalização da área naval dentro das regras do roleplay."
-      ],
-      "sistemas": [
-        "É unidade naval, não organização policial civil."
-      ],
-      "formacao": [],
-      "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
-    "FMB-GrupCom": {
-      "papel": "Grupamento de comunicação na estrutura naval fictícia.",
-      "atividades": [
-        "Apoio às comunicações e coordenação entre unidades navais.",
-        "Tarefas internas relacionadas às operações da Marinha."
-      ],
-      "sistemas": [
-        "Não confundir o grupamento de comunicação com comando da Força de Superfície."
-      ],
-      "formacao": [],
-      "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
-    "FMB-ComForS": {
-      "papel": "Comando da Força de Submarinos no universo naval da FAAAB, distinto do ComForSup (Comando da Força de Superfície).",
-      "atividades": [
-        "Coordenação das missões e dos meios submarinos da Marinha fictícia.",
-        "Integração com as operações navais conforme o planejamento da FAAAB."
-      ],
-      "sistemas": [
-        "Submarinos e embarcações exigem recursos e habilitação própria.",
-        "ComForS e ComForSup são organizações distintas; não juntar seus cargos nem seu acervo."
-      ],
-      "formacao": [],
-      "observacoes": [
-        "Não duplicar a cadeia de comando da Força de Superfície nesta unidade."
-      ],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
     "FMB-CIAMPA": {
@@ -1325,24 +1109,6 @@
         "Capacitação dos participantes para funções de artilharia naval fictícia."
       ],
       "observacoes": [],
-      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
-    },
-    "CFN-CIAPOL": {
-      "papel": "Companhia de Polícia de Fuzileiros Navais na estrutura da Marinha fictícia.",
-      "atividades": [
-        "Atividades de policiamento militar interno do Corpo de Fuzileiros Navais.",
-        "Segurança e disciplina em instalações e operações navais fictícias."
-      ],
-      "sistemas": [
-        "Não é polícia civil ou unidade da PM."
-      ],
-      "formacao": [
-        "Formação de Fuzileiros Navais — CIAMPA: curso geral da carreira, não prova de ingresso automático nesta unidade.",
-        "Instrução específica compatível com as atribuições próprias do centro ou unidade."
-      ],
-      "observacoes": [
-        "É companhia da Marinha/CFN, não centro de formação e não unidade da Polícia Militar civil."
-      ],
       "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
     },
     "FTB-Bda-Inf-Sl": {
@@ -1850,6 +1616,63 @@
       "formacao": [],
       "observacoes": [],
       "fonte": "Regras institucionais do projeto e identidade do setor documentadas; as atividades são descrições de escopo, não comprovação de cargos, serviços ou permissões técnicas ativos."
+    },
+    "FAB-GSD": {
+      "papel": "Grupo de Segurança e Defesa (GSD), organização central da defesa e segurança da FAB fictícia.",
+      "atividades": [
+        "Guarda e segurança das instalações aéreas da comunidade.",
+        "Coordenação dos pelotões internos, inclusive o de Choque, quando homologados."
+      ],
+      "sistemas": [
+        "O Pelotão de Choque é subordinado à GSD; não é uma unidade BINFAE independente."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Registro atualizado em 10/11/2026; não comprova implementação no jogo."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-GSD-CHOQUE": {
+      "papel": "Pelotão de Choque subordinado ao Grupo de Segurança e Defesa (GSD).",
+      "atividades": [
+        "Formação e atuação interna do Pelotão de Choque da GSD, conforme regras aprovadas."
+      ],
+      "sistemas": [
+        "A GSD é a unidade-mãe. A subunidade não é segundo batalhão."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Registro atualizado em 10/11/2026; não comprova implementação no jogo."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "FAB-IEAV": {
+      "papel": "Instituto de Estudos Avançados (IEAv), ligado à ciência e tecnologia aeroespaciais.",
+      "atividades": [
+        "Estudos e atividades de pesquisa e tecnologia no universo FAAAB, sujeitos à aprovação."
+      ],
+      "sistemas": [
+        "IEAv não é esquadrão de aeronaves de asas rotativas."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Registro atualizado em 10/11/2026; não comprova implementação no jogo."
+      ],
+      "fonte": "Informações de função e organização derivadas do catálogo FAAAB e documentos de cursos; implementação específica depende do sistema Roblox."
+    },
+    "CFN-CiaPolBtlNav": {
+      "papel": "Companhia de Polícia do Batalhão Naval, vinculada ao universo do CFN.",
+      "atividades": [
+        "Atividades de polícia militar naval na simulação, conforme normas homologadas."
+      ],
+      "sistemas": [
+        "Não confundir Companhia de Polícia com Batalhão de Polícia Naval."
+      ],
+      "formacao": [],
+      "observacoes": [
+        "Registro atualizado em 10/11/2026; não comprova implementação no jogo."
+      ],
+      "fonte": "https://arquivodamarinha.marinha.mil.br/index.php/companhia-de-policia-do-batalhao-naval"
     }
   }
 }
