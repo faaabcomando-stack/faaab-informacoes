@@ -55,7 +55,9 @@
     "responsavel": null,
     "dataRegistro": "2026-10-24",
     "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
-    "emblemaRef": "governo"
+    "emblemaRef": null,
+    "estadoDoEmblema": "O arquivo anterior era o da Polícia Militar. Removido para impedir atribuição incorreta; aguarda identificação da marca oficial do Governo FAAAB.",
+    "referenciaVisual": "A imagem de estrela dourada, círculo vermelho e estrelas brancas pertence à PM no projeto; não reutilizar como Governo."
   },
   {
     "id": "ADM-FTB",
@@ -177,7 +179,10 @@
     "estadoImplementacao": "Não confirmado",
     "responsavel": null,
     "dataRegistro": "2026-10-24",
-    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026"
+    "versaoFonte": "Catálogo aprovado FAAAB 24/10/2026",
+    "emblemaRef": "pm-estrela",
+    "estadoDoEmblema": "PNG próprio vinculado à PM, confirmado pelo responsável FAAAB.",
+    "referenciaVisual": "Estrela dourada sobre disco vermelho cercado por estrelas brancas."
   },
   {
     "id": "ADM-SGEx",
