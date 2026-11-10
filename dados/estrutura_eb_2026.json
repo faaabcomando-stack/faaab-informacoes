@@ -1,9 +1,9 @@
 {
-  "versao": "2026-11-09",
+  "versao": "2026-11-09-r2",
   "forca": "FTB",
   "tipo": "estrutura ficcional",
   "fontePlano": "FAAAB_EB_Estrutura_Divisoes_Brigadas_Atualizada_2026-11-07.txt",
-  "nota": "Estrutura própria FAAAB. Novas propostas não são implementações confirmadas.",
+  "nota": "Estrutura própria FAAAB; referências de emblemas recebidas em 09/11/2026 não comprovam ativação no jogo. BI Mth é uma unidade única (BIL Mth/BIM eram entradas duplicadas).",
   "divisoes": [
     {
       "id": "1de",
@@ -32,8 +32,8 @@
             {
               "sigla": "B Log Sl",
               "nome": "Batalhão Logístico de Selva",
-              "catalogoId": null,
-              "situacao": "alteração solicitada"
+              "catalogoId": "FTB-B-Log-Sl",
+              "situacao": "Planejada"
             }
           ]
         },
@@ -44,7 +44,7 @@
           "situacao": "Cadastrada",
           "unidades": [
             {
-              "sigla": "BIM",
+              "sigla": "BI Mth",
               "nome": "Batalhão de Infantaria de Montanha",
               "catalogoId": "FTB-BIM",
               "situacao": "Cadastrada"
@@ -264,6 +264,9 @@
     "B Eng Sl",
     "B Eng Mec",
     "B Eng Bld",
-    "Brigada de Operações Especiais"
+    "Brigada de Operações Especiais",
+    "AVEX",
+    "B Sau",
+    "BIL Mth (duplicado de BI Mth)"
   ]
 }
