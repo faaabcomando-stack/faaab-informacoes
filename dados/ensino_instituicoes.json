@@ -1,6 +1,6 @@
 {
-  "versao": 1,
-  "atualizadoEm": "2026-11-09",
+  "versao": "2026-11-10-r2",
+  "atualizadoEm": "2026-11-10",
   "observacao": "Catálogo editorial FAAAB, baseado em fontes públicas e objetivos fictícios. Não estabelece concursos abertos nem autentica patentes.",
   "selecoesNaval": "O SSPM organiza seleções da Marinha do jogo. Processos do CFN permanecem separados.",
   "instituicoes": [
@@ -427,26 +427,6 @@
       "formacao": true,
       "catalogoId": "FAB-AFA",
       "estado": "aguardando_progressao"
-    },
-    {
-      "id": "ciaar",
-      "sigla": "CIAAR",
-      "nome": "Centro de Instrução e Adaptação da Aeronáutica",
-      "grupo": "FAB",
-      "tipo": "Formação e adaptação de quadros",
-      "resumo": "Preparação de oficiais e quadros especializados.",
-      "real": "O CIAAR oferece cursos de formação, adaptação e preparação para diferentes quadros da Força Aérea, segundo os editais e programas correspondentes.",
-      "jogo": "Formação especializada de quadros da FAB somente para carreiras implementadas no universo FAAAB. Requisitos de ingresso ainda não definidos.",
-      "noticias": [
-        "formação de quadros",
-        "adaptação",
-        "turmas",
-        "avaliações"
-      ],
-      "fonte": "https://www2.fab.mil.br/ciaar/",
-      "formacao": true,
-      "catalogoId": "FAB-CIAAR",
-      "estado": "planejado"
     }
   ],
   "hierarquiaFAB": {
