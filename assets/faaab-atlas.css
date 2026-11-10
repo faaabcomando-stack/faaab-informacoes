@@ -1,4 +1,4 @@
-/* Atlas FAAAB — PNGs individuais transparentes, com sprite legado de segurança. */
+/* Identidade FAAAB — PNGs individuais; os sprites WebP antigos não são usados. */
 .faaab-emblem{display:inline-block;box-sizing:border-box;flex:0 0 auto;width:var(--faaab-emblem-size,60px);height:var(--faaab-emblem-size,60px);background-color:transparent;background-repeat:no-repeat;border:1px solid transparent;border-radius:6px;vertical-align:middle;overflow:hidden}
 .faaab-emblem[role="img"]{font-size:0}
 .faaab-record-mark{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
@@ -18,7 +18,7 @@
 .entry .faaab-emblem{--faaab-emblem-size:54px;border-radius:6px}
 .record .faaab-emblem{--faaab-emblem-size:51px}
 .institution .faaab-emblem{--faaab-emblem-size:70px}
-.institution .emblem-thumb.faaab-emblem{width:70px;height:70px;background-size:1000% 800%}
+.institution .emblem-thumb.faaab-emblem{width:70px;height:70px;background-size:contain!important}
 @media(max-width:650px){.faaab-profile-top{gap:13px}.faaab-profile-top>.faaab-emblem{--faaab-emblem-size:78px}.institution .emblem-thumb.faaab-emblem{width:58px;height:58px}}
 @media(prefers-reduced-motion:no-preference){.v3-record-item:hover .faaab-emblem,.entry:hover .faaab-emblem,.force-card:hover .faaab-emblem{transform:scale(1.035);transition:transform .2s ease}}
 
@@ -27,3 +27,10 @@
 .faaab-profile-top>.faaab-emblem.faaab-png{filter:drop-shadow(0 4px 5px #0b30451a)}
 .faaab-emblem{transition:background-image .16s ease}
 @media(prefers-reduced-motion:reduce){.faaab-emblem{transition:none}}
+
+/* Emblema transparente sem fundo quadrado, cartão branco ou ampliação artificial do sprite. */
+.faaab-emblem,.faaab-emblem.faaab-png,.institution .emblem-thumb.faaab-emblem{background-color:transparent!important;border:0!important;box-shadow:none!important;clip-path:none!important;background-repeat:no-repeat;background-position:center;background-size:contain!important}
+.faaab-emblem.faaab-baixa-resolucao{filter:none!important}
+.faaab-emblem.faaab-baixa-resolucao:hover{transform:none!important}
+.faaab-emblem.faaab-sem-png{display:none!important}
+@media(prefers-reduced-motion:reduce){.faaab-emblem{transition:none!important;transform:none!important}}
