@@ -1375,7 +1375,7 @@
     "secao": "FAB - SEGURANÇA E DEFESA",
     "logo": null,
     "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
-    "noJogo": "Organização de Segurança e Defesa da FAB no universo FAAAB; substitui os dois antigos BINFAE no planejamento. O Pelotão de Choque é subdivisão da GSD, não outro batalhão.",
+    "noJogo": "Grupo de Segurança e Defesa da FAB no universo FAAAB. O Pelotão de Choque é subdivisão da GSD; funções, cargos e funcionamento dependem de aprovação no jogo.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
@@ -1384,8 +1384,7 @@
     "responsavel": null,
     "dataRegistro": "2026-10-24",
     "versaoFonte": "Reorganização expressa da administração FAAAB em 10/11/2026",
-    "emblemaRef": "gsd",
-    "notaNomenclatura": "GSD. Não restaurar BINFAE-Guarda nem BINFAE-Choque como unidades independentes."
+    "emblemaRef": "gsd"
   },
   {
     "id": "FAB-GSD-CHOQUE",
@@ -1396,7 +1395,7 @@
     "secao": "FAB - SEGURANÇA E DEFESA",
     "logo": null,
     "vidaReal": "Unidade de atuação especializada cuja missão real depende da instituição, do escalão e da doutrina aplicável. Esta descrição não confirma identidade exata com unidade real.",
-    "noJogo": "Pelotão de Choque subordinado à GSD; não é um segundo BINFAE independente.",
+    "noJogo": "Pelotão de Choque subordinado à GSD. Não é um batalhão independente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "Verificar correspondência exata caso a caso",
@@ -1435,7 +1434,7 @@
     "secao": "FAB - CIÊNCIA, TECNOLOGIA E PESQUISA",
     "logo": null,
     "vidaReal": "Instituto de Estudos Avançados (IEAv) do Comando da Aeronáutica, dedicado a pesquisas científicas e tecnologias aeroespaciais.",
-    "noJogo": "Referência institucional para tecnologia e pesquisa na FAAAB. Não é Esquadrão de Asas Rotativas (EAV). Funções, implantação e direção no jogo dependem de aprovação específica.",
+    "noJogo": "Instituto de Estudos Avançados na área de ciência e tecnologia aeroespaciais da FAAAB. Implantação e equipe ainda não confirmadas.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "https://www2.fab.mil.br/incaer/index.php/heraldica-siscult/emblemas2/352-ieav",
@@ -1601,7 +1600,7 @@
     "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
     "logo": null,
     "vidaReal": "A Companhia de Polícia do Batalhão Naval é uma organização ligada ao Corpo de Fuzileiros Navais; o acervo oficial da Marinha registra a denominação CiaPolBtlNav.",
-    "noJogo": "Referência para a Companhia de Polícia do Batalhão Naval na FAAAB. Não confundir com o extinto cadastro de Batalhão de Polícia Naval. Vínculos internos e funcionamento no Roblox dependem de homologação.",
+    "noJogo": "Companhia de Polícia do Batalhão Naval no universo FAAAB. A estrutura e a atuação interna dependem de aprovação; não se trata de batalhão independente.",
     "requisitos": null,
     "aprovado": true,
     "referencia": "https://arquivodamarinha.marinha.mil.br/index.php/companhia-de-policia-do-batalhao-naval",
@@ -1651,8 +1650,7 @@
     "dataRegistro": "2026-10-24",
     "versaoFonte": "Revisão FAAAB de 10/11/2026",
     "emblemaRef": "comforsup",
-    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada",
-    "notaNomenclatura": "Na FAAAB, a administração optou por não manter ComForS como entrada própria. Na Marinha real, ComForS designa Submarinos e ComForSup designa Superfície; não são sinônimos."
+    "estadoDoEmblema": "Referência recebida/identificada; instalação no site ainda não confirmada"
   },
   {
     "id": "FMB-CIM",
