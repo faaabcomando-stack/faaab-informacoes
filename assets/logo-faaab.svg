@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t d">
-<title id="t">Marca da FAAAB</title><desc id="d">Símbolo original fictício em azul e dourado, com três caminhos aliados convergindo e as letras FAAAB</desc>
-<path d="M60 4 108 26v49c0 21-21 35-48 42C33 110 12 96 12 75V26L60 4Z" fill="#102c44"/>
-<path d="M60 12 100 31v43c0 16-16 29-40 35-24-6-40-19-40-35V31L60 12Z" fill="none" stroke="#c49a5f" stroke-width="2.5"/>
-<path d="M28 71V40h37l-5 9H39v10h19l-5 10H39v12Z" fill="#f7fafb"/>
-<path d="m75 37 3.7 10.4H90l-9.1 6.6 3.5 10.7L75 58l-9.4 6.7 3.5-10.7-9.1-6.6h11.3Z" fill="#ddb57d"/>
-<path d="M33 89h54" stroke="#d8b17d" stroke-width="2"/>
-<text x="60" y="101" fill="#fff" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2" text-anchor="middle">FAAAB</text>
-</svg>

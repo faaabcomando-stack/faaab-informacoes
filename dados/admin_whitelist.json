@@ -1,9 +1,0 @@
-{
-  "versao": 3,
-  "modo": "etapa-1-whitelist-antes-de-cargos",
-  "projeto": "FAAAB",
-  "proprietarioGitHub": "faaabcomando-stack",
-  "observacao": "Whitelist libera somente a área de membros após login oficial Roblox/Google. Cargos administrativos são atribuídos manualmente pelo proprietário numa segunda etapa, no banco privado D1; nunca por perfil neste JSON.",
-  "membros": [],
-  "instrucoes": "Membros: {robloxUsername:'NickExato', robloxId:null, observacao:'Whitelist aprovada'}; nenhuma permissão de cargo é criada automaticamente."
-}
