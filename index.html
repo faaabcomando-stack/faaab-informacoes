@@ -1,194 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#edf1f4">
-  <meta name="description" content="FAAAB — modelo visual inicial de portal institucional para desktop e celular.">
-  <title>FAAAB | Modelo Institucional</title>
+  <meta name="theme-color" content="#18364b">
+  <meta name="description" content="FAAAB — Portal institucional da comunidade Forças Armadas e Auxiliares Aliadas Brasileiras, projeto independente de simulação no Roblox.">
+  <title>FAAAB | Portal Institucional</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjMWQ0MzU5Ii8+PHBhdGggZD0iTTkgOWg0NnY0Nkg5eiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzBhMjczIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxwYXRoIGQ9Ik0yMCA0NVYxOWgyNXY1SDI2djZoMTZ2NUgyNnYxMHoiIGZpbGw9IiNlN2Q0YjMiLz48L3N2Zz4K" type="image/svg+xml">
   <style>
-/* FAAAB · Template institucional de dois layouts (PC e mobile)
-   Só estrutura visual. Sem conteúdo fictício, scripts, bibliotecas ou fontes externas. */
-:root {
-  --paper:#f5f6f6;
-  --white:#fff;
-  --ink:#1d3d53;
-  --ink-2:#466274;
-  --muted:#6d8492;
-  --blue:#2c5671;
-  --blue-deep:#25465e;
-  --bronze:#aa9274;
-  --border:#d7e1e5;
-  --serif:Georgia, 'Times New Roman', serif;
-  --sans:'Segoe UI',Inter,system-ui,-apple-system,Arial,sans-serif;
-}
+/* FAAAB · tema institucional editorial, edição 02. Sem frameworks ou recursos administrativos. */
+:root{--ink:#15374c;--ink2:#2e4c5d;--muted:#71808b;--navy:#18364b;--navy2:#21495f;--paper:#f4f5f5;--white:#fff;--line:#dfe5e7;--gold:#bc9d70;--gold-light:#d7bd91;--sans:Inter,"Segoe UI",system-ui,-apple-system,sans-serif;--display:"Lato",Inter,system-ui,sans-serif}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-a:focus-visible{outline:3px solid var(--bronze);outline-offset:5px}
-.container{width:min(1210px,calc(100% - 72px));margin-inline:auto}
-.skip-link{position:absolute;top:-120px;left:12px;background:#fff;color:var(--ink);padding:12px;z-index:100}
-.skip-link:focus{top:12px}
-.utility-bar{background:#edf1f3;border-bottom:1px solid #dde5e8}
-.utility-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:36px;color:#627b8a;font-size:10px;font-weight:750;letter-spacing:.105em}
-.utility-inner span span{color:var(--bronze);padding:0 9px}
-.utility-detail{font-size:9px;color:#718793}
-.site-header{background:linear-gradient(105deg,#fff 75%,#f5f8f9);border-bottom:1px solid #e0e8eb}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;min-height:116px}
-.identity{display:flex;align-items:center;gap:21px}
-.identity-rule{width:4px;height:55px;background:var(--bronze)}
-.identity-name{font:500 44px/.97 var(--serif);letter-spacing:.05em;display:block;color:#254d69}
-.identity-caption{font-size:11px;color:#648090;display:block;letter-spacing:.015em;margin-top:11px}
-.header-meta{text-align:right;font-size:12px;color:#77909d;line-height:1.65}
-.header-meta span{display:block}
-.header-meta-title{font-size:10px;letter-spacing:.15em;font-weight:800;color:#a18a6a}
-.primary-nav{background:#fff;border-bottom:1px solid #d7e1e6;box-shadow:0 9px 22px #1f40500a}
-.nav-inner{display:flex;align-items:center;min-height:57px;gap:32px}
-.nav-inner a{display:flex;align-items:center;min-height:57px;padding:0 15px;border-bottom:2px solid var(--bronze);color:var(--blue);font-size:12px;font-weight:800}
-.nav-empty{color:#94a5ae;font-size:11px;letter-spacing:.02em}
-.nav-version{margin-left:auto;color:#a0b0b8;font-size:10px;font-weight:750;letter-spacing:.14em}
-.hero{position:relative;overflow:hidden;background:linear-gradient(107deg,#e8eff2 0%,#e0eaf0 59%,#cfdee7 100%);border-bottom:1px solid #d1dde4}
-.hero-layout{position:relative;display:grid;grid-template-columns:minmax(0,1.22fr) minmax(300px,.78fr);gap:55px;align-items:stretch;min-height:480px}
-.hero-content{z-index:1;align-self:center;padding:79px 0 83px}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;color:#927955;font-size:11px;font-weight:850;letter-spacing:.16em}
-.eyebrow-line{height:2px;width:30px;background:var(--bronze)}
-h1,h2,p{margin-top:0}
-h1{font:500 clamp(54px,5.9vw,87px)/1.04 var(--serif);letter-spacing:-.05em;color:#1e4864;margin:23px 0 22px}
-.heading-dot{color:var(--bronze)}
-.hero p{max-width:585px;color:#537285;font-size:16px;line-height:1.8;margin-bottom:30px}
-.hero-line{width:74px;height:1px;background:#aabdc8;margin-bottom:22px}
-.hero-state{font-size:10px;font-weight:800;letter-spacing:.1em;color:#648397;display:flex;align-items:center;gap:14px}
-.state-separator{width:4px;height:4px;background:#b39a78;border-radius:50%}
-.hero-art{position:relative;min-height:430px;overflow:hidden}
-.hero-art::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,#b8ccd8aa);clip-path:polygon(34% 0,100% 0,100% 100%,0 100%)}
-.hero-art::after{content:'';position:absolute;right:-90px;bottom:-110px;width:410px;height:410px;border:1px solid #ffffff80;border-radius:50%;box-shadow:0 0 0 42px #ffffff15,0 0 0 102px #ffffff16}
-.art-circle{position:absolute;border:1px solid #f6fbff91;border-radius:50%;left:15%;top:18%;aspect-ratio:1;pointer-events:none}
-.circle-one{width:265px}.circle-two{width:375px;left:2%;top:7%;border-color:#ffffff70}.circle-three{width:470px;left:-8%;top:-3%;border-color:#ffffff49}
-.art-diagonal{position:absolute;width:180%;height:1px;left:-23%;top:50%;background:#ffffff80;transform:rotate(-35deg)}
-.art-coordinates{position:absolute;right:5px;bottom:31px;display:flex;gap:26px;color:#5f8093;font-size:10px;font-weight:800;letter-spacing:.18em}
-.workspace{background:#f8fafa}
-.workspace-inner{padding-top:69px;padding-bottom:97px;min-height:370px}
-.workspace-heading{display:flex;align-items:baseline;gap:26px;padding-bottom:22px;border-bottom:1px solid #dce5e8}
-.section-index{font-size:10px;font-weight:800;letter-spacing:.16em;color:#9a8161}
-.workspace h2{font:500 34px/1.2 var(--serif);color:#31566d;letter-spacing:-.03em;margin:0}
-.workspace-empty{min-height:174px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;border-bottom:1px solid #e2e9ec;color:#8096a3}
-.empty-cross{color:#b09a7c;font-size:23px;font-weight:300;margin-bottom:3px}
-.workspace-empty>span:nth-child(2){font-size:12px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
-.workspace-empty small{font-size:11px;color:#a0afb7}
-.site-footer{background:#27475d;color:#d8e5ea}
-.footer-inner{min-height:105px;display:flex;align-items:center;gap:35px}
-.footer-inner strong{font:500 26px var(--serif);color:#fff}
-.footer-inner span{font-size:11px;color:#c4d2da}
-.footer-inner .footer-year{margin-left:auto;color:#aabdc8;font-weight:750}
-@media(min-width:1600px){.hero-layout{min-height:520px}}
-@media(max-width:900px){.hero-layout{grid-template-columns:1fr .55fr;gap:5px}.hero-art{min-height:390px}.hero-content{padding:65px 0}.identity-name{font-size:39px}}
-/* Versão mobile: composição própria, não apenas desktop espremido. */
-@media(max-width:680px){
- .container{width:calc(100% - 34px)}
- .utility-inner{min-height:29px;letter-spacing:.06em;font-size:9px}
- .utility-detail,.header-meta{display:none}
- .header-inner{min-height:83px}
- .identity{gap:13px}
- .identity-rule{height:43px;width:3px}
- .identity-name{font-size:35px;letter-spacing:.04em}
- .identity-caption{font-size:9px;max-width:270px;margin-top:5px;line-height:1.35}
- .nav-inner{min-height:42px;gap:0}
- .nav-inner a{min-height:42px;padding:0 12px;font-size:11px}
- .nav-empty{display:none}
- .nav-version{font-size:9px}
- .hero{background:linear-gradient(155deg,#edf2f5 2%,#dbe8ef 100%)}
- .hero-layout{display:block;min-height:0}
- .hero-content{padding:67px 0 74px}
- .hero-art{position:absolute;right:-94px;top:-55px;width:270px;height:330px;min-height:0;opacity:.65;pointer-events:none}
- .circle-one{width:140px;left:5%;top:22%}.circle-two{width:220px;left:-15%;top:10%}.circle-three{width:300px;left:-29%;top:-3%}
- .art-coordinates{display:none}
- .eyebrow{font-size:9px;letter-spacing:.1em;gap:9px}.eyebrow-line{width:21px}
- h1{font-size:clamp(49px,12.5vw,67px);margin:20px 0 17px}
- .hero p{font-size:14px;line-height:1.75;max-width:450px;margin-bottom:27px}
- .hero-line{width:56px;margin-bottom:19px}
- .hero-state{font-size:9px;letter-spacing:.035em;gap:9px;flex-wrap:wrap}
- .workspace-inner{padding:48px 0 62px;min-height:300px}
- .workspace-heading{display:block;padding-bottom:17px}
- .workspace h2{font-size:30px;margin-top:8px}
- .workspace-empty{min-height:171px;text-align:center;padding:25px 6px}
- .workspace-empty small{line-height:1.5;max-width:280px}
- .footer-inner{min-height:108px;display:grid;grid-template-columns:1fr auto;column-gap:12px;row-gap:3px;align-content:center}
- .footer-inner strong{font-size:25px}
- .footer-inner span:not(.footer-year){grid-column:1/-1;grid-row:2;font-size:10px}
- .footer-inner .footer-year{grid-column:2;grid-row:1}
-}
-@media(max-width:350px){.identity-caption{font-size:8px}.identity-name{font-size:31px}.hero-state{font-size:8px}.nav-version{letter-spacing:0}}
-@media(prefers-reduced-motion:no-preference){.hero-content{animation:enter .65s cubic-bezier(.18,.76,.24,1) both}@keyframes enter{from{opacity:.6;transform:translateY(12px)}to{opacity:1;transform:none}}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-content{animation:none!important}}
+html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}svg{display:block}a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.wrap{width:min(1320px,calc(100% - 88px));margin:0 auto}
+.skip-link{position:absolute;top:-90px;left:12px;z-index:1000;padding:12px 18px;background:white;color:var(--ink);box-shadow:0 3px 15px #112c3b20}.skip-link:focus{top:10px}
+.utility{background:#ecf0f1;border-bottom:1px solid #e1e6e8}.utility-inner{height:38px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:10px;letter-spacing:.14em;font-weight:750;color:#4f6570}.utility-sep{color:var(--gold);margin:0 11px}.utility-right{font-size:9px;color:#687b85;letter-spacing:.105em}.pulse{width:5px;height:5px;display:inline-block;border-radius:50%;background:var(--gold);vertical-align:middle;margin-right:9px}
+.site-header{background:var(--white)}.header-inner{height:115px;display:flex;align-items:center;justify-content:space-between;gap:26px}.identity{display:flex;align-items:center;gap:20px;min-width:0}.monogram{width:72px;height:72px;flex:none;display:grid;place-items:center;background:#1d4359;position:relative;overflow:hidden}.monogram::before{content:"";position:absolute;inset:5px;border:1px solid #ffffff4b}.monogram::after{content:"";position:absolute;right:-22px;bottom:13px;width:80px;height:1px;transform:rotate(-40deg);background:#d8c29c99}.monogram span{font-family:Georgia,serif;color:#e5d0ab;font-size:42px;font-weight:400;line-height:1;z-index:1}.monogram i{position:absolute;top:7px;right:8px;border:3px solid transparent;border-top-color:#bc9d70;border-right-color:#bc9d70;width:11px;height:11px;transform:rotate(45deg)}.identity-text strong{display:block;letter-spacing:.075em;font:800 44px/.94 var(--display);color:#1a3f56}.identity-text small{display:block;margin-top:12px;font-size:9px;letter-spacing:.16em;font-weight:750;color:#71808c;line-height:1.55}.header-aside{text-align:right;border-left:1px solid #dce3e5;padding-left:36px}.header-aside span{display:block;font-size:10px;font-weight:750;letter-spacing:.17em;color:#ae926a;margin-bottom:8px}.header-aside strong{font-size:12px;font-weight:620;color:#456373}
+.primary-nav{position:sticky;z-index:90;top:0;background:#1d4156;box-shadow:0 9px 20px #0b1d2922}.nav-inner{height:62px;display:flex;align-items:stretch;justify-content:space-between;gap:20px}.nav-links{display:flex;align-items:stretch;gap:0}.nav-links a{position:relative;min-width:151px;padding:0 22px;display:flex;align-items:center;gap:14px;color:#e1eaf0;font-size:12px;letter-spacing:.01em;font-weight:750;transition:background .2s ease}.nav-links a:hover{background:#33596e}.nav-links a[aria-current]{background:#244b60;color:white}.nav-links a[aria-current]::after{content:"";height:3px;background:#c3a676;position:absolute;bottom:0;left:22px;right:22px}.nav-number{font-size:9px;letter-spacing:.1em;color:#b89d75}.nav-end{display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:.15em;color:#c8d8e0;font-weight:700}.nav-end-square{width:10px;height:10px;border:1px solid #b59d7c;transform:rotate(45deg)}.nav-end-divider{opacity:.3}.menu-toggle{display:none}
+.hero{min-height:580px;position:relative;isolation:isolate;overflow:hidden;color:#fff;background:linear-gradient(122deg,#18374f 5%,#476b7c 52%,#83959b);border-bottom:0}.hero-image{position:absolute;inset:0;z-index:-3;background:linear-gradient(25deg,#1a3b50,#5f879a)}.hero-image img{width:100%;height:100%;object-fit:cover;object-position:center 47%;opacity:.94;display:block;filter:saturate(.78) contrast(1.05)}.hero-image img[hidden]{display:none}.hero-overlay{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(12,34,52,.98) 0%,rgba(19,48,68,.91) 35%,rgba(21,51,72,.50) 69%,rgba(26,60,81,.20) 100%),linear-gradient(0deg,#142f48ba 0%,transparent 28%,#142d4220 100%)}.hero-graphic{position:absolute;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(90deg,transparent 67.9%,#e6eff217 68%,transparent 68.1%)}.halo{position:absolute;border:1px solid #ffffff25;border-radius:50%;width:630px;height:630px;right:-150px;top:-208px}.halo-two{width:855px;height:855px;right:-270px;top:-320px;border-color:#ffffff16}.hero-inner{position:relative;min-height:580px;display:flex;align-items:center;justify-content:space-between}.hero-content{max-width:750px;padding:77px 0 88px}.overline{display:flex;align-items:center;gap:16px;font-size:10px;letter-spacing:.20em;font-weight:750;color:#e8d5b4}.overline-rule{width:34px;height:2px;background:#c1a47b;flex:none}.overline-star{font-size:11px;color:#b89b73;line-height:1}.hero h1{font:850 clamp(55px,6.8vw,106px)/.99 var(--display);letter-spacing:-.05em;margin:35px 0 28px;text-wrap:balance}.hero h1 em{font-style:normal;color:#d9c4a2}.hero p{max-width:530px;margin:0;font-size:17px;line-height:1.9;font-weight:400;color:#e0e9ed}.hero-action{margin-top:35px;min-width:235px;display:inline-flex;align-items:center;justify-content:space-between;gap:37px;padding:17px 20px;background:#e3cda6;color:#17394e;font-size:12px;letter-spacing:.02em;font-weight:850;transition:background .2s,transform .2s}.hero-action:hover{background:#f1dfbf;transform:translateY(-2px)}.hero-action svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8}.hero-side-label{font-size:11px;letter-spacing:.2em;font-weight:750;display:flex;align-items:center;gap:14px;color:#d7e3e9;writing-mode:vertical-rl;transform:rotate(180deg);align-self:flex-end;margin-bottom:62px}.hero-side-label i{width:1px;height:62px;background:#cbb28c}
+.hero-footer{background:#e3e8ea;color:#3b5a6c}.hero-footer-inner{min-height:62px;display:flex;align-items:center;gap:15px}.hero-footer-inner span{font-weight:750;letter-spacing:.1em;font-size:10px}.hero-footer-line{height:1px;width:29px;background:#b49976;display:inline-block;vertical-align:middle;margin-right:10px}.hero-footer-right{margin-left:auto;color:#6e8290;font-size:9px!important}.tiny-cross{margin:0 11px;color:#b49b74}.hero-footer-inner a{width:45px;height:62px;display:grid;place-items:center;margin-left:25px;border-left:1px solid #cbd5da;border-right:1px solid #cbd5da;transition:background .2s}.hero-footer-inner a:hover{background:#d5e0e5}.hero-footer-inner a svg{width:19px;height:19px;fill:none;stroke:#31596f;stroke-width:1.8}
+.editorial{background:#f9faf9}.editorial-inner{padding:91px 0 107px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:40px;padding-bottom:33px;border-bottom:1px solid #d9e1e4}.section-eyebrow{display:block;letter-spacing:.17em;font-weight:750;color:#8d7859;font-size:10px}.section-eyebrow b{font-size:10px;padding-right:16px;color:#46687b}.section-heading h2,.about h2{margin:18px 0 0;font:850 clamp(39px,4.3vw,60px)/1.12 var(--display);letter-spacing:-.045em;color:#1d3e52}.section-heading h2 em{font-style:normal;color:#6d8a9b}.section-heading p{margin:0 0 7px;max-width:350px;font-size:13px;line-height:1.9;color:#71808c}.publications-empty{display:grid;grid-template-columns:148px minmax(0,1fr) auto;align-items:center;gap:30px;min-height:246px;border-bottom:1px solid #dbe3e6}.publications-decoration{display:flex;justify-content:center}.empty-symbol{width:112px;height:112px;display:grid;place-items:center;border:1px solid #e0e6e8;border-radius:50%;background:#f1f4f5}.empty-symbol svg{width:56px;height:56px;stroke:#9bb0bb;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.empty-kicker{font-size:10px;letter-spacing:.13em;color:#a08b6a;font-weight:780}.empty-copy h3{font:700 27px/1.27 var(--display);letter-spacing:-.02em;color:#26485a;margin:10px 0 8px}.empty-copy p{font-size:13px;line-height:1.7;color:#7c8e99;margin:0;max-width:480px}.empty-number{white-space:nowrap;font-size:48px;font-weight:750;color:#c6d3d9;letter-spacing:-.05em;text-align:right}.empty-number span{display:block;margin-top:-12px;font-size:9px;letter-spacing:.13em;color:#9aabb4}
+.about{background:#ebf0f1;border-top:1px solid #dce5e8}.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:81px 0 96px}.about h2{margin-top:11px;font-size:clamp(36px,4vw,55px)}.about-copy{padding-top:6px;border-left:2px solid #c0a47c;padding-left:30px}.about-lead{font-weight:750;font-size:19px;color:#33566a;letter-spacing:-.02em}.about-copy p{max-width:550px;color:#687e8b;font-size:14px;line-height:1.9;margin:17px 0 0}
+.footer{background:#1b3b51;color:#d6e2e8}.footer-main{min-height:215px;padding:61px 0;display:flex;justify-content:space-between;gap:40px}.footer-brand{font:850 42px/1 var(--display);letter-spacing:.06em;color:#fff}.footer-brand span{color:#be9d6f}.footer-main small{display:block;font-size:10px;letter-spacing:.11em;color:#bdced7;margin-top:10px}.footer-meta{width:340px;max-width:45%}.footer-meta>span{color:#dbc5a7;font-size:10px;letter-spacing:.16em;font-weight:750}.footer-meta p{margin:14px 0 0;font-size:12px;color:#b7cbd5;line-height:1.8}.footer-bottom{border-top:1px solid #ffffff1f}.footer-bottom .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:61px;font-size:10px;letter-spacing:.09em;color:#afc4cf}.footer-bottom a:hover{color:#fff}
+@media(min-width:1650px){.hero,.hero-inner{min-height:645px}.hero-content{max-width:820px}}
+@media(max-width:1100px){.wrap{width:min(1200px,calc(100% - 58px))}.hero h1{font-size:clamp(58px,7.1vw,89px)}.publications-empty{grid-template-columns:116px minmax(0,1fr) 110px}}
+@media(max-width:760px){.wrap{width:calc(100% - 36px)}.utility-inner{height:30px;font-size:9px}.utility-right{display:none}.header-inner{height:90px}.monogram{width:53px;height:53px}.monogram span{font-size:32px}.identity{gap:12px}.identity-text strong{font-size:33px}.identity-text small{font-size:7px;letter-spacing:.09em;margin-top:7px}.header-aside{display:none}
+ .primary-nav .nav-inner{min-height:52px;height:auto;display:block}.menu-toggle{display:flex;align-items:center;gap:13px;padding:0 4px;width:100%;height:52px;background:none;border:0;color:#e7eff2;text-align:left;font-size:12px;font-weight:750;letter-spacing:.06em}.menu-toggle-bars{display:flex;flex-direction:column;gap:4px}.menu-toggle-bars i{display:block;height:2px;width:18px;background:#d4e1e7}.menu-toggle .menu-caret{margin-left:auto;font-size:22px;color:#dac39f;line-height:1}.nav-links{display:none;padding:0 0 12px;border-top:1px solid #ffffff1d;flex-direction:column}.nav-links.is-open{display:flex}.nav-links a{min-width:0;min-height:48px;padding:0 14px;border-bottom:1px solid #ffffff14}.nav-links a[aria-current]::after{left:0;right:auto;top:9px;bottom:9px;height:auto;width:2px}.nav-number{font-size:9px}.nav-end{display:none}
+ .hero,.hero-inner{min-height:580px}.hero-image img{object-position:65% center}.hero-overlay{background:linear-gradient(90deg,rgba(16,40,58,.91),rgba(18,47,67,.73)),linear-gradient(0deg,#132c40bb,transparent 60%)}.hero-graphic{opacity:.65}.halo{right:-340px}.halo-two{right:-380px}.hero-inner{align-items:flex-start}.hero-content{padding:88px 0 99px}.overline{font-size:9px;letter-spacing:.12em;gap:11px}.overline-rule{width:24px}.hero h1{font-size:clamp(55px,9.7vw,85px);margin:34px 0 20px;letter-spacing:-.045em}.hero p{font-size:15px;line-height:1.75;max-width:470px}.hero-action{padding:15px 17px;margin-top:31px;min-width:230px}.hero-side-label{display:none}.hero-footer-inner{min-height:52px}.hero-footer-right{display:none}.hero-footer-inner a{height:52px;margin-left:auto}
+ .editorial-inner{padding:64px 0 69px}.section-heading{display:block;padding-bottom:27px}.section-heading h2{font-size:clamp(37px,7vw,49px)}.section-heading p{max-width:440px;margin:17px 0 0}.publications-empty{grid-template-columns:74px minmax(0,1fr);min-height:220px;gap:18px}.empty-symbol{width:70px;height:70px}.empty-symbol svg{width:38px;height:38px}.empty-number{display:none}.empty-copy h3{font-size:23px}.empty-copy p{font-size:12px}.about-inner{grid-template-columns:1fr;gap:30px;padding:60px 0}.about-copy{max-width:690px}.footer-main{padding:45px 0;min-height:0}.footer-meta{max-width:55%}}
+@media(max-width:480px){.wrap{width:calc(100% - 32px)}.hero,.hero-inner{min-height:605px}.hero-content{padding:85px 0 84px}.hero h1{font-size:clamp(46px,11.8vw,66px);line-height:1.055}.hero p{font-size:14px}.overline{gap:8px;font-size:8px;letter-spacing:.08em}.overline-star{font-size:9px}.hero-action{margin-top:29px}.hero-footer-inner span{font-size:9px}.hero-footer-line{width:19px}
+ .editorial-inner{padding:54px 0 67px}.section-heading h2{font-size:35px}.section-heading p{font-size:12px}.publications-empty{grid-template-columns:1fr;min-height:0;padding:38px 0 43px;gap:17px}.publications-decoration{justify-content:flex-start}.empty-symbol{width:62px;height:62px}.empty-symbol svg{width:34px;height:34px}.empty-copy h3{font-size:22px}.about-inner{padding:53px 0}.about h2{font-size:40px}.about-copy{padding-left:20px}.about-lead{font-size:18px}.about-copy p{font-size:13px}.footer-main{display:block}.footer-meta{max-width:100%;margin-top:38px}.footer-bottom .wrap{gap:10px;flex-wrap:wrap;justify-content:space-between}.footer-bottom .wrap span:nth-child(2){display:none}}
+@media(prefers-reduced-motion:no-preference){.hero-content{animation:hero-enter .78s cubic-bezier(.2,.8,.2,1) both}@keyframes hero-enter{from{opacity:0;transform:translateY(19px)}to{opacity:1;transform:none}}.js-motion .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}.js-motion .reveal.is-visible{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}}
 
+.hero-fallback-svg{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
+.hero-image img{position:absolute;inset:0}
 </style>
+  
 </head>
 <body>
-  <a class="skip-link" href="#principal">Ir ao conteúdo</a>
-  <div class="utility-bar">
-    <div class="container utility-inner">
-      <span>FAAAB <span aria-hidden="true">/</span> PORTAL INSTITUCIONAL</span>
-      <span class="utility-detail">COMUNIDADE DE SIMULAÇÃO · PROJETO INDEPENDENTE</span>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="utility">
+    <div class="wrap utility-inner">
+      <span>PORTAL INSTITUCIONAL <span class="utility-sep">/</span> FAAAB</span>
+      <span class="utility-right"><span class="pulse" aria-hidden="true"></span> COMUNIDADE INDEPENDENTE · ROBLOX</span>
     </div>
   </div>
   <header class="site-header" id="inicio">
-    <div class="container header-inner">
-      <div class="identity" aria-label="FAAAB">
-        <span class="identity-rule" aria-hidden="true"></span>
-        <div>
-          <strong class="identity-name">FAAAB</strong>
-          <span class="identity-caption">Forças Armadas e Auxiliares Aliadas Brasileiras</span>
-        </div>
-      </div>
-      <div class="header-meta" aria-label="Informações do modelo">
-        <span class="header-meta-title">BASE INSTITUCIONAL</span>
-        <span>Modelo visual · 2026</span>
+    <div class="wrap header-inner">
+      <a class="identity" href="#inicio" aria-label="FAAAB — Página inicial">
+        <span class="monogram" aria-hidden="true"><span>F</span><i></i></span>
+        <span class="identity-text"><strong>FAAAB</strong><small>FORÇAS ARMADAS E AUXILIARES<br>ALIADAS BRASILEIRAS</small></span>
+      </a>
+      <div class="header-aside" aria-label="Identificação do portal">
+        <span>PORTAL DE COMUNICAÇÃO</span>
+        <strong>Informação. Organização. Instituição.</strong>
       </div>
     </div>
   </header>
-  <nav class="primary-nav" aria-label="Navegação do modelo">
-    <div class="container nav-inner">
-      <a href="#inicio" aria-current="page">Início</a>
-      <span class="nav-empty">Navegação reservada para as próximas etapas</span>
-      <span class="nav-version">TEMPLATE 01</span>
+  <nav class="primary-nav" aria-label="Navegação principal" id="nav">
+    <div class="wrap nav-inner">
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="menu-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span> Menu <span class="menu-caret" aria-hidden="true">⌄</span>
+      </button>
+      <div class="nav-links" id="site-menu">
+        <a href="#inicio" aria-current="page"><span class="nav-number">01</span> Página inicial</a>
+        <a href="#conteudo"><span class="nav-number">02</span> Publicações</a>
+        <a href="#institucional"><span class="nav-number">03</span> Institucional</a>
+      </div>
+      <span class="nav-end"><span class="nav-end-square" aria-hidden="true"></span> FAAAB <span class="nav-end-divider">|</span> BRASIL</span>
     </div>
   </nav>
-  <main id="principal">
-    <section class="hero" aria-label="Capa institucional do modelo">
-      <div class="container hero-layout">
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image" aria-hidden="true">
+<svg class="hero-fallback-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="s" x2="0.4" y2="1"><stop stop-color="#315b70"/><stop offset=".52" stop-color="#8095a0"/><stop offset="1" stop-color="#adc0c4"/></linearGradient><linearGradient id="g" x2="0" y2="1"><stop stop-color="#55798a"/><stop offset="1" stop-color="#233f53"/></linearGradient><filter id="grain"><feTurbulence baseFrequency=".035" numOctaves="3" seed="4" result="noise"/><feColorMatrix in="noise" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".15"/></feComponentTransfer></filter></defs>
+<rect width="1800" height="900" fill="url(#s)"/><g fill="#e6eced" opacity=".25"><ellipse cx="1240" cy="207" rx="530" ry="42"/><ellipse cx="1440" cy="270" rx="460" ry="28"/><ellipse cx="900" cy="360" rx="330" ry="24"/></g><circle cx="1410" cy="270" r="160" fill="#dae2dc" opacity=".24"/>
+<path d="M0 555Q270 520 480 557t420-16q220-70 452-12t448-24v395H0Z" fill="#61818f" opacity=".45"/>
+<path d="M0 650Q270 618 515 664t395-9q150-43 360-10t530-40v295H0Z" fill="url(#g)" opacity=".85"/>
+<path d="M0 750q290-80 590-25t550-5q220-35 660-4v184H0Z" fill="#254c61" opacity=".5"/>
+<g transform="translate(1410 420) rotate(-8)" opacity=".76" fill="#203f51"><path d="M-340 0l270-14L6-183q14-19 24-17l18 7-37 171 224-16 58-51 22-1-13 56 93 7 42 23-130 16-44 53-26 2-24-47-201 16-15 176-26 4L-71 30l-263 29-55 46-24-2 29-62-38-43 20-7z"/></g>
+<rect width="1800" height="900" fill="#fff" filter="url(#grain)" opacity=".4"/>
+</svg>
+
+        <img src="https://www.embraer.com/media/jv1b32b3/embraer-assina-contrato-de-servi%C3%A7os-e-suporte-para-apoiar-opera%C3%A7%C3%A3o-da-frota-kc-390-da-for%C3%A7a-a%C3%A9rea-brasileira.jpg?v=1dcff1ec6824480" alt="" fetchpriority="high" referrerpolicy="no-referrer" onerror="this.hidden=true">
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-graphic" aria-hidden="true"><span class="halo halo-one"></span><span class="halo halo-two"></span></div>
+      <div class="wrap hero-inner">
         <div class="hero-content">
-          <span class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> PRIMEIRA ETAPA · IDENTIDADE VISUAL</span>
-          <h1>Portal FAAAB<span class="heading-dot" aria-hidden="true">.</span></h1>
-          <p>Uma base institucional limpa, com estética militar contemporânea, pronta para receber o conteúdo nas próximas etapas.</p>
-          <div class="hero-line" aria-hidden="true"></div>
-          <span class="hero-state">ESTRUTURA INICIAL <span class="state-separator" aria-hidden="true"></span> SEM CONTEÚDO ADICIONADO</span>
+          <div class="overline"><span class="overline-rule"></span> ORGANIZAÇÃO INSTITUCIONAL <span class="overline-star">✦</span> FAAAB</div>
+          <h1 id="hero-title">Um portal.<br><em>Uma identidade.</em></h1>
+          <p>Forças Armadas e Auxiliares Aliadas Brasileiras. Um espaço para reunir a comunicação e a estrutura da nossa comunidade.</p>
+          <a class="hero-action" href="#conteudo"><span>Explorar o portal</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-circle circle-one"></div>
-          <div class="art-circle circle-two"></div>
-          <div class="art-circle circle-three"></div>
-          <div class="art-diagonal"></div>
-          <div class="art-coordinates"><span>FAAAB / BASE</span><span>00 — 01</span></div>
+        <div class="hero-side-label" aria-hidden="true"><span>FAAAB</span> <i></i> <span>2026</span></div>
+      </div>
+      <div class="hero-footer"><div class="wrap hero-footer-inner">
+        <span><b class="hero-footer-line"></b> MODELO INSTITUCIONAL</span>
+        <span class="hero-footer-right">PORTAL FAAAB <span class="tiny-cross">+</span> PLATAFORMA INDEPENDENTE</span>
+        <a href="#conteudo" aria-label="Ir para publicações"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18m-7-7 7 7 7-7"/></svg></a>
+      </div></div>
+    </section>
+    <section class="editorial" id="conteudo" aria-labelledby="section-title">
+      <div class="wrap editorial-inner">
+        <div class="section-heading">
+          <div><span class="section-eyebrow"><b>01</b> COMUNICAÇÃO</span><h2 id="section-title">Publicações <em>FAAAB</em></h2></div>
+          <p>Notícias, comunicados e informações da comunidade serão organizados nesta área.</p>
+        </div>
+        <div class="publications-empty">
+          <div class="publications-decoration" aria-hidden="true">
+            <span class="empty-symbol"><svg viewBox="0 0 90 90"><path d="M24 23h32l10 10v34H24z"/><path d="M56 23v11h10M34 45h22M34 55h22M34 65h14"/></svg></span>
+          </div>
+          <div class="empty-copy"><span class="empty-kicker">CENTRAL DE PUBLICAÇÕES</span><h3>Em breve, novas informações.</h3><p>Este espaço ainda não possui publicações. Nenhuma notícia de exemplo foi adicionada.</p></div>
+          <div class="empty-number" aria-hidden="true">00<span>/ PUBLICAÇÕES</span></div>
         </div>
       </div>
     </section>
-    <section class="workspace" aria-label="Área principal do site, ainda vazia">
-      <div class="container workspace-inner">
-        <div class="workspace-heading">
-          <span class="section-index">01 / ESTRUTURA</span>
-          <h2>Área principal</h2>
-        </div>
-        <div class="workspace-empty"><span aria-hidden="true" class="empty-cross">+</span><span>Espaço reservado</span><small>O conteúdo será construído depois da aprovação deste template.</small></div>
+    <section class="about" id="institucional" aria-labelledby="about-title">
+      <div class="wrap about-inner">
+        <div class="about-label"><span class="section-eyebrow"><b>02</b> IDENTIDADE</span><h2 id="about-title">Institucional.</h2></div>
+        <div class="about-copy"><span class="about-lead">O ponto de partida de um portal organizado.</span><p>A FAAAB é uma comunidade independente de simulação no Roblox. Esta página é a base visual de seu portal — sem páginas de unidades, hierarquias ou sistemas ainda.</p></div>
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <strong>FAAAB</strong>
-      <span>Modelo visual inicial · Sem vínculo com instituições militares reais</span>
-      <span class="footer-year">2026</span>
+  <footer class="footer">
+    <div class="wrap footer-main">
+      <div><strong class="footer-brand">FAAAB<span>.</span></strong><small>Forças Armadas e Auxiliares Aliadas Brasileiras</small></div>
+      <div class="footer-meta"><span>COMUNIDADE INDEPENDENTE</span><p>Projeto de simulação no Roblox. Sem vínculo com órgãos públicos ou Forças Armadas oficiais.</p></div>
     </div>
+    <div class="footer-bottom"><div class="wrap"><span>FAAAB © 2026</span><span>PORTAL INSTITUCIONAL</span><a href="#inicio">Voltar ao início ↑</a></div></div>
   </footer>
+<script>
+'use strict';
+(()=>{
+  const button=document.querySelector('#menu-toggle');
+  const links=document.querySelector('#site-menu');
+  const close=()=>{if(!button||!links)return;links.classList.remove('is-open');button.setAttribute('aria-expanded','false')};
+  if(button&&links){
+    button.addEventListener('click',()=>{const open=links.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open))});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'){close();button.focus()}});
+    document.addEventListener('click',event=>{if(!event.target.closest('.primary-nav'))close()});
+    window.addEventListener('resize',()=>{if(innerWidth>760)close()});
+  }
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window))return;
+  const targets=document.querySelectorAll('.section-heading,.publications-empty,.about-inner');
+  const observer=new IntersectionObserver(entries=>{entries.forEach(({target,isIntersecting})=>{if(isIntersecting){target.classList.add('is-visible');observer.unobserve(target)}})},{threshold:0.05,rootMargin:'0px 0px 30px 0px'});
+  document.body.classList.add('js-motion');
+  targets.forEach(el=>{el.classList.add('reveal');observer.observe(el)});
+})();
+
+</script>
 </body>
 </html>
