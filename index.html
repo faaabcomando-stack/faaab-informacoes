@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf1f4">
+  <meta name="description" content="FAAAB — modelo visual inicial de portal institucional para desktop e celular.">
+  <title>FAAAB | Modelo Institucional</title>
+  <style>
+/* FAAAB · Template institucional de dois layouts (PC e mobile)
+   Só estrutura visual. Sem conteúdo fictício, scripts, bibliotecas ou fontes externas. */
+:root {
+  --paper:#f5f6f6;
+  --white:#fff;
+  --ink:#1d3d53;
+  --ink-2:#466274;
+  --muted:#6d8492;
+  --blue:#2c5671;
+  --blue-deep:#25465e;
+  --bronze:#aa9274;
+  --border:#d7e1e5;
+  --serif:Georgia, 'Times New Roman', serif;
+  --sans:'Segoe UI',Inter,system-ui,-apple-system,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid var(--bronze);outline-offset:5px}
+.container{width:min(1210px,calc(100% - 72px));margin-inline:auto}
+.skip-link{position:absolute;top:-120px;left:12px;background:#fff;color:var(--ink);padding:12px;z-index:100}
+.skip-link:focus{top:12px}
+.utility-bar{background:#edf1f3;border-bottom:1px solid #dde5e8}
+.utility-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:36px;color:#627b8a;font-size:10px;font-weight:750;letter-spacing:.105em}
+.utility-inner span span{color:var(--bronze);padding:0 9px}
+.utility-detail{font-size:9px;color:#718793}
+.site-header{background:linear-gradient(105deg,#fff 75%,#f5f8f9);border-bottom:1px solid #e0e8eb}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;min-height:116px}
+.identity{display:flex;align-items:center;gap:21px}
+.identity-rule{width:4px;height:55px;background:var(--bronze)}
+.identity-name{font:500 44px/.97 var(--serif);letter-spacing:.05em;display:block;color:#254d69}
+.identity-caption{font-size:11px;color:#648090;display:block;letter-spacing:.015em;margin-top:11px}
+.header-meta{text-align:right;font-size:12px;color:#77909d;line-height:1.65}
+.header-meta span{display:block}
+.header-meta-title{font-size:10px;letter-spacing:.15em;font-weight:800;color:#a18a6a}
+.primary-nav{background:#fff;border-bottom:1px solid #d7e1e6;box-shadow:0 9px 22px #1f40500a}
+.nav-inner{display:flex;align-items:center;min-height:57px;gap:32px}
+.nav-inner a{display:flex;align-items:center;min-height:57px;padding:0 15px;border-bottom:2px solid var(--bronze);color:var(--blue);font-size:12px;font-weight:800}
+.nav-empty{color:#94a5ae;font-size:11px;letter-spacing:.02em}
+.nav-version{margin-left:auto;color:#a0b0b8;font-size:10px;font-weight:750;letter-spacing:.14em}
+.hero{position:relative;overflow:hidden;background:linear-gradient(107deg,#e8eff2 0%,#e0eaf0 59%,#cfdee7 100%);border-bottom:1px solid #d1dde4}
+.hero-layout{position:relative;display:grid;grid-template-columns:minmax(0,1.22fr) minmax(300px,.78fr);gap:55px;align-items:stretch;min-height:480px}
+.hero-content{z-index:1;align-self:center;padding:79px 0 83px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;color:#927955;font-size:11px;font-weight:850;letter-spacing:.16em}
+.eyebrow-line{height:2px;width:30px;background:var(--bronze)}
+h1,h2,p{margin-top:0}
+h1{font:500 clamp(54px,5.9vw,87px)/1.04 var(--serif);letter-spacing:-.05em;color:#1e4864;margin:23px 0 22px}
+.heading-dot{color:var(--bronze)}
+.hero p{max-width:585px;color:#537285;font-size:16px;line-height:1.8;margin-bottom:30px}
+.hero-line{width:74px;height:1px;background:#aabdc8;margin-bottom:22px}
+.hero-state{font-size:10px;font-weight:800;letter-spacing:.1em;color:#648397;display:flex;align-items:center;gap:14px}
+.state-separator{width:4px;height:4px;background:#b39a78;border-radius:50%}
+.hero-art{position:relative;min-height:430px;overflow:hidden}
+.hero-art::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,#b8ccd8aa);clip-path:polygon(34% 0,100% 0,100% 100%,0 100%)}
+.hero-art::after{content:'';position:absolute;right:-90px;bottom:-110px;width:410px;height:410px;border:1px solid #ffffff80;border-radius:50%;box-shadow:0 0 0 42px #ffffff15,0 0 0 102px #ffffff16}
+.art-circle{position:absolute;border:1px solid #f6fbff91;border-radius:50%;left:15%;top:18%;aspect-ratio:1;pointer-events:none}
+.circle-one{width:265px}.circle-two{width:375px;left:2%;top:7%;border-color:#ffffff70}.circle-three{width:470px;left:-8%;top:-3%;border-color:#ffffff49}
+.art-diagonal{position:absolute;width:180%;height:1px;left:-23%;top:50%;background:#ffffff80;transform:rotate(-35deg)}
+.art-coordinates{position:absolute;right:5px;bottom:31px;display:flex;gap:26px;color:#5f8093;font-size:10px;font-weight:800;letter-spacing:.18em}
+.workspace{background:#f8fafa}
+.workspace-inner{padding-top:69px;padding-bottom:97px;min-height:370px}
+.workspace-heading{display:flex;align-items:baseline;gap:26px;padding-bottom:22px;border-bottom:1px solid #dce5e8}
+.section-index{font-size:10px;font-weight:800;letter-spacing:.16em;color:#9a8161}
+.workspace h2{font:500 34px/1.2 var(--serif);color:#31566d;letter-spacing:-.03em;margin:0}
+.workspace-empty{min-height:174px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;border-bottom:1px solid #e2e9ec;color:#8096a3}
+.empty-cross{color:#b09a7c;font-size:23px;font-weight:300;margin-bottom:3px}
+.workspace-empty>span:nth-child(2){font-size:12px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
+.workspace-empty small{font-size:11px;color:#a0afb7}
+.site-footer{background:#27475d;color:#d8e5ea}
+.footer-inner{min-height:105px;display:flex;align-items:center;gap:35px}
+.footer-inner strong{font:500 26px var(--serif);color:#fff}
+.footer-inner span{font-size:11px;color:#c4d2da}
+.footer-inner .footer-year{margin-left:auto;color:#aabdc8;font-weight:750}
+@media(min-width:1600px){.hero-layout{min-height:520px}}
+@media(max-width:900px){.hero-layout{grid-template-columns:1fr .55fr;gap:5px}.hero-art{min-height:390px}.hero-content{padding:65px 0}.identity-name{font-size:39px}}
+/* Versão mobile: composição própria, não apenas desktop espremido. */
+@media(max-width:680px){
+ .container{width:calc(100% - 34px)}
+ .utility-inner{min-height:29px;letter-spacing:.06em;font-size:9px}
+ .utility-detail,.header-meta{display:none}
+ .header-inner{min-height:83px}
+ .identity{gap:13px}
+ .identity-rule{height:43px;width:3px}
+ .identity-name{font-size:35px;letter-spacing:.04em}
+ .identity-caption{font-size:9px;max-width:270px;margin-top:5px;line-height:1.35}
+ .nav-inner{min-height:42px;gap:0}
+ .nav-inner a{min-height:42px;padding:0 12px;font-size:11px}
+ .nav-empty{display:none}
+ .nav-version{font-size:9px}
+ .hero{background:linear-gradient(155deg,#edf2f5 2%,#dbe8ef 100%)}
+ .hero-layout{display:block;min-height:0}
+ .hero-content{padding:67px 0 74px}
+ .hero-art{position:absolute;right:-94px;top:-55px;width:270px;height:330px;min-height:0;opacity:.65;pointer-events:none}
+ .circle-one{width:140px;left:5%;top:22%}.circle-two{width:220px;left:-15%;top:10%}.circle-three{width:300px;left:-29%;top:-3%}
+ .art-coordinates{display:none}
+ .eyebrow{font-size:9px;letter-spacing:.1em;gap:9px}.eyebrow-line{width:21px}
+ h1{font-size:clamp(49px,12.5vw,67px);margin:20px 0 17px}
+ .hero p{font-size:14px;line-height:1.75;max-width:450px;margin-bottom:27px}
+ .hero-line{width:56px;margin-bottom:19px}
+ .hero-state{font-size:9px;letter-spacing:.035em;gap:9px;flex-wrap:wrap}
+ .workspace-inner{padding:48px 0 62px;min-height:300px}
+ .workspace-heading{display:block;padding-bottom:17px}
+ .workspace h2{font-size:30px;margin-top:8px}
+ .workspace-empty{min-height:171px;text-align:center;padding:25px 6px}
+ .workspace-empty small{line-height:1.5;max-width:280px}
+ .footer-inner{min-height:108px;display:grid;grid-template-columns:1fr auto;column-gap:12px;row-gap:3px;align-content:center}
+ .footer-inner strong{font-size:25px}
+ .footer-inner span:not(.footer-year){grid-column:1/-1;grid-row:2;font-size:10px}
+ .footer-inner .footer-year{grid-column:2;grid-row:1}
+}
+@media(max-width:350px){.identity-caption{font-size:8px}.identity-name{font-size:31px}.hero-state{font-size:8px}.nav-version{letter-spacing:0}}
+@media(prefers-reduced-motion:no-preference){.hero-content{animation:enter .65s cubic-bezier(.18,.76,.24,1) both}@keyframes enter{from{opacity:.6;transform:translateY(12px)}to{opacity:1;transform:none}}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-content{animation:none!important}}
+
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#principal">Ir ao conteúdo</a>
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <span>FAAAB <span aria-hidden="true">/</span> PORTAL INSTITUCIONAL</span>
+      <span class="utility-detail">COMUNIDADE DE SIMULAÇÃO · PROJETO INDEPENDENTE</span>
+    </div>
+  </div>
+  <header class="site-header" id="inicio">
+    <div class="container header-inner">
+      <div class="identity" aria-label="FAAAB">
+        <span class="identity-rule" aria-hidden="true"></span>
+        <div>
+          <strong class="identity-name">FAAAB</strong>
+          <span class="identity-caption">Forças Armadas e Auxiliares Aliadas Brasileiras</span>
+        </div>
+      </div>
+      <div class="header-meta" aria-label="Informações do modelo">
+        <span class="header-meta-title">BASE INSTITUCIONAL</span>
+        <span>Modelo visual · 2026</span>
+      </div>
+    </div>
+  </header>
+  <nav class="primary-nav" aria-label="Navegação do modelo">
+    <div class="container nav-inner">
+      <a href="#inicio" aria-current="page">Início</a>
+      <span class="nav-empty">Navegação reservada para as próximas etapas</span>
+      <span class="nav-version">TEMPLATE 01</span>
+    </div>
+  </nav>
+  <main id="principal">
+    <section class="hero" aria-label="Capa institucional do modelo">
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <span class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> PRIMEIRA ETAPA · IDENTIDADE VISUAL</span>
+          <h1>Portal FAAAB<span class="heading-dot" aria-hidden="true">.</span></h1>
+          <p>Uma base institucional limpa, com estética militar contemporânea, pronta para receber o conteúdo nas próximas etapas.</p>
+          <div class="hero-line" aria-hidden="true"></div>
+          <span class="hero-state">ESTRUTURA INICIAL <span class="state-separator" aria-hidden="true"></span> SEM CONTEÚDO ADICIONADO</span>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-circle circle-one"></div>
+          <div class="art-circle circle-two"></div>
+          <div class="art-circle circle-three"></div>
+          <div class="art-diagonal"></div>
+          <div class="art-coordinates"><span>FAAAB / BASE</span><span>00 — 01</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="workspace" aria-label="Área principal do site, ainda vazia">
+      <div class="container workspace-inner">
+        <div class="workspace-heading">
+          <span class="section-index">01 / ESTRUTURA</span>
+          <h2>Área principal</h2>
+        </div>
+        <div class="workspace-empty"><span aria-hidden="true" class="empty-cross">+</span><span>Espaço reservado</span><small>O conteúdo será construído depois da aprovação deste template.</small></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <strong>FAAAB</strong>
+      <span>Modelo visual inicial · Sem vínculo com instituições militares reais</span>
+      <span class="footer-year">2026</span>
+    </div>
+  </footer>
+</body>
+</html>
