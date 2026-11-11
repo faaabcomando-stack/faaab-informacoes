@@ -1,15 +1,16 @@
 "use strict";
 const H=s=>String(s??"").replace(/[&<>"']/g,x=>x==="&"?"&amp;":x==="<"?"&lt;":x===">"?"&gt;":x.charCodeAt(0)===34?"&quot;":"&#39;");
-const F=[["FTB","Exército da FAAAB","Carreira exclusiva da força terrestre"]];
+const F=[["FTB","Exército da FAAAB","Postos e graduações da força terrestre"]];
+const PUBLIC_RANKS=new Set(["MAR","GNRL-E","GNRL-DIV","GNRL-BRG","CRNL","TEN-CNRL","MAJ","CPT","P-TEN","S-TEN","AAO","CDT","SUB-TEN","P-SGT","S-SGT","T-SGT","CB","SLD-1°","SLD","REC"]);
 const $=id=>document.getElementById(id);let list=[],active="FTB";
 function render(){
-  const f=F.find(x=>x[0]===active),items=list.filter(x=>x.forca===active).sort((a,b)=>a.ordem-b.ordem);
+  const f=F.find(x=>x[0]===active),items=list.filter(x=>x.forca===active&&PUBLIC_RANKS.has(x.sigla)).sort((a,b)=>a.ordem-b.ordem);
   $("forces").replaceChildren();
   $("forces").closest("aside").hidden=true;
   $("rank-force-name").textContent=f[1];
   document.title="Hierarquia exclusiva do Exército | FAAAB";
-  $("rank-desc").textContent="Hierarquia da "+f[1]+": "+f[2]+". Todas as patentes possuem CDP. Sem fotos ou titulares nesta página.";
-  $("rank-stats").innerHTML='<span>'+items.length+' patentes e graduações</span><span>Do maior ao menor</span><span>Todas possuem CDP</span>';
+  $("rank-desc").textContent="Hierarquia da "+f[1]+": "+f[2]+". Funções de comando e etapas provisórias não são listadas como patentes.";
+  $("rank-stats").innerHTML='<span>'+items.length+' postos e graduações</span><span>Do maior ao menor</span><span>CDP exibida quando documentada</span>';
   $("hierarchy-list").innerHTML=items.length?items.map((x,i)=>{
     const steps=Array.isArray(x.cdpEtapas)?x.cdpEtapas:[];
     const confirmed=x.cdpStatus==="Confirmada pela FAAAB",documented=x.cdpStatus==="Registrada no manual FAAAB",proposed=x.cdpStatus?.startsWith("Proposta elaborada")||x.cdpStatus?.startsWith("Progressão indicada");

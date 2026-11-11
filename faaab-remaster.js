@@ -42,9 +42,7 @@ const V3={
  async forceMenuItems(key){
   if(key==="FTB")return [
    {title:"Exército",url:"exercito.html",group:"home"},
-   {title:"Divisões",url:"divisoes.html",group:"divisao"},
-   {title:"Brigadas",url:"brigadas.html",group:"brigada"},
-   {title:"Unidades por brigada",url:"batalhoes.html",group:"unidade"},
+   {title:"Estrutura",url:"estrutura-exercito.html",group:"estrutura"},
    {title:"Hierarquia do EB",url:"hierarquia.html?forca=FTB",group:"career"},
    {title:"DECEx",url:"decex.html",group:"escola"},
    {title:"Provas do EB",url:"provas-faaab.html?forca=FTB",group:"provas"}];
