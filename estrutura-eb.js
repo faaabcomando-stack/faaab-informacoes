@@ -18,7 +18,7 @@
  const head=(title,desc)=>{
   const hdr=el("header","sect-head"),left=el("div");left.append(el("h2",null,title));if(desc)hdr.append(left,paragraph(desc));else hdr.append(left);return hdr
  };
- const divisionUrl=id=>"divisoes.html?id="+encodeURIComponent(id);
+ const divisionUrl=id=>"divisao.html?id="+encodeURIComponent(id);
  const brigadeUrl=(divId,id)=>"brigadas.html?divisao="+encodeURIComponent(divId)+"&brigada="+encodeURIComponent(id);
  const divisionCard=d=>{
   const card=el("article","div-card");const badge=window.FAAABEmblemas?.element("FTB-"+String(d.sigla).match(/^\d+/)?.[0]+"DE","eb-tree-emblem eb-tree-division");if(badge)card.append(badge);card.append(el("span","code",d.sigla),el("h3",null,d.nome),paragraph(d.perfil+" · "+d.brigadas.length+" brigadas"));
@@ -90,6 +90,10 @@
     for(const d of chosen)section.append(unitBlock(d));
     wrap.append(section);
     if(!selectedDiv)wrap.append(commands(data));
+   }else if(view==="divisoes"){
+    const section=el("section");
+    section.append(head("Divisões de Exército","Cada divisão tem uma página própria, com identidade, brigadas e informações de comando."));
+    const grid=el("div","divgrid");divisions.forEach(d=>grid.append(divisionCard(d)));section.append(grid);wrap.append(section);
    }else{
     const section=el("section");
     const title=view==="divisoes"?"Divisões e suas brigadas":"Brigadas por divisão";
