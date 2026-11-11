@@ -21,7 +21,9 @@
  $("division-context").textContent=copy.context;
  $("footer-division").textContent=`${dataKey} · Exército FAAAB`;
  $("nav-brigadas").href=`brigadas.html?divisao=${id}`;
+ $("nav-unidades").href=`batalhoes.html?divisao=${id}`;
  $("all-brigades").href=`brigadas.html?divisao=${id}`;
+ $("all-units").href=`batalhoes.html?divisao=${id}`;
  document.title=`${dataKey} | Exército FAAAB`;
  fetch("dados/estrutura_eb_2026.json",{cache:"no-store"}).then(r=>r.json()).then(data=>{
   const division=(data.divisoes||[]).find(x=>x.id===id);
