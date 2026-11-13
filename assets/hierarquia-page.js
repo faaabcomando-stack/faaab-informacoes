@@ -17,6 +17,7 @@ const summaries={
  'Soldado de Primeira Classe':'Atua em tarefas de equipe com experiência maior.',
  'Soldado de Segunda Classe':'Está na etapa inicial do serviço e aprende procedimentos de sua força.',
  'Aluno-Soldado':'Participa da formação inicial para atuar como soldado.',
+ 'Aluno Bombeiro Militar':'Participa da formação de bombeiros antes de assumir uma graduação operacional.',
  'Aprendiz-Marinheiro':'Aprende a rotina naval, a disciplina e os procedimentos iniciais.',
  'Grumete':'Cumpre a fase de formação naval supervisionada.',
  'Marinheiro':'Realiza atividades de bordo e apoio naval, conforme sua habilitação.',
@@ -24,8 +25,7 @@ const summaries={
  'Terceiro-Sargento':'Supervisiona equipes pequenas e auxilia na instrução.',
  'Segundo-Sargento':'Coordena equipes, instrução e rotinas de serviço.',
  'Primeiro-Sargento':'Supervisiona graduados e ajuda a organizar a unidade.',
- 'Sargento-Mor':'Acompanha graduados na estrutura interna da FAAAB.',
- 'Sargento-Mor de Comando':'Auxilia na coordenação dos graduados junto ao comando.',
+ 'Capitão-Sênior':'Atua no oficialato intermediário da estrutura própria da FAAAB.',
  'Subtenente':'Assessora oficiais e acompanha a rotina da unidade.',
  'Suboficial':'Supervisiona graduados experientes e apoia o comando.',
  'Aluno-Oficial':'Está na fase inicial da formação para o oficialato.',
@@ -55,7 +55,6 @@ const summaries={
  'Almirante de Esquadra':'Integra o comando superior naval.',
  'Marechal':'Patente excepcional prevista na tradição militar.',
  'Marechal do Ar':'Patente excepcional prevista na tradição da Aeronáutica.',
- 'Almirante':'Patente naval excepcional, associada a condições especiais.'
 };
 const nav=document.getElementById('hier-forces');
 if(nav){
@@ -63,6 +62,8 @@ if(nav){
  nav.innerHTML=keys.map(k=>'<a class="hier-orb'+(k===current?' is-selected':'')+'" href="'+url(k)+'" '+(k===current?'aria-current="page"':'')+'><span class="hier-orb-art"><img src="'+forces[k].imagem+'" alt=""></span><span>'+esc(forces[k].nome)+'</span></a>').join('');
  document.getElementById('hier-force-title').textContent=f.nome;
  document.getElementById('hier-force-description').textContent=f.descricao;
+ const extra=document.getElementById('hier-extra');
+ if(extra)extra.textContent=(data.contextoIngressos||{})[current]||'';
  document.getElementById('hier-ranks').innerHTML=f.grupos.map(g=>'<section class="hier-group"><h3>'+esc(g.titulo)+'</h3><div class="hier-rank-list">'+g.patentes.map(n=>'<a class="hier-rank-link" href="'+rankUrl(current,n)+'"><span>'+esc(n)+(n==='Recruta'?'<small>Sem insígnia</small>':'')+'</span><span class="hier-rank-arrow" aria-hidden="true">↗</span></a>').join('')+'</div></section>').join('');
  document.title='Hierarquia — '+f.nome+' | FAAAB';
 }
@@ -78,18 +79,22 @@ if(content){
  const courses=data.cursoObrigatorioPorPatente[k]||{};
  const next=courses[n]||'Ainda não definido na CDP da FAAAB.';
  const optional=(data.cursosOpcionaisPorForca[k]||[]).map(x=>'<li>'+esc(x)+'</li>').join('')||'<li>A definir.</li>';
- const units=f.unidades.map(x=>'<span>'+esc(x)+'</span>').join('');
+ const note=(data.regrasDeAcesso[k]||{});
+ const admission=note[n]||note.geral||'Critérios de ingresso ainda em definição.';
+ const stage=n==='Recruta';
+ const rankType=stage?'Etapa de ingresso e formação':'Patente / graduação';
+ const intro=(data.contextoIngressos||{})[k]||'Fluxo de ingresso a definir.';
  const detail=(title,value)=>'<div class="rank-detail"><dt>'+esc(title)+'</dt><dd>'+esc(value)+'</dd></div>';
  content.innerHTML=[
  '<nav class="rank-topnav"><a href="'+url(k)+'">← Hierarquia da '+esc(f.nome)+'</a><span>'+esc(match.grupo)+'</span></nav>',
- '<div class="rank-heading"><img src="'+f.imagem+'" alt=""><div><p>'+esc(f.nome)+'</p><h1>'+esc(n)+'</h1></div></div>',
+ '<div class="rank-heading"><img src="'+f.imagem+'" alt=""><div><p>'+esc(f.nome)+' · '+rankType+'</p><h1>'+esc(n)+'</h1></div></div>',
  '<div class="rank-layout">',
  '<aside class="rank-uniform"><div class="rank-uniform-image"><div class="uniform-placeholder" aria-hidden="true"></div><span>'+esc(n==='Recruta'?'Sem insígnia':'Foto da farda pendente')+'</span></div><div class="rank-uniform-caption"><strong>Farda da patente</strong><small>'+esc(n==='Recruta'?'O Recruta não utiliza insígnia.':'Fotografia ainda não cadastrada; não será substituída por uma farda inventada.')+'</small></div></aside>',
  '<div class="rank-main">',
- '<section class="rank-panel"><h2>CDP — Capacitação de Patente</h2><dl class="rank-data">'+detail('Dias mantidos na patente','A definir pela FAAAB')+detail('Próxima formação liberada pela CDP',next)+detail('Requisitos adicionais','A definir pelo comando')+'</dl><h3>Cursos opcionais e especializações</h3><ul>'+optional+'</ul><p class="rank-fineprint">A conclusão da CDP libera a próxima etapa; não promove automaticamente.</p></section>',
+ '<section class="rank-panel"><h2>CDP — Capacitação de Patente</h2><dl class="rank-data">'+detail('Dias mantidos nesta etapa','Não foram estabelecidos oficialmente')+detail('Próximo curso ou formação previsto',next)+detail('Critérios obrigatórios individuais','Aguardando matriz por patente')+'</dl><h3>Formações opcionais da força</h3><ul>'+optional+'</ul><p class="rank-fineprint">'+esc(data.regraCDP)+'</p></section>',
  '<section class="rank-panel"><h2>Informações</h2><p>'+esc(summaries[n]||'Atua em funções previstas para seu posto ou graduação na '+f.nome+'.')+'</p></section>',
- '<section class="rank-panel"><h2>Batalhões, brigadas e unidades</h2><p>O ingresso depende de seleção e qualificação; a patente, sozinha, não libera unidades.</p><div class="rank-tags">'+units+'</div><p class="rank-fineprint">Exemplos de unidades da força, não uma relação de acessos concedidos.</p></section>',
- '<section class="rank-panel"><h2>Permissões e equipamentos</h2><p>Permissões dependem do cargo, da unidade e da habilitação, e não somente da patente.</p><dl class="rank-data">'+detail('Permissões administrativas','A definir')+detail('Armas e equipamentos permitidos','A definir no regulamento do jogo')+'</dl></section>',
+ '<section class="rank-panel"><h2>Ingresso, lotação e unidades</h2><p>'+esc(admission)+'</p><h3>Unidades liberadas por esta etapa</h3><p class="rank-fineprint">A relação de unidades e requisitos por patente ainda não foi aprovada. Esta ficha não concede acesso por si só.</p><h3>Processo de ingresso da força</h3><p>'+esc(intro)+'</p></section>',
+ '<section class="rank-panel"><h2>Permissões e equipamentos</h2><p>O que pode ser usado no jogo depende da função, do treinamento e das regras da unidade.</p><dl class="rank-data">'+detail('Permissões desta patente','Ainda não definidas por patente')+detail('Equipamentos e armas autorizados no jogo','Matriz de equipamentos pendente')+'</dl></section>',
  '</div></div>'
  ].join('');
  document.title=n+' — '+f.nome+' | FAAAB';

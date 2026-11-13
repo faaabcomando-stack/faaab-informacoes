@@ -1,6 +1,6 @@
-/* Hierarquia FAAAB: dados de apresentação. Não substitui regulamentos aprovados. */
+/* Hierarquia da FAAAB — decisões recentes prevalecem sobre documentos antigos. */
 window.FAAAB_HIERARQUIAS = {
-  "versao": "2026-11-13",
+  "versao": "2026-11-13 — revisão de regras recentes",
   "forcas": {
     "eb": {
       "nome": "Exército Brasileiro",
@@ -17,11 +17,11 @@ window.FAAAB_HIERARQUIAS = {
         "BAC",
         "CIGS",
         "CIE",
-        "Batalhão de Saúde"
+        "B Sau — Batalhão de Saúde"
       ],
       "grupos": [
         {
-          "titulo": "Ingresso",
+          "titulo": "Ingresso (etapa)",
           "patentes": [
             "Recruta"
           ]
@@ -40,8 +40,6 @@ window.FAAAB_HIERARQUIAS = {
             "Terceiro-Sargento",
             "Segundo-Sargento",
             "Primeiro-Sargento",
-            "Sargento-Mor",
-            "Sargento-Mor de Comando",
             "Subtenente"
           ]
         },
@@ -58,6 +56,7 @@ window.FAAAB_HIERARQUIAS = {
             "Segundo-Tenente",
             "Primeiro-Tenente",
             "Capitão",
+            "Capitão-Sênior",
             "Major",
             "Tenente-Coronel",
             "Coronel"
@@ -146,14 +145,13 @@ window.FAAAB_HIERARQUIAS = {
         "Corpo de Fuzileiros Navais",
         "Força de Submarinos",
         "Grupamento de Patrulha Naval",
-        "GRUMEC",
         "Batalhão de Polícia Naval"
       ],
       "grupos": [
         {
-          "titulo": "Formação naval",
+          "titulo": "Ingresso e formação naval",
           "patentes": [
-            "Aprendiz-Marinheiro",
+            "Recruta",
             "Grumete"
           ]
         },
@@ -176,7 +174,6 @@ window.FAAAB_HIERARQUIAS = {
         {
           "titulo": "Formação de oficiais",
           "patentes": [
-            "Aspirante",
             "Guarda-Marinha"
           ]
         },
@@ -196,8 +193,7 @@ window.FAAAB_HIERARQUIAS = {
           "patentes": [
             "Contra-Almirante",
             "Vice-Almirante",
-            "Almirante de Esquadra",
-            "Almirante"
+            "Almirante de Esquadra"
           ]
         }
       ]
@@ -216,7 +212,7 @@ window.FAAAB_HIERARQUIAS = {
         {
           "titulo": "Formação",
           "patentes": [
-            "Aluno-Soldado"
+            "Aluno Bombeiro Militar"
           ]
         },
         {
@@ -238,8 +234,6 @@ window.FAAAB_HIERARQUIAS = {
         {
           "titulo": "Formação de oficiais",
           "patentes": [
-            "Aluno-Oficial",
-            "Cadete",
             "Aspirante a Oficial"
           ]
         },
@@ -269,12 +263,6 @@ window.FAAAB_HIERARQUIAS = {
       ],
       "grupos": [
         {
-          "titulo": "Formação",
-          "patentes": [
-            "Aluno-Soldado"
-          ]
-        },
-        {
           "titulo": "Praças",
           "patentes": [
             "Soldado",
@@ -293,8 +281,6 @@ window.FAAAB_HIERARQUIAS = {
         {
           "titulo": "Formação de oficiais",
           "patentes": [
-            "Aluno-Oficial",
-            "Cadete",
             "Aspirante a Oficial"
           ]
         },
@@ -314,17 +300,16 @@ window.FAAAB_HIERARQUIAS = {
   },
   "cursoObrigatorioPorPatente": {
     "eb": {
-      "Recruta": "Treinamento de Formação de Soldado",
+      "Recruta": "Formação de Soldados da brigada (Internato e Instrução Básica).",
       "Soldado": "Curso de Formação de Cabos (CFC)",
       "Cabo": "Curso de Formação de Sargentos (CFS)",
       "Terceiro-Sargento": "Aperfeiçoamento de Sargentos I",
       "Segundo-Sargento": "Aperfeiçoamento de Sargentos II",
       "Primeiro-Sargento": "Curso de Altos Graduados",
-      "Sargento-Mor": "Curso de Comando de Graduados",
-      "Sargento-Mor de Comando": "Curso de Preparação de Subtenentes",
       "Subtenente": "Admissão ao Oficialato",
       "Cadete": "Curso de Formação de Oficiais",
-      "Aspirante a Oficial": "Exercício Final do Oficialato"
+      "Aspirante a Oficial": "Exercício Final do Oficialato",
+      "Capitão-Sênior": "CDP própria da carreira de oficiais; requisitos em revisão."
     },
     "fab": {
       "Soldado de Segunda Classe": "Formação Básica da Aeronáutica I",
@@ -361,11 +346,31 @@ window.FAAAB_HIERARQUIAS = {
       "Especializações de salvamento após seleção e autorização"
     ]
   },
-  "referencias": {
-    "eb": "https://www.fab.mil.br/postosegraduacoes",
-    "fab": "https://www.fab.mil.br/postosegraduacoes",
-    "mb": "https://www.marinha.mil.br/postos-e-graduacoes",
-    "pm": "https://anttlegis.antt.gov.br/action/ActionDatalegis.php?acao=detalharAto&numeroAto=00014751&valorAno=2023",
-    "cbm": "https://anttlegis.antt.gov.br/action/ActionDatalegis.php?acao=detalharAto&numeroAto=00014751&valorAno=2023"
-  }
+  "contextoIngressos": {
+    "eb": "CAS realiza exames e registra o candidato. Após aprovação, Sargento ou superior pode aceitar o civil, que ingressa no grupo e aguarda seleção aberta de brigada. Aprovado na brigada, passa a Recruta. A Formação de Soldados é organizada pela brigada, com Internato e Instrução Básica; a promoção não é automática.",
+    "fab": "CAS examina e registra civis; Sargento ou superior pode aceitar o candidato para ingresso na FAB. As formações e seleções específicas após esse aceite ainda estão sendo definidas. A patente não substitui habilitação de pilotagem.",
+    "mb": "CAS examina e registra civis; Sargento ou superior pode aceitar o candidato para ingresso na Marinha. O CFN integra a Marinha. A progressão e as seleções navais posteriores ao aceite precisam ser especificadas pela FAAAB.",
+    "cbm": "O Corpo de Bombeiros Militar possui processo de ingresso próprio; o fluxo de recrutamento do CAS definido para EB, MB e FAB não deve ser aplicado automaticamente.",
+    "pm": "A Polícia Militar possui processo de ingresso próprio; o fluxo de recrutamento do CAS definido para EB, MB e FAB não deve ser aplicado automaticamente."
+  },
+  "regrasDeAcesso": {
+    "eb": {
+      "Recruta": "Aprovação em seleção de brigada aberta e formação inicial vinculada à brigada. A participação nos batalhões não faz parte desta etapa.",
+      "geral": "Lotação na brigada ou unidade indicada após formação e aceite. Cada batalhão possui critérios próprios de seleção, instrução e habilitação; o nível mínimo por batalhão ainda precisa ser aprovado."
+    },
+    "fab": {
+      "geral": "Lotação em base, grupo ou unidade da FAB depende da formação e da seleção correspondente. Pilotagem é uma habilitação separada."
+    },
+    "mb": {
+      "Recruta": "Etapa de formação naval; regras próprias de lotação permanecem sob definição.",
+      "geral": "Lotação naval e ingresso no CFN ou unidades especiais seguem os processos específicos da Marinha. Critérios mínimos por unidade estão pendentes."
+    },
+    "pm": {
+      "geral": "Lotação na Polícia Militar e ingresso em unidades de especialidade seguem critérios próprios ainda não consolidados nas fichas."
+    },
+    "cbm": {
+      "geral": "Lotação no Corpo de Bombeiros e ingresso nos grupamentos dependem do processo de formação e de qualificações específicas."
+    }
+  },
+  "regraCDP": "CDP concluída autoriza o próximo curso/treinamento ou exame; não gera promoção automática. Cargo de comando, lotação e qualificação são independentes da patente."
 };
