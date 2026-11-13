@@ -110,40 +110,57 @@
     }
   }
 
+
   function initNewsCarousel(carousel){
     const slides=[...carousel.querySelectorAll('[data-slide]')];
     const dots=[...carousel.querySelectorAll('[data-dot]')];
+    const previous=carousel.querySelector('[data-prev]');
+    const next=carousel.querySelector('[data-next]');
     if(slides.length<2)return;
-    let current=0,progress=0,last=null,paused=false,manualPause=false;
-    const duration=6500,reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function show(to,automatic=false){
-      current=((to%slides.length)+slides.length)%slides.length;
+    const duration=6500;
+    const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let current=0, elapsed=0, last=null, pointerInside=false, keyboardInside=false;
+    function paint(){
+      dots.forEach((dot,i)=>{
+        const pct=i===current?Math.min(100,elapsed/duration*100):0;
+        dot.style.background='linear-gradient(to right,#ffffff '+pct+'%,rgba(255,255,255,.27) '+pct+'%)';
+      });
+    }
+    function show(target){
+      current=(target+slides.length)%slides.length;
+      elapsed=0;
       slides.forEach((slide,i)=>{
-        const active=i===current;slide.classList.toggle('is-active',active);
+        const active=i===current;
+        slide.classList.toggle('is-active',active);
         slide.setAttribute('aria-hidden',String(!active));
-        const link=slide.querySelector('a');if(link)link.tabIndex=active?0:-1;
+        const link=slide.querySelector('a');
+        if(link)link.tabIndex=active?0:-1;
       });
       dots.forEach((dot,i)=>dot.setAttribute('aria-current',String(i===current)));
-      if(automatic)progress=0;
+      paint();
     }
-    carousel.querySelector('[data-prev]')?.addEventListener('click',()=>show(current-1));
-    carousel.querySelector('[data-next]')?.addEventListener('click',()=>show(current+1));
+    previous?.addEventListener('click',()=>show(current-1));
+    next?.addEventListener('click',()=>show(current+1));
     dots.forEach((dot,i)=>dot.addEventListener('click',()=>show(i)));
-    carousel.addEventListener('mouseenter',()=>{paused=true;});
-    carousel.addEventListener('mouseleave',()=>{paused=false;});
-    carousel.addEventListener('focusin',e=>{if(e.target.matches(':focus-visible'))paused=true;});
-    carousel.addEventListener('focusout',e=>{if(!carousel.contains(e.relatedTarget))paused=false;});
+    carousel.addEventListener('pointerenter',()=>{pointerInside=true;});
+    carousel.addEventListener('pointerleave',()=>{pointerInside=false;});
+    carousel.addEventListener('focusin',e=>{if(e.target.matches(':focus-visible'))keyboardInside=true;});
+    carousel.addEventListener('focusout',e=>{if(!carousel.contains(e.relatedTarget))keyboardInside=false;});
+    carousel.querySelectorAll('.carousel-arrow').forEach(button=>
+      button.addEventListener('pointerup',()=>{if(!button.matches(':focus-visible'))button.blur();})
+    );
     show(0);
     if(!reduced){
-      function tick(time){
-        if(last!==null&&!paused&&!manualPause&&!document.hidden){
-          progress+=Math.min(Math.max(time-last,0),80);
-          if(progress>=duration)show(current+1,true);
-          dots.forEach((dot,i)=>dot.style.setProperty('--fill',i===current?(progress/duration*100)+'%':'0%'));
+      const frame=t=>{
+        if(last!==null&&!pointerInside&&!keyboardInside&&!document.hidden){
+          elapsed+=Math.min(Math.max(t-last,0),90);
+          if(elapsed>=duration)show(current+1);else paint();
         }
-        last=time;requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
+        last=t;
+        requestAnimationFrame(frame);
+      };
+      requestAnimationFrame(frame);
     }
   }
+
 })();
