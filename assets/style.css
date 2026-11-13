@@ -299,37 +299,49 @@ body.home .footer{margin-top:-85px;background:rgba(7,24,36,.20);-webkit-backdrop
 .wide-carousel .carousel-dot::before,
 .wide-carousel .carousel-dot::after{display:none!important;content:none!important}
 .wide-carousel .carousel-dots{gap:9px;bottom:22px}
-/* Cinco símbolos reais enviados pelo usuário, sem links ainda. */
-.force-orbs-area{padding:45px 0 8px}
-.force-orbs{
-  display:grid;
-  grid-template-columns:repeat(6,78px);
-  gap:16px 12px;
-  width:max-content;
-  max-width:100%;
-  margin:0 auto;
-  justify-content:center;
-  align-items:center;
-}
-.force-orb{width:96px;height:96px;display:grid;place-items:center;background:#fff;border:2px solid #c4a777;
-  border-radius:50%;overflow:hidden;box-shadow:0 6px 16px rgba(12,43,63,.08);
-  cursor:default}
-.force-orb img{display:block;object-fit:contain;width:100%;height:100%}
-.force-orb:nth-child(1){grid-column:1 / span 2;justify-self:center}
-.force-orb:nth-child(2){grid-column:3 / span 2;justify-self:center}
-.force-orb:nth-child(3){grid-column:5 / span 2;justify-self:center}
-.force-orb:nth-child(4){grid-column:2 / span 2;justify-self:center}
-.force-orb:nth-child(5){grid-column:4 / span 2;justify-self:center}
-@media(max-width:760px){
- .wide-carousel{max-width:590px;aspect-ratio:1 / 1;min-height:0}
- .wide-carousel .carousel-arrow{opacity:1;top:auto;bottom:9px}
- .force-orbs{grid-template-columns:repeat(6,52px);gap:12px 4px}
- .force-orb{width:74px;height:74px}
- .force-orbs-area{padding-top:34px}
-}
-@media(max-width:400px){
- .force-orbs{grid-template-columns:repeat(6,42px);gap:8px 4px}
- .force-orb{width:66px;height:66px}
- .wide-carousel{min-height:0;aspect-ratio:1 / 1}
-}
+/* Carrossel da página Publicações: regras responsivas preservadas. */
+@media(max-width:760px){.wide-carousel{max-width:590px;aspect-ratio:1 / 1;min-height:0}.wide-carousel .carousel-arrow{opacity:1;top:auto;bottom:9px}}
+@media(max-width:400px){.wide-carousel{min-height:0;aspect-ratio:1 / 1}}
 @media(prefers-reduced-motion:reduce){.wide-carousel .slide.is-active{animation:none!important}}
+
+/* Cinco espaços de divulgação no Início, em duas linhas (3 + 2).
+   As imagens do Codex ainda não existem: exibir apenas círculos vazios. */
+body.home .campaign-grid{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  column-gap:12px;
+  row-gap:22px;
+  max-width:850px;
+  margin:0 auto;
+  align-items:center;
+  justify-items:center;
+}
+body.home .campaign-grid .campaign-circle{
+  grid-column:span 2;
+  width:min(100%,175px);
+  aspect-ratio:1;
+  isolation:isolate;
+}
+body.home .campaign-grid .campaign-circle:nth-child(4){grid-column:2 / span 2}
+body.home .campaign-grid .campaign-circle:nth-child(5){grid-column:4 / span 2}
+body.home .campaign-circle .campaign-empty{position:relative;z-index:2}
+body.home .campaign-circle .campaign-art{
+  position:absolute;inset:0;border-radius:50%;overflow:hidden;pointer-events:none;z-index:1
+}
+/* Pronto para as duas poses futuras: sombra preta inicialmente,
+   personagem normal revelado ao passar o mouse ou focar pelo teclado. */
+body.home .campaign-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+body.home .campaign-art img.pose-sombra{filter:brightness(0)}
+body.home .campaign-art img.pose-normal{opacity:0;transition:opacity .24s ease}
+body.home .campaign-circle:hover img.pose-normal,
+body.home .campaign-circle:focus-visible img.pose-normal{opacity:1}
+body.home .campaign-circle:has(.pose-normal) .campaign-empty{display:none}
+@media(max-width:760px){
+ body.home .campaign-grid{column-gap:9px;row-gap:15px;max-width:630px}
+ body.home .campaign-grid .campaign-circle{width:min(100%,150px);font-size:12px}
+}
+@media(max-width:480px){
+ body.home .campaign-grid{column-gap:5px;row-gap:13px;max-width:100%}
+ body.home .campaign-grid .campaign-circle{width:min(100%,115px);font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){body.home .campaign-art img.pose-normal{transition:none!important}}
