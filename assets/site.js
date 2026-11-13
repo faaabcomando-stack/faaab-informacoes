@@ -28,123 +28,62 @@
 
   async function initVisualHero(host) {
     const framesHost = host.querySelector('[data-visual-frames]');
-    const progressHost = host.querySelector('[data-visual-progress]');
     const forceName = host.querySelector('[data-visual-force]');
     const subtitle = host.querySelector('[data-visual-subtitle]');
-    const previous = host.querySelector('[data-visual-prev]');
-    const next = host.querySelector('[data-visual-next]');
-    const pauseButton = host.querySelector('[data-visual-pause]');
     const duration = 6500;
-    let data;
+    let entries;
     try {
-      const r = await fetch('assets/visual-library.json?v=3', {cache:'no-cache'});
-      if (!r.ok) throw Error('Não foi possível carregar o catálogo');
-      data = await r.json();
-    } catch(err) {
+      const response = await fetch('assets/visual-library.json?v=5', {cache: 'no-cache'});
+      if (!response.ok) throw new Error('Catálogo indisponível');
+      const catalog = await response.json();
+      entries = Array.isArray(catalog.midias) ? catalog.midias : [];
+    } catch (_error) {
       framesHost.innerHTML = '<div class="visual-fallback"></div>';
-      subtitle.textContent = 'Referências visuais indisponíveis';
+      if (subtitle) subtitle.textContent = 'Imagens indisponíveis';
       return;
     }
-    const entries = data.midias || [];
     if (!entries.length) return;
-    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let index = 0;
-    let progress = 0;
-    let last = null;
-    let manualPause = reducedMotion;
-    let pointerInside = false;
-    let keyboardInside = false;
-    const panels = entries.map((entry,i) => {
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let current = 0;
+    const frames = entries.map((entry,i) => {
       const frame = document.createElement('div');
-      frame.className = 'visual-frame' + (i===0?' is-active':'');
+      frame.className = 'visual-frame' + (i===0 ? ' is-active' : '');
       frame.setAttribute('aria-hidden', String(i!==0));
       frame.dataset.format = entry.formato;
-      // Fallback do CSS permanece se a mídia remota for bloqueada ou estiver indisponível.
       const image = document.createElement('img');
-      image.src = reducedMotion && entry.alternativa ? entry.alternativa : entry.arquivo;
+      image.src = reduce && entry.alternativa ? entry.alternativa : entry.arquivo;
       image.alt = '';
       image.decoding = 'async';
-      image.loading = i<2 ? 'eager' : 'lazy';
+      image.loading = i < 2 ? 'eager' : 'lazy';
       image.addEventListener('error', () => {
         if(entry.alternativa && !image.dataset.fallback) {
-          image.dataset.fallback = 'true'; image.src = entry.alternativa;
-          credit.textContent = 'Imagem fornecida pelo usuário (fotografia estática)';
-          if (i===index) subtitle.textContent = entry.titulo + ' · Foto real';
-        } else {image.hidden=true;frame.classList.add('media-unavailable');if(i===index)subtitle.textContent='Mídia indisponível no momento';}
+          image.dataset.fallback = 'true';
+          image.src = entry.alternativa;
+          if(i === current && subtitle) subtitle.textContent = entry.titulo + ' · Foto real';
+        } else {
+          image.hidden = true;
+          if(i === current && subtitle) subtitle.textContent = 'Mídia indisponível';
+        }
       });
       frame.appendChild(image);
-      const credit = document.createElement('span');credit.className='visual-image-credit';credit.textContent=entry.credit;
-      frame.appendChild(credit);
       framesHost.appendChild(frame);
       return frame;
     });
-    const dots = entries.map((entry,i) => {
-      const button = document.createElement('button');
-      button.type='button'; button.className='visual-dot';
-      button.setAttribute('aria-label','Mostrar cena de '+entry.forca+': '+entry.titulo);
-      button.setAttribute('aria-current',String(i===0));
-      button.addEventListener('click',()=>show(i,false));
-      progressHost.appendChild(button);
-      return button;
-    });
-    function show(target, automatic=false) {
-      index = ((target%entries.length)+entries.length)%entries.length;
-      const entry = entries[index];
-      panels.forEach((panel,i)=>{
-        const active=i===index;
-        panel.classList.toggle('is-active',active);
-        panel.setAttribute('aria-hidden',String(!active));
+    function show(next) {
+      current = (next + frames.length) % frames.length;
+      frames.forEach((frame,i)=>{
+        const active=i === current;
+        frame.classList.toggle('is-active',active);
+        frame.setAttribute('aria-hidden', String(!active));
       });
-      dots.forEach((dot,i)=>dot.setAttribute('aria-current',String(i===index)));
-      forceName.textContent = entry.forca;
-      subtitle.textContent=entry.titulo + ' · ' + (entry.formato==='gif'?'GIF real':'Foto real');
-      // Preserve o tempo do carrossel quando uma seta é clicada.
-      // A rotação natural, sim, inicia o tempo do próximo item.
-      if(automatic) progress=0;
-      renderProgress();
+      if(forceName) forceName.textContent = entries[current].forca;
+      if(subtitle) subtitle.textContent = entries[current].titulo + ' · ' + (entries[current].formato==='gif'?'GIF real':'Foto real');
     }
-    function renderProgress(){
-      for(let i=0;i<dots.length;i++) {
-        const amount=i===index?Math.min(100,progress/duration*100):0;
-        dots[i].style.setProperty('--fill', amount+'%');
-      }
+    show(0);
+    if(!reduce && frames.length > 1) {
+      const timer = setInterval(()=>{if(!document.hidden)show(current+1);},duration);
+      window.addEventListener('pagehide',()=>clearInterval(timer),{once:true});
     }
-    previous.addEventListener('click',()=>show(index-1));
-    next.addEventListener('click',()=>show(index+1));
-    function refreshPause(){
-      pauseButton.textContent = manualPause ? '▶' : 'Ⅱ';
-      pauseButton.setAttribute('aria-pressed',String(manualPause));
-      pauseButton.setAttribute('aria-label',manualPause?'Retomar apresentação':'Pausar apresentação');
-      pauseButton.title=manualPause?'Retomar apresentação':'Pausar apresentação';
-    }
-    pauseButton.addEventListener('click',()=>{manualPause=!manualPause;refreshPause();});
-    host.addEventListener('pointerenter',()=>{pointerInside=true;});
-    host.addEventListener('pointerleave',()=>{pointerInside=false;});
-    host.addEventListener('focusin',e=>{if(e.target.matches(':focus-visible'))keyboardInside=true;});
-    host.addEventListener('focusout',e=>{if(!host.contains(e.relatedTarget))keyboardInside=false;});
-    host.addEventListener('keydown',event=>{
-      if(event.target.closest('button') && ['ArrowRight','ArrowLeft'].includes(event.key)) {
-        event.preventDefault();show(index+(event.key==='ArrowRight'?1:-1));
-      }
-    });
-    // Evita que o foco visual da seta permaneça depois de um clique de mouse.
-    host.querySelectorAll('.visual-control').forEach(btn=>btn.addEventListener('pointerup',()=>{
-      if(btn.matches(':focus:not(:focus-visible)'))btn.blur();
-    }));
-    refreshPause();show(0);
-    function tick(time){
-      if(last !== null){
-        const elapsed=Math.min(Math.max(time-last,0),80);
-        if(!manualPause&&!pointerInside&&!keyboardInside&&!document.hidden){
-          progress+=elapsed;
-          if(progress>=duration)show(index+1,true);
-          else renderProgress();
-        }
-      }
-      last=time;
-      requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
   }
 
   function initNewsCarousel(carousel){

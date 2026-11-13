@@ -1,15 +1,13 @@
 {
-  "maximos": {"Exército Brasileiro":13,"Marinha Brasileira":9,"Força Aérea Brasileira":12,"Corpo de Bombeiros Militar":4,"Polícia Militar":5},
+  "maximos": {
+    "Exército Brasileiro": 13,
+    "Marinha Brasileira": 9,
+    "Força Aérea Brasileira": 12,
+    "Corpo de Bombeiros Militar": 4,
+    "Polícia Militar": 5
+  },
   "observacao": "Limites para futura inclusão de animações reais. Não preencher espaços com mídias inventadas ou duplicadas.",
   "midias": [
-    {
-      "forca": "Exército Brasileiro",
-      "titulo": "Carro de combate M60A3 TTS do Exército Brasileiro",
-      "formato": "foto",
-      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/M60A3TTSBRASIL.png/960px-M60A3TTSBRASIL.png",
-      "referencia": "https://commons.wikimedia.org/wiki/File:M60A3TTSBRASIL.png",
-      "credito": "Exército Brasileiro / Wikimedia Commons (CC BY-SA 4.0)"
-    },
     {
       "forca": "Marinha Brasileira",
       "titulo": "Fragata Rademaker — lançamento MANSUP, 2024",
@@ -18,6 +16,14 @@
       "alternativa": "assets/marinha-f45.webp",
       "referencia": "https://commons.wikimedia.org/wiki/File:Mansup_(13-09-2024).gif",
       "credito": "Marinha do Brasil / Wikimedia Commons (CC BY-SA 2.0)"
+    },
+    {
+      "forca": "Exército Brasileiro",
+      "titulo": "Carro de combate M60A3 TTS do Exército Brasileiro",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/M60A3TTSBRASIL.png/960px-M60A3TTSBRASIL.png",
+      "referencia": "https://commons.wikimedia.org/wiki/File:M60A3TTSBRASIL.png",
+      "credito": "Exército Brasileiro / Wikimedia Commons (CC BY-SA 4.0)"
     },
     {
       "forca": "Força Aérea Brasileira",
