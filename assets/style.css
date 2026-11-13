@@ -87,3 +87,32 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 @media(max-width:760px){.wrap{width:calc(100% - 32px)}.header-inner{min-height:83px;gap:10px}.identity img{width:49px;height:49px}.identity{gap:10px}.identity-text strong{font-size:17px}.identity-text small{font-size:8px;max-width:230px;letter-spacing:0}.menu-toggle{display:flex;flex:none}.nav{display:none;position:absolute;left:0;right:0;top:100%;background:white;border-top:1px solid var(--line);box-shadow:0 12px 22px #0b2d4018;padding:8px 16px 14px;flex-direction:column;align-items:stretch;gap:0}.nav.is-open{display:flex}.nav a{padding:15px 9px;font-size:14px}.nav a[aria-current="page"]::after,.nav a:hover::after{left:9px;right:auto;top:10px;bottom:10px;height:auto;width:3px}.main{padding:34px 0 66px}.section-title{margin-bottom:20px}.news-layout{grid-template-columns:1fr;gap:11px}.carousel{min-height:440px}.news-clickable{padding:26px 26px 70px}.carousel-arrow{opacity:1;top:auto;bottom:13px;transform:none;width:37px;height:40px;background:#12334688}.carousel-prev{left:13px}.carousel-next{right:13px}.carousel-dots{bottom:29px}.side-news{grid-template-rows:auto;gap:11px}.side-news>.small-news{min-height:156px}.side-bottom{gap:11px}.side-bottom .small-news{min-height:145px}.news-grid{grid-template-columns:1fr 1fr}.category-grid{grid-template-columns:1fr 1fr}.footer-inner{min-height:0;padding:20px 0;flex-direction:column;align-items:flex-start;gap:7px}.footer-inner small{text-align:left}}
 @media(max-width:480px){.identity-text strong{font-size:15px}.identity-text small{font-size:7px}.identity img{width:42px;height:42px}.header-inner{min-height:74px}.menu-toggle{font-size:12px;padding:0 9px;height:38px}.section-title h1{font-size:29px}.carousel{min-height:390px}.news-content strong{font-size:34px}.news-layout{gap:9px}.side-bottom{grid-template-columns:1fr 1fr}.small-news{padding:18px 15px}.small-news strong{font-size:19px}.side-bottom .small-news strong{font-size:17px}.news-grid{grid-template-columns:1fr;gap:13px}.news-card{min-height:0}.news-card-media{height:170px}.category-grid{grid-template-columns:1fr}.category-card{min-height:155px}.wide-carousel{min-height:330px}.wide-heading{font-size:22px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+
+/* Início institucional: boas-vindas e apresentação, sem notícias nesta página. */
+.home-main{background:var(--paper)}
+.welcome-banner{position:relative;overflow:hidden;background:linear-gradient(107deg,#193b50 0%,#254b60 66%,#30596b 100%);color:#fff;border-bottom:4px solid #b89b6e}
+.welcome-banner-inner{position:relative;display:flex;align-items:center;min-height:380px}
+.welcome-copy{position:relative;z-index:1;max-width:680px;padding:75px 0 78px}
+.welcome-copy h1{font-size:clamp(50px,6vw,82px);line-height:1.03;font-weight:780;letter-spacing:-.045em;margin:0 0 22px}
+.welcome-copy p{max-width:580px;margin:0;color:#d7e5ed;font-size:clamp(15px,1.45vw,18px);line-height:1.75}
+.welcome-button{margin-top:30px;display:inline-flex;align-items:center;justify-content:space-between;gap:36px;padding:13px 19px;background:#c6ab81;color:#12354a;font-weight:770;font-size:13px;min-width:215px;transition:background .2s}
+.welcome-button:hover{background:#e2c69b}
+.welcome-button span{font-size:20px}
+.welcome-pattern{position:absolute;right:-190px;top:-260px;width:740px;height:740px;border:1px solid #ffffff22;border-radius:50%;pointer-events:none}
+.welcome-pattern::before,.welcome-pattern::after{content:"";position:absolute;border-radius:50%;border:1px solid #ffffff1c}
+.welcome-pattern::before{inset:95px}.welcome-pattern::after{inset:210px}
+.welcome-pattern i{position:absolute;display:block;height:1px;background:#ffffff21;left:0;right:0;top:50%;transform:rotate(-28deg)}
+.home-institutional{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,1.05fr);gap:90px;align-items:start;padding-top:78px;padding-bottom:95px}
+.home-description{border-left:3px solid var(--gold);padding-left:24px}
+.home-description h2{font-size:clamp(28px,3vw,39px);letter-spacing:-.03em;line-height:1.16;margin:0 0 18px;color:#193c51}
+.home-description p{max-width:500px;color:#526d7d;font-size:15px;line-height:1.85;margin:0}
+.home-forces{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.home-forces span{font-size:14px;font-weight:720;padding:17px 0;color:#25475a;border-bottom:1px solid #d6e1e6}
+.home-forces span:last-child{grid-column:1 / -1}
+.news-section-heading{font-size:22px;letter-spacing:-.02em;margin:0 0 20px;color:#24465a;font-weight:770}
+.important-news{margin-top:8px}
+.other-news{margin-top:54px}
+@media(max-width:900px){.home-institutional{gap:40px;grid-template-columns:1fr 1fr}.welcome-pattern{right:-310px}}
+@media(max-width:760px){.welcome-banner-inner{min-height:345px}.welcome-copy{padding:62px 0 66px}.welcome-copy h1{font-size:clamp(48px,9vw,65px)}.welcome-pattern{right:-480px;opacity:.45}.home-institutional{grid-template-columns:1fr;gap:30px;padding-top:53px;padding-bottom:70px}.home-forces{grid-template-columns:1fr 1fr}.news-section-heading{font-size:21px}.other-news{margin-top:41px}}
+@media(max-width:480px){.welcome-banner-inner{min-height:325px}.welcome-copy{padding:52px 0 56px}.welcome-copy h1{font-size:46px}.welcome-copy p{font-size:14px;line-height:1.7}.welcome-button{margin-top:25px}.home-institutional{padding-top:40px;padding-bottom:54px}.home-forces{grid-template-columns:1fr}.home-forces span:last-child{grid-column:auto}.home-description{padding-left:18px}.news-section-heading{font-size:20px}}
