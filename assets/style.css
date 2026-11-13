@@ -441,3 +441,42 @@ body.home .force-gateway .force-gateway-label{font-size:11px;letter-spacing:.1em
  .rank-panel{padding:22px 19px}
  body.home .force-gateway .force-gateway-label{font-size:10px}
 }
+
+/* Círculos de forças: recortes originais do usuário, sem insígnias duplicadas.
+   Estado padrão = silhueta preta; mouse / teclado = pose normal. */
+body.home .campaign-grid .force-pose-link{
+ position:relative;
+ display:block;
+ padding:0;
+ overflow:hidden;
+ border:0!important;
+ border-radius:50%;
+ background:transparent!important;
+ box-shadow:none!important;
+ aspect-ratio:1;
+ cursor:pointer;
+}
+body.home .campaign-grid .force-pose-link::before,
+body.home .campaign-grid .force-pose-link::after{content:none!important;display:none!important}
+body.home .campaign-grid .force-pose-link .force-pose{
+ position:absolute!important;
+ inset:0!important;
+ display:block;
+ margin:0;
+ padding:0;
+ width:100%!important;
+ height:100%!important;
+ object-fit:fill!important;
+ border-radius:50%;
+ transform:none!important;
+ transition:opacity .21s ease!important;
+}
+body.home .campaign-grid .force-pose-link .pose-sombra{opacity:1;z-index:1}
+body.home .campaign-grid .force-pose-link .pose-cor{opacity:0;z-index:2}
+body.home .campaign-grid .force-pose-link:hover .pose-cor,
+body.home .campaign-grid .force-pose-link:focus-visible .pose-cor{opacity:1}
+body.home .campaign-grid .force-pose-link:focus-visible{outline:3px solid #eed097;outline-offset:4px}
+@media(hover:none){
+ body.home .campaign-grid .force-pose-link:focus:not(:focus-visible) .pose-cor{opacity:0}
+}
+@media(prefers-reduced-motion:reduce){body.home .campaign-grid .force-pose-link .force-pose{transition:none!important}}

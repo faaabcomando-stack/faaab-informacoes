@@ -78,6 +78,8 @@ if(content){
  const n=match.nome;
  const courses=data.cursoObrigatorioPorPatente[k]||{};
  const next=courses[n]||'Ainda não definido na CDP da FAAAB.';
+ const dias=(data.diasPorPatente[k]||{})[n];
+ const diasText=Number.isInteger(dias)?String(dias)+' '+(dias===1?'dia':'dias'):'Sem valor definido para esta etapa';
  const optional=(data.cursosOpcionaisPorForca[k]||[]).map(x=>'<li>'+esc(x)+'</li>').join('')||'<li>A definir.</li>';
  const note=(data.regrasDeAcesso[k]||{});
  const admission=note[n]||note.geral||'Critérios de ingresso ainda em definição.';
@@ -91,7 +93,7 @@ if(content){
  '<div class="rank-layout">',
  '<aside class="rank-uniform"><div class="rank-uniform-image"><div class="uniform-placeholder" aria-hidden="true"></div><span>'+esc(n==='Recruta'?'Sem insígnia':'Foto da farda pendente')+'</span></div><div class="rank-uniform-caption"><strong>Farda da patente</strong><small>'+esc(n==='Recruta'?'O Recruta não utiliza insígnia.':'Fotografia ainda não cadastrada; não será substituída por uma farda inventada.')+'</small></div></aside>',
  '<div class="rank-main">',
- '<section class="rank-panel"><h2>CDP — Capacitação de Patente</h2><dl class="rank-data">'+detail('Dias mantidos nesta etapa','Não foram estabelecidos oficialmente')+detail('Próximo curso ou formação previsto',next)+detail('Critérios obrigatórios individuais','Aguardando matriz por patente')+'</dl><h3>Formações opcionais da força</h3><ul>'+optional+'</ul><p class="rank-fineprint">'+esc(data.regraCDP)+'</p></section>',
+ '<section class="rank-panel"><h2>CDP — Capacitação de Patente</h2><dl class="rank-data">'+detail('Dias mantidos na patente',diasText)+detail('Próximo curso ou formação previsto',next)+detail('Critérios obrigatórios individuais','Aguardando matriz por patente')+'</dl><h3>Formações opcionais da força</h3><ul>'+optional+'</ul><p class="rank-fineprint">'+esc(data.regraCDP)+'</p></section>',
  '<section class="rank-panel"><h2>Informações</h2><p>'+esc(summaries[n]||'Atua em funções previstas para seu posto ou graduação na '+f.nome+'.')+'</p></section>',
  '<section class="rank-panel"><h2>Ingresso, lotação e unidades</h2><p>'+esc(admission)+'</p><h3>Unidades liberadas por esta etapa</h3><p class="rank-fineprint">A relação de unidades e requisitos por patente ainda não foi aprovada. Esta ficha não concede acesso por si só.</p><h3>Processo de ingresso da força</h3><p>'+esc(intro)+'</p></section>',
  '<section class="rank-panel"><h2>Permissões e equipamentos</h2><p>O que pode ser usado no jogo depende da função, do treinamento e das regras da unidade.</p><dl class="rank-data">'+detail('Permissões desta patente','Ainda não definidas por patente')+detail('Equipamentos e armas autorizados no jogo','Matriz de equipamentos pendente')+'</dl></section>',

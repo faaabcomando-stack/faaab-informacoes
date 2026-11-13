@@ -1,4 +1,4 @@
-/* Hierarquia da FAAAB — decisões recentes prevalecem sobre documentos antigos. */
+/* Dados FAAAB: cursos priorizam as instruções recentes. Dias do manual CDP de referência. */
 window.FAAAB_HIERARQUIAS = {
   "versao": "2026-11-13 — revisão de regras recentes",
   "forcas": {
@@ -89,6 +89,12 @@ window.FAAAB_HIERARQUIAS = {
         "EAS"
       ],
       "grupos": [
+        {
+          "titulo": "Ingresso (etapa)",
+          "patentes": [
+            "Recruta"
+          ]
+        },
         {
           "titulo": "Praças",
           "patentes": [
@@ -300,27 +306,56 @@ window.FAAAB_HIERARQUIAS = {
   },
   "cursoObrigatorioPorPatente": {
     "eb": {
-      "Recruta": "Formação de Soldados da brigada (Internato e Instrução Básica).",
-      "Soldado": "Curso de Formação de Cabos (CFC)",
-      "Cabo": "Curso de Formação de Sargentos (CFS)",
+      "Recruta": "Formação de Soldados da brigada — Internato e Instrução Básica.",
+      "Soldado": "Curso de Formação de Soldado Especializado (CFSE) + CTA. Próxima etapa: Soldado de 1ª Classe.",
+      "Cabo": "ESA — Curso de Formação de Sargentos. Próxima etapa: 3º Sargento.",
       "Terceiro-Sargento": "Aperfeiçoamento de Sargentos I",
       "Segundo-Sargento": "Aperfeiçoamento de Sargentos II",
       "Primeiro-Sargento": "Curso de Altos Graduados",
       "Subtenente": "Admissão ao Oficialato",
       "Cadete": "Curso de Formação de Oficiais",
       "Aspirante a Oficial": "Exercício Final do Oficialato",
-      "Capitão-Sênior": "CDP própria da carreira de oficiais; requisitos em revisão."
+      "Capitão-Sênior": "EsAO — etapa de aperfeiçoamento de oficiais; ESG CPOG-EB.",
+      "Soldado de Primeira Classe": "Curso de Formação de Cabos (CFC) + formação terrestre (CFSOT). Próxima etapa: Cabo.",
+      "Primeiro-Tenente": "ESG — Curso de Operações Terrestres (COT-EB).",
+      "Capitão": "EsAO — Escola de Aperfeiçoamento de Oficiais (CAO); ESG CGT-EB.",
+      "Major": "ECEME — CP/CAEM.",
+      "Tenente-Coronel": "ECEME — CAEM/CCEM.",
+      "Coronel": "ECEME — CPEAEx, prepara a fase de General em Treinamento.",
+      "General em Treinamento": "ECEME — conclusão do CPEAEx (etapa de formação)."
     },
     "fab": {
-      "Soldado de Segunda Classe": "Formação Básica da Aeronáutica I",
-      "Soldado de Primeira Classe": "Curso de Formação de Cabos FAB",
-      "Cabo": "Curso de Formação de Sargentos",
+      "Soldado de Segunda Classe": "CESD — Curso de Especialização de Soldados. Próxima etapa: Soldado de 1ª Classe.",
+      "Soldado de Primeira Classe": "CFC — Curso de Formação de Cabos. Próxima etapa: Cabo.",
+      "Cabo": "EEAR/CFS — Formação de Sargentos. Próxima etapa: 3º Sargento.",
       "Terceiro-Sargento": "Aperfeiçoamento de Sargentos I",
       "Segundo-Sargento": "Aperfeiçoamento de Sargentos II",
       "Primeiro-Sargento": "Curso de Aperfeiçoamento de Sargentos",
       "Suboficial": "Admissão à Formação de Oficiais",
       "Cadete": "Formação de Oficiais",
-      "Aspirante a Oficial": "Exercício Final do Oficialato FAB"
+      "Aspirante a Oficial": "Exercício Final do Oficialato FAB",
+      "Recruta": "CFSD — Curso de Formação de Soldados. Próxima etapa: Soldado de 2ª Classe.",
+      "Capitão": "EAOAR — Aperfeiçoamento de Oficiais da Aeronáutica (CAP); ESG CGA-ESG.",
+      "Primeiro-Tenente": "ESG — Curso de Operações Aéreas (COA)."
+    },
+    "mb": {
+      "Recruta": "Ciclo inicial de formação naval.",
+      "Grumete": "C-FMN — Curso de Formação de Marinheiros.",
+      "Marinheiro": "Curso de Marinharia e qualificação de bordo, conforme função.",
+      "Cabo": "Formação para 3º Sargento (C-Esp-HabSG).",
+      "Primeiro-Sargento": "C-Esp-HabSO — habilitação para Suboficial.",
+      "Primeiro-Tenente": "ESG — Curso de Operações Navais (CON).",
+      "Capitão-Tenente": "ESG — Curso de Guerra Naval (CGN).",
+      "Capitão de Corveta": "ESG — Planejamento de Operações Navais (CPON).",
+      "Capitão de Fragata": "EGN — C-EMOS.",
+      "Capitão de Mar e Guerra": "EGN — C-PEM."
+    },
+    "cbm": {
+      "Aluno Bombeiro Militar": "Formação inicial CBM — CFP/CFSD.",
+      "Cabo": "CEFC/CHC — qualificação para progressão.",
+      "Terceiro-Sargento": "CFS/BM — formação de sargentos.",
+      "Primeiro-Sargento": "CAS/BM — aperfeiçoamento de sargentos.",
+      "Capitão": "CAO/BM — aperfeiçoamento de oficiais."
     }
   },
   "cursosOpcionaisPorForca": {
@@ -372,5 +407,82 @@ window.FAAAB_HIERARQUIAS = {
       "geral": "Lotação no Corpo de Bombeiros e ingresso nos grupamentos dependem do processo de formação e de qualificações específicas."
     }
   },
-  "regraCDP": "CDP concluída autoriza o próximo curso/treinamento ou exame; não gera promoção automática. Cargo de comando, lotação e qualificação são independentes da patente."
+  "regraCDP": "CDP concluída autoriza o próximo curso/treinamento ou exame; não gera promoção automática. Cargo de comando, lotação e qualificação são independentes da patente.",
+  "diasPorPatente": {
+    "eb": {
+      "Soldado": 1,
+      "Soldado de Primeira Classe": 2,
+      "Cabo": 3,
+      "Terceiro-Sargento": 4,
+      "Segundo-Sargento": 5,
+      "Primeiro-Sargento": 6,
+      "Subtenente": 7,
+      "Aspirante a Oficial": 5,
+      "Segundo-Tenente": 7,
+      "Primeiro-Tenente": 8,
+      "Capitão": 10,
+      "Capitão-Sênior": 12,
+      "Major": 14,
+      "Tenente-Coronel": 16,
+      "Coronel": 20,
+      "General de Brigada": 22,
+      "General de Divisão": 24,
+      "General de Exército": 28
+    },
+    "fab": {
+      "Recruta": 1,
+      "Soldado de Segunda Classe": 2,
+      "Soldado de Primeira Classe": 3,
+      "Cabo": 4,
+      "Terceiro-Sargento": 5,
+      "Segundo-Sargento": 7,
+      "Primeiro-Sargento": 9,
+      "Suboficial": 10,
+      "Aspirante a Oficial": 4,
+      "Segundo-Tenente": 6,
+      "Primeiro-Tenente": 8,
+      "Capitão": 10,
+      "Major": 12,
+      "Tenente-Coronel": 14,
+      "Coronel": 16,
+      "Brigadeiro": 18,
+      "Tenente-Brigadeiro do Ar": 21,
+      "Major-Brigadeiro": 24
+    },
+    "mb": {
+      "Recruta": 1,
+      "Marinheiro": 2,
+      "Cabo": 3,
+      "Terceiro-Sargento": 4,
+      "Segundo-Sargento": 5,
+      "Primeiro-Sargento": 7,
+      "Suboficial": 9,
+      "Segundo-Tenente": 4,
+      "Primeiro-Tenente": 6,
+      "Capitão-Tenente": 8,
+      "Capitão de Corveta": 10,
+      "Capitão de Fragata": 12,
+      "Capitão de Mar e Guerra": 15,
+      "Contra-Almirante": 18,
+      "Vice-Almirante": 22,
+      "Almirante de Esquadra": 26
+    },
+    "cbm": {
+      "Aluno Bombeiro Militar": 2,
+      "Soldado": 3,
+      "Cabo": 4,
+      "Terceiro-Sargento": 5,
+      "Segundo-Sargento": 6,
+      "Primeiro-Sargento": 8,
+      "Subtenente": 10,
+      "Segundo-Tenente": 5,
+      "Primeiro-Tenente": 7,
+      "Capitão": 9,
+      "Major": 12,
+      "Tenente-Coronel": 15,
+      "Coronel": 18
+    },
+    "pm": {}
+  },
+  "notaDias": "Valores recuperados do manual CDP da FAAAB, apresentados como referência de balanceamento. Não são aprovação de promoção automática."
 };
