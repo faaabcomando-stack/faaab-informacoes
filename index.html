@@ -1,68 +1,74 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#193c51">
-<meta name="description" content="Bem-vindo ao site da FAAAB. Informações institucionais e publicações importantes."><title>Início | FAAAB</title>
-<link rel="icon" href="assets/logo-faaab.png" type="image/png"><link rel="stylesheet" href="assets/style.css"></head>
-<body><a class="skip" href="#conteudo">Ir ao conteúdo</a>
-<header class="header"><div class="wrap header-inner">
-<a class="identity" href="index.html" aria-label="Página inicial">
-<img src="assets/logo-faaab.png" alt="Brasão da FAAAB" width="66" height="66">
-<span class="identity-text"><strong>Forças Armadas e Auxiliares Aliadas do Brasil</strong></span>
-</a>
-<button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="main-menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button>
-<nav class="nav" id="main-menu" data-menu aria-label="Navegação principal">
-<a href="index.html" aria-current="page">Início</a><a href="publicacoes.html">Publicações</a>
-</nav></div></header><main id="conteudo" class="home-main">
-<section class="stage" aria-labelledby="stage-title">
-  <div class="stage-backdrop" aria-hidden="true">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/T-72M4CZ-vystrel.gif/640px-T-72M4CZ-vystrel.gif" alt="" fetchpriority="high" decoding="async">
-  </div>
-  <div class="wrap stage-content">
-    <h1 id="stage-title" class="stage-title"><span>Bem-vindo</span><span>Ao</span><span>Site da FAAAB</span></h1>
-    <section class="stage-news" aria-label="Notícias importantes">
-      <h2>Notícias importantes</h2>
-      <div class="stage-news-grid">
-        <a href="#" class="stage-news-big" data-news-test><span class="stage-news-type">Notícia importante</span><strong>Sem notícia</strong></a>
-        <div class="stage-news-side">
-          <a href="#" class="stage-news-small" data-news-test><span class="stage-news-type">Notícia importante</span><strong>Sem notícia</strong></a>
-          <a href="#" class="stage-news-small" data-news-test><span class="stage-news-type">Notícia importante</span><strong>Sem notícia</strong></a>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102e40">
+  <meta name="description" content="Portal institucional das Forças Armadas e Auxiliares Aliadas do Brasil — FAAAB.">
+  <title>Início | FAAAB</title>
+  <link rel="icon" href="assets/logo-faaab.png" type="image/png">
+  <link rel="stylesheet" href="assets/style.css?v=3">
+  <script src="assets/site.js?v=3" defer></script>
+</head>
+<body>
+  <a class="skip" href="#principal">Ir para o conteúdo</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="identity" href="index.html" aria-label="Página inicial da FAAAB">
+        <img src="assets/logo-faaab.png" width="66" height="66" alt="Brasão da FAAAB">
+        <span class="identity-text"><strong>Forças Armadas e Auxiliares Aliadas do Brasil</strong></span>
+      </a>
+      <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="main-menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button>
+      <nav class="nav" id="main-menu" data-menu aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="publicacoes.html">Publicações</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="principal">
+    <section class="visual-hero" data-visual-hero aria-label="Boas-vindas e referências visuais das forças">
+      <div class="visual-hero-frames" data-visual-frames aria-hidden="true">
+        <!-- Elementos de mídia injetados a partir do catálogo verificado. -->
+      </div>
+      <div class="visual-overlay" aria-hidden="true"></div>
+      <div class="visual-watermark" aria-hidden="true">FAAAB <span>REFERÊNCIA VISUAL</span></div>
+      <div class="wrap visual-content">
+        <div class="visual-intro">
+          <span class="visual-kicker">Portal institucional</span>
+          <h1><span>Bem-vindo</span><small>Ao</small><span>Site da FAAAB</span></h1>
+        </div>
+        <div class="visual-bottom">
+          <div class="visual-caption" aria-live="polite" aria-atomic="true">
+            <span class="visual-caption-line"></span>
+            <div><span class="visual-force" data-visual-force>Forças Armadas e Auxiliares</span>
+              <span class="visual-subtitle" data-visual-subtitle>Imagens reais de referência</span></div>
+          </div>
+          <div class="visual-controls" aria-label="Controles da apresentação visual">
+            <button type="button" class="visual-control" data-visual-prev aria-label="Cena anterior" title="Cena anterior">&#8592;</button>
+            <button type="button" class="visual-control" data-visual-next aria-label="Próxima cena" title="Próxima cena">&#8594;</button>
+            <button type="button" class="visual-control visual-pause" data-visual-pause aria-label="Pausar apresentação" aria-pressed="false" title="Pausar apresentação">Ⅱ</button>
+          </div>
+        </div>
+        <div class="visual-progress" data-visual-progress aria-label="Selecionar cena visual"></div>
+        <div class="visual-disclaimer">Imagens da vida real, não são GIFs produzidos pela FAAAB.</div>
+      </div>
+    </section>
+
+    <section class="campaign-section" aria-labelledby="campaign-title">
+      <div class="wrap">
+        <div class="campaign-heading"><div class="campaign-rule" aria-hidden="true"></div><h2 id="campaign-title">Divulgações</h2></div>
+        <div class="campaign-grid">
+          <button class="campaign-circle" type="button" data-campaign-test aria-label="Espaço de divulgação ainda vazio"><span>Sem nada</span></button>
+          <button class="campaign-circle" type="button" data-campaign-test aria-label="Espaço de divulgação ainda vazio"><span>Sem nada</span></button>
+          <button class="campaign-circle" type="button" data-campaign-test aria-label="Espaço de divulgação ainda vazio"><span>Sem nada</span></button>
         </div>
       </div>
     </section>
-  </div>
-</section>
-<section class="home-highlights" aria-labelledby="highlights-title">
-  <div class="wrap">
-    <div class="home-highlights-heading">
-      <h2 id="highlights-title">Destaques</h2>
-      <a href="publicacoes.html">Ver publicações <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="carousel home-carousel" data-carousel role="region" aria-label="Destaques em carrossel" aria-roledescription="carrossel">
-      <div class="carousel-track"><div class="slide is-active" data-slide data-tone="one" aria-hidden="false">
-  <div class="texture" aria-hidden="true"></div>
-  <a href="#" class="news-clickable" data-news-test tabindex="0" aria-label="Sem notícia no destaque">
-    <span class="news-content"><span class="news-label">Destaque</span><strong>Sem notícia</strong></span>
-  </a>
-</div>
-<div class="slide " data-slide data-tone="two" aria-hidden="true">
-  <div class="texture" aria-hidden="true"></div>
-  <a href="#" class="news-clickable" data-news-test tabindex="-1" aria-label="Sem notícia no destaque">
-    <span class="news-content"><span class="news-label">Destaque</span><strong>Sem notícia</strong></span>
-  </a>
-</div>
-<div class="slide " data-slide data-tone="three" aria-hidden="true">
-  <div class="texture" aria-hidden="true"></div>
-  <a href="#" class="news-clickable" data-news-test tabindex="-1" aria-label="Sem notícia no destaque">
-    <span class="news-content"><span class="news-label">Destaque</span><strong>Sem notícia</strong></span>
-  </a>
-</div></div>
-      <div class="carousel-controls">
-        <button type="button" class="carousel-arrow carousel-prev" data-prev aria-label="Notícia anterior">&#8249;</button>
-        <button type="button" class="carousel-arrow carousel-next" data-next aria-label="Próxima notícia">&#8250;</button>
-      </div>
-      <div class="carousel-dots" aria-label="Selecionar destaque"><button type="button" class="carousel-dot" data-dot aria-current="true" aria-label="Mostrar notícia 1"></button>
-<button type="button" class="carousel-dot" data-dot aria-current="false" aria-label="Mostrar notícia 2"></button>
-<button type="button" class="carousel-dot" data-dot aria-current="false" aria-label="Mostrar notícia 3"></button></div>
-    </div>
-  </div>
-</section>
-</main><footer class="footer"><div class="wrap footer-inner"><strong>FAAAB</strong><small>Simulação institucional independente. Sem vínculo com instituições oficiais.</small><small class="media-credit">Imagem animada: <a href="https://commons.wikimedia.org/wiki/File:T-72M4CZ-vystrel.gif" target="_blank" rel="noopener noreferrer">Maulincio / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></small></div></footer><div class="toast" role="status" aria-live="polite" data-toast></div><script src="assets/site.js" defer></script></body></html>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner">
+    <strong>FAAAB</strong><small>Simulação independente. Sem vínculo com instituições militares oficiais. <a href="creditos.html">Créditos das imagens</a></small>
+  </div></footer>
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+</body>
+</html>

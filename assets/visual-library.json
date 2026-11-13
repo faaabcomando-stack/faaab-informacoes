@@ -1,0 +1,55 @@
+{
+  "maximos": {"Exército Brasileiro":13,"Marinha Brasileira":9,"Força Aérea Brasileira":12,"Corpo de Bombeiros Militar":4,"Polícia Militar":5},
+  "observacao": "Limites para futura inclusão de animações reais. Não preencher espaços com mídias inventadas ou duplicadas.",
+  "midias": [
+    {
+      "forca": "Exército Brasileiro",
+      "titulo": "Carro de combate M60A3 TTS do Exército Brasileiro",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/M60A3TTSBRASIL.png/960px-M60A3TTSBRASIL.png",
+      "referencia": "https://commons.wikimedia.org/wiki/File:M60A3TTSBRASIL.png",
+      "credito": "Exército Brasileiro / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+      "forca": "Marinha Brasileira",
+      "titulo": "Fragata Rademaker — lançamento MANSUP, 2024",
+      "formato": "gif",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/4/43/Mansup_%2813-09-2024%29.gif",
+      "alternativa": "assets/marinha-f45.webp",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Mansup_(13-09-2024).gif",
+      "credito": "Marinha do Brasil / Wikimedia Commons (CC BY-SA 2.0)"
+    },
+    {
+      "forca": "Força Aérea Brasileira",
+      "titulo": "Aeronave Gripen — imagem real fornecida",
+      "formato": "foto",
+      "arquivo": "assets/gripen-fab.webp",
+      "referencia": "",
+      "credito": "Imagem fornecida pelo usuário (fotografia estática)"
+    },
+    {
+      "forca": "Corpo de Bombeiros Militar",
+      "titulo": "Caminhão de busca e salvamento do Corpo de Bombeiros do Paraná",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Caminh%C3%A3o_GOST.jpg/960px-Caminh%C3%A3o_GOST.jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Caminh%C3%A3o_GOST.jpg",
+      "credito": "Guilmann / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+      "forca": "Polícia Militar",
+      "titulo": "Viatura da Polícia Militar de Santa Catarina",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Vtr_PMSC_001.jpg/960px-Vtr_PMSC_001.jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Vtr_PMSC_001.jpg",
+      "credito": "Guilmann / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+      "forca": "Marinha Brasileira",
+      "titulo": "Fragata da Marinha Brasileira — foto de referência",
+      "formato": "foto",
+      "arquivo": "assets/marinha-f45.webp",
+      "referencia": "",
+      "credito": "Imagem fornecida pelo usuário (fotografia estática)"
+    }
+  ]
+}
