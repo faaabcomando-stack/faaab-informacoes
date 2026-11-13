@@ -6,56 +6,242 @@
     "Corpo de Bombeiros Militar": 4,
     "Polícia Militar": 5
   },
-  "observacao": "Limites para futura inclusão de animações reais. Não preencher espaços com mídias inventadas ou duplicadas.",
+  "observacao": "Mostra somente mídia real identificada; fotos recebem transição suave e não são rotuladas como GIFs. GIFs da FAAAB serão adicionados quando forem produzidos dentro do jogo.",
   "midias": [
     {
       "forca": "Marinha Brasileira",
-      "titulo": "Fragata Rademaker — lançamento MANSUP, 2024",
+      "titulo": "Fragata Rademaker (F-49)",
       "formato": "gif",
       "arquivo": "https://upload.wikimedia.org/wikipedia/commons/4/43/Mansup_%2813-09-2024%29.gif",
       "alternativa": "assets/marinha-f45.webp",
       "referencia": "https://commons.wikimedia.org/wiki/File:Mansup_(13-09-2024).gif",
-      "credito": "Marinha do Brasil / Wikimedia Commons (CC BY-SA 2.0)"
-    },
-    {
-      "forca": "Exército Brasileiro",
-      "titulo": "Carro de combate M60A3 TTS do Exército Brasileiro",
-      "formato": "foto",
-      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/M60A3TTSBRASIL.png/960px-M60A3TTSBRASIL.png",
-      "referencia": "https://commons.wikimedia.org/wiki/File:M60A3TTSBRASIL.png",
-      "credito": "Exército Brasileiro / Wikimedia Commons (CC BY-SA 4.0)"
+      "credito": "Marinha do Brasil / Wikimedia Commons (CC BY-SA 2.0)",
+      "descricao": "Fragata da Marinha do Brasil durante lançamento de ensaio do MANSUP em setembro de 2024.",
+      "licenca": "CC BY-SA 2.0"
     },
     {
       "forca": "Força Aérea Brasileira",
-      "titulo": "Aeronave Gripen — imagem real fornecida",
+      "titulo": "F-39 Gripen",
       "formato": "foto",
       "arquivo": "assets/gripen-fab.webp",
       "referencia": "",
-      "credito": "Imagem fornecida pelo usuário (fotografia estática)"
+      "credito": "Imagem fornecida pelo usuário (fotografia estática)",
+      "descricao": "Caça multifunção empregado em missões de defesa e vigilância do espaço aéreo.",
+      "licenca": "Imagem fornecida pelo usuário"
+    },
+    {
+      "forca": "Exército Brasileiro",
+      "titulo": "M60A3 TTS",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/M60A3TTSBRASIL.png/960px-M60A3TTSBRASIL.png",
+      "referencia": "https://commons.wikimedia.org/wiki/File:M60A3TTSBRASIL.png",
+      "credito": "Exército Brasileiro / Wikimedia Commons (CC BY-SA 4.0)",
+      "descricao": "Carro de combate blindado empregado pelo Exército Brasileiro.",
+      "licenca": "CC BY-SA 4.0",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/M60A3TTSBRASIL.png?width=1280"
     },
     {
       "forca": "Corpo de Bombeiros Militar",
-      "titulo": "Caminhão de busca e salvamento do Corpo de Bombeiros do Paraná",
+      "titulo": "Caminhão GOST",
       "formato": "foto",
       "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Caminh%C3%A3o_GOST.jpg/960px-Caminh%C3%A3o_GOST.jpg",
       "referencia": "https://commons.wikimedia.org/wiki/File:Caminh%C3%A3o_GOST.jpg",
-      "credito": "Guilmann / Wikimedia Commons (CC BY-SA 4.0)"
+      "credito": "Guilmann / Wikimedia Commons (CC BY-SA 4.0)",
+      "descricao": "Viatura de busca e salvamento do Corpo de Bombeiros do Paraná.",
+      "estado": "Paraná (PR)",
+      "licenca": "Consulte a licença na fonte",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Caminh%C3%A3o_GOST.jpg?width=1280"
     },
     {
       "forca": "Polícia Militar",
-      "titulo": "Viatura da Polícia Militar de Santa Catarina",
+      "titulo": "Viatura de patrulhamento",
       "formato": "foto",
       "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Vtr_PMSC_001.jpg/960px-Vtr_PMSC_001.jpg",
       "referencia": "https://commons.wikimedia.org/wiki/File:Vtr_PMSC_001.jpg",
-      "credito": "Guilmann / Wikimedia Commons (CC BY-SA 4.0)"
+      "credito": "Guilmann / Wikimedia Commons (CC BY-SA 4.0)",
+      "descricao": "Veículo de serviço da Polícia Militar de Santa Catarina, utilizado em ações de policiamento.",
+      "estado": "Santa Catarina (SC)",
+      "licenca": "Consulte a licença na fonte",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Vtr_PMSC_001.jpg?width=1280"
     },
     {
       "forca": "Marinha Brasileira",
-      "titulo": "Fragata da Marinha Brasileira — foto de referência",
+      "titulo": "Fragata F-45",
       "formato": "foto",
       "arquivo": "assets/marinha-f45.webp",
       "referencia": "",
-      "credito": "Imagem fornecida pelo usuário (fotografia estática)"
+      "credito": "Imagem fornecida pelo usuário (fotografia estática)",
+      "descricao": "Fragata da classe Niterói da Marinha do Brasil, em navegação.",
+      "licenca": "Imagem fornecida pelo usuário"
+    },
+    {
+      "forca": "Força Aérea Brasileira",
+      "titulo": "F-39E Gripen",
+      "descricao": "Caça multifunção da FAB empregado na defesa do espaço aéreo brasileiro.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/FAB_Gripen_F-39E_(cropped).jpg/1280px-FAB_Gripen_F-39E_(cropped).jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:FAB_Gripen_F-39E_(cropped).jpg",
+      "credito": "Isac Nóbrega / PR (Wikimedia Commons)",
+      "licenca": "CC BY 2.0",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/FAB_Gripen_F-39E_(cropped).jpg?width=1280"
+    },
+    {
+      "forca": "Exército Brasileiro",
+      "titulo": "VBTP-MR Guarani",
+      "descricao": "Viatura blindada de transporte de pessoal usada em deslocamentos e proteção de tropas.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/VBTP-MR_Guarani_(7810193370).jpg/1280px-VBTP-MR_Guarani_(7810193370).jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:VBTP-MR_Guarani_(7810193370).jpg",
+      "credito": "André Gustavo Stumpf / Wikimedia Commons",
+      "licenca": "CC BY 2.0",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/VBTP-MR_Guarani_(7810193370).jpg?width=1280"
+    },
+    {
+      "forca": "Corpo de Bombeiros Militar",
+      "titulo": "ABT 101 e ASE 134",
+      "descricao": "Veículos do Corpo de Bombeiros do Distrito Federal para atendimento de incêndios e salvamento.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ABT_101_e_ASE_134_(19506992440).jpg/1280px-ABT_101_e_ASE_134_(19506992440).jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:ABT_101_e_ASE_134_(19506992440).jpg",
+      "credito": "André Gustavo Stumpf / Wikimedia Commons",
+      "licenca": "CC BY 2.0",
+      "estado": "Distrito Federal (DF)",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/ABT_101_e_ASE_134_(19506992440).jpg?width=1280"
+    },
+    {
+      "forca": "Polícia Militar",
+      "titulo": "Viatura RONE",
+      "descricao": "Viatura da Polícia Militar do Paraná vinculada ao policiamento de operações especiais.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Viatura_RONE_PMPR.jpg/1280px-Viatura_RONE_PMPR.jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Viatura_RONE_PMPR.jpg",
+      "credito": "Guilmann / Wikimedia Commons",
+      "licenca": "Domínio público",
+      "estado": "Paraná (PR)",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Viatura_RONE_PMPR.jpg?width=1280"
+    },
+    {
+      "forca": "Marinha Brasileira",
+      "titulo": "Fragata Independência (F-44)",
+      "descricao": "Navio de escolta da classe Niterói da Marinha do Brasil.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Fragata_Independ%C3%AAncia_(F44)_(52708550390).jpg/1280px-Fragata_Independ%C3%AAncia_(F44)_(52708550390).jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Fragata_Independ%C3%AAncia_(F44)_(52708550390).jpg",
+      "credito": "Marinha do Brasil / Wikimedia Commons",
+      "licenca": "CC BY-SA 2.0",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fragata_Independ%C3%AAncia_(F44)_(52708550390).jpg?width=1280"
+    },
+    {
+      "forca": "Força Aérea Brasileira",
+      "titulo": "KC-390 Millennium",
+      "descricao": "Aeronave de transporte militar utilizada para logística e reabastecimento em voo.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Brazilian_Air_Force%2C_PT-ZNX%2C_Embraer_KC-390_(49580304702).jpg/1280px-Brazilian_Air_Force%2C_PT-ZNX%2C_Embraer_KC-390_(49580304702).jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Brazilian_Air_Force%2C_PT-ZNX%2C_Embraer_KC-390_(49580304702).jpg",
+      "credito": "Anna Zvereva / Wikimedia Commons",
+      "licenca": "Consulte a licença na fonte",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Brazilian_Air_Force%2C_PT-ZNX%2C_Embraer_KC-390_(49580304702).jpg?width=1280"
+    },
+    {
+      "forca": "Corpo de Bombeiros Militar",
+      "titulo": "ABTR de resgate",
+      "descricao": "Auto Bomba Tanque Resgate do Corpo de Bombeiros do Paraná.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Viatura_do_Corpo_de_Bombeiros_do_Paran%C3%A1_-_ABTR.JPG/1280px-Viatura_do_Corpo_de_Bombeiros_do_Paran%C3%A1_-_ABTR.JPG",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Viatura_do_Corpo_de_Bombeiros_do_Paran%C3%A1_-_ABTR.JPG",
+      "credito": "Wikimedia Commons — ver atribuição do arquivo",
+      "licenca": "Consulte a licença na fonte",
+      "estado": "Paraná (PR)",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Viatura_do_Corpo_de_Bombeiros_do_Paran%C3%A1_-_ABTR.JPG?width=1280"
+    },
+    {
+      "forca": "Polícia Militar",
+      "titulo": "Viatura COE",
+      "descricao": "Veículo de operações especiais da Polícia Militar do Paraná.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Viatura_COE-PMPR.png/1280px-Viatura_COE-PMPR.png",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Viatura_COE-PMPR.png",
+      "credito": "Guilmann / Wikimedia Commons",
+      "licenca": "Domínio público",
+      "estado": "Paraná (PR)",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Viatura_COE-PMPR.png?width=1280"
+    },
+    {
+      "forca": "Marinha Brasileira",
+      "titulo": "Fragata Independência e Navio-Escola Brasil",
+      "descricao": "Duas embarcações da Marinha do Brasil registradas em navegação em 2024.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Fragata_Independ%C3%AAncia_(F44)_e_Navio-Escola_Brasil_(U27)_(53883082058).jpg/1280px-Fragata_Independ%C3%AAncia_(F44)_e_Navio-Escola_Brasil_(U27)_(53883082058).jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Fragata_Independ%C3%AAncia_(F44)_e_Navio-Escola_Brasil_(U27)_(53883082058).jpg",
+      "credito": "Marinha do Brasil / Wikimedia Commons",
+      "licenca": "Consulte a licença na fonte",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fragata_Independ%C3%AAncia_(F44)_e_Navio-Escola_Brasil_(U27)_(53883082058).jpg?width=1280"
+    },
+    {
+      "forca": "Força Aérea Brasileira",
+      "titulo": "A-29 Super Tucano",
+      "descricao": "Aeronave turboélice brasileira empregada em treinamento e patrulhamento aéreo.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Super_Tucano_(4892005049).jpg/1280px-Super_Tucano_(4892005049).jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Super_Tucano_(4892005049).jpg",
+      "credito": "Wikimedia Commons — ver atribuição do arquivo",
+      "licenca": "Consulte a licença na fonte",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Super_Tucano_(4892005049).jpg?width=1280"
+    },
+    {
+      "forca": "Marinha Brasileira",
+      "titulo": "Fragata Independência (F-44), vista do convés",
+      "descricao": "Detalhes de um navio de escolta da Marinha do Brasil da classe Niterói.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Fragata_Independ%C3%AAncia.jpg/1280px-Fragata_Independ%C3%AAncia.jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Fragata_Independ%C3%AAncia.jpg",
+      "credito": "Andréia Bohner / Wikimedia Commons",
+      "licenca": "Consulte a licença na fonte",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fragata_Independ%C3%AAncia.jpg?width=1280"
+    },
+    {
+      "forca": "Força Aérea Brasileira",
+      "titulo": "H-60 Black Hawk",
+      "descricao": "Helicóptero da FAB utilizado em transporte aéreo e missões de busca e salvamento.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Academia_da_For%C3%A7a_A%C3%A9rea_(AFA)_em_Pirassununga-SP._Helic%C3%B3ptero_Sikorsky_UH-60_Black_Hawk_utilizado_pela_For%C3%A7a_A%C3%A9rea_Brasileira_(FAB)._Este_modelo_de_helic%C3%B3ptero_-_panoramio.jpg/1280px-Academia_da_For%C3%A7a_A%C3%A9rea_(AFA)_em_Pirassununga-SP._Helic%C3%B3ptero_Sikorsky_UH-60_Black_Hawk_utilizado_pela_For%C3%A7a_A%C3%A9rea_Brasileira_(FAB)._Este_modelo_de_helic%C3%B3ptero_-_panoramio.jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Academia_da_For%C3%A7a_A%C3%A9rea_(AFA)_em_Pirassununga-SP._Helic%C3%B3ptero_Sikorsky_UH-60_Black_Hawk_utilizado_pela_For%C3%A7a_A%C3%A9rea_Brasileira_(FAB)._Este_modelo_de_helic%C3%B3ptero_-_panoramio.jpg",
+      "credito": "Wikimedia Commons — ver atribuição do arquivo",
+      "licenca": "Consulte a licença na fonte",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Academia_da_For%C3%A7a_A%C3%A9rea_(AFA)_em_Pirassununga-SP._Helic%C3%B3ptero_Sikorsky_UH-60_Black_Hawk_utilizado_pela_For%C3%A7a_A%C3%A9rea_Brasileira_(FAB)._Este_modelo_de_helic%C3%B3ptero_-_panoramio.jpg?width=1280"
+    },
+    {
+      "forca": "Força Aérea Brasileira",
+      "titulo": "F-39E Gripen em voo",
+      "descricao": "Aeronave de caça do programa Gripen brasileiro registrada em voo.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/25.03.2026_-_Cerim%C3%B4nia_de_apresenta%C3%A7%C3%A3o_do_primeiro_Ca%C3%A7a_F-39_E_Gripen_montado_no_Brasil_(cropped).jpg/1280px-25.03.2026_-_Cerim%C3%B4nia_de_apresenta%C3%A7%C3%A3o_do_primeiro_Ca%C3%A7a_F-39_E_Gripen_montado_no_Brasil_(cropped).jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:25.03.2026_-_Cerim%C3%B4nia_de_apresenta%C3%A7%C3%A3o_do_primeiro_Ca%C3%A7a_F-39_E_Gripen_montado_no_Brasil_(cropped).jpg",
+      "credito": "Ricardo Stuckert / PR (Wikimedia Commons)",
+      "licenca": "Consulte a licença na fonte",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/25.03.2026_-_Cerim%C3%B4nia_de_apresenta%C3%A7%C3%A3o_do_primeiro_Ca%C3%A7a_F-39_E_Gripen_montado_no_Brasil_(cropped).jpg?width=1280"
+    },
+    {
+      "forca": "Força Aérea Brasileira",
+      "titulo": "F-5EM Tiger II",
+      "descricao": "Caça da Força Aérea Brasileira fotografado no evento Domingo Aéreo de 2015.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Academia_da_For%C3%A7a_A%C3%A9rea_(AFA)_em_Pirassununga-SP._Ca%C3%A7a_F-5EM_(4856)_da_For%C3%A7a_A%C3%A9rea_Brasileira_iniciando_o_taxiamento_para_a_apresenta%C3%A7%C3%A3o_no_Domingo_A%C3%A9reo_-_panoramio.jpg/1280px-Academia_da_For%C3%A7a_A%C3%A9rea_(AFA)_em_Pirassununga-SP._Ca%C3%A7a_F-5EM_(4856)_da_For%C3%A7a_A%C3%A9rea_Brasileira_iniciando_o_taxiamento_para_a_apresenta%C3%A7%C3%A3o_no_Domingo_A%C3%A9reo_-_panoramio.jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:Academia_da_For%C3%A7a_A%C3%A9rea_(AFA)_em_Pirassununga-SP._Ca%C3%A7a_F-5EM_(4856)_da_For%C3%A7a_A%C3%A9rea_Brasileira_iniciando_o_taxiamento_para_a_apresenta%C3%A7%C3%A3o_no_Domingo_A%C3%A9reo_-_panoramio.jpg",
+      "credito": "Wikimedia Commons — ver atribuição do arquivo",
+      "licenca": "Consulte a licença na fonte",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Academia_da_For%C3%A7a_A%C3%A9rea_(AFA)_em_Pirassununga-SP._Ca%C3%A7a_F-5EM_(4856)_da_For%C3%A7a_A%C3%A9rea_Brasileira_iniciando_o_taxiamento_para_a_apresenta%C3%A7%C3%A3o_no_Domingo_A%C3%A9reo_-_panoramio.jpg?width=1280"
+    },
+    {
+      "forca": "Força Aérea Brasileira",
+      "titulo": "F-39E Gripen em Brasília",
+      "descricao": "Caça da FAB em sobrevoo sobre Brasília, durante uma cerimônia de 2020.",
+      "formato": "foto",
+      "arquivo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/First_Brazilian_F-39E_Gripen.jpg/1280px-First_Brazilian_F-39E_Gripen.jpg",
+      "referencia": "https://commons.wikimedia.org/wiki/File:First_Brazilian_F-39E_Gripen.jpg",
+      "credito": "Isac Nóbrega / PR (Wikimedia Commons)",
+      "licenca": "Consulte a licença na fonte",
+      "arquivo_reserva": "https://commons.wikimedia.org/wiki/Special:Redirect/file/First_Brazilian_F-39E_Gripen.jpg?width=1280"
     }
   ]
 }
