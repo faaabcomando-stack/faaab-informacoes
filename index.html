@@ -1,219 +1,31 @@
 <!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1e4055">
-  <meta name="description" content="FAAAB — Notícias e publicações institucionais.">
-  <title>Início | FAAAB</title>
-  <style>
-:root {
-  --navy:#19384d; --navy-2:#214b64; --navy-3:#102b3d; --gold:#bc9b68;
-  --ink:#1a3648; --muted:#5c6d78; --paper:#f3f5f5; --line:#dce3e6;
-  --white:#fff; --font: "Segoe UI", Arial, Helvetica, sans-serif;
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--font)}
-button,a{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
-button:focus-visible,a:focus-visible{outline:3px solid #d7b27a;outline-offset:4px}
-.container{width:min(1216px,calc(100% - 72px));margin-inline:auto}
-.skip{position:absolute;left:10px;top:-100px;z-index:100;background:#fff;padding:12px 16px}
-.skip:focus{top:10px}
-.top-accent{height:5px;background:linear-gradient(90deg,#bc9b68 0 27%,#203d52 27% 100%)}
-.site-header{background:#fff;border-bottom:1px solid #e9edef}
-.header-inner{display:flex;align-items:center;justify-content:space-between;min-height:118px;gap:30px}
-.brand{display:inline-flex;align-items:center;gap:20px;min-width:0}
-.brand-mark{width:58px;height:58px;display:grid;place-items:center;border:2px solid #ba9c6b;border-radius:50%;position:relative;flex:none}
-.brand-mark::after{content:"";width:36px;height:36px;border:3px solid #254f6a;border-radius:50%;background:radial-gradient(circle at center,#254f6a 0 5px,transparent 5px);position:absolute}
-.brand-mark::before{content:"";position:absolute;inset:-8px;border:1px solid #e8e0d0;border-radius:50%}
-.brand-title{display:block;color:#1d4058;letter-spacing:.055em;font-weight:800;font-size:41px;line-height:1}
-.brand-subtitle{display:block;margin-top:9px;font-size:10px;letter-spacing:.085em;color:#6e7980;font-weight:700;text-transform:uppercase}
-.header-rule{width:102px;height:1px;background:#d5bd97;flex:none}
-.primary-nav{background:#1e4055;color:#edf3f6;box-shadow:0 2px 6px #1b36471b}
-.nav-inner{display:flex;align-items:stretch;height:62px}
-.nav-links{display:flex;align-items:stretch;gap:4px}
-.nav-links a{display:flex;align-items:center;min-width:147px;padding:0 24px;font-size:14px;font-weight:680;position:relative;transition:background .16s}
-.nav-links a:hover{background:#31586e}
-.nav-links a[aria-current="page"]{background:#28516a}
-.nav-links a[aria-current="page"]::after{content:"";height:3px;position:absolute;bottom:0;left:24px;right:24px;background:var(--gold)}
-.menu-toggle{display:none}
-.page-heading{color:#fff;background:linear-gradient(108deg,#19384d,#2d586f);overflow:hidden;position:relative}
-.page-heading::before{content:"";position:absolute;width:560px;height:560px;right:-100px;top:-460px;border:1px solid #ffffff2d;border-radius:50%;box-shadow:0 0 0 62px #ffffff06,0 0 0 144px #ffffff05;pointer-events:none}
-.heading-inner{min-height:192px;display:flex;flex-direction:column;justify-content:center;padding:34px 0}
-.page-heading h1{font-size:clamp(40px,5vw,61px);letter-spacing:-.035em;line-height:1.05;font-weight:760;margin:0}
-.heading-rule{width:44px;height:3px;margin-top:22px;background:var(--gold)}
-.section{padding:58px 0 34px}
-.section-title{font-size:29px;letter-spacing:-.025em;font-weight:760;margin:0 0 27px;line-height:1.2;color:#1a3d55}
-.section-title::after{content:"";width:42px;height:2px;display:block;background:#bf9d6f;margin-top:15px}
-.news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.news-card{padding:0;text-align:left;background:#fff;border:1px solid #dfe5e7;min-height:293px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 8px 24px #16394b0a;transition:transform .2s,box-shadow .2s,border-color .2s;width:100%}
-.news-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px #16394b20;border-color:#becad0}
-.news-card:active{transform:translateY(-1px)}
-.card-image{position:relative;min-height:175px;display:block;overflow:hidden;background:#2c5065}
-.card-image::after{content:"";position:absolute;bottom:0;left:0;right:0;height:4px;background:#b99a6c}
-.card-image::before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;border:1px solid #ffffff25;right:-120px;top:-220px;box-shadow:0 0 0 47px #ffffff0c,0 0 0 109px #ffffff09}
-.card-image .plane{display:block;width:120px;height:120px;border:1px solid #ffffff25;transform:rotate(45deg);position:absolute;top:40px;left:42px}
-.card-image .plane::after{content:"";position:absolute;inset:24px;border:1px solid #ffffff28}
-.news-card:nth-child(2) .card-image{background:#4d6269}
-.news-card:nth-child(3) .card-image{background:#264c54}
-.news-card:nth-child(2) .plane{border-radius:50%;transform:none}
-.news-card:nth-child(3) .plane{transform:rotate(15deg);border-radius:0}
-.card-content{display:flex;flex-direction:column;gap:9px;justify-content:center;flex:1;padding:24px 25px}
-.card-content strong{font-size:22px;line-height:1.2;font-weight:730;color:#1b3d53}
-.card-content .card-detail{font-size:12px;line-height:1.5;color:#82929a}
-.feature-section{padding:20px 0 86px}
-.feature-heading{margin-top:15px}
-.feature{position:relative;background:#163649;min-height:385px;color:#fff;overflow:hidden}
-.feature-slide{position:absolute;inset:0;display:flex;align-items:end;padding:55px 66px;background:linear-gradient(110deg,#123247 0%,#315b72 100%);transition:opacity .27s ease;opacity:0;pointer-events:none}
-.feature-slide.is-active{opacity:1;pointer-events:auto}
-.feature-slide:nth-child(2){background:linear-gradient(120deg,#1d3845,#496b6f)}
-.feature-slide:nth-child(3){background:linear-gradient(120deg,#152e3d,#3a5261)}
-.feature-slide::before{content:"";position:absolute;width:600px;height:600px;right:-100px;top:-280px;border-radius:50%;border:1px solid #ffffff26;box-shadow:0 0 0 50px #ffffff09,0 0 0 140px #ffffff06}
-.feature-slide::after{content:"";position:absolute;right:14%;top:-10%;width:1px;height:140%;background:#ffffff17;transform:rotate(30deg)}
-.feature-text{position:relative;z-index:2;text-align:left;border:0;background:none;color:#fff;padding:20px 0;width:min(660px,80%)}
-.feature-text strong{font-size:clamp(38px,5vw,68px);line-height:1.12;display:block;letter-spacing:-.03em;font-weight:770}
-.feature-text .feature-sub{display:block;margin-top:15px;font-size:14px;color:#d6e3e8}
-.feature-controls{position:absolute;right:35px;bottom:35px;display:flex;gap:8px;z-index:5;opacity:0;transform:translateY(9px);pointer-events:none;transition:opacity .2s,transform .2s}
-.feature:hover .feature-controls,.feature:focus-within .feature-controls{opacity:1;transform:translateY(0);pointer-events:auto}
-.feature-controls button{display:grid;place-items:center;width:55px;height:55px;border:1px solid #ffffff7d;background:#16384bc9;color:#fff;transition:background .18s,transform .18s}
-.feature-controls button:hover{background:#bc9b68;color:#132d3e;transform:translateY(-2px)}
-.feature-controls svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.page-publicacoes .section{min-height:58vh;padding-bottom:120px}
-.footer{background:#172f3f;border-top:3px solid #b39569}
-.footer-content{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:80px;color:#d2dde4}
-.footer-content span{font-size:13px;font-weight:750}
-.footer-content small{font-size:10px;color:#a7b8c2;line-height:1.5;text-align:right}
-.toast{position:fixed;z-index:300;right:22px;bottom:23px;max-width:min(390px,calc(100vw - 38px));background:#fff;border-left:4px solid #b99864;box-shadow:0 18px 60px #09243140;display:flex;align-items:center;gap:20px;padding:16px 17px;color:#1e3c50}
-.toast[hidden]{display:none}
-.toast-message{font-size:13px;font-weight:650}
-.toast button{border:0;background:#eef2f3;padding:7px;display:grid;place-items:center;line-height:1}
-@media (hover:none){.feature-controls{opacity:1;transform:none;pointer-events:auto}}
-@media(max-width:900px){.container{width:calc(100% - 48px)}.news-grid{gap:16px}.card-content{padding:20px}.feature{min-height:330px}}
-@media(max-width:640px){
- .container{width:calc(100% - 32px)}
- .header-inner{min-height:89px}.brand{gap:13px}.brand-mark{width:46px;height:46px}.brand-mark::after{width:28px;height:28px}.brand-title{font-size:31px}.brand-subtitle{font-size:7px;letter-spacing:.055em;margin-top:5px}.header-rule{display:none}
- .nav-inner{min-height:52px;height:auto;display:block}.menu-toggle{display:flex;align-items:center;gap:13px;color:#fff;background:none;border:0;padding:0 12px;min-height:52px;width:100%;font-weight:720;text-align:left}.menu-toggle-lines{display:flex;flex-direction:column;gap:4px}.menu-toggle-lines i{display:block;width:19px;height:2px;background:#e5edf1}.menu-toggle span:last-child{margin-left:auto}.nav-links{display:none;flex-direction:column;gap:0;padding-bottom:9px;border-top:1px solid #ffffff24}.nav-links.is-open{display:flex}.nav-links a{min-height:48px;padding:0 16px}.nav-links a[aria-current="page"]::after{left:0;right:auto;top:6px;bottom:6px;width:3px;height:auto}
- .heading-inner{min-height:145px}.page-heading h1{font-size:41px}.heading-rule{margin-top:16px}
- .section{padding:39px 0 18px}.section-title{font-size:26px;margin-bottom:23px}.news-grid{grid-template-columns:1fr;gap:17px}.news-card{min-height:0}.card-image{min-height:165px}.card-content{padding:19px 21px;min-height:88px}.card-content strong{font-size:20px}
- .feature-section{padding:13px 0 62px}.feature{min-height:315px}.feature-slide{padding:34px 25px 88px}.feature-text{width:100%}.feature-text strong{font-size:44px}.feature-controls{right:18px;bottom:18px;gap:7px}.feature-controls button{width:45px;height:45px}
- .page-publicacoes .section{min-height:56vh;padding-bottom:70px}
- .footer-content{padding:19px 0;min-height:0;align-items:flex-start;flex-direction:column;gap:5px}.footer-content small{text-align:left}
- .toast{right:12px;bottom:12px}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
-
-</style>
-  
-</head>
-<body>
-  <a class="skip" href="#noticias">Ir para notícias</a>
-  <div class="top-accent" aria-hidden="true"></div>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="FAAAB — Início">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span><strong class="brand-title">FAAAB</strong><small class="brand-subtitle">Forças Armadas e Auxiliares Aliadas Brasileiras</small></span>
-      </a>
-      <span class="header-rule" aria-hidden="true"></span>
-    </div>
-  </header>
-  <nav class="primary-nav" aria-label="Navegação principal">
-    <div class="container nav-inner">
-      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" type="button"><span class="menu-toggle-lines" aria-hidden="true"><i></i><i></i><i></i></span>Menu <span aria-hidden="true">⌄</span></button>
-      <div class="nav-links" id="site-menu">
-        <a href="index.html" aria-current="page">Início</a>
-        <a href="publicacoes.html">Publicações</a>
-      </div>
-    </div>
-  </nav>
-  <main>
-    <section class="page-heading" aria-labelledby="page-title"><div class="container heading-inner"><h1 id="page-title">Notícias</h1><span class="heading-rule" aria-hidden="true"></span></div></section>
-    <section id="noticias" class="section" aria-labelledby="recent-title">
-      <div class="container">
-        <h2 class="section-title" id="recent-title">Últimas notícias</h2>
-        <div class="news-grid">
-          <button class="news-card" type="button" data-news-test aria-label="Sem notícia — testar cartão"><span class="card-image" aria-hidden="true"><span class="plane"></span></span><span class="card-content"><strong>Sem notícia</strong></span></button>
-          <button class="news-card" type="button" data-news-test aria-label="Sem notícia — testar cartão"><span class="card-image" aria-hidden="true"><span class="plane"></span></span><span class="card-content"><strong>Sem notícia</strong></span></button>
-          <button class="news-card" type="button" data-news-test aria-label="Sem notícia — testar cartão"><span class="card-image" aria-hidden="true"><span class="plane"></span></span><span class="card-content"><strong>Sem notícia</strong></span></button>
-        </div>
-      </div>
-    </section>
-    <section class="feature-section" aria-labelledby="feature-title">
-      <div class="container">
-        <h2 class="section-title feature-heading" id="feature-title">Em destaque</h2>
-        <div class="feature" aria-label="Notícia em destaque">
-          <div class="feature-slide is-active"><button type="button" class="feature-text" data-news-test><strong>Sem notícia</strong></button></div>
-          <div class="feature-slide"><button type="button" class="feature-text" data-news-test tabindex="-1"><strong>Sem notícia</strong></button></div>
-          <div class="feature-slide"><button type="button" class="feature-text" data-news-test tabindex="-1"><strong>Sem notícia</strong></button></div>
-          <div class="feature-controls" aria-label="Navegar nos destaques">
-            <button type="button" data-feature-prev aria-label="Destaque anterior" title="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg></button>
-            <button type="button" data-feature-next aria-label="Próximo destaque" title="Próximo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-7-7 7 7 7-7"/></svg></button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer"><div class="container footer-content"><span>© FAAAB</span><small>Simulação fictícia. Sem vínculo com instituições oficiais.</small></div></footer>
-  <div class="toast" id="test-toast" role="status" aria-live="polite" hidden><span class="toast-message">Clique registrado. Nenhuma notícia cadastrada.</span><button type="button" id="toast-close" aria-label="Fechar aviso">✕</button></div>
-<script>
-(() => {
-  'use strict';
-  const menuButton = document.querySelector('#menu-toggle');
-  const menu = document.querySelector('#site-menu');
-  const closeMenu = () => {
-    if (!menu || !menuButton) return;
-    menu.classList.remove('is-open');
-    menuButton.setAttribute('aria-expanded', 'false');
-  };
-  if (menuButton && menu) {
-    menuButton.addEventListener('click', () => {
-      const open = menu.classList.toggle('is-open');
-      menuButton.setAttribute('aria-expanded', String(open));
-    });
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeMenu();
-    });
-    document.addEventListener('click', (event) => {
-      if (!event.target.closest('.primary-nav')) closeMenu();
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 640) closeMenu();
-    });
-  }
-
-  const toast = document.querySelector('#test-toast');
-  const toastClose = document.querySelector('#toast-close');
-  let toastTimer;
-  const hideToast = () => { if (toast) toast.hidden = true; };
-  const showToast = () => {
-    if (!toast) return;
-    toast.hidden = false;
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(hideToast, 3500);
-  };
-  toastClose?.addEventListener('click', hideToast);
-  document.querySelectorAll('[data-news-test]').forEach((button) => {
-    button.addEventListener('click', showToast);
-  });
-
-  const slides = [...document.querySelectorAll('.feature-slide')];
-  let active = 0;
-  const setSlide = (index) => {
-    if (!slides.length) return;
-    active = (index + slides.length) % slides.length;
-    slides.forEach((slide, idx) => {
-      slide.classList.toggle('is-active', idx === active);
-      slide.setAttribute('aria-hidden', String(idx !== active));
-      const button = slide.querySelector('[data-news-test]');
-      if (button) button.tabIndex = idx === active ? 0 : -1;
-    });
-  };
-  document.querySelector('[data-feature-prev]')?.addEventListener('click', () => setSlide(active - 1));
-  document.querySelector('[data-feature-next]')?.addEventListener('click', () => setSlide(active + 1));
-  setSlide(0);
-})();
-
-</script>
-</body>
-</html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#193c51">
+<meta name="description" content="Notícias importantes da FAAAB."><title>Início | FAAAB</title>
+<link rel="icon" href="assets/logo-faaab.png" type="image/png"><link rel="stylesheet" href="assets/style.css"></head>
+<body><a class="skip" href="#conteudo">Ir ao conteúdo</a>
+<header class="header"><div class="wrap header-inner">
+<a class="identity" href="index.html" aria-label="Página inicial">
+<img src="assets/logo-faaab.png" alt="Brasão da FAAAB" width="66" height="66">
+<span class="identity-text"><strong>Forças Armadas e Auxiliares Aliadas Brasileiras</strong><small>Portal institucional</small></span>
+</a>
+<button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="main-menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button>
+<nav class="nav" id="main-menu" data-menu aria-label="Navegação principal">
+<a href="index.html" aria-current="page">Início</a><a href="publicacoes.html">Publicações</a><a href="categorias.html">Categorias</a>
+</nav></div></header><main id="conteudo" class="main"><div class="wrap"><div class="section-title"><h1>Notícias importantes</h1></div>
+<div class="news-layout"><div class="carousel featured-news" data-carousel role="region" aria-label="Carrossel de notícias importantes" aria-roledescription="carrossel">
+<div class="carousel-track"><div class="slide is-active" data-slide data-tone="one" aria-hidden="false">
+<div class="texture" aria-hidden="true"></div>
+<a href="#" class="news-clickable" data-news-test tabindex="0" aria-label="Sem notícia no destaque">
+<span class="news-content"><span class="news-label">Notícia importante</span><strong>Sem notícia</strong></span></a></div>
+<div class="slide " data-slide data-tone="two" aria-hidden="true">
+<div class="texture" aria-hidden="true"></div>
+<a href="#" class="news-clickable" data-news-test tabindex="-1" aria-label="Sem notícia no destaque">
+<span class="news-content"><span class="news-label">Notícia importante</span><strong>Sem notícia</strong></span></a></div>
+<div class="slide " data-slide data-tone="three" aria-hidden="true">
+<div class="texture" aria-hidden="true"></div>
+<a href="#" class="news-clickable" data-news-test tabindex="-1" aria-label="Sem notícia no destaque">
+<span class="news-content"><span class="news-label">Notícia importante</span><strong>Sem notícia</strong></span></a></div></div>
+<div class="carousel-controls"><button type="button" class="carousel-arrow carousel-prev" data-prev aria-label="Notícia anterior">&#8249;</button>
+<button type="button" class="carousel-arrow carousel-next" data-next aria-label="Próxima notícia">&#8250;</button></div>
+<div class="carousel-dots" aria-label="Selecionar destaque"><button type="button" class="carousel-dot" data-dot aria-current="true" aria-label="Mostrar destaque 1"></button><button type="button" class="carousel-dot" data-dot aria-current="false" aria-label="Mostrar destaque 2"></button><button type="button" class="carousel-dot" data-dot aria-current="false" aria-label="Mostrar destaque 3"></button></div></div>
+<div class="side-news"><a href="#" class="small-news" data-news-test><div><span>Notícia importante</span><strong>Sem notícia</strong></div></a><div class="side-bottom"><a href="#" class="small-news" data-news-test><div><span>Notícia importante</span><strong>Sem notícia</strong></div></a><a href="#" class="small-news" data-news-test><div><span>Notícia importante</span><strong>Sem notícia</strong></div></a></div></div></div></div></main><footer class="footer"><div class="wrap footer-inner"><strong>FAAAB</strong><small>Simulação institucional independente. Sem vínculo com instituições oficiais.</small></div></footer><div class="toast" role="status" aria-live="polite" data-toast></div><script src="assets/site.js" defer></script></body></html>
