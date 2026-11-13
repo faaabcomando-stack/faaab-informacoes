@@ -35,27 +35,48 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var
 
 .hero-fallback-svg{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
 .hero-image img{position:absolute;inset:0}
+
+/* Interface enxuta: sem índices, breadcrumbs, setas de rolagem ou conteúdo demonstrativo. */
+.header-inner{height:108px}
+.nav-links a{min-width:125px}
+.hero,.hero-inner{min-height:425px}
+.hero-content{padding:66px 0}
+.hero h1{margin:0 0 20px;font-size:clamp(50px,6.3vw,90px)}
+.hero p{max-width:500px}
+.editorial-inner{padding:65px 0 82px}
+.section-heading{padding-bottom:22px}
+.section-heading h2{margin:0}
+.publications-empty{display:block;min-height:0;padding:35px 0 0;border-bottom:0}
+.publications-empty p{color:#627987;font-size:15px;margin:0}
+.footer-clean{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:83px}
+.footer-clean span{color:#dce7ed;font-size:12px;font-weight:750}
+.footer-clean small{font-size:11px;color:#adc1cd;line-height:1.5;text-align:right}
+@media(max-width:760px){
+ .hero,.hero-inner{min-height:370px}
+ .hero-content{padding:68px 0}
+ .hero h1{font-size:clamp(48px,9vw,75px);margin:0 0 18px}
+ .editorial-inner{padding:49px 0 65px}
+ .publications-empty{padding:27px 0 0}
+ .footer-clean{padding:23px 0;min-height:0;align-items:flex-start;flex-direction:column;gap:7px}
+ .footer-clean small{text-align:left}
+}
+@media(max-width:480px){
+ .hero,.hero-inner{min-height:370px}
+ .hero-content{padding:65px 0}
+ .hero h1{font-size:clamp(42px,11vw,62px)}
+ .editorial-inner{padding:41px 0 55px}
+}
 </style>
   
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-  <div class="utility">
-    <div class="wrap utility-inner">
-      <span>PORTAL INSTITUCIONAL <span class="utility-sep">/</span> FAAAB</span>
-      <span class="utility-right"><span class="pulse" aria-hidden="true"></span> COMUNIDADE INDEPENDENTE · ROBLOX</span>
-    </div>
-  </div>
   <header class="site-header" id="inicio">
     <div class="wrap header-inner">
       <a class="identity" href="#inicio" aria-label="FAAAB — Página inicial">
         <span class="monogram" aria-hidden="true"><span>F</span><i></i></span>
         <span class="identity-text"><strong>FAAAB</strong><small>FORÇAS ARMADAS E AUXILIARES<br>ALIADAS BRASILEIRAS</small></span>
       </a>
-      <div class="header-aside" aria-label="Identificação do portal">
-        <span>PORTAL DE COMUNICAÇÃO</span>
-        <strong>Informação. Organização. Instituição.</strong>
-      </div>
     </div>
   </header>
   <nav class="primary-nav" aria-label="Navegação principal" id="nav">
@@ -64,11 +85,9 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var
         <span class="menu-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span> Menu <span class="menu-caret" aria-hidden="true">⌄</span>
       </button>
       <div class="nav-links" id="site-menu">
-        <a href="#inicio" aria-current="page"><span class="nav-number">01</span> Página inicial</a>
-        <a href="#conteudo"><span class="nav-number">02</span> Publicações</a>
-        <a href="#institucional"><span class="nav-number">03</span> Institucional</a>
+        <a href="#inicio" aria-current="page">Início</a>
+        <a href="#conteudo">Publicações</a>
       </div>
-      <span class="nav-end"><span class="nav-end-square" aria-hidden="true"></span> FAAAB <span class="nav-end-divider">|</span> BRASIL</span>
     </div>
   </nav>
   <main>
@@ -90,47 +109,22 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var
       <div class="hero-graphic" aria-hidden="true"><span class="halo halo-one"></span><span class="halo halo-two"></span></div>
       <div class="wrap hero-inner">
         <div class="hero-content">
-          <div class="overline"><span class="overline-rule"></span> ORGANIZAÇÃO INSTITUCIONAL <span class="overline-star">✦</span> FAAAB</div>
-          <h1 id="hero-title">Um portal.<br><em>Uma identidade.</em></h1>
-          <p>Forças Armadas e Auxiliares Aliadas Brasileiras. Um espaço para reunir a comunicação e a estrutura da nossa comunidade.</p>
-          <a class="hero-action" href="#conteudo"><span>Explorar o portal</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
+          <h1 id="hero-title">Notícias e<br><em>comunicados.</em></h1>
+          <p>Atualizações e informações das forças da comunidade.</p>
         </div>
-        <div class="hero-side-label" aria-hidden="true"><span>FAAAB</span> <i></i> <span>2026</span></div>
       </div>
-      <div class="hero-footer"><div class="wrap hero-footer-inner">
-        <span><b class="hero-footer-line"></b> MODELO INSTITUCIONAL</span>
-        <span class="hero-footer-right">PORTAL FAAAB <span class="tiny-cross">+</span> PLATAFORMA INDEPENDENTE</span>
-        <a href="#conteudo" aria-label="Ir para publicações"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18m-7-7 7 7 7-7"/></svg></a>
-      </div></div>
     </section>
     <section class="editorial" id="conteudo" aria-labelledby="section-title">
       <div class="wrap editorial-inner">
         <div class="section-heading">
-          <div><span class="section-eyebrow"><b>01</b> COMUNICAÇÃO</span><h2 id="section-title">Publicações <em>FAAAB</em></h2></div>
-          <p>Notícias, comunicados e informações da comunidade serão organizados nesta área.</p>
+          <h2 id="section-title">Publicações</h2>
         </div>
-        <div class="publications-empty">
-          <div class="publications-decoration" aria-hidden="true">
-            <span class="empty-symbol"><svg viewBox="0 0 90 90"><path d="M24 23h32l10 10v34H24z"/><path d="M56 23v11h10M34 45h22M34 55h22M34 65h14"/></svg></span>
-          </div>
-          <div class="empty-copy"><span class="empty-kicker">CENTRAL DE PUBLICAÇÕES</span><h3>Em breve, novas informações.</h3><p>Este espaço ainda não possui publicações. Nenhuma notícia de exemplo foi adicionada.</p></div>
-          <div class="empty-number" aria-hidden="true">00<span>/ PUBLICAÇÕES</span></div>
-        </div>
-      </div>
-    </section>
-    <section class="about" id="institucional" aria-labelledby="about-title">
-      <div class="wrap about-inner">
-        <div class="about-label"><span class="section-eyebrow"><b>02</b> IDENTIDADE</span><h2 id="about-title">Institucional.</h2></div>
-        <div class="about-copy"><span class="about-lead">O ponto de partida de um portal organizado.</span><p>A FAAAB é uma comunidade independente de simulação no Roblox. Esta página é a base visual de seu portal — sem páginas de unidades, hierarquias ou sistemas ainda.</p></div>
+        <div class="publications-empty"><p>Ainda não há publicações.</p></div>
       </div>
     </section>
   </main>
   <footer class="footer">
-    <div class="wrap footer-main">
-      <div><strong class="footer-brand">FAAAB<span>.</span></strong><small>Forças Armadas e Auxiliares Aliadas Brasileiras</small></div>
-      <div class="footer-meta"><span>COMUNIDADE INDEPENDENTE</span><p>Projeto de simulação no Roblox. Sem vínculo com órgãos públicos ou Forças Armadas oficiais.</p></div>
-    </div>
-    <div class="footer-bottom"><div class="wrap"><span>FAAAB © 2026</span><span>PORTAL INSTITUCIONAL</span><a href="#inicio">Voltar ao início ↑</a></div></div>
+    <div class="wrap footer-clean"><span>© 2026 FAAAB</span><small>Projeto de simulação no Roblox, sem vínculo com instituições oficiais.</small></div>
   </footer>
 <script>
 'use strict';
