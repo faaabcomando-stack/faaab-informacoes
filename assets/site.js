@@ -24,39 +24,63 @@
     });
   });
 
+
   document.querySelectorAll('[data-carousel]').forEach(carousel => {
     const slides = [...carousel.querySelectorAll('[data-slide]')];
     const dots = [...carousel.querySelectorAll('[data-dot]')];
-    const prev = carousel.querySelector('[data-prev]');
+    const previous = carousel.querySelector('[data-prev]');
     const next = carousel.querySelector('[data-next]');
-    if (slides.length <= 1) return;
-    let current = 0;
-    let paused = false;
-    const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function display(target) {
+    if(slides.length < 2) return;
+    const duration = 6500;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let current = 0, elapsed = 0, lastFrame = 0, hovering = false, focused = false;
+    function paint() {
+      dots.forEach((dot,i) => {
+        const active = i === current;
+        const degrees = active ? Math.min(360, 360 * elapsed / duration) : 0;
+        dot.style.background = active
+          ? 'conic-gradient(#ffffff ' + degrees + 'deg, rgba(255,255,255,.27) ' + degrees + 'deg)'
+          : 'rgba(255,255,255,.27)';
+      });
+    }
+    function show(target) {
       current = (target + slides.length) % slides.length;
-      slides.forEach((slide, i) => {
+      elapsed = 0;
+      slides.forEach((slide,i) => {
         const active = i === current;
         slide.classList.toggle('is-active', active);
         slide.setAttribute('aria-hidden', String(!active));
-        const link = slide.querySelector('a');
-        if (link) link.tabIndex = active ? 0 : -1;
+        const link=slide.querySelector('a');
+        if(link) link.tabIndex = active ? 0 : -1;
       });
-      dots.forEach((dot, i) => {
+      dots.forEach((dot,i) => {
         dot.setAttribute('aria-current', String(i === current));
-        dot.setAttribute('aria-label', `Mostrar destaque ${i + 1}`);
+        dot.setAttribute('aria-label', 'Mostrar notícia ' + (i+1));
       });
+      paint();
     }
-    prev?.addEventListener('click', () => display(current - 1));
-    next?.addEventListener('click', () => display(current + 1));
-    dots.forEach((dot, i) => dot.addEventListener('click', () => display(i)));
-    carousel.addEventListener('mouseenter', () => { paused = true; });
-    carousel.addEventListener('mouseleave', () => { paused = false; });
-    carousel.addEventListener('focusin', () => { paused = true; });
-    carousel.addEventListener('focusout', ev => { if (!carousel.contains(ev.relatedTarget)) paused = false; });
-    display(0);
-    if (!motionReduced) {
-      window.setInterval(() => { if (!paused && !document.hidden) display(current + 1); }, 5800);
+    previous?.addEventListener('click', () => show(current-1));
+    next?.addEventListener('click', () => show(current+1));
+    dots.forEach((dot,i) => dot.addEventListener('click', () => show(i)));
+    carousel.addEventListener('mouseenter', () => {hovering=true;});
+    carousel.addEventListener('mouseleave', () => {hovering=false;});
+    carousel.addEventListener('focusin', () => {focused=true;});
+    carousel.addEventListener('focusout', ev => {if(!carousel.contains(ev.relatedTarget))focused=false;});
+    show(0);
+    if(!reduced){
+      function tick(t){
+        if(lastFrame){
+          const delta = Math.min(t-lastFrame,100);
+          if(!hovering&&!focused&&!document.hidden){
+            elapsed+=delta;
+            if(elapsed>=duration) show(current+1);
+            paint();
+          }
+        }
+        lastFrame=t;
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
     }
   });
 })();
