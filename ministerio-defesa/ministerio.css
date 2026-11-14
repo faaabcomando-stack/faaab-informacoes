@@ -15,3 +15,6 @@
 /* Rede de três forças do Ministério e navegação para ensino conjunto */
 .forces-short{grid-template-columns:repeat(3,minmax(0,1fr))}.forces-short .force-short:hover{background:#eaf0f3}.forces-short .force-short{display:block}.force-grid .force-card{display:block;cursor:pointer}.department a{display:inline-block;font-weight:800;font-size:13px;margin-top:12px;color:#24516f}.department a:hover{text-decoration:underline}
 @media(max-width:680px){.forces-short{grid-template-columns:1fr}.force-grid{grid-template-columns:1fr}}
+
+/* Portal interforças: não reutilizar fotografia exclusiva da Marinha */
+.hero:before{background-image:radial-gradient(circle at 85% 42%,#31617b 0 8%,transparent 43%),linear-gradient(120deg,#123348,#27536b)!important;background-size:cover!important}.hero:after{background:linear-gradient(90deg,#0d2c40ed 0%,#0d2f459e 55%,#153c4f77 100%)}.hero:after{pointer-events:none}.logo img{object-fit:contain}
