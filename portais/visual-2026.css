@@ -1,0 +1,55 @@
+
+/* Identidades próprias: mudanças somente visuais, sem alterar navegação nem conteúdo. */
+body.portal-eb .mast{background:#f4f7ef;border-bottom:3px solid #77946d}
+body.portal-eb .brand strong{color:#244732;font-weight:850}
+.eb-launch{background-image:linear-gradient(104deg,#122b1dfa 0%,#224b34ef 50%,#1b3b2ba0 100%),url('../assets/poses/eb-normal.png');background-position:center,right 4% center;background-size:cover,auto 135%;background-repeat:no-repeat;min-height:475px}
+.eb-launch:before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(ellipse at 82% 45%,transparent 0 62px,#dcebdc12 63px 64px,transparent 65px 110px);pointer-events:none}
+.eb-launch-inner{min-height:475px;position:relative;z-index:1}
+.eb-launch h1{font-weight:850;font-size:clamp(46px,6vw,82px);text-shadow:0 4px 15px #071d1490}
+.eb-launch-emblem{width:128px;height:128px;min-width:128px;min-height:128px;background:#f8faf4f0;border-color:#afc99f;align-self:flex-start;margin-top:44px}
+.eb-launch-emblem img{width:83%;height:83%}
+.eb-launch-choices{background:linear-gradient(#edf4e9,#f9fbf8)}.eb-launch-orb{background:radial-gradient(circle at 35% 25%,white,#eaf1e6);box-shadow:0 0 0 2px #7c9a77,0 17px 26px #173c2726}
+.eb-launch-direct>a:first-child{background:linear-gradient(110deg,#fff,#eaf2e7)}
+body.portal-naval .mast{background:#0b283d;border-bottom:3px solid #c1ab7c}
+body.portal-naval .brand strong,body.portal-naval .nav a{color:#f5f9fc}
+body.portal-naval .brand strong{font-family:Georgia,serif;font-weight:600}
+body.portal-naval .brand small{color:#e5c99c}
+.mb-maritime{min-height:535px;background-image:linear-gradient(90deg,#091e30f7 0%,#0b314fdd 47%,#0e324e79 100%),url('../assets/marinha-f45.webp');background-size:cover,cover;background-position:center,center 45%;background-repeat:no-repeat}
+.mb-maritime:after{background:repeating-linear-gradient(0deg,transparent 0 85px,#e9f3ff0c 86px 87px),repeating-linear-gradient(90deg,transparent 0 105px,#e9f3ff08 106px 107px)}
+.mb-maritime-inner{min-height:535px}.mb-maritime h1{font-size:clamp(46px,6.2vw,88px);text-shadow:0 4px 25px #000b}
+.mb-maritime p:not(.mb-eyebrow){color:#d6e7f0;font-size:18px}
+.mb-compass{width:208px;height:208px;background:#0a2a3dbb;backdrop-filter:blur(3px)}
+.mb-compass img{width:135px;height:135px}
+.mb-domain{background:linear-gradient(#e9f1f4,#f7fafb)}
+body.portal-flight .mast{background:#e6f0f6;border-bottom:3px solid #4f8cac}
+body.portal-flight .brand strong{font-weight:850;color:#174965}
+.fab-new-hero{min-height:465px;background-image:linear-gradient(90deg,#081e33f7 0%,#164463df 47%,#17436282 100%),url('../assets/gripen-fab.webp');background-size:cover,cover;background-position:center,center 43%;background-repeat:no-repeat}
+.fab-new-hero-inner{min-height:465px}.fab-new-hero h1{font-size:clamp(48px,6vw,86px);text-shadow:0 3px 22px #02172ba8}
+.fab-new-hero p:not(.fab-code){color:#e3f0f9;font-size:17px}
+.fab-new-hero-inner img{width:110px;height:110px;background:#133b58be;border:1px solid #94bbd0;border-radius:50%;padding:12px;align-self:flex-start;margin-top:38px}
+.fab-selector{grid-template-columns:repeat(4,minmax(0,1fr))}
+.fab-sector{min-height:270px;padding:24px 20px;border-left:0;border-top:5px solid #6e9fb9}
+.fab-sector strong{font-size:22px;line-height:1.22}
+.fab-sector-caca{border-top-color:#376e96}.fab-sector-transporte{border-top-color:#77a9cb}.fab-sector-operacoes{border-top-color:#3e8797}.fab-sector-defesa{border-top-color:#899bb9}
+body.portal-rescue .mast{background:#1a1315;border-bottom:3px solid #c89159}
+body.portal-rescue .brand strong,body.portal-rescue .nav a{color:#f8f0e8}
+body.portal-rescue .brand small{color:#e2b99b}
+.fire-header{min-height:535px;background-image:linear-gradient(90deg,#151014fb 0%,#2a1919ed 48%,#24171a62 100%),url('../assets/poses/cbm-normal.png');background-size:cover,auto 110%;background-position:center,right 4% center;background-repeat:no-repeat;background-color:#171316;border-bottom:5px solid #d0a66a}
+.fire-header:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 4px,#ffffff07 5px 6px);opacity:.2}
+.fire-header-inner{min-height:535px;justify-content:flex-start;position:relative;z-index:1}
+.fire-header-inner>img{display:none}.fire-header-inner>div{max-width:760px}
+.fire-header-inner h1{font-weight:900;font-size:clamp(42px,6vw,78px);text-shadow:0 4px 18px #000c}
+.fire-selector{background:linear-gradient(#fff7f1,#f3e6dc)}
+.fire-orbs>a>span{box-shadow:0 0 0 5px #f6e6db,0 14px 22px #8b42383d}
+body.portal-police .mast{background:#0d1b35;border-bottom:3px solid #d8ad49}
+body.portal-police .brand strong,body.portal-police .nav a{color:#f7f8ff}
+body.portal-police .brand strong{font-weight:850;letter-spacing:.015em}
+body.portal-police .brand small{color:#e4cd9a}
+.police-banner{min-height:495px;background-image:linear-gradient(100deg,#0a1731fa 0%,#182b49e9 49%,#172c4970 100%),url('../assets/poses/pm-normal.png');background-size:cover,auto 115%;background-position:center,right 5% center;background-repeat:no-repeat;border-bottom:8px solid #d6ab4b}
+.police-banner-inner{min-height:495px}.police-banner h1{font-size:clamp(51px,6.5vw,89px);font-weight:900;text-shadow:0 3px 22px #000b}
+.police-banner p{font-size:17px;color:#e0e9f7}.police-banner-inner>img{align-self:flex-start;margin-top:34px;width:105px;height:105px;background:#122b48b9;border:1px solid #9ab4d2;border-radius:50%;padding:13px}
+.police-index{border-top:5px solid #d2ac56}.police-index-title{background:#fcfaf4}
+@media(max-width:1100px){.fab-selector{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:830px){.eb-launch{background-position:center,right -130px center;background-size:cover,auto 120%}.eb-launch-emblem{display:none}.mb-compass{display:none}.mb-maritime,.mb-maritime-inner{min-height:410px}.fire-header{background-position:center,right -115px center}.police-banner{background-position:center,right -110px center}}
+@media(max-width:650px){.eb-launch,.fire-header,.police-banner{background-size:cover,auto 100%}.eb-launch{background-image:linear-gradient(96deg,#16301efa,#224333e1),url('../assets/poses/eb-normal.png')}.fire-header{background-image:linear-gradient(90deg,#181115fa,#281719ae),url('../assets/poses/cbm-normal.png')}.police-banner{background-image:linear-gradient(90deg,#111d37fa,#1a2f4aac),url('../assets/poses/pm-normal.png')}.eb-launch-inner{min-height:340px}.fab-selector{grid-template-columns:1fr}.fab-new-hero,.fab-new-hero-inner{min-height:350px}.fab-new-hero-inner img,.police-banner-inner>img{display:none}.fire-header,.fire-header-inner{min-height:385px}.police-banner,.police-banner-inner{min-height:340px}}
+@media(prefers-reduced-motion:reduce){.eb-launch-orb,.fab-sector,.fire-orbs>a>span{transition:none!important}}
