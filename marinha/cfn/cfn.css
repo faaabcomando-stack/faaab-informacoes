@@ -1,0 +1,22 @@
+/* CFN · portal próprio na FAAAB. Layout editorial naval e independente do site da Marinha. */
+:root{--cfn-ink:#16354b;--cfn-blue:#123550;--cfn-muted:#637887;--cfn-gold:#a58c57;--cfn-line:#dbe4e7;--cfn-bg:#f8fafb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:15px;line-height:1.65;color:var(--cfn-ink);background:var(--cfn-bg)}
+a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid var(--cfn-gold);outline-offset:3px}
+.cfn-wrap{width:min(1160px,calc(100% - 52px));margin-inline:auto}.cfn-skip{position:absolute;top:-90px;left:14px;z-index:60;background:#fff;padding:9px 15px}.cfn-skip:focus{top:12px}
+.cfn-rule{height:4px;background:var(--cfn-gold)}
+.cfn-header{background:#fff;border-bottom:1px solid var(--cfn-line)}
+.cfn-header-inner{min-height:94px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.cfn-brand{display:flex;align-items:center;gap:15px;min-width:0}.cfn-mark{width:54px;height:54px;display:grid;place-items:center;border:2px solid #284f68;border-radius:50%;color:#284f68;font-weight:900;font-size:18px;letter-spacing:-.05em;flex:none;background:#f5f8fa}
+.cfn-brand strong{display:block;font-size:clamp(18px,2.1vw,25px);line-height:1.15;letter-spacing:-.03em;color:var(--cfn-ink)}.cfn-brand small{font-size:10px;text-transform:uppercase;letter-spacing:.13em;font-weight:750;color:#6b7f87;display:block;margin-top:4px}
+.cfn-nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}.cfn-nav a{font-size:12px;font-weight:800;border-bottom:2px solid transparent;padding:11px 0}.cfn-nav a:hover,.cfn-nav a[aria-current="page"]{border-bottom-color:var(--cfn-gold)}
+.cfn-lead{background:#fff;border-bottom:1px solid var(--cfn-line);padding:76px 0 65px}.cfn-kicker{font-size:11px;letter-spacing:.16em;color:#8b774d;text-transform:uppercase;font-weight:850;margin:0 0 15px}
+.cfn-lead h1{font-size:clamp(42px,5vw,70px);letter-spacing:-.05em;line-height:1.1;margin:0 0 20px;font-weight:780}.cfn-lead p:last-child{color:#536c79;max-width:690px;font-size:16px;line-height:1.8;margin:0}
+.cfn-section{padding:57px 0 67px}.cfn-head{border-bottom:2px solid #b8a579;padding-bottom:22px;display:grid;grid-template-columns:1fr 1.1fr;gap:35px;align-items:start}.cfn-head h2{font-size:clamp(29px,3.2vw,39px);letter-spacing:-.04em;line-height:1.15;margin:0}.cfn-head p{color:var(--cfn-muted);margin:0;font-size:14px}
+.cfn-org{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.6fr);gap:35px;padding:29px 0;border-bottom:1px solid var(--cfn-line)}
+.cfn-org h3{font-size:clamp(19px,2vw,25px);letter-spacing:-.035em;margin:0 0 6px;line-height:1.3}.cfn-org small{display:block;font-size:11px;color:#697c85;text-transform:uppercase;letter-spacing:.09em;font-weight:800}
+.cfn-org ul{padding:0;margin:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}.cfn-org li{border-bottom:1px solid var(--cfn-line);padding:0 0 9px;font-size:14px;color:#425e6d}.cfn-org li b{color:#193e57}
+.cfn-note{margin:28px 0 0;font-size:12px;color:#657d88;line-height:1.7}
+.cfn-footer{background:#102d41;color:#ecf1f3;padding:27px 0 21px}.cfn-footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.cfn-footer strong{font-size:16px}.cfn-footer a{font-size:12px;text-decoration:underline;text-underline-offset:4px}.cfn-legal{border-top:1px solid #ffffff31;padding-top:15px;margin-top:21px;font-size:11px;color:#c2d1d8}
+@media(max-width:830px){.cfn-header-inner{flex-direction:column;align-items:flex-start;padding:15px 0;gap:6px}.cfn-org{grid-template-columns:1fr;gap:12px}.cfn-head{grid-template-columns:1fr;gap:11px}}
+@media(max-width:600px){.cfn-wrap{width:calc(100% - 34px)}.cfn-header-inner{min-height:auto}.cfn-brand strong{font-size:20px}.cfn-mark{width:48px;height:48px}.cfn-nav{gap:0 18px}.cfn-lead{padding:49px 0}.cfn-section{padding:37px 0 48px}.cfn-org ul{grid-template-columns:1fr}.cfn-footer-inner{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
