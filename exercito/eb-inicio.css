@@ -34,7 +34,7 @@ body.eb.eb-home .eb-division-list { border-top: 2px solid #a3b49c; }
 body.eb.eb-home .eb-division-row { position: relative; display: grid; grid-template-columns: minmax(245px, 1fr) minmax(0, 1.35fr) 32px; gap: 42px; align-items: start; min-width: 0; padding: 31px 0 34px; border-bottom: 1px solid var(--eb-line); }
 body.eb.eb-home .eb-division-identity { display: flex; align-items: center; gap: 22px; min-width: 0; }
 body.eb.eb-home .eb-division-identity img { flex: 0 0 auto; width: 70px; height: 82px; object-fit: contain; }
-body.eb.eb-home .eb-division-identity small { display: block; text-transform: uppercase; color: #6e8771; font-size: 10px; font-weight: 850; letter-spacing: .13em; margin-bottom: 4px; }
+body.eb.eb-home .eb-division-identity small { display: block; text-transform: uppercase; color: #60785f; font-size: 11px; font-weight: 850; letter-spacing: .13em; margin-bottom: 4px; }
 body.eb.eb-home .eb-division-identity h3 { color: #1c4034; font-size: clamp(20px, 2.25vw, 28px); letter-spacing: -.035em; line-height: 1.2; margin: 0 0 7px; }
 body.eb.eb-home .eb-division-identity p { color: var(--eb-muted); margin: 0; font-size: 12px; }
 body.eb.eb-home .eb-division-details { padding-top: 4px; }
@@ -52,7 +52,7 @@ body.eb.eb-home .eb-structure-head h2 { font-size: clamp(25px, 3vw, 34px); lette
 body.eb.eb-home .eb-structure-head a { font-size: 12px; font-weight: 800; color: #315b45; text-decoration: underline; text-underline-offset: 5px; }
 body.eb.eb-home .eb-structure-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 46px; }
 body.eb.eb-home .eb-structure-item { padding: 25px 0 27px; border-bottom: 1px solid var(--eb-line); min-width: 0; }
-body.eb.eb-home .eb-structure-item > span { font-size: 10px; text-transform: uppercase; font-weight: 850; letter-spacing: .14em; color: #768a78; }
+body.eb.eb-home .eb-structure-item > span { font-size: 11px; text-transform: uppercase; font-weight: 850; letter-spacing: .14em; color: #768a78; }
 body.eb.eb-home .eb-structure-item h3 { margin: 8px 0; font-size: 21px; line-height: 1.32; letter-spacing: -.03em; color: #244438; }
 body.eb.eb-home .eb-structure-item p { font-size: 13px; line-height: 1.8; margin: 0 0 12px; color: #61766c; }
 body.eb.eb-home .eb-structure-item a { font-size: 12px; font-weight: 800; color: #315f49; border-bottom: 1px solid currentColor; padding-bottom: 2px; }
@@ -114,3 +114,6 @@ body.eb.eb-home .eb-home-path a:hover{color:#163b2a}
   body.eb.eb-home .eb-brigade-names{gap:6px}
   body.eb.eb-home .eb-brigade-names li{font-size:11px}
 }
+
+/* Noticiário do EB, sem cartão fictício na página inicial. */
+body.eb.eb-home .eb-news-empty{border-top:2px solid #a3b49c;padding:25px 0;margin:0 0 90px;color:#4c6759;font-size:15px;line-height:1.7}
