@@ -13,6 +13,15 @@ const url=k=>'hierarquia.html?forca='+encodeURIComponent(k);
 const rankUrl=(k,n)=>'patente.html?forca='+encodeURIComponent(k)+'&patente='+encodeURIComponent(slug(n));
 const summaries={
  'Recruta':'Inicia a formação militar e aprende os procedimentos básicos. O Recruta não possui insígnia.',
+ 'Mobilizado de Segunda Classe':'Etapa inicial de mobilização e registro interno da FAAAB.',
+ 'Mobilizado de Primeira Classe':'Etapa de mobilização que antecede o ingresso como Recruta.',
+ 'Taifeiro Especial':'Graduação própria da progressão de praças da FAAAB.',
+ 'Sargento-Mor':'Graduação superior da carreira de sargentos do jogo.',
+ 'Sargento-Mor de Comando':'Graduação superior de sargento na estrutura própria da FAAAB.',
+ 'Comandante':'Cargo previsto no alto comando do Exército da FAAAB; regras de nomeação definidas pela administração.',
+ 'Comodoro do Ar':'Posto adicional da FAAAB situado entre Coronel e Brigadeiro na FAB.',
+ 'Comodoro':'Posto adicional da FAAAB situado entre Capitão de Mar e Guerra e Contra-Almirante na Marinha.',
+
  'Soldado':'Executa atividades de equipe e tarefas atribuídas pela unidade.',
  'Soldado de Primeira Classe':'Atua em tarefas de equipe com experiência maior.',
  'Soldado de Segunda Classe':'Está na etapa inicial do serviço e aprende procedimentos de sua força.',
@@ -84,7 +93,7 @@ if(content){
  const note=(data.regrasDeAcesso[k]||{});
  const admission=note[n]||note.geral||'Critérios de ingresso ainda em definição.';
  const stage=n==='Recruta';
- const rankType=stage?'Etapa de ingresso e formação':'Patente / graduação';
+ const rankType=stage?'Etapa de ingresso e formação':'Posto, graduação ou função da FAAAB';
  const intro=(data.contextoIngressos||{})[k]||'Fluxo de ingresso a definir.';
  const detail=(title,value)=>'<div class="rank-detail"><dt>'+esc(title)+'</dt><dd>'+esc(value)+'</dd></div>';
  content.innerHTML=[
