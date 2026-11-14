@@ -1,0 +1,116 @@
+/* FAAAB | Hierarquia. A imagem fornecida pelo usuário é usada em toda a página. */
+body.hierarquia-capa{
+  min-height:100vh;
+  background-color:#1a3541;
+  background-image:
+    linear-gradient(180deg,rgba(7,25,34,.56) 0%,rgba(9,30,38,.60) 35%,rgba(5,22,30,.82) 100%),
+    url("fundo-hierarquia-faaab.webp");
+  background-attachment:fixed;
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  color:#f5f7f8;
+}
+body.hierarquia-capa .header{
+  position:absolute!important;top:0;left:0;right:0;z-index:45;
+  background:transparent!important;border-bottom:1px solid rgba(255,255,255,.26)!important;
+  box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+}
+body.hierarquia-capa .header-inner{min-height:79px}
+body.hierarquia-capa .identity{gap:12px;max-width:640px}
+body.hierarquia-capa .identity img{
+  width:44px;height:44px;object-fit:contain;background:transparent;
+  filter:drop-shadow(0 2px 5px #05151e9c)
+}
+body.hierarquia-capa .identity-text strong{
+  font-size:clamp(13px,1.25vw,17px);font-weight:760;line-height:1.18;
+  color:#fff;letter-spacing:-.015em;text-shadow:0 2px 9px #001823;
+}
+body.hierarquia-capa .nav a{font-size:12px;color:#fff;text-shadow:0 2px 9px #001823}
+body.hierarquia-capa .nav a:hover,
+body.hierarquia-capa .nav a[aria-current="page"]{color:#fff}
+body.hierarquia-capa .nav a[aria-current="page"]::after{height:2px}
+body.hierarquia-capa .hier-main{
+  padding:0 0 95px;min-height:calc(100vh - 170px);background:transparent;
+}
+body.hierarquia-capa .hier-intro{
+  background:transparent!important;overflow:visible;
+  padding:clamp(150px,13.5vw,193px) 0 70px;
+}
+body.hierarquia-capa .hier-intro::after{display:none}
+body.hierarquia-capa .hier-intro h1{
+  font-size:clamp(49px,6vw,82px);letter-spacing:-.055em;
+  color:#fff;text-shadow:0 3px 20px rgba(1,15,23,.6);
+}
+body.hierarquia-capa .hier-intro p{
+  color:#f0f5f5;max-width:740px;text-shadow:0 2px 8px rgba(0,14,21,.8)
+}
+body.hierarquia-capa .hier-force-nav{margin:10px auto 56px;max-width:900px}
+body.hierarquia-capa .hier-orb{color:#fff;text-shadow:0 2px 8px rgba(0,14,21,.8)}
+body.hierarquia-capa .hier-orb-art{
+  background:rgba(13,40,50,.55);
+  border:1px solid rgba(250,236,206,.7);
+  box-shadow:0 8px 26px rgba(0,13,19,.25);
+  backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+}
+body.hierarquia-capa .hier-orb.is-selected .hier-orb-art{
+  outline:2px solid #efcf8f;
+  box-shadow:0 0 0 4px rgba(10,26,34,.35),0 10px 28px rgba(0,12,20,.3)
+}
+body.hierarquia-capa .hier-selected-heading{border-bottom-color:rgba(255,255,255,.35)}
+body.hierarquia-capa .hier-selected-heading h2{color:#fff;text-shadow:0 2px 9px #021521}
+body.hierarquia-capa .hier-selected-heading p{color:#e0e9e9}
+body.hierarquia-capa .hier-group{
+  background:rgba(8,30,41,.76);border:1px solid rgba(255,255,255,.28);
+  backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+  box-shadow:0 7px 24px rgba(0,13,24,.12)
+}
+body.hierarquia-capa .hier-group h3{color:#ead4a7}
+body.hierarquia-capa .hier-rank-link{
+  color:#fff;border-top-color:rgba(255,255,255,.2);
+}
+body.hierarquia-capa .hier-rank-link:hover{color:#f3d49b}
+body.hierarquia-capa .hier-rank-link small{color:#d6dfde}
+body.hierarquia-capa .hier-rank-arrow{color:#e0c491}
+body.hierarquia-capa .hier-guidance{color:#e2e9e7}
+body.hierarquia-capa .rank-main-shell{
+  padding-top:145px;padding-bottom:90px;min-height:calc(100vh - 180px);
+  background:transparent;
+}
+body.hierarquia-capa .rank-topnav,
+body.hierarquia-capa .rank-topnav a,
+body.hierarquia-capa .rank-heading p{color:#e3eeee}
+body.hierarquia-capa .rank-topnav a:hover{color:#fff}
+body.hierarquia-capa .rank-heading{border-bottom-color:rgba(255,255,255,.35)}
+body.hierarquia-capa .rank-heading h1{color:#fff;text-shadow:0 2px 14px #031927}
+body.hierarquia-capa .rank-uniform,
+body.hierarquia-capa .rank-panel{
+  background:rgba(244,248,249,.96);color:#203f50;border-color:rgba(255,255,255,.5)
+}
+body.hierarquia-capa .rank-not-found{color:#fff}
+body.hierarquia-capa .rank-not-found a{color:#f2d4a1}
+body.hierarquia-capa .footer{
+  position:relative;background:rgba(7,25,37,.84);border-top:1px solid rgba(255,255,255,.2)
+}
+@media(max-width:760px){
+  body.hierarquia-capa .header-inner{min-height:68px}
+  body.hierarquia-capa .identity img{width:40px;height:40px}
+  body.hierarquia-capa .identity-text strong{font-size:12px;max-width:280px}
+  body.hierarquia-capa .menu-toggle{
+    color:#fff;height:37px;background:rgba(8,27,41,.44);
+    border:1px solid rgba(255,255,255,.45)
+  }
+  body.hierarquia-capa .menu-icon i{background:#fff}
+  body.hierarquia-capa .nav{
+    background:rgba(8,28,43,.98);border-top:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  }
+  body.hierarquia-capa .hier-intro{padding:121px 0 43px}
+  body.hierarquia-capa .hier-force-nav{margin:12px auto 42px}
+  body.hierarquia-capa .rank-main-shell{padding-top:114px}
+}
+@media(max-width:480px){
+  body.hierarquia-capa .identity img{width:36px;height:36px}
+  body.hierarquia-capa .identity-text strong{font-size:11px;max-width:220px}
+  body.hierarquia-capa .hier-intro{padding-top:111px}
+}
