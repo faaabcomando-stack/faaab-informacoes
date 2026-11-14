@@ -72,8 +72,14 @@ def validate():
             if normalized.startswith("../") or not (ROOT / normalized).is_file():
                 bad.append(f"{name}: recurso quebrado {url} -> {normalized}")
     titulares = json.loads((ROOT / "data/titulares.json").read_text(encoding="utf-8"))
-    if not all(titulares["forcas"][f]["grupo_id"] is None for f in ("eb", "fab", "mb", "cbm", "pm")):
-        bad.append("IDs do Roblox devem permanecer vazios até configuração real")
+    for f in ("eb", "fab", "mb", "cbm", "pm"):
+        cfg = titulares["forcas"][f]
+        gid = cfg["grupo_id"]
+        roles = cfg["papeis_ids"]
+        if gid is not None and (not isinstance(gid, int) or gid <= 0 or not isinstance(roles, list) or not roles):
+            bad.append(f"{f}: ID de grupo configurado sem papéis elegíveis válidos")
+        if gid is None and roles:
+            bad.append(f"{f}: papéis configurados sem ID de grupo")
     noticias = json.loads((ROOT / "assets/publicacoes-data.json").read_text(encoding="utf-8"))
     if not isinstance(noticias, list):
         bad.append("Catálogo de notícias precisa ser uma lista")
