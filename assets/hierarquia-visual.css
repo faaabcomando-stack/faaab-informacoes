@@ -114,3 +114,18 @@ body.hierarquia-capa .footer{
   body.hierarquia-capa .identity-text strong{font-size:11px;max-width:220px}
   body.hierarquia-capa .hier-intro{padding-top:111px}
 }
+
+/* FAAAB: fotos por força, exclusivamente nesta página e nas fichas centrais.
+   As páginas internas de cada instituição não recebem essas imagens. */
+body.hierarquia-capa[data-hier-force="fab"] {
+  background-image:linear-gradient(180deg,rgba(6,24,39,.55),rgba(3,24,39,.76)),url("fundo-fab-hierarquia.webp");
+}
+body.hierarquia-capa[data-hier-force="mb"] {
+  background-image:linear-gradient(180deg,rgba(5,23,38,.50),rgba(3,22,38,.77)),url("fundo-mb-hierarquia.webp");
+}
+body.hierarquia-capa[data-hier-force="cbm"] {
+  background-image:linear-gradient(180deg,rgba(32,18,22,.51),rgba(24,14,19,.79)),url("fundo-cbm-hierarquia.webp");
+}
+body.hierarquia-capa[data-hier-force="pm"] {
+  background-image:linear-gradient(180deg,rgba(13,27,43,.52),rgba(9,25,39,.78)),url("fundo-pm-hierarquia.webp");
+}
