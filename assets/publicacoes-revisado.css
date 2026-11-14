@@ -1,80 +1,241 @@
-
-.news-2026-main{background:#eff4f6;min-height:69vh}.news-2026-hero{padding:63px 0;background:linear-gradient(100deg,#112e40,#255269);color:white;border-bottom:5px solid #c1a776}.news-2026-kicker{font-size:11px;letter-spacing:.19em;color:#d3be94;font-weight:850;margin:0 0 10px}.news-2026-hero h1{font-size:clamp(43px,5.2vw,72px);line-height:1;letter-spacing:-.05em;margin:0 0 13px}.news-2026-hero p:not(.news-2026-kicker){font-size:15px;color:#d9e6ef;max-width:610px}.news-2026-body{padding:55px 0 83px}.news-2026-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:28px;border-bottom:2px solid #b5c9d2;padding-bottom:18px}.news-2026-heading span{letter-spacing:.17em;font-size:11px;font-weight:800;color:#4c7182}.news-2026-heading h2{font-size:31px;margin:8px 0 0;color:#1c3d51}.news-2026-heading small{color:#698590}.news-2026-empty{min-height:235px;padding:35px 39px;background:white;border:1px solid #d5e1e6;display:flex;align-items:center;gap:35px}.news-2026-symbol{flex:none;width:92px;height:92px;border-radius:50%;border:2px solid #c2ad83;display:grid;place-items:center;background:#f5f8f7}.news-2026-symbol img{width:70px;height:70px;object-fit:contain}.news-2026-empty span{font-size:11px;letter-spacing:.12em;font-weight:850;color:#65808b}.news-2026-empty h3{font-size:23px;line-height:1.3;color:#21475a;margin:9px 0}.news-2026-empty p{color:#607d8b;font-size:14px;max-width:580px}.news-2026-hero .wrap,.news-2026-body{max-width:1120px}@media(max-width:650px){.news-2026-hero{padding:43px 0}.news-2026-body{padding:40px 0}.news-2026-empty{padding:24px;gap:18px}.news-2026-symbol{display:none}.news-2026-heading small{display:none}}
-
-
-/* Cabeçalho transparente de Publicações — mesmo tamanho e composição do Início FAAAB.
-   Fotografia aérea indicada pelo usuário: Base Aérea de Campo Grande, Campo Grande News. */
-body.publicacoes-page .header{
-  position:absolute!important;
-  top:0;left:0;right:0;z-index:45;
-  background:transparent!important;
-  border-bottom:1px solid rgba(255,255,255,.30)!important;
-  box-shadow:none!important;
-  -webkit-backdrop-filter:none!important;
-  backdrop-filter:none!important;
-}
-body.publicacoes-page .header-inner{min-height:79px}
-body.publicacoes-page .header .identity{gap:12px;max-width:640px}
-body.publicacoes-page .header .identity img{
-  width:44px;height:44px;background:transparent;object-fit:contain;
-  filter:drop-shadow(0 2px 5px #05151e9c)
-}
-body.publicacoes-page .header .identity-text strong{
-  color:#fff;font-size:clamp(13px,1.25vw,17px);font-weight:760;
-  letter-spacing:-.015em;line-height:1.18;
-  text-shadow:0 2px 9px #001823
-}
-body.publicacoes-page .header .nav a{
-  color:#fff;font-size:12px;text-shadow:0 2px 9px #001823
-}
-body.publicacoes-page .header .nav a:hover,
-body.publicacoes-page .header .nav a[aria-current="page"]{color:#fff}
-body.publicacoes-page .header .nav a[aria-current="page"]::after{height:2px}
-body.publicacoes-page .main{padding:0;min-height:calc(100vh - 200px)}
-body.publicacoes-page .news-2026-hero{
-  min-height:clamp(430px,54vh,620px);
-  display:flex;align-items:flex-end;
-  padding:180px 0 72px;
+/*
+ * FAAAB / Publicações
+ * A foto aérea ocupa o fundo da página inteira, sem se repetir em seções.
+ * Os painéis permanecem vazios até o cadastro de notícias reais.
+ * O cabeçalho replica as proporções da página inicial.
+ */
+body.publicacoes-page {
+  min-height: 100vh;
+  color: #fff;
+  background-color: #132d3d;
   background-image:
-    linear-gradient(180deg,rgba(8,31,44,.51) 0%,rgba(8,34,47,.22) 36%,rgba(8,31,45,.72) 100%),
+    linear-gradient(180deg, rgba(6,23,34,.50) 0%, rgba(5,26,39,.43) 23%, rgba(7,28,41,.69) 67%, rgba(4,20,32,.87) 100%),
     url("https://cdn6.campograndenews.com.br/uploads/noticias/2020/03/10/ejabftkyu32p.jpg");
-  background-size:cover;
-  background-position:center,center 45%;
-  background-repeat:no-repeat;
-  background-color:#183e50;
-  border-bottom:4px solid #c2a777;
-  color:#fff
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-body.publicacoes-page .news-2026-hero .wrap{width:min(1300px,calc(100% - 72px));max-width:1300px}
-body.publicacoes-page .news-2026-hero h1{
-  font-size:clamp(42px,5.3vw,72px);
-  max-width:780px;text-shadow:0 3px 17px rgba(3,18,29,.7)
+body.publicacoes-page .header {
+  position: absolute !important;
+  inset: 0 0 auto;
+  z-index: 45;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255,255,255,.26) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
 }
-body.publicacoes-page .news-2026-kicker,
-body.publicacoes-page .news-2026-hero p:not(.news-2026-kicker){
-  text-shadow:0 2px 8px rgba(0,18,29,.8)
+body.publicacoes-page .header-inner { min-height: 79px; }
+body.publicacoes-page .identity { gap: 12px; max-width: 640px; }
+body.publicacoes-page .identity img {
+  width: 44px; height: 44px;
+  background: transparent;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px #05151e9c);
 }
-body.publicacoes-page .news-2026-hero p:not(.news-2026-kicker){
-  color:#f1f6f6;max-width:650px;line-height:1.65
+body.publicacoes-page .identity-text strong {
+  font-size: clamp(13px,1.25vw,17px);
+  font-weight: 760;
+  letter-spacing: -.015em;
+  line-height: 1.18;
+  color: #fff;
+  text-shadow: 0 2px 9px #001823;
 }
-@media(max-width:760px){
-  body.publicacoes-page .header-inner{min-height:68px}
-  body.publicacoes-page .header .identity img{width:40px;height:40px}
-  body.publicacoes-page .header .identity-text strong{font-size:12px;max-width:280px}
-  body.publicacoes-page .menu-toggle{
-    height:37px;background:rgba(8,27,41,.44);border:1px solid rgba(255,255,255,.45);color:#fff
+body.publicacoes-page .nav a {
+  font-size: 12px;
+  color: #fff;
+  text-shadow: 0 2px 9px #001823;
+}
+body.publicacoes-page .nav a:hover,
+body.publicacoes-page .nav a[aria-current="page"] { color: #fff; }
+body.publicacoes-page .nav a[aria-current="page"]::after { height: 2px; }
+
+body.publicacoes-page .news-2026-main {
+  min-height: 100vh;
+  padding: 0 0 100px;
+  background: transparent;
+}
+body.publicacoes-page .publication-head {
+  padding-top: clamp(142px, 13vw, 180px);
+  padding-bottom: 32px;
+}
+body.publicacoes-page .publication-eyebrow {
+  margin: 0 0 12px;
+  color: #eed4a7;
+  font-size: 11px;
+  font-weight: 820;
+  letter-spacing: .17em;
+  text-shadow: 0 2px 8px #071925;
+}
+body.publicacoes-page .publication-head h1 {
+  margin: 0;
+  font-size: clamp(43px, 5vw, 72px);
+  font-weight: 800;
+  letter-spacing: -.052em;
+  line-height: 1.08;
+  text-shadow: 0 4px 22px rgba(1,19,31,.72);
+}
+body.publicacoes-page .publication-content { margin-bottom: 49px; }
+body.publicacoes-page .publication-section-heading {
+  display: flex;
+  align-items: center;
+  min-height: 45px;
+  margin: 0 0 19px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.4);
+}
+body.publicacoes-page .publication-section-heading h2 {
+  font-size: clamp(19px, 2.2vw, 28px);
+  font-weight: 740;
+  letter-spacing: -.025em;
+  margin: 0;
+  text-shadow: 0 2px 12px #021927;
+}
+body.publicacoes-page .publication-feature-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1.75fr) minmax(0,1fr);
+  gap: 14px;
+  height: clamp(335px, 35vw, 468px);
+}
+body.publicacoes-page .publication-side {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 14px;
+}
+body.publicacoes-page .publication-slot {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg,rgba(15,47,65,.14),rgba(8,30,44,.54));
+  border: 1px solid rgba(255,255,255,.39);
+  box-shadow: inset 0 0 0 1px rgba(5,23,36,.12), 0 12px 28px rgba(0,15,29,.1);
+  -webkit-backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(1.5px);
+}
+body.publicacoes-page .publication-slot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 26%;
+  background: #c7af84;
+}
+body.publicacoes-page .publication-slot-small::before { width: 18%; }
+
+body.publicacoes-page .publication-carousel-section { padding-bottom: 8px; }
+body.publicacoes-page .publication-carousel {
+  min-height: clamp(260px, 31vw, 390px);
+  position: relative;
+  border: 1px solid rgba(255,255,255,.4);
+  box-shadow: 0 14px 32px rgba(0,17,30,.12);
+  overflow: hidden;
+  background: linear-gradient(100deg,rgba(7,30,44,.47),rgba(11,40,57,.18),rgba(7,30,44,.5));
+  -webkit-backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(1.5px);
+}
+body.publicacoes-page .publication-carousel-window,
+body.publicacoes-page .publication-carousel-slide {
+  position: absolute;
+  inset: 0;
+}
+body.publicacoes-page .publication-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 53px;
+  border: 1px solid rgba(255,255,255,.48);
+  background: rgba(8,30,43,.5);
+  color: #fff;
+  font-size: 35px;
+  line-height: 1;
+}
+body.publicacoes-page .publication-carousel-control:disabled {
+  cursor: default;
+  opacity: .5;
+}
+body.publicacoes-page .publication-carousel-previous { left: 18px; }
+body.publicacoes-page .publication-carousel-next { right: 18px; }
+body.publicacoes-page .publication-carousel-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 0;right: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+body.publicacoes-page .publication-carousel-dots span {
+  display: block;
+  width: 38px;
+  height: 3px;
+  background: rgba(255,255,255,.64);
+}
+body.publicacoes-page .footer {
+  position: relative;
+  background: rgba(7,26,39,.77);
+  border-top: 1px solid rgba(255,255,255,.2);
+}
+body.publicacoes-page .publication-credit-link {
+  color: #e4edf0;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+body.publicacoes-page .footer-legal { color: #d4e2e8; }
+
+@media (max-width: 760px) {
+  body.publicacoes-page .header-inner { min-height: 68px; }
+  body.publicacoes-page .identity img { width: 40px; height: 40px; }
+  body.publicacoes-page .identity-text strong { font-size: 12px; max-width: 280px; }
+  body.publicacoes-page .menu-toggle {
+    height: 37px;
+    color: #fff;
+    background: rgba(8,27,41,.44);
+    border: 1px solid rgba(255,255,255,.45);
   }
-  body.publicacoes-page .menu-icon i{background:#fff}
-  body.publicacoes-page .nav.is-open{
-    background:rgba(8,28,43,.97);border-top:1px solid #ffffff33;
-    -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)
+  body.publicacoes-page .menu-icon i { background: #fff; }
+  body.publicacoes-page .nav {
+    background: rgba(8,28,43,.97);
+    border-top: 1px solid rgba(255,255,255,.2);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
   }
-  body.publicacoes-page .nav a{color:#fff}
-  body.publicacoes-page .news-2026-hero{min-height:440px;padding:130px 0 46px}
-  body.publicacoes-page .news-2026-hero .wrap{width:calc(100% - 32px)}
+  body.publicacoes-page .nav a { color: #fff; }
+  body.publicacoes-page .publication-head {
+    padding-top: 123px;
+    padding-bottom: 27px;
+  }
+  body.publicacoes-page .publication-feature-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  body.publicacoes-page .publication-slot-feature { min-height: 335px; }
+  body.publicacoes-page .publication-side {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 190px;
+  }
+  body.publicacoes-page .publication-carousel { min-height: 280px; }
+  body.publicacoes-page .news-2026-main { padding-bottom: 68px; }
 }
-@media(max-width:480px){
-  body.publicacoes-page .header .identity img{width:36px;height:36px}
-  body.publicacoes-page .header .identity-text strong{font-size:11px;max-width:220px}
-  body.publicacoes-page .news-2026-hero{min-height:400px;padding:112px 0 38px}
+@media (max-width: 480px) {
+  body.publicacoes-page .identity img { width: 36px; height: 36px; }
+  body.publicacoes-page .identity-text strong { font-size: 11px; max-width: 220px; }
+  body.publicacoes-page .publication-head { padding-top: 110px; }
+  body.publicacoes-page .publication-slot-feature { min-height: 295px; }
+  body.publicacoes-page .publication-side {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 185px);
+  }
+  body.publicacoes-page .publication-carousel { min-height: 240px; }
+  body.publicacoes-page .publication-carousel-control { width: 35px; height: 41px; }
+  body.publicacoes-page .publication-carousel-previous { left: 10px; }
+  body.publicacoes-page .publication-carousel-next { right: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.publicacoes-page { scroll-behavior: auto; }
 }
