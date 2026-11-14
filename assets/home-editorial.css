@@ -1,0 +1,39 @@
+/* Reforma da capa FAAAB: navegação em vidro transparente sobre a própria mídia do início.
+   Apenas a home recebe a sobreposição — os portais internos preservam suas barras. */
+body.home .header{
+  position:absolute!important;top:0;right:0;left:0;z-index:45;
+  background:transparent!important;border-bottom:1px solid rgba(255,255,255,.26)!important;
+  box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important
+}
+body.home .header-inner{min-height:79px}
+body.home .header .identity,body.home .header .nav{position:relative;z-index:2}
+body.home .header .identity img{background:transparent;object-fit:contain;filter:drop-shadow(0 2px 5px #05151e9c)}
+body.home .header .identity-text strong,body.home .header .nav a{color:#fff;text-shadow:0 2px 9px #001823}
+body.home .header .nav a:hover,body.home .header .nav a[aria-current="page"]{color:#fff}
+body.home .visual-content{padding-top:clamp(137px,13vw,181px)}
+body.home .visual-hero>.visual-disclaimer{display:none}
+body.home .visual-overlay{background:linear-gradient(180deg,rgba(2,16,26,.35) 0%,rgba(2,17,29,.14) 24%,rgba(3,20,31,.32) 66%,rgba(4,19,29,.78) 100%)}
+body.home .footer{margin-top:0!important;background:#122b3b!important;border-top:1px solid #355061!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+body.home .footer-inner{min-height:82px}
+body.home .footer-inner small{font-size:11px}
+.home-press{background:#f6f5f0;color:#1d3949;padding:76px 0 89px;border-top:4px solid #baa071}
+.home-press-top{display:grid;grid-template-columns:1fr 2.2fr;align-items:end;gap:30px;border-bottom:1px solid #cfd8d7;padding-bottom:23px}
+.home-press-kicker{font-size:11px;letter-spacing:.18em;font-weight:850;text-transform:uppercase;color:#6e6658;margin:0}
+.home-press h2{margin:0;font-size:clamp(30px,4vw,54px);font-weight:780;letter-spacing:-.045em;line-height:1.1}
+.home-press-layout{display:grid;grid-template-columns:1fr 2.2fr;gap:30px;padding-top:27px}
+.home-press-aside{font-size:12px;color:#67747a;line-height:1.6;max-width:260px}
+.home-press-aside strong{font-size:11px;text-transform:uppercase;letter-spacing:.14em;display:block;color:#385368;margin-bottom:9px}
+.home-press-empty{border-top:3px solid #193e52;background:#fff;padding:28px 32px 30px;min-height:180px}
+.home-press-empty span{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:850;color:#a08a65}
+.home-press-empty h3{font-size:clamp(22px,2.6vw,32px);line-height:1.2;margin:16px 0 7px;letter-spacing:-.03em}
+.home-press-empty p{margin:0;font-size:14px;color:#647580}
+@media(max-width:760px){
+  body.home .header-inner{min-height:68px}
+  body.home .visual-content{padding-top:127px}
+  body.home .menu-toggle{background:rgba(8,27,41,.44)}
+  body.home .nav.is-open{background:rgba(8,28,43,.98)}
+  .home-press{padding:53px 0 62px}
+  .home-press-top,.home-press-layout{grid-template-columns:1fr;gap:13px}
+  .home-press-empty{padding:21px}
+  .home-press-aside{max-width:100%}
+}
