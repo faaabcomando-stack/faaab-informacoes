@@ -1,6 +1,6 @@
-/* Dados FAAAB: cursos priorizam as instruções recentes. Dias do manual CDP de referência. */
+/* Catálogo de patentes FAAAB; termos próprios do jogo, não equivalem a patentes oficiais. */
 window.FAAAB_HIERARQUIAS = {
-  "versao": "2026-11-13 — revisão de regras recentes",
+  "versao": "2026-11-14 — revisão de patentes e progressão própria FAAAB",
   "forcas": {
     "eb": {
       "nome": "Exército Brasileiro",
@@ -21,17 +21,20 @@ window.FAAAB_HIERARQUIAS = {
       ],
       "grupos": [
         {
-          "titulo": "Ingresso (etapa)",
+          "titulo": "Mobilização e ingresso",
           "patentes": [
+            "Mobilizado de Segunda Classe",
+            "Mobilizado de Primeira Classe",
             "Recruta"
           ]
         },
         {
           "titulo": "Praças",
           "patentes": [
-            "Soldado",
+            "Soldado de Segunda Classe",
             "Soldado de Primeira Classe",
-            "Cabo"
+            "Cabo",
+            "Taifeiro Especial"
           ]
         },
         {
@@ -40,6 +43,8 @@ window.FAAAB_HIERARQUIAS = {
             "Terceiro-Sargento",
             "Segundo-Sargento",
             "Primeiro-Sargento",
+            "Sargento-Mor",
+            "Sargento-Mor de Comando",
             "Subtenente"
           ]
         },
@@ -63,12 +68,13 @@ window.FAAAB_HIERARQUIAS = {
           ]
         },
         {
-          "titulo": "Generalato",
+          "titulo": "Alto comando",
           "patentes": [
             "General em Treinamento",
             "General de Brigada",
             "General de Divisão",
             "General de Exército",
+            "Comandante",
             "Marechal"
           ]
         }
@@ -79,7 +85,7 @@ window.FAAAB_HIERARQUIAS = {
       "sigla": "FAB",
       "imagem": "assets/forcas/fab.png",
       "descricao": "Força aérea: atividades de base, aviação, segurança, instrução e apoio.",
-      "fonte": "Postos reais como referência; formações da FAAAB são próprias.",
+      "fonte": "Hierarquia adaptada da FAB com Comodoro do Ar na progressão própria do jogo FAAAB.",
       "unidades": [
         "GSD",
         "GDAAE",
@@ -133,6 +139,7 @@ window.FAAAB_HIERARQUIAS = {
         {
           "titulo": "Oficiais-generais",
           "patentes": [
+            "Comodoro do Ar",
             "Brigadeiro",
             "Major-Brigadeiro",
             "Tenente-Brigadeiro do Ar",
@@ -146,7 +153,7 @@ window.FAAAB_HIERARQUIAS = {
       "sigla": "MB",
       "imagem": "assets/forcas/mb.png",
       "descricao": "Força naval: navegação, fuzileiros navais, bases, instrução e apoio.",
-      "fonte": "Hierarquia naval adaptada à progressão do jogo.",
+      "fonte": "Hierarquia naval adaptada com Comodoro na progressão própria do jogo FAAAB.",
       "unidades": [
         "Corpo de Fuzileiros Navais",
         "Força de Submarinos",
@@ -197,6 +204,7 @@ window.FAAAB_HIERARQUIAS = {
         {
           "titulo": "Almirantado",
           "patentes": [
+            "Comodoro",
             "Contra-Almirante",
             "Vice-Almirante",
             "Almirante de Esquadra"
@@ -316,7 +324,6 @@ window.FAAAB_HIERARQUIAS = {
   "cursoObrigatorioPorPatente": {
     "eb": {
       "Recruta": "Formação de Soldados da brigada — Internato e Instrução Básica.",
-      "Soldado": "Curso de Formação de Soldado Especializado (CFSE) + CTA. Próxima etapa: Soldado de 1ª Classe.",
       "Cabo": "ESA — Curso de Formação de Sargentos. Próxima etapa: 3º Sargento.",
       "Terceiro-Sargento": "Aperfeiçoamento de Sargentos I",
       "Segundo-Sargento": "Aperfeiçoamento de Sargentos II",
@@ -331,7 +338,8 @@ window.FAAAB_HIERARQUIAS = {
       "Major": "ECEME — CP/CAEM.",
       "Tenente-Coronel": "ECEME — CAEM/CCEM.",
       "Coronel": "ECEME — CPEAEx, prepara a fase de General em Treinamento.",
-      "General em Treinamento": "ECEME — conclusão do CPEAEx (etapa de formação)."
+      "General em Treinamento": "ECEME — conclusão do CPEAEx (etapa de formação).",
+      "Soldado de Segunda Classe": "Curso de Formação de Soldado Especializado (CFSE) + CTA. Próxima etapa: Soldado de 1ª Classe."
     },
     "fab": {
       "Soldado de Segunda Classe": "CESD — Curso de Especialização de Soldados. Próxima etapa: Soldado de 1ª Classe.",
@@ -419,7 +427,6 @@ window.FAAAB_HIERARQUIAS = {
   "regraCDP": "CDP concluída autoriza o próximo curso/treinamento ou exame; não gera promoção automática. Cargo de comando, lotação e qualificação são independentes da patente.",
   "diasPorPatente": {
     "eb": {
-      "Soldado": 1,
       "Soldado de Primeira Classe": 2,
       "Cabo": 3,
       "Terceiro-Sargento": 4,
@@ -436,7 +443,8 @@ window.FAAAB_HIERARQUIAS = {
       "Coronel": 20,
       "General de Brigada": 22,
       "General de Divisão": 24,
-      "General de Exército": 28
+      "General de Exército": 28,
+      "Soldado de Segunda Classe": 1
     },
     "fab": {
       "Recruta": 1,
