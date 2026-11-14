@@ -92,3 +92,13 @@
 .fx-school .empty p{margin:6px 0}
 .fx-school .empty a{color:#275840;font-weight:750}
 .fx-school .footer{background:#fff!important}
+
+.fx-catalog-link{margin:11px 0 24px;font-size:13px}.fx-catalog-link a{font-weight:800;text-underline-offset:4px;color:#275740}
+.fx-director .schools-grid .school-entry{border-color:var(--fx-line);min-width:0}
+.fx-director .schools-grid .school-entry img{width:75px;height:90px;object-fit:contain;object-position:center center}
+.fx-director .schools-grid .school-entry :is(h3,p){overflow-wrap:anywhere}
+.fx-credits-filter{display:flex;gap:13px;align-items:center;flex-wrap:wrap;background:#fff;border:1px solid var(--fx-line);padding:14px 16px;margin:18px 0}
+.fx-credits-filter label{color:#1c4635;font-size:13px}
+.fx-credits-filter select{padding:9px 10px;border:1px solid #819c88;font-size:14px;background:#fff;color:#1c4635}
+.fx-credits-filter span{font-size:12px;color:#536a62}
+@media(max-width:420px){.fx-credits-filter{align-items:flex-start;flex-direction:column}.fx-credits-filter select{width:100%}}
