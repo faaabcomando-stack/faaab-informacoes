@@ -72,7 +72,7 @@
       const back=article.querySelector('[data-article-back]');
       const allowed={eb:['Exército Brasileiro','../exercito/noticias.html'],fab:['Força Aérea Brasileira','../aeronautica/noticias.html'],mb:['Marinha Brasileira','../marinha/noticias.html'],pm:['Polícia Militar','../policia-militar/noticias.html'],cbm:['Corpo de Bombeiros Militar','../bombeiros/noticias.html']};
       const f=allowed[item.forca];
-      if(!f||!item.titulo||!item.data||!['publicacao','comunicado'].includes(item.tipo))throw Error('Registro incompleto');
+      if(!f||item.status!=='publicado'||!item.titulo||!item.data||!['publicacao','comunicado'].includes(item.tipo))throw Error('Registro incompleto');
       const parsedDate=new Date(item.data+'T12:00:00Z');
       if(Number.isNaN(parsedDate.getTime()))throw Error('Data inválida');
       date.dateTime=item.data;date.textContent=new Intl.DateTimeFormat('pt-BR',{timeZone:'UTC',day:'2-digit',month:'long',year:'numeric'}).format(parsedDate);

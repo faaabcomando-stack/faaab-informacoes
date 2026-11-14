@@ -1,0 +1,24 @@
+
+/* Os mesmos dados editoriais alimentam a central e o noticiário da força. */
+.publication-slot .fx-story{position:absolute;inset:0}
+.publication-slot{position:relative}
+.fx-story{display:flex;min-width:0;position:relative;overflow:hidden;background:#17394a;color:#fff;text-decoration:none!important;isolation:isolate}
+.fx-story::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,22,30,.92),rgba(4,22,30,.2) 85%);z-index:-1}
+.fx-story-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.fx-story-text{margin-top:auto;padding:21px;display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0}
+.fx-story time{font-size:12px;letter-spacing:.08em;font-weight:850;order:0}
+.fx-story-kind{font-size:11px;letter-spacing:.11em;font-weight:750;text-transform:uppercase;order:1}
+.fx-story strong{font-size:clamp(19px,2.6vw,34px);line-height:1.2;letter-spacing:-.025em;order:2;overflow-wrap:anywhere}
+.fx-story-credit{font-size:11px;color:#d5e0e0;line-height:1.35;order:3}
+.fx-story:hover strong{text-decoration:underline;text-underline-offset:4px}
+.fx-story:focus-visible{outline:3px solid #f6d891!important;outline-offset:-4px!important}
+.publication-slot-small .fx-story strong{font-size:clamp(16px,1.9vw,22px)}
+.publication-slot-small .fx-story-text{padding:16px}
+.publication-carousel .fx-story{height:100%;width:100%}
+.publication-carousel-window .fx-story{position:absolute;inset:0}
+.fx-force-articles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:20px 0 70px}
+.fx-story-force{min-height:220px}.fx-story-force strong{font-size:clamp(18px,2vw,26px)}
+.fx-story-force .fx-story-text{padding:18px}
+.publication-carousel-dots span.is-selected{background:#f2ce88!important}
+@media(max-width:720px){.fx-force-articles{grid-template-columns:1fr}.fx-story-force{min-height:210px}.fx-story-text{padding:13px}.publication-slot-small .fx-story-text{padding:11px}.publication-slot-small .fx-story-kind{font-size:9px}.publication-slot-small .fx-story strong{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.fx-story{transition:none!important}}
