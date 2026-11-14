@@ -79,3 +79,6 @@
 @media(max-width:780px){.fx-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fx-filters,.fx-filters-wide{grid-template-columns:repeat(2,minmax(0,1fr))}.fx-portrait-inner{grid-template-columns:1fr}.fx-portrait-figure{min-height:300px;height:320px}}
 @media(max-width:480px){.fx-wrap{width:calc(100% - 26px)}.fx-head-inner{flex-direction:column;align-items:flex-start;padding:12px 0;gap:4px}.fx-nav{gap:5px 15px}.fx-grid,.fx-grid-two,.fx-filters,.fx-filters-wide,.fx-pair{grid-template-columns:1fr}.fx-section{padding:32px 0}.fx-intro{padding:25px 0}.fx-card{padding:16px}.fx-portrait-inner{padding:15px}.fx-portrait-figure{height:265px;min-height:265px}.fx-uniform-view{padding:8px}.fx-return a{min-height:42px;display:inline-flex;align-items:center}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Filtros funcionam mesmo com cartões estilizados como grid/block. */
+.fx-page [hidden], .fx-school [hidden],.fx-director [hidden]{display:none!important}
