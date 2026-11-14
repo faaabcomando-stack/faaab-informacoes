@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Corrige apenas o fundo externo das três insígnias já cadastradas na FAAAB.
+"""Corrige apenas o fundo externo das insígnias já cadastradas na FAAAB.
 
 Mantém o desenho original, as cores, o texto e os detalhes do escudo.
 Executado durante a publicação do GitHub Pages; os PNGs publicados são RGBA.
@@ -14,6 +14,7 @@ TARGETS = {
     "FTB-Bda-Inf-AMV.png": "dark",
     "FTB-Bda-Inf-Bld.png": "light",
     "FTB-Bda-Inf-Mec.png": "dark",
+    "FMB-CIAA.png": "light",
 }
 
 def remove_outer_background(path: Path, mode: str) -> None:
