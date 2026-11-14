@@ -117,3 +117,41 @@ body.eb.eb-home .eb-home-path a:hover{color:#163b2a}
 
 /* Noticiário do EB, sem cartão fictício na página inicial. */
 body.eb.eb-home .eb-news-empty{border-top:2px solid #a3b49c;padding:25px 0;margin:0 0 90px;color:#4c6759;font-size:15px;line-height:1.7}
+
+/* Notícias importantes EB: 1 destaque amplo + 2 destaques menores, sem inventar conteúdo. */
+body.eb.eb-home .eb-home-news{
+  padding:54px 0 65px;
+  background:#f7f9f6;
+  border-bottom:1px solid #dce4dd;
+}
+body.eb.eb-home .eb-home-news-heading{margin:0 0 24px}
+body.eb.eb-home .eb-home-news-heading .eb-home-eyebrow{margin:0 0 8px;display:block;color:#53715c}
+body.eb.eb-home .eb-home-news-heading h1{
+  margin:0;color:#1e4034;font-size:clamp(28px,3.7vw,45px);
+  line-height:1.2;letter-spacing:-.045em;font-weight:800
+}
+body.eb.eb-home .eb-home-news-grid{
+  display:grid;grid-template-columns:minmax(0,1.78fr) minmax(0,1fr);
+  gap:14px;height:clamp(276px,30vw,375px)
+}
+body.eb.eb-home .eb-news-side{display:grid;grid-template-rows:1fr 1fr;gap:14px;min-height:0}
+body.eb.eb-home .eb-news-placeholder{
+  position:relative;min-height:0;
+  border:1px solid #8ba096;
+  background:linear-gradient(145deg,#e5ece5 0%,#f1f4ee 65%,#dce7dd 100%);
+  overflow:hidden;
+}
+body.eb.eb-home .eb-news-placeholder:after{
+  content:"";position:absolute;bottom:0;left:0;
+  width:27%;height:3px;background:#7c987a
+}
+body.eb.eb-home .eb-news-secondary:after{width:19%}
+@media(max-width:650px){
+  body.eb.eb-home .eb-home-news{padding:36px 0 41px}
+  body.eb.eb-home .eb-home-news-grid{grid-template-columns:1fr;height:auto;gap:10px}
+  body.eb.eb-home .eb-news-feature{min-height:235px}
+  body.eb.eb-home .eb-news-side{grid-template-columns:1fr 1fr;grid-template-rows:132px;gap:10px}
+}
+@media(max-width:420px){
+  body.eb.eb-home .eb-news-side{grid-template-columns:1fr;grid-template-rows:120px 120px}
+}
