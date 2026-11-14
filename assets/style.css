@@ -480,3 +480,8 @@ body.home .campaign-grid .force-pose-link:focus-visible{outline:3px solid #eed09
  body.home .campaign-grid .force-pose-link:focus:not(:focus-visible) .pose-cor{opacity:0}
 }
 @media(prefers-reduced-motion:reduce){body.home .campaign-grid .force-pose-link .force-pose{transition:none!important}}
+
+/* Aviso permanente do portal central — mesma posição inferior dos demais portais. */
+.footer-legal{border-top:1px solid rgba(255,255,255,.19);padding:15px 0 23px;color:#c7d5dc;font-size:11px;line-height:1.55}
+.footer-inner{min-height:72px}
+@media(max-width:760px){.footer-legal{padding:14px 0 22px}}
