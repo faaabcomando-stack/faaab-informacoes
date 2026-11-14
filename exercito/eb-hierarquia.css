@@ -1,0 +1,108 @@
+/* EB / Hierarquia e fichas — extensão do visual do Início.
+   Somente páginas deste site. Mantém o mesmo cabeçalho, tipografia e branco institucional. */
+body.eb.eb-home.eb-hierarchy .eb-home-intro{padding:62px 0 56px}
+body.eb.eb-home.eb-hierarchy .eb-home-intro h1{font-size:clamp(40px,5vw,65px)}
+body.eb.eb-home.eb-hierarchy .eb-home-intro p{max-width:770px}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-content{padding:62px 0 90px}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-heading{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.65fr);gap:38px;
+  padding:0 0 24px;border-bottom:2px solid #a3b49c;align-items:start
+}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-heading h2{
+  font-size:clamp(27px,3vw,38px);color:#1f3d35;
+  line-height:1.2;letter-spacing:-.04em;margin:0
+}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-heading p{
+  margin:0;color:#63786c;font-size:14px;line-height:1.8;max-width:670px
+}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups{display:block}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups .local-group{
+  margin:0;padding:28px 0 31px;display:grid;
+  grid-template-columns:minmax(210px,.78fr) minmax(0,1.65fr);gap:35px;
+  border:0;border-bottom:1px solid #dce4dd;background:transparent
+}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups .local-group h2{
+  font-size:clamp(19px,2vw,25px);line-height:1.3;
+  letter-spacing:-.03em;color:#224238;margin:0;font-weight:750
+}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups .local-rank-list{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0 19px;min-width:0
+}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups .local-rank-list a{
+  display:flex;justify-content:space-between;align-items:center;
+  min-width:0;min-height:51px;gap:12px;padding:11px 3px;
+  border:0;border-bottom:1px solid #e4ebe5;
+  background:transparent;color:#29473a;font-size:14px;
+  line-height:1.4;font-weight:680;transition:color .16s,padding-left .16s
+}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups .local-rank-list a:hover{
+  color:#416d4c;padding-left:8px;background:transparent
+}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups .local-rank-list a>span:last-child{
+  color:#789275;font-weight:700;flex:none
+}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups .local-rank-list small{
+  display:block;color:#71887b;font-weight:400;font-size:11px
+}
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-note{
+  font-size:12px;line-height:1.8;color:#75867a;margin:25px 0 0
+}
+/* Ficha individual: mesma identidade sem repetir a antiga faixa verde. */
+body.eb.eb-home.eb-hierarchy .eb-hierarchy-detail{padding:52px 0 90px}
+body.eb.eb-home.eb-hierarchy .local-back{
+  display:inline-block;font-size:13px;font-weight:750;color:#315f49;
+  margin:0 0 25px;text-decoration:underline;text-underline-offset:5px
+}
+body.eb.eb-home.eb-hierarchy .local-detail{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px
+}
+body.eb.eb-home.eb-hierarchy .local-box{
+  background:#fff;border:1px solid #dce4dd;padding:27px 30px;
+  min-width:0;box-shadow:none
+}
+body.eb.eb-home.eb-hierarchy .local-box h2{
+  color:#244438;font-size:clamp(22px,2.4vw,29px);
+  letter-spacing:-.03em;line-height:1.25;margin:0 0 20px
+}
+body.eb.eb-home.eb-hierarchy .local-box p{
+  color:#63766c;font-size:13px;line-height:1.8;margin:18px 0 0
+}
+body.eb.eb-home.eb-hierarchy .local-farda{
+  background:#f5f8f4;border:1px dashed #bbc9ba;
+  min-height:155px;display:grid;place-items:center;
+  text-align:center;padding:24px;color:#6c8174;font-size:13px
+}
+body.eb.eb-home.eb-hierarchy .local-box dl{margin:0}
+body.eb.eb-home.eb-hierarchy .local-box dt{
+  margin:20px 0 5px;text-transform:uppercase;letter-spacing:.1em;
+  font-weight:800;font-size:11px;color:#748579
+}
+body.eb.eb-home.eb-hierarchy .local-box dt:first-child{margin-top:0}
+body.eb.eb-home.eb-hierarchy .local-box dd{
+  margin:0;color:#2c4a3e;font-size:14px;line-height:1.7
+}
+@media(max-width:860px){
+  body.eb.eb-home.eb-hierarchy .eb-hierarchy-heading{
+    grid-template-columns:1fr;gap:8px
+  }
+  body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups .local-group{
+    grid-template-columns:minmax(150px,.6fr) minmax(0,1.4fr);gap:22px
+  }
+}
+@media(max-width:650px){
+  body.eb.eb-home.eb-hierarchy .eb-home-intro{padding:43px 0 45px}
+  body.eb.eb-home.eb-hierarchy .eb-hierarchy-content{padding:42px 0 62px}
+  body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups .local-group{
+    grid-template-columns:1fr;gap:12px;padding:22px 0 27px
+  }
+  body.eb.eb-home.eb-hierarchy .eb-hierarchy-groups .local-rank-list{
+    grid-template-columns:1fr
+  }
+  body.eb.eb-home.eb-hierarchy .eb-hierarchy-detail{padding:38px 0 58px}
+  body.eb.eb-home.eb-hierarchy .local-detail{grid-template-columns:1fr;gap:15px}
+  body.eb.eb-home.eb-hierarchy .local-box{padding:23px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.eb.eb-home.eb-hierarchy .local-rank-list a{transition:none}
+}
