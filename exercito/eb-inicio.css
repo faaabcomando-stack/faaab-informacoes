@@ -1,7 +1,87 @@
-
-.eb-launch{background:linear-gradient(105deg,#173b29,#315c40);color:white;position:relative;overflow:hidden}.eb-launch:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;border:1px solid #c4dcc032;right:-150px;top:-150px;box-shadow:0 0 0 65px #e4f6e409}
-.eb-launch-inner{width:min(1140px,calc(100% - 54px));margin:auto;display:flex;align-items:center;justify-content:space-between;min-height:360px;gap:38px;position:relative;z-index:1}
-.eb-kicker{font-size:11px;letter-spacing:.17em;color:#bedab4;font-weight:800}.eb-launch h1{font-size:clamp(43px,6vw,74px);line-height:1.03;margin:15px 0;letter-spacing:-.045em}.eb-launch p{font-size:15px;color:#d1e1d2;max-width:510px}.eb-launch a{display:inline-block;border:1px solid #bbd2b6;padding:12px 18px;font-size:13px;font-weight:800;margin-top:18px}.eb-launch a:hover{background:white;color:#254735}.eb-launch-emblem{width:170px;height:170px;min-width:170px;display:grid;place-items:center;border-radius:50%;border:3px solid #a3c39d;box-shadow:0 0 0 16px #e6ffe510}.eb-launch-emblem img{height:135px;width:135px;object-fit:contain}
-.eb-launch-choices{padding:55px 24px 70px;background:#eef4ed}.eb-heading{text-align:center}.eb-heading span{color:#5b8460;font-size:11px;letter-spacing:.16em;font-weight:850}.eb-heading h2{font-size:32px;margin:7px 0 30px;color:#244332}.eb-launch-orbs{display:flex;justify-content:center;gap:clamp(20px,6vw,100px);flex-wrap:wrap}.eb-launch-orbs>a{width:185px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:5px}.eb-launch-orb{display:grid;place-items:center;border-radius:50%;height:157px;width:157px;background:white;border:7px solid #d2dfce;box-shadow:0 0 0 2px #819d7d,0 12px 28px #18352523;transition:transform .2s,border-color .2s}.eb-launch-orb img{width:82%;height:82%;object-fit:contain}.eb-launch-orbs>a:hover .eb-launch-orb{transform:translateY(-5px) scale(1.04);border-color:#b2cbac}.eb-launch-orbs strong{font-size:20px;color:#20402c;margin-top:8px}.eb-launch-orbs small{font-size:12px;color:#5a765f}.eb-launch-direct{width:min(950px,100%);margin:52px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}.eb-launch-direct>a{display:flex;gap:15px;align-items:center;padding:18px;background:white;border-left:4px solid #6e9973;transition:transform .2s,background .2s}.eb-launch-direct>a:hover{background:#e5efe3;transform:translateY(-3px)}.eb-launch-direct img{width:62px;height:62px;object-fit:contain}.eb-launch-direct>a>span{display:flex;flex-direction:column;flex:1}.eb-launch-direct small{font-size:10px;font-weight:850;color:#6d896b}.eb-launch-direct b{font-size:21px;color:#254934}.eb-launch-direct em{font-size:12px;color:#63806c;font-style:normal}.eb-launch-direct>a>strong{font-size:20px;color:#57795e}
-@media(max-width:650px){.eb-launch-inner{min-height:280px;padding:28px 0}.eb-launch-emblem{display:none}.eb-launch-direct{grid-template-columns:1fr}.eb-launch-orbs>a{width:145px}.eb-launch-orb{width:126px;height:126px}}
-@media(prefers-reduced-motion:reduce){.eb-launch *{transition:none!important}}
+/* FAAAB — Exército Brasileiro — página inicial.
+   Base visual limpa, informativa e pronta para ser reutilizada nas páginas conectadas.
+   Sem banner verde, esferas decorativas ou duplicação de menus. */
+body.eb.eb-home {
+  --eb-ink: #1c3532;
+  --eb-muted: #64746e;
+  --eb-line: #dce4dd;
+  --eb-accent: #789574;
+  --eb-paper: #fbfcfa;
+  margin: 0;
+  color: var(--eb-ink);
+  background: var(--eb-paper);
+}
+body.eb.eb-home .topline { height: 4px; background: #9caa8c; }
+body.eb.eb-home .mast { background: #fff; border-bottom: 1px solid var(--eb-line); }
+body.eb.eb-home .mast-inner { min-height: 91px; }
+body.eb.eb-home .brand { gap: 13px; }
+body.eb.eb-home .brand img { width: 52px; height: 52px; object-fit: contain; }
+body.eb.eb-home .brand strong { color: #244737; font-size: 24px; font-weight: 800; letter-spacing: -.025em; }
+body.eb.eb-home .brand small { color: #697c72; font-size: 10px; letter-spacing: .12em; }
+body.eb.eb-home .nav a { color: #263e37; font-size: 13px; font-weight: 700; }
+body.eb.eb-home .nav a[aria-current="page"] { border-color: var(--eb-accent); }
+body.eb.eb-home a:focus-visible { outline: 3px solid #8a9f7c; outline-offset: 3px; }
+body.eb.eb-home .eb-home-main { background: var(--eb-paper); }
+body.eb.eb-home .eb-home-intro { background: #fff; border-bottom: 1px solid var(--eb-line); padding: 68px 0 67px; }
+body.eb.eb-home .eb-home-eyebrow { display: block; color: #71836f; font-size: 11px; font-weight: 850; letter-spacing: .17em; text-transform: uppercase; margin-bottom: 17px; }
+body.eb.eb-home .eb-home-intro h1 { margin: 0; font-size: clamp(40px, 5.1vw, 67px); color: #1d3e34; letter-spacing: -.055em; line-height: 1.1; font-weight: 800; }
+body.eb.eb-home .eb-home-intro p { color: #536a60; margin: 19px 0 0; max-width: 740px; font-size: 16px; line-height: 1.85; }
+body.eb.eb-home .eb-contents { padding: 64px 0 32px; }
+body.eb.eb-home .eb-section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); align-items: start; gap: 44px; margin-bottom: 26px; }
+body.eb.eb-home .eb-section-head h2 { font-size: clamp(26px, 3.2vw, 39px); color: #1f3d35; letter-spacing: -.045em; line-height: 1.14; margin: 0; }
+body.eb.eb-home .eb-section-head p { font-size: 14px; line-height: 1.8; color: #66786f; margin: 4px 0 0; max-width: 600px; }
+body.eb.eb-home .eb-division-list { border-top: 2px solid #a3b49c; }
+body.eb.eb-home .eb-division-row { position: relative; display: grid; grid-template-columns: minmax(245px, 1fr) minmax(0, 1.35fr) 32px; gap: 42px; align-items: start; min-width: 0; padding: 31px 0 34px; border-bottom: 1px solid var(--eb-line); }
+body.eb.eb-home .eb-division-identity { display: flex; align-items: center; gap: 22px; min-width: 0; }
+body.eb.eb-home .eb-division-identity img { flex: 0 0 auto; width: 70px; height: 82px; object-fit: contain; }
+body.eb.eb-home .eb-division-identity small { display: block; text-transform: uppercase; color: #6e8771; font-size: 10px; font-weight: 850; letter-spacing: .13em; margin-bottom: 4px; }
+body.eb.eb-home .eb-division-identity h3 { color: #1c4034; font-size: clamp(20px, 2.25vw, 28px); letter-spacing: -.035em; line-height: 1.2; margin: 0 0 7px; }
+body.eb.eb-home .eb-division-identity p { color: var(--eb-muted); margin: 0; font-size: 12px; }
+body.eb.eb-home .eb-division-details { padding-top: 4px; }
+body.eb.eb-home .eb-division-details > span { color: #80918a; font-size: 10px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+body.eb.eb-home .eb-division-details p { margin: 10px 0 0; line-height: 1.8; font-size: 14px; color: #4e665d; }
+body.eb.eb-home .eb-division-arrow { display: grid; place-items: center; margin-top: 22px; color: #67826b; font-size: 25px; line-height: 1; transition: transform .2s; }
+body.eb.eb-home .eb-division-row:hover .eb-division-arrow, body.eb.eb-home .eb-division-row:focus-within .eb-division-arrow { transform: translateX(4px); }
+body.eb.eb-home .eb-division-row:hover .eb-division-identity h3 { color: #42704d; }
+body.eb.eb-home .eb-division-row > a { position: absolute; inset: 0; z-index: 1; }
+body.eb.eb-home .eb-division-row > a:focus-visible { outline-offset: -3px; }
+body.eb.eb-home .eb-structure { padding: 42px 0 72px; }
+body.eb.eb-home .eb-structure-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--eb-line); padding-bottom: 15px; margin-bottom: 0; }
+body.eb.eb-home .eb-structure-head h2 { font-size: clamp(25px, 3vw, 34px); letter-spacing: -.04em; margin: 0; color: #214337; }
+body.eb.eb-home .eb-structure-head a { font-size: 12px; font-weight: 800; color: #315b45; text-decoration: underline; text-underline-offset: 5px; }
+body.eb.eb-home .eb-structure-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 46px; }
+body.eb.eb-home .eb-structure-item { padding: 25px 0 27px; border-bottom: 1px solid var(--eb-line); min-width: 0; }
+body.eb.eb-home .eb-structure-item > span { font-size: 10px; text-transform: uppercase; font-weight: 850; letter-spacing: .14em; color: #768a78; }
+body.eb.eb-home .eb-structure-item h3 { margin: 8px 0; font-size: 21px; line-height: 1.32; letter-spacing: -.03em; color: #244438; }
+body.eb.eb-home .eb-structure-item p { font-size: 13px; line-height: 1.8; margin: 0 0 12px; color: #61766c; }
+body.eb.eb-home .eb-structure-item a { font-size: 12px; font-weight: 800; color: #315f49; border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+body.eb.eb-home .eb-structure-item a:hover,body.eb.eb-home .eb-structure-head a:hover { color: #163a27; }
+body.eb.eb-home .eb-structure-note { font-size: 12px; line-height: 1.8; color: #6d7c72; padding-top: 22px; }
+body.eb.eb-home .footer { background: #fff; border-top: 1px solid var(--eb-line); color: #4b6558; padding: 29px 0 20px; }
+body.eb.eb-home .footer strong { color: #244538; }
+body.eb.eb-home .footer a { color: #315b45; }
+body.eb.eb-home .legal { color: #738177; border-color: #e1e6df; }
+@media (max-width: 940px) {
+  body.eb.eb-home .eb-division-row { grid-template-columns: minmax(205px, 1fr) minmax(0, 1.3fr) 20px; gap: 21px; }
+  body.eb.eb-home .eb-structure-grid { gap: 0 28px; }
+}
+@media (max-width: 650px) {
+  body.eb.eb-home .mast-inner { min-height: 0; padding: 16px 0 10px; }
+  body.eb.eb-home .brand img { width: 46px; height: 46px; }
+  body.eb.eb-home .brand strong { font-size: 20px; }
+  body.eb.eb-home .nav { gap: 0 16px; }
+  body.eb.eb-home .nav a { font-size: 12px; }
+  body.eb.eb-home .eb-home-intro { padding: 43px 0 45px; }
+  body.eb.eb-home .eb-home-intro p { font-size: 14px; }
+  body.eb.eb-home .eb-contents { padding: 43px 0 20px; }
+  body.eb.eb-home .eb-section-head { grid-template-columns: 1fr; gap: 7px; }
+  body.eb.eb-home .eb-division-row { grid-template-columns: 1fr 20px; padding: 23px 0 26px; gap: 12px; }
+  body.eb.eb-home .eb-division-identity { gap: 14px; }
+  body.eb.eb-home .eb-division-identity img { width: 52px; height: 64px; }
+  body.eb.eb-home .eb-division-details { grid-column: 1 / -1; padding: 0 0 0 66px; }
+  body.eb.eb-home .eb-division-arrow { grid-column: 2; grid-row: 1; margin-top: 15px; }
+  body.eb.eb-home .eb-structure { padding: 35px 0 52px; }
+  body.eb.eb-home .eb-structure-head { align-items: flex-start; flex-direction: column; gap: 8px; }
+  body.eb.eb-home .eb-structure-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { body.eb.eb-home .eb-division-arrow { transition: none; } }
