@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "atualizado_em": "2026-11-14",
+  "descricao": "Não representa consultas ao Roblox. Preencher IDs e regras somente após configuração e autorização.",
+  "forcas": {
+    "eb": {
+      "grupo_id": null,
+      "papeis_ids": [],
+      "estado": "configuracao_pendente"
+    },
+    "fab": {
+      "grupo_id": null,
+      "papeis_ids": [],
+      "estado": "configuracao_pendente"
+    },
+    "mb": {
+      "grupo_id": null,
+      "papeis_ids": [],
+      "estado": "configuracao_pendente"
+    },
+    "cbm": {
+      "grupo_id": null,
+      "papeis_ids": [],
+      "estado": "configuracao_pendente"
+    },
+    "pm": {
+      "grupo_id": null,
+      "papeis_ids": [],
+      "estado": "configuracao_pendente"
+    }
+  },
+  "governo": {
+    "ativo": false,
+    "presidente": {
+      "grupo_id": null,
+      "papeis_ids": []
+    },
+    "vice_presidente": {
+      "grupo_id": null,
+      "papeis_ids": []
+    }
+  }
+}
