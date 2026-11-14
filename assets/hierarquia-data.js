@@ -1,6 +1,6 @@
-/* Catálogo de patentes FAAAB; termos próprios do jogo, não equivalem a patentes oficiais. */
+/* Dados de hierarquia da simulação FAAAB. Somente patentes confirmadas, sem recriar cargos excluídos. */
 window.FAAAB_HIERARQUIAS = {
-  "versao": "2026-11-14 — revisão de patentes e progressão própria FAAAB",
+  "versao": "2026-11-14 — correção solicitada pelo comando FAAAB",
   "forcas": {
     "eb": {
       "nome": "Exército Brasileiro",
@@ -21,20 +21,17 @@ window.FAAAB_HIERARQUIAS = {
       ],
       "grupos": [
         {
-          "titulo": "Mobilização e ingresso",
+          "titulo": "Ingresso",
           "patentes": [
-            "Mobilizado de Segunda Classe",
-            "Mobilizado de Primeira Classe",
             "Recruta"
           ]
         },
         {
           "titulo": "Praças",
           "patentes": [
-            "Soldado de Segunda Classe",
+            "Soldado",
             "Soldado de Primeira Classe",
-            "Cabo",
-            "Taifeiro Especial"
+            "Cabo"
           ]
         },
         {
@@ -43,8 +40,6 @@ window.FAAAB_HIERARQUIAS = {
             "Terceiro-Sargento",
             "Segundo-Sargento",
             "Primeiro-Sargento",
-            "Sargento-Mor",
-            "Sargento-Mor de Comando",
             "Subtenente"
           ]
         },
@@ -68,13 +63,12 @@ window.FAAAB_HIERARQUIAS = {
           ]
         },
         {
-          "titulo": "Alto comando",
+          "titulo": "Generalato",
           "patentes": [
             "General em Treinamento",
             "General de Brigada",
             "General de Divisão",
             "General de Exército",
-            "Comandante",
             "Marechal"
           ]
         }
@@ -164,8 +158,9 @@ window.FAAAB_HIERARQUIAS = {
         {
           "titulo": "Ingresso e formação naval",
           "patentes": [
-            "Recruta",
-            "Grumete"
+            "Aprendiz-Marinheiro",
+            "Grumete",
+            "Recruta Marinheiro"
           ]
         },
         {
@@ -339,7 +334,7 @@ window.FAAAB_HIERARQUIAS = {
       "Tenente-Coronel": "ECEME — CAEM/CCEM.",
       "Coronel": "ECEME — CPEAEx, prepara a fase de General em Treinamento.",
       "General em Treinamento": "ECEME — conclusão do CPEAEx (etapa de formação).",
-      "Soldado de Segunda Classe": "Curso de Formação de Soldado Especializado (CFSE) + CTA. Próxima etapa: Soldado de 1ª Classe."
+      "Soldado": "Curso de Formação de Soldado Especializado (CFSE) + CTA. Próxima etapa: Soldado de 1ª Classe."
     },
     "fab": {
       "Soldado de Segunda Classe": "CESD — Curso de Especialização de Soldados. Próxima etapa: Soldado de 1ª Classe.",
@@ -356,7 +351,6 @@ window.FAAAB_HIERARQUIAS = {
       "Primeiro-Tenente": "ESG — Curso de Operações Aéreas (COA)."
     },
     "mb": {
-      "Recruta": "Ciclo inicial de formação naval.",
       "Grumete": "C-FMN — Curso de Formação de Marinheiros.",
       "Marinheiro": "Curso de Marinharia e qualificação de bordo, conforme função.",
       "Cabo": "Formação para 3º Sargento (C-Esp-HabSG).",
@@ -365,7 +359,9 @@ window.FAAAB_HIERARQUIAS = {
       "Capitão-Tenente": "ESG — Curso de Guerra Naval (CGN).",
       "Capitão de Corveta": "ESG — Planejamento de Operações Navais (CPON).",
       "Capitão de Fragata": "EGN — C-EMOS.",
-      "Capitão de Mar e Guerra": "EGN — C-PEM."
+      "Capitão de Mar e Guerra": "EGN — C-PEM.",
+      "Aprendiz-Marinheiro": "Formação naval inicial; requisitos específicos sob definição da FAAAB.",
+      "Recruta Marinheiro": "Etapa de formação naval da FAAAB; requisitos específicos sob definição."
     },
     "cbm": {
       "Aluno Bombeiro Militar": "Formação inicial CBM — CFP/CFSD.",
@@ -444,7 +440,7 @@ window.FAAAB_HIERARQUIAS = {
       "General de Brigada": 22,
       "General de Divisão": 24,
       "General de Exército": 28,
-      "Soldado de Segunda Classe": 1
+      "Soldado": 1
     },
     "fab": {
       "Recruta": 1,
@@ -467,7 +463,6 @@ window.FAAAB_HIERARQUIAS = {
       "Major-Brigadeiro": 24
     },
     "mb": {
-      "Recruta": 1,
       "Marinheiro": 2,
       "Cabo": 3,
       "Terceiro-Sargento": 4,
