@@ -23,3 +23,8 @@ body.eb.bgp-site .footer strong{color:#244538}
 body.eb.bgp-site .footer a{color:#315b45}
 body.eb.bgp-site .legal{border-color:#e1e6df;color:#738177}
 @media(max-width:700px){body.eb.bgp-site .mast-inner{flex-direction:column;align-items:flex-start;gap:8px;padding:15px 0}body.eb.bgp-site .brand strong{font-size:19px}body.eb.bgp-site .bgp-hero{padding:45px 0}body.eb.bgp-site .bgp-main{padding:40px 0 56px}body.eb.bgp-site .bgp-section{grid-template-columns:1fr;gap:10px}}
+
+/* Brasão original BGP (PNG transparente), sem marca tipográfica substituta. */
+body.eb.bgp-site .bgp-emblem{width:52px;height:65px;object-fit:contain;flex:none}
+body.eb.bgp-site .bgp-hero-logo{width:100px;height:126px;object-fit:contain;float:right;margin:0 0 16px 28px}
+@media(max-width:650px){body.eb.bgp-site .bgp-hero-logo{float:none;width:78px;height:98px;display:block;margin:0 0 15px}}
