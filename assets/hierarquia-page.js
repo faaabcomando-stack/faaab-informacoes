@@ -7,18 +7,14 @@ const forces=data.forcas;
 const params=new URLSearchParams(location.search);
 const keys=Object.keys(forces);
 const current=keys.includes(params.get('forca'))?params.get('forca'):'eb';
+// A foto muda somente na hierarquia central, conforme a força selecionada.
+if(document.body.classList.contains('hierarquia-capa'))document.body.dataset.hierForce=current;
 const slug=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const url=k=>'hierarquia.html?forca='+encodeURIComponent(k);
 const rankUrl=(k,n)=>'patente.html?forca='+encodeURIComponent(k)+'&patente='+encodeURIComponent(slug(n));
 const summaries={
  'Recruta':'Inicia a formação militar e aprende os procedimentos básicos. O Recruta não possui insígnia.',
- 'Mobilizado de Segunda Classe':'Etapa inicial de mobilização e registro interno da FAAAB.',
- 'Mobilizado de Primeira Classe':'Etapa de mobilização que antecede o ingresso como Recruta.',
- 'Taifeiro Especial':'Graduação própria da progressão de praças da FAAAB.',
- 'Sargento-Mor':'Graduação superior da carreira de sargentos do jogo.',
- 'Sargento-Mor de Comando':'Graduação superior de sargento na estrutura própria da FAAAB.',
- 'Comandante':'Cargo previsto no alto comando do Exército da FAAAB; regras de nomeação definidas pela administração.',
  'Comodoro do Ar':'Posto adicional da FAAAB situado entre Coronel e Brigadeiro na FAB.',
  'Comodoro':'Posto adicional da FAAAB situado entre Capitão de Mar e Guerra e Contra-Almirante na Marinha.',
 
@@ -29,6 +25,8 @@ const summaries={
  'Aluno Bombeiro Militar':'Participa da formação de bombeiros antes de assumir uma graduação operacional.',
  'Aprendiz-Marinheiro':'Aprende a rotina naval, a disciplina e os procedimentos iniciais.',
  'Grumete':'Cumpre a fase de formação naval supervisionada.',
+ 'Recruta Marinheiro':'Cumpre a etapa de recrutamento naval da FAAAB, antes de Marinheiro.',
+ 'Aprendiz-Marinheiro':'Inicia a formação naval própria da FAAAB.',
  'Marinheiro':'Realiza atividades de bordo e apoio naval, conforme sua habilitação.',
  'Cabo':'Orienta pequenos grupos e apoia a execução das tarefas.',
  'Terceiro-Sargento':'Supervisiona equipes pequenas e auxilia na instrução.',
