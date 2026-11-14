@@ -1,3 +1,10 @@
+body.eb.eb-home.eb-hierarchy .eb-skip{
+  position:absolute;left:16px;top:-100px;z-index:100;
+  background:#fff;color:#234634;padding:10px 14px;border:2px solid #8aa483;
+  font-size:13px;font-weight:750
+}
+body.eb.eb-home.eb-hierarchy .eb-skip:focus{top:10px}
+
 /* EB / Hierarquia e fichas — extensão do visual do Início.
    Somente páginas deste site. Mantém o mesmo cabeçalho, tipografia e branco institucional. */
 body.eb.eb-home.eb-hierarchy .eb-home-intro{padding:62px 0 56px}
