@@ -43,8 +43,9 @@ body.eb.eb-home .eb-division-details p { margin: 10px 0 0; line-height: 1.8; fon
 body.eb.eb-home .eb-division-arrow { display: grid; place-items: center; margin-top: 22px; color: #67826b; font-size: 25px; line-height: 1; transition: transform .2s; }
 body.eb.eb-home .eb-division-row:hover .eb-division-arrow, body.eb.eb-home .eb-division-row:focus-within .eb-division-arrow { transform: translateX(4px); }
 body.eb.eb-home .eb-division-row:hover .eb-division-identity h3 { color: #42704d; }
-body.eb.eb-home .eb-division-row > a { position: absolute; inset: 0; z-index: 1; }
-body.eb.eb-home .eb-division-row > a:focus-visible { outline-offset: -3px; }
+body.eb.eb-home .eb-division-row { text-decoration: none; }
+body.eb.eb-home .eb-division-row:focus-visible { outline: 3px solid #6a896e; outline-offset: 3px; background: #f0f5ef; }
+body.eb.eb-home .eb-division-row:hover { background: #f7faf5; }
 body.eb.eb-home .eb-structure { padding: 42px 0 72px; }
 body.eb.eb-home .eb-structure-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--eb-line); padding-bottom: 15px; margin-bottom: 0; }
 body.eb.eb-home .eb-structure-head h2 { font-size: clamp(25px, 3vw, 34px); letter-spacing: -.04em; margin: 0; color: #214337; }
@@ -85,3 +86,31 @@ body.eb.eb-home .legal { color: #738177; border-color: #e1e6df; }
   body.eb.eb-home .eb-structure-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { body.eb.eb-home .eb-division-arrow { transition: none; } }
+
+
+/* Links de divisões são superfícies semânticas completas, não overlays vazios. */
+body.eb.eb-home .eb-brigade-names{
+  list-style:none;display:flex;flex-wrap:wrap;gap:7px 9px;
+  margin:10px 0 0;padding:0
+}
+body.eb.eb-home .eb-brigade-names li{
+  border:1px solid #d6e1d5;border-radius:3px;
+  background:#f8fbf7;padding:5px 9px;
+  color:#425f4e;font-size:12px;line-height:1.45
+}
+body.eb.eb-home .eb-informative-label{
+  display:inline-block;color:#5c7565;font-weight:700;font-size:11px;
+  border-top:1px solid #dfe7df;margin-top:6px;padding-top:5px
+}
+body.eb.eb-home .eb-home-path{
+  display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  font-size:12px;color:#6b8073;margin:0 0 19px
+}
+body.eb.eb-home .eb-home-path a{
+  font-weight:750;color:#315e44;text-decoration:underline;text-underline-offset:3px
+}
+body.eb.eb-home .eb-home-path a:hover{color:#163b2a}
+@media(max-width:650px){
+  body.eb.eb-home .eb-brigade-names{gap:6px}
+  body.eb.eb-home .eb-brigade-names li{font-size:11px}
+}
