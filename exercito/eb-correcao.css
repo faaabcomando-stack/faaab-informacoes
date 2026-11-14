@@ -1,0 +1,11 @@
+
+/* Correção da capa do EB: nenhuma pose reutilizada nem emblema duplicado */
+.eb-launch{background:#143a29!important;background-image:radial-gradient(ellipse at 80% 10%,#446e52b0,transparent 55%),linear-gradient(125deg,#123423,#275c3b)!important;background-size:cover!important;background-position:center!important;position:relative;isolation:isolate}
+.eb-launch:after{content:"";pointer-events:none;position:absolute;inset:0;z-index:0;opacity:.39;background:repeating-radial-gradient(ellipse at 82% 45%,transparent 0 62px,#d7eccb36 63px 64px,transparent 65px 130px)}
+.eb-launch-inner{position:relative;z-index:1;min-height:345px;justify-content:flex-start}
+.eb-launch h1{font-size:clamp(46px,6.3vw,82px);font-weight:850;line-height:1.05;letter-spacing:-.055em}
+.eb-launch-inner>div:first-child{max-width:710px}
+.eb-launch-choices{background:#f1f6ee}
+.eb-launch-orbs .eb-launch-orb{background:#fff;border-color:#e0e8da;box-shadow:0 0 0 2px #7e9a73,0 13px 30px #183b2622}
+.eb-launch-orbs img{mix-blend-mode:multiply}
+@media(max-width:650px){.eb-launch-inner{min-height:300px}.eb-launch{background:#173e2a!important;background-image:linear-gradient(130deg,#143724,#325e3b)!important}}
