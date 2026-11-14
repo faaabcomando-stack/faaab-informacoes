@@ -261,7 +261,7 @@ window.FAAAB_HIERARQUIAS = {
       "sigla": "PM",
       "imagem": "assets/forcas/pm.png",
       "descricao": "Policiamento, patrulhamento, proteção e atendimento a ocorrências simuladas.",
-      "fonte": "Estrutura básica das corporações estaduais, a ajustar à FAAAB.",
+      "fonte": "Patentes e etapas históricas da FAAAB; dias e cursos não confirmados permanecem sem valor.",
       "unidades": [
         "BOPE",
         "ROTAM",
@@ -269,9 +269,17 @@ window.FAAAB_HIERARQUIAS = {
       ],
       "grupos": [
         {
+          "titulo": "Ingresso",
+          "patentes": [
+            "Aprendiz"
+          ]
+        },
+        {
           "titulo": "Praças",
           "patentes": [
+            "Soldado de Segunda Classe",
             "Soldado",
+            "Soldado de Primeira Classe",
             "Cabo"
           ]
         },
@@ -287,6 +295,7 @@ window.FAAAB_HIERARQUIAS = {
         {
           "titulo": "Formação de oficiais",
           "patentes": [
+            "Cadete",
             "Aspirante a Oficial"
           ]
         },
