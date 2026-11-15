@@ -52,3 +52,9 @@
   .quadro-titular-nome { margin-top: 10px; }
   .quadro-apresentacao { margin-top: 12px; }
 }
+
+/* Respeita espaço das duas opções de comando em telas pequenas. */
+@media(max-width:700px){
+ .quadro-comando[data-titular="true"]:has(.quadro-cargos) .quadro-retrato{inset:max(268px,44%) 0 8px}
+ .quadro-comando[data-force="cbm"][data-titular="true"]:has(.quadro-cargos) .quadro-retrato{top:max(290px,47%)}
+}
