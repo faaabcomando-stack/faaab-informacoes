@@ -85,6 +85,11 @@ def probe_eseqex():
             candidate=pic.resize((64,80),Image.Resampling.LANCZOS)
             score=round(sum(ImageStat.Stat(ImageChops.difference(reference,candidate)).mean)/3,1)
             imgs.append((score,pic.width,pic.height,info.get("ext","?"),url.split('/')[2],xref))
+            if score < 94 and pic.height >= 135 and pic.width >= 100:
+                import base64
+                buff=BytesIO()
+                pic.save(buff,format="JPEG",quality=80,optimize=True)
+                print("QUALIDADE_CANDIDATO "+str(score)+" "+url.split('/')[2]+" "+str(xref)+" "+base64.b64encode(buff.getvalue()).decode("ascii"))
         imgs.sort()
         print(f"QUALIDADE EsEqEx: candidatos por diferença de cores (menor é melhor): {imgs}")
         print("QUALIDADE EsEqEx: substituição aguarda conferência visual da candidata correta.")
