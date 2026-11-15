@@ -41,9 +41,13 @@ jobs:
           python -m unittest discover -s tests -p 'test_comandos.py' -v
           node --check assets/faaab-components.js
           node --check assets/site.js
+          node --check assets/quadro-comando.js
+          node --check assets/forca-hierarquia.js
+      - name: Montar somente o site público
+        run: python scripts/montar_site.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
