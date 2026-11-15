@@ -17,9 +17,9 @@
     },
     "mb": {
       "grupo_id": 500224211,
-      "papeis_ids": [],
-      "papeis_subcomando_ids": [],
-      "estado": "configuracao_pendente"
+      "papeis_ids": [920740053],
+      "papeis_subcomando_ids": [920278083],
+      "estado": "cargos_configurados"
     },
     "cbm": {
       "grupo_id": 415503989,

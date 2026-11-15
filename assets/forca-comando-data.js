@@ -11,7 +11,6 @@
   };
   for (const [key, patentes] of Object.entries(offices)) {
     const group = { titulo: "Comando", patentes, funcoes: true };
-    if (key === "mb") group.previstos = patentes;
     forces[key].grupos.push(group);
   }
 })();

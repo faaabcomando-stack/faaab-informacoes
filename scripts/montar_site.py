@@ -17,7 +17,7 @@ WEB_DIRS = {
 }
 WEB_ROOT = {"index.html", "hierarquia.html", "patente.html", "publicacoes.html", "creditos.html"}
 SUFFIXES = {".html", ".css", ".js", ".json", ".png", ".webp", ".jpg", ".jpeg",
-            ".gif", ".svg", ".ico", ".woff", ".woff2", ".ttf", ".txt", ".mp4", ".webm", ".pdf"}
+            ".gif", ".svg", ".ico", ".woff", ".woff2", ".ttf", ".txt", ".mp4", ".webm", ".pdf", ".glb"}
 BAD_NAMES = {".secret", ".env", ".roblosecurity", "secret", "secret.json",
              "credentials.json", "credentials", "token.txt", "private.json"}
 
@@ -27,6 +27,10 @@ def may_publish(path: Path):
     if path.is_symlink() or len(rel.parts) < 2:
         return False
     if rel.parts[0] not in WEB_DIRS:
+        return False
+    if rel.parts[:3] == ("assets", "comando", "r6"):
+        return False
+    if path.suffix.lower() == ".glb" and rel.parts[:3] != ("assets", "comando", "titulares"):
         return False
     if any(part.startswith(".") for part in rel.parts):
         return False

@@ -35,6 +35,20 @@ jobs:
           ROBLOX_OPEN_CLOUD_KEY: ${{ secrets.ROBLOX_OPEN_CLOUD_KEY }}
           ROBLOX_GROUP_AUDIT_KEY: ${{ secrets.ROBLOX_GROUP_AUDIT_KEY }}
         run: python scripts/sincronizar_comandos.py
+      - name: Vestir e renderizar os avatares R6
+        env:
+          ROBLOX_OPEN_CLOUD_KEY: ${{ secrets.ROBLOX_OPEN_CLOUD_KEY }}
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          if [ -z "$ROBLOX_OPEN_CLOUD_KEY" ]; then
+            echo 'Aguardando a chave Open Cloud para atualizar os modelos.'
+            exit 0
+          fi
+          if ! command -v blender >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq blender
+          fi
+          python scripts/gerar_retratos_comando.py --snapshot assets/comando/titulares.json
       - name: Validar páginas e catálogo da FAAAB
         run: |
           python scripts/validar_piloto.py
@@ -42,6 +56,7 @@ jobs:
           node --check assets/faaab-components.js
           node --check assets/site.js
           node --check assets/quadro-comando.js
+          node --check assets/quadro-titular.js
           node --check assets/forca-hierarquia.js
       - name: Montar somente o site público
         run: python scripts/montar_site.py

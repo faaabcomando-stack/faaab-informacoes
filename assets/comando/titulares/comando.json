@@ -1,0 +1,21 @@
+{
+  "eb": {
+    "estado": "vago"
+  },
+  "fab": {
+    "estado": "titular",
+    "id": 4583042566,
+    "usuario": "MASA6592",
+    "imagem": "fab/4583042566-76c5b1c4d852/retrato.webp",
+    "modelo": "fab/4583042566-76c5b1c4d852/avatar-r6.glb"
+  },
+  "mb": {
+    "estado": "vago"
+  },
+  "cbm": {
+    "estado": "vago"
+  },
+  "pm": {
+    "estado": "vago"
+  }
+}
