@@ -34,19 +34,25 @@
     const basePhoto = new URL(key + "-farda.webp", assetBase).href;
     const fallback = () => {
       figure.classList.remove("quadro-avatar-real");
-      image.src = basePhoto;
+      image.onerror = null;
+      if (image.src !== basePhoto) image.src = basePhoto;
       image.alt = "Farda de referência da FAAAB, sem avatar de titular";
     };
-    fallback();
-    caption.replaceChildren();
-    const line = document.createElement("strong");
-    const note = document.createElement("small");
     const verified = holder?.estado === "titular";
     const old = holder?.estado === "consulta_indisponivel" ? holder?.ultimo_confirmado : null;
     const person = verified ? holder : old;
-    const signature = JSON.stringify({key, estado:holder?.estado, usuario:person?.usuario_id, nome:person?.nome_usuario, avatar:person?.avatar_url, loaded});
+    const signature = JSON.stringify({
+      key, estado: holder?.estado, usuario: person?.usuario_id,
+      nome: person?.nome_usuario, avatar: person?.avatar_url, loaded
+    });
+    // Compare antes de tocar no DOM: evita apagar a legenda e trocar a foto
+    // por uma farda de referência a cada nova consulta sem mudanças.
     if (container.dataset.lastHolder === signature) return;
     container.dataset.lastHolder = signature;
+    caption.replaceChildren();
+    const line = document.createElement("strong");
+    const note = document.createElement("small");
+    fallback();
     if (person?.usuario_id && Number.isSafeInteger(person.usuario_id) && person.usuario_id > 0) {
       const profile = document.createElement("a");
       profile.href = "https://www.roblox.com/users/" + person.usuario_id + "/profile";
@@ -94,6 +100,7 @@
     const force = forces[key];
     if (!container || !force) return;
     if (container.dataset.force !== key) {
+      delete container.dataset.lastHolder;
       container.dataset.force = key;
       container.innerHTML = '<picture class="quadro-bandeira" aria-hidden="true">' +
         '<source media="(prefers-reduced-motion: no-preference)" srcset="' + assetBase + key + '-animado.webp">' +
