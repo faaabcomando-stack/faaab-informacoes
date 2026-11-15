@@ -44,7 +44,7 @@
     const verified = holder?.estado === "titular";
     const old = holder?.estado === "consulta_indisponivel" ? holder?.ultimo_confirmado : null;
     const person = verified ? holder : old;
-    const signature = JSON.stringify({key,holder,loaded});
+    const signature = JSON.stringify({key, estado:holder?.estado, usuario:person?.usuario_id, nome:person?.nome_usuario, avatar:person?.avatar_url, loaded});
     if (container.dataset.lastHolder === signature) return;
     container.dataset.lastHolder = signature;
     if (person?.usuario_id && Number.isSafeInteger(person.usuario_id) && person.usuario_id > 0) {
