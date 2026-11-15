@@ -223,11 +223,16 @@ def bake(force, user, key, blender):
             write_identity(temp, vertices, parts, chosen, from_cdn(info["mtl"], host), host)
             prepare_uniform(temp, force, avatar["bodyColors"])
             command = [blender, "--background", "--factory-startup", "--python-exit-code", "2",
-                       "--python", str(RENDER), "--", str(temp), str(UNIFORMS)]
+                       "--python", str(RENDER), "--", str(temp), str(UNIFORMS), force]
             subprocess.run(command, check=True, stdout=subprocess.DEVNULL, timeout=240)
+            glb = (temp / "avatar-r6.glb").read_bytes()
+            json_length = int.from_bytes(glb[12:16], "little")
+            clips = json.loads(glb[20:20 + json_length]).get("animations", [])
+            if [clip["name"] for clip in clips] != ["apresentacao"]:
+                raise ValueError("A apresentação precisa ser um único clipe sincronizado")
             directory.mkdir(parents=True, exist_ok=True)
             Image.open(temp / "retrato.png").save(image, quality=90, method=6)
-            model.write_bytes((temp / "avatar-r6.glb").read_bytes())
+            model.write_bytes(glb)
     return {
         "estado": "titular", "id": user, "usuario": profile["name"],
         "imagem": image.relative_to(OUT).as_posix(), "modelo": model.relative_to(OUT).as_posix(),

@@ -51,7 +51,29 @@
       row.modelo === imageDirectory + "avatar-r6.glb";
   }
 
-  async function showModel(portrait, poster, row) {
+  function addPresentation(viewer, title) {
+    if (!viewer.availableAnimations.includes("apresentacao")) return;
+    viewer.animationName = "apresentacao";
+    const play = document.createElement("button");
+    play.className = "quadro-apresentacao";
+    play.type = "button";
+    play.textContent = "Ver apresentação";
+    play.addEventListener("click", () => {
+      if (!viewer.paused) return;
+      viewer.currentTime = 0;
+      viewer.play({ repetitions: 1 });
+      play.setAttribute("aria-disabled", "true");
+      play.textContent = "Apresentação em andamento";
+    });
+    viewer.addEventListener("finished", () => {
+      play.removeAttribute("aria-disabled");
+      play.textContent = "Rever apresentação";
+    });
+    title.append(play);
+    return play;
+  }
+
+  async function showModel(portrait, poster, row, title) {
     try {
       viewerModule ??= import(modelViewer).catch(error => {
         viewerModule = null;
@@ -60,20 +82,25 @@
       await viewerModule;
       if (!portrait.isConnected) return;
       const viewer = document.createElement("model-viewer");
+      let play;
       viewer.setAttribute("alt", poster.alt);
       viewer.setAttribute("camera-controls", "");
       viewer.setAttribute("touch-action", "pan-y");
       viewer.setAttribute("disable-zoom", "");
       viewer.setAttribute("interaction-prompt", "none");
-      viewer.setAttribute("camera-orbit", "155deg 81deg 105%");
+      viewer.setAttribute("camera-orbit", "145deg 82deg 140%");
+      const targetY = portrait.closest("[data-quadro-comando]").dataset.quadroComando === "fab" ? 3.03 : 3.2;
+      viewer.setAttribute("camera-target", `0m ${targetY}m 0m`);
       viewer.setAttribute("field-of-view", "32deg");
       viewer.addEventListener("error", () => {
         poster.hidden = false;
+        play?.remove();
         viewer.remove();
       }, { once: true });
       viewer.addEventListener("load", () => {
         poster.hidden = true;
         viewer.classList.add("pronto");
+        play = addPresentation(viewer, title);
       }, { once: true });
       viewer.setAttribute("src", new URL(row.modelo, portraits).href);
       portrait.append(viewer);
@@ -115,7 +142,7 @@
     title.querySelector("h2").after(name);
     section.dataset.titular = "true";
     if (poster.naturalWidth > 0) portrait.replaceChildren(poster);
-    showModel(portrait, poster, row);
+    showModel(portrait, poster, row, title);
   }
 
   const sections = Array.from(document.querySelectorAll("[data-quadro-comando]"))
