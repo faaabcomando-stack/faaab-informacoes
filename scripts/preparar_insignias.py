@@ -21,6 +21,7 @@ TARGETS = {
     INSIGNIAS / "FTB-Bda-Inf-Bld.png": "claro",
     INSIGNIAS / "FTB-Bda-Inf-Mec.png": "escuro",
     INSIGNIAS / "FMB-CIAA.png": "claro",
+    INSIGNIAS / "eseqex.png": "claro",
 }
 FOLDERS = [
     ROOT / "assets" / "insignias",
