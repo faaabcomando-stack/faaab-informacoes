@@ -180,10 +180,11 @@ def check_one_office(group, roles, key, previous, now, request=fetch_json, audit
     if result["estado"] == "titular":
         user_id = result["usuario_id"]
         profile = public_profile(user_id, request)
-        if old.get("usuario_id") == user_id and old.get("estado") == "titular":
+        old_person = old if old.get("estado") == "titular" else old.get("ultimo_confirmado", {})
+        if old_person.get("usuario_id") == user_id:
             for field in ("nome_usuario", "nome_exibicao", "avatar_url"):
-                if field not in profile and field in old:
-                    profile[field] = old[field]
+                if field not in profile and field in old_person:
+                    profile[field] = old_person[field]
         result.update(profile)
     return result
 
@@ -191,10 +192,12 @@ def check_one_office(group, roles, key, previous, now, request=fetch_json, audit
 def unavailable(previous, group, reason):
     # Nunca afirma que o cargo continua ocupado sem nova consulta.
     keep = {"estado": "consulta_indisponivel", "motivo": reason, "grupo_id": group}
-    if previous.get("estado") == "titular":
-        keep["ultimo_confirmado"] = {k: previous[k] for k in
+    previous_person = previous if previous.get("estado") == "titular" else (
+        previous.get("ultimo_confirmado") if previous.get("estado") == "consulta_indisponivel" else None)
+    if isinstance(previous_person, dict) and previous_person.get("usuario_id"):
+        keep["ultimo_confirmado"] = {k: previous_person[k] for k in
             ("usuario_id", "nome_usuario", "nome_exibicao", "avatar_url", "perfil_url", "verificado_em")
-            if k in previous}
+            if k in previous_person}
     if isinstance(previous.get("candidatos_desde"), dict):
         keep["candidatos_desde"] = previous["candidatos_desde"]
     return keep
