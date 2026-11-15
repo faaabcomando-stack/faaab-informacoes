@@ -1,0 +1,197 @@
+/* FAAAB | Navegação do portal central em telas pequenas.
+   Carregada APÓS os estilos de cada página para evitar menus sobrepostos. */
+.identity-mobile{display:none}
+@media(max-width:760px){
+  .header .header-inner{
+    position:static;
+    display:flex;
+    flex-wrap:nowrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    min-height:74px;
+    padding-top:0;
+    padding-bottom:0;
+  }
+  .header .identity{
+    display:flex;
+    align-items:center;
+    flex:1 1 auto;
+    min-width:0;
+    max-width:none;
+    gap:11px;
+    margin:0;
+    text-decoration:none;
+  }
+  .header .identity img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+    flex:0 0 42px;
+  }
+  .header .identity-text{display:none}
+  .header .identity-mobile{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:2px;
+    min-width:0;
+    line-height:1.2;
+  }
+  .header .identity-mobile strong{
+    display:block;
+    font-size:18px;
+    line-height:1.12;
+    font-weight:850;
+    letter-spacing:.015em;
+    color:#1d4052;
+  }
+  .header .identity-mobile small{
+    display:block;
+    font-size:10px;
+    line-height:1.2;
+    font-weight:650;
+    color:#4f6876;
+    white-space:normal;
+  }
+  .header .menu-toggle{
+    display:inline-flex;
+    position:relative;
+    z-index:7;
+    flex:0 0 auto;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    min-width:96px;
+    height:44px;
+    padding:0 12px;
+    margin-left:auto;
+    border:1px solid #c9d7db;
+    border-radius:5px;
+    color:#214658;
+    background:rgba(255,255,255,.95);
+    font-size:13px;
+    line-height:1;
+    font-weight:800;
+    box-shadow:none;
+    cursor:pointer;
+  }
+  .header .menu-icon{display:flex;flex-direction:column;gap:4px;justify-content:center;width:18px;height:18px;flex:0 0 18px}
+  .header .menu-icon i{display:block;width:18px;height:2px;background:currentColor;border-radius:1px;transition:transform .18s,opacity .18s}
+  .header .menu-toggle[aria-expanded="true"] .menu-icon i:first-child{transform:translateY(6px) rotate(45deg)}
+  .header .menu-toggle[aria-expanded="true"] .menu-icon i:nth-child(2){opacity:0}
+  .header .menu-toggle[aria-expanded="true"] .menu-icon i:last-child{transform:translateY(-6px) rotate(-45deg)}
+  /* Importante: a posição absoluta prevalece sobre a regra antiga
+     body.home .header .nav {position:relative}. */
+  .header .nav[data-menu],
+  body.home .header .nav[data-menu],
+  body.hierarquia-capa .header .nav[data-menu]{
+    position:absolute!important;
+    top:100%!important;
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    height:auto!important;
+    margin:0!important;
+    padding:10px 16px 17px;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    align-self:auto;
+    justify-content:flex-start;
+    gap:0;
+    z-index:8;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    max-height:calc(100dvh - 74px);
+    background:#102b3c!important;
+    border:0;
+    border-top:1px solid rgba(255,255,255,.16);
+    border-bottom:2px solid #c1a26c;
+    border-radius:0;
+    box-shadow:0 18px 30px rgba(1,15,25,.33);
+    -webkit-backdrop-filter:none;
+    backdrop-filter:none;
+  }
+  .header .nav[data-menu].is-open,
+  body.home .header .nav[data-menu].is-open,
+  body.hierarquia-capa .header .nav[data-menu].is-open{
+    display:flex!important;
+  }
+  .header .nav[data-menu] a,
+  body.home .header .nav[data-menu] a,
+  body.hierarquia-capa .header .nav[data-menu] a{
+    position:relative;
+    display:flex;
+    width:100%;
+    align-items:center;
+    min-height:52px;
+    padding:13px 16px;
+    margin:0;
+    border-bottom:1px solid rgba(255,255,255,.11);
+    border-left:3px solid transparent;
+    border-radius:3px;
+    background:transparent;
+    color:#f0f5f7!important;
+    text-shadow:none!important;
+    font-size:14px;
+    font-weight:730;
+    line-height:1.35;
+    white-space:normal;
+    transition:background .16s;
+  }
+  .header .nav[data-menu] a:last-child{border-bottom-color:transparent}
+  .header .nav[data-menu] a::after,
+  .header .nav[data-menu] a:hover::after,
+  .header .nav[data-menu] a[aria-current="page"]::after{content:none!important;display:none!important}
+  .header .nav[data-menu] a[aria-current="page"]{
+    background:rgba(200,174,123,.13);
+    border-left-color:#e5c584;
+    color:#fff!important;
+    font-weight:850;
+  }
+  .header .nav[data-menu] a:hover{background:rgba(255,255,255,.10);color:#fff!important}
+  .header .nav[data-menu] a:focus-visible{
+    outline:3px solid #efd395!important;
+    outline-offset:-3px!important;
+    background:rgba(255,255,255,.12);
+  }
+  .header .menu-toggle:focus-visible{
+    outline:3px solid #e2bd7d;
+    outline-offset:3px;
+  }
+  /* No Início e na Hierarquia a barra permanece translúcida sobre o fundo,
+     mas o painel aberto é escuro e sempre legível. */
+  body.home .header,
+  body.hierarquia-capa .header{
+    background:rgba(8,28,42,.42)!important;
+    -webkit-backdrop-filter:blur(9px)!important;
+    backdrop-filter:blur(9px)!important;
+    border-bottom:1px solid rgba(255,255,255,.21)!important;
+  }
+  body.home .header .identity-mobile strong,
+  body.hierarquia-capa .header .identity-mobile strong{color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.35)}
+  body.home .header .identity-mobile small,
+  body.hierarquia-capa .header .identity-mobile small{color:#e0eaf0}
+  body.home .header .menu-toggle,
+  body.hierarquia-capa .header .menu-toggle{
+    color:#fff;
+    background:rgba(7,25,39,.46);
+    border:1px solid rgba(255,255,255,.56);
+  }
+  body.home .header .menu-icon i,
+  body.hierarquia-capa .header .menu-icon i{background:#fff}
+}
+@media(max-width:360px){
+  .header .header-inner{gap:8px;min-height:70px}
+  .header .identity{gap:8px}
+  .header .identity img{width:36px;height:36px;flex-basis:36px}
+  .header .identity-mobile strong{font-size:16px}
+  .header .identity-mobile small{font-size:9px}
+  .header .menu-toggle{min-width:88px;height:44px;gap:7px;padding:0 9px}
+  .header .nav[data-menu]{max-height:calc(100dvh - 70px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .header .menu-icon i,
+  .header .nav[data-menu] a{transition:none!important}
+}
