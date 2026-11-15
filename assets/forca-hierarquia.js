@@ -6,7 +6,8 @@ const force=catalog.forcas[key];if(!force)return;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const slug=s=>s.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const list=document.getElementById('institution-ranks');
-if(list)list.innerHTML=force.grupos.map(g=>'<section class="local-group"><h2>'+esc(g.titulo)+'</h2><div class="local-rank-list">'+g.patentes.map(n=>'<a href="patente.html?patente='+encodeURIComponent(slug(n))+'"><span>'+esc(n)+(g.previstos?.includes(n)?'<small>Cargo previsto</small>':n==='Recruta'?'<small>Sem insígnia</small>':'')+'</span><span aria-hidden="true">↗</span></a>').join('')+'</div></section>').join('');
+// Os cargos de comando já estão no quadro superior, não na lista de patentes.
+if(list)list.innerHTML=force.grupos.filter(g=>!g.funcoes).map(g=>'<section class="local-group"><h2>'+esc(g.titulo)+'</h2><div class="local-rank-list">'+g.patentes.map(n=>'<a href="patente.html?patente='+encodeURIComponent(slug(n))+'"><span>'+esc(n)+(g.previstos?.includes(n)?'<small>Cargo previsto</small>':n==='Recruta'?'<small>Sem insígnia</small>':'')+'</span><span aria-hidden="true">↗</span></a>').join('')+'</div></section>').join('');
 const detail=document.getElementById('institution-rank-detail');
 if(detail){
 const selected=new URLSearchParams(location.search).get('patente');
