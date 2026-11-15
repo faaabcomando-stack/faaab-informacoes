@@ -48,54 +48,39 @@ def update_esefex():
     except Exception as exc:
         print(f"QUALIDADE EsEFEx: original {old.width}x{old.height} mantido; fonte indisponível: {exc}")
 
-def probe_eseqex():
+def update_eseqex():
     target=INSIGNIAS/"eseqex.png"
-    with Image.open(target) as im:
-        print(f"QUALIDADE EsEqEx: original {im.width}x{im.height}; não ampliar artificialmente")
+    with Image.open(target) as old:
+        ow,oh=old.size
+        original=old.convert("RGBA")
     try:
         import fitz
-        sources=[
-            ESEQEX_PDF_URL,
-            "https://www.eseqex.eb.mil.br/images/2019/eseqex.pdf",
-            "https://adestramentobrasil.com/wp-content/uploads/2021/02/programa-adestramento_aman_2021.pdf",
-        ]
-        all_candidates=[]
-        for url in sources:
-            try:
-                raw=download(url)
-                document=fitz.open(stream=raw,filetype="pdf")
-                refs=[]
-                for page in document[:min(3,len(document))]:
-                    refs.extend((document,ref) for ref in page.get_images(full=True))
-                all_candidates.extend((url,doc,ref) for doc,ref in refs)
-            except Exception as issue:
-                print(f"QUALIDADE EsEqEx: fonte indisponível {url}: {issue}")
-        original=Image.open(target).convert("RGBA")
-        base=Image.new("RGBA",original.size,(255,255,255,255))
+        from PIL import ImageChops, ImageStat
+        raw=download(ESEQEX_PDF_URL)
+        document=fitz.open(stream=raw,filetype="pdf")
+        base=Image.new("RGBA", original.size, (255,255,255,255))
         base.alpha_composite(original)
         reference=base.convert("RGB").resize((64,80),Image.Resampling.LANCZOS)
-        from PIL import ImageChops,ImageStat
-        imgs=[]
-        for url,doc,ref in all_candidates:
-            xref=ref[0]
-            info=doc.extract_image(xref)
+        best=None
+        for ref in document[0].get_images(full=True):
+            info=document.extract_image(ref[0])
             if not info:continue
             pic=Image.open(BytesIO(info["image"])).convert("RGB")
-            if pic.width>1800 or pic.height>1800:continue
-            candidate=pic.resize((64,80),Image.Resampling.LANCZOS)
-            score=round(sum(ImageStat.Stat(ImageChops.difference(reference,candidate)).mean)/3,1)
-            imgs.append((score,pic.width,pic.height,info.get("ext","?"),url.split('/')[2],xref))
-            if score < 94 and pic.height >= 135 and pic.width >= 100:
-                import base64
-                buff=BytesIO()
-                pic.save(buff,format="JPEG",quality=80,optimize=True)
-                print("QUALIDADE_CANDIDATO "+str(score)+" "+url.split('/')[2]+" "+str(xref)+" "+base64.b64encode(buff.getvalue()).decode("ascii"))
-        imgs.sort()
-        print(f"QUALIDADE EsEqEx: candidatos por diferença de cores (menor é melhor): {imgs}")
-        print("QUALIDADE EsEqEx: substituição aguarda conferência visual da candidata correta.")
+            if pic.width<ow*1.15 or pic.height<oh*1.15:continue
+            if pic.width>350 or pic.height>420:continue
+            sample=pic.resize((64,80),Image.Resampling.LANCZOS)
+            score=sum(ImageStat.Stat(ImageChops.difference(reference,sample)).mean)/3
+            if best is None or score<best[0]:best=(score,pic)
+        # Só aceita o MESMO brasão confirmado, não escudo semelhante.
+        if best is None or best[0]>=65:
+            raise ValueError("Não foi encontrado um exemplar correspondente")
+        score,pic=best
+        pic.save(target,"PNG",optimize=True)
+        print(f"QUALIDADE EsEqEx: substituído {ow}x{oh} por {pic.width}x{pic.height}; mesmo brasão, diferença {score:.1f}; fonte: {ESEQEX_PDF_URL}")
+        print("QUALIDADE EsEqEx: melhoria limitada; ainda é necessário um original maior para nitidez HD.")
     except Exception as exc:
-        print(f"QUALIDADE EsEqEx: documento indisponível; brasão original mantido: {exc}")
+        print(f"QUALIDADE EsEqEx: original {ow}x{oh} mantido: {exc}")
 
 if __name__=="__main__":
     update_esefex()
-    probe_eseqex()
+    update_eseqex()
