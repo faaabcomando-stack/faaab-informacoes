@@ -232,19 +232,3 @@ body.hierarquia-comandos.hierarquia-capa .hier-group {
   .quadro-retrato.quadro-avatar-real{inset:max(170px,39%) 0 0;align-content:center}
   .quadro-nota-avatar{bottom:6px;font-size:9px}
 }
-
-/* Dois cargos dentro do mesmo quadro superior: sem criar outra seção. */
-.quadro-cargos{display:inline-flex;gap:4px;max-width:100%;flex-wrap:wrap;align-items:center;padding:4px;margin:0 0 22px;border:1px solid color-mix(in srgb,var(--quadro-destaque) 56%,transparent);background:rgba(4,18,23,.65);border-radius:4px;position:relative;z-index:3}
-.quadro-cargo{min-height:44px;padding:11px 15px;display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;background:transparent;color:#f3f4ee;cursor:pointer;border-radius:2px;font:750 12px/1.2 system-ui,sans-serif;letter-spacing:.012em;transition:background-color .16s,color .16s}
-.quadro-cargo:hover{background:rgba(255,255,255,.13)}
-.quadro-cargo[aria-pressed="true"]{background:var(--quadro-destaque);color:var(--quadro-base);font-weight:850}
-.quadro-cargo:focus-visible{outline:3px solid #fff;outline-offset:3px}
-@media(max-width:700px){
- .quadro-comando:has(.quadro-cargos){min-height:clamp(560px,136vw,745px)}
- .quadro-comando .quadro-titulo{padding-top:24px}
- .quadro-cargos{margin:0 0 17px;padding:3px;gap:2px}
- .quadro-cargo{min-height:44px;padding:10px 12px;font-size:11px}
- .quadro-comando:has(.quadro-cargos) .quadro-retrato{top:max(247px,42%)}
-}
-@media(max-width:370px){.quadro-cargo{font-size:10px;padding-inline:9px}}
-@media(prefers-reduced-motion:reduce){.quadro-cargo{transition:none}}

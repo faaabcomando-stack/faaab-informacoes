@@ -26,8 +26,7 @@
 
   function refresh(container, key) {
     if (!container || container.dataset.force !== key) return;
-    const office = container.dataset.office === "subcomandante" ? "subcomandante" : "comandante";
-    const holder = registry?.forcas?.[key]?.[office];
+    const holder = registry?.forcas?.[key]?.comandante;
     const caption = container.querySelector(".quadro-ocupante");
     const image = container.querySelector(".quadro-retrato img");
     const figure = container.querySelector(".quadro-retrato");
@@ -43,7 +42,7 @@
     const old = holder?.estado === "consulta_indisponivel" ? holder?.ultimo_confirmado : null;
     const person = verified ? holder : old;
     const signature = JSON.stringify({
-      key, office, estado: holder?.estado, usuario: person?.usuario_id,
+      key, estado: holder?.estado, usuario: person?.usuario_id,
       nome: person?.nome_usuario, avatar: person?.avatar_url, loaded
     });
     // Compare antes de tocar no DOM: evita apagar a legenda e trocar a foto
@@ -78,8 +77,8 @@
       }
     } else {
       const states = {
-        vago: "Cargo vago",
-        aguardando_historico: "Aguardando histórico de ingresso no cargo",
+        vago: "Cargo de comandante vago",
+        aguardando_historico: "Aguardando histórico do primeiro comandante",
         ordem_indeterminada: "Ordem de ingresso não confirmada",
         configuracao_pendente: "Cargo do grupo ainda não configurado",
         consulta_indisponivel: "Consulta ao Roblox indisponível"
@@ -103,37 +102,17 @@
     if (container.dataset.force !== key) {
       delete container.dataset.lastHolder;
       container.dataset.force = key;
-      if (container.dataset.office !== "subcomandante") container.dataset.office = "comandante";
       container.innerHTML = '<picture class="quadro-bandeira" aria-hidden="true">' +
         '<source media="(prefers-reduced-motion: no-preference)" srcset="' + assetBase + key + '-animado.webp">' +
         '<img src="' + assetBase + key + '-bandeira.webp" alt="" width="720" height="454"></picture>' +
-        '<div class="quadro-titulo">' +
-        '<div class="quadro-cargos" role="group" aria-label="Escolher função de comando">' +
-        '<button type="button" class="quadro-cargo" data-office="comandante">Comandante</button>' +
-        '<button type="button" class="quadro-cargo" data-office="subcomandante">Subcomandante</button></div>' +
-        '<h2><span></span> <em>' + force.name + '</em></h2><p>Farda de referência: ' +
+        '<div class="quadro-titulo"><h2><span>' +
+        (force.general ? 'Comandante-Geral' : 'Comandante') +
+        '</span> <em>' + force.name + '</em></h2><p>Farda de referência: ' +
         force.uniform + '</p><div class="quadro-ocupante" aria-live="polite"></div></div>' +
         '<div class="quadro-retrato"><img src="' + assetBase + key +
         '-farda.webp" alt="Farda de referência sem titular identificado" width="900" height="1080">' +
         '<small class="quadro-nota-avatar">Farda ilustrativa · sem renderização do avatar</small></div>';
-      container.querySelectorAll(".quadro-cargo").forEach(button => {
-        button.addEventListener("click", () => {
-          if (container.dataset.office === button.dataset.office) return;
-          container.dataset.office = button.dataset.office;
-          delete container.dataset.lastHolder;
-          render(container, container.dataset.force);
-          // O mesmo quadro e o mesmo grupo; não abre outra página.
-        });
-      });
     }
-    const office = container.dataset.office;
-    container.querySelector(".quadro-titulo h2 span").textContent =
-      office === "subcomandante"
-        ? (force.general ? "Subcomandante-Geral" : "Subcomandante")
-        : (force.general ? "Comandante-Geral" : "Comandante");
-    container.querySelectorAll(".quadro-cargo").forEach(button => {
-      button.setAttribute("aria-pressed", String(button.dataset.office === office));
-    });
     refresh(container, key);
   }
 

@@ -257,33 +257,26 @@ def main():
         config = json.loads(CONFIG.read_text(encoding="utf-8"))
         snapshot = collect(config, key, os.environ.get("ROBLOX_GROUP_AUDIT_KEY"))
 
-    def portrait(item):
-        force, office, commander = item
+    def portrait(pair):
+        force, entry = pair
+        commander = entry["comandante"]
         if commander["estado"] != "titular":
-            return (force, office), {"estado": commander["estado"]}
-        # A ordem do cargo nunca é resolvida arbitrariamente.
+            return force, {"estado": commander["estado"]}
         if commander.get("elegiveis", 1) > 1 and commander.get("criterio") != "historico_roblox":
-            return (force, office), {"estado": "aguardando_historico"}
+            return force, {"estado": "aguardando_historico"}
         try:
-            return (force, office), bake(force, commander["usuario_id"], key, args.blender)
+            return force, bake(force, commander["usuario_id"], key, args.blender)
         except (OSError, KeyError, ValueError, subprocess.SubprocessError) as error:
-            print(f"{force}/{office}: retrato pendente ({type(error).__name__})")
-            return (force, office), {"estado": "retrato_pendente"}
+            print(f"{force}: retrato pendente ({type(error).__name__})")
+            return force, {"estado": "retrato_pendente"}
 
-    offices = ("comandante", "subcomandante")
-    items = [
-        (force, office, settings.get(office, {"estado": "configuracao_pendente"}))
-        for force, settings in snapshot.items() for office in offices
-    ]
     with ThreadPoolExecutor(max_workers=2) as workers:
-        all_results = dict(workers.map(portrait, items))
+        result = dict(workers.map(portrait, snapshot.items()))
     OUT.mkdir(parents=True, exist_ok=True)
-    for office, filename in (("comandante", "comando.json"), ("subcomandante", "subcomando.json")):
-        result = {force: all_results[(force, office)] for force in snapshot}
-        draft = OUT / (filename + ".tmp")
-        draft.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        draft.replace(OUT / filename)
-        print(f"{office}: " + ", ".join(f"{force}={row['estado']}" for force, row in result.items()))
+    draft = OUT / "comando.tmp"
+    draft.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    draft.replace(OUT / "comando.json")
+    print(", ".join(f"{force}={row['estado']}" for force, row in result.items()))
 
 
 if __name__ == "__main__":
