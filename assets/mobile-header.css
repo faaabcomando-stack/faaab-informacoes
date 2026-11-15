@@ -160,7 +160,9 @@
     outline:3px solid #e2bd7d;
     outline-offset:3px;
   }
-  /* A barra da hierarquia mantém a composição sobre o fundo. */
+  /* No Início e na Hierarquia a barra permanece translúcida sobre o fundo,
+     mas o painel aberto é escuro e sempre legível. */
+  body.home .header,
   body.hierarquia-capa .header{
     background:rgba(8,28,42,.42)!important;
     -webkit-backdrop-filter:blur(9px)!important;

@@ -8,9 +8,9 @@
   <title>Publicações | FAAAB</title>
   <link rel="icon" href="assets/logo-faaab.png" type="image/png">
   <link rel="stylesheet" href="assets/style.css?v=12">
-  <link rel="stylesheet" href="assets/publicacoes-revisado.css?v=4">
+  <link rel="stylesheet" href="assets/publicacoes-revisado.css?v=3">
   <script src="assets/site.js?v=8" defer></script>
-<link rel="stylesheet" href="assets/faaab-news.css?v=2"><script defer src="assets/faaab-news.js?v=2"></script><link rel="stylesheet" href="assets/mobile-header.css?v=1"></head>
+<link rel="stylesheet" href="assets/faaab-news.css?v=1"><script defer src="assets/faaab-news.js?v=1"></script><link rel="stylesheet" href="assets/mobile-header.css?v=1"></head>
 <body class="publicacoes-page">
   <a class="skip" href="#conteudo">Ir ao conteúdo</a>
   <header class="header">
@@ -32,18 +32,31 @@
     </div>
   </header>
   <main id="conteudo" class="news-2026-main">
-    <section class="publication-head" aria-labelledby="publication-title">
-      <div class="wrap">
-        <h1 id="publication-title">Publicações</h1>
-        <p>Acompanhe as notícias e os comunicados das cinco forças da FAAAB.</p>
-      </div>
+    <section class="publication-head wrap" aria-labelledby="publication-title">
+      <p class="publication-eyebrow">COMUNICAÇÃO FAAAB</p>
+      <h1 id="publication-title">Publicações</h1>
     </section>
 
     <section class="publication-content wrap" aria-labelledby="publication-news-title">
-      <h2 id="publication-news-title">Noticiário</h2>
-      <div data-publication-list>
-        <p class="publication-status" role="status">Carregando publicações…</p>
-        <noscript><p>Ative o JavaScript para consultar o noticiário.</p></noscript>
+      <div class="publication-section-heading"><h2 id="publication-news-title">Noticiário</h2></div>
+      <div class="publication-feature-grid" aria-label="Espaços para notícias principais, ainda sem publicações">
+        <div class="publication-slot publication-slot-feature" role="img" aria-label="Espaço da notícia principal. Nenhuma notícia cadastrada."></div>
+        <div class="publication-side">
+          <div class="publication-slot publication-slot-small" role="img" aria-label="Espaço da segunda notícia. Nenhuma notícia cadastrada."></div>
+          <div class="publication-slot publication-slot-small" role="img" aria-label="Espaço da terceira notícia. Nenhuma notícia cadastrada."></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="publication-carousel-section wrap" aria-labelledby="publication-carousel-title">
+      <div class="publication-section-heading"><h2 id="publication-carousel-title">Mais notícias</h2></div>
+      <div class="publication-carousel" role="group" aria-label="Carrossel de notícias ainda sem publicações">
+        <div class="publication-carousel-window">
+          <div class="publication-carousel-slide" aria-label="Espaço para notícias futuras"></div>
+        </div>
+        <button class="publication-carousel-control publication-carousel-previous" type="button" aria-label="Notícia anterior" disabled>&#8249;</button>
+        <button class="publication-carousel-control publication-carousel-next" type="button" aria-label="Próxima notícia" disabled>&#8250;</button>
+        <div class="publication-carousel-dots" aria-hidden="true"><span></span></div>
       </div>
     </section>
   </main>

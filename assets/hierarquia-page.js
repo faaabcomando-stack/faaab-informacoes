@@ -89,7 +89,7 @@ if(nav){
   title.textContent=f.nome;
   description.textContent=f.descricao;
   if(extra)extra.textContent=(data.contextoIngressos||{})[key]||'';
-  ranks.innerHTML=f.grupos.map(g=>'<section class="hier-group"><h3>'+esc(g.titulo)+'</h3><div class="hier-rank-list">'+g.patentes.map(n=>'<a class="hier-rank-link" href="'+rankUrl(key,n)+'"><span>'+esc(n)+(g.previstos?.includes(n)?'<small>Cargo previsto</small>':n==='Recruta'?'<small>Sem insígnia</small>':'')+'</span><span class="hier-rank-arrow" aria-hidden="true">↗</span></a>').join('')+'</div></section>').join('');
+  ranks.innerHTML=f.grupos.map(g=>'<section class="hier-group"><h3>'+esc(g.titulo)+'</h3><div class="hier-rank-list">'+g.patentes.map(n=>'<a class="hier-rank-link" href="'+rankUrl(key,n)+'"><span>'+esc(n)+(n==='Recruta'?'<small>Sem insígnia</small>':'')+'</span><span class="hier-rank-arrow" aria-hidden="true">↗</span></a>').join('')+'</div></section>').join('');
   document.title='Hierarquia — '+f.nome+' | FAAAB';
  }
  for(const link of links){
@@ -107,21 +107,12 @@ if(nav){
 const content=document.getElementById('rank-page-content');
 if(content){
  const k=params.get('forca'),f=forces[k];
- const match=f?.grupos.flatMap(g=>g.patentes.map(n=>({nome:n,grupo:g.titulo,funcao:g.funcoes,previsto:g.previstos?.includes(n)}))).find(x=>slug(x.nome)===params.get('patente'));
+ const match=f?.grupos.flatMap(g=>g.patentes.map(n=>({nome:n,grupo:g.titulo}))).find(x=>slug(x.nome)===params.get('patente'));
  if(!match){
    content.innerHTML='<div class="rank-not-found"><h1>Patente não encontrada</h1><a href="hierarquia.html">Consultar hierarquia</a></div>';
    return;
  }
  const n=match.nome;
- if(match.funcao){
-   const descricao=n.startsWith('Subcomandante')?'Auxilia o comandante e o substitui quando designado.':'Responde pela direção da força na estrutura da FAAAB.';
-   const situacao=match.previsto?'<p>Cargo previsto na estrutura da força.</p>':'';
-   content.innerHTML='<nav class="rank-topnav"><a href="'+url(k)+'">← Voltar à hierarquia</a></nav>'+
-     '<div class="rank-heading"><img src="'+f.imagem+'" alt=""><div><p>'+esc(f.nome)+' · Função de comando</p><h1>'+esc(n)+'</h1></div></div>'+
-     '<section class="rank-panel"><h2>Atribuição na FAAAB</h2><p>'+descricao+'</p>'+situacao+'</section>';
-   document.title=n+' — '+f.nome+' | FAAAB';
-   return;
- }
  const courses=data.cursoObrigatorioPorPatente[k]||{};
  const next=courses[n]||'Ainda não definido na CDP da FAAAB.';
  const dias=(data.diasPorPatente[k]||{})[n];
