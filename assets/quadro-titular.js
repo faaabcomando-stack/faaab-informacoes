@@ -21,10 +21,15 @@
   const modelViewer = "https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js";
   let viewerModule;
   let loading = false;
+  let modelsSnapshot = null;
+  let membersSnapshot = null;
 
   function renderBase(section, key) {
     const [label, uniform] = forces[key];
-    const title = key === "pm" || key === "cbm" ? "Comandante-Geral" : "Comandante";
+    const office = section.dataset.office === "subcomandante" ? "subcomandante" : "comandante";
+    const general = key === "pm" || key === "cbm";
+    const title = office === "subcomandante" ? (general ? "Subcomandante-Geral" : "Subcomandante") :
+      (general ? "Comandante-Geral" : "Comandante");
     section.dataset.force = key;
     delete section.dataset.titular;
     section.innerHTML = `
@@ -33,12 +38,25 @@
         <img src="${assets}${key}-bandeira.webp" alt="" width="720" height="454">
       </picture>
       <div class="quadro-titulo">
+        <div class="quadro-cargos" role="group" aria-label="Escolher função de comando">
+          <button type="button" class="quadro-cargo" data-office="comandante" aria-pressed="${office === "comandante"}">Comandante</button>
+          <button type="button" class="quadro-cargo" data-office="subcomandante" aria-pressed="${office === "subcomandante"}">Subcomandante</button>
+        </div>
         <h2><span>${title}</span> <em>${label}</em></h2>
         <p>${uniform}</p>
       </div>
       <div class="quadro-retrato">
         <img src="${assets}${key}-farda.webp" alt="Farda de comando ${label}" width="900" height="1080">
       </div>`;
+    section.querySelectorAll(".quadro-cargo").forEach(button => {
+      button.addEventListener("click", () => {
+        if (section.dataset.office === button.dataset.office) return;
+        section.dataset.office = button.dataset.office;
+        delete section.dataset.modeloAtual;
+        paint(section);
+        section.querySelector(".quadro-cargo[aria-pressed='true']")?.focus();
+      });
+    });
   }
 
   function validModel(row, force) {
@@ -110,7 +128,7 @@
   }
 
   async function update(section, key, row) {
-    const revision = JSON.stringify(row);
+    const revision = JSON.stringify({ office: "comandante", row });
     if (section.dataset.modeloAtual === revision) return;
     section.dataset.modeloAtual = revision;
     renderBase(section, key);
@@ -134,7 +152,7 @@
     } catch {
       // A malha ainda pode ser carregada, mesmo se a imagem de apoio falhar.
     }
-    if (!portrait.isConnected) return;
+    if (!portrait.isConnected || section.dataset.office === "subcomandante") return;
     const name = document.createElement("a");
     name.className = "quadro-titular-nome";
     name.textContent = row.usuario;
@@ -145,24 +163,120 @@
     showModel(portrait, poster, row, title);
   }
 
+
+  function safeAvatar(url) {
+    try {
+      const parsed = new URL(url);
+      return parsed.protocol === "https:" && (
+        parsed.hostname === "rbxcdn.com" || parsed.hostname.endsWith(".rbxcdn.com")
+      ) ? parsed.href : null;
+    } catch { return null; }
+  }
+
+  function updateFromMembers(section, key, row, office) {
+    const revision = JSON.stringify({ office, row: row || null });
+    if (section.dataset.modeloAtual === revision) return;
+    section.dataset.modeloAtual = revision;
+    renderBase(section, key);
+    const title = section.querySelector(".quadro-titulo");
+    const portrait = section.querySelector(".quadro-retrato");
+    const verified = row?.estado === "titular";
+    const last = row?.estado === "consulta_indisponivel" ? row?.ultimo_confirmado : null;
+    const person = verified ? row : last;
+    const status = document.createElement("p");
+    status.className = "quadro-titular-status";
+    if (person && Number.isSafeInteger(person.usuario_id) && person.usuario_id > 0) {
+      const link = document.createElement("a");
+      link.className = "quadro-titular-nome";
+      link.href = "https://www.roblox.com/users/" + person.usuario_id + "/profile";
+      link.rel = "noopener noreferrer";
+      link.target = "_blank";
+      link.textContent = person.nome_usuario ? "@" + person.nome_usuario : "Roblox #" + person.usuario_id;
+      title.querySelector("h2").after(link);
+      status.textContent = verified
+        ? "Ocupante confirmado no cargo do grupo"
+        : "Último ocupante confirmado; consulta indisponível";
+      const avatar = safeAvatar(person.avatar_url);
+      if (avatar) {
+        const thumb = document.createElement("img");
+        thumb.alt = "Avatar atual de " + (person.nome_usuario || person.usuario_id) +
+          " no Roblox; a farda da FAAAB não foi aplicada ao modelo 3D";
+        thumb.src = avatar;
+        thumb.onerror = () => {
+          thumb.onerror = null;
+          thumb.remove();
+        };
+        portrait.replaceChildren(thumb);
+        section.dataset.titular = "true";
+      }
+    } else {
+      const labels = {
+        vago: "Cargo vago",
+        aguardando_historico: "Aguardando histórico de ocupação",
+        ordem_indeterminada: "Ordem dos ocupantes não confirmada",
+        configuracao_pendente: "Cargo ainda não configurado",
+        consulta_indisponivel: "Consulta ao Roblox indisponível"
+      };
+      status.textContent = row ? (labels[row.estado] || "Cargo em atualização") : "Aguardando dados do Roblox";
+    }
+    title.append(status);
+    const note = document.createElement("small");
+    note.className = "quadro-nota-avatar";
+    note.textContent = "Miniatura Roblox; farda 3D personalizada não gerada para este cargo";
+    portrait.append(note);
+  }
+
+  function paint(section) {
+    const key = section.dataset.quadroComando;
+    const office = section.dataset.office === "subcomandante" ? "subcomandante" : "comandante";
+    const current = membersSnapshot?.forcas?.[key]?.[office];
+    if (office === "subcomandante") {
+      updateFromMembers(section, key, current, office);
+      return;
+    }
+    const model = modelsSnapshot?.[key];
+    const modelMatchesRole = !current || (
+      current.estado === "titular" && current.usuario_id === model?.id
+    );
+    if (model && model.estado === "titular" && validModel(model, key) && modelMatchesRole) {
+      update(section, key, model);
+    } else if (current) {
+      updateFromMembers(section, key, current, office);
+    } else if (model) {
+      update(section, key, model);
+    } else {
+      updateFromMembers(section, key, null, office);
+    }
+  }
+
   const sections = Array.from(document.querySelectorAll("[data-quadro-comando]"))
     .filter(section => Object.hasOwn(forces, section.dataset.quadroComando));
-  for (const section of sections) renderBase(section, section.dataset.quadroComando);
+  for (const section of sections) {
+    section.dataset.office = new URLSearchParams(location.search).get("cargo") === "subcomandante"
+      ? "subcomandante" : "comandante";
+    renderBase(section, section.dataset.quadroComando);
+  }
   if (!sections.length) return;
 
   async function load() {
     if (loading) return;
     loading = true;
     try {
-      const response = await fetch(new URL("comando.json", portraits), { cache: "no-store" });
-      if (!response.ok) return;
-      const snapshot = await response.json();
-      await Promise.all(sections.map(section => {
-        const force = section.dataset.quadroComando;
-        return snapshot?.[force] ? update(section, force, snapshot[force]) : null;
-      }));
+      const [models, members] = await Promise.allSettled([
+        fetch(new URL("comando.json", portraits), { cache: "no-store" })
+          .then(r => { if (!r.ok) throw new Error("Modelos indisponíveis"); return r.json(); }),
+        fetch(new URL("titulares.json", assets), { cache: "no-store" })
+          .then(r => { if (!r.ok) throw new Error("Cargos indisponíveis"); return r.json(); })
+      ]);
+      if (models.status === "fulfilled" && models.value && typeof models.value === "object") {
+        modelsSnapshot = models.value;
+      }
+      if (members.status === "fulfilled" && members.value?.versao === 1) {
+        membersSnapshot = members.value;
+      }
+      await Promise.all(sections.map(paint));
     } catch {
-      // Uma falha de rede não apaga um quadro já carregado.
+      // A indisponibilidade não interrompe a navegação entre as funções.
     } finally {
       loading = false;
     }
