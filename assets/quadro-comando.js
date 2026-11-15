@@ -44,6 +44,9 @@
     const verified = holder?.estado === "titular";
     const old = holder?.estado === "consulta_indisponivel" ? holder?.ultimo_confirmado : null;
     const person = verified ? holder : old;
+    const signature = JSON.stringify({key,holder,loaded});
+    if (container.dataset.lastHolder === signature) return;
+    container.dataset.lastHolder = signature;
     if (person?.usuario_id && Number.isSafeInteger(person.usuario_id) && person.usuario_id > 0) {
       const profile = document.createElement("a");
       profile.href = "https://www.roblox.com/users/" + person.usuario_id + "/profile";
@@ -110,21 +113,35 @@
   for (const el of document.querySelectorAll("[data-quadro-comando]")) {
     if (el.dataset.quadroComando) render(el, el.dataset.quadroComando);
   }
-  fetch(holdersUrl, { cache: "no-store" }).then(r => {
-    if (!r.ok) throw new Error("Snapshot indisponível");
-    return r.json();
-  }).then(data => {
-    if (data?.versao !== 1 || !data.forcas || typeof data.forcas !== "object") {
-      throw new Error("Snapshot inválido");
-    }
-    registry = data;
-  }).catch(() => {
-    registry = null;
-  }).finally(() => {
-    loaded = true;
-    document.querySelectorAll("[data-quadro-comando]").forEach(el => {
-      const key = el.dataset.force || el.dataset.quadroComando;
-      refresh(el, key);
+  let pending = false;
+  function loadSnapshot() {
+    if (pending) return;
+    pending = true;
+    fetch(holdersUrl, { cache: "no-store" }).then(r => {
+      if (!r.ok) throw new Error("Snapshot indisponível");
+      return r.json();
+    }).then(data => {
+      if (data?.versao !== 1 || !data.forcas || typeof data.forcas !== "object") {
+        throw new Error("Snapshot inválido");
+      }
+      registry = data;
+    }).catch(() => {
+      // Não substituir uma consulta anterior por falha temporária do navegador.
+      if (!loaded) registry = null;
+    }).finally(() => {
+      pending = false;
+      loaded = true;
+      document.querySelectorAll("[data-quadro-comando]").forEach(el => {
+        const key = el.dataset.force || el.dataset.quadroComando;
+        refresh(el, key);
+      });
     });
+  }
+  loadSnapshot();
+  setInterval(() => {
+    if (!document.hidden) loadSnapshot();
+  }, 5 * 60 * 1000);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) loadSnapshot();
   });
 })();
