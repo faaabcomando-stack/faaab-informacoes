@@ -229,6 +229,8 @@ def main():
     args = parser.parse_args()
     key = os.environ.get("ROBLOX_OPEN_CLOUD_KEY", "").strip()
     audit_key = os.environ.get("ROBLOX_GROUP_AUDIT_KEY", "").strip()
+    print("Chave Roblox presente no ambiente: " + ("sim" if key else "não"))
+    print("Chave de auditoria presente no ambiente: " + ("sim" if audit_key else "não"))
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
     try:
         previous = fetch_json(PRIOR_URL, timeout=7)
