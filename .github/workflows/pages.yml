@@ -24,6 +24,8 @@ jobs:
       - name: Preparar insígnias transparentes
         run: |
           python -m pip install --disable-pip-version-check pillow
+          python -m pip install --disable-pip-version-check pymupdf
+          python scripts/otimizar_escudos_escolas.py
           python scripts/auditar_png.py
           python scripts/preparar_insignias.py
       - name: Validar páginas e catálogo da FAAAB
