@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
 permissions:
   contents: read
   pages: write
@@ -28,9 +30,15 @@ jobs:
           python scripts/otimizar_escudos_escolas.py
           python scripts/auditar_png.py
           python scripts/preparar_insignias.py
+      - name: Sincronizar comandantes do Roblox
+        env:
+          ROBLOX_OPEN_CLOUD_KEY: ${{ secrets.ROBLOX_OPEN_CLOUD_KEY }}
+          ROBLOX_GROUP_AUDIT_KEY: ${{ secrets.ROBLOX_GROUP_AUDIT_KEY }}
+        run: python scripts/sincronizar_comandos.py
       - name: Validar páginas e catálogo da FAAAB
         run: |
           python scripts/validar_piloto.py
+          python -m unittest discover -s tests -p 'test_comandos.py' -v
           node --check assets/faaab-components.js
           node --check assets/site.js
       - uses: actions/configure-pages@v5
