@@ -44,3 +44,11 @@ body.eb.eb-home.eb-division-site .footer{margin-top:0;}
 @media(prefers-reduced-motion:reduce){
  body.eb.eb-home.eb-division-site .eb-division-brigade{transition:none;}
 }
+/* Organizações sem brasão próprio: usar sigla tipográfica, não insígnia inventada. */
+body.eb.eb-home.eb-division-site .eb-division-textmark{display:grid;place-items:center;width:82px;height:82px;object-fit:contain;border:1px solid #c9d9cd;background:#f4f8f4;color:#2b593d;font-size:18px;letter-spacing:.06em;font-weight:850;border-radius:2px}
+body.eb.eb-home.eb-division-site .eb-division-special{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:22px 5px;margin-top:30px;border-top:1px solid #cad8ce}
+body.eb.eb-home.eb-division-site .eb-division-special strong{display:block;font-size:18px;color:#2d4b3b}
+body.eb.eb-home.eb-division-site .eb-division-special p{margin:5px 0 0;color:#63786c;font-size:13px;line-height:1.6}
+body.eb.eb-home.eb-division-site .eb-division-special a{font-weight:800;font-size:13px;color:#295d43;text-underline-offset:4px;min-height:44px;display:flex;align-items:center}
+body.eb.eb-home.eb-division-site .eb-division-special a:focus-visible{outline:3px solid #c3a96e;outline-offset:2px}
+@media(max-width:480px){body.eb.eb-home.eb-division-site .eb-division-textmark{width:54px;height:60px;font-size:13px}}
