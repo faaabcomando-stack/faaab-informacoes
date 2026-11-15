@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
-"""Corrige apenas o fundo externo das insígnias já cadastradas na FAAAB.
+"""Prepara PNGs do portal FAAAB sem redesenhar brasões.
 
-Mantém o desenho original, as cores, o texto e os detalhes do escudo.
-Executado durante a publicação do GitHub Pages; os PNGs publicados são RGBA.
+- Recorta SOMENTE as áreas de fundo externas, contíguas à borda, de quatro
+  imagens com falhas conhecidas. Branco/preto internos permanecem no escudo.
+- Converte insígnias já transparentes de PNG indexado (P/tRNS) para RGBA
+  explícito, para melhor compatibilidade com visualizadores.
+- Não confunde PNG (formato) com transparência e NÃO remove fundos de
+  fotografias, fardas ou de imagens sem máscara segura.
+O checkout original não é modificado no GitHub; o GitHub Pages usa estes
+arquivos processados durante o build.
 """
 from collections import deque
 from pathlib import Path
@@ -11,75 +17,101 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 INSIGNIAS = ROOT / "assets" / "insignias"
 TARGETS = {
-    "FTB-Bda-Inf-AMV.png": "dark",
-    "FTB-Bda-Inf-Bld.png": "light",
-    "FTB-Bda-Inf-Mec.png": "dark",
-    "FMB-CIAA.png": "light",
+    INSIGNIAS / "FTB-Bda-Inf-AMV.png": "escuro",
+    INSIGNIAS / "FTB-Bda-Inf-Bld.png": "claro",
+    INSIGNIAS / "FTB-Bda-Inf-Mec.png": "escuro",
+    INSIGNIAS / "FMB-CIAA.png": "claro",
 }
+FOLDERS = [
+    ROOT / "assets" / "insignias",
+    ROOT / "assets" / "forcas",
+    ROOT / "ministerio-defesa" / "assets" / "forcas",
+    ROOT / "marinha" / "cfn",
+]
+ADDITIONAL = [
+    ROOT / "assets" / "logo-faaab.png",
+    ROOT / "ministerio-defesa" / "assets" / "logo-faaab.png",
+    ROOT / "ministerio-defesa" / "assets" / "ministerio-da-defesa.png",
+]
 
-def remove_outer_background(path: Path, mode: str) -> None:
-    im = Image.open(path).convert("RGBA")
-    w, h = im.size
-    px = im.load()
-    visited = bytearray(w * h)
-    removed = bytearray(w * h)
+def external_matte(rgb, mode):
+    r, g, b = rgb
+    spread = max(rgb) - min(rgb)
+    if mode == "escuro":
+        return max(rgb) <= 100 and spread <= 32
+    if mode == "claro":
+        return min(rgb) >= 207 and spread <= 36
+    return False
+
+def remove_exterior(im, mode):
+    rgba = im.convert("RGBA")
+    w, h = rgba.size
+    px = rgba.load()
+    visited = bytearray(w*h)
+    removed = bytearray(w*h)
     queue = deque()
 
-    def is_background(x: int, y: int) -> bool:
-        r, g, b, a = px[x, y]
-        if a <= 12:
-            return True
-        if mode == "dark":
-            return max(r, g, b) <= 58
-        # Fundo branco/acinzentado externo, não as cores do brasão.
-        return min(r, g, b) >= 227 and max(r, g, b) - min(r, g, b) <= 30
+    def add(x,y):
+        at = y*w+x
+        if visited[at]: return
+        visited[at] = 1
+        r,g,b,a = px[x,y]
+        if a <= 12 or external_matte((r,g,b), mode):
+            removed[at] = 1
+            queue.append((x,y))
 
-    def add(x: int, y: int):
-        idx = y * w + x
-        if not visited[idx]:
-            visited[idx] = 1
-            if is_background(x, y):
-                removed[idx] = 1
-                queue.append((x, y))
-
-    # Somente regiões claras ou escuras que tocam a borda são eliminadas.
-    # Assim, áreas do desenho dentro dos contornos do escudo são preservadas.
     for x in range(w):
-        add(x, 0)
-        add(x, h - 1)
+        add(x,0)
+        add(x,h-1)
     for y in range(h):
-        add(0, y)
-        add(w - 1, y)
-
+        add(0,y)
+        add(w-1,y)
     while queue:
-        x, y = queue.popleft()
-        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1),
-                       (1, 1), (1, -1), (-1, 1), (-1, -1)):
-            nx, ny = x + dx, y + dy
-            if 0 <= nx < w and 0 <= ny < h:
-                add(nx, ny)
+        x,y=queue.popleft()
+        for dx,dy in ((1,0),(-1,0),(0,1),(0,-1),(1,1),(1,-1),(-1,1),(-1,-1)):
+            nx,ny=x+dx,y+dy
+            if 0<=nx<w and 0<=ny<h:
+                add(nx,ny)
 
-    removed_count = 0
+    changed=0
     for y in range(h):
         for x in range(w):
-            if removed[y * w + x]:
-                r, g, b, a = px[x, y]
+            if removed[y*w+x]:
+                r,g,b,a=px[x,y]
                 if a:
-                    px[x, y] = (r, g, b, 0)
-                    removed_count += 1
+                    px[x,y]=(r,g,b,0)
+                    changed+=1
+    return rgba, changed
 
-    # Mantém todos os detalhes e dimensões do arquivo original.
-    if removed_count < 10:
-        print(f"AVISO: {path.name}: fundo externo não detectado; original preservado")
-        return
-    im.save(path, "PNG", optimize=True)
-    check = Image.open(path)
-    assert check.mode == "RGBA"
-    print(f"{path.name}: PNG RGBA {w}x{h}, {removed_count} pixels externos transparentes")
+def has_transparency(image):
+    if image.mode in ("RGBA","LA"):
+        return image.getchannel("A").getextrema()[0] < 255
+    return "transparency" in image.info
 
+def main():
+    files=sorted(set(p for root in FOLDERS for p in root.glob("*.png") if p.is_file())|set(p for p in ADDITIONAL if p.is_file()))
+    converted=0
+    untouched_opaque=[]
+    cut=0
+    for path in files:
+        with Image.open(path) as src:
+            transparent=has_transparency(src)
+            if not transparent and path not in TARGETS:
+                untouched_opaque.append(str(path.relative_to(ROOT)))
+                continue
+            if path in TARGETS:
+                rgba,n=remove_exterior(src,TARGETS[path])
+                cut+=1
+                print(f"RECORTE {path.relative_to(ROOT)}: {n} pixels de fundo externo removidos")
+            else:
+                rgba=src.convert("RGBA")
+            rgba.save(path,"PNG",optimize=True)
+            converted+=1
+    print(f"PNG RGBA: {converted} arquivos convertidos; {cut} recortes específicos.")
+    if untouched_opaque:
+        print("REVISÃO MANUAL (opacos, preservados):")
+        for name in untouched_opaque: print("  "+name)
+    else:
+        print("Nenhum PNG de insígnia totalmente opaco pendente.")
 if __name__ == "__main__":
-    for name, mode in TARGETS.items():
-        path = INSIGNIAS / name
-        if not path.exists():
-            raise FileNotFoundError(path)
-        remove_outer_background(path, mode)
+    main()
