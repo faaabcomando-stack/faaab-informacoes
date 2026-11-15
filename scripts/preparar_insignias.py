@@ -12,7 +12,7 @@ arquivos processados durante o build.
 """
 from collections import deque
 from pathlib import Path
-from PIL import Image
+from PIL import Image, ImageDraw, ImageChops
 
 ROOT = Path(__file__).resolve().parents[1]
 INSIGNIAS = ROOT / "assets" / "insignias"
@@ -88,6 +88,41 @@ def has_transparency(image):
         return image.getchannel("A").getextrema()[0] < 255
     return "transparency" in image.info
 
+def mask_outside_emblem(image, kind):
+    """Remove the white rectangle baked *around* two confirmed emblems.
+
+    GBS is a circular crest. EEAR is a shield; the white inside the shield
+    is part of the original artwork and MUST stay opaque. Coordinates are
+    normalized from the existing source sizes, never from the UI screenshot.
+    Use a supersampled alpha mask for smooth curved boundaries.
+    """
+    w, h = image.size
+    scale = 4
+    mask = Image.new("L", (w * scale, h * scale), 0)
+    draw = ImageDraw.Draw(mask)
+    if kind == "medalha":
+        draw.ellipse((5*scale, 6*scale, (w-6)*scale, (h-6)*scale), fill=255)
+    elif kind == "escudo":
+        # Shape of EEAR's outline; mask only the area OUTSIDE the shield.
+        outline = [(8,6),(415,6),(414,295),(411,346),(395,405),
+                   (364,460),(321,490),(266,506),(212,510),(153,504),
+                   (101,485),(56,443),(23,388),(9,340),(8,292)]
+        points = [(round(x/423*w*scale),round(y/512*h*scale)) for x,y in outline]
+        draw.polygon(points, fill=255)
+    else:
+        raise ValueError(kind)
+    mask = mask.resize((w, h), Image.Resampling.LANCZOS)
+    rgba = image.convert("RGBA")
+    rgba.putalpha(ImageChops.multiply(rgba.getchannel("A"), mask))
+    assert rgba.getpixel((0,0))[3] == 0
+    assert rgba.getpixel((w//2,h//2))[3] > 0
+    return rgba
+
+SHAPE_FIXES = {
+    INSIGNIAS / "CBM-GBS.png": "medalha",
+    INSIGNIAS / "FAB-EEAR.png": "escudo",
+}
+
 def main():
     files=sorted(set(p for root in FOLDERS for p in root.glob("*.png") if p.is_file())|set(p for p in ADDITIONAL if p.is_file()))
     converted=0
@@ -103,6 +138,10 @@ def main():
                 rgba,n=remove_exterior(src,TARGETS[path])
                 cut+=1
                 print(f"RECORTE {path.relative_to(ROOT)}: {n} pixels de fundo externo removidos")
+            elif path in SHAPE_FIXES:
+                rgba=mask_outside_emblem(src, SHAPE_FIXES[path])
+                cut+=1
+                print(f"RECORTE DE FORMA {path.relative_to(ROOT)}: fundo retangular externo removido")
             else:
                 rgba=src.convert("RGBA")
             rgba.save(path,"PNG",optimize=True)
