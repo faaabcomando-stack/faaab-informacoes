@@ -54,24 +54,37 @@ def probe_eseqex():
         print(f"QUALIDADE EsEqEx: original {im.width}x{im.height}; não ampliar artificialmente")
     try:
         import fitz
-        raw=download(ESEQEX_PDF_URL)
-        document=fitz.open(stream=raw,filetype="pdf")
+        sources=[
+            ESEQEX_PDF_URL,
+            "https://www.eseqex.eb.mil.br/images/2019/eseqex.pdf",
+            "https://adestramentobrasil.com/wp-content/uploads/2021/02/programa-adestramento_aman_2021.pdf",
+        ]
+        all_candidates=[]
+        for url in sources:
+            try:
+                raw=download(url)
+                document=fitz.open(stream=raw,filetype="pdf")
+                refs=[]
+                for page in document[:min(3,len(document))]:
+                    refs.extend((document,ref) for ref in page.get_images(full=True))
+                all_candidates.extend((url,doc,ref) for doc,ref in refs)
+            except Exception as issue:
+                print(f"QUALIDADE EsEqEx: fonte indisponível {url}: {issue}")
         original=Image.open(target).convert("RGBA")
         base=Image.new("RGBA",original.size,(255,255,255,255))
         base.alpha_composite(original)
         reference=base.convert("RGB").resize((64,80),Image.Resampling.LANCZOS)
         from PIL import ImageChops,ImageStat
         imgs=[]
-        for page in document[:1]:
-            for ref in page.get_images(full=True):
-                xref=ref[0]
-                info=document.extract_image(xref)
-                if not info:continue
-                pic=Image.open(BytesIO(info["image"])).convert("RGB")
-                if pic.width>400 or pic.height>400: continue
-                candidate=pic.resize((64,80),Image.Resampling.LANCZOS)
-                score=round(sum(ImageStat.Stat(ImageChops.difference(reference,candidate)).mean)/3,1)
-                imgs.append((score,pic.width,pic.height,info.get("ext","?"),xref))
+        for url,doc,ref in all_candidates:
+            xref=ref[0]
+            info=doc.extract_image(xref)
+            if not info:continue
+            pic=Image.open(BytesIO(info["image"])).convert("RGB")
+            if pic.width>1800 or pic.height>1800:continue
+            candidate=pic.resize((64,80),Image.Resampling.LANCZOS)
+            score=round(sum(ImageStat.Stat(ImageChops.difference(reference,candidate)).mean)/3,1)
+            imgs.append((score,pic.width,pic.height,info.get("ext","?"),url.split('/')[2],xref))
         imgs.sort()
         print(f"QUALIDADE EsEqEx: candidatos por diferença de cores (menor é melhor): {imgs}")
         print("QUALIDADE EsEqEx: substituição aguarda conferência visual da candidata correta.")
