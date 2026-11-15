@@ -6,9 +6,11 @@ if(!data)return;
 const forces=data.forcas;
 const params=new URLSearchParams(location.search);
 const keys=Object.keys(forces);
-const current=keys.includes(params.get('forca'))?params.get('forca'):'eb';
-// A foto muda somente na hierarquia central, conforme a força selecionada.
-if(document.body.classList.contains('hierarquia-capa'))document.body.dataset.hierForce=current;
+const forceFromLocation=()=>{
+ const key=new URLSearchParams(location.search).get('forca');
+ return keys.includes(key)?key:'eb';
+};
+if(document.body.classList.contains('hierarquia-capa'))document.body.dataset.hierForce=forceFromLocation();
 const slug=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const url=k=>'hierarquia.html?forca='+encodeURIComponent(k);
@@ -65,14 +67,42 @@ const summaries={
 };
 const nav=document.getElementById('hier-forces');
 if(nav){
- const f=forces[current];
- nav.innerHTML=keys.map(k=>'<a class="hier-orb'+(k===current?' is-selected':'')+'" href="'+url(k)+'" '+(k===current?'aria-current="page"':'')+'><span class="hier-orb-art"><img src="'+forces[k].imagem+'" alt=""></span><span>'+esc(forces[k].nome)+'</span></a>').join('');
- document.getElementById('hier-force-title').textContent=f.nome;
- document.getElementById('hier-force-description').textContent=f.descricao;
+ const labels={eb:'Exército',fab:'FAB',mb:'Marinha',pm:'PM',cbm:'CBM'};
+ nav.innerHTML=keys.map(k=>'<a class="comando-forca" data-force="'+k+'" href="'+url(k)+'" aria-label="'+esc(forces[k].nome)+'"><img src="'+forces[k].imagem+'" alt=""><span>'+esc(labels[k]||forces[k].nome)+'</span></a>').join('');
+ const links=Array.from(nav.querySelectorAll('a'));
+ const command=document.getElementById('hier-comando');
+ const title=document.getElementById('hier-force-title');
+ const description=document.getElementById('hier-force-description');
  const extra=document.getElementById('hier-extra');
- if(extra)extra.textContent=(data.contextoIngressos||{})[current]||'';
- document.getElementById('hier-ranks').innerHTML=f.grupos.map(g=>'<section class="hier-group"><h3>'+esc(g.titulo)+'</h3><div class="hier-rank-list">'+g.patentes.map(n=>'<a class="hier-rank-link" href="'+rankUrl(current,n)+'"><span>'+esc(n)+(n==='Recruta'?'<small>Sem insígnia</small>':'')+'</span><span class="hier-rank-arrow" aria-hidden="true">↗</span></a>').join('')+'</div></section>').join('');
- document.title='Hierarquia — '+f.nome+' | FAAAB';
+ const ranks=document.getElementById('hier-ranks');
+ let current;
+ function renderForce(key){
+  if(current===key)return;
+  current=key;
+  const f=forces[key];
+  document.body.dataset.hierForce=key;
+  for(const link of links){
+   if(link.dataset.force===key)link.setAttribute('aria-current','page');
+   else link.removeAttribute('aria-current');
+  }
+  window.FAAABQuadroComando?.(command,key);
+  title.textContent=f.nome;
+  description.textContent=f.descricao;
+  if(extra)extra.textContent=(data.contextoIngressos||{})[key]||'';
+  ranks.innerHTML=f.grupos.map(g=>'<section class="hier-group"><h3>'+esc(g.titulo)+'</h3><div class="hier-rank-list">'+g.patentes.map(n=>'<a class="hier-rank-link" href="'+rankUrl(key,n)+'"><span>'+esc(n)+(n==='Recruta'?'<small>Sem insígnia</small>':'')+'</span><span class="hier-rank-arrow" aria-hidden="true">↗</span></a>').join('')+'</div></section>').join('');
+  document.title='Hierarquia — '+f.nome+' | FAAAB';
+ }
+ for(const link of links){
+  link.addEventListener('click',event=>{
+   if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+   event.preventDefault();
+   if(link.dataset.force===current)return;
+   history.pushState(null,'',link.href);
+   renderForce(link.dataset.force);
+  });
+ }
+ addEventListener('popstate',()=>renderForce(forceFromLocation()));
+ renderForce(forceFromLocation());
 }
 const content=document.getElementById('rank-page-content');
 if(content){

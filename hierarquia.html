@@ -4,10 +4,12 @@
 <link rel="icon" type="image/png" href="assets/logo-faaab.png">
 <link rel="stylesheet" href="assets/style.css?v=12">
 <link rel="stylesheet" href="assets/hierarquia-visual.css?v=2">
+<link rel="stylesheet" href="assets/quadro-comando.css?v=1">
 <script defer src="assets/site.js?v=8"></script>
 <script defer src="assets/hierarquia-data.js?v=16"></script>
-<script defer src="assets/hierarquia-page.js?v=13"></script>
-<link rel="stylesheet" href="assets/mobile-header.css?v=1"></head><body class="hier-page hierarquia-capa"><a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<script defer src="assets/quadro-comando.js?v=1"></script>
+<script defer src="assets/hierarquia-page.js?v=14"></script>
+<link rel="stylesheet" href="assets/mobile-header.css?v=1"></head><body class="hier-page hierarquia-capa hierarquia-comandos"><a class="skip" href="#conteudo">Ir para o conteúdo</a>
 <header class="header"><div class="wrap header-inner">
   <a class="identity" href="index.html" aria-label="Página inicial da FAAAB">
     <img src="assets/logo-faaab.png" alt="Brasão da FAAAB" width="66" height="66">
@@ -26,7 +28,10 @@
     <p>Selecione uma força para consultar as etapas de formação, patentes e fichas. As regras da FAAAB prevalecem sobre as hierarquias reais.</p>
   </div></section>
   <div class="wrap">
-    <nav id="hier-forces" class="hier-force-nav" aria-label="Selecionar força"></nav>
+    <div class="comando-central">
+      <nav id="hier-forces" class="comando-forcas" aria-label="Selecionar força"></nav>
+      <section class="quadro-comando" id="hier-comando" data-quadro-comando=""></section>
+    </div>
     <div class="hier-selected-heading"><div><h2 id="hier-force-title">Exército Brasileiro</h2><p id="hier-force-description"></p></div></div>
     <div id="hier-ranks" class="hier-rank-groups"></div>
     <p id="hier-extra" class="hier-guidance"></p>

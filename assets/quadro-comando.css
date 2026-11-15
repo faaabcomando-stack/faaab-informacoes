@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "Instrument Serif FAAAB";
+  src: url(comando/instrument-serif.woff2) format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Serif FAAAB";
+  src: url(comando/instrument-serif-italic.woff2) format("woff2");
+  font-style: italic;
+  font-display: swap;
+}
+.quadro-comando:empty { display: none; }
+.quadro-comando {
+  --quadro-base: #101e18;
+  --quadro-destaque: #e5cb91;
+  --quadro-bandeira-x: 21%;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+  min-height: clamp(458px, 43vw, 592px);
+  background: var(--quadro-base);
+  color: #f8f3e8;
+}
+.quadro-comando[data-force="fab"] {
+  --quadro-base: #101c28; --quadro-destaque: #bcd9ed; --quadro-bandeira-x: 17%;
+}
+.quadro-comando[data-force="mb"] {
+  --quadro-base: #111b2b; --quadro-destaque: #e5cb96; --quadro-bandeira-x: 17%;
+}
+.quadro-comando[data-force="pm"] {
+  --quadro-base: #191b2b; --quadro-destaque: #e3d199; --quadro-bandeira-x: 18%;
+}
+.quadro-comando[data-force="cbm"] {
+  --quadro-base: #2a1419; --quadro-destaque: #edb6a0; --quadro-bandeira-x: 17%;
+}
+.quadro-bandeira {
+  position: absolute;
+  z-index: -3;
+  inset: -45% auto auto var(--quadro-bandeira-x);
+  width: 102%;
+  height: 170%;
+  opacity: .89;
+  pointer-events: none;
+}
+.quadro-bandeira img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.quadro-comando::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--quadro-base) 4%, color-mix(in srgb, var(--quadro-base) 96%, transparent) 29%,
+      color-mix(in srgb, var(--quadro-base) 46%, transparent) 54%, transparent 76%),
+    linear-gradient(0deg, #060b0c8c, transparent 32%, transparent 88%, #0b111a5c);
+}
+.quadro-comando::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(0deg, #080e139e, transparent 29%);
+}
+.quadro-retrato {
+  position: absolute;
+  z-index: -1;
+  inset: 8% 2.2% 0 48.4%;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  pointer-events: none;
+}
+.quadro-retrato img {
+  display: block;
+  width: 101%;
+  height: auto;
+  max-width: none;
+  filter: drop-shadow(12px 18px 18px #030807bf);
+}
+.quadro-titulo {
+  position: relative;
+  z-index: 1;
+  width: min(66%, 710px);
+  padding: 55px 0 64px clamp(28px, 5.65vw, 82px);
+}
+.quadro-titulo::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 2px;
+  margin-bottom: 24px;
+  background: var(--quadro-destaque);
+}
+.quadro-titulo h2 {
+  margin: 0;
+  color: #f8f3e8;
+  font: 400 clamp(50px, 7.65vw, 108px) / .89 "Instrument Serif FAAAB", Georgia, serif;
+  letter-spacing: -.035em;
+  text-shadow: 0 5px 24px #06090b4d;
+}
+.quadro-titulo h2 span,
+.quadro-titulo h2 em { display: block; }
+.quadro-titulo h2 em {
+  margin-top: .085em; font-size: .92em; font-weight: 400; color: var(--quadro-destaque);
+}
+.quadro-comando:is([data-force="pm"], [data-force="cbm"]) h2 {
+  font-size: clamp(45px, 5.55vw, 79px);
+}
+.quadro-comando[data-force="cbm"] h2 em { max-width: 9em; text-wrap: balance; }
+.quadro-titulo p {
+  margin: 24px 0 0; color: #e3e7dd;
+  font-size: clamp(12px, 1.14vw, 15px); line-height: 1.5; font-weight: 550;
+}
+
+.comando-institucional { margin-block: clamp(24px, 4vw, 48px) 0; }
+.comando-institucional .quadro-comando {
+  border: 1px solid #8f9d8d;
+  box-shadow: 0 16px 40px #17272225;
+}
+
+body.hierarquia-comandos.hierarquia-capa,
+body.hierarquia-comandos.hierarquia-capa[data-hier-force] {
+  background: radial-gradient(ellipse at 50% 15%, #26312c, #111917 61%) fixed;
+}
+body.hierarquia-comandos.hierarquia-capa .header { background: #101715 !important; }
+body.hierarquia-comandos.hierarquia-capa .hier-intro {
+  padding: clamp(108px, 10vw, 148px) 0 clamp(18px, 3vw, 37px);
+}
+body.hierarquia-comandos.hierarquia-capa .hier-intro h1 {
+  font-size: clamp(32px, 3.8vw, 52px);
+}
+body.hierarquia-comandos.hierarquia-capa .hier-intro p { color: #d3ded5; }
+.comando-central {
+  border: 1px solid #c3ccb348;
+  box-shadow: 0 24px 74px #03080670;
+  margin-bottom: clamp(30px, 5vw, 68px);
+}
+.comando-forcas {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-bottom: 1px solid #ccd4bc44;
+  background: #111917;
+}
+.comando-forca {
+  --forca-destaque: #e5cb91;
+  min-width: 0;
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(7px, 1vw, 15px);
+  padding: 7px 4px;
+  border-inline-end: 1px solid #b7c0ac23;
+  text-decoration: none;
+  color: #c6d0c7;
+  font-size: clamp(13px, 1.2vw, 16px);
+  font-weight: 600;
+}
+.comando-forca:last-child { border-inline-end: 0; }
+.comando-forca[data-force="fab"] { --forca-destaque: #bcd9ed; }
+.comando-forca[data-force="mb"] { --forca-destaque: #e5cb96; }
+.comando-forca[data-force="pm"] { --forca-destaque: #dfcbe8; }
+.comando-forca[data-force="cbm"] { --forca-destaque: #edb6a0; }
+.comando-forca img { width: 27px; height: 30px; object-fit: contain; }
+.comando-forca:hover { color: #fff; background: #a2c1a818; }
+.comando-forca:focus-visible { outline: 2px solid #f2dca5; outline-offset: -3px; }
+.comando-forca[aria-current="page"] {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--forca-destaque) 20%, transparent), transparent);
+  color: var(--forca-destaque);
+  box-shadow: inset 0 2px var(--forca-destaque);
+}
+body.hierarquia-comandos.hierarquia-capa .hier-group {
+  background: #1a2520;
+  border-color: #aab6a73b;
+  backdrop-filter: none;
+}
+
+@media (min-width: 701px) and (max-width: 969px) {
+  .quadro-retrato { inset: 12% -1% 0 51.8%; }
+  .quadro-titulo { width: 77%; }
+  .quadro-titulo h2 { font-size: clamp(54px, 8.1vw, 77px); }
+  .quadro-comando:is([data-force="pm"], [data-force="cbm"]) h2 {
+    font-size: clamp(42px, 6.1vw, 59px);
+  }
+}
+@media (max-width: 700px) {
+  .quadro-comando { align-items: start; min-height: clamp(405px, 110vw, 567px); }
+  .quadro-bandeira { inset: 2% auto auto -45%; width: 164%; height: 117%; opacity: .79; }
+  .quadro-comando::before {
+    background: linear-gradient(180deg, var(--quadro-base), color-mix(in srgb, var(--quadro-base) 70%, transparent) 25%, transparent 56%);
+  }
+  .quadro-titulo { width: 100%; padding: 21px clamp(14px, 5vw, 28px) 0; }
+  .quadro-titulo::before { width: 31px; margin-bottom: 13px; }
+  .quadro-titulo h2 { font-size: clamp(43px, 11vw, 67px); }
+  .quadro-comando:is([data-force="pm"], [data-force="cbm"]) h2 {
+    font-size: clamp(34px, 9vw, 54px);
+  }
+  .quadro-titulo p { margin-top: 11px; }
+  .quadro-retrato { inset: max(144px, 31%) 0 0; }
+  .quadro-comando[data-force="cbm"] .quadro-retrato { top: max(158px, 36%); }
+  .quadro-retrato img { width: min(102%, 490px); }
+  .comando-forca { flex-direction: column; gap: 4px; min-height: 57px; font-size: 11px; }
+  .comando-forca img { width: 21px; height: 22px; }
+}
