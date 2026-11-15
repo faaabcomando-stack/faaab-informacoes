@@ -35,6 +35,7 @@ def update_esefex():
         if max(original.size)/min(original.size)>1.13:
             raise ValueError(f"Proporção inesperada: {original.size}")
         im=original.convert("RGBA")
+        im.thumbnail((640,640),Image.Resampling.LANCZOS)
         w,h=im.size
         # O brasão é circular; elimina somente os cantos externos.
         mask=Image.new("L",im.size,0)
@@ -55,16 +56,24 @@ def probe_eseqex():
         import fitz
         raw=download(ESEQEX_PDF_URL)
         document=fitz.open(stream=raw,filetype="pdf")
+        original=Image.open(target).convert("RGBA")
+        base=Image.new("RGBA",original.size,(255,255,255,255))
+        base.alpha_composite(original)
+        reference=base.convert("RGB").resize((64,80),Image.Resampling.LANCZOS)
+        from PIL import ImageChops,ImageStat
         imgs=[]
         for page in document[:1]:
             for ref in page.get_images(full=True):
                 xref=ref[0]
                 info=document.extract_image(xref)
                 if not info:continue
-                pic=Image.open(BytesIO(info["image"]))
-                imgs.append((pic.width,pic.height,info.get("ext","?")))
-        imgs.sort(reverse=True)
-        print(f"QUALIDADE EsEqEx: imagens embutidas na capa do programa: {imgs[:22]}")
+                pic=Image.open(BytesIO(info["image"])).convert("RGB")
+                if pic.width>400 or pic.height>400: continue
+                candidate=pic.resize((64,80),Image.Resampling.LANCZOS)
+                score=round(sum(ImageStat.Stat(ImageChops.difference(reference,candidate)).mean)/3,1)
+                imgs.append((score,pic.width,pic.height,info.get("ext","?"),xref))
+        imgs.sort()
+        print(f"QUALIDADE EsEqEx: candidatos por diferença de cores (menor é melhor): {imgs}")
         print("QUALIDADE EsEqEx: substituição aguarda conferência visual da candidata correta.")
     except Exception as exc:
         print(f"QUALIDADE EsEqEx: documento indisponível; brasão original mantido: {exc}")
