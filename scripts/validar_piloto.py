@@ -75,11 +75,14 @@ def validate():
     for f in ("eb", "fab", "mb", "cbm", "pm"):
         cfg = titulares["forcas"][f]
         gid = cfg["grupo_id"]
-        roles = cfg["papeis_ids"]
-        if gid is not None and (not isinstance(gid, int) or gid <= 0 or not isinstance(roles, list) or not roles):
-            bad.append(f"{f}: ID de grupo configurado sem papéis elegíveis válidos")
-        if gid is None and roles:
-            bad.append(f"{f}: papéis configurados sem ID de grupo")
+        if gid is not None and (type(gid) is not int or gid <= 0):
+            bad.append(f"{f}: ID de grupo inválido")
+        for office in ("papeis_ids", "papeis_subcomando_ids"):
+            roles = cfg[office]
+            if not isinstance(roles, list) or any(type(role) is not int or role <= 0 for role in roles):
+                bad.append(f"{f}: IDs inválidos em {office}")
+            elif gid is None and roles:
+                bad.append(f"{f}: papéis configurados sem ID de grupo")
     noticias = json.loads((ROOT / "assets/publicacoes-data.json").read_text(encoding="utf-8"))
     if not isinstance(noticias, list):
         bad.append("Catálogo de notícias precisa ser uma lista")

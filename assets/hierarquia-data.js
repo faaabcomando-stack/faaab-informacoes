@@ -1,4 +1,4 @@
-/* Dados de hierarquia da simulação FAAAB. Somente patentes confirmadas, sem recriar cargos excluídos. */
+/* Patentes e funções de comando da simulação FAAAB. */
 window.FAAAB_HIERARQUIAS = {
   "versao": "2026-11-14 — correção solicitada pelo comando FAAAB",
   "forcas": {
@@ -71,6 +71,14 @@ window.FAAAB_HIERARQUIAS = {
             "General de Exército",
             "Marechal"
           ]
+        },
+        {
+          "titulo": "Comando",
+          "patentes": [
+            "Subcomandante",
+            "Comandante"
+          ],
+          "funcoes": true
         }
       ]
     },
@@ -139,6 +147,14 @@ window.FAAAB_HIERARQUIAS = {
             "Tenente-Brigadeiro do Ar",
             "Marechal do Ar"
           ]
+        },
+        {
+          "titulo": "Comando",
+          "patentes": [
+            "Subcomandante da FAB",
+            "Comandante da FAB"
+          ],
+          "funcoes": true
         }
       ]
     },
@@ -204,6 +220,18 @@ window.FAAAB_HIERARQUIAS = {
             "Vice-Almirante",
             "Almirante de Esquadra"
           ]
+        },
+        {
+          "titulo": "Comando",
+          "patentes": [
+            "Subcomandante da Marinha",
+            "Comandante da Marinha"
+          ],
+          "funcoes": true,
+          "previstos": [
+            "Subcomandante da Marinha",
+            "Comandante da Marinha"
+          ]
         }
       ]
     },
@@ -256,6 +284,14 @@ window.FAAAB_HIERARQUIAS = {
             "Tenente-Coronel",
             "Coronel"
           ]
+        },
+        {
+          "titulo": "Comando",
+          "patentes": [
+            "Subcomandante-Geral",
+            "Comandante-Geral"
+          ],
+          "funcoes": true
         }
       ]
     },
@@ -312,6 +348,14 @@ window.FAAAB_HIERARQUIAS = {
             "Tenente-Coronel",
             "Coronel"
           ]
+        },
+        {
+          "titulo": "Comando",
+          "patentes": [
+            "Subcomandante-Geral",
+            "Comandante-Geral"
+          ],
+          "funcoes": true
         }
       ]
     }

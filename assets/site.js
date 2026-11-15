@@ -43,84 +43,66 @@
     const framesHost = host.querySelector('[data-visual-frames]');
     const forceName = host.querySelector('[data-visual-force]');
     const subtitle = host.querySelector('[data-visual-subtitle]');
-    const creditLabel = host.querySelector('[data-visual-credit]');
-    const duration = 6600;
+    const credit = host.querySelector('[data-visual-credit]');
+    const next = host.querySelector('[data-visual-next]');
+    const initial = framesHost?.querySelector('img');
+    if (!next || !initial) return;
+
     let entries;
     try {
       const response = await fetch('assets/visual-library.json?v=6', {cache:'no-cache'});
-      if (!response.ok) throw Error('Catálogo indisponível');
+      if (!response.ok) return;
       entries = (await response.json()).midias;
-      if (!Array.isArray(entries)) throw Error('Catálogo inválido');
-    } catch (err) {
-      framesHost.innerHTML = '<div class="visual-fallback"></div>';
-      if (subtitle) subtitle.textContent = 'Imagens indisponíveis';
+      if (!Array.isArray(entries)) return;
+    } catch {
       return;
     }
-    if (!entries.length) return;
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let current = 0, stopped = false;
-    const slideRecords = entries.map((entry, i) => {
-      const frame = document.createElement('div');
-      frame.className = 'visual-frame' + (i===0 ? ' is-active' : '');
-      frame.setAttribute('aria-hidden', String(i!==0));
-      frame.dataset.format = entry.formato;
-      const image = document.createElement('img');
-      image.alt = '';
-      image.decoding = 'async';
-      image.loading = 'eager';
-      image.fetchPriority = i===0 ? 'high' : 'low';
-      frame.appendChild(image);
-      framesHost.appendChild(frame);
-      return {entry,frame,image,loadPromise:null,loaded:false,broken:false};
-    });
-    function load(index){
-      const record = slideRecords[index];
-      if(record.loadPromise) return record.loadPromise;
-      const image=record.image;
-      record.loadPromise=new Promise(resolve=>{
-        const done=ok=>{record.loaded=ok; record.broken=!ok;resolve(ok);};
-        image.addEventListener('load',()=>done(true),{once:true});
-        image.addEventListener('error',()=>{
-          if(record.entry.arquivo_reserva && !image.dataset.reserve){
-            image.dataset.reserve='yes'; image.src=record.entry.arquivo_reserva;
-          }else if(record.entry.alternativa && !image.dataset.alt){
-            image.dataset.alt='yes';image.src=record.entry.alternativa;
-          }else{done(false);}
-        });
-        image.src=reducedMotion && record.entry.alternativa ? record.entry.alternativa : record.entry.arquivo;
-      });
-      return record.loadPromise;
-    }
-    function caption(entry) {
-      const location=entry.estado ? ' · '+entry.estado : '';
-      if(forceName)forceName.textContent=entry.forca+location;
-      if(subtitle)subtitle.textContent=entry.descricao || entry.titulo;
-      if(creditLabel)creditLabel.textContent=entry.credito+(entry.formato==='gif'?' · GIF real':' · Foto real');
-    }
-    async function transitionTo(target){
-      let index=(target+slideRecords.length)%slideRecords.length;
-      for(let attempts=0;attempts<slideRecords.length;attempts++){
-        const okay=await load(index);
-        if (stopped) return;
-        if(okay){
-          current=index;
-          slideRecords.forEach((r,i)=>{let visible=i===index;r.frame.classList.toggle('is-active',visible);r.frame.setAttribute('aria-hidden',String(!visible));});
-          caption(slideRecords[index].entry);
-          const next=(index+1)%slideRecords.length;
-          load(next); // preload one image ahead to avoid an empty crossfade
-          return;
+
+    const forceLabels = { 'Marinha Brasileira': 'Marinha do Brasil' };
+    const applyCaption = entry => {
+      forceName.textContent = forceLabels[entry.forca] || entry.forca;
+      subtitle.textContent = entry.titulo;
+      credit.textContent = entry.credito || '';
+    };
+    const initialEntry = entries.find(entry => entry.arquivo === initial.getAttribute('src'));
+    if (initialEntry) applyCaption(initialEntry);
+
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+    const photoEntries = entries.filter(entry => entry.formato !== 'gif' || entry.alternativa);
+    let displayed = initialEntry;
+    next.hidden = !entries.length;
+    next.addEventListener('click', async () => {
+      if (next.getAttribute('aria-disabled') === 'true') return;
+      const gallery = reduced.matches ? photoEntries : entries;
+      const start = gallery.indexOf(displayed);
+      next.setAttribute('aria-disabled', 'true');
+      try {
+        for (let offset = 1; offset <= gallery.length; offset++) {
+          const entry = gallery[(start + offset) % gallery.length];
+          if (entry === displayed) continue;
+          const sources = reduced.matches && entry.formato === 'gif'
+            ? [entry.alternativa] : [entry.arquivo, entry.arquivo_reserva, entry.alternativa];
+          for (const source of sources.filter(Boolean)) {
+            const image = new Image();
+            image.alt = '';
+            image.decoding = 'async';
+            image.src = source;
+            try {
+              await image.decode();
+            } catch {
+              continue;
+            }
+            displayed = entry;
+            const matchingImage = entries.find(item => item.arquivo === source);
+            framesHost.replaceChildren(image);
+            applyCaption(matchingImage || entry);
+            return;
+          }
         }
-        index=(index+1)%slideRecords.length;
+      } finally {
+        next.removeAttribute('aria-disabled');
       }
-      if(subtitle)subtitle.textContent='Imagens indisponíveis';
-    }
-    await transitionTo(0);
-    if(!reducedMotion && slideRecords.length>1){
-      const timer=window.setInterval(()=>{
-        if(!document.hidden) transitionTo(current+1);
-      },duration);
-      window.addEventListener('pagehide',()=>{stopped=true;clearInterval(timer);},{once:true});
-    }
+    });
   }
 
 

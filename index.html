@@ -8,9 +8,9 @@
   <title>Início | FAAAB</title>
   <link rel="icon" href="assets/logo-faaab.png" type="image/png">
   <link rel="stylesheet" href="assets/style.css?v=12">
-  <link rel="stylesheet" href="assets/home-editorial.css?v=1">
-  <script src="assets/site.js?v=8" defer></script>
-<link rel="stylesheet" href="assets/mobile-header.css?v=1"></head>
+  <link rel="stylesheet" href="assets/home-editorial.css?v=2">
+  <script src="assets/site.js?v=9" defer></script>
+<link rel="stylesheet" href="assets/mobile-header.css?v=2"></head>
 <body class="home">
   <a class="skip" href="#principal">Ir para o conteúdo</a>
   <header class="header">
@@ -30,39 +30,53 @@
   </header>
 
   <main id="principal">
-    <section class="visual-hero" data-visual-hero aria-label="Boas-vindas e referências visuais das forças">
-      <div class="visual-hero-frames" data-visual-frames aria-hidden="true">
-        <!-- GIF e imagens do catálogo visual da FAAAB; exibidos atrás da barra superior. -->
-      </div>
-      <div class="visual-overlay" aria-hidden="true"></div>
-      <div class="wrap visual-content">
-        <div class="visual-intro">
-          <h1><span>Bem-vindo</span><small>Ao</small><span>Site da FAAAB</span></h1>
-        </div>
-        <div class="visual-bottom">
-          <div class="visual-caption" aria-live="polite" aria-atomic="true">
-            <span class="visual-caption-line" aria-hidden="true"></span>
-            <div class="visual-caption-text">
-              <span class="visual-force" data-visual-force>Forças Armadas e Auxiliares</span>
-              <span class="visual-subtitle" data-visual-subtitle>Conheça os veículos e aeronaves</span>
-              <span class="visual-credit" data-visual-credit></span>
-            </div>
+    <section class="inicio-hero" data-visual-hero aria-labelledby="inicio-titulo">
+      <div class="wrap inicio-hero-inner">
+        <div class="inicio-intro">
+          <p class="inicio-kicker">Simulação no Roblox</p>
+          <h1 id="inicio-titulo">Forças Armadas <em>e Auxiliares</em></h1>
+          <p>Conheça as cinco forças da FAAAB, suas unidades, patentes e escolas de formação.</p>
+          <div class="inicio-acoes">
+            <a href="hierarquia.html">Ver hierarquia <span aria-hidden="true">↗</span></a>
+            <a href="#forcas">Conhecer as forças <span aria-hidden="true">↓</span></a>
           </div>
         </div>
+        <figure class="inicio-midia">
+          <div class="inicio-imagens" data-visual-frames aria-hidden="true">
+            <img class="inicio-imagem-inicial" src="assets/marinha-f45.webp" alt="" width="984" height="772" fetchpriority="high">
+          </div>
+          <figcaption>
+            <div class="inicio-legenda" aria-live="polite" aria-atomic="true">
+              <strong data-visual-force>Marinha do Brasil</strong>
+              <span data-visual-subtitle>Fragata em navegação</span>
+              <small data-visual-credit></small>
+            </div>
+            <button type="button" data-visual-next hidden>Próxima imagem <span aria-hidden="true">→</span></button>
+          </figcaption>
+        </figure>
       </div>
-    <section class="campaign-section" aria-labelledby="campaign-title">
+    </section>
+    <section class="inicio-forcas" id="forcas" aria-labelledby="campaign-title">
       <div class="wrap">
-        <div class="campaign-heading"><div class="campaign-rule" aria-hidden="true"></div><h2 id="campaign-title">Forças</h2></div>
-        <div class="campaign-grid">
-<a class="campaign-circle force-gateway force-pose-link" href="exercito/" aria-label="Portal do Exército Brasileiro"><img class="force-pose pose-sombra" src="assets/poses/eb-silhueta.png" alt="" width="238" height="238" loading="lazy" decoding="async"><img class="force-pose pose-cor" src="assets/poses/eb-normal.png" alt="" width="238" height="238" loading="lazy" decoding="async"></a>
-<a class="campaign-circle force-gateway force-pose-link" href="aeronautica/" aria-label="Portal da Força Aérea Brasileira"><img class="force-pose pose-sombra" src="assets/poses/fab-silhueta.png" alt="" width="238" height="238" loading="lazy" decoding="async"><img class="force-pose pose-cor" src="assets/poses/fab-normal.png" alt="" width="238" height="238" loading="lazy" decoding="async"></a>
-<a class="campaign-circle force-gateway force-pose-link" href="marinha/" aria-label="Portal da Marinha do Brasil"><img class="force-pose pose-sombra" src="assets/poses/mb-silhueta.png" alt="" width="238" height="238" loading="lazy" decoding="async"><img class="force-pose pose-cor" src="assets/poses/mb-normal.png" alt="" width="238" height="238" loading="lazy" decoding="async"></a>
-<a class="campaign-circle force-gateway force-pose-link" href="bombeiros/" aria-label="Portal do Corpo de Bombeiros Militar"><img class="force-pose pose-sombra" src="assets/poses/cbm-silhueta.png" alt="" width="238" height="238" loading="lazy" decoding="async"><img class="force-pose pose-cor" src="assets/poses/cbm-normal.png" alt="" width="238" height="238" loading="lazy" decoding="async"></a>
-<a class="campaign-circle force-gateway force-pose-link" href="policia-militar/" aria-label="Portal da Polícia Militar"><img class="force-pose pose-sombra" src="assets/poses/pm-silhueta.png" alt="" width="238" height="238" loading="lazy" decoding="async"><img class="force-pose pose-cor" src="assets/poses/pm-normal.png" alt="" width="238" height="238" loading="lazy" decoding="async"></a>
+        <h2 id="campaign-title">Portais das cinco forças</h2>
+        <div class="inicio-forcas-grid">
+<a class="inicio-forca" href="exercito/"><span class="inicio-medalha"><img class="pose-sombra" src="assets/poses/eb-silhueta.png" alt="" width="238" height="238" loading="lazy" decoding="async"><img class="pose-cor" src="assets/poses/eb-normal.png" alt="" width="238" height="238" loading="lazy" decoding="async"></span><strong>Exército</strong></a>
+<a class="inicio-forca" href="aeronautica/"><span class="inicio-medalha"><img class="pose-sombra" src="assets/poses/fab-silhueta.png" alt="" width="238" height="238" loading="lazy" decoding="async"><img class="pose-cor" src="assets/poses/fab-normal.png" alt="" width="238" height="238" loading="lazy" decoding="async"></span><strong>Aeronáutica</strong></a>
+<a class="inicio-forca" href="marinha/"><span class="inicio-medalha"><img class="pose-sombra" src="assets/poses/mb-silhueta.png" alt="" width="238" height="238" loading="lazy" decoding="async"><img class="pose-cor" src="assets/poses/mb-normal.png" alt="" width="238" height="238" loading="lazy" decoding="async"></span><strong>Marinha</strong></a>
+<a class="inicio-forca" href="bombeiros/"><span class="inicio-medalha"><img class="pose-sombra" src="assets/poses/cbm-silhueta.png" alt="" width="238" height="238" loading="lazy" decoding="async"><img class="pose-cor" src="assets/poses/cbm-normal.png" alt="" width="238" height="238" loading="lazy" decoding="async"></span><strong>Bombeiros</strong></a>
+<a class="inicio-forca" href="policia-militar/"><span class="inicio-medalha"><img class="pose-sombra" src="assets/poses/pm-silhueta.png" alt="" width="238" height="238" loading="lazy" decoding="async"><img class="pose-cor" src="assets/poses/pm-normal.png" alt="" width="238" height="238" loading="lazy" decoding="async"></span><strong>Polícia Militar</strong></a>
 </div>
       </div>
-      
     </section>
+    <section class="inicio-acessos" aria-labelledby="acessos-titulo">
+      <div class="wrap">
+        <h2 id="acessos-titulo">Acesso rápido</h2>
+        <div class="inicio-acessos-grid">
+          <a href="ensino/"><strong>Ensino e formação</strong><span>Escolas, diretorias e etapas de formação.</span><span class="inicio-seta" aria-hidden="true">↗</span></a>
+          <a href="acervo/"><strong>Acervo de fardas</strong><span>Uniformes e coberturas do projeto.</span><span class="inicio-seta" aria-hidden="true">↗</span></a>
+          <a href="publicacoes.html"><strong>Publicações</strong><span>Comunicados e notícias das forças.</span><span class="inicio-seta" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer"><div class="wrap footer-inner"><strong>FAAAB</strong><a href="creditos.html" style="font-size:12px;text-decoration:underline;text-underline-offset:3px">Créditos das imagens</a></div><div class="wrap footer-legal">Simulação independente no Roblox. Sem vínculo com instituições militares ou governamentais oficiais.</div></footer>

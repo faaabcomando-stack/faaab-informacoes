@@ -59,9 +59,10 @@
     const params=new URLSearchParams(window.location.search);
     const id=params.get('id');
     const status=article.querySelector('[data-article-status]');
-    if(!id){status.textContent='Matéria não cadastrada. Nenhuma publicação fictícia foi criada.';return;}
+    if(!id){status.textContent='Selecione uma matéria no noticiário.';return;}
     fetch('../assets/publicacoes-data.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Sem catálogo');return r.json()}).then(data=>{
-      const item=data.find(x=>x.id===id);
+      if(!Array.isArray(data))throw Error('Catálogo inválido');
+      const item=data.find(x=>x?.id===id&&x.status==='publicado');
       if(!item){status.textContent='Matéria não encontrada.';return;}
       const h=article.querySelector('[data-article-title]');
       const date=article.querySelector('[data-article-date]');
@@ -71,20 +72,21 @@
       const cover=article.querySelector('[data-article-cover]');
       const back=article.querySelector('[data-article-back]');
       const allowed={eb:['Exército Brasileiro','../exercito/noticias.html'],fab:['Força Aérea Brasileira','../aeronautica/noticias.html'],mb:['Marinha Brasileira','../marinha/noticias.html'],pm:['Polícia Militar','../policia-militar/noticias.html'],cbm:['Corpo de Bombeiros Militar','../bombeiros/noticias.html']};
-      const f=allowed[item.forca];
-      if(!f||item.status!=='publicado'||!item.titulo||!item.data||!['publicacao','comunicado'].includes(item.tipo))throw Error('Registro incompleto');
+      const f=Object.hasOwn(allowed,item.forca)?allowed[item.forca]:null;
+      if(!f||typeof item.titulo!=='string'||!item.titulo.trim()||!/^\d{4}-\d{2}-\d{2}$/.test(item.data||'')||!['publicacao','comunicado'].includes(item.tipo))throw Error('Registro incompleto');
       const parsedDate=new Date(item.data+'T12:00:00Z');
-      if(Number.isNaN(parsedDate.getTime()))throw Error('Data inválida');
+      if(!Number.isFinite(parsedDate.valueOf())||parsedDate.toISOString().slice(0,10)!==item.data)throw Error('Data inválida');
       date.dateTime=item.data;date.textContent=new Intl.DateTimeFormat('pt-BR',{timeZone:'UTC',day:'2-digit',month:'long',year:'numeric'}).format(parsedDate);
       h.textContent=item.titulo;force.textContent=f[0];kind.textContent=item.tipo==='comunicado'?'Comunicado':'Publicação';
       body.textContent=item.texto||'';back.href=f[1];back.textContent='Voltar às notícias de '+f[0];
-      if(item.imagem && item.credito && /^(https?:\/\/|assets\/)/.test(item.imagem)){
+      if(typeof item.imagem==='string' && item.credito && /^(https:\/\/|assets\/)/.test(item.imagem)){
         const fig=document.createElement('figure');
         const img=document.createElement('img');img.src=item.imagem.startsWith('assets/')?'../'+item.imagem:item.imagem;
         img.alt=item.alt||'';img.loading='lazy';fig.append(img);
         const caption=document.createElement('figcaption');caption.className='fx-news-caption';caption.textContent=item.credito;
-        fig.append(caption);cover.append(fig);
+        fig.append(caption);cover.append(fig);cover.hidden=false;
       }
+      document.title=item.titulo+' | FAAAB';
       status.textContent='';
       article.querySelector('[data-article-details]').hidden=false;
     }).catch(()=>{status.textContent='Não foi possível carregar esta matéria. Tente novamente.';});

@@ -1,32 +1,37 @@
 {
   "schema_version": 1,
   "atualizado_em": "2026-11-14",
-  "descricao": "Não representa consultas ao Roblox. Preencher IDs e regras somente após configuração e autorização.",
+  "descricao": "IDs dos cargos de comando e subcomando nos grupos da FAAAB.",
   "forcas": {
     "eb": {
-      "grupo_id": null,
-      "papeis_ids": [],
-      "estado": "configuracao_pendente"
+      "grupo_id": 438605602,
+      "papeis_ids": [912246082],
+      "papeis_subcomando_ids": [909302084],
+      "estado": "cargos_configurados"
     },
     "fab": {
-      "grupo_id": null,
-      "papeis_ids": [],
-      "estado": "configuracao_pendente"
+      "grupo_id": 1102802441,
+      "papeis_ids": [912450073],
+      "papeis_subcomando_ids": [913022041],
+      "estado": "cargos_configurados"
     },
     "mb": {
-      "grupo_id": null,
+      "grupo_id": 500224211,
       "papeis_ids": [],
+      "papeis_subcomando_ids": [],
       "estado": "configuracao_pendente"
     },
     "cbm": {
-      "grupo_id": null,
-      "papeis_ids": [],
-      "estado": "configuracao_pendente"
+      "grupo_id": 415503989,
+      "papeis_ids": [910462093],
+      "papeis_subcomando_ids": [909788135],
+      "estado": "cargos_configurados"
     },
     "pm": {
-      "grupo_id": null,
-      "papeis_ids": [],
-      "estado": "configuracao_pendente"
+      "grupo_id": 599875770,
+      "papeis_ids": [913076065],
+      "papeis_subcomando_ids": [913168080],
+      "estado": "cargos_configurados"
     }
   },
   "governo": {
