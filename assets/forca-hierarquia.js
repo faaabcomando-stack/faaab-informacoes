@@ -20,6 +20,34 @@ if(group.funcoes){
   detail.innerHTML='<a class="local-back" href="hierarquia.html">← Hierarquia da força</a><section class="local-box"><h2>'+esc(n)+'</h2><p>'+descricao+'</p>'+
     (group.previstos?.includes(n)?'<p>Cargo previsto na estrutura da força.</p>':'')+'</section>';
   document.title=n+' | '+force.nome;
+  const state=document.createElement('p');
+  state.className='local-command-holder';
+  state.textContent='Consultando o cargo do grupo Roblox…';
+  const box=detail.querySelector('.local-box');
+  box?.append(state);
+  const office=n.startsWith('Subcomandante')?'subcomandante':'comandante';
+  fetch('../assets/comando/titulares.json',{cache:'no-store'})
+    .then(response=>{if(!response.ok)throw Error('Sem snapshot');return response.json();})
+    .then(data=>{
+      const holder=data?.forcas?.[key]?.[office];
+      state.replaceChildren();
+      const person=holder?.estado==='titular'?holder:
+        holder?.estado==='consulta_indisponivel'?holder.ultimo_confirmado:null;
+      if(person&&Number.isSafeInteger(person.usuario_id)&&person.usuario_id>0){
+        const link=document.createElement('a');
+        link.href='https://www.roblox.com/users/'+person.usuario_id+'/profile';
+        link.target='_blank';link.rel='noopener noreferrer';
+        link.textContent=person.nome_usuario?'@'+person.nome_usuario:
+          'Roblox #'+person.usuario_id;
+        state.append(holder.estado==='titular'?'Ocupante confirmado: ':'Último ocupante confirmado (consulta indisponível): ',link);
+      }else{
+        const labels={vago:'Cargo vago',configuracao_pendente:'Cargo não configurado',
+          aguardando_historico:'Aguardando histórico do primeiro ocupante',
+          consulta_indisponivel:'Consulta indisponível'};
+        state.textContent=labels[holder?.estado]||'Nenhum ocupante confirmado';
+      }
+    })
+    .catch(()=>{state.textContent='Consulta ao Roblox ainda não disponível.';});
   return;
 }
 const day=catalog.diasPorPatente?.[key]?.[n],course=catalog.cursoObrigatorioPorPatente?.[key]?.[n];
