@@ -1,0 +1,14 @@
+# Credenciais locais / integrações
+*.secret
+.secret
+.env
+.env.*
+*.pem
+*.key
+*.p12
+.ROBLOSECURITY
+credentials.json
+token.txt
+__pycache__/
+*.pyc
+_site/
