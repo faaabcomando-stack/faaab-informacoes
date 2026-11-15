@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "nota": "As imagens .webp já são fardas ilustrativas. Sem IDs dos itens Roblox, não existe renderização da farda vestida no avatar.",
+  "forcas": {
+    "eb": {
+      "nome": "Uniforme 5 A1",
+      "camisa_asset_id": null,
+      "calca_asset_id": null,
+      "cobertura_asset_id": null,
+      "referencia": "assets/comando/eb-farda.webp",
+      "estado": "renderizacao_pendente"
+    },
+    "fab": {
+      "nome": "Uniforme 5 A",
+      "camisa_asset_id": null,
+      "calca_asset_id": null,
+      "cobertura_asset_id": null,
+      "referencia": "assets/comando/fab-farda.webp",
+      "estado": "renderizacao_pendente"
+    },
+    "mb": {
+      "nome": "Uniforme branco 5.5",
+      "camisa_asset_id": null,
+      "calca_asset_id": null,
+      "cobertura_asset_id": null,
+      "referencia": "assets/comando/mb-farda.webp",
+      "estado": "renderizacao_pendente"
+    },
+    "cbm": {
+      "nome": "Uniforme de passeio",
+      "camisa_asset_id": null,
+      "calca_asset_id": null,
+      "cobertura_asset_id": null,
+      "referencia": "assets/comando/cbm-farda.webp",
+      "estado": "renderizacao_pendente"
+    },
+    "pm": {
+      "nome": "Uniforme de passeio 2º A",
+      "camisa_asset_id": null,
+      "calca_asset_id": null,
+      "cobertura_asset_id": null,
+      "referencia": "assets/comando/pm-farda.webp",
+      "estado": "renderizacao_pendente"
+    }
+  }
+}
