@@ -2,14 +2,27 @@
   'use strict';
   const toggle = document.querySelector('[data-menu-toggle]');
   const menu = document.querySelector('[data-menu]');
-  const closeMenu = () => { menu?.classList.remove('is-open'); toggle?.setAttribute('aria-expanded', 'false'); };
+  const closeMenu = (restoreFocus = false) => {
+    const wasOpen = Boolean(menu?.classList.contains('is-open'));
+    menu?.classList.remove('is-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    if (restoreFocus && wasOpen) toggle?.focus();
+  };
   toggle?.addEventListener('click', () => {
-    const opened = menu.classList.toggle('is-open');
+    const opened = menu?.classList.toggle('is-open') ?? false;
     toggle.setAttribute('aria-expanded', String(opened));
   });
-  menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
-  document.addEventListener('click', event => { if (!event.target.closest('.header')) closeMenu(); });
+  menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => closeMenu()));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMenu(true);
+  });
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.header')) closeMenu();
+  });
+  const desktopMenu = window.matchMedia('(min-width: 761px)');
+  desktopMenu.addEventListener?.('change', event => {
+    if (event.matches) closeMenu();
+  });
   let toastTimer;
   function toast(message) {
     const el = document.querySelector('[data-toast]'); if(!el) return;
